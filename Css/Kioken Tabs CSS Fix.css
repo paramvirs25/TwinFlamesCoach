@@ -1,0 +1,16 @@
+/* Style for the active tab button */
+.kioken-tabs-buttons-item.active {
+    border: 1px solid black;
+    border-bottom: none;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Style for the active tab content */
+  .kioken-tabs-content {
+    border: 1px solid black !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+  }
+  

@@ -1,0 +1,97 @@
+@media screen and (max-width: 300px) {
+  .tfcTileColumn {
+    width: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Tile Row*/
+.tfcTileRow::after {
+  content: "";
+  clear: both;
+  display: table;  
+}
+
+/*Tile Column*/
+.tfcTileColumn, .tfcTileColumnAlt {
+  float: left;
+  width: 50%;
+  /*padding: 1px;
+  border:0px solid black; */
+  height: 175px;
+  text-align: left;
+}
+
+
+/* Find ODD EVEN - Sample Code
+div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd) {
+  background: #e0e0e0;
+}
+
+div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even) {
+  background: red;
+}
+*/
+
+
+/*3D effect on ODD numberd tiles*/
+div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd),
+div.tfcTileColumn, .tfc3dContentbox{		
+		
+	transform:
+    perspective(800px)
+    rotateY(25deg) scale(0.9)
+    rotateX(10deg);
+  
+  transition: 0.6s ease all;
+		
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+}
+
+/*3D  Alternate effect on EVEN numberd tiles*/
+div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even),
+div.tfcTileColumnAlt, .tfc3dContentboxAlt{
+		
+	transform:
+    perspective(800px)
+    rotateY(-25deg) scale(0.9)
+    rotateX(10deg);
+  
+  transition: 0.6s ease all;
+		
+  border-radius: 20px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+}
+
+
+/*----Content box----*/
+.contentbox {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+/*----Promo Box Start----*/
+/* Promobox header */
+.promobox-header {
+  padding: 5px 5px;
+  background-color:#cadaa3;
+	color:#000000;
+	font-weight: bold;
+}
+
+/* Promobox container/body */
+.promobox-container {
+  padding: 5px;
+  background-color:#E0F1B5;
+  color:#000000;
+		font-size: 12px;
+}
+
+/****Promo Box End****/

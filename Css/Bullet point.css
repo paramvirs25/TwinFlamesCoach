@@ -1,0 +1,11 @@
+.wp-container-8.wp-block-group.contentbox ul, .wp-container-8.wp-block-group.contentbox Ol, .wp-container-7.wp-block-group.contentbox ul, .wp-container-9.wp-block-group.contentbox ul, .wp-container-9.wp-block-group.contentbox ol {
+	margin-left: 0;
+	padding-left: 20px;
+}
+
+li>ul {
+	margin-left: 10px;
+}
+ol, ul {
+	margin-left: 20px;
+}
