@@ -1,7 +1,7 @@
 <?php
-add_action( 'woocommerce_before_calculate_totals', 'apply_coupon_discounts', 10, 1 );
+add_action( 'woocommerce_before_calculate_totals', 'apply_auto_coupon_discounts', 10, 1 );
 
-function apply_coupon_discounts( $cart ){
+function apply_auto_coupon_discounts( $cart ){
 	// Check if user is logged in
     if ( !is_user_logged_in() ) {
 		return;
@@ -11,6 +11,11 @@ function apply_coupon_discounts( $cart ){
         return;
     }
 	
+	// Check if current page is the cart page
+	if ( ! is_cart() ) {
+		return;
+	}
+	
 	apply_course_completion_discount_via_coupon_on_consultation( $cart );
 	
 }
@@ -18,9 +23,10 @@ function apply_coupon_discounts( $cart ){
 function apply_course_completion_discount_via_coupon_on_consultation( $cart ) {
 	
     $product_id = 11782; // Set product ID for CONSULTATION product
-	$product = wc_get_product($product_id);
-	if ($product->get_id() != $product_id) { // only proceed if product is CONSULTATION
-		return;
+
+	// Check if cart contains CONSULTATION product
+	if ( ! is_cart_contains_consultation_product( $cart, $product_id ) ) {
+		return; // Terminate function if cart does not contain CONSULTATION product
 	}
 
     // Get logged-in user's roles
@@ -37,12 +43,24 @@ function apply_course_completion_discount_via_coupon_on_consultation( $cart ) {
             // User has this course's role, so apply discount via coupon code
             $coupon_code = $course->courseCompletionCouponForDiscount; // Set coupon code here
             $coupon = new WC_Coupon($coupon_code);
-            if ($coupon->is_valid()) { // check if coupon is valid
+			//$coupon->set_remove_message(''); //dont show any mesage when coupon is removed from cart.
+            if ($coupon->is_valid()) { // check if coupon is valid				
                 $cart->add_discount($coupon_code);
-				wc_clear_notices(); // Clear coupon code applied notice
+				wc_clear_notices(); // Clear coupon code applied notice				
             }
         }
     }
 }
 
+function is_cart_contains_consultation_product( $cart, $product_id ){
+	$cart_contains_consultation = false;
+	foreach ( $cart->get_cart_contents() as $item ) {
+		if ( $item['product_id'] == $product_id ) {
+			$cart_contains_consultation = true;
+			break;
+		}
+	}
+	
+	return $cart_contains_consultation;
+}
 >

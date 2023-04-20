@@ -1,4 +1,11 @@
+<?php
 namespace TFCMembers;
+
+/**
+ * This code is not being used yet. 
+ * It was a testing done using chatGPT and 
+ * it inspired the idea to apply discount directly in Woocomerce cart using coupons.
+ */
 
 add_shortcode( 'consultation_fee', function () {
 	$current_user = wp_get_current_user(); // Get the current logged-in user object
@@ -91,3 +98,4 @@ class Fee {
 
 
 }
+>
