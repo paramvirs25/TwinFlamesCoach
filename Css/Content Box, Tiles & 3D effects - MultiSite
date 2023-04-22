@@ -25,28 +25,51 @@
   text-align: left;
 }
 
-
-/* Find ODD EVEN - Sample Code
-div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd) {
-  background: #e0e0e0;
+/* The animation code */
+@keyframes animation3d {
+  from {
+		transform:
+    	perspective(800px)
+    	rotateY(25deg) scale(0.9)
+    	rotateX(10deg);  
+  	transition: 0.6s ease all;
+	}
+  to {
+		transform:
+    	perspective(800px)
+    	rotateY(-25deg) scale(0.9)
+    	rotateX(10deg);
+  
+  	transition: 0.6s ease all;
+	}
 }
 
-div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even) {
-  background: red;
+@keyframes animation3dAlt {
+  from {
+		transform:
+    	perspective(800px)
+    	rotateY(-25deg) scale(0.9)
+    	rotateX(10deg);  
+  	transition: 0.6s ease all;
+	}
+  to {
+		transform:
+    	perspective(800px)
+    	rotateY(25deg) scale(0.9)
+    	rotateX(10deg);  
+  	transition: 0.6s ease all;
+	}
 }
-*/
-
 
 /*3D effect on ODD numberd tiles*/
 div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd),
 div.tfcTileColumn, .tfc3dContentbox{		
-		
-	transform:
-    perspective(800px)
-    rotateY(25deg) scale(0.9)
-    rotateX(10deg);
-  
-  transition: 0.6s ease all;
+		animation-name: animation3d;
+  animation-duration: 20s;		
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-direction: alternate;
+	
 		
   border-radius: 20px;
   border: 1px solid #e6e6e6;
@@ -56,13 +79,12 @@ div.tfcTileColumn, .tfc3dContentbox{
 /*3D  Alternate effect on EVEN numberd tiles*/
 div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even),
 div.tfcTileColumnAlt, .tfc3dContentboxAlt{
-		
-	transform:
-    perspective(800px)
-    rotateY(-25deg) scale(0.9)
-    rotateX(10deg);
-  
-  transition: 0.6s ease all;
+		animation-name: animation3dAlt;
+  animation-duration: 20s;		
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-direction: alternate;
+	
 		
   border-radius: 20px;
   border: 1px solid #e6e6e6;
