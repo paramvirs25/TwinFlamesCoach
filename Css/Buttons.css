@@ -1,0 +1,15 @@
+.wp-block-button__link.wp-element-button {
+    border: 0;
+    display: inline-block;
+    font-weight: 700;
+    border-radius: 3px;
+    background: #a46497 !important;
+    color: #fffffa !important;
+    padding: .618em 1em;
+    overflow: visible;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    font-size: 100%;		
+    -webkit-font-smoothing: antialiased;
+}
