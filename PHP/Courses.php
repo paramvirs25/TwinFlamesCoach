@@ -99,5 +99,16 @@ class Courses {
         );
         return $courses;
     }    
+
+    public static function getCoursesListForSupportCoaches() {
+        $courses = array(
+            self::BASIC_IW_1 => self::getBasicIw1(),
+            self::TFCIW => self::getTfciw(),
+            self::ADV_TF_HEALINGS_1 => self::getAdvancedTfHealings1(),
+            self::CERTIFIED_COACH => self::getCertifiedCoach(),
+            self::APPRENTICE_BASIC_IW => self::getApprenticeBasicIw(),            
+        );
+        return $courses;
+    }
 }
 >
