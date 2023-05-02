@@ -67,6 +67,12 @@ class Courses {
     {
         return self::$apprentice_basic_iw ?? self::$apprentice_basic_iw = new Courses("Apprentice - Basic IW", self::APPRENTICE_BASIC_IW, "Apprenticeship Basic IW");
     }
+
+    private static $apprentice_coach = null;
+    public static function getApprenticeCoach()
+    {
+        return self::$apprentice_coach ?? self::$apprentice_coach = new Courses("Apprentice - Twin Flames Coach", self::APPRENTICE_COACH, "Apprenticeship TF Coach");
+    }
     
     public $courseName;
     public $courseRoleName;
@@ -80,16 +86,16 @@ class Courses {
     
     public static function getAllCourses() {
         $courses = array(
-            self::BASIC_IW_1 => self::basic_iw_1(),
-            self::TFCIW => self::tfciw(),
-            self::TFCAIW1 => self::tfcaiw1(),
-            self::ADV_TF_HEALINGS_1 => self::advanced_tf_healings_1(),
-            self::CHAKRA_HEALING_BALANCING => self::chakra_healing_balancing(),
-            self::CERTIFIED_COACH => self::certified_coach(),
-            self::CERTIFIED_YOGA_TEACHER => self::certified_yoga_teacher(),
-            self::SHAKTI_KAWACH => self::shakti_kawach(),
-            self::APPRENTICE_BASIC_IW => self::apprentice_basic_iw(),
-            self::APPRENTICE_COACH => self::apprentice_coach(),
+            self::BASIC_IW_1 => self::getBasicIw1(),
+            self::TFCIW => self::getTfciw(),
+            self::TFCAIW1 => self::getTfcaiw1(),
+            self::ADV_TF_HEALINGS_1 => self::getAdvancedTfHealings1(),
+            self::CHAKRA_HEALING_BALANCING => self::getChakraHealingBalancing(),
+            self::CERTIFIED_COACH => self::getCertifiedCoach(),
+            self::CERTIFIED_YOGA_TEACHER => self::getCertifiedYogaTeacher(),
+            self::SHAKTI_KAWACH => self::getShaktiKawach(),
+            self::APPRENTICE_BASIC_IW => self::getApprenticeBasicIw(),
+            self::APPRENTICE_COACH => self::getApprenticeCoach(),
         );
         return $courses;
     }    
