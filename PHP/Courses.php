@@ -15,55 +15,52 @@ class Courses {
     const APPRENTICE_COACH = "apprentice_coach";
 
     private static function basic_iw_1() {
-        return new Courses("Basic inner work 1", self::BASIC_IW_1, 10, "Basic IW 1"); 
+        return new Courses("Basic inner work 1", self::BASIC_IW_1, "Basic IW 1"); 
     }
     
     private static function tfciw() {
-        return new Courses("Basic inner work 2", self::TFCIW, 10, "Basic IW 2"); 
+        return new Courses("Basic inner work 2", self::TFCIW, "Basic IW 2"); 
     }
     
     private static function tfcaiw1() {
-        return new Courses("Advanced inner work 1", self::TFCAIW1, 10, "Advanced IW 1"); 
+        return new Courses("Advanced inner work 1", self::TFCAIW1, "Advanced IW 1"); 
     }
     
     private static function advanced_tf_healings_1() {
-        return new Courses("Advanced Twin Flame Healings 1", self::ADV_TF_HEALINGS_1, 10, "Advanced TF Healings 1"); 
+        return new Courses("Advanced Twin Flame Healings 1", self::ADV_TF_HEALINGS_1, "Advanced TF Healings 1"); 
     }
     
     private static function chakra_healing_balancing() {
-        return new Courses("Chakra balancing program", self::CHAKRA_HEALING_BALANCING, 10, "Chakra balancing 1"); 
+        return new Courses("Chakra balancing program", self::CHAKRA_HEALING_BALANCING, "Chakra balancing 1"); 
     }
     
     private static function certified_coach() {
-        return new Courses("Twin Flames Coach program", self::CERTIFIED_COACH, 20, "Twin Flames Coach 1"); 
+        return new Courses("Twin Flames Coach program", self::CERTIFIED_COACH, "Twin Flames Coach 1"); 
     }
     
     private static function certified_yoga_teacher() {
-        return new Courses("Yoga Teacher Training program", self::CERTIFIED_YOGA_TEACHER, 10, "Yoga Teacher Training"); 
+        return new Courses("Yoga Teacher Training program", self::CERTIFIED_YOGA_TEACHER, "Yoga Teacher Training"); 
     }
     
     private static function shakti_kawach() {
-        return new Courses("Shakti Kavach program", self::SHAKTI_KAWACH, 10, "Shakti Kavach"); 
+        return new Courses("Shakti Kavach program", self::SHAKTI_KAWACH, "Shakti Kavach"); 
     }
     
     private static function apprentice_basic_iw() {
-        return new Courses("Apprentice - Basic IW", self::APPRENTICE_BASIC_IW, 20, "Apprenticeship Basic IW"); 
+        return new Courses("Apprentice - Basic IW", self::APPRENTICE_BASIC_IW, "Apprenticeship Basic IW"); 
     }
     
     private static function apprentice_coach() {
-        return new Courses("Apprentice - Twin Flames Coach", self::APPRENTICE_COACH, 10, "Apprenticeship TF Coach"); 
+        return new Courses("Apprentice - Twin Flames Coach", self::APPRENTICE_COACH, "Apprenticeship TF Coach"); 
     }
     
-
     public $courseName;
     public $courseRoleName;
-    public $courseCompletionDiscount; //course completion discount can be directly mentioned here
     public $courseCompletionCouponForDiscount; //course completion discount can be applied from a coupon mentioned here
     
-    public function __construct($name, $roleName, $completionDiscount, $completionCouponForDiscount) {
+    public function __construct($name, $roleName, $completionCouponForDiscount) {
         $this->courseName = $name;
         $this->courseRoleName = $roleName;
-        $this->courseCompletionDiscount = $completionDiscount;
         $this->courseCompletionCouponForDiscount = $completionCouponForDiscount;
     }
     
@@ -81,7 +78,6 @@ class Courses {
             self::APPRENTICE_COACH => self::apprentice_coach(),
         );
         return $courses;
-    }
-    
+    }    
 }
 >
