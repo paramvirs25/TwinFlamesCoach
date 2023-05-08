@@ -42,18 +42,21 @@ function addEligibilityColumn() {
       const eligibilityCell = document.createElement("td");
       if (roles.includes("Support")) {
         eligibilityCell.textContent = "Already a Support Coach";
-        eligibilityCell.style.color = "black";
+        eligibilityCell.style.color = "blue";
       } else if (isEligible) {
         eligibilityCell.textContent = "Eligible";
         eligibilityCell.style.color = "green";
       } else {
-        eligibilityCell.textContent = "Not eligible";
+        const missingRoles = ["Basic IW 1", "TfcIw", "Advanced Twin Flame Healings 1", "Certified Coach", "Apprentice Basic IW"].filter(role => !roles.includes(role));
+        const missingRolesText = missingRoles.join("<br/>");
+        eligibilityCell.innerHTML = `Not eligible | Required course(s)<div style="color:white;">${missingRolesText}</div>`;
         eligibilityCell.style.color = "red";
       }
       row.appendChild(eligibilityCell);
     });
   }
   
+    
   window.addEventListener('load', () => {
       addEligibilityColumn();
   });
