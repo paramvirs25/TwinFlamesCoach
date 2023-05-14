@@ -110,11 +110,11 @@
   }
   
   /* Promobox container/body */
-  .promobox-container {
+.promobox-container {
 	padding: 5px;
 	background-color:#E0F1B5;
 	color:#000000;
-		  font-size: 12px;
+		  
   }
   
   /****Promo Box End****/
