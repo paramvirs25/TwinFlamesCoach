@@ -1,7 +1,5 @@
 function addTextboxAndFilter(element, qTipId) {
     try {
-        //console.log('#qtip-' + qTipId + '-content');
-        
         const targetDiv = document.querySelector('#qtip-' + qTipId + '-content .tb-comment-filter-studio-comment-menu-header-text');
         targetDiv.innerHTML = '<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search">';
 
@@ -12,7 +10,6 @@ function addTextboxAndFilter(element, qTipId) {
             const value = this.value.toLowerCase().trim();
             cannedResponses.forEach(function (cannedResponse) {
                 const text = cannedResponse.querySelectorAll('.tb-inline-block')[1].textContent.toLowerCase();
-                //console.log(text + ' vs ' + value);
                 if (text.includes(value)) {
                     cannedResponse.style.display = '';
                 } else {
@@ -22,9 +19,9 @@ function addTextboxAndFilter(element, qTipId) {
         });
 
         //add click handler on canned response
-        cannedResponses.forEach(function(cannedResponse, element) {
+        cannedResponses.forEach(function(cannedResponse) {
             if (!cannedResponse.onclick || cannedResponse.onclick.toString().indexOf('cannedResponseClicked') === -1) {
-                    cannedResponse.addEventListener('click', () => {
+                cannedResponse.addEventListener('click', () => {
 
                     setTimeout(function() {
 
