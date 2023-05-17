@@ -39,6 +39,8 @@ function cannedResponseClicked(element) {
           });
         }
       });
+
+      document.querySelector('#searchCannedResponse-' + qTipId).focus();
     } catch (e) {
       console.log(e);
     }
