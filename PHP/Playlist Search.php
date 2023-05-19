@@ -5,17 +5,16 @@
 	.showThumb {
       display: block!important;
     }
-	#searchPlaylist{
-		width:480px;height:49px; border:3px solid black;
-		padding-left:48px;
-		padding-top:1px;
-		font-size:22px;color:blue;
+	.searchPlaylist{
+		width:180px;
+		margin-left: 5px;
+		padding-top: 0px;
 		background-image:url('images/search.jpg');
 		background-repeat:no-repeat;
 		background-position:center;outline:0;
 	}
 
-	#searchPlaylist::-webkit-search-cancel-button{
+	.searchPlaylist::-webkit-search-cancel-button{
 		position:relative;
 		right:20px;    
 	}
@@ -23,22 +22,23 @@
 
 <script>
 	function searchPlaylist(){
-		// Get the input element
-		var searchInput = document.getElementById("searchPlaylist");
+		// Get the search box element
+		var searchInput = document.getElementsByClassName("searchPlaylist");
 
-		// Add an event listener for input changes
-		var searchText = searchInput.value.toLowerCase();
+		var searchText = searchInput[0].value.toLowerCase();
 		var titles = document.getElementsByClassName("epyt-gallery-title");
 
+		//remove all row breaks
 		removeRowBreaks();
 
 		var thumbCounter = 0;
 
-		// Loop through each title and check for a match
+		// Loop through each title and check for a match with search text
 		for (var i = 0; i < titles.length; i++) {
 			var titleText = titles[i].textContent.toLowerCase();
 			var parentDiv = titles[i].parentNode;
 			
+			//if match
 			if (titleText.includes(searchText)) {
 				//show thumbnail
 				parentDiv.classList.remove("hideThumb");
@@ -73,33 +73,39 @@
 			div.parentNode.removeChild(div);
 		});
 	}
-	
 
+	function initYTPlayListSearch() {
+		//Get all YT channel subscribe buttons
+		var divElements = document.querySelectorAll(".epyt-gallery-subscribe");
+
+		//add a search box adjacent to each subscribe button
+		divElements.forEach(function(divElement) {
+			var inputElement = document.createElement("input");
+			inputElement.id = "searchPlaylist";
+			inputElement.name = "searchPlaylist";
+			inputElement.className = "searchPlaylist";
+			inputElement.type = "search";
+			inputElement.placeholder = "Search video";
+			inputElement.setAttribute("oninput", "searchPlaylist();");
+		
+			divElement.appendChild(inputElement);
+
+			// Add event listener to synchronize all search boxes on page
+			inputElement.addEventListener("input", function() {
+				var inputValue = inputElement.value;
+
+				// Update the values of all other input elements
+				divElements.forEach(function(otherDivElement) {
+					if (otherDivElement !== divElement) {
+					var otherInputElement = otherDivElement.querySelector("input[class='searchPlaylist']");
+					otherInputElement.value = inputValue;
+					}
+				});
+			});
+		});
+	}
+
+	window.addEventListener('load', () => {
+		initYTPlayListSearch();
+	});
 </script>
-<input id="searchPlaylist" name="searchPlaylist" type="search" placeholder="Search video" oninput="searchPlaylist();" />
-<!--<input type="text" id="searchPlaylist" placeholder="Search video" value="lov">
-<input type="button" onclick="searchPlaylist();" value="Search Videos">-->
-<script>
-   /* // Get the input element
-    var searchInput = document.getElementById("searchPlaylist");   
-	
-    // Add an event listener for input changes
-    searchInput.addEventListener("input", function() {
-      var searchText = this.value.toLowerCase();		
-      var titles = document.getElementsByClassName("epyt-gallery-title");
-      
-      // Loop through each title and check for a match
-      for (var i = 0; i < titles.length; i++) {
-        var titleText = titles[i].textContent.toLowerCase();
-        var parentDiv = titles[i].parentNode;
-        
-        if (titleText.includes(searchText)) {
-          	parentDiv.classList.remove("hideThumb");
-			parentDiv.classList.add("showThumb");
-        } else {
-          	parentDiv.classList.remove("showThumb");
-			parentDiv.classList.add("hideThumb");
-        } 
-      }
-    });*/
-  </script>
