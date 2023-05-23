@@ -22,18 +22,20 @@
 
 <script>
 	function searchPlaylist(){
-		// Get the search box element
-		var searchInput = document.getElementsByClassName("searchPlaylist");
-
-		var searchText = searchInput[0].value.toLowerCase();
+		// Get all search boxes on page
+		var searchInputs = document.getElementsByClassName("searchPlaylist");
+		
+		var searchText = searchInputs[0].value.toLowerCase();
 		var titles = document.getElementsByClassName("epyt-gallery-title");
 
 		//remove all row breaks
 		removeRowBreaks();
 
 		var thumbCounter = 0;
-
+		
 		// Loop through each title and check for a match with search text
+		// Note: If there ar emultiple search boxes on a page, then this loop will sacn through 
+		// titles corresponding to all search boxes. 
 		for (var i = 0; i < titles.length; i++) {
 			var titleText = titles[i].textContent.toLowerCase();
 			var parentDiv = titles[i].parentNode;
@@ -53,7 +55,13 @@
 				//hide thumbnail
 				parentDiv.classList.remove("showThumb");
 				parentDiv.classList.add("hideThumb");
-			} 
+			}
+
+			//reset thumbCounter when all titles corresponding to a search box are scanned.
+			//This helps in having correct row breaks if page contains multiple search boxes.
+			if(i == (titles.length/searchInputs.length) - 1){
+				thumbCounter = 0;
+			}
       	}
 	}
 
@@ -81,8 +89,8 @@
 		//add a search box adjacent to each subscribe button
 		divElements.forEach(function(divElement) {
 			var inputElement = document.createElement("input");
-			inputElement.id = "searchPlaylist";
-			inputElement.name = "searchPlaylist";
+			//inputElement.id = "searchPlaylist";
+			//inputElement.name = "searchPlaylist";
 			inputElement.className = "searchPlaylist";
 			inputElement.type = "search";
 			inputElement.placeholder = "Search video";
