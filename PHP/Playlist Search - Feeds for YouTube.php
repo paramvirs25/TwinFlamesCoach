@@ -51,8 +51,18 @@
 
 		// When the user clicks on div, open the popup
 		showPopup() {
+			/*var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");*/
+
 			var popup = document.getElementById("myPopup");
-			popup.classList.toggle("show");			
+			if (!popup.classList.contains("show")) {
+				popup.classList.add("show");
+			}
+		}
+
+		hidePopup(){
+			var popup = document.getElementById("myPopup");
+			popup.classList.remove("show");	
 		}
 
 		setPopupWidth(){
@@ -152,14 +162,15 @@
 	<input class="searchPlaylist" type="search" 
 		placeholder="Search all channel videos" 
 		oninput="feeds.searchPlaylist();" 
-		onfocus="feeds.showPopup();">
+		onfocus="feeds.showPopup();"
+		onblur="feeds.hidePopup();">
 
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
 
 	<div class="popup">
 		<span class="popuptext" id="myPopup">
-			<h2>Popular search terms</h2>
+			<h3>Popular searches</h3>
 
 			<span class="tag-cloud">Union</span>
 			<span class="tag-cloud">Inner Work</span>
