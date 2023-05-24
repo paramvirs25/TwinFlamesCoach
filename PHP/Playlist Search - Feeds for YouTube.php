@@ -29,6 +29,16 @@
 	.searchResult{
 		display: none;
 	}
+
+	.tag-cloud {
+		display: inline-block;
+		color: white;
+		padding: 8px 20px;
+		font-family: Arial;
+		border-radius: 25px;
+		background-color: #2196F3;
+		margin-top: 8px;
+	}
 </style>
 
 <script>
@@ -39,11 +49,29 @@
 			this.thumbCounter = 0;
 		}
 
+		// When the user clicks on div, open the popup
+		showPopup() {
+			var popup = document.getElementById("myPopup");
+			popup.classList.toggle("show");			
+		}
+
+		setPopupWidth(){
+			// Get the input element with the CSS class "searchPlaylist"
+			const inputElement = document.querySelector('.searchPlaylist');
+
+			// Get the computed width of the input element
+			const inputWidth = window.getComputedStyle(inputElement).width;
+
+			// Set the width of the div element equal to the width of the input element
+			var popup = document.getElementById("myPopup");
+			popup.style.width = inputWidth;
+		}
+
 		showLoader(loaderId){
-            document.getElementById(loaderId).style.display = "visible";
+            document.getElementById(loaderId).style.display = "block";
         }
         hideLoader(loaderId){
-            document.getElementById(loaderId).style.visibility = "hidden";
+            document.getElementById(loaderId).style.display = "none";
         }
 
 		showFoundVideosCount(totalVisibleVideos){
@@ -101,6 +129,10 @@
 			this.showVideoTitle();
 
 			this.hideLoader("searchLoader");
+
+			this.setPopupWidth();
+			
+			//make search result visible
 			var divElement = document.querySelector(".searchResult");
 			divElement.classList.remove("searchResult");
 		}
@@ -115,10 +147,31 @@
 	});
 
 </script>
-<div class="searchElements" align="center">
+<div class="searchElements">
 	<div class="playlistVideoCount">Loading...</div>	
-	<input class="searchPlaylist" type="search" placeholder="Search all channel videos" oninput="feeds.searchPlaylist();">
+	<input class="searchPlaylist" type="search" 
+		placeholder="Search all channel videos" 
+		oninput="feeds.searchPlaylist();" 
+		onfocus="feeds.showPopup();">
 
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
+
+	<div class="popup">
+		<span class="popuptext" id="myPopup">
+			<h2>Popular search terms</h2>
+
+			<span class="tag-cloud">Union</span>
+			<span class="tag-cloud">Inner Work</span>
+			<span class="tag-cloud">Sex</span>
+			<span class="tag-cloud">Separation</span>
+			<span class="tag-cloud">Marriage</span>
+			<span class="tag-cloud">Age</span>
+			<span class="tag-cloud">Celebrity</span>
+			<span class="tag-cloud">Third Party</span>
+			<span class="tag-cloud">Twin Flame Sign</span>
+			<span class="tag-cloud">1111</span>
+			<span class="tag-cloud">Finance</span>
+		</span>
+	</div>
 </div>
