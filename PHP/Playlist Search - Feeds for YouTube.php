@@ -1,3 +1,7 @@
+<!--
+	Dependency:
+		Loader.css
+-->
 <style>
     .searchElements{
 		text-align: center;
@@ -21,7 +25,10 @@
 		font-size: 12px;
 		font-weight: bold;
 	}
-	
+
+	.searchResult{
+		display: none;
+	}
 </style>
 
 <script>
@@ -32,6 +39,13 @@
 			this.thumbCounter = 0;
 		}
 
+		showLoader(loaderId){
+            document.getElementById(loaderId).style.display = "visible";
+        }
+        hideLoader(loaderId){
+            document.getElementById(loaderId).style.visibility = "hidden";
+        }
+
 		showFoundVideosCount(totalVisibleVideos){
 			// Get the element with class "playlistVideoCount"
 			var divElement = document.querySelector(".playlistVideoCount");
@@ -39,6 +53,8 @@
 		}
 
 		searchPlaylist() {
+			this.showLoader("searchLoader");
+
 			// Get all search boxes on the page
 			this.searchInputs = document.getElementsByClassName("searchPlaylist");
 			var searchText = this.searchInputs[0].value.toLowerCase();
@@ -63,66 +79,46 @@
 			}
 
 			this.showFoundVideosCount(visibleVideos);
+
+			this.hideLoader("searchLoader");
 		}
 
 		showVideoTitle() {
 			// Get all div elements with class "sby_thumbnail_hover"
 			var divsToMove = document.querySelectorAll('.sby_thumbnail_hover');
 
-			var visibleVideos = 0;
-
 			// Loop through each div and move it next to its parent element
 			divsToMove.forEach(function (div) {
+				div.className = ''; // Remove all CSS classes from the moved divs
 				var parentElement = div.parentNode;
 				parentElement.parentNode.insertBefore(div, parentElement.nextSibling);
-				visibleVideos++;
 			});
 
-			this.showFoundVideosCount(visibleVideos);
-
-			// Remove all CSS classes from the moved divs
-			divsToMove.forEach(function (div) {
-				div.className = '';
-			});
+			this.showFoundVideosCount(divsToMove.length);
 		}
 
 		initYTPlayListSearch() {
-
-			/* var searchElements = document.createElement("div");
-			//searchElements.align = "center";
-			searchElements.className = "searchElements";
-
-			// Create the input element
-			var inputElement = document.createElement("input");
-			inputElement.className = "searchPlaylist";
-			inputElement.type = "search";
-			inputElement.placeholder = "Search all channel videos";
-			inputElement.setAttribute("oninput", "feeds.searchPlaylist();");
-			searchElements.appendChild(inputElement);
-
-			//Create span for video count
-			var playlistVideoCountElement = document.createElement("span");
-			playlistVideoCountElement.className = "playlistVideoCount";
-			searchElements.appendChild(playlistVideoCountElement);
-
-			// Get the div with class "sby_items_wrap"
-			var divElement = document.querySelector(".sby_items_wrap");
-			divElement.parentNode.insertBefore(searchElements, divElement); */
-
 			this.showVideoTitle();
+
+			this.hideLoader("searchLoader");
+			var divElement = document.querySelector(".searchResult");
+			divElement.classList.remove("searchResult");
 		}
 	}
 
 	// Create an instance of the FeedsForYT_TFC class
 	var feeds = new FeedsForYT_TFC();
-
+	
 	// Call initYTPlayListSearch() on page load
-	window.addEventListener('load', function () {
+	window.addEventListener('load', function () {		
 		feeds.initYTPlayListSearch();
 	});
 
 </script>
-<div class="searchElements">
-	<span class="playlistVideoCount"></span>	
-	<input class="searchPlaylist" type="search" placeholder="Search all channel videos" oninput="feeds.searchPlaylist();">	
+<div class="searchElements" align="center">
+	<div class="playlistVideoCount">Loading...</div>	
+	<input class="searchPlaylist" type="search" placeholder="Search all channel videos" oninput="feeds.searchPlaylist();">
+
+	<!--cssclass loader is defined in Loader.css -->
+	<div class="loader" id="searchLoader"></div>
 </div>
