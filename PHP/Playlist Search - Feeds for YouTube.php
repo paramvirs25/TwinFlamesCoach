@@ -1,17 +1,12 @@
 <style>
-    .hideThumb {
-      display: none!important;
-    }
-	.showThumb {
-      display: block!important;
-    }
-	.searchElements{
+    .searchElements{
 		text-align: center;
 	}
 	.searchPlaylist{
 		width:100%;
-		margin-left: 5px;
-		padding-top: 0px;
+		margin-top: 10px;
+		margin-left: 10px;
+		
 		background-image:url('images/search.jpg');
 		background-repeat:no-repeat;
 		background-position:center;outline:0;
@@ -57,16 +52,12 @@
 				if (titleText.includes(searchText)) {
 					// Show thumbnail
 					parentDiv.style.display = '';
-					//parentDiv.classList.remove("hideThumb");
-					//parentDiv.classList.add("showThumb");
 
 					visibleVideos++;
 					
 				} else {
 					// Hide thumbnail
 					parentDiv.style.display = 'none';
-					//parentDiv.classList.remove("showThumb");
-					//parentDiv.classList.add("hideThumb");
 				}
 			}
 
@@ -117,12 +108,6 @@
 			var divElement = document.querySelector(".sby_items_wrap");
 			divElement.parentNode.insertBefore(searchElements, divElement);
 
-			// Insert the input element before the div
-			//divElement.parentNode.insertBefore(inputElement, divElement);
-			
-			// Insert the span element after the input element
-			//inputElement.parentNode.insertBefore(playlistVideoCountElement, inputElement.nextSibling);
-
 			this.showVideoTitle();
 		}
 	}
@@ -136,5 +121,3 @@
 	});
 
 </script>
-<!--<input class="searchPlaylist" type = "search" placeholder = "Search video" oninput="feeds.searchPlaylist();">
-<span class="playlistVideoCount"></span>-->
