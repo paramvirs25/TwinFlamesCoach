@@ -77,6 +77,11 @@
 			popup.style.width = inputWidth;
 		}
 
+		tagSearch(oTag){
+			document.querySelector(".searchPlaylist").value = oTag.textContent;
+			this.searchPlaylist();
+		}
+
 		showLoader(loaderId){
             document.getElementById(loaderId).style.display = "block";
         }
@@ -94,8 +99,8 @@
 			this.showLoader("searchLoader");
 
 			// Get all search boxes on the page
-			this.searchInputs = document.getElementsByClassName("searchPlaylist");
-			var searchText = this.searchInputs[0].value.toLowerCase();
+			this.searchInput = document.querySelector(".searchPlaylist");
+			var searchText = this.searchInput.value.toLowerCase();
 			this.titles = document.getElementsByClassName("sby_video_title");
 
 			var visibleVideos = 0;
@@ -161,9 +166,10 @@
 	<div class="playlistVideoCount">Loading...</div>	
 	<input class="searchPlaylist" type="search" 
 		placeholder="Search all channel videos" 
-		oninput="feeds.searchPlaylist();" 
+		oninput="feeds.searchPlaylist();feeds.hidePopup();" 
 		onfocus="feeds.showPopup();"
-		onblur="feeds.hidePopup();">
+		onclick="feeds.showPopup();"
+		onblur="setTimeout(function() { feeds.hidePopup(); }, 200);"		>
 
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
@@ -172,17 +178,17 @@
 		<span class="popuptext" id="myPopup">
 			<h3>Popular searches</h3>
 
-			<span class="tag-cloud">Union</span>
-			<span class="tag-cloud">Inner Work</span>
-			<span class="tag-cloud">Sex</span>
-			<span class="tag-cloud">Separation</span>
-			<span class="tag-cloud">Marriage</span>
-			<span class="tag-cloud">Age</span>
-			<span class="tag-cloud">Celebrity</span>
-			<span class="tag-cloud">Third Party</span>
-			<span class="tag-cloud">Twin Flame Sign</span>
-			<span class="tag-cloud">1111</span>
-			<span class="tag-cloud">Finance</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Sex</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Separation</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Marriage</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Age</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Celebrity</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Third Party</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Sign</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">1111</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span>
 		</span>
 	</div>
 </div>
