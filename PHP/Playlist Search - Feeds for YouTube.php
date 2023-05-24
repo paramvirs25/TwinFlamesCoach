@@ -3,7 +3,7 @@
 		text-align: center;
 	}
 	.searchPlaylist{
-		width:100%;
+		width:80%;
 		margin-top: 10px;
 		margin-left: 10px;
 		
@@ -14,13 +14,14 @@
 
 	.searchPlaylist::-webkit-search-cancel-button{
 		position:relative;
-		right:20px;    
+		right:10px;    
 	}
 
 	.playlistVideoCount{
 		font-size: 12px;
 		font-weight: bold;
 	}
+	
 </style>
 
 <script>
@@ -87,7 +88,7 @@
 
 		initYTPlayListSearch() {
 
-			var searchElements = document.createElement("div");
+			/* var searchElements = document.createElement("div");
 			//searchElements.align = "center";
 			searchElements.className = "searchElements";
 
@@ -106,7 +107,7 @@
 
 			// Get the div with class "sby_items_wrap"
 			var divElement = document.querySelector(".sby_items_wrap");
-			divElement.parentNode.insertBefore(searchElements, divElement);
+			divElement.parentNode.insertBefore(searchElements, divElement); */
 
 			this.showVideoTitle();
 		}
@@ -121,3 +122,7 @@
 	});
 
 </script>
+<div class="searchElements">
+	<span class="playlistVideoCount"></span>	
+	<input class="searchPlaylist" type="search" placeholder="Search all channel videos" oninput="feeds.searchPlaylist();">	
+</div>
