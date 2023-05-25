@@ -1,5 +1,6 @@
 <link href="https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/PopUp.css" rel="stylesheet">
 <link href="https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/Loader.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
 <style>
     .searchElements{
 		text-align: center;
@@ -41,10 +42,9 @@
 
 <script>
 	class FeedsForYT_TFC {
+		//const fuse = null;
 		constructor() {
-			this.searchInputs = null;
-			this.titles = null;
-			this.thumbCounter = 0;
+			this.videos = []; // Initialize an empty array to store the video details for FUSE.js search
 		}
 
 		// When the user clicks on div, open the popup
@@ -97,15 +97,18 @@
 			this.showLoader("searchLoader");
 
 			// Get all search boxes on the page
-			this.searchInput = document.querySelector(".searchPlaylist");
-			var searchText = this.searchInput.value.toLowerCase();
-			this.titles = document.getElementsByClassName("sby_video_title");
+			var searchInput = document.querySelector(".searchPlaylist");
+			var searchText = searchInput.value.toLowerCase();
+			var titles = document.getElementsByClassName("sby_video_title");
+
+			// FUSE 3. Now search!
+			//console.log(this.fuse.search(searchText));
 
 			var visibleVideos = 0;
 			// Loop through each title and check for a match with the search text
-			for (var i = 0; i < this.titles.length; i++) {
-				var titleText = this.titles[i].textContent.toLowerCase();
-				var parentDiv = this.titles[i].closest('.sby_item');
+			for (var i = 0; i < titles.length; i++) {
+				var titleText = titles[i].textContent.toLowerCase();
+				var parentDiv = titles[i].closest('.sby_item');
 
 				if (titleText.includes(searchText)) {
 					// Show thumbnail
@@ -124,22 +127,37 @@
 			this.hideLoader("searchLoader");
 		}
 
-		showVideoTitle() {
+		setTitlesAndLoadJSON() {
 			// Get all div elements with class "sby_thumbnail_hover"
 			var divsToMove = document.querySelectorAll('.sby_thumbnail_hover');
-
+			
 			// Loop through each div and move it next to its parent element
-			divsToMove.forEach(function (div) {
+			divsToMove.forEach((div) => {
+
 				div.className = ''; // Remove all CSS classes from the moved divs
 				var parentElement = div.parentNode;
 				parentElement.parentNode.insertBefore(div, parentElement.nextSibling);
+
+				// FUSE 1. List of items to search in
+				// Add video details to the array for search later
+				this.videos.push(
+					{
+						title: div.textContent,
+						oMainDiv: div.closest('.sby_item')
+					}
+				); 
 			});
 
 			this.showFoundVideosCount(divsToMove.length);
 		}
 
 		initYTPlayListSearch() {
-			this.showVideoTitle();
+			this.setTitlesAndLoadJSON();
+
+			// FUSE 2. Set up the Fuse instance
+			/* fuse = new Fuse(videos, {
+				keys: ['title']
+			}); */
 
 			this.hideLoader("searchLoader");
 
