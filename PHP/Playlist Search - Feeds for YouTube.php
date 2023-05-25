@@ -1,7 +1,5 @@
-<!--
-	Dependency:
-		Loader.css
--->
+<link href="https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/PopUp.css" rel="stylesheet">
+<link href="https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/Loader.css" rel="stylesheet">
 <style>
     .searchElements{
 		text-align: center;
