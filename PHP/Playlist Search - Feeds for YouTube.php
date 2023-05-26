@@ -241,21 +241,24 @@
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
 
+	<!--Uses PopUp.css-->
 	<div class="popup">
 		<span class="popuptext" id="myPopup">
-			<div id="popupKeywords1">Popular Twin FLame words</div>
+			<div>Popular Single word</div>
 
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Sex</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Separation</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Marriage</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Age</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Celebrity</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Third Party</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Sign</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">1111</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span>
+
+			<div>Popular Multiple word</div>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Third Party</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Sign</span>
 		</span>
 	</div>
 </div>
