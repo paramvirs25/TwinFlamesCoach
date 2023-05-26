@@ -212,7 +212,8 @@
 	<div class="playlistVideoCount">Loading...</div>
 	<input class="searchPlaylist" type="search" 
 		placeholder="Search all channel videos" 
-		oninput="feeds.searchPlaylist();feeds.hidePopup();" 
+		
+		oninput="clearTimeout(feeds.searchTimer); feeds.searchTimer = setTimeout(function() { feeds.searchPlaylist(); feeds.hidePopup(); }, 500);"
 		
 		onfocus="feeds.showPopup();"
 		onclick="feeds.showPopup();"
@@ -223,7 +224,7 @@
 
 	<div class="popup">
 		<span class="popuptext" id="myPopup">
-			<div>Popular searches</div>
+			<div>Popular Twin FLame words</div>
 
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
