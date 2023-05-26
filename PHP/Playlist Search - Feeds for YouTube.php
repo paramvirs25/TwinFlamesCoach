@@ -106,8 +106,7 @@
 				includeMatches: true,
 				minMatchCharLength: 3,
 				keys: [
-					"title",
-					"author.firstName"
+					"title"
 				]
 			};
 
