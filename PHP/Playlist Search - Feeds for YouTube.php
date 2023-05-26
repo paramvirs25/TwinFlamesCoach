@@ -64,6 +64,22 @@
 			popup.classList.remove("show");	
 		}
 
+		populatePopUp(keywords) {
+			const popupDiv = document.getElementById("popupKeywords1");
+			
+			keywords.forEach(keyword => {
+				const span = document.createElement("span");
+				span.className = "tag-cloud";
+				span.innerText = keyword;
+				span.onclick = function() {
+					feeds.tagSearch(this);
+				};
+				
+				popupDiv.parentElement.appendChild(span);
+			});
+		}
+
+
 		setPopupWidth(){
 			// Get the input element with the CSS class "searchPlaylist"
 			const inputElement = document.querySelector('.searchPlaylist');
@@ -191,6 +207,9 @@
 			this.hideLoader("searchLoader");
 
 			this.setPopupWidth();
+
+			this.populatePopUp(["Union","Inner Work", "Sex",
+			"Separation","Marriage","Age","Celebrity","Third Party","Twin Flame Sign","1111","Finance","convince"]);
 			
 			//make search result visible
 			var divElement = document.querySelector(".searchResult");
@@ -224,9 +243,9 @@
 
 	<div class="popup">
 		<span class="popuptext" id="myPopup">
-			<div>Popular Twin FLame words</div>
+			<div id="popupKeywords1">Popular Twin FLame words</div>
 
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
+			<!-- <span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Sex</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Separation</span>
@@ -236,7 +255,7 @@
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Third Party</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Sign</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">1111</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span> -->
 		</span>
 	</div>
 </div>
