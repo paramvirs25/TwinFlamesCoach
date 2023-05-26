@@ -32,11 +32,12 @@
 	.tag-cloud {
 		display: inline-block;
 		color: white;
-		padding: 8px 20px;
+		padding: 5px 5px;
 		font-family: Arial;
-		border-radius: 25px;
+		border-radius: 10px;
 		background-color: #2196F3;
-		margin-top: 8px;
+		margin-top: 5px;
+		font-size: 15px;
 	}
 </style>
 
@@ -192,7 +193,7 @@
 
 	<div class="popup">
 		<span class="popuptext" id="myPopup">
-			<h3>Popular searches</h3>
+			<div>Popular searches</div>
 
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
