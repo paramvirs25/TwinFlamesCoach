@@ -7,7 +7,7 @@
 		text-align: center;
 	}
 
-	.searchPlaylist {
+	.searchBox {
 		width: 80%;
 		margin-top: 10px;
 		margin-left: 10px;
@@ -18,7 +18,7 @@
 		outline: 0;
 	}
 
-	.searchPlaylist::-webkit-search-cancel-button {
+	.searchBox::-webkit-search-cancel-button {
 		position: relative;
 		right: 10px;
 	}
@@ -51,10 +51,11 @@
 			this.smartSearch = null;
 			this.popup = null;
 			this.loaderId = "searchLoader";
+			this.searchBoxQuerySelector = ".searchBox";
 		}
 
 		tagSearch(oTag) {
-			document.querySelector(".searchPlaylist").value = oTag.textContent;
+			document.querySelector(this.searchBoxQuerySelector).value = oTag.textContent;
 			this.searchPlaylist();
 		}
 
@@ -74,7 +75,7 @@
 		searchPlaylist() {
 			this.showLoader();
 
-			var searchInput = document.querySelector(".searchPlaylist");
+			var searchInput = document.querySelector(this.searchBoxQuerySelector);
 			var searchText = searchInput.value.toLowerCase();
 			var titles = document.getElementsByClassName("sby_video_title");
 
@@ -143,7 +144,7 @@
 
 			//popup
 			this.popup = new Popup_TFC("myPopup");
-			const inputElement = document.querySelector('.searchPlaylist');
+			const inputElement = document.querySelector(this.searchBoxQuerySelector);
 			const inputWidth = window.getComputedStyle(inputElement).width;
 			this.popup.setPopupWidth(inputWidth);
 
@@ -164,7 +165,7 @@
 	<div style="font-size:14px;">Tip: Searching for single word gives best result. Click inside search box below to see
 		certain popular search words.</div>
 	<div class="playlistVideoCount">Loading...</div>
-	<input class="searchPlaylist" type="search" placeholder="Search all channel videos"
+	<input class="searchBox" type="search" placeholder="Search all channel videos"
 		oninput="clearTimeout(feeds.searchTimer); feeds.searchTimer = setTimeout(function() { feeds.searchPlaylist(); feeds.popup.hidePopup(); }, 500);"
 		onfocus="feeds.popup.showPopup();" onclick="feeds.popup.showPopup();"
 		onblur="setTimeout(function() { feeds.popup.hidePopup(); }, 200);">
