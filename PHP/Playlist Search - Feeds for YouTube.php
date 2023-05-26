@@ -50,6 +50,7 @@
 			this.videos = []; // Initialize an empty array to store the video details for FUSE.js search
 			this.smartSearch = null;
 			this.popup = null;
+			this.loaderId = "searchLoader";
 		}
 
 		tagSearch(oTag) {
@@ -57,12 +58,12 @@
 			this.searchPlaylist();
 		}
 
-		showLoader(loaderId) {
-			document.getElementById(loaderId).style.display = "block";
+		showLoader() {
+			document.getElementById(this.loaderId).style.display = "block";
 		}
 
-		hideLoader(loaderId) {
-			document.getElementById(loaderId).style.display = "none";
+		hideLoader() {
+			document.getElementById(this.loaderId).style.display = "none";
 		}
 
 		showFoundVideosCount(totalVisibleVideos) {
@@ -71,7 +72,7 @@
 		}
 
 		searchPlaylist() {
-			this.showLoader("searchLoader");
+			this.showLoader();
 
 			var searchInput = document.querySelector(".searchPlaylist");
 			var searchText = searchInput.value.toLowerCase();
@@ -95,7 +96,7 @@
 
 			this.showFoundVideosCount(visibleVideos);
 
-			this.hideLoader("searchLoader");
+			this.hideLoader();
 		}
 
 		initSmartSearch() {
@@ -138,7 +139,7 @@
 			this.videos = this.setTitlesAndLoadJSON();
 			this.smartSearch = this.initSmartSearch();
 			
-			this.hideLoader("searchLoader");
+			this.hideLoader();
 
 			//popup
 			this.popup = new Popup_TFC("myPopup");
