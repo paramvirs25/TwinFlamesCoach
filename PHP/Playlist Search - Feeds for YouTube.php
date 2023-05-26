@@ -129,15 +129,15 @@
 		}
 
 		initSmartSearch(){
-			/*
+			
 			// FUSE 2. Set up the Fuse instance
 			const options = {
 			// isCaseSensitive: false,
-			// includeScore: false,
+			 includeScore: true,
 			// shouldSort: true,
-			// includeMatches: false,
+			 includeMatches: true,
 			// findAllMatches: false,
-			// minMatchCharLength: 1,
+			 minMatchCharLength: 3,
 			// location: 0,
 			// threshold: 0.6,
 			// distance: 100,
@@ -149,11 +149,9 @@
 				"title",
 				"author.firstName"
 			]
-			};*/
+			};
 
-			return new Fuse(this.videos, {
-				keys: ['title']
-			});
+			return new Fuse(this.videos, options);
 		}
 
 		setTitlesAndLoadJSON() {
@@ -210,14 +208,16 @@
 
 </script>
 <div class="searchElements">
-	<div class="playlistVideoCount">Loading...</div>	
+	<div style="font-size:14px;">Tip: Searching for single word gives best result. Click inside search box below to see certain popular search words.</div>
+	<div class="playlistVideoCount">Loading...</div>
 	<input class="searchPlaylist" type="search" 
 		placeholder="Search all channel videos" 
 		oninput="feeds.searchPlaylist();feeds.hidePopup();" 
+		
 		onfocus="feeds.showPopup();"
 		onclick="feeds.showPopup();"
-		onblur="setTimeout(function() { feeds.hidePopup(); }, 200);"		>
-
+		onblur="setTimeout(function() { feeds.hidePopup(); }, 200);">
+	
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
 
