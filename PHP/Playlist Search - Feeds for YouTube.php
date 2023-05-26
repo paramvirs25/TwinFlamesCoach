@@ -43,9 +43,9 @@
 
 <script>
 	class FeedsForYT_TFC {
-		//const fuse = null;
 		constructor() {
 			this.videos = []; // Initialize an empty array to store the video details for FUSE.js search
+			this.smartSearch = null;
 		}
 
 		// When the user clicks on div, open the popup
@@ -103,7 +103,7 @@
 			var titles = document.getElementsByClassName("sby_video_title");
 
 			// FUSE 3. Now search!
-			//console.log(this.fuse.search(searchText));
+			console.log(this.smartSearch.search(searchText));
 
 			var visibleVideos = 0;
 			// Loop through each title and check for a match with the search text
@@ -128,10 +128,39 @@
 			this.hideLoader("searchLoader");
 		}
 
+		initSmartSearch(){
+			/*
+			// FUSE 2. Set up the Fuse instance
+			const options = {
+			// isCaseSensitive: false,
+			// includeScore: false,
+			// shouldSort: true,
+			// includeMatches: false,
+			// findAllMatches: false,
+			// minMatchCharLength: 1,
+			// location: 0,
+			// threshold: 0.6,
+			// distance: 100,
+			// useExtendedSearch: false,
+			// ignoreLocation: false,
+			// ignoreFieldNorm: false,
+			// fieldNormWeight: 1,
+			keys: [
+				"title",
+				"author.firstName"
+			]
+			};*/
+
+			return new Fuse(this.videos, {
+				keys: ['title']
+			});
+		}
+
 		setTitlesAndLoadJSON() {
 			// Get all div elements with class "sby_thumbnail_hover"
 			var divsToMove = document.querySelectorAll('.sby_thumbnail_hover');
-			
+			var videosList = [];
+
 			// Loop through each div and move it next to its parent element
 			divsToMove.forEach((div) => {
 
@@ -141,7 +170,7 @@
 
 				// FUSE 1. List of items to search in
 				// Add video details to the array for search later
-				this.videos.push(
+				videosList.push(
 					{
 						title: div.textContent,
 						oMainDiv: div.closest('.sby_item')
@@ -150,15 +179,16 @@
 			});
 
 			this.showFoundVideosCount(divsToMove.length);
+
+			return videosList;
 		}
 
 		initYTPlayListSearch() {
-			this.setTitlesAndLoadJSON();
+			//display titles and populate videos array
+			this.videos = this.setTitlesAndLoadJSON();
 
-			// FUSE 2. Set up the Fuse instance
-			/* fuse = new Fuse(videos, {
-				keys: ['title']
-			}); */
+			//Initialize smart search
+			this.smartSearch = this.initSmartSearch();			
 
 			this.hideLoader("searchLoader");
 
