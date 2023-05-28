@@ -28,9 +28,9 @@
 		font-weight: bold;
 	}
 
-	.searchResult {
+	/* .searchResult {
 		display: none;
-	}
+	} */
 
 	.tag-cloud {
 		display: inline-block;
@@ -147,8 +147,8 @@
 			const inputWidth = window.getComputedStyle(inputElement).width;
 			this.popup.setPopupWidth(inputWidth);
 
-			var divElement = document.querySelector(".searchResult");
-			divElement.classList.remove("searchResult");
+			/* var divElement = document.querySelector(".searchResult");
+			divElement.classList.remove("searchResult"); */
 		}
 	}
 
