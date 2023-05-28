@@ -72,6 +72,14 @@
 			divElement.textContent = 'Found ' + totalVisibleVideos + ' Video(s)';
 		}
 
+		onSearchInput(){
+			clearTimeout(feeds.searchTimer); 
+			feeds.searchTimer = setTimeout(function() { 
+				feeds.searchPlaylist(); 
+				feeds.popup.hidePopup(); }, 
+				500);
+		}
+
 		searchPlaylist() {
 			this.showLoader();
 
@@ -165,7 +173,7 @@
 		certain popular search words.</div>
 	<div class="playlistVideoCount">Loading...</div>
 	<input class="searchBox" type="search" placeholder="Search all channel videos"
-		oninput="clearTimeout(feeds.searchTimer); feeds.searchTimer = setTimeout(function() { feeds.searchPlaylist(); feeds.popup.hidePopup(); }, 500);"
+		oninput="feeds.onSearchInput();"
 		onfocus="feeds.popup.showPopup();" onclick="feeds.popup.showPopup();"
 		onblur="setTimeout(function() { feeds.popup.hidePopup(); }, 200);">
 
