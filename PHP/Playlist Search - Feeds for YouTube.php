@@ -161,7 +161,7 @@
 
 </script>
 <div class="searchElements">
-	<div style="font-size:14px;">Tip: Searching for single word gives best result. Click inside search box below to see
+	<div style="font-size:14px;font-style: italic;">Tip: Searching for single word gives best result. Click inside search box below to see
 		certain popular search words.</div>
 	<div class="playlistVideoCount">Loading...</div>
 	<input class="searchBox" type="search" placeholder="Search all channel videos"
