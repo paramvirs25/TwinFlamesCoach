@@ -73,16 +73,18 @@
 		}
 
 		onSearchInput(){
+			
 			clearTimeout(feeds.searchTimer); 
-			feeds.searchTimer = setTimeout(function() { 
-				feeds.searchPlaylist(); 
-				feeds.popup.hidePopup(); }, 
+			feeds.searchTimer = setTimeout(
+				function() { 
+					feeds.searchPlaylist(); 
+					feeds.popup.hidePopup(); 
+					
+				}, 
 				500);
 		}
 
 		searchPlaylist() {
-			this.showLoader();
-
 			var searchInput = document.querySelector(this.searchBoxQuerySelector);
 			var searchText = searchInput.value.toLowerCase();
 			var titles = document.getElementsByClassName("sby_video_title");
@@ -104,8 +106,6 @@
 			}
 
 			this.showFoundVideosCount(visibleVideos);
-
-			this.hideLoader();
 		}
 
 		initSmartSearch() {
