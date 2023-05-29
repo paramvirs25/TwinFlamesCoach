@@ -193,7 +193,7 @@
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">1111</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Believe</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Death</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Died</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Family</span>
 			
 
