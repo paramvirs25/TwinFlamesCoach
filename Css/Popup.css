@@ -56,3 +56,14 @@
   from {opacity: 0;}
   to {opacity:1 ;}
 }
+
+.tag-cloud {
+  display: inline-block;
+  color: white;
+  padding: 5px 5px;
+  font-family: Arial;
+  border-radius: 10px;
+  background-color: #2196F3;
+  margin-top: 5px;
+  font-size: 12px;
+}
