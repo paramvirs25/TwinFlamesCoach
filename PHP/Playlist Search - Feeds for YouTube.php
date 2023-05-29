@@ -32,17 +32,6 @@
 	/* .searchResult {
 		display: none;
 	} */
-
-	.tag-cloud {
-		display: inline-block;
-		color: white;
-		padding: 5px 5px;
-		font-family: Arial;
-		border-radius: 10px;
-		background-color: #2196F3;
-		margin-top: 5px;
-		font-size: 15px;
-	}
 </style>
 
 <script>
@@ -187,18 +176,38 @@
 			<div>Popular Single word</div>
 
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Unite</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Forget</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Karmic</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Soulmate</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Ancestral</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Partner</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Signs</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Sex</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Masculine</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Feminine</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Separation</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Marriage</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Age</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Celebrity</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">1111</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Believe</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Death</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Family</span>
+			
 
 			<div>Popular Multiple word</div>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Third Party</span>
 			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Sign</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Higher Self</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Black Magic</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Reverse effect</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">3d and 5d</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Love and attachment</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Mirror</span>
+			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Tell My twin flame</span>
 		</span>
 	</div>
 </div>
