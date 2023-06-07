@@ -31,14 +31,16 @@ function cannedResponseClicked(element) {
         });
       });
   
-      //add click handler on canned response
-      cannedResponses.forEach(function(cannedResponse) {
-        if (!cannedResponse.onclick || cannedResponse.onclick.toString().indexOf('cannedResponseClicked') === -1) {
-          cannedResponse.addEventListener('click', () => {
-            cannedResponseClicked(element);
-          });
-        }
-      });
+      if(autoSubmitResponse_tfc){
+        //add click handler on canned response
+        cannedResponses.forEach(function(cannedResponse) {
+          if (!cannedResponse.onclick || cannedResponse.onclick.toString().indexOf('cannedResponseClicked') === -1) {
+            cannedResponse.addEventListener('click', () => {
+              cannedResponseClicked(element);
+            });
+          }
+        });
+      }
 
       document.querySelector('#searchCannedResponse-' + qTipId).focus();
     } catch (e) {
@@ -46,6 +48,7 @@ function cannedResponseClicked(element) {
     }
   }
   
+  const autoSubmitResponse_tfc = true;
   const elements = document.querySelectorAll('.tb-comment-filter-studio-menu-container-down');
   
   elements.forEach(element => {
