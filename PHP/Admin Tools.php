@@ -7,6 +7,8 @@ add_shortcode( 'admin_tools', function () {
 			giveAccessToBasicIWFirstClass();
 		} else if($_GET['act'] == 'biw1comp'){
 			onBasicIW1Complete();
+		} else if($_GET['act'] == 'biw2comp'){
+			onBasicIW2Complete();
 		}
 		
 	} else {
@@ -18,6 +20,8 @@ add_shortcode( 'admin_tools', function () {
 		  <input type="submit" value="Give Access to Basic IW first class" onclick="document.forms[\'admintools\'].act.value = \'bw1class\' ">
 		  <br/><br/>
 		  <input type="submit" value="On Basic Inner Work 1 Complete" onclick="document.forms[\'admintools\'].act.value = \'biw1comp\' ">
+		  <br/><br/>
+		  <input type="submit" value="On Basic Inner Work 2 Complete" onclick="document.forms[\'admintools\'].act.value = \'biw2comp\' ">
 		</form>';
 	}
 
