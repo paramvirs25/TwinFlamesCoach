@@ -37,9 +37,11 @@ function approveNewUser(){
 		echo "UpdateUserOnBasicIW2Complete starts -><br/>";
 		
 		replaceUserRoles(
-			'group_basic_iw_1', 
-			array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool' ),
-			array( 'basic_iw_1' ));
+			'group_basic_iw_2', 
+			array( 'tfciwchakrashuddhi', 'belief_clearing_2_tool', 'tfciwhigherheart', 
+				'tfciwlocation', 'angels_blessings_tool', 
+				'tfciwsound', 'tfciwcosmicmarriage' ),
+			array( 'tfciw' ));
 		
 		echo "UpdateUserOnBasicIW2Complete ends<br/>";
 	}
