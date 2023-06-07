@@ -1,4 +1,6 @@
 <?php
+namespace TFCMembers;
+
 add_shortcode( 'admin_tools', function () {
 	if (!empty($_GET['act'])) {
 		if($_GET['act'] == 'approve'){
@@ -29,4 +31,4 @@ add_shortcode( 'admin_tools', function () {
 } );
 
 
->
+?>

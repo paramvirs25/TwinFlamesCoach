@@ -44,4 +44,4 @@ function display_user_certificates() {
 	return $returnHTML;
 }
 
->
+?>

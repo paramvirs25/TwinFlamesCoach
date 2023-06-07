@@ -111,4 +111,4 @@ class Courses {
         return $courses;
     }
 }
->
+?>

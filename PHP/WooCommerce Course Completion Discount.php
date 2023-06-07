@@ -63,4 +63,4 @@ function is_cart_contains_consultation_product( $cart, $product_id ){
 	
 	return $cart_contains_consultation;
 }
->
+?>

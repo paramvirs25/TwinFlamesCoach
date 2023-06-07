@@ -1,4 +1,6 @@
 <?php
+namespace TFCMembers;
+
 function approveNewUser(){
 		echo "Approve new user starts -> <br/>";
 		replaceUserRoles(
@@ -29,6 +31,17 @@ function approveNewUser(){
 			array( 'basic_iw_1' ));
 		
 		echo "UpdateUserOnBasicIW1Complete ends<br/>";
+	}
+
+	function onBasicIW2Complete(){
+		echo "UpdateUserOnBasicIW2Complete starts -><br/>";
+		
+		replaceUserRoles(
+			'group_basic_iw_1', 
+			array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool' ),
+			array( 'basic_iw_1' ));
+		
+		echo "UpdateUserOnBasicIW2Complete ends<br/>";
 	}
 
 	//$search_by_user_role - Define the role to search for
@@ -83,4 +96,4 @@ function approveNewUser(){
 			echo "</div>";
 		}
 	}
-    >
+?>
