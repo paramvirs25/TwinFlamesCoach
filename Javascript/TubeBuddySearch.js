@@ -1,3 +1,8 @@
+escapeHTMLPolicy = trustedTypes.createPolicy("forceInner", {
+  createHTML: (to_escape) => to_escape
+})
+
+
 function cannedResponseClicked(element) {
   setTimeout(function () {
     //When canned response is selected, auto submit the comment
@@ -14,7 +19,8 @@ function cannedResponseClicked(element) {
 function addTextboxAndFilter(element, qTipId) {
   try {
     const targetDiv = document.querySelector('#qtip-' + qTipId + '-content .tb-comment-filter-studio-comment-menu-header-text');
-    targetDiv.innerHTML = '<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search">';
+//    targetDiv.innerHTML = '<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search">';
+    targetDiv.innerHTML = escapeHTMLPolicy.createHTML('<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search">');
 
     const menuBody = document.querySelector('#qtip-' + qTipId + '-content .tb-comment-filter-studio-comment-menu-body');
     const cannedResponses = menuBody.querySelectorAll('.tb-comment-filter-studio-menu-cannedResponse');
