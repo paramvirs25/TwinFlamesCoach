@@ -66,40 +66,42 @@
 	<div class="popup">
 		<span class="popuptext" id="myPopup">
 			<div>Popular Single word</div>
-
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Union</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Unite</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Forget</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Karmic</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Soulmate</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Ancestral</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Partner</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Signs</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Sex</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Masculine</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Feminine</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Separation</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Marriage</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Age</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Celebrity</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">1111</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Finance</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Believe</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Died</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Family</span>
-			
+			<div class="searchtags">
+				<span >Union</span>
+				<span >Unite</span>
+				<span >Forget</span>
+				<span >Karmic</span>
+				<span >Soulmate</span>
+				<span >Ancestral</span>
+				<span >Partner</span>
+				<span >Signs</span>
+				<span >Sex</span>
+				<span >Masculine</span>
+				<span >Feminine</span>
+				<span >Separation</span>
+				<span >Marriage</span>
+				<span >Age</span>
+				<span >Celebrity</span>
+				<span >1111</span>
+				<span >Finance</span>
+				<span >Believe</span>
+				<span >Died</span>
+				<span >Family</span>
+			</div>	
 
 			<div>Popular Multiple word</div>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Inner Work</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Third Party</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Sign</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Higher Self</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Black Magic</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Reverse effect</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">3d and 5d</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Love and attachment</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Twin Flame Mirror</span>
-			<span class="tag-cloud" onclick="feeds.tagSearch(this);">Tell My twin flame</span>
+			<div class="searchtags">
+				<span >Inner Work</span>
+				<span >Third Party</span>
+				<span >Twin Flame Sign</span>
+				<span >Higher Self</span>
+				<span >Black Magic</span>
+				<span >Reverse effect</span>
+				<span >3d and 5d</span>
+				<span >Love and attachment</span>
+				<span >Twin Flame Mirror</span>
+				<span >Tell My twin flame</span>
+			</div>
 		</span>
 	</div>
 </div>

@@ -99,6 +99,25 @@ class FeedsForYT_TFC {
 			return videosList;
 		}
 
+		initPopup(){
+			this.popup = new Popup_TFC("myPopup");
+			const inputElement = document.querySelector(this.searchBoxQuerySelector);
+			const inputWidth = window.getComputedStyle(inputElement).width;
+			this.popup.setPopupWidth(inputWidth);
+
+			//set span tag attributes
+			var searchTagsDivs = document.getElementsByClassName('searchtags');
+			for (var i = 0; i < searchTagsDivs.length; i++) {
+				var spanTags = searchTagsDivs[i].getElementsByTagName('span');
+
+				for (var j = 0; j < spanTags.length; j++) {
+					var spanTag = spanTags[j];
+					spanTag.setAttribute('class', 'tag-cloud');
+					spanTag.setAttribute('onclick', 'feeds.tagSearch(this);');
+				}
+			}
+		}
+
 		initYTPlayListSearch() {
 			this.videos = this.setTitlesAndLoadJSON();
 			this.smartSearch = this.initSmartSearch();
@@ -106,10 +125,7 @@ class FeedsForYT_TFC {
 			this.hideLoader();
 
 			//popup
-			this.popup = new Popup_TFC("myPopup");
-			const inputElement = document.querySelector(this.searchBoxQuerySelector);
-			const inputWidth = window.getComputedStyle(inputElement).width;
-			this.popup.setPopupWidth(inputWidth);
+			initPopup();
 
 			/* var divElement = document.querySelector(".searchResult");
 			divElement.classList.remove("searchResult"); */
