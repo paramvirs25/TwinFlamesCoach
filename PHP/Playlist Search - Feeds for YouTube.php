@@ -41,6 +41,7 @@
 class FeedsForYT_TFC {
 		constructor() {
 			this.videos = []; // Initialize an empty array to store the video details for FUSE.js search
+			this.searchText = "";
 			this.smartSearch = null;
 			this.popup = null;
 			this.loaderId = "searchLoader";
@@ -77,12 +78,19 @@ class FeedsForYT_TFC {
 				500);
 		}
 
+		//Log search term in "Search Meter" by passing search text as query string to an iframe
+		//Requirement: Send a call to to a URL in following format
+		//URL = "https://www.twinflamescoach.com/?s={searchText}"
+		saveSearchTextInDB(){			
+			document.getElementById("tfcSearchResult").src = "/?s=" + encodeURIComponent(this.searchText);
+		}
+
 		searchPlaylist() {
 			var searchInput = document.querySelector(this.searchBoxQuerySelector);
-			var searchText = searchInput.value.toLowerCase();
+			this.searchText = searchInput.value.toLowerCase();
 			var titles = document.getElementsByClassName("sby_video_title");
 
-			console.log(this.smartSearch.search(searchText));
+			console.log(this.smartSearch.search(this.searchText));
 
 			var visibleVideos = 0;
 
@@ -90,7 +98,7 @@ class FeedsForYT_TFC {
 				var titleText = titles[i].textContent.toLowerCase();
 				var parentDiv = titles[i].closest('.sby_item');
 
-				if (titleText.includes(searchText)) {
+				if (titleText.includes(this.searchText)) {
 					parentDiv.style.display = '';
 					visibleVideos++;
 				} else {
@@ -100,8 +108,7 @@ class FeedsForYT_TFC {
 
 			this.showFoundVideosCount(visibleVideos);
 
-			//var form = document.getElementById("tfcSearchForm");
-			//form.submit();
+			this.saveSearchTextInDB();			
 		}
 
 		initSmartSearch() {
@@ -181,18 +188,17 @@ class FeedsForYT_TFC {
 
 
 </script>
+<iframe id="tfcSearchResult" style="display:none;"></iframe>
 <div class="searchElements">
 	<div style="font-size:14px;font-style: italic;">Tip: Searching for single word gives best result. Click inside search box below to see
 		certain popular search words.</div>
 	<div class="playlistVideoCount">Loading...</div>
 
-	<!-- <iframe name="tfcSearchResult"></iframe>
-	<form id="tfcSearchForm" target="tfcSearchResult" role="search" action="#" autocomplete="off" aria-label="Search form"> -->
 	<input class="searchBox" type="search" placeholder="Search all channel videos"
-		oninput="feeds.onSearchInput();"
-		onfocus="feeds.popup.showPopup();" onclick="feeds.popup.showPopup();"
-		onblur="setTimeout(function() { feeds.popup.hidePopup(); }, 200);">
-		<!-- </form> -->
+			oninput="feeds.onSearchInput();"
+			onfocus="feeds.popup.showPopup();" onclick="feeds.popup.showPopup();"
+			onblur="setTimeout(function() { feeds.popup.hidePopup(); }, 200);">
+
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
 
