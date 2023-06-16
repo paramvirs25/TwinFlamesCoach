@@ -165,7 +165,7 @@ class FeedsForYT_TFC {
 			this.hideLoader();
 
 			//popup
-			initPopup();
+			this.initPopup();
 
 			/* var divElement = document.querySelector(".searchResult");
 			divElement.classList.remove("searchResult"); */
