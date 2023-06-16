@@ -82,7 +82,9 @@ class FeedsForYT_TFC {
 		//Requirement: Send a call to to a URL in following format
 		//URL = "https://www.twinflamescoach.com/?s={searchText}"
 		saveSearchTextInDB(){			
-			document.getElementById("tfcSearchResult").src = "/?s=" + encodeURIComponent(this.searchText);
+			if(this.searchText != ''){
+				document.getElementById("tfcSearchResult").src = "/?s=" + encodeURIComponent(this.searchText);
+			}
 		}
 
 		searchPlaylist() {
@@ -190,8 +192,9 @@ class FeedsForYT_TFC {
 </script>
 <iframe id="tfcSearchResult" style="display:none;"></iframe>
 <div class="searchElements">
-	<div style="font-size:14px;font-style: italic;">Tip: Searching for single word gives best result. Click inside search box below to see
-		certain popular search words.</div>
+	<div style="font-size:14px;font-style: italic;">
+		<b>Pro Tip</b>: Optimize Your Search! For the best results, try using single words when searching. Click inside the search box below to discover popular search terms.
+	</div>
 	<div class="playlistVideoCount">Loading...</div>
 
 	<input class="searchBox" type="search" placeholder="Search all channel videos"
