@@ -148,6 +148,18 @@ class FeedsForYT_TFC {
 			return videosList;
 		}
 
+		scrollIntoView() {
+			var elements = document.getElementsByClassName("pageViewCount");
+			
+			if (elements.length > 0) {
+				elements[0].scrollIntoView({
+				behavior: 'smooth',
+				block: 'start'
+				});
+			}
+		}
+
+
 		initPopup(){
 			this.popup = new Popup_TFC("myPopup");
 			const inputElement = document.querySelector(this.searchBoxQuerySelector);
@@ -176,6 +188,8 @@ class FeedsForYT_TFC {
 			//popup
 			this.initPopup();
 
+			this.scrollIntoView();
+
 			/* var divElement = document.querySelector(".searchResult");
 			divElement.classList.remove("searchResult"); */
 		}
@@ -193,7 +207,7 @@ class FeedsForYT_TFC {
 <iframe id="tfcSearchResult" style="display:none;"></iframe>
 <div class="searchElements">
 	<div style="font-size:14px;font-style: italic;">
-		<b>Pro Tip</b>: Optimize Your Search! For the best results, try using single words when searching. Click inside the search box below to discover popular search terms.
+		<b>Pro Tip</b>: For the best results, try using single words when searching. Click inside the search box below to discover popular search terms.
 	</div>
 	<div class="playlistVideoCount">Loading...</div>
 
