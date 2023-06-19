@@ -33,15 +33,18 @@
 			font-size: 13px;
 		}
 		
-		/* Sticky header
-		 * Comment - Not taking full width
-		 * .site-header{
-				position: fixed;
-				top: 0;
-				z-index: 9999;
-				background-color:#d5d5e0;
-				color: white;
-		}*/
+		body{
+			padding-top:60px; /*this padding should be equal to .site-header height */
+		}
+	
+		.site-header{
+			position: fixed;
+			top: 0;
+			z-index: 9999;				
+			color: white;
+			height:60px; /*height should be equal to body-padding-top*/
+			WIDTH:100%;
+		}
 		.site-header .header-image {
 			transform: scale(1);			
 		}
