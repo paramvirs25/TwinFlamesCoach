@@ -1,4 +1,19 @@
 <?php
+/**
+ * Applies discount,
+ *      currency symbol,
+ *      Currency conversion
+ * based on user location.
+ *
+ * @param [type] $atts
+ * expected input attributes are
+ *      inr - price in INR
+ *      discount - percentage discount to be applied (in discount value is blank then no discount will be applied)
+ * @return void
+ * returns optput similar to following 
+ * a. strikethrough(USD 700.00) USD 630.00 OR
+ * b. strikethrough(INR 35,000.00) INR 31,500.00
+ */
 function calculatePrice( $atts ) {
 	$inrPrice = $atts['inr'];
     $discount = $atts['discount'];
