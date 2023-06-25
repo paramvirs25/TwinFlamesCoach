@@ -1,7 +1,9 @@
 <?php
-namespace TFCMembers;
+//namespace TFCMembers;
 
 add_shortcode( 'admin_tools', function () {
+	$out = "";
+	
 	if (!empty($_GET['act'])) {
 		if($_GET['act'] == 'approve'){
 			approveNewUser();

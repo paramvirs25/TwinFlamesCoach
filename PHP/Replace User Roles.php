@@ -1,5 +1,5 @@
 <?php
-namespace TFCMembers;
+//namespace TFCMembers;
 
 function approveNewUser(){
 		echo "Approve new user starts -> <br/>";
