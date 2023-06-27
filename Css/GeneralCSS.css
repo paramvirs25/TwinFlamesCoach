@@ -56,6 +56,11 @@
 			padding-right: 5px;		
 		}
 		/*--Site Footer - End*/
+
+		/*Translate Press Icon*/
+		#trp-floater-ls {	
+			right: 1% !important;
+			}
 }
 
 /*Footer settings for both desktop and mobile */
