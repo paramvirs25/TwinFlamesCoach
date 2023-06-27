@@ -1,10 +1,10 @@
-<link href="https://paramvirs25.github.io/TwinFlamesCoach/Css/Popup.css" rel="stylesheet">
-<link href="https://paramvirs25.github.io/TwinFlamesCoach/Css/Loader.css" rel="stylesheet">
+<link rel="preload" as="style" href="https://paramvirs25.github.io/TwinFlamesCoach/Css/Popup.css" onload="this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://paramvirs25.github.io/TwinFlamesCoach/Css/Loader.css" onload="this.rel='stylesheet'">
 
-<!-- <script src="https://paramvirs25.github.io/TwinFlamesCoach/Javascript/FeedsForYT_TFC.js"></script> -->
+<!-- <script src="https://paramvirs25.github.io/TwinFlamesCoach/Javascript/FeedsForYT_TFC.js" defer></script> -->
 
-<script src="https://paramvirs25.github.io/TwinFlamesCoach/Javascript/Popup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+<script src="https://paramvirs25.github.io/TwinFlamesCoach/Javascript/Popup.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js" defer></script>
 <style>
 	.searchElements {
 		text-align: center;
@@ -48,8 +48,8 @@ class FeedsForYT_TFC {
 			this.searchBoxQuerySelector = ".searchBox";
 		}
 
-		tagSearch(oTag) {
-			document.querySelector(this.searchBoxQuerySelector).value = oTag.textContent;
+		searchForText(text) {
+			document.querySelector(this.searchBoxQuerySelector).value = text;
 			this.searchPlaylist();
 		}
 
@@ -148,8 +148,8 @@ class FeedsForYT_TFC {
 			return videosList;
 		}
 
-		scrollIntoView() {
-			var elements = document.getElementsByClassName("pageViewCount");
+		scrollIntoView(cssClass) {
+			var elements = document.getElementsByClassName(cssClass);
 			
 			if (elements.length > 0) {
 				elements[0].scrollIntoView({
@@ -174,24 +174,33 @@ class FeedsForYT_TFC {
 				for (var j = 0; j < spanTags.length; j++) {
 					var spanTag = spanTags[j];
 					spanTag.setAttribute('class', 'tag-cloud');
-					spanTag.setAttribute('onclick', 'feeds.tagSearch(this);');
+					spanTag.setAttribute('onclick', 'feeds.searchForText(this.textContent);');
 				}
+			}
+		}
+
+		//Querystring parameter search(if present)
+		defaultSearch(){
+			var params = new URLSearchParams(window.location.search);
+			var searchTerm = params.get('vid');
+			if(searchTerm != null){
+				this.searchForText(searchTerm);
+			//	this.scrollIntoView("searchBox");
 			}
 		}
 
 		initYTPlayListSearch() {
 			this.videos = this.setTitlesAndLoadJSON();
 			this.smartSearch = this.initSmartSearch();
+
+			this.defaultSearch();
+
+			this.scrollIntoView("pageViewCount");
 			
 			this.hideLoader();
 
 			//popup
 			this.initPopup();
-
-			this.scrollIntoView();
-
-			/* var divElement = document.querySelector(".searchResult");
-			divElement.classList.remove("searchResult"); */
 		}
 	}
 	
