@@ -1,0 +1,77 @@
+/* Style for the active tab button */
+/* .kioken-tabs-buttons-item.active {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-bottom: none;
+    background-color: white;
+    position: relative;
+    z-index: 1;    
+  } */
+
+  
+  
+  /* Style for the active tab content */
+  /* .kioken-tabs-content {
+    border: 1px solid #ccc !important;
+    border-radius: 5px;
+    padding: 10px !important;
+    box-sizing: border-box;
+  } */
+  
+
+.wp-block-kioken-tabs .kioken-tabs-buttons {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+div[class^="wp-block-kioken"] *, div[class^="wp-block-kioken"] *::before, div[class^="wp-block-kioken"] *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.kt_flex_justifystart, .kt_flex_justifyleft {
+  -ms-flex-pack: start !important;
+  justify-content: flex-start !important;
+}
+
+.kt_d_flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.wp-block-kioken-tabs .kioken-tabs-buttons>.kioken-tabs-buttons-item.kioken-tabs-buttons-item.active {
+  background-color: #fff;
+  border-color: #dee2e6;
+  border-bottom-color: #fff;
+  opacity: 1;
+}
+
+.wp-block-kioken-tabs .kioken-tabs-buttons>.kioken-tabs-buttons-item {
+  padding: 0.5em 1.5em;
+  margin-right: 5px;
+  font-weight: 500;
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-width: 0;
+  border-style: solid;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: .6;
+  -webkit-transition: .15s border-color, .15s background-color, .15s opacity;
+  -o-transition: .15s border-color, .15s background-color, .15s opacity;
+  transition: .15s border-color, .15s background-color, .15s opacity;
+  will-change: border-color, background-color, opacity;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.wp-block-kioken-tabs .kioken-tabs-content {
+  margin-top: -1em;
+  border: 1px solid #dee2e6;
+}
