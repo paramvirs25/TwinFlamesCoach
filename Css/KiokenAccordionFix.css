@@ -1,0 +1,79 @@
+div[class^="wp-block-kioken"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  div[class^="wp-block-kioken"] *,
+  div[class^="wp-block-kioken"] *::before,
+  div[class^="wp-block-kioken"] *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .wp-block-kioken-accordion .kioken-accordion-item-heading {
+    position: relative;
+    display: block;
+    padding: .75em 0;
+    padding-right: 46px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: .15s opacity;
+    -o-transition: .15s opacity;
+    transition: .15s opacity;
+    will-change: opacity;
+    opacity: .5;
+  }
+  
+  .wp-block-kioken-accordion .kioken-accordion-item-collapse {
+    position: absolute;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 100%;
+    font-size: .7em;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    -webkit-transition: .3s transform;
+    -o-transition: .3s transform;
+    transition: .3s transform;
+    will-change: transform;
+  }
+  
+  .wp-block-kioken-accordion .kioken-accordion-item-content {
+    display: none;
+    padding: .75em 0;
+  }
+  
+  .kioken-accordion-item-content {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  
+  .kioken-accordion-item-content.active {
+    display: block;
+    max-height: 1000px; /* Adjust the value to an appropriate maximum height */
+    transition: max-height 0.3s ease;
+  }
+  
+  .kioken-accordion-item-heading .kioken-accordion-item-collapse svg {
+    transform: rotate(0deg);
+  }
+  
+  .kioken-accordion-item-heading .kioken-accordion-item-collapse svg.open {
+    transform: rotate(45deg);
+  }
