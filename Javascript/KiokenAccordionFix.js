@@ -1,3 +1,5 @@
+/*Kioken Accordion js code*/
+
 window.addEventListener('load', () => {
   // Get all accordion items
   const accordionItems = document.querySelectorAll('.wp-block-kioken-accordion-item');
