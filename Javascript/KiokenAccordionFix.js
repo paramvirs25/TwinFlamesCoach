@@ -1,5 +1,3 @@
-/*Kioken Accordion js code*/
-
 window.addEventListener('load', () => {
   // Get all accordion items
   const accordionItems = document.querySelectorAll('.wp-block-kioken-accordion-item');
@@ -17,7 +15,11 @@ window.addEventListener('load', () => {
       // Toggle the icon between plus and cross
       const icon = heading.querySelector('svg');
       icon.classList.toggle('open');
+
+      // Toggle the active class on the accordion item's div
+      item.classList.toggle('kioken-accordion-item-active');
     });
   });
+
 
 });
