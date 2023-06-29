@@ -1,16 +1,8 @@
-div[class^="wp-block-kioken"] {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  div[class^="wp-block-kioken"] *,
-  div[class^="wp-block-kioken"] *::before,
-  div[class^="wp-block-kioken"] *::after {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  .wp-block-kioken-accordion .kioken-accordion-item-heading {
+.wp-block-kioken-accordion .wp-block-kioken-accordion-item+.kioken-accordion-item .kioken-accordion-item-heading {
+    border-top: 1px solid #f3f4f5
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-heading {
     position: relative;
     display: block;
     padding: .75em 0;
@@ -26,10 +18,14 @@ div[class^="wp-block-kioken"] {
     -o-transition: .15s opacity;
     transition: .15s opacity;
     will-change: opacity;
-    opacity: .5;
-  }
-  
-  .wp-block-kioken-accordion .kioken-accordion-item-collapse {
+    opacity: .5
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-heading:hover {
+    opacity: 1
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-collapse {
     position: absolute;
     display: -ms-flexbox;
     display: flex;
@@ -49,31 +45,25 @@ div[class^="wp-block-kioken"] {
     -webkit-transition: .3s transform;
     -o-transition: .3s transform;
     transition: .3s transform;
-    will-change: transform;
-  }
-  
-  .wp-block-kioken-accordion .kioken-accordion-item-content {
+    will-change: transform
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-content {
     display: none;
-    padding: .75em 0;
-  }
-  
-  .kioken-accordion-item-content {
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-  
-  .kioken-accordion-item-content.active {
+    padding: .75em 0
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-active .kioken-accordion-item-collapse {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    opacity: 1
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-active .kioken-accordion-item-heading {
+    opacity: 1
+}
+
+.wp-block-kioken-accordion .kioken-accordion-item-active .kioken-accordion-item-content {
     display: block;
-    max-height: 1000px; /* Adjust the value to an appropriate maximum height */
-    transition: max-height 0.3s ease;
-  }
-  
-  .kioken-accordion-item-heading .kioken-accordion-item-collapse svg {
-    transform: rotate(0deg);
-  }
-  
-  .kioken-accordion-item-heading .kioken-accordion-item-collapse svg.open {
-    transform: rotate(45deg);
-  }
+}
