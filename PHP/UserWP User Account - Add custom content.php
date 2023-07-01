@@ -31,12 +31,17 @@ function display_user_certificates() {
 	
     $user = uwp_get_displayed_user();
 	$meta_prefix = "uwp_meta_";	
-	$returnHTML = "<i>Note: If you have completed any certification programs, then you can see and download your certificates as below.</i><br/><hr/>";
+	$returnHTML = "<i>Note: Starting from 2023, if you have completed any certification programs, you can view and download your certificates by by clicking links below:</i><br/><hr/>";
 	
 	//Chakra balancing certificate
 	$chakraBalanceCertUrl = get_user_meta( $user->ID, $meta_prefix."chakra_balancing_certificate_url", true );
 	if($chakraBalanceCertUrl != "" && $chakraBalanceCertUrl != "#"){
-		$returnHTML = $returnHTML.sprintf("<a href='%s' target='_new'>Download Chakra Balancing & Healing Certificate</a>", $chakraBalanceCertUrl);
+		$returnHTML = $returnHTML.sprintf("<p><a href='%s' target='_new'>Download Chakra Balancing & Healing Certificate</a></p>", $chakraBalanceCertUrl);
+	}
+
+	$lifeCoachCertUrl = get_user_meta( $user->ID, $meta_prefix."life_coach_certificate_url", true );
+	if($lifeCoachCertUrl != "" && $lifeCoachCertUrl != "#"){
+		$returnHTML = $returnHTML.sprintf("<p><a href='%s' target='_new'>Download Life Coach Certificate</a></p>", $lifeCoachCertUrl);
 	}
 	
 	//return get_user_meta( $user->ID, "uwp_meta_chakra_balancing_certificate_url", true );
