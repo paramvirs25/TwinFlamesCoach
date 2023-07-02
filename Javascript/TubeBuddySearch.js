@@ -1,15 +1,19 @@
 escapeHTMLPolicy = trustedTypes.createPolicy("forceInner", {
   createHTML: (to_escape) => to_escape
-})
+});
+
+const autoSubmitResponse_tfc = true;
 
 
 function cannedResponseClicked(element) {
   setTimeout(function () {
-    //When canned response is selected, auto submit the comment
-    const submitButton = document.querySelector('#submit-button');
-    submitButton.click();
+    if(autoSubmitResponse_tfc){
+      //When canned response is selected, auto submit the comment
+      const submitButton = document.querySelector('#submit-button');
+      submitButton.click();
+    }
 
-    //div comment-actions
+    //like comment
     const commentActionsDiv = element.parentElement.parentElement;
     const likeButton = commentActionsDiv.querySelector('#like-button');
     likeButton.click();
@@ -19,8 +23,11 @@ function cannedResponseClicked(element) {
 function addTextboxAndFilter(element, qTipId) {
   try {
     const targetDiv = document.querySelector('#qtip-' + qTipId + '-content .tb-comment-filter-studio-comment-menu-header-text');
-//    targetDiv.innerHTML = '<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search">';
-    targetDiv.innerHTML = escapeHTMLPolicy.createHTML('<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search">');
+
+    targetDiv.innerHTML = escapeHTMLPolicy.createHTML(
+      '<input type="text" id="searchCannedResponse-' + qTipId + '" placeholder="Search"> '+
+      '<input type="checkbox" alt="Submit reply?" id="autoSubmitCannedResponse-' + qTipId + '" checked=' + autoSubmitResponse_tfc + '>'
+    );
 
     const menuBody = document.querySelector('#qtip-' + qTipId + '-content .tb-comment-filter-studio-comment-menu-body');
     const cannedResponses = menuBody.querySelectorAll('.tb-comment-filter-studio-menu-cannedResponse');
@@ -37,7 +44,11 @@ function addTextboxAndFilter(element, qTipId) {
       });
     });
 
-    if (autoSubmitResponse_tfc) {
+    document.querySelector('#autoSubmitCannedResponse-' + qTipId).addEventListener('checked', function () {
+      autoSubmitResponse_tfc = this.checked;
+    });
+
+    //if (autoSubmitResponse_tfc) {
       //add click handler on canned response
       cannedResponses.forEach(function (cannedResponse) {
         if (!cannedResponse.onclick || cannedResponse.onclick.toString().indexOf('cannedResponseClicked') === -1) {
@@ -46,7 +57,7 @@ function addTextboxAndFilter(element, qTipId) {
           });
         }
       });
-    }
+    //}
 
     document.querySelector('#searchCannedResponse-' + qTipId).focus();
   } catch (e) {
@@ -63,13 +74,16 @@ function onTubeBuddyClick(element) {
   }, 500); // delay of 0.5 seconds (500 milliseconds)
 }
 
-const autoSubmitResponse_tfc = true;
+
 const elements = document.querySelectorAll('.tb-comment-filter-studio-menu-container-down');
 
 elements.forEach(element => {
-  if (!element.onclick || element.onclick.toString().indexOf('onTubeBuddyClick') === -1) {
+  console.log(element.onclick);
+  
+  if (element.onclick == null || element.onclick.toString().indexOf('onTubeBuddyClick') === -1) {
+    element.insertAdjacentHTML('afterend', escapeHTMLPolicy.createHTML('✓'));
     element.addEventListener('click', () => {
-      onTubeBuddyClick(element);
+      onTubeBuddyClick(element);      
     });
   }
 });
