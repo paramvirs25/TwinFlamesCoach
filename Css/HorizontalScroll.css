@@ -6,7 +6,8 @@
 /*When Visual Link preview is set to SPOTLIGHT*/
 .tfcScrollHorizRow .wp-block-group {
   display: inline-block;
-  width: 275px;
+  /*width: 275px;*/
+  width: 90%;
   white-space: normal;
   vertical-align: top;
 }
