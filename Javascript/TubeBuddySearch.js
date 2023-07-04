@@ -2,7 +2,7 @@ escapeHTMLPolicy = trustedTypes.createPolicy("forceInner", {
   createHTML: (to_escape) => to_escape
 });
 
-const autoSubmitResponse_tfc = true;
+var autoSubmitResponse_tfc = true;
 
 
 function cannedResponseClicked(element) {
@@ -44,9 +44,11 @@ function addTextboxAndFilter(element, qTipId) {
       });
     });
 
-    document.querySelector('#autoSubmitCannedResponse-' + qTipId).addEventListener('checked', function () {
+    document.querySelector('#autoSubmitCannedResponse-' + qTipId).addEventListener('change', function () {
       autoSubmitResponse_tfc = this.checked;
+      console.log(autoSubmitResponse_tfc);
     });
+
 
     //if (autoSubmitResponse_tfc) {
       //add click handler on canned response
@@ -80,10 +82,11 @@ const elements = document.querySelectorAll('.tb-comment-filter-studio-menu-conta
 elements.forEach(element => {
   console.log(element.onclick);
   
-  if (element.onclick == null || element.onclick.toString().indexOf('onTubeBuddyClick') === -1) {
+  if (element.onclick === null || element.onclick.toString().indexOf('onTubeBuddyClick') === -1) {
     element.insertAdjacentHTML('afterend', escapeHTMLPolicy.createHTML('✓'));
-    element.addEventListener('click', () => {
+    element.onclick = () => {
       onTubeBuddyClick(element);      
-    });
+    };
   }
 });
+
