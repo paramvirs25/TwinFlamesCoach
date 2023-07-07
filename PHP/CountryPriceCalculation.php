@@ -19,7 +19,7 @@ function calculatePrice( $atts ) {
     $discount = $atts['discount'];
     $discountedPrice = 	$inrPrice;
     $isShowDiscount = false;    
-    $currencySymbol = "INR";
+    $currencySymbol = "INR ₹";
     $currencyMultiplier = 1;
 	$out = "";
 	
@@ -38,7 +38,7 @@ function calculatePrice( $atts ) {
 
         //format price based on country
 		if( !geot_target( 'IN' ) ) { //Rest of the world in USD
-            $currencySymbol = 'USD';
+            $currencySymbol = 'USD $';
             $currencyMultiplier = .02;			
 		}
 
