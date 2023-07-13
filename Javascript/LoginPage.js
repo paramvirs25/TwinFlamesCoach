@@ -8,6 +8,16 @@ window.addEventListener('load', function() {
             newElement.innerHTML = 'OR';
 			newElement.className = "card-title text-center mb-4";
             formGroup.parentNode.insertBefore(newElement, formGroup.nextSibling);
+
+            //Make Login Visible
+            // Get the element with the class "tfcHideLogin"
+            var element = document.querySelector('.tfcHideLogin');
+
+            // Replace the class "tfcHideLogin" with "tfcShowLogin"
+            if (element) {
+                element.classList.remove('tfcHideLogin');
+                element.classList.add('tfcShowLogin');
+            }
         } else {
             throw new Error('Could not find the specified elements on the page.');
         }
