@@ -75,7 +75,7 @@
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: red;
+	background-color: #f44336; /* Red */
 	color: white;
 	text-align: center;
   }
