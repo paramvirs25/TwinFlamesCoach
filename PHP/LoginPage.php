@@ -1,5 +1,5 @@
 <?php
-add_shortcode( 'login_organize11', function () {
+add_shortcode( 'login_organize', function () {
 	ob_start();
 ?>
 
