@@ -69,6 +69,17 @@
 		color: white;
 }
 
+/*Sticky Footer*/
+.tfc-footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center;
+  }
+
 @media (min-width: 769px){
 	.blocks-gallery-grid .blocks-gallery-image, .blocks-gallery-grid .blocks-gallery-item, .wp-block-gallery .blocks-gallery-image, .wp-block-gallery .blocks-gallery-item {
 		width: calc(20% - 1em);
