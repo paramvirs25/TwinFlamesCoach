@@ -1,3 +1,5 @@
+//THIS CODE IS NOT BEING USED
+
 window.addEventListener('load', function() {
     try {
         var formGroup = document.querySelector('.form-group.text-center.mb-0.p-0');
