@@ -94,7 +94,9 @@
   
   /*----Content box----*/
   .contentbox {
-	  margin: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 10px;
 	  padding: 10px;
 	  border: 1px solid #ccc;
 	  border-radius: 5px;
