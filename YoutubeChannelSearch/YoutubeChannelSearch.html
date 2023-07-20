@@ -1,9 +1,66 @@
 <!--Thumbnail HTML-->
 <!--Embed Plus Youtube-->
 <script>
+    class VideoGallery {
+        constructor(videosData) {
+            this.videosData = videosData;
+        }
+
+        createHTML() {
+            let html = '';
+            var loopCounter = 0;
+            for (const video of this.videosData) {
+                html += `
+                    <div tabindex="0" role="button" onclick="playVideo('${video.videoId}');" data-videoid="${video.videoId}"
+                        class="epyt-gallery-thumb ">
+                        <div class="epyt-gallery-img-box">
+                            <div class="epyt-gallery-img"
+                                style="background-image: url(${video.maxresThumbnail})">
+                                <div class="epyt-gallery-playhover">
+                                    <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23"
+                                        src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png"
+                                        data-no-lazy="1" data-skipgform_ajax_framebjll=""
+                                        title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
+                                    <div class="epyt-gallery-playcrutch"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="epyt-gallery-title">${video.title}
+                        </div>
+                    </div>`;
+                loopCounter++;
+
+                if (loopCounter % 2 === 0) {
+                    html += `<div class="epyt-gallery-rowbreak"></div>`;
+                }
+
+            }
+            return html;
+        }
+    }
+
+    // Example usage:
+    // const videosData = [
+    //     {
+    //         "title": "When you are not their first priority | Twin Flame Army | When Needed | Hindi",
+    //         "videoId": "mIAkAWUFu2M",
+    //         "maxresThumbnail": "https://i.ytimg.com/vi/mIAkAWUFu2M/maxresdefault_live.jpg"
+    //     }
+    // ];
+
+
     function playVideo(videoId) {
         document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
     }
+
+    window.addEventListener('load', () => {
+        const videoGallery = new VideoGallery(videosData);
+        const galleryHTML = videoGallery.createHTML();
+
+        // Now, you can use the 'galleryHTML' variable to insert the generated HTML into your webpage.
+        // For example, if you have a div with id 'videoGalleryContainer', you can do:
+        document.getElementById('videoGalleryContainer').innerHTML = galleryHTML;
+    });
 </script>
 <div style="height:100%;width:100%;">
     <iframe id="framePlayVideo" width="100%" height="50px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
@@ -11,41 +68,7 @@
     <br />
 </div>
 <div id="allThumbnails">
-    <div class="epyt-gallery-allthumbs  epyt-cols-2 ">
-        <div tabindex="0" role="button" onclick="playVideo('z1OwBj-dcbU');" data-videoid="z1OwBj-dcbU"
-            class="epyt-gallery-thumb ">
-            <div class="epyt-gallery-img-box">
-                <div class="epyt-gallery-img"
-                    style="background-image: url(https://i.ytimg.com/vi/z1OwBj-dcbU/hqdefault.jpg)">
-                    <div class="epyt-gallery-playhover">
-                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23"
-                            src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png"
-                            data-no-lazy="1" data-skipgform_ajax_framebjll=""
-                            title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
-                        <div class="epyt-gallery-playcrutch"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="epyt-gallery-title">How to master twin flame journey? | How to handle twin flame journey | Hindi
-            </div>
-        </div>
-        <div tabindex="0" role="button" onclick="playVideo('O8uDBFOWO78');" data-videoid="O8uDBFOWO78"
-            class="epyt-gallery-thumb ">
-            <div class="epyt-gallery-img-box">
-                <div class="epyt-gallery-img"
-                    style="background-image: url(https://i.ytimg.com/vi/O8uDBFOWO78/hqdefault.jpg)">
-                    <div class="epyt-gallery-playhover">
-                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23"
-                            src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png"
-                            data-no-lazy="1" data-skipgform_ajax_framebjll=""
-                            title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
-                        <div class="epyt-gallery-playcrutch"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="epyt-gallery-title">How my inner work started? | How a guru behaves? | How a guru tests student?
-            </div>
-        </div>
-        <div class="epyt-gallery-rowbreak"></div>
+    <div id="videoGalleryContainer" class="epyt-gallery-allthumbs  epyt-cols-2 ">
+        
     </div>
 </div>
