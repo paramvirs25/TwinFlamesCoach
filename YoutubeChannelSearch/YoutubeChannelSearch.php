@@ -74,12 +74,31 @@ class TfcYouTubeDataFetcher
 
     private function getVideoDetails($snippet)
     {
+        $title = $snippet['title'];
+        $videoId = $snippet['resourceId']['videoId'];
+
+        // Create temporary variables for maxres and standard thumbnail URLs
+        $maxresUrl = $snippet['thumbnails']['maxres']['url'];
+        $maxresThumbnail = isset($maxresUrl) ? $maxresUrl : '';
+        if(empty($maxresThumbnail)){
+            $standardUrl = $snippet['thumbnails']['standard']['url'];
+            $maxresThumbnail = isset($standardUrl) ? $standardUrl : '';
+            if(empty($maxresThumbnail)){
+                $highUrl = $snippet['thumbnails']['high']['url'];
+                $maxresThumbnail = isset($highUrl) ? $highUrl : '';
+            }
+        }
+
+        // Check if maxres thumbnail is available, else use standard thumbnail
+        //$maxresThumbnail = !empty($maxresUrl) ? $maxresUrl : (!empty($standardUrl) ? $standardUrl : 'DEFAULT_THUMBNAIL_URL');
+
         return [
-            'title' => $snippet['title'],
-            'videoId' => $snippet['resourceId']['videoId'],
-            'maxresThumbnail' => $snippet['thumbnails']['maxres']['url']
+            'title' => $title,
+            'videoId' => $videoId,
+            'maxresThumbnail' => $maxresThumbnail
         ];
     }
+
 
 
     private function getPlaylistId()

@@ -48,9 +48,21 @@
     //     }
     // ];
 
+    function scrollIntoView(elementId) {
+        var element = document.getElementById(elementId);
+        
+        if (element != null) {
+            element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+            });
+        }
+    }
 
     function playVideo(videoId) {
         document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
+
+        scrollIntoView("framePlayVideo");
     }
 
     window.addEventListener('load', () => {
