@@ -31,7 +31,7 @@ class YouTubeDataFetcher
         $url = $this->baseUrl . 'playlistItems?' . http_build_query($params);
         $json = json_decode(file_get_contents($url), true);
 
-        $$videos = [];
+        $videos = [];
         foreach ($json['items'] as $video) {
             $videoDetails = $this->getVideoDetails($video['snippet']);
             $videos[] = $videoDetails;
@@ -48,6 +48,12 @@ class YouTubeDataFetcher
 
         $this->cacheVideos($videos);
         return $videos;
+    }
+
+    public function getVideosAsJson()
+    {
+        $videos = $this->fetchVideos();
+        return json_encode($videos);
     }
 
     private function getVideoDetails($snippet)
@@ -106,5 +112,14 @@ $apiKey = 'AIzaSyACGUK8Q61pLEd4JNr3Cq-LLnVHtzIl-Zc';
 $channelId = 'UCnMeyJtQfjiOh4xVrmtm6Lw';
 
 $youtubeFetcher = new YouTubeDataFetcher($apiKey, $channelId);
-$videos = $youtubeFetcher->fetchVideos();
-print_r($videos);
+//$videos = $youtubeFetcher->fetchVideos();
+//print_r($videos);
+$videosJson = $youtubeFetcher->getVideosAsJson();
+?>
+
+<!-- Your HTML and other JavaScript code here -->
+<script>
+  var videosData = <?php echo $videosJson; ?>;
+  console.log(videosData); // This will print the videos data in the browser's console
+  // You can now use the videosData array in your client-side JavaScript code
+</script>
