@@ -1,5 +1,5 @@
 <?php
-class YouTubeDataFetcher
+class TfcYouTubeDataFetcher
 {
     private $baseUrl = 'https://www.googleapis.com/youtube/v3/';
     private $apiKey;
@@ -111,7 +111,7 @@ class YouTubeDataFetcher
 $apiKey = 'AIzaSyACGUK8Q61pLEd4JNr3Cq-LLnVHtzIl-Zc';
 $channelId = 'UCnMeyJtQfjiOh4xVrmtm6Lw';
 
-$youtubeFetcher = new YouTubeDataFetcher($apiKey, $channelId);
+$youtubeFetcher = new TfcYouTubeDataFetcher($apiKey, $channelId);
 //$videos = $youtubeFetcher->fetchVideos();
 //print_r($videos);
 $videosJson = $youtubeFetcher->getVideosAsJson();
@@ -124,48 +124,3 @@ $videosJson = $youtubeFetcher->getVideosAsJson();
     // You can now use the videosData array in your client-side JavaScript code
 </script>
 
-<!--Thumbnail HTML-->
-<!--Embed Plus Youtube-->
-<script>
-    function playVideo(videoId){
-        document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
-    }
-</script>
-<div style="height:100%;width:100%;">
-    <iframe id="framePlayVideo" width="100%" height="50px" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-    </iframe>
-    <br />
-</div>
-<div id="allThumbnails">    
-    <div class="epyt-gallery-allthumbs  epyt-cols-2 ">
-        <div tabindex="0" role="button" onclick="playVideo('z1OwBj-dcbU');" data-videoid="z1OwBj-dcbU" class="epyt-gallery-thumb ">
-            <div class="epyt-gallery-img-box">
-                <div class="epyt-gallery-img" style="background-image: url(https://i.ytimg.com/vi/z1OwBj-dcbU/hqdefault.jpg)">
-                    <div class="epyt-gallery-playhover">
-                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23" 
-                            src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png" 
-                            data-no-lazy="1" data-skipgform_ajax_framebjll="" 
-                            title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
-                        <div class="epyt-gallery-playcrutch"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="epyt-gallery-title">How to master twin flame journey? | How to handle twin flame journey | Hindi</div>
-        </div>
-        <div tabindex="0" role="button" onclick="playVideo('O8uDBFOWO78');" data-videoid="O8uDBFOWO78" class="epyt-gallery-thumb ">
-            <div class="epyt-gallery-img-box">
-                <div class="epyt-gallery-img" style="background-image: url(https://i.ytimg.com/vi/O8uDBFOWO78/hqdefault.jpg)">
-                    <div class="epyt-gallery-playhover">
-                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23" 
-                        src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png" 
-                        data-no-lazy="1" data-skipgform_ajax_framebjll="" 
-                        title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
-                        <div class="epyt-gallery-playcrutch"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="epyt-gallery-title">How my inner work started? | How a guru behaves? | How a guru tests student?</div>
-        </div>
-        <div class="epyt-gallery-rowbreak"></div>
-    </div>
-</div>
