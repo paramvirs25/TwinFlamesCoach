@@ -1,6 +1,20 @@
 <?php
 add_shortcode( 'youtube_channel_search', 'getYTVideosAsJson' );
 
+function getYTVideosAsJson(){
+	
+	$apiKey = 'AIzaSyACGUK8Q61pLEd4JNr3Cq-LLnVHtzIl-Zc';
+	$channelId = 'UCnMeyJtQfjiOh4xVrmtm6Lw';
+
+	$youtubeFetcher = new TfcYouTubeDataFetcher($apiKey, $channelId);
+	//$videos = $youtubeFetcher->fetchVideos();
+	//print_r($videos);
+	$videosJson = $youtubeFetcher->getVideosAsJson();
+	
+	// Return the JavaScript code with the videos data as JSON
+    return '<script>var videosData = ' . $videosJson . ';console.log(videosData);</script>';
+}
+
 class TfcYouTubeDataFetcher
 {
     private $baseUrl = 'https://www.googleapis.com/youtube/v3/';
@@ -107,18 +121,4 @@ class TfcYouTubeDataFetcher
         // In a production environment, you might use more robust caching like Memcached or Redis.
         return []; // For simplicity, we initialize an empty array as cache.
     }
-}
-
-function getYTVideosAsJson(){
-	// Example usage:
-	$apiKey = 'AIzaSyACGUK8Q61pLEd4JNr3Cq-LLnVHtzIl-Zc';
-	$channelId = 'UCnMeyJtQfjiOh4xVrmtm6Lw';
-
-	$youtubeFetcher = new TfcYouTubeDataFetcher($apiKey, $channelId);
-	//$videos = $youtubeFetcher->fetchVideos();
-	//print_r($videos);
-	$videosJson = $youtubeFetcher->getVideosAsJson();
-	
-	// Return the JavaScript code with the videos data as JSON
-    return '<script>var videosData = ' . $videosJson . ';console.log(videosData);</script>';
 }
