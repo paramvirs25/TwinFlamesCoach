@@ -1,5 +1,5 @@
 <?php
-add_shortcode( 'youtube_channel_search', 'getYTVideosAsJson' );
+add_shortcode( 'youtube_channel_all_videos', 'getYTVideosAsJson' );
 
 function getYTVideosAsJson(){
 	
