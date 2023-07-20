@@ -136,13 +136,16 @@ $videosJson = $youtubeFetcher->getVideosAsJson();
     </iframe>
     <br />
 </div>
-<div>    
+<div id="allThumbnails">    
     <div class="epyt-gallery-allthumbs  epyt-cols-2 ">
         <div tabindex="0" role="button" onclick="playVideo('z1OwBj-dcbU');" data-videoid="z1OwBj-dcbU" class="epyt-gallery-thumb ">
             <div class="epyt-gallery-img-box">
                 <div class="epyt-gallery-img" style="background-image: url(https://i.ytimg.com/vi/z1OwBj-dcbU/hqdefault.jpg)">
                     <div class="epyt-gallery-playhover">
-                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23" src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png" data-no-lazy="1" data-skipgform_ajax_framebjll="" title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
+                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23" 
+                            src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png" 
+                            data-no-lazy="1" data-skipgform_ajax_framebjll="" 
+                            title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
                         <div class="epyt-gallery-playcrutch"></div>
                     </div>
                 </div>
@@ -152,7 +155,11 @@ $videosJson = $youtubeFetcher->getVideosAsJson();
         <div tabindex="0" role="button" onclick="playVideo('O8uDBFOWO78');" data-videoid="O8uDBFOWO78" class="epyt-gallery-thumb ">
             <div class="epyt-gallery-img-box">
                 <div class="epyt-gallery-img" style="background-image: url(https://i.ytimg.com/vi/O8uDBFOWO78/hqdefault.jpg)">
-                    <div class="epyt-gallery-playhover"><img decoding="async" alt="play" class="epyt-play-img" width="30" height="23" src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png" data-no-lazy="1" data-skipgform_ajax_framebjll="" title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
+                    <div class="epyt-gallery-playhover">
+                        <img decoding="async" alt="play" class="epyt-play-img" width="30" height="23" 
+                        src="https://www.twinflamescoach.com/wp-content/plugins/youtube-embed-plus-pro/images/playhover.png" 
+                        data-no-lazy="1" data-skipgform_ajax_framebjll="" 
+                        title="Fast &amp; Accurate 1 Minute Twin Flame Explanation 4">
                         <div class="epyt-gallery-playcrutch"></div>
                     </div>
                 </div>
