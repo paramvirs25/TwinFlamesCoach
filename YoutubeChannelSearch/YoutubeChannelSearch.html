@@ -39,7 +39,6 @@
 	} */
 </style>
 
-
 <script>
     class VideoGallery {
         /*
@@ -170,10 +169,6 @@
                 //get Search text
                 this.searchText = document.querySelector(this.searchBoxQuerySelector).value.toLowerCase();
 
-                // var searchInput = document.querySelector(this.searchBoxQuerySelector);
-                // this.searchText = searchInput.value.toLowerCase();
-                //var titles = document.getElementsByClassName("sby_video_title");    
-
                 var videoGallery = null;
                 var visibleVideos = 0;
                 if(this.searchText == ""){
@@ -191,25 +186,6 @@
                 }
 
                 document.getElementById('videoGalleryContainer').innerHTML = videoGallery.createHTML();
-                
-
-                //this.videoIdKey = "videoId";
-                //this.maxresThumbnailKey = "maxresThumbnail";
-                //this.titleKey = "title";
-    
-                // var visibleVideos = 0;
-    
-                // for (var i = 0; i < titles.length; i++) {
-                //     var titleText = titles[i].textContent.toLowerCase();
-                //     var parentDiv = titles[i].closest('.sby_item');
-    
-                //     if (titleText.includes(this.searchText)) {
-                //         parentDiv.style.display = '';
-                //         visibleVideos++;
-                //     } else {
-                //         parentDiv.style.display = 'none';
-                //     }
-                // }
     
                 this.showFoundVideosCount(this.videos.length, visibleVideos);
     
@@ -236,13 +212,12 @@
                 
                 if (elements.length > 0) {
                     elements[0].scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             }
-    
-    
+        
             initPopup(){
                 this.popup = new Popup_TFC("myPopup");
                 const inputElement = document.querySelector(this.searchBoxQuerySelector);
@@ -271,6 +246,7 @@
     
             initYTPlayListSearch() {
                 this.videos = videosData;
+
                 this.smartSearch = this.initSmartSearch();
     
                 this.defaultSearch();
@@ -282,11 +258,9 @@
                 //popup
                 this.initPopup();
             }
-        }
-        
+        }        
     
-        var feeds = new FeedsForYT_TFC();
-    
+        var feeds = new FeedsForYT_TFC();    
         window.addEventListener('load', function () {
             feeds.initYTPlayListSearch();
         });
@@ -304,13 +278,14 @@
 	<div style="font-size:14px;font-style: italic;">
 		<b>Pro Tip</b>: For the best results, try using single words when searching. Click inside the search box below to discover popular search terms.
 	</div>
-	<div class="playlistVideoCount">Loading...</div>
+	
+    <div class="playlistVideoCount">Loading...</div>
 
 	<input class="searchBox" type="search" placeholder="Search all channel videos"
 			oninput="feeds.onSearchInput();"
 			onfocus="feeds.popup.showPopup();" onclick="feeds.popup.showPopup();"
-			onblur="setTimeout(function() { feeds.popup.hidePopup(); }, 200);">
-
+			onblur="setTimeout(function() { feeds.popup.hidePopup(); }, 200);">    
+    
 	<!--cssclass loader is defined in Loader.css -->
 	<div class="loader" id="searchLoader"></div>
 
@@ -359,6 +334,7 @@
 </div>
 
 <div id="allThumbnails">
+    <br/>
     <div id="videoGalleryContainer" class="epyt-gallery-allthumbs  epyt-cols-2 ">
         
     </div>
