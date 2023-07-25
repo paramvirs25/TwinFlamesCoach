@@ -3,7 +3,7 @@ add_shortcode( 'youtube_channel_all_videos', 'getYTVideosAsJson' );
 
 function getYTVideosAsJson(){
 	
-	$apiKey = 'AIzaSyACGUK8Q61pLEd4JNr3Cq-LLnVHtzIl-Zc';
+	$apiKey = get_option('api_key');
 	$channelId = 'UCnMeyJtQfjiOh4xVrmtm6Lw';
 
 	$youtubeFetcher = new TfcYouTubeDataFetcher($apiKey, $channelId);
