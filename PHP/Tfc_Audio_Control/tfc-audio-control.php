@@ -60,14 +60,10 @@ function tfc_audio_control_render_callback($attributes) {
     $audio_file_name = isset($attributes['audio_file_name']) ? $attributes['audio_file_name'] : '';
 
     // Generate the HTML output
-    $output = '<div class="wp-block-group contentbox is-layout-constrained">
-        <div class="wp-block-group__inner-container">
-            <h5 class="wp-block-heading"><span class="ez-toc-section" id="' . esc_attr($audio_file_language) . '" ez-toc-data-id="#' . esc_attr($audio_file_language) . '"></span>' . esc_html($audio_file_language) . '<span class="ez-toc-section-end"></span></h5>
-
-            <figure class="wp-block-audio"><audio controls="" src="https://docs.google.com/uc?export=open&amp;id=' . esc_attr($audio_file_id) . '"></audio></figure>
-
-            <p class="has-text-align-center"><a class="dropbox-saver dropbox-dropin-btn dropbox-dropin-default" data-filename="' . esc_attr($audio_file_name) . '" href="https://docs.google.com/uc?export=download&amp;id=' . esc_attr($audio_file_id) . '"><span class="dropin-btn-status"></span>Save to Dropbox</a></p>
-        </div>
+    $output = '<div class="contentbox">
+        <h5>' . esc_html($audio_file_language) . '</h5>
+        <audio controls src="https://docs.google.com/uc?export=open&id=' . esc_attr($audio_file_id) . '"></audio>
+        <div class="has-text-align-center"><a class="dropbox-saver dropbox-dropin-btn dropbox-dropin-default" data-filename="' . esc_attr($audio_file_name) . '" href="https://docs.google.com/uc?export=download&id=' . esc_attr($audio_file_id) . '"><span class="dropin-btn-status"></span>Save to Dropbox</a></div>
     </div>';
 
     return $output;
