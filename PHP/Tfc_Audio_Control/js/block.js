@@ -59,10 +59,17 @@
                     }
                 }))),
                 el('div', {
+                    className: 'audio-player'
+                }, el('audio', {
+                    controls: true,
+                    src: 'https://docs.google.com/uc?export=open&id=' + attributes.audio_file_id
+                })),
+                el('div', {
                     className: 'audio-language-display'
                 }, attributes.audio_file_language) // Display audio_file_language in the editor
             ];
-        },    
+        },
+       
         save: function () {
             return null; // Rendered on the front-end using PHP callback
         }
