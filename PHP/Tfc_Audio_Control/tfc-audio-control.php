@@ -4,7 +4,7 @@
  * Plugin URI: #
  * Description: A Gutenberg block for displaying an audio player with a "Save to Dropbox" link.
  * Version: 1.0.0
- * Author: Your Name
+ * Author: Twin Flames Coach
  * Author URI: #
  * License: GPL2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
