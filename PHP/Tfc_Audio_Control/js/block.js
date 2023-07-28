@@ -25,7 +25,7 @@
         },
         edit: function (props) {
             var attributes = props.attributes;
-
+    
             return [
                 el(InspectorControls, {
                     key: 'inspector'
@@ -57,9 +57,12 @@
                             audio_file_name: newValue
                         });
                     }
-                })))
+                }))),
+                el('div', {
+                    className: 'audio-language-display'
+                }, attributes.audio_file_language) // Display audio_file_language in the editor
             ];
-        },
+        },    
         save: function () {
             return null; // Rendered on the front-end using PHP callback
         }
