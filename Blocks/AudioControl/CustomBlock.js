@@ -15,11 +15,11 @@
       },
       audio_file_id: {
         type: 'string',
-        default: '1iP2_gg_3BX92aiDvPAqfMnzCEYxkdphb', // Default ID if not set
+        default: '', // Default ID if not set
       },
       audio_file_name: {
         type: 'string',
-        default: '1.1 Connection Tool (Hindi).mp3', // Default filename if not set
+        default: '', // Default filename if not set
       },
     },
 
