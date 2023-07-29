@@ -5,8 +5,8 @@
 
   registerBlockType('custom/tfc-audio-control', {
     title: __('Tfc Audio Control'),
-    icon: 'admin-customizer',
-    category: 'common',
+    icon: 'format-audio', // AUDIO icon
+    category: 'media', // Set block category to MEDIA
 
     attributes: {
       audio_file_language: {
