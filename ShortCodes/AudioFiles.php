@@ -1,4 +1,6 @@
 <?php
+/*ARCHIEVED as we have created a gutenberg block "AudioControl" for same functionality */
+
 // Define the audio_control shortcode function
 function audio_control($atts) {
     // Extract shortcode attributes
