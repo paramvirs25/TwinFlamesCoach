@@ -9,8 +9,6 @@
   var registerBlockType = wp.blocks.registerBlockType;
   var __ = wp.i18n.__;
 
-  var jsImport = new TfcImportJavascripts();
-
   registerBlockType('custom/tfc-audio-control', {
     title: __('Tfc Audio Control'),
     icon: 'format-audio', // AUDIO icon
@@ -33,7 +31,7 @@
 
     edit: function(props) {
       // Import Dropbox script in the Gutenberg editor
-      jsImport.importDropboxScript();
+      TfcImportJavascripts.importDropboxScript();
 
       var { audio_file_language, audio_file_id, audio_file_name } = props.attributes;
 
