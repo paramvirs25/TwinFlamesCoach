@@ -19,6 +19,17 @@ class TfcImportJavascripts {
       // Check if there are any elements with the class 'wp-block-kioken-accordion-item' on the page
       var kiokenAccordionItems = document.querySelectorAll('.wp-block-kioken-accordion-item');
       if (kiokenAccordionItems.length > 0 && !TfcImportJavascripts.kiokenAccordionFixScriptLoaded) {
+        // Load the CSS file
+        var cssLink = document.createElement('link');
+        cssLink.href = 'https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css';
+        cssLink.rel = 'preload';
+        cssLink.as = 'style';
+        cssLink.onload = function () {
+            this.rel = 'stylesheet';
+        };
+        document.head.appendChild(cssLink);
+        
+        // Load the JavaScript file
         var script = document.createElement('script');
         script.src = 'https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js';
         script.defer = true;
