@@ -1,4 +1,7 @@
-window.addEventListener('load', () => {
+//window.addEventListener('load', () => {
+
+console.log('KiokenAccordionFix.js Start');
+
   // Get all accordion items
   const accordionItems = document.querySelectorAll('.wp-block-kioken-accordion-item');
 
@@ -21,5 +24,6 @@ window.addEventListener('load', () => {
     });
   });
 
+console.log('KiokenAccordionFix.js End');
 
-});
+//});
