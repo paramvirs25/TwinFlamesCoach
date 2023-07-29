@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+function kiokenTabsScript() {
     const tabBlocks = document.querySelectorAll('.wp-block-kioken-tabs');
   
     tabBlocks.forEach((tabBlock) => {
@@ -35,5 +35,6 @@ window.addEventListener('load', () => {
         });
       });
     });
-  });
+  }
   
+  kiokenTabsScript();
