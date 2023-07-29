@@ -1,3 +1,9 @@
+/**
+ * Creates Audio player for gutenberg
+ * Dependencies - https://www.dropbox.com/static/api/2/dropins.js
+ * The dropbox script is being imported in header through "Code snippets" header scripts.
+ */
+
 (function() {
   var el = wp.element.createElement;
   var registerBlockType = wp.blocks.registerBlockType;
