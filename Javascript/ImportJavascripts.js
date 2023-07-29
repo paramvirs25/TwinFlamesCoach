@@ -7,6 +7,7 @@ class TfcImportJavascripts {
             script.setAttribute('data-app-key', 'z2xhg87mpzhvs3n');
             script.defer = true;
             document.head.appendChild(script);
+            console.log("Script Loaded - Dropbox - dropins.js");
             TfcImportJavascripts.dropboxScriptLoaded = true;
         }
     }
