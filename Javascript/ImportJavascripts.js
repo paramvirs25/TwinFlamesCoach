@@ -27,12 +27,28 @@ class TfcImportJavascripts {
   }
 
 
-  static loadJS(jsUrl) {
-    var script = document.createElement('script');
-    script.src = jsUrl;
-    script.defer = true;
-    document.head.appendChild(script);
+  static loadedJsUrl = []; // Array to store the loaded JavaScript URLs
+
+  static loadJS(jsUrl, querySelector) {
+    // Check if the jsUrl is already present in the loadedJsUrl array
+    if (TfcImportJavascripts.loadedJsUrl.includes(jsUrl)) {
+      return; // Do nothing if the JavaScript is already loaded
+    }
+
+    var jsItems = document.querySelectorAll(querySelector);
+    if (jsItems.length > 0) {
+      var script = document.createElement('script');
+      script.src = jsUrl;
+      script.defer = true;
+      document.head.appendChild(script);
+
+      console.log("Loaded Js " + jsUrl);
+
+      // Add the jsUrl to the loadedJsUrl array
+      TfcImportJavascripts.loadedJsUrl.push(jsUrl);
+    }
   }
+
 
   static importDropboxScript() {
     if (!TfcImportJavascripts.dropboxScriptLoaded) {
@@ -50,46 +66,24 @@ class TfcImportJavascripts {
     }
   }
 
-  static importKiokenAccordionFixScriptCss() {
-    // Check if there are any elements with the class 'wp-block-kioken-accordion-item' on the page
-    var kiokenAccordionItems = document.querySelectorAll('.wp-block-kioken-accordion-item');
-    if (kiokenAccordionItems.length > 0 && !TfcImportJavascripts.kiokenAccordionFixScriptLoaded) {
-
-      this.loadCSS('https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css', '.wp-block-kioken-accordion-item');
-      this.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js');
-
-      TfcImportJavascripts.kiokenAccordionFixScriptLoaded = true;
-      console.log("importKiokenAccordionFixScript");
-    }
-  }
-
-  static importKiokenTabsFixScriptCss() {
-    // Check if there are any elements with the class 'wp-block-kioken-tabs' on the page
-    var kiokenTabsItems = document.querySelectorAll('.wp-block-kioken-tabs');
-    if (kiokenTabsItems.length > 0 && !TfcImportJavascripts.kiokenTabsFixScriptLoaded) {
-      this.loadCSS('https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css', '.wp-block-kioken-tabs');
-      this.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js');
-
-      TfcImportJavascripts.kiokenTabsFixScriptLoaded = true;
-      console.log("importKiokenTabsFixScriptCss");
-    }
-  }
-
 }
 
 // Set the initial values
 TfcImportJavascripts.dropboxScriptLoaded = false;
-TfcImportJavascripts.kiokenAccordionFixScriptLoaded = false;
-TfcImportJavascripts.kiokenTabsFixScriptLoaded = false;
 
 window.addEventListener('load', function () {
   // Call the methods on page load (frontend only)
   if (typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
-    TfcImportJavascripts.importKiokenAccordionFixScriptCss();
-    TfcImportJavascripts.importKiokenTabsFixScriptCss();
+    //KiokenAccordionFix
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css", '.wp-block-kioken-accordion-item');
+    TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js', '.wp-block-kioken-accordion-item');    
 
+    //KiokenTabsFix
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css",".wp-block-kioken-tabs");
+    TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js",".wp-block-kioken-tabs");
+    
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 'a.wp-block-button__link.wp-element-button');
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", ".tfcScrollHorizRow");
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/VisualLinkPreview.css", ".vlp-link-summary");
