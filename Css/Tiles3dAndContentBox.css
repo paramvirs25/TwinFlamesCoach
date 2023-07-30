@@ -1,124 +1,89 @@
-@media screen and (max-width: 300px) {
-	.tfcTileColumn {
-	  width: 100%;
+	@media screen and (max-width: 300px) {
+		.tfcTileColumn {
+			width: 100%;
+		}
 	}
-  }
-  
-  * {
-	box-sizing: border-box;
-  }
-  
-  /*Tile Row*/
-  .tfcTileRow::after {
-	content: "";
-	clear: both;
-	display: table;  
-  }
-  
-  /*Tile Column*/
-  .tfcTileColumn, .tfcTileColumnAlt {
-	float: left;
-	width: 50%;
-	/*padding: 1px;
-	border:0px solid black; */
-	height: 175px;
-	text-align: left;
-  }
-  
-  /* The animation code */
-  @keyframes animation3d {
-	from {
-		  transform:
-		  perspective(800px)
-		  rotateY(25deg) scale(0.9)
-		  rotateX(10deg);  
-		transition: 0.6s ease all;
-	  }
-	to {
-		  transform:
-		  perspective(800px)
-		  rotateY(-25deg) scale(0.9)
-		  rotateX(10deg);
-	
-		transition: 0.6s ease all;
-	  }
-  }
-  
-  @keyframes animation3dAlt {
-	from {
-		  transform:
-		  perspective(800px)
-		  rotateY(-25deg) scale(0.9)
-		  rotateX(10deg);  
-		transition: 0.6s ease all;
-	  }
-	to {
-		  transform:
-		  perspective(800px)
-		  rotateY(25deg) scale(0.9)
-		  rotateX(10deg);  
-		transition: 0.6s ease all;
-	  }
-  }
-  
-  /*3D effect on ODD numberd tiles*/
-  div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd),
-  div.tfcTileColumn, .tfc3dContentbox{		
-		  animation-name: animation3d;
-	animation-duration: 20s;		
-		  animation-iteration-count: infinite;
-		  animation-timing-function: ease-in-out;
-		  animation-direction: alternate;
-	  
-		  
-	border-radius: 20px;
-	border: 1px solid #e6e6e6;
-	box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
-  }
-  
-  /*3D  Alternate effect on EVEN numberd tiles*/
-  div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even),
-  div.tfcTileColumnAlt, .tfc3dContentboxAlt{
-		  animation-name: animation3dAlt;
-	animation-duration: 20s;		
-		  animation-iteration-count: infinite;
-		  animation-timing-function: ease-in-out;
-		  animation-direction: alternate;
-	  
-		  
-	border-radius: 20px;
-	border: 1px solid #e6e6e6;
-	box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
-  }
-  
-  
-  /*----Content box----*/
-  .contentbox {
-	margin-left: 0px;
-	margin-right: 0px;
-	margin-top: 10px;
-	  padding: 10px;
-	  border: 1px solid #ccc;
-	  border-radius: 5px;
 
-	  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  
-  /*----Promo Box Start----*/
-  /* Promobox header */
-  .promobox-header {
-	padding: 5px 5px;
-	background-color:#cadaa3;
-	  color:#000000;
-	  font-weight: bold;
-  }
-  
-  /* Promobox container/body */
-.promobox-container {
-	padding: 5px;
-	background-color:#E0F1B5;
-	color:#000000;
-		  
-  }
-  
-  /****Promo Box End****/
+	* {
+		box-sizing: border-box;
+	}
+
+	/*Tile Row*/
+	.tfcTileRow::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+	/*Tile Column*/
+	.tfcTileColumn,
+	.tfcTileColumnAlt {
+		float: left;
+		width: 50%;
+		/*padding: 1px;
+		border:0px solid black; */
+		height: 175px;
+		text-align: left;
+	}
+
+	/* The animation code */
+	@keyframes animation3d {
+		from {
+			transform:
+				perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+			transition: 0.6s ease all;
+		}
+
+		to {
+			transform:
+				perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg);
+
+			transition: 0.6s ease all;
+		}
+	}
+
+	@keyframes animation3dAlt {
+		from {
+			transform:
+				perspective(800px) rotateY(-25deg) scale(0.9) rotateX(10deg);
+			transition: 0.6s ease all;
+		}
+
+		to {
+			transform:
+				perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+			transition: 0.6s ease all;
+		}
+	}
+
+	/*3D effect on ODD numberd tiles*/
+	div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd),
+	div.tfcTileColumn,
+	.tfc3dContentbox {
+		animation-name: animation3d;
+		animation-duration: 20s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-direction: alternate;
+
+
+		border-radius: 20px;
+		border: 1px solid #e6e6e6;
+		box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+	}
+
+	/*3D  Alternate effect on EVEN numberd tiles*/
+	div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even),
+	div.tfcTileColumnAlt,
+	.tfc3dContentboxAlt {
+		animation-name: animation3dAlt;
+		animation-duration: 20s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+		animation-direction: alternate;
+
+
+		border-radius: 20px;
+		border: 1px solid #e6e6e6;
+		box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+	}
