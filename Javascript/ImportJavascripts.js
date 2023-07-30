@@ -76,6 +76,8 @@ window.addEventListener('load', function () {
   if (typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
+
     //KiokenAccordionFix
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css", '.wp-block-kioken-accordion-item');
     TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js', '.wp-block-kioken-accordion-item');    
