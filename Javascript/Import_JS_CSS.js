@@ -72,7 +72,7 @@ TfcImportJavascripts.dropboxScriptLoaded = false;
 
 window.addEventListener('load', function () {
   // Call the methods on page load (frontend only)
-  if (typeof wp.element === 'undefined') {
+  //if (typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
     //always load general css
@@ -91,5 +91,5 @@ window.addEventListener('load', function () {
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 'a.wp-block-button__link.wp-element-button');
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", ".tfcScrollHorizRow");
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/VisualLinkPreview.css", ".vlp-link-summary");
-  }
+  //}
 });
