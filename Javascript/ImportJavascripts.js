@@ -8,8 +8,7 @@ class TfcImportJavascripts {
       return; // Do nothing if the CSS is already loaded
     }
 
-    var cssItems = document.querySelectorAll(querySelector);
-    if (cssItems.length > 0) {
+    if (querySelector == "" || document.querySelectorAll(querySelector).length > 0) {
       var cssLink = document.createElement('link');
       cssLink.href = cssUrl;
       cssLink.rel = 'preload';
@@ -75,6 +74,9 @@ window.addEventListener('load', function () {
   // Call the methods on page load (frontend only)
   if (typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
+
+    //always load general css
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/GeneralCSS.css", '');
 
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
 
