@@ -30,9 +30,7 @@
     },
 
     edit: function(props) {
-      // Import Dropbox script in the Gutenberg editor
-      TfcImportJavascripts.importDropboxScript();
-
+      
       var { audio_file_language, audio_file_id, audio_file_name } = props.attributes;
 
       function onLanguageChange(newLanguage) {
