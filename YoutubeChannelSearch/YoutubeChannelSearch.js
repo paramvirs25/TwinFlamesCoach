@@ -51,11 +51,21 @@ class VideoGallery {
         return html;
     }
 
-    static scrollIntoView(elementId) {
-        const element = document.getElementById(elementId);
+    // static scrollIntoView(elementId) {
+    //     const element = document.getElementById(elementId);
 
-        if (element != null) {
-            element.scrollIntoView({
+    //     if (element != null) {
+    //         element.scrollIntoView({
+    //             behavior: 'smooth',
+    //             block: 'start'
+    //         });
+    //     }
+    // }
+    static scrollIntoView(cssClass) {
+        var elements = document.getElementsByClassName(cssClass);
+
+        if (elements.length > 0) {
+            elements[0].scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
@@ -64,7 +74,8 @@ class VideoGallery {
 
     static playVideo(videoId) {
         document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
-        VideoGallery.scrollIntoView("framePlayVideo");
+        //VideoGallery.scrollIntoView("framePlayVideo");
+        VideoGallery.scrollIntoView("pageViewCount");
     }
 
 } //class VideoGallery
