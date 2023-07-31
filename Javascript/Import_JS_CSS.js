@@ -78,9 +78,6 @@ window.addEventListener('load', function () {
   if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
-    //always load general css
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/GeneralCSS.css", '');
-
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
 
     //KiokenAccordionFix
