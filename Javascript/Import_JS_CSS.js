@@ -72,7 +72,10 @@ TfcImportJavascripts.dropboxScriptLoaded = false;
 
 window.addEventListener('load', function () {
   // Call the methods on page load (frontend only)
-  if (typeof wp.element === 'undefined') {
+  // WP is undefined in frontend, 
+  // but if user is logged in as admin and try to see frontend then wp is defined.
+  // So we check both wp and wp.element
+  if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
     //always load general css
