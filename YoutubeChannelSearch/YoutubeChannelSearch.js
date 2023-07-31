@@ -206,7 +206,7 @@ class FeedsForYT_TFC {
 
         this.defaultSearch();
 
-        this.scrollIntoView("pageViewCount");
+        this.scrollIntoView("searchElements");
 
         this.hideLoader();
 
