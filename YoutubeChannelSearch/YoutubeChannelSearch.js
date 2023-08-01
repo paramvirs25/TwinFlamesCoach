@@ -93,7 +93,7 @@ class VideoGallery {
         document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
         //VideoGallery.scrollIntoView("framePlayVideo");
         //VideoGallery.scrollIntoView("pageViewCount");
-        scrollToTargetAdjusted("pageViewCount");
+        scrollToTargetAdjusted("video-container");
     }
 
 } //class VideoGallery
@@ -236,7 +236,7 @@ class FeedsForYT_TFC {
         this.defaultSearch();
 
         //this.scrollIntoView("pageViewCount");
-        scrollToTargetAdjusted("pageViewCount");
+        scrollToTargetAdjusted("searchElements");
 
         this.hideLoader();
 
