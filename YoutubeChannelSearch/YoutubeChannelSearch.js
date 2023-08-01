@@ -1,3 +1,19 @@
+function scrollToTargetAdjusted(cssClass){
+    var elements = document.getElementsByClassName(cssClass);
+
+    if (elements.length > 0) {
+        const HEADER_HEIGHT = 60;
+        const elementPosition = elements[0].getBoundingClientRect().top;
+        const offsetPosition = elementPosition - HEADER_HEIGHT;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
+}
+
+
 class VideoGallery {
     /*
     * videosData - An Json array object that contains multiple video detail object
@@ -61,21 +77,23 @@ class VideoGallery {
     //         });
     //     }
     // }
-    static scrollIntoView(cssClass) {
-        var elements = document.getElementsByClassName(cssClass);
+    // static scrollIntoView(cssClass) {
+    //     var elements = document.getElementsByClassName(cssClass);
 
-        if (elements.length > 0) {
-            elements[0].scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    }
+    //     if (elements.length > 0) {
+    //         elements[0].scrollIntoView({
+    //             behavior: 'smooth',
+    //             block: 'start'
+    //         });
+    //     }
+    // }
 
     static playVideo(videoId) {
+        document.getElementById("videoContainer").style.display = "block";
         document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
         //VideoGallery.scrollIntoView("framePlayVideo");
-        VideoGallery.scrollIntoView("pageViewCount");
+        //VideoGallery.scrollIntoView("pageViewCount");
+        scrollToTargetAdjusted("pageViewCount");
     }
 
 } //class VideoGallery
@@ -173,16 +191,16 @@ class FeedsForYT_TFC {
         return new Fuse(this.videos, options);
     }
 
-    scrollIntoView(cssClass) {
-        var elements = document.getElementsByClassName(cssClass);
+    // scrollIntoView(cssClass) {
+    //     var elements = document.getElementsByClassName(cssClass);
 
-        if (elements.length > 0) {
-            elements[0].scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    }
+    //     if (elements.length > 0) {
+    //         elements[0].scrollIntoView({
+    //             behavior: 'smooth',
+    //             block: 'start'
+    //         });
+    //     }
+    // }
 
     initPopup() {
         this.popup = new Popup_TFC("myPopup");
@@ -217,7 +235,8 @@ class FeedsForYT_TFC {
 
         this.defaultSearch();
 
-        this.scrollIntoView("searchElements");
+        //this.scrollIntoView("pageViewCount");
+        scrollToTargetAdjusted("pageViewCount");
 
         this.hideLoader();
 

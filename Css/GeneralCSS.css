@@ -45,7 +45,9 @@
 
 	body {
 		padding-top: 60px;
-		/*this padding should be equal to .site-header height */
+		/*This padding should be equal to .site-header height.
+		* This padding is also being reffered to in javascript method scrollToTargetAdjusted
+		*/
 	}
 
 	.site-header {
