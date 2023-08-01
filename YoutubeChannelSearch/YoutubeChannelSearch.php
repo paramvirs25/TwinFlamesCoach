@@ -3,7 +3,7 @@ add_shortcode( 'youtube_channel_all_videos', 'getYTVideosAsJson' );
 
 function getYTVideosAsJson(){
 	
-	$apiKey = get_option('api_key');
+	$apiKey = get_option('api_key'); //api key is stored using code snippet named "YouTube API KEY"
 	$channelId = 'UCnMeyJtQfjiOh4xVrmtm6Lw';
 
 	$youtubeFetcher = new TfcYouTubeDataFetcher($apiKey, $channelId);
@@ -78,16 +78,16 @@ class TfcYouTubeDataFetcher
         $videoId = $snippet['resourceId']['videoId'];
 
         // Create temporary variables for maxres and standard thumbnail URLs
-        $maxresUrl = $snippet['thumbnails']['maxres']['url'];
-        $maxresThumbnail = isset($maxresUrl) ? $maxresUrl : '';
-        if(empty($maxresThumbnail)){
-            $standardUrl = $snippet['thumbnails']['standard']['url'];
-            $maxresThumbnail = isset($standardUrl) ? $standardUrl : '';
-            if(empty($maxresThumbnail)){
-                $highUrl = $snippet['thumbnails']['high']['url'];
-                $maxresThumbnail = isset($highUrl) ? $highUrl : '';
-            }
-        }
+        // $maxresUrl = $snippet['thumbnails']['maxres']['url'];
+        // $maxresThumbnail = isset($maxresUrl) ? $maxresUrl : '';
+        // if(empty($maxresThumbnail)){
+        //     $standardUrl = $snippet['thumbnails']['standard']['url'];
+        //     $maxresThumbnail = isset($standardUrl) ? $standardUrl : '';
+        //     if(empty($maxresThumbnail)){
+        //         $highUrl = $snippet['thumbnails']['high']['url'];
+        //         $maxresThumbnail = isset($highUrl) ? $highUrl : '';
+        //     }
+        // }
 
         // Check if maxres thumbnail is available, else use standard thumbnail
         //$maxresThumbnail = !empty($maxresUrl) ? $maxresUrl : (!empty($standardUrl) ? $standardUrl : 'DEFAULT_THUMBNAIL_URL');
@@ -95,7 +95,8 @@ class TfcYouTubeDataFetcher
         return [
             'title' => $title,
             'videoId' => $videoId,
-            'maxresThumbnail' => $maxresThumbnail
+            'maxresThumbnail' => $snippet['thumbnails']['high']['url'] //using "high" resolution image as it loads faster on mobile data and also looks descent
+            //'maxresThumbnail' => $maxresThumbnail
         ];
     }
 
