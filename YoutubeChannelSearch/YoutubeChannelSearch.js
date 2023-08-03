@@ -55,7 +55,7 @@ class VideoGallery {
                             </div>
                         </div>
                     </div>
-                    <div class="epyt-gallery-title">${eval("video." + this.titleKey)}
+                    <div class="epyt-gallery-title">${VideoGallery.formatVideoTitle(eval("video." + this.titleKey))}
                     </div>
                 </div>`;
 
@@ -67,26 +67,10 @@ class VideoGallery {
         return html;
     }
 
-    // static scrollIntoView(elementId) {
-    //     const element = document.getElementById(elementId);
-
-    //     if (element != null) {
-    //         element.scrollIntoView({
-    //             behavior: 'smooth',
-    //             block: 'start'
-    //         });
-    //     }
-    // }
-    // static scrollIntoView(cssClass) {
-    //     var elements = document.getElementsByClassName(cssClass);
-
-    //     if (elements.length > 0) {
-    //         elements[0].scrollIntoView({
-    //             behavior: 'smooth',
-    //             block: 'start'
-    //         });
-    //     }
-    // }
+    static formatVideoTitle(title) {
+        const modifiedTitle = title.replace(/Hindi/gi, '<span style="color:blue">Hindi</span>').replace(/English/g, '<span style="color:orange">English</span>');
+        return modifiedTitle;
+    } 
 
     static playVideo(videoId) {
         document.getElementById("videoContainer").style.display = "block";
@@ -190,17 +174,6 @@ class FeedsForYT_TFC {
 
         return new Fuse(this.videos, options);
     }
-
-    // scrollIntoView(cssClass) {
-    //     var elements = document.getElementsByClassName(cssClass);
-
-    //     if (elements.length > 0) {
-    //         elements[0].scrollIntoView({
-    //             behavior: 'smooth',
-    //             block: 'start'
-    //         });
-    //     }
-    // }
 
     initPopup() {
         this.popup = new Popup_TFC("myPopup");
