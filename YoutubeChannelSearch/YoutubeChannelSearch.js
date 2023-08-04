@@ -64,6 +64,9 @@ class VideoGallery {
                 html += `<div class="epyt-gallery-rowbreak"></div>`;
             }
         }
+
+        //Add one extra row break after all thumbnails are created
+        html += `<div class="epyt-gallery-rowbreak"></div>`;
         return html;
     }
 
