@@ -78,6 +78,11 @@ window.addEventListener('load', function () {
   if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
+    //Load jquery only when "SUBSCRIBE" button is visible from EmbedPlus Plugin
+    TfcImportJavascripts.loadJS("https://www.twinflamescoach.com/wp-includes/js/jquery/jquery.min.js",".epyt-gallery-subbutton");
+
+    https://www.twinflamescoach.com/wp-includes/js/jquery/jquery.min.js
+
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
 
     //KiokenAccordionFix
