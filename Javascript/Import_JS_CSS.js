@@ -80,6 +80,9 @@ window.addEventListener('load', function () {
 
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
 
+    //Details Block (Gutenberg accordian)
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/DetailsBlock.css", '.wp-block-details');
+
     //KiokenAccordionFix
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css", '.wp-block-kioken-accordion-item');
     TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js', '.wp-block-kioken-accordion-item');    
