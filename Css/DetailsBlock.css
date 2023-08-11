@@ -1,0 +1,19 @@
+/*Details block*/
+.wp-block-details {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*Block Heading*/
+.wp-block-details summary {
+    font-weight: bold;
+}
+
+.wp-block-details>:not(summary) {
+    margin-bottom: 10px;
+}
