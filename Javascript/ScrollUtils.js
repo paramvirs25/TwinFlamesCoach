@@ -18,10 +18,3 @@ class ScrollUtils {
         ScrollUtils.scrollToTargetAdjusted('pageViewCount');
     }
 }
-
-// Usage:
-// Scroll to target element with class 'yourCssClass'
-ScrollUtils.scrollToTargetAdjusted('yourCssClass');
-
-// Scroll to top using the 'pageViewCount' class as the target
-ScrollUtils.scrollToTop();
