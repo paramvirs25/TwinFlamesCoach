@@ -34,8 +34,7 @@ class TfcImportJavascripts {
       return; // Do nothing if the JavaScript is already loaded
     }
 
-    var jsItems = document.querySelectorAll(querySelector);
-    if (jsItems.length > 0) {
+    if (querySelector == "" || document.querySelectorAll(querySelector).length > 0) {
       var script = document.createElement('script');
       script.src = jsUrl;
       script.defer = true;
