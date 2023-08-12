@@ -77,8 +77,8 @@ window.addEventListener('load', function () {
   if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
     TfcImportJavascripts.importDropboxScript();
 
-    //Scroll Utility JS
-    TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/ScrollUtils.js', '');    
+    //Scroll Utility JS(No need to import in all pages)
+    //TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/ScrollUtils.js', '');    
 
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
 
