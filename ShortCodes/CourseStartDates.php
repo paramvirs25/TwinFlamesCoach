@@ -9,17 +9,22 @@ function upcoming_course_start_date_shortcode($atts) {
         'weeks_before_next_batch' => 0,
     ), $atts);
 
+    // Check if start_date is blank
+    if (empty($attributes['start_date'])) {
+        return 'To be Announced Soon';
+    }
+
     // Parse input date and time
     $start_date = DateTime::createFromFormat('d/m/Y g:i A', $attributes['start_date'] . ' ' . $attributes['start_time']);
     $current_date = new DateTime();
 
     // Calculate next batch start date based on conditions
     if ($start_date > $current_date) {
-        $formatted_date = $start_date->format('j F Y g:i A');
+        $formatted_date = $start_date->format('j F Y g:i A') . ' IST';
     } else {
         $next_start_date = clone $start_date;
         $next_start_date->modify('+' . $attributes['weeks_before_next_batch'] . ' weeks');
-        $formatted_date = $next_start_date->format('F Y g:i A');
+        $formatted_date = $next_start_date->format('F Y g:i A') . ' IST';
     }
 
     return $formatted_date;
