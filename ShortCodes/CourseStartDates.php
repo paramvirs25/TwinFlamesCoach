@@ -2,6 +2,16 @@
 // Add this code to your functions.php or a custom plugin file
 
 class CourseDatesTfc {
+    /**
+     *
+     * @param [string] $start_date 
+     * Format dd/mm/yyyy
+     * @param [string] $start_time 
+     * Format hh:mm AM/PM
+     * @param [int] $weeks_before_next_batch
+     * @return string
+     * returns optput similar to November 2023 7:00 PM IST
+     */
     public static function courseStartDate($start_date, $start_time, $weeks_before_next_batch) {
         // Check if start_date is blank
         if (empty($start_date)) {
@@ -23,22 +33,30 @@ class CourseDatesTfc {
 
         return $formatted_date;
     }
+
+    public static function lifeCoachStartDate(){
+        return CourseDatesTfc::courseStartDate("18/01/2023", "07:30 PM", 24);
+    }
+
+    public static function basicInnerWork2StartDate(){
+        return CourseDatesTfc::courseStartDate("23/04/2023", "07:00 PM", 24);
+    }
 }
 
 function upcoming_course_start_date_shortcode($atts) {
     // Extract shortcode attributes
     $attributes = shortcode_atts(array(
-        'start_date' => '',
-        'start_time' => '',
-        'weeks_before_next_batch' => 0,
+        'course_name' => '',
     ), $atts);
 
-    // Call CourseDatesTfc class method for processing
-    $formatted_date = CourseDatesTfc::courseStartDate(
-        $attributes['start_date'],
-        $attributes['start_time'],
-        $attributes['weeks_before_next_batch']
-    );
+    $formatted_date = '';
+
+    // Determine which course method to call based on course_name attribute
+    if ($attributes['course_name'] === 'lifecoach') {
+        $formatted_date = CourseDatesTfc::lifeCoachStartDate();
+    } elseif ($attributes['course_name'] === 'biw2') {
+        $formatted_date = CourseDatesTfc::basicInnerWork2StartDate();
+    }
 
     return $formatted_date;
 }
