@@ -62,7 +62,7 @@ class CourseDatesTfc {
             'course_name' => 'Life Coach',
             'start_date' => '18/01/2023',
             'start_time' => '07:30 PM',
-            'weeks_before_next_batch' => 24
+            'weeks_before_next_batch' => 52
         );
     }
 
