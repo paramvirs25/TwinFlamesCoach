@@ -34,13 +34,46 @@ class CourseDatesTfc {
         return $formatted_date;
     }
 
-    public static function lifeCoachStartDate(){
-        return CourseDatesTfc::courseStartDate("18/01/2023", "07:30 PM", 24);
+    public static function getAllCourseStartDates() {
+        $life_coach_start_date = self::lifeCoachStartDate();
+        $inner_work_start_date = self::basicInnerWork2StartDate();
+
+        $all_start_dates = array($life_coach_start_date, $inner_work_start_date);
+
+        usort($all_start_dates, function ($a, $b) {
+            $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date']);
+            $b_start = DateTime::createFromFormat('d/m/Y', $b['start_date']);
+            return $a_start <=> $b_start;
+        });
+
+        return $all_start_dates;
     }
 
-    public static function basicInnerWork2StartDate(){
-        return CourseDatesTfc::courseStartDate("23/04/2023", "07:00 PM", 24);
+    // public static function lifeCoachStartDate(){
+    //     return CourseDatesTfc::courseStartDate("18/01/2023", "07:30 PM", 24);
+    // }
+
+    // public static function basicInnerWork2StartDate(){
+    //     return CourseDatesTfc::courseStartDate("23/04/2023", "07:00 PM", 24);
+    // }
+
+    public static function lifeCoachStartDate() {
+        return array(
+            'course_name' => 'Life Coach',
+            'start_date' => '18/01/2023',
+            'start_time' => '07:30 PM',
+            'weeks_before_next_batch' => 24
+        );
     }
+
+    public static function basicInnerWork2StartDate() {
+        return array(
+            'course_name' => 'Basic Inner Work 2',
+            'start_date' => '23/04/2023',
+            'start_time' => '07:00 PM',
+            'weeks_before_next_batch' => 24
+        );
+    }    
 }
 
 function upcoming_course_start_date_shortcode($atts) {
@@ -53,11 +86,21 @@ function upcoming_course_start_date_shortcode($atts) {
 
     // Determine which course method to call based on course_name attribute
     if ($attributes['course_name'] === 'lifecoach') {
-        $formatted_date = CourseDatesTfc::lifeCoachStartDate();
+        $start_date_info = CourseDatesTfc::lifeCoachStartDate();
     } elseif ($attributes['course_name'] === 'biw2') {
-        $formatted_date = CourseDatesTfc::basicInnerWork2StartDate();
+        $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
+    }
+
+    // Call courseStartDate method using the extracted start_date_info
+    if (isset($start_date_info)) {
+        $formatted_date = CourseDatesTfc::courseStartDate(
+            $start_date_info['start_date'],
+            $start_date_info['start_time'],
+            $start_date_info['weeks_before_next_batch']
+        );
     }
 
     return $formatted_date;
 }
+
 add_shortcode('upcoming_course_start_date', 'upcoming_course_start_date_shortcode');
