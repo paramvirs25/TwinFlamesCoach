@@ -35,11 +35,13 @@ class CourseDatesTfc {
     }
 
     public static function getAllCourseStartDates() {
-        $life_coach_start_date = self::lifeCoachStartDate();
-        $basic_inner_work2_start_date = self::basicInnerWork2StartDate();
-        $adv_tf_healing1_start_date = self::advTFHealing1StartDate();
-
-        $all_start_dates = array($life_coach_start_date, $basic_inner_work2_start_date, $adv_tf_healing1_start_date);
+        
+        $all_start_dates = array(
+            self::lifeCoachStartDate(), 
+            self::basicInnerWork2StartDate(), 
+            self::advTFHealing1StartDate(),
+            self::yogasthBhavTFStartDate()
+        );
 
         usort($all_start_dates, function ($a, $b) {
             $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date']);
@@ -76,6 +78,15 @@ class CourseDatesTfc {
             'weeks_before_next_batch' => 52
         );
     }    
+
+    public static function yogasthBhavTFStartDate() {
+        return array(
+            'course_name' => 'Yogasth Bhava Twin Flame Journey',
+            'start_date' => '23/08/2023',
+            'start_time' => '07:00 PM',
+            'weeks_before_next_batch' => 12
+        );
+    }
 }
 
 function upcoming_course_start_date_shortcode($atts) {
@@ -93,6 +104,8 @@ function upcoming_course_start_date_shortcode($atts) {
         $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
     } elseif ($attributes['course_name'] === 'advtfh1') {
         $start_date_info = CourseDatesTfc::advTFHealing1StartDate();
+    } elseif ($attributes['course_name'] === 'ybtf') {
+        $start_date_info = CourseDatesTfc::yogasthBhavTFStartDate();
     }
 
     // Call courseStartDate method using the extracted start_date_info
