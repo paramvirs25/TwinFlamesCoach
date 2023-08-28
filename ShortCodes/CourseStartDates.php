@@ -36,10 +36,10 @@ class CourseDatesTfc {
 
     public static function getAllCourseStartDates() {
         $life_coach_start_date = self::lifeCoachStartDate();
-        $inner_work_start_date = self::basicInnerWork2StartDate();
+        $basic_inner_work2_start_date = self::basicInnerWork2StartDate();
         $adv_tf_healing1_start_date = self::advTFHealing1StartDate();
 
-        $all_start_dates = array($life_coach_start_date, $inner_work_start_date, $adv_tf_healing1_start_date);
+        $all_start_dates = array($life_coach_start_date, $basic_inner_work2_start_date, $adv_tf_healing1_start_date);
 
         usort($all_start_dates, function ($a, $b) {
             $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date']);
@@ -49,14 +49,6 @@ class CourseDatesTfc {
 
         return $all_start_dates;
     }
-
-    // public static function lifeCoachStartDate(){
-    //     return CourseDatesTfc::courseStartDate("18/01/2023", "07:30 PM", 24);
-    // }
-
-    // public static function basicInnerWork2StartDate(){
-    //     return CourseDatesTfc::courseStartDate("23/04/2023", "07:00 PM", 24);
-    // }
 
     public static function lifeCoachStartDate() {
         return array(
