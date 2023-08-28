@@ -37,8 +37,9 @@ class CourseDatesTfc {
     public static function getAllCourseStartDates() {
         $life_coach_start_date = self::lifeCoachStartDate();
         $inner_work_start_date = self::basicInnerWork2StartDate();
+        $adv_tf_healing1_start_date = self::advTFHealing1StartDate();
 
-        $all_start_dates = array($life_coach_start_date, $inner_work_start_date);
+        $all_start_dates = array($life_coach_start_date, $inner_work_start_date, $adv_tf_healing1_start_date);
 
         usort($all_start_dates, function ($a, $b) {
             $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date']);
@@ -74,6 +75,15 @@ class CourseDatesTfc {
             'weeks_before_next_batch' => 24
         );
     }    
+
+    public static function advTFHealing1StartDate() {
+        return array(
+            'course_name' => 'Advanced Twin Flame Healings 1',
+            'start_date' => '5/08/2023',
+            'start_time' => '08:00 PM',
+            'weeks_before_next_batch' => 52
+        );
+    }    
 }
 
 function upcoming_course_start_date_shortcode($atts) {
@@ -89,6 +99,8 @@ function upcoming_course_start_date_shortcode($atts) {
         $start_date_info = CourseDatesTfc::lifeCoachStartDate();
     } elseif ($attributes['course_name'] === 'biw2') {
         $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
+    } elseif ($attributes['course_name'] === 'advtfh1') {
+        $start_date_info = CourseDatesTfc::advTFHealing1StartDate();
     }
 
     // Call courseStartDate method using the extracted start_date_info
