@@ -93,7 +93,11 @@ window.addEventListener('load', function () {
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css",".wp-block-kioken-tabs");
     TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js",".wp-block-kioken-tabs");
     
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 'a.wp-block-button__link.wp-element-button');
+    //Buttons
+    var buttonsCssUrl = "https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css";
+    TfcImportJavascripts.loadCSS(buttonsCssUrl, 'a.wp-block-button__link.wp-element-button');
+    TfcImportJavascripts.loadCSS(buttonsCssUrl, 'a.whatsapp-block__button');
+
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", ".tfcScrollHorizRow");
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/VisualLinkPreview.css", ".vlp-link-summary");
   }
