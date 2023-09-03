@@ -245,12 +245,8 @@
 }
 
 .chaty-widget {
-    bottom: 78px;
-}
-
-.chaty-widget {
     position: fixed;
-    bottom: 25px;
+    bottom: 78px;
     right: 25px;
     z-index: 10001;
 }
