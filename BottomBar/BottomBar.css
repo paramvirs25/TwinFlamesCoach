@@ -237,11 +237,11 @@
 }
 
 /*Chatty Css*/
-.chaty-widget {
+/* .chaty-widget {
     bottom: 78px !important;
-}
+} */
 
-/* .chaty-widget.chaty-open .chaty-i-trigger .chaty-cta-close.chaty-tooltip.chaty-tooltip:hover:after,
+.chaty-widget.chaty-open .chaty-i-trigger .chaty-cta-close.chaty-tooltip.chaty-tooltip:hover:after,
 .chaty-widget.chaty-open .chaty-i-trigger .chaty-cta-close.chaty-tooltip:hover:before,
 .chaty.active,
 .chaty.form-open .chaty-widget.cssas-no-close-button.default-open .chaty-i-trigger {
@@ -413,4 +413,4 @@
     position: absolute;
     display: none;
     opacity: 0;
-} */
+}
