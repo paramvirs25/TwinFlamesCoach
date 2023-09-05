@@ -1,4 +1,8 @@
 /*Copied from WP Bottom Menu Plugin*/
+.wp-bottom-menu-wrapper{
+    display: block !important;
+}
+
 .wp-bottom-menu {
     display: flex;
     background: white;
