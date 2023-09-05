@@ -8,3 +8,18 @@
 </script> 
 
 <div id="bottomBar"></div>
+
+
+<!--a little more automation if you have to include a lot of files.-->
+<!-- <script>
+    jQuery(document).ready(function($) {
+        var includes = $('[data-include]')
+        $.each(includes, function () {
+            var file = 'views/' + $(this).data('include') + '.html'
+            $(this).load(file)
+        })
+    });
+</script>
+
+<div data-include="header"></div>
+<div data-include="footer"></div> -->
