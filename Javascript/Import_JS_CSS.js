@@ -2,28 +2,39 @@ class TfcImportJavascripts {
   
   static loadedCSSUrl = []; // Array to store the loaded CSS URLs
 
-  static loadCSS(cssUrl, querySelector) {
+  static loadCSS(cssUrl, querySelectors) {
     // Check if the cssUrl is already present in the loadedCSSUrl array
     if (TfcImportJavascripts.loadedCSSUrl.includes(cssUrl)) {
       return; // Do nothing if the CSS is already loaded
     }
 
-    if (querySelector == "" || document.querySelectorAll(querySelector).length > 0) {
-      var cssLink = document.createElement('link');
-      cssLink.href = cssUrl;
-      cssLink.rel = 'preload';
-      cssLink.as = 'style';
-      cssLink.onload = function () {
-        this.rel = 'stylesheet';
-      };
-      document.head.appendChild(cssLink);
+    if (Array.isArray(querySelectors) && querySelectors.length > 0) {
+      let shouldLoad = false;
+      for (const selector of querySelectors) {
+        if (selector === "" || document.querySelectorAll(selector).length > 0) {
+          shouldLoad = true;
+          break;
+        }
+      }
 
-      console.log("Loaded CSS " +cssUrl);
+      if (shouldLoad) {
+        var cssLink = document.createElement('link');
+        cssLink.href = cssUrl;
+        cssLink.rel = 'preload';
+        cssLink.as = 'style';
+        cssLink.onload = function () {
+          this.rel = 'stylesheet';
+        };
+        document.head.appendChild(cssLink);
 
-      // Add the cssUrl to the loadedCSSUrl array
-      TfcImportJavascripts.loadedCSSUrl.push(cssUrl);
+        console.log("Loaded CSS " + cssUrl);
+
+        // Add the cssUrl to the loadedCSSUrl array
+        TfcImportJavascripts.loadedCSSUrl.push(cssUrl);
+      }
     }
   }
+
 
 
   static loadedJsUrl = []; // Array to store the loaded JavaScript URLs
@@ -80,25 +91,27 @@ window.addEventListener('load', function () {
     //Scroll Utility JS(No need to import in all pages)
     //TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/ScrollUtils.js', '');    
 
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", '.tfcTileRow');
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", new Array('.tfcTileRow'));
 
     //Details Block (Gutenberg accordian)
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/DetailsBlock.css", '.wp-block-details');
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/DetailsBlock.css", new Array('.wp-block-details'));
 
     //KiokenAccordionFix
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css", '.wp-block-kioken-accordion-item');
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css", new Array('.wp-block-kioken-accordion-item'));
     TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js', '.wp-block-kioken-accordion-item');    
 
     //KiokenTabsFix
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css",".wp-block-kioken-tabs");
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css",new Array(".wp-block-kioken-tabs"));
     TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js",".wp-block-kioken-tabs");
     
     //Buttons
-    var buttonsCssUrl = "https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css";
-    TfcImportJavascripts.loadCSS(buttonsCssUrl, 'a.wp-block-button__link.wp-element-button');
-    TfcImportJavascripts.loadCSS(buttonsCssUrl, 'a.whatsapp-block__button');
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 
+      new Array(
+        'a.wp-block-button__link.wp-element-button', 
+        'a.whatsapp-block__button')
+        );
 
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", ".tfcScrollHorizRow");
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/VisualLinkPreview.css", ".vlp-link-summary");
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", new Array(".tfcScrollHorizRow"));
+    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/VisualLinkPreview.css", new Array(".vlp-link-summary"));
   }
 });
