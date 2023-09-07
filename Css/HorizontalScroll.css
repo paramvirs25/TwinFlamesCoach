@@ -12,6 +12,10 @@
   vertical-align: top;
 }
 
+.tfcScrollHorizRow .wp-block-group__inner-container{
+  padding: 5px !important;
+}
+
 
 /*When Visual Link preview is set to GRIDIMAGE*/
 /*
