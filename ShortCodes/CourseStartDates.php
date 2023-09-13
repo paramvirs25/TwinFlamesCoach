@@ -87,6 +87,15 @@ class CourseDatesTfc {
             'weeks_before_next_batch' => 12
         );
     }
+
+    public static function mirrorWorkTFStartDate() {
+        return array(
+            'course_name' => 'Mirror Work for Twin Flames',
+            'start_date' => '11/09/2023',
+            'start_time' => '07:00 PM',
+            'weeks_before_next_batch' => 6
+        );
+    }
 }
 
 function upcoming_course_start_date_shortcode($atts) {
@@ -97,15 +106,27 @@ function upcoming_course_start_date_shortcode($atts) {
 
     $formatted_date = '';
 
-    // Determine which course method to call based on course_name attribute
-    if ($attributes['course_name'] === 'lifecoach') {
-        $start_date_info = CourseDatesTfc::lifeCoachStartDate();
-    } elseif ($attributes['course_name'] === 'biw2') {
-        $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
-    } elseif ($attributes['course_name'] === 'advtfh1') {
-        $start_date_info = CourseDatesTfc::advTFHealing1StartDate();
-    } elseif ($attributes['course_name'] === 'ybtf') {
-        $start_date_info = CourseDatesTfc::yogasthBhavTFStartDate();
+    // Use a switch statement to determine which course method to call
+    switch ($attributes['course_name']) {
+        case 'lifecoach':
+            $start_date_info = CourseDatesTfc::lifeCoachStartDate();
+            break;
+        case 'biw2':
+            $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
+            break;
+        case 'advtfh1':
+            $start_date_info = CourseDatesTfc::advTFHealing1StartDate();
+            break;
+        case 'ybtf':
+            $start_date_info = CourseDatesTfc::yogasthBhavTFStartDate();
+            break;
+        case 'mwtf':
+                $start_date_info = CourseDatesTfc::mirrorWorkTFStartDate();
+                break;
+        default:
+            // Handle the case where course_name doesn't match any known courses
+            $start_date_info = null;
+            break;
     }
 
     // Call courseStartDate method using the extracted start_date_info
