@@ -16,7 +16,7 @@ function approveNewUser(){
 		replaceUserRoles(
 			'group_basic_iw_1', 
 			array(), 
-			array( 'nasikagra', 'pastloversrelease_tool', 'innerchild_tool' )
+			array( 'nasikagra', 'innerchild_tool' )
 		);	
 		echo "Access to Basic IW first class ends!<br/>";
 	}
@@ -98,4 +98,3 @@ function approveNewUser(){
 			echo "</div>";
 		}
 	}
-?>
