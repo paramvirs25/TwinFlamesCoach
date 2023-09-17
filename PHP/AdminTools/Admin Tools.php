@@ -6,13 +6,13 @@ add_shortcode( 'admin_tools', function () {
 	
 	if (!empty($_GET['act'])) {
 		if($_GET['act'] == 'approve'){
-			approveNewUser();
+			$out .= approveNewUser();
 		} else if($_GET['act'] == 'bw1class'){
-			giveAccessToBasicIWFirstClass();
+			$out .= giveAccessToBasicIWFirstClass();
 		} else if($_GET['act'] == 'biw1comp'){
-			onBasicIW1Complete();
+			$out .= onBasicIW1Complete();
 		} else if($_GET['act'] == 'biw2comp'){
-			onBasicIW2Complete();
+			$out .= onBasicIW2Complete();
 		}
 		
 	} else {
@@ -31,6 +31,3 @@ add_shortcode( 'admin_tools', function () {
 
 	return $out;
 } );
-
-
-?>
