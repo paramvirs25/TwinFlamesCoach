@@ -1,4 +1,5 @@
-.wp-block-button__link.wp-element-button {
+.wp-block-button__link.wp-element-button,
+.confirmButton {
     border: 0;
     display: inline-block;
     font-weight: 700;
