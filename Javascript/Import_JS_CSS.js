@@ -96,7 +96,8 @@ window.addEventListener('load', function () {
   TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 
     new Array(
       '.wp-element-button', 
-      'a.whatsapp-block__button')
+      'a.whatsapp-block__button',
+      'confirmButton')
       );
 
   TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", new Array(".tfcScrollHorizRow"));
