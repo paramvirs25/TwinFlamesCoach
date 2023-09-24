@@ -86,8 +86,8 @@ window.addEventListener('load', function () {
   TfcImportJavascripts.importDropboxScript();
 
   //Import Jquery UI
-  TfcImportJavascripts.loadCSS("https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",new Array(".single_add_to_cart_button"));
-  TfcImportJavascripts.loadJS("https://code.jquery.com/ui/1.12.1/jquery-ui.js",".single_add_to_cart_button");
+  //TfcImportJavascripts.loadCSS("https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",new Array(".single_add_to_cart_button"));
+  //TfcImportJavascripts.loadJS("https://code.jquery.com/ui/1.12.1/jquery-ui.js",".single_add_to_cart_button");
 
   //Details Block (Gutenberg accordian)
   TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/DetailsBlock.css", new Array('.wp-block-details'));
@@ -119,8 +119,8 @@ window.addEventListener('load', function () {
     TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js",".wp-block-kioken-tabs");
 
     //WooComerce
-    //Add to Cart button confirmation popup    
-    TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/WoocomerceAddToCart.js",".single_add_to_cart_button");
+    //'Add to Cart' button confirmation popup    
+    //TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/WoocomerceAddToCart.js",".single_add_to_cart_button");
   }  
 
   //Scroll Utility JS(No need to import in all pages)

@@ -1,11 +1,18 @@
 jQuery(document).ready(function($) {
+    //Import Jquery UI
+  TfcImportJavascripts.loadCSS("https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",new Array(".single_add_to_cart_button"));
+  TfcImportJavascripts.loadJS("https://code.jquery.com/ui/1.12.1/jquery-ui.js",".single_add_to_cart_button");
+  
 	// Function to open the magical window on button click
 	$("body").on("click", ".single_add_to_cart_button", function() {
+
+        // Check if there's an element with class "confirmationPopup"
+      if ($(".confirmationPopup").length) {
 		
 		event.preventDefault(); // Prevent the default form submission
 		
 		// Customize the content inside the magical window here
-		var magicalContent = "<p>Are you sure you want to proceed?</p>";
+		var magicalContent = $(".confirmationPopup").html();
 
 		// Create the magical window
 		$("<div>").html(magicalContent).dialog({
@@ -30,5 +37,6 @@ jQuery(document).ready(function($) {
 				}
 			}
 		});
-	});
+      }
+    });
 });
