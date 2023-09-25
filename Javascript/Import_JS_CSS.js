@@ -96,8 +96,7 @@ window.addEventListener('load', function () {
   TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 
     new Array(
       '.wp-element-button', 
-      'a.whatsapp-block__button',
-      'confirmButton')
+      'a.whatsapp-block__button')
       );
 
   TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", new Array(".tfcScrollHorizRow"));
@@ -117,10 +116,6 @@ window.addEventListener('load', function () {
     //KiokenTabsFix
     TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css",new Array(".wp-block-kioken-tabs"));
     TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js",".wp-block-kioken-tabs");
-
-    //WooComerce
-    //'Add to Cart' button confirmation popup    
-    //TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/WoocomerceAddToCart.js",".single_add_to_cart_button");
   }  
 
   //Scroll Utility JS(No need to import in all pages)
