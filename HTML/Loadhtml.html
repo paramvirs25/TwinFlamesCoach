@@ -9,7 +9,9 @@
 		$("#bottomBar").load("https://paramvirs25.github.io/TwinFlamesCoach/BottomBar/BottomBar.html");
 
         //Load floating contact-us button on every page, expcept for "Contact us" page
-        if(currentURL !== "https://www.twinflamescoach.com/contactus/"){
+        //https://www.twinflamescoach.com/
+        //https://www.twinflamescoach.com/contactus/
+        if(currentURL !== "https://www.twinflamescoach.com/"){
             $("#contactButtonFloating").load("https://paramvirs25.github.io/TwinFlamesCoach/ContactButtonFloating/ContactButtonFloating.html");
         }
 	});
