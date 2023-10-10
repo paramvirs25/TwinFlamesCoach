@@ -64,7 +64,7 @@ class CourseDatesTfc {
     public static function basicInnerWork2StartDate() {
         return array(
             'course_name' => 'Basic Inner Work 2',
-            'start_date' => '23/04/2023',
+            'start_date' => '29/10/2023',   //Last date - '23/04/2023'
             'start_time' => '07:00 PM',
             'weeks_before_next_batch' => 24
         );
