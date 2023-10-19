@@ -1,0 +1,19 @@
+.uwp-profile-extra-div {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.uwp-profile-extra-key {
+    font-weight: bold;
+}
+
+.uwp-profile-extra-wrap {
+    margin-bottom: 5px;
+}
