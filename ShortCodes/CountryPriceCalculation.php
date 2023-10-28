@@ -2,7 +2,7 @@
 
 /**
  * Calculate and display the price with optional discounts based on the user's location.
- *
+ * USAGE: [country_price_discount inr="6750" discount="classes1=3,discount1=5,classes2=6,discount2=10"]
  * @param array $atts
  * @return string HTML list of items
  */
@@ -55,7 +55,7 @@ function calculatePriceWithDiscount( $atts ) {
 
 		// Generate the HTML list of items
 		$output = "<ul>";
-		$output .= "<li>The cost for a single class is: $currencySymbol $beforeDiscountPriceFormated</li>";
+		$output .= "<li>The cost for a single class is: <span style='color:#77a464;'>$currencySymbol $beforeDiscountPriceFormated</span></li>";
 
 		if ($isShowDiscount) {
 			foreach ($classCounts as $index => $classCount) {
@@ -64,7 +64,7 @@ function calculatePriceWithDiscount( $atts ) {
 				$discountAmount = $totalCost - ($totalCost * $discountValue / 100);
 				$discountedPriceFormatted = number_format($discountAmount * $currencyMultiplier, 2);
 
-				$output .= "<li>You can save $discountValue% when you sign up for $classCount classes. The total cost after the discount is: <br/><span><s>$currencySymbol $totalCost</s></span> <span style='color:#77a464;'>$currencySymbol $discountedPriceFormatted</span></li>";
+				$output .= "<li>You can save <span style='color:#77a464;'>$discountValue%</span> when you sign up for <span style='color:#77a464;'>$classCount classes</span>. The total cost after the discount is: <br/><span><s>$currencySymbol $totalCost</s></span> <span style='color:#77a464;'>$currencySymbol $discountedPriceFormatted</span></li>";
 			}
 		}
 
