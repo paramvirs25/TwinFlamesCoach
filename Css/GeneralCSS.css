@@ -111,6 +111,11 @@
 		max-width: 700px;
 		max-height: 400px;
 	}
+
+	.wp-block-embed__wrapper{
+		max-width: 700px;
+		max-height: 400px;
+	}
 }
 
 
