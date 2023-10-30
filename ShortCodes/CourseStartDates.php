@@ -2,7 +2,11 @@
 class CourseDatesTfc
 {
     public static function formatDateTime($date_time){
-        return $date_time->format('F Y g:i A') . ' IST';
+        if (isset($date_time)) {
+            return $date_time->format('F Y g:i A') . ' IST';
+        } else {
+            return 'To be Announced Soon';
+        }
     }
     /**
      *
@@ -18,7 +22,7 @@ class CourseDatesTfc
     {
         // Check if start_date is blank
         if (empty($start_date)) {
-            return 'To be Announced Soon';
+            return null;
         }
 
         // Parse input date and time
@@ -49,10 +53,11 @@ class CourseDatesTfc
             self::mirrorWorkTFStartDate()
         );
 
+        // Sort the array based on 'start_date'
         usort($all_start_dates, function ($a, $b) {
-            $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date']);
-            $b_start = DateTime::createFromFormat('d/m/Y', $b['start_date']);
-            return $a_start <=> $b_start;
+            $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date'])->getTimestamp();
+            $b_start = DateTime::createFromFormat('d/m/Y', $b['start_date'])->getTimestamp();
+            return $a_start - $b_start;
         });
 
         return $all_start_dates;
