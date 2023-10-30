@@ -1,7 +1,6 @@
 <?php
-// Add this code to your functions.php or a custom plugin file
-
-class CourseDatesTfc {
+class CourseDatesTfc
+{
     /**
      *
      * @param [string] $start_date 
@@ -12,7 +11,8 @@ class CourseDatesTfc {
      * @return string
      * returns optput similar to November 2023 7:00 PM IST
      */
-    public static function courseStartDate($start_date, $start_time, $weeks_before_next_batch) {
+    public static function courseStartDate($start_date, $start_time, $weeks_before_next_batch)
+    {
         // Check if start_date is blank
         if (empty($start_date)) {
             return 'To be Announced Soon';
@@ -34,13 +34,15 @@ class CourseDatesTfc {
         return $formatted_date;
     }
 
-    public static function getAllCourseStartDates() {
-        
+    public static function getAllCourseStartDates()
+    {
+
         $all_start_dates = array(
-            self::lifeCoachStartDate(), 
-            self::basicInnerWork2StartDate(), 
+            self::lifeCoachStartDate(),
+            self::basicInnerWork2StartDate(),
             self::advTFHealing1StartDate(),
-            self::yogasthBhavTFStartDate()
+            self::yogasthBhavTFStartDate(),
+            self::mirrorWorkTFStartDate()
         );
 
         usort($all_start_dates, function ($a, $b) {
@@ -52,7 +54,8 @@ class CourseDatesTfc {
         return $all_start_dates;
     }
 
-    public static function lifeCoachStartDate() {
+    public static function lifeCoachStartDate()
+    {
         return array(
             'course_name' => 'Life Coach',
             'start_date' => '18/01/2023',
@@ -61,25 +64,28 @@ class CourseDatesTfc {
         );
     }
 
-    public static function basicInnerWork2StartDate() {
+    public static function basicInnerWork2StartDate()
+    {
         return array(
             'course_name' => 'Basic Inner Work 2',
             'start_date' => '29/10/2023',   //Last date - '23/04/2023'
             'start_time' => '07:00 PM',
             'weeks_before_next_batch' => 24
         );
-    }    
+    }
 
-    public static function advTFHealing1StartDate() {
+    public static function advTFHealing1StartDate()
+    {
         return array(
             'course_name' => 'Advanced Twin Flame Healings 1',
             'start_date' => '5/08/2023',
             'start_time' => '08:00 PM',
             'weeks_before_next_batch' => 52
         );
-    }    
+    }
 
-    public static function yogasthBhavTFStartDate() {
+    public static function yogasthBhavTFStartDate()
+    {
         return array(
             'course_name' => 'Yogasth Bhava Twin Flame Journey',
             'start_date' => '23/08/2023',
@@ -88,7 +94,8 @@ class CourseDatesTfc {
         );
     }
 
-    public static function mirrorWorkTFStartDate() {
+    public static function mirrorWorkTFStartDate()
+    {
         return array(
             'course_name' => 'Mirror Work for Twin Flames',
             'start_date' => '23/10/2023',   //Last date '11/09/2023'
@@ -98,7 +105,8 @@ class CourseDatesTfc {
     }
 }
 
-function upcoming_course_start_date_shortcode($atts) {
+function upcoming_course_start_date_shortcode($atts)
+{
     // Extract shortcode attributes
     $attributes = shortcode_atts(array(
         'course_name' => '',
@@ -111,18 +119,18 @@ function upcoming_course_start_date_shortcode($atts) {
         case 'lifecoach':
             $start_date_info = CourseDatesTfc::lifeCoachStartDate();
             break;
-        case 'biw2':
+        case 'biw2': //basic IW 2
             $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
             break;
-        case 'advtfh1':
+        case 'advtfh1': //Adv TF HEalings 1
             $start_date_info = CourseDatesTfc::advTFHealing1StartDate();
             break;
-        case 'ybtf':
+        case 'ybtf': // Yogasth Bhav
             $start_date_info = CourseDatesTfc::yogasthBhavTFStartDate();
             break;
-        case 'mwtf':
-                $start_date_info = CourseDatesTfc::mirrorWorkTFStartDate();
-                break;
+        case 'mwtf': //Mirror Work
+            $start_date_info = CourseDatesTfc::mirrorWorkTFStartDate();
+            break;
         default:
             // Handle the case where course_name doesn't match any known courses
             $start_date_info = null;
@@ -140,5 +148,28 @@ function upcoming_course_start_date_shortcode($atts) {
 
     return $formatted_date;
 }
-
 add_shortcode('upcoming_course_start_date', 'upcoming_course_start_date_shortcode');
+
+// Shortcode function to return all course dates
+function all_course_start_dates_shortcode()
+{
+    // Get all course start dates
+    $all_start_dates = CourseDatesTfc::getAllCourseStartDates();
+
+    // Initialize an empty string to store the output
+    $output = '';
+
+    // Loop through each course and format the output
+    foreach ($all_start_dates as $course) {
+        $output .= '<p>';
+        $output .= 'Course Name: ' . $course['course_name'] . '<br>';
+        $output .= 'Start Date and Time: ' . CourseDatesTfc::courseStartDate($course['start_date'], $course['start_time'], $course['weeks_before_next_batch']) . '<br>';
+        $output .= '</p>';
+    }
+
+    // Return the formatted output
+    return $output;
+}
+
+// Add the shortcode
+add_shortcode('all_course_start_dates', 'all_course_start_dates_shortcode');
