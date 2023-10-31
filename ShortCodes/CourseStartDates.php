@@ -18,7 +18,7 @@ class CourseDatesTfc
      * @return string
      * returns optput similar to November 2023 7:00 PM IST
      */
-    public static function calculateStartDate($start_date, $start_time, $weeks_before_next_batch)
+    public static function calculateStartDate($start_date, $start_time, $weeks_before_next_batch): ?DateTime
     {
         // Check if start_date is blank
         if (empty($start_date)) {
@@ -52,6 +52,12 @@ class CourseDatesTfc
             self::yogasthBhavTFStartDate(),
             self::mirrorWorkTFStartDate()
         );
+
+        // Update the 'start_date' in each item in the array using calculateStartDate
+        foreach ($all_start_dates as &$course) {
+            $calculated_start_date = self::calculateStartDate($course['start_date'], $course['start_time'], $course['weeks_before_next_batch']);
+            $course['start_date'] = $calculated_start_date->format('d/m/Y');
+        }
 
         // Sort the array based on 'start_date'
         usort($all_start_dates, function ($a, $b) {
