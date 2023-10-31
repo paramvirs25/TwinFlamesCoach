@@ -50,6 +50,7 @@ class CourseDatesTfc
     {
         $all_start_dates = array(
             self::lifeCoachStartDate(),
+            self::chakraHealingStartDate(),
             self::basicInnerWork2StartDate(),
             self::advTFHealing1StartDate(),
             self::yogasthBhavTFStartDate(),
@@ -72,13 +73,23 @@ class CourseDatesTfc
         return $all_start_dates;
     }
 
-    public static function lifeCoachStartDate()
+    public static function mirrorWorkTFStartDate()
     {
         return array(
-            'course_name' => 'Life Coach',
-            'start_date' => '18/01/2023',
-            'start_time' => '07:30 PM',
-            'weeks_before_next_batch' => 52
+            'course_name' => 'Mirror Work for Twin Flames',
+            'start_date' => '23/10/2023',   //Last date '11/09/2023'
+            'start_time' => '07:00 PM',
+            'weeks_before_next_batch' => 6
+        );
+    }
+
+    public static function chakraHealingStartDate()
+    {
+        return array(
+            'course_name' => 'Chakra Healing & Balancing',
+            'start_date' => '30/10/2023',
+            'start_time' => '08:00 PM',
+            'weeks_before_next_batch' => 12
         );
     }
 
@@ -91,6 +102,16 @@ class CourseDatesTfc
             'weeks_before_next_batch' => 24
         );
     }
+
+    public static function lifeCoachStartDate()
+    {
+        return array(
+            'course_name' => 'Life Coach',
+            'start_date' => '18/01/2023',
+            'start_time' => '07:30 PM',
+            'weeks_before_next_batch' => 52
+        );
+    }    
 
     public static function advTFHealing1StartDate()
     {
@@ -111,16 +132,7 @@ class CourseDatesTfc
             'weeks_before_next_batch' => 12
         );
     }
-
-    public static function mirrorWorkTFStartDate()
-    {
-        return array(
-            'course_name' => 'Mirror Work for Twin Flames',
-            'start_date' => '23/10/2023',   //Last date '11/09/2023'
-            'start_time' => '07:00 PM',
-            'weeks_before_next_batch' => 6
-        );
-    }
+    
 }
 
 function upcoming_course_start_date_shortcode($atts)
@@ -136,6 +148,9 @@ function upcoming_course_start_date_shortcode($atts)
     switch ($attributes['course_name']) {
         case 'lifecoach':
             $start_date_info = CourseDatesTfc::lifeCoachStartDate();
+            break;
+        case 'chb': //Chakra healing & balancing
+            $start_date_info = CourseDatesTfc::chakraHealingStartDate();
             break;
         case 'biw2': //basic IW 2
             $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
