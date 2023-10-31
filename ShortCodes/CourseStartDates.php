@@ -1,6 +1,9 @@
 <?php
 class CourseDatesTfc
 {
+    /*
+    * returns optput similar to November 2023 7:00 PM IST
+    */
     public static function formatDateTime($date_time){
         if (isset($date_time)) {
             return $date_time->format('F Y g:i A') . ' IST';
@@ -8,6 +11,7 @@ class CourseDatesTfc
             return 'To be Announced Soon';
         }
     }
+    
     /**
      *
      * @param [string] $start_date 
@@ -15,8 +19,7 @@ class CourseDatesTfc
      * @param [string] $start_time 
      * Format hh:mm AM/PM
      * @param [int] $weeks_before_next_batch
-     * @return string
-     * returns optput similar to November 2023 7:00 PM IST
+     * @return DateTime|null Returns a DateTime object if a valid start date is calculated, or null if the start date is blank.
      */
     public static function calculateStartDate($start_date, $start_time, $weeks_before_next_batch): ?DateTime
     {
