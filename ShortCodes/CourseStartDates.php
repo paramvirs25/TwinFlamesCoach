@@ -1,9 +1,9 @@
 <?php
 class CourseDatesTfc
 {
-    /*
-    * returns optput similar to November 2023 7:00 PM IST
-    */
+    /**
+     *  @return string similar to "November 2023 7:00 PM IST" or 'To be Announced Soon'
+     */
     public static function formatDateTime($date_time){
         if (isset($date_time)) {
             return $date_time->format('F Y g:i A') . ' IST';
@@ -34,19 +34,19 @@ class CourseDatesTfc
 
         // Calculate next batch start date based on conditions
         if ($start_date_time > $current_date) {
-            $formatted_date = $start_date_time;
+            $final_date_time = $start_date_time;
             //$start_date_time->format('j F Y g:i A') . ' IST';
         } else {
             $next_start_date = clone $start_date_time;
             $next_start_date->modify('+' . $weeks_before_next_batch . ' weeks');
-            $formatted_date = $next_start_date;
+            $final_date_time = $next_start_date;
             //$next_start_date->format('F Y g:i A') . ' IST';
         }
 
-        return $formatted_date;
+        return $final_date_time;
     }
 
-    public static function getAllCourseStartDates()
+    public static function getSortedCoursesByDates()
     {
         $all_start_dates = array(
             self::lifeCoachStartDate(),
@@ -174,15 +174,15 @@ add_shortcode('upcoming_course_start_date', 'upcoming_course_start_date_shortcod
 function all_course_start_dates_shortcode()
 {
     // Get all course start dates
-    $all_start_dates = CourseDatesTfc::getAllCourseStartDates();
+    $courses = CourseDatesTfc::getSortedCoursesByDates();
 
     // Initialize an empty string to store the output
     $output = '';
 
     // Loop through each course and format the output
-    foreach ($all_start_dates as $course) {
+    foreach ($courses as $course) {
         $output .= '<p>';
-        $output .= 'Course Name: ' . $course['course_name'] . '<br>';
+        $output .= $course['course_name'] . '<br>';
         $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime(CourseDatesTfc::calculateStartDate($course['start_date'], $course['start_time'], $course['weeks_before_next_batch'])) . '<br>';
         $output .= '</p>';
     }
