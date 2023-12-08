@@ -2,7 +2,7 @@
 .vlp-link-summary {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -17,5 +17,5 @@
 
 .vlp-layout-image-text-same-line .vlp-link-image {
     float: left;
-    width: 155px;
+    width: 30%;
 }
