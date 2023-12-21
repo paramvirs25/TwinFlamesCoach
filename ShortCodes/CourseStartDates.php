@@ -6,7 +6,7 @@ class CourseDatesTfc
      */
     public static function formatDateTime($date_time){
         if (isset($date_time)) {
-            return $date_time->format('F Y g:i A') . ' IST';
+            return $date_time->format('j F Y g:i A') . ' IST';
         } else {
             return 'To be Announced Soon';
         }
