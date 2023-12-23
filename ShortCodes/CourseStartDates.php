@@ -204,12 +204,27 @@ function all_course_start_dates_shortcode()
     $output = '';
 
     // Loop through each course and format the output
+    // foreach ($courses as $course) {
+    //     $output .= '<p>';
+    //     $output .= $course->course_name . '<br>';
+    //     $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime($course) . '<br>';
+    //     $output .= '</p>';
+    // }
+
+    // Initialize an empty string to store the output
+    $output = '<table border="1">';
+    $output .= '<thead style="font-weigth:bold;"><tr><th>Course Name</th><th>Start Date</th></tr></thead>';
+    $output .= '<tbody>';
+
+    // Loop through each course and format the output as a table row
     foreach ($courses as $course) {
-        $output .= '<p>';
-        $output .= $course->course_name . '<br>';
-        $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime($course) . '<br>';
-        $output .= '</p>';
+        $output .= '<tr>';
+        $output .= '<td>' . $course->course_name . '</td>';
+        $output .= '<td>' . CourseDatesTfc::formatDateTime($course) . '</td>';
+        $output .= '</tr>';
     }
+
+    $output .= '</tbody></table>';
 
     // Return the formatted output
     return $output;
