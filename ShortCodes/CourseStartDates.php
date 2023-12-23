@@ -156,37 +156,38 @@ function upcoming_course_start_date_shortcode($atts)
         'course_name' => '',
     ), $atts);
 
+    $course = null;
     $formatted_date = '';
 
     // Use a switch statement to determine which course method to call
     switch ($attributes['course_name']) {
         case 'lifecoach':
-            $start_date_info = CourseDatesTfc::lifeCoachStartDate();
+            $course = CourseDatesTfc::lifeCoachStartDate();
             break;
         case 'chb': //Chakra healing & balancing
-            $start_date_info = CourseDatesTfc::chakraHealingStartDate();
+            $course = CourseDatesTfc::chakraHealingStartDate();
             break;
         case 'biw2': //basic IW 2
-            $start_date_info = CourseDatesTfc::basicInnerWork2StartDate();
+            $course = CourseDatesTfc::basicInnerWork2StartDate();
             break;
         case 'advtfh1': //Adv TF HEalings 1
-            $start_date_info = CourseDatesTfc::advTFHealing1StartDate();
+            $course = CourseDatesTfc::advTFHealing1StartDate();
             break;
         case 'ybtf': // Yogasth Bhav
-            $start_date_info = CourseDatesTfc::yogasthBhavTFStartDate();
+            $course = CourseDatesTfc::yogasthBhavTFStartDate();
             break;
         case 'mwtf': //Mirror Work
-            $start_date_info = CourseDatesTfc::mirrorWorkTFStartDate();
+            $course = CourseDatesTfc::mirrorWorkTFStartDate();
             break;
         default:
             // Handle the case where course_name doesn't match any known courses
-            $start_date_info = null;
+            $course = null;
             break;
     }
 
-    // Call calculateStartDate method using the extracted start_date_info
-    if (isset($start_date_info)) {
-        $formatted_date = CourseDatesTfc::formatDateTime($start_date_info);
+    // format date
+    if (isset($course)) {
+        $formatted_date = CourseDatesTfc::formatDateTime($course);
     }
 
     return $formatted_date;
