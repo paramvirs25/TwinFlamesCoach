@@ -16,7 +16,8 @@ class Course
         $this->start_date_time = DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
 
         // Calculate the start date during object construction
-        $this->calculateStartDateTime();        
+        $this->start_date_time = $this->calculateStartDateTime();        
+        //echo $this->start_date_time->format('d/m/Y g:i A') . ' <br>';
     }
 
     /**
@@ -71,11 +72,18 @@ class CourseDatesTfc
         );
 
         // Sort the array based on 'start_date'
+        // usort($all_start_dates, function ($a, $b) {
+        //     $a_start = DateTime::createFromFormat('d/m/Y', $a->start_date_time)->getTimestamp();
+        //     $b_start = DateTime::createFromFormat('d/m/Y', $b->start_date_time)->getTimestamp();
+        //     return $a_start - $b_start;
+        // });
+
         usort($all_start_dates, function ($a, $b) {
-            $a_start = DateTime::createFromFormat('d/m/Y', $a->start_date)->getTimestamp();
-            $b_start = DateTime::createFromFormat('d/m/Y', $b->start_date)->getTimestamp();
+            $a_start = $a->start_date_time->getTimestamp();
+            $b_start = $b->start_date_time->getTimestamp();
             return $a_start - $b_start;
         });
+        
 
         return $all_start_dates;
     }
