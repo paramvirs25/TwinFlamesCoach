@@ -1,22 +1,39 @@
 <?php
+class Course
+{
+    public $course_name;
+    public $start_date;
+    public $start_time;
+    public $weeks_before_next_batch;
+
+    public function __construct($name, $start_date, $start_time, $weeks_before_next_batch)
+    {
+        $this->course_name = $name;
+        $this->start_date = $start_date;
+        $this->start_time = $start_time;
+        $this->weeks_before_next_batch = $weeks_before_next_batch;
+    }
+}
+
 class CourseDatesTfc
 {
     /**
      *  @return string similar to "November 2023 7:00 PM IST" or 'To be Announced Soon'
      */
-    public static function formatDateTime($date_time){
+    public static function formatDateTime($date_time)
+    {
         if (isset($date_time)) {
             return $date_time->format('j F Y g:i A') . ' IST';
         } else {
             return 'To be Announced Soon';
         }
     }
-    
+
     /**
      *
-     * @param [string] $start_date 
+     * @param [string] $start_date
      * Format dd/mm/yyyy
-     * @param [string] $start_time 
+     * @param [string] $start_time
      * Format hh:mm AM/PM
      * @param [int] $weeks_before_next_batch
      * @return DateTime|null Returns a DateTime object if a valid start date is calculated, or null if the start date is blank.
@@ -35,12 +52,10 @@ class CourseDatesTfc
         // Calculate next batch start date based on conditions
         if ($start_date_time > $current_date) {
             $final_date_time = $start_date_time;
-            //$start_date_time->format('j F Y g:i A') . ' IST';
         } else {
             $next_start_date = clone $start_date_time;
             $next_start_date->modify('+' . $weeks_before_next_batch . ' weeks');
             $final_date_time = $next_start_date;
-            //$next_start_date->format('F Y g:i A') . ' IST';
         }
 
         return $final_date_time;
@@ -59,14 +74,14 @@ class CourseDatesTfc
 
         // Update the 'start_date' in each item in the array using calculateStartDate
         foreach ($all_start_dates as &$course) {
-            $calculated_start_date = self::calculateStartDate($course['start_date'], $course['start_time'], $course['weeks_before_next_batch']);
-            $course['start_date'] = $calculated_start_date->format('d/m/Y');
+            $calculated_start_date = self::calculateStartDate($course->start_date, $course->start_time, $course->weeks_before_next_batch);
+            $course->start_date = $calculated_start_date->format('d/m/Y');
         }
 
         // Sort the array based on 'start_date'
         usort($all_start_dates, function ($a, $b) {
-            $a_start = DateTime::createFromFormat('d/m/Y', $a['start_date'])->getTimestamp();
-            $b_start = DateTime::createFromFormat('d/m/Y', $b['start_date'])->getTimestamp();
+            $a_start = DateTime::createFromFormat('d/m/Y', $a->start_date)->getTimestamp();
+            $b_start = DateTime::createFromFormat('d/m/Y', $b->start_date)->getTimestamp();
             return $a_start - $b_start;
         });
 
@@ -75,64 +90,65 @@ class CourseDatesTfc
 
     public static function mirrorWorkTFStartDate()
     {
-        return array(
-            'course_name' => 'Mirror Work for Twin Flames',
-            'start_date' => '23/10/2023',   //Last date '11/09/2023'
-            'start_time' => '07:00 PM',
-            'weeks_before_next_batch' => 6
+        return new Course(
+            'Mirror Work for Twin Flames',
+            '23/10/2023',
+            '07:00 PM',
+            6
         );
     }
 
     public static function chakraHealingStartDate()
     {
-        return array(
-            'course_name' => 'Chakra Healing & Balancing',
-            'start_date' => '30/10/2023',
-            'start_time' => '08:00 PM',
-            'weeks_before_next_batch' => 12
+        return new Course(
+            'Chakra Healing & Balancing',
+            '30/10/2023',
+            '08:00 PM',
+            12
         );
     }
 
     public static function basicInnerWork2StartDate()
     {
-        return array(
-            'course_name' => 'Basic Inner Work 2',
-            'start_date' => '29/10/2023',   //Last date - '23/04/2023'
-            'start_time' => '07:00 PM',
-            'weeks_before_next_batch' => 24
+        return new Course(
+            'Basic Inner Work 2',
+            '29/10/2023',
+            '07:00 PM',
+            24
         );
     }
 
     public static function lifeCoachStartDate()
     {
-        return array(
-            'course_name' => 'Life Coach',
-            'start_date' => '06/01/2024',
-            'start_time' => '07:30 PM',
-            'weeks_before_next_batch' => 52
+        return new Course(
+            'Life Coach',
+            '06/01/2024',
+            '07:30 PM',
+            52
         );
-    }    
+    }
 
     public static function advTFHealing1StartDate()
     {
-        return array(
-            'course_name' => 'Advanced Twin Flame Healings 1',
-            'start_date' => '5/08/2023',
-            'start_time' => '08:00 PM',
-            'weeks_before_next_batch' => 52
+        return new Course(
+            'Advanced Twin Flame Healings 1',
+            '5/08/2023',
+            '08:00 PM',
+            52
         );
     }
 
     public static function yogasthBhavTFStartDate()
     {
-        return array(
-            'course_name' => 'Yogasth Bhava Twin Flame Journey',
-            'start_date' => '23/08/2023',
-            'start_time' => '07:00 PM',
-            'weeks_before_next_batch' => 12
+        return new Course(
+            'Yogasth Bhava Twin Flame Journey',
+            '23/08/2023',
+            '07:00 PM',
+            12
         );
     }
-    
+
+    // ... rest of the code ...
 }
 
 function upcoming_course_start_date_shortcode($atts)
@@ -174,9 +190,9 @@ function upcoming_course_start_date_shortcode($atts)
     if (isset($start_date_info)) {
         $formatted_date = CourseDatesTfc::formatDateTime(
             CourseDatesTfc::calculateStartDate(
-                $start_date_info['start_date'],
-                $start_date_info['start_time'],
-                $start_date_info['weeks_before_next_batch']
+                $start_date_info->start_date,
+                $start_date_info->start_time,
+                $start_date_info->weeks_before_next_batch
             )
         );
     }
@@ -197,8 +213,8 @@ function all_course_start_dates_shortcode()
     // Loop through each course and format the output
     foreach ($courses as $course) {
         $output .= '<p>';
-        $output .= $course['course_name'] . '<br>';
-        $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime(CourseDatesTfc::calculateStartDate($course['start_date'], $course['start_time'], $course['weeks_before_next_batch'])) . '<br>';
+        $output .= $course->course_name . '<br>';
+        $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime(CourseDatesTfc::calculateStartDate($course->start_date, $course->start_time, $course->weeks_before_next_batch)) . '<br>';
         $output .= '</p>';
     }
 
