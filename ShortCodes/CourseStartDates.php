@@ -30,13 +30,13 @@ class Course
             return null;
         }
 
-        // Parse input date and time
+        // Get current date and time
         $current_date_time = new DateTime();
 
-        // Calculate next batch start date based on conditions
+        // start date is greater than current date
         if ($this->start_date_time > $current_date_time) {
             $final_date_time = $this->start_date_time;
-        } else {
+        } else { //start date is in past
             $next_start_date_time = clone $this->start_date_time;
             $next_start_date_time->modify('+' . $this->weeks_before_next_batch . ' weeks');
             $final_date_time = $next_start_date_time;
@@ -53,7 +53,10 @@ class CourseDatesTfc
      */
     public static function formatDateTime(Course $course)
     {
-        if (isset($course->start_date_time)) {
+        $current_date_time = new DateTime();
+
+        //if start date is in future
+        if (isset($course->start_date_time) && ($course->start_date_time >= $current_date_time)) {
             return $course->start_date_time->format('j F Y g:i A') . ' IST';
         } else {
             return 'To be Announced Soon';
@@ -70,13 +73,6 @@ class CourseDatesTfc
             self::yogasthBhavTFStartDate(),
             self::mirrorWorkTFStartDate()
         );
-
-        // Sort the array based on 'start_date'
-        // usort($all_start_dates, function ($a, $b) {
-        //     $a_start = DateTime::createFromFormat('d/m/Y', $a->start_date_time)->getTimestamp();
-        //     $b_start = DateTime::createFromFormat('d/m/Y', $b->start_date_time)->getTimestamp();
-        //     return $a_start - $b_start;
-        // });
 
         usort($all_start_dates, function ($a, $b) {
             $a_start = $a->start_date_time->getTimestamp();
@@ -202,14 +198,6 @@ function all_course_start_dates_shortcode()
 
     // Initialize an empty string to store the output
     $output = '';
-
-    // Loop through each course and format the output
-    // foreach ($courses as $course) {
-    //     $output .= '<p>';
-    //     $output .= $course->course_name . '<br>';
-    //     $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime($course) . '<br>';
-    //     $output .= '</p>';
-    // }
 
     // Initialize an empty string to store the output
     $output = '<table border="1">';
