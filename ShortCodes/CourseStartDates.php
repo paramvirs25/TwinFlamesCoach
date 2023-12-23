@@ -63,26 +63,60 @@ class CourseDatesTfc
         }
     }
 
-    public static function getSortedCoursesByDates()
-    {
-        $all_start_dates = array(
-            self::lifeCoachStartDate(),
-            self::chakraHealingStartDate(),
-            self::basicInnerWork2StartDate(),
-            self::advTFHealing1StartDate(),
-            self::yogasthBhavTFStartDate(),
-            self::mirrorWorkTFStartDate()
-        );
+    // public static function getSortedCoursesByDates()
+    // {
+    //     $all_start_dates = array(
+    //         self::lifeCoachStartDate(),
+    //         self::chakraHealingStartDate(),
+    //         self::basicInnerWork2StartDate(),
+    //         self::advTFHealing1StartDate(),
+    //         self::yogasthBhavTFStartDate(),
+    //         self::mirrorWorkTFStartDate()
+    //     );
 
-        usort($all_start_dates, function ($a, $b) {
-            $a_start = $a->start_date_time->getTimestamp();
-            $b_start = $b->start_date_time->getTimestamp();
-            return $a_start - $b_start;
-        });
+    //     usort($all_start_dates, function ($a, $b) {
+    //         $a_start = $a->start_date_time->getTimestamp();
+    //         $b_start = $b->start_date_time->getTimestamp();
+    //         return $a_start - $b_start;
+    //     });
         
 
-        return $all_start_dates;
-    }
+    //     return $all_start_dates;
+    // }
+
+    public static function getSortedCoursesByDates()
+{
+    $all_start_dates = array(
+        self::lifeCoachStartDate(),
+        self::chakraHealingStartDate(),
+        self::basicInnerWork2StartDate(),
+        self::advTFHealing1StartDate(),
+        self::yogasthBhavTFStartDate(),
+        self::mirrorWorkTFStartDate()
+    );
+
+    $current_timestamp = time();
+
+    usort($all_start_dates, function ($a, $b) use ($current_timestamp) {
+        $a_start = $a->start_date_time->getTimestamp();
+        $b_start = $b->start_date_time->getTimestamp();
+
+        // Check if start_date_time is in the past
+        $a_is_past = $a_start < $current_timestamp;
+        $b_is_past = $b_start < $current_timestamp;
+
+        // If both are in the past or both are in the future, compare normally
+        if ($a_is_past == $b_is_past) {
+            return $a_start - $b_start;
+        }
+
+        // If $a is in the past, move it to the end
+        return $a_is_past ? 1 : -1;
+    });
+
+    return $all_start_dates;
+}
+
 
     public static function mirrorWorkTFStartDate()
     {
