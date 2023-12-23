@@ -30,23 +30,18 @@ class CourseDatesTfc
     }
 
     /**
-     *
-     * @param [string] $start_date
-     * Format dd/mm/yyyy
-     * @param [string] $start_time
-     * Format hh:mm AM/PM
-     * @param [int] $weeks_before_next_batch
+     * @param Course $course
      * @return DateTime|null Returns a DateTime object if a valid start date is calculated, or null if the start date is blank.
      */
-    public static function calculateStartDate($start_date, $start_time, $weeks_before_next_batch): ?DateTime
+    public static function calculateStartDate(Course $course): ?DateTime
     {
         // Check if start_date is blank
-        if (empty($start_date)) {
+        if (empty($course->start_date)) {
             return null;
         }
 
         // Parse input date and time
-        $start_date_time = DateTime::createFromFormat('d/m/Y g:i A', $start_date . ' ' . $start_time);
+        $start_date_time = DateTime::createFromFormat('d/m/Y g:i A', $course->start_date . ' ' . $course->start_time);
         $current_date = new DateTime();
 
         // Calculate next batch start date based on conditions
@@ -54,7 +49,7 @@ class CourseDatesTfc
             $final_date_time = $start_date_time;
         } else {
             $next_start_date = clone $start_date_time;
-            $next_start_date->modify('+' . $weeks_before_next_batch . ' weeks');
+            $next_start_date->modify('+' . $course->weeks_before_next_batch . ' weeks');
             $final_date_time = $next_start_date;
         }
 
@@ -74,7 +69,7 @@ class CourseDatesTfc
 
         // Update the 'start_date' in each item in the array using calculateStartDate
         foreach ($all_start_dates as &$course) {
-            $calculated_start_date = self::calculateStartDate($course->start_date, $course->start_time, $course->weeks_before_next_batch);
+            $calculated_start_date = self::calculateStartDate($course);
             $course->start_date = $calculated_start_date->format('d/m/Y');
         }
 
@@ -188,13 +183,7 @@ function upcoming_course_start_date_shortcode($atts)
 
     // Call calculateStartDate method using the extracted start_date_info
     if (isset($start_date_info)) {
-        $formatted_date = CourseDatesTfc::formatDateTime(
-            CourseDatesTfc::calculateStartDate(
-                $start_date_info->start_date,
-                $start_date_info->start_time,
-                $start_date_info->weeks_before_next_batch
-            )
-        );
+        $formatted_date = CourseDatesTfc::formatDateTime(CourseDatesTfc::calculateStartDate($start_date_info));
     }
 
     return $formatted_date;
@@ -214,7 +203,7 @@ function all_course_start_dates_shortcode()
     foreach ($courses as $course) {
         $output .= '<p>';
         $output .= $course->course_name . '<br>';
-        $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime(CourseDatesTfc::calculateStartDate($course->start_date, $course->start_time, $course->weeks_before_next_batch)) . '<br>';
+        $output .= 'Start Date and Time: ' . CourseDatesTfc::formatDateTime(CourseDatesTfc::calculateStartDate($course)) . '<br>';
         $output .= '</p>';
     }
 
