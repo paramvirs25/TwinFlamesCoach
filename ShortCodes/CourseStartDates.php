@@ -31,15 +31,15 @@ class Course
         }
 
         // Parse input date and time
-        $current_date = new DateTime();
+        $current_date_time = new DateTime();
 
         // Calculate next batch start date based on conditions
-        if ($this->start_date_time > $current_date) {
+        if ($this->start_date_time > $current_date_time) {
             $final_date_time = $this->start_date_time;
         } else {
-            $next_start_date = clone $this->start_date_time;
-            $next_start_date->modify('+' . $this->weeks_before_next_batch . ' weeks');
-            $final_date_time = $next_start_date;
+            $next_start_date_time = clone $this->start_date_time;
+            $next_start_date_time->modify('+' . $this->weeks_before_next_batch . ' weeks');
+            $final_date_time = $next_start_date_time;
         }
 
         return $final_date_time;
