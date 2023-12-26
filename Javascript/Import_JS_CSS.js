@@ -90,34 +90,34 @@ window.addEventListener('load', function () {
   //TfcImportJavascripts.loadJS("https://code.jquery.com/ui/1.12.1/jquery-ui.js",".single_add_to_cart_button");
 
   //Details Block (Gutenberg accordian)
-  TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/DetailsBlock.css", new Array('.wp-block-details'));
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/DetailsBlock.css"), new Array('.wp-block-details'));
   
   //Buttons
-  TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Buttons.css", 
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Buttons.css"), 
     new Array(
       '.wp-element-button', 
       'a.whatsapp-block__button')
       );
 
-  TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/HorizontalScroll.css", new Array(".tfcScrollHorizRow"));
-  TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/VisualLinkPreview.css", new Array(".vlp-link-summary"));
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/HorizontalScroll.css"), new Array(".tfcScrollHorizRow"));
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/VisualLinkPreview.css"), new Array(".vlp-link-summary"));
 
   // (frontend only)
   // WP is undefined in frontend, 
   // but if user is logged in as admin and try to see frontend then wp is defined.
   // So we check both wp and wp.element
   if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/Tiles3d.css", new Array('.tfcTileRow'));
+    TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Tiles3d.css"), new Array('.tfcTileRow'));
 
     //KiokenAccordionFix
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenAccordionFix.css", new Array('.wp-block-kioken-accordion-item'));
-    TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenAccordionFix.js', '.wp-block-kioken-accordion-item');    
+    TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenAccordionFix.css"), new Array('.wp-block-kioken-accordion-item'));
+    TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/KiokenAccordionFix.js"), '.wp-block-kioken-accordion-item');    
 
     //KiokenTabsFix
-    TfcImportJavascripts.loadCSS("https://paramvirs25.github.io/TwinFlamesCoach/Css/KiokenTabFix.css",new Array(".wp-block-kioken-tabs"));
-    TfcImportJavascripts.loadJS("https://paramvirs25.github.io/TwinFlamesCoach/Javascript/KiokenTabsJSFix.js",".wp-block-kioken-tabs");
+    TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenTabFix.css"),new Array(".wp-block-kioken-tabs"));
+    TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/KiokenTabsJSFix.js"),".wp-block-kioken-tabs");
   }  
 
   //Scroll Utility JS(No need to import in all pages)
-  //TfcImportJavascripts.loadJS('https://paramvirs25.github.io/TwinFlamesCoach/Javascript/ScrollUtils.js', '');   
+  //TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl('Javascript/ScrollUtils.js'), '');   
 });
