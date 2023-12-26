@@ -4,9 +4,7 @@
         static getFullFileUrl(fileUrl) {
             return `${TfcGlobal.CssJsPath}/${fileUrl}`;
         }
-    }
 
-    class TfcFileLoader {
         static loadFile(divToCreateId, filePath) {
             const dynamicDiv = document.createElement('div');
             dynamicDiv.id = divToCreateId; // Set the id of the div 
