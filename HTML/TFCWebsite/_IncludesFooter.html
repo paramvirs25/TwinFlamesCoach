@@ -7,11 +7,11 @@
         var currentURL = window.location.href;
 		
 		//Load bottom Bar
-		$("#bottomBar").load(`${TfcGlobal.CssJsPath}/BottomBar/BottomBar.html`);
+		$("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
 		
         //Load floating contact-us button on every page, expcept for "Contact us" page
         if(currentURL !== "https://www.twinflamescoach.com/"){
-            $("#contactButtonFloating").load(`${TfcGlobal.CssJsPath}/ContactButtonFloating/ContactButtonFloating.html`);
+            $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
         }
 	});
 </script> 
