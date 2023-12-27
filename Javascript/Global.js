@@ -25,6 +25,9 @@ class TfcGlobal {
         }
 
         // Load content into the dynamically created div
-        jQuery(dynamicDiv).load(TfcGlobal.getFullFileUrl(filePath));
+        var fullFileUrl = TfcGlobal.getFullFileUrl(filePath);
+        jQuery(dynamicDiv).load(fullFileUrl);
+
+        console.log("Loaded file " + fullFileUrl);
     }
 }
