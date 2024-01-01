@@ -48,7 +48,7 @@ function calculatePriceWithDiscount( $atts ) {
 		if (!geot_target('IN')) {
 			// For the rest of the world in USD
 			$currencySymbol = 'USD $';
-			$currencyMultiplier = 0.02;
+			$currencyMultiplier = .0189;
 		}
 
 		$beforeDiscountPriceFormated = number_format($inrPrice * $currencyMultiplier, 2);
