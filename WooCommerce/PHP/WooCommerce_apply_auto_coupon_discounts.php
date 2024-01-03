@@ -17,16 +17,20 @@ function apply_auto_coupon_discounts( $cart ){
 	}
 	
 	if (is_cart_contains_product( $cart, 11782 ) ) { //Personal Consultation
-		apply_course_completion_discount_via_coupon_on_consultation( $cart, 11782 );
+		apply_course_completion_discount_via_coupon_on_consultation( $cart );
 	}
 	else if(is_cart_contains_product( $cart, 11726 ) ) { //Basic IW 1
 		$course = TFCMembers\Courses::getBasicIw1();
-		apply_basicIW1_repeater_discount( $cart, 11726, $course );
+		apply_repeater_discount( $cart, $course );
+	}
+	else if(is_cart_contains_product( $cart, 13356  ) ) { //Twin Flames Coach
+		$course = TFCMembers\Courses::getCertifiedCoach();
+		apply_repeater_discount( $cart, $course );
 	}
 	
 }
 
-function apply_course_completion_discount_via_coupon_on_consultation( $cart, $product_id ) {
+function apply_course_completion_discount_via_coupon_on_consultation( $cart ) {
 	
     // Get logged-in user's roles
     $user = wp_get_current_user();
@@ -44,20 +48,15 @@ function apply_course_completion_discount_via_coupon_on_consultation( $cart, $pr
     }
 }
 
-function apply_basicIW1_repeater_discount( $cart, $product_id, $course ) {
+function apply_repeater_discount( $cart, $course ) {
 	
-    // Check if cart contains this product
-	if ( ! is_cart_contains_product( $cart, $product_id ) ) {
-		return; // Terminate function if cart does not contain this product
-	}
-
     // Get logged-in user's roles
     $user = wp_get_current_user();
     $user_roles = $user->roles;
 
     if (in_array($course->courseRoleName, $user_roles)) {
 		//echo "<p>Course " . $course->courseName . "</p>";
-		apply_coupon($cart, "repeaterbiw1");
+		apply_coupon($cart, "repeater");
 	}
 }
 
