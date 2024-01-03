@@ -16,21 +16,18 @@ function apply_auto_coupon_discounts( $cart ){
 		return;
 	}
 	
-	apply_course_completion_discount_via_coupon_on_consultation( $cart );
-
-	apply_basicIW1_repeater_discount( $cart );
+	if (is_cart_contains_product( $cart, 11782 ) ) { //Personal Consultation
+		apply_course_completion_discount_via_coupon_on_consultation( $cart, 11782 );
+	}
+	else if(is_cart_contains_product( $cart, 11726 ) ) { //Basic IW 1
+		$course = TFCMembers\Courses::getBasicIw1();
+		apply_basicIW1_repeater_discount( $cart, 11726, $course );
+	}
 	
 }
 
-function apply_course_completion_discount_via_coupon_on_consultation( $cart ) {
+function apply_course_completion_discount_via_coupon_on_consultation( $cart, $product_id ) {
 	
-    $product_id = 11782; // Set product ID for CONSULTATION product
-
-	// Check if cart contains CONSULTATION product
-	if ( ! is_cart_contains_product( $cart, $product_id ) ) {
-		return; // Terminate function if cart does not contain CONSULTATION product
-	}
-
     // Get logged-in user's roles
     $user = wp_get_current_user();
     $user_roles = $user->roles;
@@ -47,11 +44,9 @@ function apply_course_completion_discount_via_coupon_on_consultation( $cart ) {
     }
 }
 
-function apply_basicIW1_repeater_discount( $cart ) {
+function apply_basicIW1_repeater_discount( $cart, $product_id, $course ) {
 	
-    $product_id = 11726; // Set product ID BAsic IW 1 product
-
-	// Check if cart contains this product
+    // Check if cart contains this product
 	if ( ! is_cart_contains_product( $cart, $product_id ) ) {
 		return; // Terminate function if cart does not contain this product
 	}
@@ -60,15 +55,10 @@ function apply_basicIW1_repeater_discount( $cart ) {
     $user = wp_get_current_user();
     $user_roles = $user->roles;
 
-    // Get all courses and check if user has a matching role
-    $course = TFCMembers\Courses::getBasicIw1();
-	
-	//foreach ($courses as $course) {
-		if (in_array($course->courseRoleName, $user_roles)) {
-			//echo "<p>Course " . $course->courseName . "</p>";
-			apply_coupon($cart, "repeaterbiw1");
-        }
-    //}
+    if (in_array($course->courseRoleName, $user_roles)) {
+		//echo "<p>Course " . $course->courseName . "</p>";
+		apply_coupon($cart, "repeaterbiw1");
+	}
 }
 
 function is_cart_contains_product( $cart, $product_id ){
