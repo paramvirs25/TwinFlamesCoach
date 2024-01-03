@@ -41,15 +41,8 @@ function apply_course_completion_discount_via_coupon_on_consultation( $cart ) {
 	foreach ($courses as $course) {
 		if (in_array($course->courseRoleName, $user_roles)) {
 			//echo "<p>Course " . $course->courseName . "</p>";
-			
-            // User has this course's role, so apply discount via coupon code
-            $coupon_code = $course->courseCompletionCouponForDiscount; // Set coupon code here
-            $coupon = new WC_Coupon($coupon_code);
-			//$coupon->set_remove_message(''); //dont show any mesage when coupon is removed from cart.
-            if ($coupon->is_valid()) { // check if coupon is valid				
-                $cart->add_discount($coupon_code);
-				wc_clear_notices(); // Clear coupon code applied notice				
-            }
+
+			apply_coupon($cart, $course->courseCompletionCouponForDiscount);
         }
     }
 }
@@ -73,16 +66,7 @@ function apply_basicIW1_repeater_discount( $cart ) {
 	//foreach ($courses as $course) {
 		if (in_array($course->courseRoleName, $user_roles)) {
 			//echo "<p>Course " . $course->courseName . "</p>";
-			
-            // User has this course's role, so apply discount via coupon code
-            $coupon_code = "repeaterbiw1";
-			//$course->courseCompletionCouponForDiscount; // Set coupon code here
-            $coupon = new WC_Coupon($coupon_code);
-			//$coupon->set_remove_message(''); //dont show any mesage when coupon is removed from cart.
-            if ($coupon->is_valid()) { // check if coupon is valid				
-                $cart->add_discount($coupon_code);
-				wc_clear_notices(); // Clear coupon code applied notice				
-            }
+			apply_coupon($cart, "repeaterbiw1");
         }
     //}
 }
@@ -97,4 +81,14 @@ function is_cart_contains_product( $cart, $product_id ){
 	}
 	
 	return $cart_contains_product;
+}
+
+function apply_coupon($cart, $coupon_code){
+	
+	$coupon = new WC_Coupon($coupon_code);
+	//$coupon->set_remove_message(''); //dont show any mesage when coupon is removed from cart.
+	if ($coupon->is_valid()) { // check if coupon is valid				
+		$cart->add_discount($coupon_code);
+		wc_clear_notices(); // Clear coupon code applied notice				
+	}
 }
