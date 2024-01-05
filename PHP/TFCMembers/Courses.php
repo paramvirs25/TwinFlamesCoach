@@ -84,6 +84,11 @@ class Courses {
         $this->courseCompletionCouponForDiscount = $completionCouponForDiscount;
     }
     
+    /**
+     * This method is being used in
+     * 1 WooCommerce_apply_auto_coupon_discounts
+     * 2 
+     */
     public static function getAllCourses() {
         $courses = array(
             self::BASIC_IW_1 => self::getBasicIw1(),
