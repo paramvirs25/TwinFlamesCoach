@@ -24,14 +24,14 @@ $(function () {
         scale: {
           startValue: 0,
           endValue: this._higherValue,
-          customTicks: [0, 250, 500, 780, 1050, 1300, 1560],
+          customTicks: [0, 33, 67, 100],
           tick: {
-            length: 8 },
+            length: 4 },
 
           label: {
             font: {
               color: '#87959f',
-              size: 9,
+              size: 19,
               family: '"Open Sans", sans-serif' } } },
 
 
@@ -73,13 +73,14 @@ $(function () {
 
 
   $(document).ready(function () {
+    let higherValue = 100;
 
     $('.gauge').each(function (index, item) {
       let params = {
-        initialValue: 780,
-        higherValue: 1560,
-        title: `Temperature ${index + 1}`,
-        subtitle: '780 ºC' };
+        initialValue: 0,
+        higherValue: higherValue,
+        title: `Score`,
+        subtitle: '0' };
 
 
       let gauge = new GaugeChart(item, params);
@@ -90,11 +91,22 @@ $(function () {
 
       $('.gauge').each(function (index, item) {
         let gauge = $(item).dxCircularGauge('instance');
-        let randomNum = Math.round(Math.random() * 1560);
+        let randomNum = Math.round(Math.random() * higherValue);
         let gaugeElement = $(gauge._$element[0]);
 
-        gaugeElement.find('.dxg-title text').last().html(`${randomNum} ºC`);
+        let answer = "";
+        if(randomNum <= 33 ){ //33.33
+          answer = `Consider it a NO`;
+        } else if(randomNum > 33 && randomNum <= 66){ //33.33 to 66.66
+          answer = `Consider it a YES`;
+        } else if(randomNum > 66){ //33.33 to 66.66
+          answer = `Absolutely YES!`;
+        }
+
+        gaugeElement.find('.dxg-title text').last().html(`${randomNum}%`);
         gauge.value(randomNum);
+
+        $('#interpretation').html(answer);
       });
     });
   });
