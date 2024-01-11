@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function ($) {
 
   class GaugeChart {
     constructor(element, params) {
@@ -72,7 +72,7 @@ $(function () {
     }}
 
 
-  $(document).ready(function () {
+  jQuery(document).ready(function ($) {
     let higherValue = 100;
 
     $('.gauge').each(function (index, item) {

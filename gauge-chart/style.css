@@ -2,14 +2,14 @@
   box-sizing: border-box;
 }
 
-body {
+/*body {
   background-image: linear-gradient(140deg, #212629, #395467);
   min-height: 100vh;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   position: relative;
   padding-top: 80px;
-}
+}*/
 
 a {
   color: #5f89a7;
@@ -29,12 +29,15 @@ a {
 }
 
 .main {
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0 auto;
+		background-image: linear-gradient(140deg, #212629, #395467);
+		color: #fff;  
 }
 .main__title {
   text-align: center;
   font-size: 48px;
+		padding:10px;
 }
 .main_tip{
   text-align: center;
@@ -45,7 +48,7 @@ a {
 }
 
 .button {
-  position: absolute;
+  /*position: absolute;*/
   right: 40px;
   top: 40px;
   border: 2px solid #fff;
@@ -70,14 +73,14 @@ a {
 
 .gauge-container {
   padding: 20px;
-  margin-top: 80px;
+  margin-top: 20px;
   display: flex;
-  justify-content: space-around;
+  /*justify-content: space-around;*/
 }
 
 .gauge {
-  height: 420px;
-  width: 500px;
+  /*height: 420px;
+  width: 500px;*/
 }
 .gauge .dxg-range.dxg-background-range {
   fill: url(#gradientGauge);
