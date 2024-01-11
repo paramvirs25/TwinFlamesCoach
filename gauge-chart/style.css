@@ -41,6 +41,7 @@ a {
 }
 .main_tip{
   text-align: center;
+		padding: 0px;
 }
 
 .gradient-mask {
