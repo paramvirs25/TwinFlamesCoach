@@ -36,7 +36,7 @@ a {
 }
 .main__title {
   text-align: center;
-  font-size: 48px;
+  font-size: 28px;
 		padding:10px;
 }
 .main_tip{
@@ -48,9 +48,9 @@ a {
 }
 
 .button {
-  /*position: absolute;*/
+  /*position: absolute;
   right: 40px;
-  top: 40px;
+  top: 40px;*/
   border: 2px solid #fff;
   background-color: #26323a;
   color: #fff;
@@ -72,10 +72,10 @@ a {
 }
 
 .gauge-container {
-  padding: 20px;
-  margin-top: 20px;
+  padding: 5px;
+  margin-top: 5px;
   display: flex;
-  /*justify-content: space-around;*/
+  justify-content: space-around;
 }
 
 .gauge {
