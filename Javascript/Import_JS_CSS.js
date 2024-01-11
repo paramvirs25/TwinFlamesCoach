@@ -101,6 +101,7 @@ window.addEventListener('load', function () {
 
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/HorizontalScroll.css"), new Array(".tfcScrollHorizRow"));
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/VisualLinkPreview.css"), new Array(".vlp-link-summary"));
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/UserProfile.css"), new Array(".uwp-profile-extra-div"));
 
   // (frontend only)
   // WP is undefined in frontend, 

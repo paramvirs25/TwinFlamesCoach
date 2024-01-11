@@ -95,15 +95,19 @@ jQuery(function ($) {
         let gaugeElement = $(gauge._$element[0]);
 
         let answer = "";
-        if(randomNum <= 33 ){ //33.33
-          answer = `Consider it a NO`;
-        } else if(randomNum > 33 && randomNum <= 66){ //33.33 to 66.66
-          answer = `Consider it a YES`;
-        } else if(randomNum > 66){ //33.33 to 66.66
+        if(randomNum <= 25 ){
+          answer = `Consider it NO as huge part ${randomNum}% is NO.`;
+        } else if(randomNum <= 50 ){ //33.33
+          answer = `You may take it as YES, but huge part ${randomNum}% is NO.`;
+        } else if(randomNum > 50 && randomNum <= 66){ //33.33 to 66.66
+          answer = `You may take it as YES, but some part ${randomNum}% is NO.`;
+        } else if(randomNum > 66 && randomNum <= 85){ //33.33 to 66.66
+          answer = `You can take it as YES!`;
+        } else if(randomNum > 85){ //33.33 to 66.66
           answer = `Absolutely YES!`;
         }
 
-        gaugeElement.find('.dxg-title text').last().html(`${randomNum}%`);
+        gaugeElement.find('.dxg-title text').last().html(`${randomNum}`);
         gauge.value(randomNum);
 
         $('#interpretation').html(answer);
