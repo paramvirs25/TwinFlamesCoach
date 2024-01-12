@@ -68,7 +68,7 @@ jQuery(function ($) {
     }
 
     init() {
-      $(this._element).dxCircularGauge(this._buildConfig());
+      jQuery(this._element).dxCircularGauge(this._buildConfig());
     }}
 
 
