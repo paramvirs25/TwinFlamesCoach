@@ -81,13 +81,14 @@ jQuery(function ($) {
     init() {
       jQuery(this._element).dxCircularGauge(this._buildConfig());
     }
-  }
+  } //class GaugeChart
 
 
   jQuery(document).ready(function ($) {
     $.getScript("https://paramvirs25.github.io/TwinFlamesCoach/gauge-chart/dx.all.js", function () {
       let higherValue = 100;
 
+      //Draw gauge chart
       $('.gauge').each(function (index, item) {
         let params = {
           initialValue: 0,
