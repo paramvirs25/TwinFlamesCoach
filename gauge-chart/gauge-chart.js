@@ -1,6 +1,10 @@
+// Declare GaugeChart class in the global scope
+let gaugeChart;
+
 jQuery(function ($) {
 
   class GaugeChart {
+
     constructor(element, params) {
       this._element = element;
       this._initialValue = params.initialValue;
@@ -65,7 +69,7 @@ jQuery(function ($) {
 
 
         onInitialized: function () {
-          let currentGauge = $(element);
+          let currentGauge = jQuery(element);
           let circle = currentGauge.find('.dxg-spindle-hole').clone();
           let border = currentGauge.find('.dxg-spindle-border').clone();
 
@@ -77,6 +81,42 @@ jQuery(function ($) {
 
 
     }
+
+    getGuidance(){
+      jQuery('.gauge').each((index, item) => {
+
+        let gauge = $(item).dxCircularGauge('instance');
+        let randomNum = Math.round(Math.random() * this._higherValue);
+        let gaugeElement = jQuery(gauge._$element[0]);
+
+        let answer = "";
+        if (randomNum <= 33) {
+          answer = `Consider it NO.`;
+        } else if (randomNum > 33 && randomNum <= 66) { //33.33 to 66.66
+          answer = `You can consider it as a YES, but keep in mind that the angels suggest leaning towards a NO, especially if the score is below 67.`;
+        } else if (randomNum > 66 && randomNum <= 85) { //33.33 to 66.66
+          answer = `You can take it as YES!`;
+        } else if (randomNum > 85) { //33.33 to 66.66
+          answer = `Absolutely YES!`;
+        }
+
+        gaugeElement.find('.dxg-title text').last().html(`${randomNum}`);
+        gauge.value(randomNum);
+
+        jQuery('#interpretation').html(answer);      
+      });
+
+      return false;
+    }
+
+    // static randomize() {
+    //   jQuery('.gauge').each(function (index, item) {
+    //     let gauge = jQuery(item).dxCircularGauge('instance');
+    //     gauge.getGuidance(gauge);
+    //   });
+
+    //   return false;
+    // }
 
     init() {
       jQuery(this._element).dxCircularGauge(this._buildConfig());
@@ -98,34 +138,10 @@ jQuery(function ($) {
         };
 
 
-        let gauge = new GaugeChart(item, params);
-        gauge.init();
+        gaugeChart = new GaugeChart(item, params);
+        gaugeChart.init();
       });
-
-      $('#random').click(function () {
-
-        $('.gauge').each(function (index, item) {
-          let gauge = $(item).dxCircularGauge('instance');
-          let randomNum = Math.round(Math.random() * higherValue);
-          let gaugeElement = $(gauge._$element[0]);
-
-          let answer = "";
-          if (randomNum <= 33) {
-            answer = `Consider it NO.`;
-          } else if (randomNum > 33 && randomNum <= 66) { //33.33 to 66.66
-            answer = `You may take it as YES, although recommended is NO.`;
-          } else if (randomNum > 66 && randomNum <= 85) { //33.33 to 66.66
-            answer = `You can take it as YES!`;
-          } else if (randomNum > 85) { //33.33 to 66.66
-            answer = `Absolutely YES!`;
-          }
-
-          gaugeElement.find('.dxg-title text').last().html(`${randomNum}`);
-          gauge.value(randomNum);
-
-          $('#interpretation').html(answer);
-        });
-      });
+      
     });
   });
 
