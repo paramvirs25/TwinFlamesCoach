@@ -102,13 +102,13 @@ window.addEventListener('load', function () {
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/HorizontalScroll.css"), new Array(".tfcScrollHorizRow"));
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/VisualLinkPreview.css"), new Array(".vlp-link-summary"));
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/UserProfile.css"), new Array(".uwp-profile-extra-div"));
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Tiles3d.css"), new Array('.tfcTileRow'));
 
   // (frontend only)
   // WP is undefined in frontend, 
   // but if user is logged in as admin and try to see frontend then wp is defined.
   // So we check both wp and wp.element
   if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
-    TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Tiles3d.css"), new Array('.tfcTileRow'));
 
     //KiokenAccordionFix
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenAccordionFix.css"), new Array('.wp-block-kioken-accordion-item'));
