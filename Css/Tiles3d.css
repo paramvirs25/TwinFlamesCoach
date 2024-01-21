@@ -27,7 +27,7 @@
 	}
 
 	/* The animation code */
-	@keyframes animation3d {
+	/* @keyframes animation3d {
 		from {
 			transform:
 				perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
@@ -54,10 +54,10 @@
 				perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
 			transition: 0.6s ease all;
 		}
-	}
+	} */
 
 	/*3D effect on ODD numberd tiles*/
-	div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd),
+	/* div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd),
 	div.tfcTileColumn,
 	.tfc3dContentbox {
 		animation-name: animation3d;
@@ -70,10 +70,10 @@
 		border-radius: 20px;
 		border: 1px solid #e6e6e6;
 		box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
-	}
+	} */
 
 	/*3D  Alternate effect on EVEN numberd tiles*/
-	div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even),
+	/* div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(even),
 	div.tfcTileColumnAlt,
 	.tfc3dContentboxAlt {
 		animation-name: animation3dAlt;
@@ -86,4 +86,4 @@
 		border-radius: 20px;
 		border: 1px solid #e6e6e6;
 		box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
-	}
+	} */
