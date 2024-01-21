@@ -75,6 +75,11 @@ class TfcImportJavascripts {
     }
   }
 
+  static isAdmin() {
+    return window.location.href.indexOf('/wp-admin/') !== -1;
+  }
+  
+
 }
 
 // Set the initial values
@@ -107,7 +112,9 @@ window.addEventListener('load', function () {
   // WP is undefined in frontend, 
   // but if user is logged in as admin and try to see frontend then wp is defined.
   // So we check both wp and wp.element
-  if (typeof wp === 'undefined' || typeof wp.element === 'undefined') {
+  // NOTE: Since 21 Jan 2024, after updating woocommerce, the above checks are not working properly, so 
+  // introduced isAdmin() method more accuracy.
+  if (typeof wp === 'undefined' || typeof wp.element === 'undefined' || !TfcImportJavascripts.isAdmin()) {
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Tiles3d.css"), new Array('.tfcTileRow'));
 
     //KiokenAccordionFix
