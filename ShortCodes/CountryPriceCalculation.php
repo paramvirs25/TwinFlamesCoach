@@ -1,4 +1,7 @@
 <?php
+// Requires
+// Class - Currency
+
 /**
  * Calculate and display the price with optional discounts based on the user's location.
  * USAGE: [country_price_discount inr="6750" discount="classes1=3,discount1=5,classes2=6,discount2=10"]
