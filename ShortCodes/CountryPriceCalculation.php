@@ -1,5 +1,41 @@
 <?php
 
+function determineCurrency() {
+    $currencySymbol = 'INR ₹';
+    $currencyMultiplier = 1;
+	
+	// If the geotarget API exists
+	if (function_exists('geot_target')) {
+
+		if (geot_target('IN')) {
+			// India
+			$currencySymbol = 'INR ₹';
+			$currencyMultiplier = 1;
+		} elseif (geot_target('BD')) {
+			// Bangladesh
+			$currencySymbol = 'BDT ৳';
+			$currencyMultiplier = 0.7;
+		} elseif (geot_target('PK')) {
+			// Pakistan
+			$currencySymbol = 'PKR';
+			$currencyMultiplier = 0.6;
+		} else {
+			// Rest of the world in USD
+			$currencySymbol = 'USD $';
+			$currencyMultiplier = .0189;
+		}
+	}
+
+    return [
+        'currencySymbol' => $currencySymbol,
+        'currencyMultiplier' => $currencyMultiplier,
+    ];
+}
+
+function convertCurrency($inrPrice, $currencyMultiplier){
+	return number_format($inrPrice * $currencyMultiplier, 2);
+}
+
 /**
  * Calculate and display the price with optional discounts based on the user's location.
  * USAGE: [country_price_discount inr="6750" discount="classes1=3,discount1=5,classes2=6,discount2=10"]
@@ -18,58 +54,53 @@ function calculatePriceWithDiscount( $atts ) {
 		return $output;
 	}
 
-	// If the geotarget API exists
-	if (function_exists('geot_target')) {
+	// Calculate the final price by applying discounts, if any
+	if (!is_null($discounts) && $discounts !== '') {
+		$isShowDiscount = true;
 
-		// Calculate the final price by applying discounts, if any
-		if (!is_null($discounts) && $discounts !== '') {
-			$isShowDiscount = true;
+		// Extract discounts from the 'discount' attribute
+		$discounts = explode(',', $discounts);
+		$discountValues = array();
+		$classCounts = array();
 
-			// Extract discounts from the 'discount' attribute
-			$discounts = explode(',', $discounts);
-			$discountValues = array();
-			$classCounts = array();
-
-			foreach ($discounts as $discount) {
-				$discountPair = explode('=', $discount);
-				if (count($discountPair) === 2) {
-					$key = $discountPair[0];
-					$value = $discountPair[1];
-					if (strpos($key, 'classes') === 0) {
-						$classCounts[] = $value;
-					} elseif (strpos($key, 'discount') === 0) {
-						$discountValues[] = $value;
-					}
+		foreach ($discounts as $discount) {
+			$discountPair = explode('=', $discount);
+			if (count($discountPair) === 2) {
+				$key = $discountPair[0];
+				$value = $discountPair[1];
+				if (strpos($key, 'classes') === 0) {
+					$classCounts[] = $value;
+				} elseif (strpos($key, 'discount') === 0) {
+					$discountValues[] = $value;
 				}
-			}			
-		}
-
-		// Format the price based on the user's country
-		if (!geot_target('IN')) {
-			// For the rest of the world in USD
-			$currencySymbol = 'USD $';
-			$currencyMultiplier = .0189;
-		}
-
-		$beforeDiscountPriceFormated = number_format($inrPrice * $currencyMultiplier, 2);
-
-		// Generate the HTML list of items
-		$output = "<ul>";
-		$output .= "<li>The cost for a single class is: <span style='color:#77a464;'>$currencySymbol $beforeDiscountPriceFormated</span></li>";
-
-		if ($isShowDiscount) {
-			foreach ($classCounts as $index => $classCount) {
-				$discountValue = $discountValues[$index];
-				$totalCost = $inrPrice * $classCount;
-				$discountAmount = $totalCost - ($totalCost * $discountValue / 100);
-				$discountedPriceFormatted = number_format($discountAmount * $currencyMultiplier, 2);
-
-				$output .= "<li>You can save <span style='color:#77a464;'>$discountValue%</span> when you sign up for <span style='color:#77a464;'>$classCount classes</span>. The total cost after the discount is: <br/><span><s>$currencySymbol $totalCost</s></span> <span style='color:#77a464;'>$currencySymbol $discountedPriceFormatted</span></li>";
 			}
-		}
-
-		$output .= "</ul>";
+		}			
 	}
+
+	// Get currency symbol and currency multiplier
+	$result = determineCurrency();
+	$currencySymbol = $result['currencySymbol'];
+	$currencyMultiplier = $result['currencyMultiplier'];
+
+	// Generate the HTML list of items
+	$output = "<ul>";
+	$output .= "<li>The cost for a single class is: <span style='color:#77a464;'>$currencySymbol " . convertCurrency($inrPrice, $currencyMultiplier) . "</span></li>";
+
+	if ($isShowDiscount) {
+		foreach ($classCounts as $index => $classCount) {
+			$discountValue = $discountValues[$index];
+			$inrTotalCost = $inrPrice * $classCount;
+			$inrDiscountAmount = $inrTotalCost - ($inrTotalCost * $discountValue / 100);
+			
+			$output .= "<li>You can save <span style=\"color:#77a464;\">$discountValue%</span> when you sign up for <span style=\"color:#77a464;\">$classCount classes</span>. The total cost after the discount is: <br/>
+				<span><s>$currencySymbol " . convertCurrency($inrTotalCost, $currencyMultiplier) . "</s></span> 
+				<span style=\"color:#77a464;\">$currencySymbol " . convertCurrency($inrDiscountAmount, $currencyMultiplier) . "</span>
+			</li>";
+
+		}
+	}
+
+	$output .= "</ul>";
 
 	return $output;
 }
@@ -103,35 +134,29 @@ function calculatePrice( $atts ) {
 	if (is_null($inrPrice) || $inrPrice === '') {
 		return $out;
 	}
-	
-    //if geotarget API exists
-	if( function_exists( 'geot_target' ) ) {
 
-        //Calculate the final price by apply discount if any
-        if (!is_null($discount) && $discount !== '') {
-            $isShowDiscount = true;
-            $discountedPrice = $inrPrice - ($inrPrice * $discount / 100);
-        }
-
-        //format price based on country
-		if( !geot_target( 'IN' ) ) { //Rest of the world in USD
-            $currencySymbol = 'USD $';
-            $currencyMultiplier = .02;			
-		}
-
-        $beforeDiscountPrice = number_format($inrPrice * $currencyMultiplier, 2);
-        
-
-        //optput strikethrough(USD $700.00) USD $630.00
-        $out = sprintf("<span style='%s'><s>%s %s</s></span> <span style='color:#77a464;'>%s %s</span>", 
-            $isShowDiscount ? '' : 'display:none',
-            $currencySymbol, 
-            $beforeDiscountPrice, 
-            $currencySymbol, 
-            number_format($discountedPrice * $currencyMultiplier, 2)
-        );
-
+	//Calculate the final price by apply discount if any
+	if (!is_null($discount) && $discount !== '') {
+		$isShowDiscount = true;
+		$discountedPrice = $inrPrice - ($inrPrice * $discount / 100);
 	}
+
+	// Get currency symbol and currency multiplier
+	$result = determineCurrency();
+	$currencySymbol = $result['currencySymbol'];
+	$currencyMultiplier = $result['currencyMultiplier'];
+
+	$beforeDiscountPrice = number_format($inrPrice * $currencyMultiplier, 2);
+	
+
+	//optput strikethrough(USD $700.00) USD $630.00
+	$out = sprintf("<span style='%s'><s>%s %s</s></span> <span style='color:#77a464;'>%s %s</span>", 
+		$isShowDiscount ? '' : 'display:none',
+		$currencySymbol, 
+		$beforeDiscountPrice, 
+		$currencySymbol, 
+		number_format($discountedPrice * $currencyMultiplier, 2)
+	);
     
     return $out;
 }
