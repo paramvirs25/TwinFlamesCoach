@@ -1,41 +1,4 @@
 <?php
-
-function determineCurrency() {
-    $currencySymbol = 'INR ₹';
-    $currencyMultiplier = 1;
-	
-	// If the geotarget API exists
-	if (function_exists('geot_target')) {
-
-		if (geot_target('IN')) {
-			// India
-			$currencySymbol = 'INR ₹';
-			$currencyMultiplier = 1;
-		} elseif (geot_target('BD')) {
-			// Bangladesh
-			$currencySymbol = 'BDT ৳';
-			$currencyMultiplier = 0.7;
-		} elseif (geot_target('PK')) {
-			// Pakistan
-			$currencySymbol = 'PKR';
-			$currencyMultiplier = 0.6;
-		} else {
-			// Rest of the world in USD
-			$currencySymbol = 'USD $';
-			$currencyMultiplier = .0189;
-		}
-	}
-
-    return [
-        'currencySymbol' => $currencySymbol,
-        'currencyMultiplier' => $currencyMultiplier,
-    ];
-}
-
-function convertCurrency($inrPrice, $currencyMultiplier){
-	return number_format($inrPrice * $currencyMultiplier, 2);
-}
-
 /**
  * Calculate and display the price with optional discounts based on the user's location.
  * USAGE: [country_price_discount inr="6750" discount="classes1=3,discount1=5,classes2=6,discount2=10"]
@@ -78,13 +41,13 @@ function calculatePriceWithDiscount( $atts ) {
 	}
 
 	// Get currency symbol and currency multiplier
-	$result = determineCurrency();
+	$result = TFC\Currency::determineCurrency();
 	$currencySymbol = $result['currencySymbol'];
 	$currencyMultiplier = $result['currencyMultiplier'];
 
 	// Generate the HTML list of items
 	$output = "<ul>";
-	$output .= "<li>The cost for a single class is: <span style='color:#77a464;'>$currencySymbol " . convertCurrency($inrPrice, $currencyMultiplier) . "</span></li>";
+	$output .= "<li>The cost for a single class is: <span style='color:#77a464;'>$currencySymbol " . TFC\Currency::convertCurrency($inrPrice, $currencyMultiplier) . "</span></li>";
 
 	if ($isShowDiscount) {
 		foreach ($classCounts as $index => $classCount) {
@@ -93,8 +56,8 @@ function calculatePriceWithDiscount( $atts ) {
 			$inrDiscountAmount = $inrTotalCost - ($inrTotalCost * $discountValue / 100);
 			
 			$output .= "<li>You can save <span style=\"color:#77a464;\">$discountValue%</span> when you sign up for <span style=\"color:#77a464;\">$classCount classes</span>. The total cost after the discount is: <br/>
-				<span><s>$currencySymbol " . convertCurrency($inrTotalCost, $currencyMultiplier) . "</s></span> 
-				<span style=\"color:#77a464;\">$currencySymbol " . convertCurrency($inrDiscountAmount, $currencyMultiplier) . "</span>
+				<span><s>$currencySymbol " . TFC\Currency::convertCurrency($inrTotalCost, $currencyMultiplier) . "</s></span> 
+				<span style=\"color:#77a464;\">$currencySymbol " . TFC\Currency::convertCurrency($inrDiscountAmount, $currencyMultiplier) . "</span>
 			</li>";
 
 		}
@@ -142,7 +105,7 @@ function calculatePrice( $atts ) {
 	}
 
 	// Get currency symbol and currency multiplier
-	$result = determineCurrency();
+	$result = TFC\Currency::determineCurrency();
 	$currencySymbol = $result['currencySymbol'];
 	$currencyMultiplier = $result['currencyMultiplier'];
 
