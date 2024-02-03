@@ -47,7 +47,10 @@ function calculatePriceWithDiscount( $atts ) {
 
 	// Generate the HTML list of items
 	$output = "<ul>";
-	$output .= "<li>The cost for a single class is: <span style='color:#77a464;'>$currencySymbol " . TFC\Currency::convertCurrency($inrPrice, $currencyMultiplier) . "</span></li>";
+	$output .= "<li>The cost for a single class is: 
+		<span style='color:#77a464;'>" . 
+		TFC\Currency::formatCurrency($inrPrice, $currencySymbol, $currencyMultiplier) . 
+		"</span></li>";
 
 	if ($isShowDiscount) {
 		foreach ($classCounts as $index => $classCount) {
@@ -55,9 +58,12 @@ function calculatePriceWithDiscount( $atts ) {
 			$inrTotalCost = $inrPrice * $classCount;
 			$inrDiscountAmount = $inrTotalCost - ($inrTotalCost * $discountValue / 100);
 			
-			$output .= "<li>You can save <span style=\"color:#77a464;\">$discountValue%</span> when you sign up for <span style=\"color:#77a464;\">$classCount classes</span>. The total cost after the discount is: <br/>
-				<span><s>$currencySymbol " . TFC\Currency::convertCurrency($inrTotalCost, $currencyMultiplier) . "</s></span> 
-				<span style=\"color:#77a464;\">$currencySymbol " . TFC\Currency::convertCurrency($inrDiscountAmount, $currencyMultiplier) . "</span>
+			$output .= "<li>You can save 
+				<span style=\"color:#77a464;\">$discountValue%</span> when you sign up for 
+				<span style=\"color:#77a464;\">$classCount classes</span>. 
+				The total cost after the discount is: <br/>
+				<span><s>" . TFC\Currency::formatCurrency($inrTotalCost, $currencySymbol, $currencyMultiplier) . "</s></span> 
+				<span style=\"color:#77a464;\">" . TFC\Currency::formatCurrency($inrDiscountAmount, $currencySymbol, $currencyMultiplier) . "</span>
 			</li>";
 
 		}

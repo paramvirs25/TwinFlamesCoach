@@ -40,4 +40,9 @@ class Currency
     {
         return number_format($inrPrice * $currencyMultiplier, 2);
     }    
+
+    public static function formatCurrency($inrPrice, $currencySymbol, $currencyMultiplier)
+    {
+        return $currencySymbol . " " . Currency::convertCurrency($inrPrice, $currencyMultiplier);
+    }
 }
