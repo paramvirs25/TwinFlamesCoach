@@ -18,5 +18,6 @@
 
 .vlp-layout-image-text-same-line .vlp-link-image {
     float: left;
-    width: 30%;
+    padding-right: 5px;
+    width: 100px;
 }
