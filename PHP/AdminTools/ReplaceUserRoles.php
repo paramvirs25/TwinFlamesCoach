@@ -31,7 +31,7 @@ function onBasicIW1Complete(){
 	$output .= replaceUserRoles(
 		'group_basic_iw_1', 
 		array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool' ),
-		array( 'basic_iw_1' )
+		array( 'basic_iw_1','followup' )
 	);
 	
 	$output .= "UpdateUserOnBasicIW1Complete ends<br/>";
