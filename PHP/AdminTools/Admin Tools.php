@@ -1,33 +1,54 @@
 <?php
-add_shortcode( 'admin_tools', function () {
-	$out = "";
-	
-	if (!empty($_GET['act'])) {
-		if($_GET['act'] == 'approve'){
-			$out .= TFCMembers\UserRoles::approveNewUser();
-		} else if($_GET['act'] == 'bw1class'){
-			$out .= TFCMembers\UserRoles::giveAccessToBasicIWFirstClass();
-		} else if($_GET['act'] == 'groupbiw1comp'){
-			$out .= TFCMembers\UserRoles::onGroupBasicIW1Complete();
-		} else if($_GET['act'] == 'userbiw1comp'){ //this value may be received in querystring
-			$out .= TFCMembers\UserRoles::onUserBasicIW1Complete();
-		} else if($_GET['act'] == 'biw2comp'){
-			$out .= TFCMembers\UserRoles::onBasicIW2Complete();
-		}
-		
-	} else {
+add_shortcode('admin_tools', function () {
+    $out = "";
 
-		$out = '<form action="/admin-tools/" method="get" name="admintools">
-		  <input type="hidden" name="act" value="run">
-		  <input type="submit" value="Approve New Users" onclick="document.forms[\'admintools\'].act.value = \'approve\' ">
-		  <br/><br/>
-		  <input type="submit" value="Give Access to Basic IW first class" onclick="document.forms[\'admintools\'].act.value = \'bw1class\' ">
-		  <br/><br/>
-		  <input type="submit" value="On Basic Inner Work 1 Complete" onclick="document.forms[\'admintools\'].act.value = \'groupbiw1comp\' ">
-		  <br/><br/>
-		  <input type="submit" value="On Basic Inner Work 2 Complete" onclick="document.forms[\'admintools\'].act.value = \'biw2comp\' ">
-		</form>';
-	}
+    if (!empty($_GET['act'])) {
+        switch ($_GET['act']) {
+            case 'approve':
+                $out .= TFCMembers\UserRoles::approveNewUser();
+                break;
+            case 'bw1class':
+                $out .= TFCMembers\UserRoles::giveAccessToBasicIWFirstClass();
+                break;
+            case 'groupbiw1comp':
+                $out .= TFCMembers\UserRoles::onGroupBasicIW1Complete();
+                break;
+            case 'userbiw1comp':
+                // Check if 'user_id' is set in the query string
+                $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
+                $out .= TFCMembers\UserRoles::onUserBasicIW1Complete($userId);
+                break;
+            case 'biw2comp':
+                $out .= TFCMembers\UserRoles::onBasicIW2Complete();
+                break;
+        }
+    } else {
+        // Use heredoc syntax for cleaner HTML
+        $out = <<<HTML
+        <form action="/admin-tools/" method="get" name="admintools">
+          <input type="hidden" name="act" value="run">
+		  
+		<div class="contentbox">
+		  	<h2>Tools operating on User ID</h2>
+		  
+		  	<p><label>User Id</label> 
+		  	<input type="text" id="user_id" name="user_id" />			  
+			</p>
+			<p><input type="submit" value="User Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'userbiw1comp' "></p>
+		</div>
+		<div class="contentbox">
+		  <h2>Tools operating on User Group</h2>
+		  <p><input type="submit" value="Approve New Users" onclick="document.forms['admintools'].act.value = 'approve' "></p>
+          
+          <p><input type="submit" value="Give Access to Basic IW first class" onclick="document.forms['admintools'].act.value = 'bw1class' "></p>
+          
+          <p><input type="submit" value="Group Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'groupbiw1comp' "></p>
+          
+          <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' "></p>
+		</div>
+        </form>
+HTML;
+    }
 
-	return $out;
-} );
+    return $out;
+});
