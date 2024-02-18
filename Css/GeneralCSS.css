@@ -157,6 +157,12 @@ ol, ul {
 	margin-left: 20px;
 }
 
+/*Track-Clicks display*/
+a[data-clicks]::after {
+    line-height: 20px;
+    background-color: rgb(53, 57, 59);
+}
+
 
 /*----Content box----*/
 .contentbox {
