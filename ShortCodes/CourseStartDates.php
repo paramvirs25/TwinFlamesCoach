@@ -132,9 +132,9 @@ class CourseDatesTfc
     {
         return new Course(
             'Chakra Healing & Balancing',
-            '30/10/2023',
+            '25/02/2022',
             '08:00 PM',
-            12
+            16
         );
     }
 
