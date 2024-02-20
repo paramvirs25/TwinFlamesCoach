@@ -57,10 +57,26 @@ class CourseDatesTfc
     private static function getCoursesData()
     {
         $json_file = 'https://paramvirs25.github.io/TwinFlamesCoach/Json/course_dates.json'; // Update this path
-        $json_content = file_get_contents($json_file);
 
-        return json_decode($json_content, true);
+        // Use a more robust method (e.g., cURL) for HTTP requests to handle errors more effectively
+        $json_content = @file_get_contents($json_file);
+
+        if ($json_content === false) {
+            // Handle the error (e.g., log, display an error message)
+            return null;
+        }
+
+        // Decode the JSON content with error handling
+        $json_data = json_decode($json_content, true);
+
+        if ($json_data === null && json_last_error() !== JSON_ERROR_NONE) {
+            // Handle the JSON decoding error (e.g., log, display an error message)
+            return null;
+        }
+
+        return $json_data;
     }
+
 
     /**
      * Get courses array from JSON data.
