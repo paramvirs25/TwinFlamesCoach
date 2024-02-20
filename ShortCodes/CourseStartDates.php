@@ -1,4 +1,34 @@
 <?php
+
+namespace TFC;
+
+class Utilities
+{
+    /**
+     * Get  data from the JSON file.
+     */
+    public static function getJsonData($json_file_url)
+    {
+        // Use a more robust method (e.g., cURL) for HTTP requests to handle errors more effectively
+        $json_content = @file_get_contents($json_file_url);
+
+        if ($json_content === false) {
+            // Handle the error (e.g., log, display an error message)
+            return null;
+        }
+
+        // Decode the JSON content with error handling
+        $json_data = json_decode($json_content, true);
+
+        if ($json_data === null && json_last_error() !== JSON_ERROR_NONE) {
+            // Handle the JSON decoding error (e.g., log, display an error message)
+            return null;
+        }
+
+        return $json_data;
+    }
+}
+
 class Course
 {
     public $course_name;
@@ -16,7 +46,7 @@ class Course
         $this->start_date = $data['start_date'];
         $this->start_time = $data['start_time'];
         $this->weeks_before_next_batch = $data['weeks_before_next_batch'];
-        $this->start_date_time = DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
+        $this->start_date_time = \DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
 
         // Calculate the start date during object construction
         $this->start_date_time = $this->calculateStartDateTime();
@@ -26,7 +56,7 @@ class Course
     /**
      * @return DateTime|null Returns a DateTime object if a valid start date is calculated, or null if the start date is blank.
      */
-    public function calculateStartDateTime(): ?DateTime
+    public function calculateStartDateTime(): ?\DateTime
     {
         // Check if start_date is blank
         if (empty($this->start_date)) {
@@ -34,7 +64,7 @@ class Course
         }
 
         // Get current date and time
-        $current_date_time = new DateTime();
+        $current_date_time = new \DateTime();
 
         // start date is greater than current date
         if ($this->start_date_time > $current_date_time) {
@@ -49,41 +79,15 @@ class Course
     }
 }
 
+
 class CourseDatesTfc
 {
-    /**
-     * Get courses data from the JSON file.
-     */
-    private static function getCoursesData()
-    {
-        $json_file = 'https://paramvirs25.github.io/TwinFlamesCoach/Json/course_dates.json'; // Update this path
-
-        // Use a more robust method (e.g., cURL) for HTTP requests to handle errors more effectively
-        $json_content = @file_get_contents($json_file);
-
-        if ($json_content === false) {
-            // Handle the error (e.g., log, display an error message)
-            return null;
-        }
-
-        // Decode the JSON content with error handling
-        $json_data = json_decode($json_content, true);
-
-        if ($json_data === null && json_last_error() !== JSON_ERROR_NONE) {
-            // Handle the JSON decoding error (e.g., log, display an error message)
-            return null;
-        }
-
-        return $json_data;
-    }
-
-
     /**
      * Get courses array from JSON data.
      */
     public static function getCoursesArray()
     {
-        $courses_data = self::getCoursesData();
+        $courses_data = \TFC\Utilities::getJsonData('https://paramvirs25.github.io/TwinFlamesCoach/Json/course_dates.json');
 
         return isset($courses_data['courses']) ? $courses_data['courses'] : [];
     }
@@ -105,7 +109,7 @@ class CourseDatesTfc
      */
     public static function formatDateTime(Course $course)
     {
-        $current_date_time = new DateTime();
+        $current_date_time = new \DateTime();
 
         //if start date is in future
         if (isset($course->start_date_time) && ($course->start_date_time >= $current_date_time)) {
@@ -113,7 +117,7 @@ class CourseDatesTfc
         } else {
             return 'To be Announced Soon';
         }
-    }    
+    }
 
     public static function getSortedCoursesByDates()
     {
@@ -142,8 +146,8 @@ class CourseDatesTfc
     }
 }
 
-function upcoming_course_start_date_shortcode($atts)
-{
+
+add_shortcode('upcoming_course_start_date', function ($atts) {
     // Extract shortcode attributes
     $attributes = shortcode_atts(array(
         'course_name' => '',
@@ -153,13 +157,13 @@ function upcoming_course_start_date_shortcode($atts)
     $formatted_date = '';
 
     // Get courses array from JSON data
-    $courses_array = CourseDatesTfc::getCoursesArray();
+    $courses_array = \TFC\CourseDatesTfc::getCoursesArray();
 
     // Find the corresponding course by name
     $selected_course = null;
     foreach ($courses_array as $course_data) {
         if ($course_data['short_name'] === $attributes['course_name']) {
-            $selected_course = new Course($course_data);
+            $selected_course = new \TFC\Course($course_data);
             break;
         }
     }
@@ -168,18 +172,16 @@ function upcoming_course_start_date_shortcode($atts)
 
     // format date
     if (isset($course)) {
-        $formatted_date = CourseDatesTfc::formatDateTime($course);
+        $formatted_date = \TFC\CourseDatesTfc::formatDateTime($course);
     }
 
     return $formatted_date;
-}
-add_shortcode('upcoming_course_start_date', 'upcoming_course_start_date_shortcode');
+});
 
-// Shortcode function to return all course dates
-function all_course_start_dates_shortcode()
-{
+// Add the shortcode
+add_shortcode('all_course_start_dates', function () {
     // Get all course start dates
-    $courses = CourseDatesTfc::getSortedCoursesByDates();
+    $courses = \TFC\CourseDatesTfc::getSortedCoursesByDates();
 
     // Initialize an empty string to store the output
     $output = '';
@@ -193,7 +195,7 @@ function all_course_start_dates_shortcode()
     foreach ($courses as $course) {
         $output .= '<tr>';
         $output .= '<td>' . $course->course_name . '</td>';
-        $output .= '<td>' . CourseDatesTfc::formatDateTime($course) . '</td>';
+        $output .= '<td>' . \TFC\CourseDatesTfc::formatDateTime($course) . '</td>';
         $output .= '</tr>';
     }
 
@@ -201,7 +203,4 @@ function all_course_start_dates_shortcode()
 
     // Return the formatted output
     return $output;
-}
-
-// Add the shortcode
-add_shortcode('all_course_start_dates', 'all_course_start_dates_shortcode');
+});
