@@ -7,19 +7,6 @@ class Course
     public $weeks_before_next_batch;
     public $start_date_time;
 
-    // public function __construct($name, $start_date, $start_time, $weeks_before_next_batch)
-    // {
-    //     $this->course_name = $name;
-    //     $this->start_date = $start_date;
-    //     $this->start_time = $start_time;
-    //     $this->weeks_before_next_batch = $weeks_before_next_batch;
-    //     $this->start_date_time = DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
-
-    //     // Calculate the start date during object construction
-    //     $this->start_date_time = $this->calculateStartDateTime();        
-    //     //echo $this->start_date_time->format('d/m/Y g:i A') . ' <br>';
-    // }
-
     /**
      * @param array $data Associative array with course data.
      */
@@ -33,6 +20,7 @@ class Course
 
         // Calculate the start date during object construction
         $this->start_date_time = $this->calculateStartDateTime();
+        //echo $this->start_date_time->format('d/m/Y g:i A') . ' <br>';
     }
 
     /**
@@ -90,17 +78,11 @@ class CourseDatesTfc
         $course_objects = [];
 
         foreach ($courses as $course_data) {
-            $course_objects[] = new Course(
-                $course_data['name'],
-                $course_data['start_date'],
-                $course_data['start_time'],
-                $course_data['weeks_before_next_batch']
-            );
+            $course_objects[] = new Course($course_data);
         }
 
         return $course_objects;
     }
-
 
     /**
      *  @return string similar to "November 2023 7:00 PM IST" or 'To be Announced Soon'
@@ -120,15 +102,6 @@ class CourseDatesTfc
     public static function getSortedCoursesByDates()
     {
         $all_start_dates = self::getAllCourses();
-        
-        // array(
-        //     self::lifeCoachStartDate(),
-        //     self::chakraHealingStartDate(),
-        //     self::basicInnerWork2StartDate(),
-        //     self::advTFHealing1StartDate(),
-        //     self::yogasthBhavTFStartDate(),
-        //     self::mirrorWorkTFStartDate()
-        // );
 
         $current_timestamp = time();
 
@@ -151,67 +124,6 @@ class CourseDatesTfc
 
         return $all_start_dates;
     }
-
-
-    // public static function mirrorWorkTFStartDate()
-    // {
-    //     return new Course(
-    //         'Mirror Work for Twin Flames',
-    //         '23/10/2023',
-    //         '07:00 PM',
-    //         6
-    //     );
-    // }
-
-    // public static function chakraHealingStartDate()
-    // {
-    //     return new Course(
-    //         'Chakra Healing & Balancing',
-    //         '25/02/2024',
-    //         '07:30 PM',
-    //         16
-    //     );
-    // }
-
-    // public static function basicInnerWork2StartDate()
-    // {
-    //     return new Course(
-    //         'Basic Inner Work 2',
-    //         '29/10/2023',
-    //         '07:00 PM',
-    //         24
-    //     );
-    // }
-
-    // public static function lifeCoachStartDate()
-    // {
-    //     return new Course(
-    //         'Life Coach',
-    //         '06/01/2024',
-    //         '07:30 PM',
-    //         52
-    //     );
-    // }
-
-    // public static function advTFHealing1StartDate()
-    // {
-    //     return new Course(
-    //         'Advanced Twin Flame Healings 1',
-    //         '5/08/2023',
-    //         '08:00 PM',
-    //         52
-    //     );
-    // }
-
-    // public static function yogasthBhavTFStartDate()
-    // {
-    //     return new Course(
-    //         'Yogasth Bhava Twin Flame Journey',
-    //         '23/08/2023',
-    //         '07:00 PM',
-    //         12
-    //     );
-    // }
 }
 
 function upcoming_course_start_date_shortcode($atts)
@@ -237,32 +149,6 @@ function upcoming_course_start_date_shortcode($atts)
     }
 
     $course = $selected_course;
-
-    // Use a switch statement to determine which course method to call
-    // switch ($attributes['course_name']) {
-    //     case 'lifecoach':
-    //         $course = CourseDatesTfc::lifeCoachStartDate();
-    //         break;
-    //     case 'chb': //Chakra healing & balancing
-    //         $course = CourseDatesTfc::chakraHealingStartDate();
-    //         break;
-    //     case 'biw2': //basic IW 2
-    //         $course = CourseDatesTfc::basicInnerWork2StartDate();
-    //         break;
-    //     case 'advtfh1': //Adv TF HEalings 1
-    //         $course = CourseDatesTfc::advTFHealing1StartDate();
-    //         break;
-    //     case 'ybtf': // Yogasth Bhav
-    //         $course = CourseDatesTfc::yogasthBhavTFStartDate();
-    //         break;
-    //     case 'mwtf': //Mirror Work
-    //         $course = CourseDatesTfc::mirrorWorkTFStartDate();
-    //         break;
-    //     default:
-    //         // Handle the case where course_name doesn't match any known courses
-    //         $course = null;
-    //         break;
-    // }
 
     // format date
     if (isset($course)) {
