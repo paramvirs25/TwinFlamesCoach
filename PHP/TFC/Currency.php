@@ -19,10 +19,10 @@ class Currency
                 // Bangladesh
                 $currencySymbol = 'BDT ৳';
                 $currencyMultiplier = 0.7;
-            } elseif (geot_target('PK')) {
-                // Pakistan
-                $currencySymbol = 'PKR';
-                $currencyMultiplier = 0.6;
+            // } elseif (geot_target('PK')) {
+            //     // Pakistan
+            //     $currencySymbol = 'PKR';
+            //     $currencyMultiplier = 0.6;
             } else {
                 // Rest of the world in USD
                 $currencySymbol = 'USD $';
