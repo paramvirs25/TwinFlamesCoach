@@ -2,7 +2,7 @@
 
 namespace TFC;
 
-class Utilities
+class JsonUtilities
 {
     /**
      * Get  data from the JSON file.
