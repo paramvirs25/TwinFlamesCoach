@@ -2,7 +2,10 @@
 
 namespace TFC;
 
-class Course
+use \TFC\JsonUtilities as JsonUtil;
+use \TFC\Configuration as Config;
+
+class CourseDates
 {
     public $course_name;
     public $start_date;
@@ -50,17 +53,13 @@ class Course
 
         return $final_date_time;
     }
-}
 
-
-class CourseDatesTfc
-{
     /**
      * Get courses array from JSON data.
      */
     public static function getCoursesArray()
     {
-        $courses_data = \TFC\JsonUtilities::getJsonData('https://paramvirs25.github.io/TwinFlamesCoach/Json/course_dates.json');
+        $courses_data = JsonUtil::getJsonData(Config::$courses_dates_json_path);
 
         return isset($courses_data['courses']) ? $courses_data['courses'] : [];
     }
@@ -71,7 +70,7 @@ class CourseDatesTfc
         $course_objects = [];
 
         foreach ($courses as $course_data) {
-            $course_objects[] = new Course($course_data);
+            $course_objects[] = new CourseDates($course_data);
         }
 
         return $course_objects;
@@ -80,7 +79,7 @@ class CourseDatesTfc
     /**
      *  @return string similar to "November 2023 7:00 PM IST" or 'To be Announced Soon'
      */
-    public static function formatDateTime(Course $course)
+    public static function formatDateTime(CourseDates $course)
     {
         $current_date_time = new \DateTime();
 
@@ -130,13 +129,13 @@ add_shortcode('upcoming_course_start_date', function ($atts) {
     $formatted_date = '';
 
     // Get courses array from JSON data
-    $courses_array = \TFC\CourseDatesTfc::getCoursesArray();
+    $courses_array = \TFC\CourseDates::getCoursesArray();
 
     // Find the corresponding course by name
     $selected_course = null;
     foreach ($courses_array as $course_data) {
         if ($course_data['short_name'] === $attributes['course_name']) {
-            $selected_course = new \TFC\Course($course_data);
+            $selected_course = new \TFC\CourseDates($course_data);
             break;
         }
     }
@@ -145,7 +144,7 @@ add_shortcode('upcoming_course_start_date', function ($atts) {
 
     // format date
     if (isset($course)) {
-        $formatted_date = \TFC\CourseDatesTfc::formatDateTime($course);
+        $formatted_date = \TFC\CourseDates::formatDateTime($course);
     }
 
     return $formatted_date;
@@ -154,7 +153,7 @@ add_shortcode('upcoming_course_start_date', function ($atts) {
 // Add the shortcode
 add_shortcode('all_course_start_dates', function () {
     // Get all course start dates
-    $courses = \TFC\CourseDatesTfc::getSortedCoursesByDates();
+    $courses = \TFC\CourseDates::getSortedCoursesByDates();
 
     // Initialize an empty string to store the output
     $output = '';
@@ -168,7 +167,7 @@ add_shortcode('all_course_start_dates', function () {
     foreach ($courses as $course) {
         $output .= '<tr>';
         $output .= '<td>' . $course->course_name . '</td>';
-        $output .= '<td>' . \TFC\CourseDatesTfc::formatDateTime($course) . '</td>';
+        $output .= '<td>' . \TFC\CourseDates::formatDateTime($course) . '</td>';
         $output .= '</tr>';
     }
 
