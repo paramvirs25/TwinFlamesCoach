@@ -157,10 +157,14 @@ ol, ul {
 	margin-left: 20px;
 }
 
-/*Track-Clicks display*/
-a[data-clicks]::after {
+/*---Track-The-Clicks display---*/
+/* a[data-clicks]::after {
     line-height: 20px;
     background-color: rgb(53, 57, 59);
+} */
+/*Hide click count in main navigation*/
+.main-nav ul li a[data-clicks]::after {
+    display:none;
 }
 
 
