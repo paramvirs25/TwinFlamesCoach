@@ -4,8 +4,11 @@ add_shortcode('admin_tools', function () {
 
     if (!empty($_GET['act'])) {
         switch ($_GET['act']) {
-            case 'approve':
-                $out .= TFCMembers\UserRoles::approveNewUser();
+            case 'workshop_approve':
+                $out .= TFCMembers\UserRoles::approveNewUserForWorkshop();
+                break;
+            case 'bw1approve':
+                $out .= TFCMembers\UserRoles::approveNewUserForBIW1();
                 break;
             case 'bw1class':
                 $out .= TFCMembers\UserRoles::giveAccessToBasicIWFirstClass();
@@ -38,7 +41,9 @@ add_shortcode('admin_tools', function () {
 		</div>
 		<div class="contentbox">
 		  <h2>Tools operating on User Group</h2>
-		  <p><input type="submit" value="Approve New Users" onclick="document.forms['admintools'].act.value = 'approve' "></p>
+		  <p><input type="submit" value="Approve New Users for Workshops" onclick="document.forms['admintools'].act.value = 'workshop_approve' "></p>
+
+          <p><input type="submit" value="Approve New Users for Basic IW" onclick="document.forms['admintools'].act.value = 'bw1approve' "></p>
           
           <p><input type="submit" value="Give Access to Basic IW first class" onclick="document.forms['admintools'].act.value = 'bw1class' "></p>
           

@@ -6,14 +6,26 @@ class UserRoles {
 	const onbiw1_complete_roles_to_remove = array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool' );
 	const onbiw1_complete_roles_to_add = array( 'basic_iw_1','followup' );
 
-	public static function approveNewUser(){
-		$output = "Approve new user starts -> <br/>";		
+	public static function approveNewUserForWorkshop(){
+		$output = "Approve new user for WORKSHOP starts -> <br/>";		
+		$output .= UserRoles::replaceGroupUsersRoles(
+			'tfcnewstudent', 
+			array( 'tfcnewstudent' ), 
+			array( 'subscriber', 'tools' )
+		);	
+		$output .= "Approve new user for WORKSHOP ends!<br/>";
+		
+		return $output;
+	}
+
+	public static function approveNewUserForBIW1(){
+		$output = "Approve new user for BIW1 starts -> <br/>";		
 		$output .= UserRoles::replaceGroupUsersRoles(
 			'tfcnewstudent', 
 			array( 'tfcnewstudent' ), 
 			array( 'subscriber', 'general_instructions_iw', 'group_basic_iw_1' )
 		);	
-		$output .= "Approve new user ends!<br/>";
+		$output .= "Approve new user for BIW1 ends!<br/>";
 		
 		return $output;
 	}
