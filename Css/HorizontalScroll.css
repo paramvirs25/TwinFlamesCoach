@@ -1,31 +1,32 @@
 .tfcScrollHorizRow, .tfcScrollHorizRowIcons {
-   overflow: auto;
-  white-space: nowrap;		
+  overflow: auto;
+ white-space: nowrap;		
 }
 
 /*When Visual Link preview is set to SPOTLIGHT*/
 .tfcScrollHorizRow .wp-block-group {
-  display: inline-block;
-  /*width: 275px;*/
-  width: 85%;
-  white-space: normal;
-  vertical-align: top;
+ display: inline-block;
+ /*width: 275px;*/
+ width: 85%;
+ white-space: normal;
+ vertical-align: top;
 }
 
 .tfcScrollHorizRow .wp-block-group__inner-container{
-  padding: 5px !important;
+ padding: 5px !important;
 }
 
 .tfcScrollHorizRowIcons  .wp-block-group__inner-container div.wp-block-group {
-	display: inline-block;
-	vertical-align:top;
-	
-	width:100px;
-	text-align: center;
-	margin: 2px;
-	text-decoration: none;
-	border: 1px solid #ccc;
-	word-wrap: break-word;
+ display: inline-block;
+ vertical-align:top;
+ 
+ width:100px;
+ text-align: center;
+ margin: 2px;
+ text-decoration: none;
+ border: 1px solid #ccc;
+ word-wrap: break-word;
+ white-space: normal;
 }
 
 
@@ -33,22 +34,22 @@
 /*When Visual Link preview is set to GRIDIMAGE*/
 /*
 .tfcScrollHorizRow  .wp-block-group__inner-container div.wp-block-group {
-  display: inline-block;
-		vertical-align:middle;
-		
-		width:275px;
-		height: 375px;
-  text-align: center;
-  	margin: 2px;
-  text-decoration: none;
-		border: 1px solid #ccc;
-		word-wrap: break-word;
+ display: inline-block;
+   vertical-align:middle;
+   
+   width:275px;
+   height: 375px;
+ text-align: center;
+   margin: 2px;
+ text-decoration: none;
+   border: 1px solid #ccc;
+   word-wrap: break-word;
 }
 */
 
 
 
 /*div.tfcTileRow div.wp-block-group__inner-container>div:nth-of-type(odd) {
-  background: #e0e0e0;
+ background: #e0e0e0;
 }*/
 
