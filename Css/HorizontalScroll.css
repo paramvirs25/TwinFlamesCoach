@@ -1,4 +1,4 @@
-.tfcScrollHorizRow {
+.tfcScrollHorizRow, .tfcScrollHorizRowIcons {
    overflow: auto;
   white-space: nowrap;		
 }
