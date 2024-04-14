@@ -104,7 +104,7 @@ window.addEventListener('load', function () {
       'a.whatsapp-block__button')
       );
 
-  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/HorizontalScroll.css"), new Array(".tfcScrollHorizRow"));
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/HorizontalScroll.css"), new Array(".tfcScrollHorizRow", ".tfcScrollHorizRowIcons"));
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/VisualLinkPreview.css"), new Array(".vlp-link-summary"));
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/UserProfile.css"), new Array(".uwp-profile-extra-div"));
 

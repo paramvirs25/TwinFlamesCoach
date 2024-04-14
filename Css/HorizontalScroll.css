@@ -16,6 +16,19 @@
   padding: 5px !important;
 }
 
+.tfcScrollHorizRowIcons  .wp-block-group__inner-container div.wp-block-group {
+	display: inline-block;
+	vertical-align:top;
+	
+	width:100px;
+	text-align: center;
+	margin: 2px;
+	text-decoration: none;
+	border: 1px solid #ccc;
+	word-wrap: break-word;
+}
+
+
 
 /*When Visual Link preview is set to GRIDIMAGE*/
 /*
