@@ -29,6 +29,10 @@
   word-wrap: break-word; 
  }
 
+ .tfcScrollHorizRowIcons .wp-block-group__inner-container .wp-block-group .wp-block-group__inner-container {
+  padding: 0;
+}
+
 
 
 /*When Visual Link preview is set to GRIDIMAGE*/
