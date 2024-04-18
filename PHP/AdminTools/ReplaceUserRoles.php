@@ -72,6 +72,10 @@ class UserRoles {
 			UserRoles::onbiw1_complete_roles_to_remove,
 			UserRoles::onbiw1_complete_roles_to_add
 		);
+
+		//Granting free Consultation
+		$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user_id );
+		$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
 		
 		$output .= "UpdateUserOnBasicIW1Complete ends<br/>";
 		
@@ -110,6 +114,10 @@ class UserRoles {
 		// Loop through the users and remove the specified roles
 		foreach ( $users as $user ) {
 			$output .= UserRoles::replaceUserRoles($user, $roles_to_remove, $roles_to_add);
+
+			//Granting free Consultation
+			$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user->ID );
+			$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
 		}
 
 		return $output;
