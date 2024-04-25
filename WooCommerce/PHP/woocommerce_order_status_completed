@@ -1,0 +1,25 @@
+<?php
+
+// Check if the namespace is correct
+namespace TFCMembers;
+
+// Add an action hook to run when an order is marked as completed
+add_action( 'woocommerce_order_status_completed', 'process_completed_order', 99, 1 );
+
+function process_completed_order( $order_id ) {
+    // Get the order object
+    $order = wc_get_order( $order_id );
+
+    // Check if the order contains the product with ID 12161 = "15 Min Follow Up"
+    $product_id = 12161;
+    if ( $order->has_product( $product_id ) ) {
+        // Get the user ID associated with the order
+        $user_id = $order->get_user_id();
+
+        // Check if the user ID is valid
+        if ( $user_id ) {
+            // Mark consultation as booked
+            FreeFollowUpConsultationManager::useConsultation( $user_id );
+        }
+    }
+}
