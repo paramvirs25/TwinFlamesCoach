@@ -1,25 +1,40 @@
 <?php
 
-// Check if the namespace is correct
-namespace TFCMembers;
-
 // Add an action hook to run when an order is marked as completed
-add_action( 'woocommerce_order_status_completed', 'process_completed_order', 99, 1 );
+add_action( 'woocommerce_order_status_changed', 'process_completed_order', 99, 4 );
 
-function process_completed_order( $order_id ) {
-    // Get the order object
-    $order = wc_get_order( $order_id );
+function process_completed_order( $order_id, $old_status, $new_status, $order ) {
+    if( $new_status == "completed" ) {
+        // Get the order object
+        $order = wc_get_order( $order_id );
 
-    // Check if the order contains the product with ID 12161 = "15 Min Follow Up"
-    $product_id = 12161;
-    if ( $order->has_product( $product_id ) ) {
-        // Get the user ID associated with the order
-        $user_id = $order->get_user_id();
+        // Check if the order contains the product with ID 12161 = "15 Min Follow Up"
+        $product_id = 12161;
+        if ( order_contains_product( $order, $product_id )  ) {
+            // Get the user ID associated with the order
+            $user_id = $order->get_user_id();
 
-        // Check if the user ID is valid
-        if ( $user_id ) {
-            // Mark consultation as booked
-            FreeFollowUpConsultationManager::useConsultation( $user_id );
+            // Check if the user ID is valid
+            if ( $user_id ) {
+                // Mark consultation as booked
+                TFCMembers\FreeFollowUpConsultationManager::useConsultation( $user_id );
+            }
         }
     }
 }
+
+// Function to check if an order contains a specific product
+function order_contains_product( $order, $product_id ) {
+    // Loop through order items to check if the product is in the order
+    foreach ( $order->get_items() as $item ) {
+        // Get the product ID of the item
+        $item_product_id = $item->get_product_id();
+
+        // Check if the current item matches the product ID
+        if ( $item_product_id === $product_id ) {
+            return true; // Product found in the order
+        }
+    }
+    return false; // Product not found in the order
+}
+
