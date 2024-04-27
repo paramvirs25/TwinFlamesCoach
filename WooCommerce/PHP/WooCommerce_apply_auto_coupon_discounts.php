@@ -19,14 +19,14 @@ function apply_auto_coupon_discounts( $cart ){
 	if (is_cart_contains_product( $cart, TFCMembers\Products::PERSONAL_CONSULTATION_PARAM_ID ) ) { //Personal Consultation | Jnana Param
 		apply_course_completion_discount_via_coupon_on_consultation( $cart );
 	}
-	else if(is_cart_contains_product( $cart, 11726 ) ) { //Basic IW 1
-		$course = TFCMembers\Courses::getBasicIw1();
-		apply_repeater_discount( $cart, $course );
-	}
-	else if(is_cart_contains_product( $cart, 13356  ) ) { //Twin Flames Coach
-		$course = TFCMembers\Courses::getCertifiedCoach();
-		apply_repeater_discount( $cart, $course );
-	}
+	// else if(is_cart_contains_product( $cart, TFCMembers\Products::BASIC_IW_1_ID ) ) { //Basic IW 1
+	// 	$course = TFCMembers\Courses::getBasicIw1();
+	// 	apply_repeater_discount( $cart, $course );
+	// }
+	// else if(is_cart_contains_product( $cart, TFCMembers\Products::TWIN_FLAMES_COACH_ID  ) ) { //Twin Flames Coach
+	// 	$course = TFCMembers\Courses::getCertifiedCoach();
+	// 	apply_repeater_discount( $cart, $course );
+	// }
 	
 }
 
