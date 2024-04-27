@@ -16,7 +16,7 @@ function apply_auto_coupon_discounts( $cart ){
 		return;
 	}
 	
-	if (is_cart_contains_product( $cart, 11782 ) ) { //Personal Consultation
+	if (is_cart_contains_product( $cart, TFCMembers\Products::PERSONAL_CONSULTATION_PARAM_ID ) ) { //Personal Consultation | Jnana Param
 		apply_course_completion_discount_via_coupon_on_consultation( $cart );
 	}
 	else if(is_cart_contains_product( $cart, 11726 ) ) { //Basic IW 1
