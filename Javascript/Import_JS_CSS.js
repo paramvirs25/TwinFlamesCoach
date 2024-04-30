@@ -96,6 +96,9 @@ window.addEventListener('load', function () {
 
   //Details Block (Gutenberg accordian)
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/DetailsBlock.css"), new Array('.wp-block-details'));
+
+  //OR-DIVIDER
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/ORDivider.css"), new Array('.or-divider'));
   
   //Buttons
   TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Buttons.css"), 
