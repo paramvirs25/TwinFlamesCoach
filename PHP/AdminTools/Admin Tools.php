@@ -16,13 +16,18 @@ add_shortcode('admin_tools', function () {
             case 'groupbiw1comp':
                 $out .= TFCMembers\UserRoles::onGroupBasicIW1Complete();
                 break;
+            case 'biw2comp':
+                $out .= TFCMembers\UserRoles::onBasicIW2Complete();
+                break;
             case 'userbiw1comp':
                 // Check if 'user_id' is set in the query string
                 $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
                 $out .= TFCMembers\UserRoles::onUserBasicIW1Complete($userId);
-                break;
-            case 'biw2comp':
-                $out .= TFCMembers\UserRoles::onBasicIW2Complete();
+                break;            
+            case 'use_user_consultation': //decrease free consultation counter
+                // Check if 'user_id' is set in the query string
+                $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
+                $out .= TFCMembers\UserRoles::useUserConsultation($userId);
                 break;
         }
     } else {
@@ -34,11 +39,14 @@ add_shortcode('admin_tools', function () {
 		<div class="contentbox">
 		  	<h2>Tools operating on User ID</h2>
 		  
-		  	<p><label>User Id</label> 
-		  	<input type="text" id="user_id" name="user_id" />			  
+		  	<p>
+                <label>User Id</label> 
+		  	    <input type="text" id="user_id" name="user_id" />			  
 			</p>
 			<p><input type="submit" value="User Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'userbiw1comp' "></p>
+            <p><input type="submit" value="Use USer 1 consultation" onclick="document.forms['admintools'].act.value = 'use_user_consultation' "></p>
 		</div>
+
 		<div class="contentbox">
 		  <h2>Tools operating on User Group</h2>
 		  <p><input type="submit" value="Approve New Users for Workshops" onclick="document.forms['admintools'].act.value = 'workshop_approve' "></p>

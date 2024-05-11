@@ -96,6 +96,25 @@ class UserRoles {
 		return $output;
 	}
 
+	public static function useUserConsultation( $user_id ) {
+		$output = "Use User Consultation - starts -> <br/>";
+
+		//Retrieving remaining Consultation Count
+		$remaining_count = FreeFollowUpConsultationManager::getRemainingConsultations( $user_id );
+		$output .= "Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
+
+		//use one consultation
+		FreeFollowUpConsultationManager::useConsultation($user_id);
+
+		////Retrieving remaining Consultation Count after using one consultation
+		$remaining_count = FreeFollowUpConsultationManager::getRemainingConsultations( $user_id );
+		$output .= "Removed one free consultation. Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
+
+		$output .= "Use User Consultation - ends!<br/>";
+		
+		return $output;
+	}
+
 	//$search_by_group_role - Define the role to search for
 	//$roles_to_remove - Define the list of roles to remove from the users
 	//$roles_to_add - Define the list of roles to add to the users
