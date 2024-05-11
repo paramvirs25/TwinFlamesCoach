@@ -5,29 +5,29 @@ add_shortcode('admin_tools', function () {
     if (!empty($_GET['act'])) {
         switch ($_GET['act']) {
             case 'workshop_approve':
-                $out .= TFCMembers\UserRoles::approveNewUserForWorkshop();
+                $out .= TFCMembers\UserPermissionManager::approveNewGroupUsersForWorkshop();
                 break;
             case 'bw1approve':
-                $out .= TFCMembers\UserRoles::approveNewUserForBIW1();
+                $out .= TFCMembers\UserPermissionManager::approveNewGroupUsersForBIW1();
                 break;
-            case 'bw1class':
-                $out .= TFCMembers\UserRoles::giveAccessToBasicIWFirstClass();
-                break;
+            // case 'bw1class':
+            //     $out .= TFCMembers\UserPermissionManager::giveGroupUsersAccessToBasicIWFirstClass();
+            //     break;
             // case 'groupbiw1comp':
-            //     $out .= TFCMembers\UserRoles::onGroupBasicIW1Complete();
+            //     $out .= TFCMembers\UserPermissionManager::onGroupBasicIW1Complete();
             //     break;
             case 'biw2comp':
-                $out .= TFCMembers\UserRoles::onBasicIW2Complete();
+                $out .= TFCMembers\UserPermissionManager::onGroupBasicIW2Complete();
                 break;
             case 'userbiw1comp':
                 // Check if 'user_id' is set in the query string
                 $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
-                $out .= TFCMembers\UserRoles::onUserBasicIW1Complete($userId);
+                $out .= TFCMembers\UserPermissionManager::onUserBasicIW1Complete($userId);
                 break;            
             case 'use_user_consultation': //decrease free consultation counter
                 // Check if 'user_id' is set in the query string
                 $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
-                $out .= TFCMembers\UserRoles::useUserConsultation($userId);
+                $out .= TFCMembers\UserPermissionManager::useUserConsultation($userId);
                 break;
         }
     } else {
@@ -53,11 +53,11 @@ add_shortcode('admin_tools', function () {
 
           <p><input type="submit" value="Approve New Users for Basic IW" onclick="document.forms['admintools'].act.value = 'bw1approve' "></p>
           
-          <p><input type="submit" value="Give Access to Basic IW first class" onclick="document.forms['admintools'].act.value = 'bw1class' "></p>
+          <!-- <p><input type="submit" value="Give Access to Basic IW first class" onclick="document.forms['admintools'].act.value = 'bw1class' "></p> -->
           
           <!-- <p><input type="submit" value="Group Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'groupbiw1comp' ">(NOT-TESTED For Free Consultation Increment)</p> -->
           
-          <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' "></p>
+          <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' ">(NOT-TESTED For Free Consultation Increment)</p>
 		</div>
         </form>
 HTML;

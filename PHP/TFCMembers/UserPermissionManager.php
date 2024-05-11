@@ -1,71 +1,76 @@
 <?php
 namespace TFCMembers;
 
-class UserRoles {
+class UserPermissionManager {
 
 	const onbiw1_complete_roles_to_remove = array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool' );
 	const onbiw1_complete_roles_to_add = array( 'basic_iw_1','followup' );
 
-	public static function approveNewUserForWorkshop(){
-		$output = "Approve new user for WORKSHOP starts -> <br/>";		
-		$output .= UserRoles::replaceGroupUsersRoles(
+	public static function approveNewGroupUsersForWorkshop(){
+		$output = "approveNewGroupUsersForWorkshop starts -> <br/>";		
+		$output .= UserPermissionManager::updateGroupUsers(
 			'tfcnewstudent', 
 			array( 'tfcnewstudent' ), 
-			array( 'subscriber', 'tools' )
+			array( 'subscriber', 'tools' ),
+			false
 		);	
-		$output .= "Approve new user for WORKSHOP ends!<br/>";
+		$output .= "approveNewGroupUsersForWorkshop ends!<br/>";
 		
 		return $output;
 	}
 
-	public static function approveNewUserForBIW1(){
-		$output = "Approve new user for BIW1 starts -> <br/>";		
-		$output .= UserRoles::replaceGroupUsersRoles(
+	public static function approveNewGroupUsersForBIW1(){
+		$output = "approveNewGroupUsersForBIW1 starts -> <br/>";		
+		$output .= UserPermissionManager::updateGroupUsers(
 			'tfcnewstudent', 
 			array( 'tfcnewstudent' ), 
-			array( 'subscriber', 'general_instructions_iw', 'group_basic_iw_1' )
+			array( 'subscriber', 'general_instructions_iw', 'group_basic_iw_1' ),
+			false
 		);	
-		$output .= "Approve new user for BIW1 ends!<br/>";
+		$output .= "approveNewGroupUsersForBIW1 ends!<br/>";
 		
 		return $output;
 	}
 
-	public static function giveAccessToBasicIWFirstClass(){
-		$output = "Access to Basic IW first class starts -> <br/>";
-		$output .= UserRoles::replaceGroupUsersRoles(
-			'group_basic_iw_1', 
-			array(), 
-			array( 'nasikagra', 'innerchild_tool' )
-		);	
-		$output .= "Access to Basic IW first class ends!<br/>";
+	// public static function giveGroupUsersAccessToBasicIWFirstClass(){
+	// 	$output = "giveGroupUsersAccessToBasicIWFirstClass starts -> <br/>";
+	// 	$output .= UserPermissionManager::updateGroupUsers(
+	// 		'group_basic_iw_1', 
+	// 		array(), 
+	// 		array( 'nasikagra', 'innerchild_tool' ),
+	// 		false
+	// 	);	
+	// 	$output .= "giveGroupUsersAccessToBasicIWFirstClass ends!<br/>";
 		
-		return $output;
-	}	
+	// 	return $output;
+	// }	
 
 	// public static function onGroupBasicIW1Complete(){
-	// 	$output = "UpdateGroupUserOnBasicIW1Complete starts -><br/>";
+	// 	$output = "onGroupBasicIW1Complete starts -><br/>";
 
-	// 	$output .= UserRoles::replaceGroupUsersRoles(
+	// 	$output .= UserPermissionManager::updateGroupUsers(
 	// 		'group_basic_iw_1', 
-	// 		UserRoles::onbiw1_complete_roles_to_remove,
-	// 		UserRoles::onbiw1_complete_roles_to_add
+	// 		UserPermissionManager::onbiw1_complete_roles_to_remove,
+	// 		UserPermissionManager::onbiw1_complete_roles_to_add,
+	//		false
 	// 	);
 		
-	// 	$output .= "UpdateGroupUserOnBasicIW1Complete ends<br/>";
+	// 	$output .= "onGroupBasicIW1Complete ends<br/>";
 		
 	// 	return $output;
 	// }
 
-	public static function onBasicIW2Complete(){
-		$output = "UpdateUserOnBasicIW2Complete starts -><br/>";
+	public static function onGroupBasicIW2Complete(){
+		$output = "onGroupBasicIW2Complete starts -><br/>";
 		
-		$output .= UserRoles::replaceGroupUsersRoles(
+		$output .= UserPermissionManager::updateGroupUsers(
 			'group_basic_iw_2', 
 			array( 'tfciwchakrashuddhi', 'belief_clearing_2_tool', 'tfciwhigherheart', 'tfciwlocation', 'angels_blessings_tool', 'tfciwsound', 'tfciwcosmicmarriage' ),
-			array( 'tfciw' )
+			array( 'tfciw' ),
+			true
 		);
 		
-		$output .= "UpdateUserOnBasicIW2Complete ends<br/>";
+		$output .= "onGroupBasicIW2Complete ends<br/>";
 		
 		return $output;
 	}
@@ -81,15 +86,16 @@ class UserRoles {
 		// Get user information based on user ID
 		$user = get_user_by('ID', $user_id);
 
-		$output .= UserRoles::replaceUserRoles(
+		$output .= UserPermissionManager::replaceUserRoles(
 			$user, 
-			UserRoles::onbiw1_complete_roles_to_remove,
-			UserRoles::onbiw1_complete_roles_to_add
+			UserPermissionManager::onbiw1_complete_roles_to_remove,
+			UserPermissionManager::onbiw1_complete_roles_to_add
 		);
 
 		//Granting free Consultation
-		$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user_id );
-		$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
+		$output .= UserPermissionManager::grantFreeConsultations($user);
+		//$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user_id );
+		//$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
 		
 		$output .= "UpdateUserOnBasicIW1Complete ends<br/>";
 		
@@ -118,7 +124,7 @@ class UserRoles {
 	//$search_by_group_role - Define the role to search for
 	//$roles_to_remove - Define the list of roles to remove from the users
 	//$roles_to_add - Define the list of roles to add to the users
-	public static function replaceGroupUsersRoles($search_by_group_role, $roles_to_remove, $roles_to_add) {
+	private static function updateGroupUsers($search_by_group_role, $roles_to_remove, $roles_to_add, bool $isGrantFreeConsultations) {
 		$output = "";
 
 		if( !isset($search_by_group_role) || !isset($roles_to_remove) || !isset($roles_to_add)){
@@ -132,17 +138,21 @@ class UserRoles {
 
 		// Loop through the users and remove the specified roles
 		foreach ( $users as $user ) {
-			$output .= UserRoles::replaceUserRoles($user, $roles_to_remove, $roles_to_add);
+			$output .= UserPermissionManager::replaceUserRoles($user, $roles_to_remove, $roles_to_add);
 
-			//Granting free Consultation
-			$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user->ID );
-			$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
+			if($isGrantFreeConsultations){
+				//Granting free Consultation
+				//$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user->ID );
+				//$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
+
+				$output .= UserPermissionManager::grantFreeConsultations($user);
+			}
 		}
 
 		return $output;
 	}
 
-	public static function replaceUserRoles($user, $roles_to_remove, $roles_to_add){
+	private static function replaceUserRoles($user, $roles_to_remove, $roles_to_add){
 		$newline = '<br/>';
 		$hrtag = "<hr/>";
 		$output = "";
@@ -184,6 +194,16 @@ class UserRoles {
 		}			
 
 		$output .= "</div>";
+
+		return $output;
+	}
+
+	private static function grantFreeConsultations($user){
+		$output = "";
+
+		//Granting free Consultation
+		$remaining_count = FreeFollowUpConsultationManager::grantFreeConsultations( $user->ID );
+		$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
 
 		return $output;
 	}
