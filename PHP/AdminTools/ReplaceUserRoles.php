@@ -42,16 +42,30 @@ class UserRoles {
 		return $output;
 	}	
 
-	public static function onGroupBasicIW1Complete(){
-		$output = "UpdateGroupUserOnBasicIW1Complete starts -><br/>";
+	// public static function onGroupBasicIW1Complete(){
+	// 	$output = "UpdateGroupUserOnBasicIW1Complete starts -><br/>";
 
+	// 	$output .= UserRoles::replaceGroupUsersRoles(
+	// 		'group_basic_iw_1', 
+	// 		UserRoles::onbiw1_complete_roles_to_remove,
+	// 		UserRoles::onbiw1_complete_roles_to_add
+	// 	);
+		
+	// 	$output .= "UpdateGroupUserOnBasicIW1Complete ends<br/>";
+		
+	// 	return $output;
+	// }
+
+	public static function onBasicIW2Complete(){
+		$output = "UpdateUserOnBasicIW2Complete starts -><br/>";
+		
 		$output .= UserRoles::replaceGroupUsersRoles(
-			'group_basic_iw_1', 
-			UserRoles::onbiw1_complete_roles_to_remove,
-			UserRoles::onbiw1_complete_roles_to_add
+			'group_basic_iw_2', 
+			array( 'tfciwchakrashuddhi', 'belief_clearing_2_tool', 'tfciwhigherheart', 'tfciwlocation', 'angels_blessings_tool', 'tfciwsound', 'tfciwcosmicmarriage' ),
+			array( 'tfciw' )
 		);
 		
-		$output .= "UpdateGroupUserOnBasicIW1Complete ends<br/>";
+		$output .= "UpdateUserOnBasicIW2Complete ends<br/>";
 		
 		return $output;
 	}
@@ -78,20 +92,6 @@ class UserRoles {
 		$output .= "Added one free consultation.Remaining free consultation(s) are: " . $remaining_count .	"<br/>";
 		
 		$output .= "UpdateUserOnBasicIW1Complete ends<br/>";
-		
-		return $output;
-	}
-
-	public static function onBasicIW2Complete(){
-		$output = "UpdateUserOnBasicIW2Complete starts -><br/>";
-		
-		$output .= UserRoles::replaceGroupUsersRoles(
-			'group_basic_iw_2', 
-			array( 'tfciwchakrashuddhi', 'belief_clearing_2_tool', 'tfciwhigherheart', 'tfciwlocation', 'angels_blessings_tool', 'tfciwsound', 'tfciwcosmicmarriage' ),
-			array( 'tfciw' )
-		);
-		
-		$output .= "UpdateUserOnBasicIW2Complete ends<br/>";
 		
 		return $output;
 	}

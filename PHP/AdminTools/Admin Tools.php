@@ -13,9 +13,9 @@ add_shortcode('admin_tools', function () {
             case 'bw1class':
                 $out .= TFCMembers\UserRoles::giveAccessToBasicIWFirstClass();
                 break;
-            case 'groupbiw1comp':
-                $out .= TFCMembers\UserRoles::onGroupBasicIW1Complete();
-                break;
+            // case 'groupbiw1comp':
+            //     $out .= TFCMembers\UserRoles::onGroupBasicIW1Complete();
+            //     break;
             case 'biw2comp':
                 $out .= TFCMembers\UserRoles::onBasicIW2Complete();
                 break;
@@ -55,7 +55,7 @@ add_shortcode('admin_tools', function () {
           
           <p><input type="submit" value="Give Access to Basic IW first class" onclick="document.forms['admintools'].act.value = 'bw1class' "></p>
           
-          <p><input type="submit" value="Group Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'groupbiw1comp' ">(NOT-TESTED For Free Consultation Increment)</p>
+          <!-- <p><input type="submit" value="Group Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'groupbiw1comp' ">(NOT-TESTED For Free Consultation Increment)</p> -->
           
           <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' "></p>
 		</div>
