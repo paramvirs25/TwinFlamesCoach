@@ -12,6 +12,7 @@ class CourseDates
     public $start_time;
     public $weeks_before_next_batch;
     public $start_date_time;
+    public $final_starting_date_time;
 
     /**
      * @param array $data Associative array with course data.
@@ -25,14 +26,14 @@ class CourseDates
         $this->start_date_time = \DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
 
         // Calculate the start date during object construction
-        $this->start_date_time = $this->calculateStartDateTime();
-        //echo $this->start_date_time->format('d/m/Y g:i A') . ' <br>';
+        $this->final_starting_date_time = $this->calculateFinalStartDateTime();
+        //echo $this->final_starting_date_time->format('d/m/Y g:i A') . ' <br>';
     }
 
     /**
      * @return DateTime|null Returns a DateTime object if a valid start date is calculated, or null if the start date is blank.
      */
-    public function calculateStartDateTime(): ?\DateTime
+    public function calculateFinalStartDateTime(): ?\DateTime
     {
         // Check if start_date is blank
         if (empty($this->start_date)) {
@@ -84,8 +85,8 @@ class CourseDates
         $current_date_time = new \DateTime();
 
         //if start date is in future
-        if (isset($course->start_date_time) && ($course->start_date_time >= $current_date_time)) {
-            return $course->start_date_time->format('j F Y g:i A') . ' IST';
+        if (isset($course->final_starting_date_time) && ($course->final_starting_date_time >= $current_date_time)) {
+            return $course->final_starting_date_time->format('j F Y g:i A') . ' IST';
         } else {
             return 'To be Announced Soon';
         }
@@ -98,10 +99,10 @@ class CourseDates
         $current_timestamp = time();
 
         usort($all_start_dates, function ($a, $b) use ($current_timestamp) {
-            $a_start = $a->start_date_time->getTimestamp();
-            $b_start = $b->start_date_time->getTimestamp();
+            $a_start = $a->final_starting_date_time->getTimestamp();
+            $b_start = $b->final_starting_date_time->getTimestamp();
 
-            // Check if start_date_time is in the past
+            // Check if final_starting_date_time is in the past
             $a_is_past = $a_start < $current_timestamp;
             $b_is_past = $b_start < $current_timestamp;
 
