@@ -65,6 +65,36 @@ class CourseDates
         return isset($courses_data['courses']) ? $courses_data['courses'] : [];
     }
 
+    /**
+     * Retrieves a course object by its name.
+     *
+     * This method searches for a course with the specified name
+     * within the course data stored in JSON format. If a course
+     * with the specified name is found, it creates a CourseDates
+     * object representing that course and returns it. If no
+     * matching course is found, null is returned.
+     *
+     * @param string $course_name The name of the course to retrieve.
+     * @return \TFC\CourseDates|null The CourseDates object representing
+     *                               the course, or null if no course
+     *                               with the specified name is found.
+     */
+    public static function getCourseByName($course_name){
+        // Get courses array from JSON data
+        $courses_array = \TFC\CourseDates::getCoursesArray();
+
+        // Find the corresponding course by name
+        $selected_course = null;
+        foreach ($courses_array as $course_data) {
+            if ($course_data['short_name'] === $course_name) {
+                $selected_course = new \TFC\CourseDates($course_data);
+                break;
+            }
+        }
+
+        return $selected_course;
+    }
+
     public static function getAllCourses()
     {
         $courses = self::getCoursesArray();
@@ -129,19 +159,21 @@ add_shortcode('upcoming_course_start_date', function ($atts) {
     $course = null;
     $formatted_date = '';
 
-    // Get courses array from JSON data
-    $courses_array = \TFC\CourseDates::getCoursesArray();
+    // // Get courses array from JSON data
+    // $courses_array = \TFC\CourseDates::getCoursesArray();
 
-    // Find the corresponding course by name
-    $selected_course = null;
-    foreach ($courses_array as $course_data) {
-        if ($course_data['short_name'] === $attributes['course_name']) {
-            $selected_course = new \TFC\CourseDates($course_data);
-            break;
-        }
-    }
+    // // Find the corresponding course by name
+    // $selected_course = null;
+    // foreach ($courses_array as $course_data) {
+    //     if ($course_data['short_name'] === $attributes['course_name']) {
+    //         $selected_course = new \TFC\CourseDates($course_data);
+    //         break;
+    //     }
+    // }
 
-    $course = $selected_course;
+    // $course = $selected_course;
+
+    $course = \TFC\CourseDates::getCourseByName($attributes['course_name']);
 
     // format date
     if (isset($course)) {
