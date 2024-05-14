@@ -1,5 +1,4 @@
 <?php
-
 namespace TFC;
 
 use \TFC\JsonUtilities as JsonUtil;
@@ -11,6 +10,8 @@ class CourseDates
     public $start_date;
     public $start_time;
     public $weeks_before_next_batch;
+    public $total_number_of_classes;
+
     public $start_date_time;
     public $final_starting_date_time;
 
@@ -23,6 +24,8 @@ class CourseDates
         $this->start_date = $data['start_date'];
         $this->start_time = $data['start_time'];
         $this->weeks_before_next_batch = $data['weeks_before_next_batch'];
+        $this->total_number_of_classes = $data['total_number_of_classes'];
+
         $this->start_date_time = \DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
 
         // Calculate the start date during object construction
@@ -65,6 +68,18 @@ class CourseDates
         return isset($courses_data['courses']) ? $courses_data['courses'] : [];
     }
 
+    public static function getAllCourses()
+    {
+        $courses = self::getCoursesArray();
+        $course_objects = [];
+
+        foreach ($courses as $course_data) {
+            $course_objects[] = new CourseDates($course_data);
+        }
+
+        return $course_objects;
+    }  
+
     /**
      * Retrieves a course object by its name.
      *
@@ -93,34 +108,57 @@ class CourseDates
         }
 
         return $selected_course;
-    }
-
-    public static function getAllCourses()
-    {
-        $courses = self::getCoursesArray();
-        $course_objects = [];
-
-        foreach ($courses as $course_data) {
-            $course_objects[] = new CourseDates($course_data);
-        }
-
-        return $course_objects;
-    }
+    }      
 
     /**
-     *  @return string similar to "November 2023 7:00 PM IST" or 'To be Announced Soon'
+     * Retrieves the class dates for ongoing courses.
+     *
+     * This method checks each course to determine if it has already started.
+     * A course is considered to have started if its start date is in the past
+     * and the number of weeks passed since the start date is less than the
+     * total number of classes. If a course has started, it calculates and
+     * returns the dates for all upcoming classes.
+     *
+     * @return array An array containing the class dates for ongoing courses.
      */
-    public static function formatDateTime(CourseDates $course)
-    {
+    public static function getOnGoingCoursesClassesDates(){
+        $ongoing_classes = [];
+
+        // Get all courses
+        $courses = self::getAllCourses();
+        echo $courses;
+
+        // Get the current date and time
         $current_date_time = new \DateTime();
 
-        //if start date is in future
-        if (isset($course->final_starting_date_time) && ($course->final_starting_date_time >= $current_date_time)) {
-            return $course->final_starting_date_time->format('j F Y g:i A') . ' IST';
-        } else {
-            return 'To be Announced Soon';
+        // Iterate through each course
+        foreach ($courses as $course) {
+            // Check if the course has already started
+            if ($course->start_date_time < $current_date_time) {
+                // Calculate the number of weeks passed since the start date
+                $diff = $current_date_time->diff($course->start_date_time);
+                $weeks_passed = floor($diff->days / 7);
+
+                // Check if the number of weeks passed is less than the total number of classes
+                if ($weeks_passed < $course->total_number_of_classes) {
+                    // Calculate the class dates for the ongoing course
+                    $class_dates = [];
+                    $class_date = clone $course->start_date_time;
+
+                    for ($i = 0; $i < $course->total_number_of_classes; $i++) {
+                        $class_dates[] = $class_date->format('Y-m-d');
+                        $class_date->modify('+1 week');
+                    }
+
+                    // Add the course name and class dates to the result array
+                    $ongoing_classes[$course->course_name] = $class_dates;
+                }
+            }
         }
+
+        return $ongoing_classes;
     }
+
 
     public static function getSortedCoursesByDates()
     {
@@ -147,6 +185,61 @@ class CourseDates
 
         return $all_start_dates;
     }
+
+    /**
+     *  @return string similar to "November 2023 7:00 PM IST" or 'To be Announced Soon'
+     */
+    public static function formatDateTime(CourseDates $course){
+        $current_date_time = new \DateTime();
+
+        //if start date is in future
+        if (isset($course->final_starting_date_time) && ($course->final_starting_date_time >= $current_date_time)) {
+            return $course->final_starting_date_time->format('j F Y g:i A') . ' IST';
+        } else {
+            return 'To be Announced Soon';
+        }
+    }
+
+    /**
+     * Generates an HTML table from the ongoing classes data.
+     *
+     * @param array $ongoing_classes An array containing the class dates for ongoing courses.
+     * @return string HTML representation of the ongoing classes table.
+     */
+    public static function generateOngoingClassesTable($ongoing_classes) {
+        // Initialize an empty string to store the HTML table
+        $html_table = '';
+        $html_table .= 'Array length ' . count($ongoing_classes) . '<br>';
+        $html_table .= '<table border="1">';
+        $html_table .= '<thead><tr><th>Course Name</th><th>Class Dates</th></tr></thead>';
+        $html_table .= '<tbody>';
+        
+
+        // Iterate through each course in the ongoing classes array
+        foreach ($ongoing_classes as $course_name => $class_dates) {
+            // Start a new table row for each course
+            $html_table .= '<tr>';
+            // Add the course name in the first column
+            $html_table .= '<td>' . $course_name . '</td>';
+            // Start a new table cell for class dates in the second column
+            $html_table .= '<td>';
+            // Iterate through each class date and add it to the cell
+            foreach ($class_dates as $class_date) {
+                $html_table .= $class_date . '<br>'; // Add class date with line break
+            }
+            // Close the table cell for class dates
+            $html_table .= '</td>';
+            // Close the table row for the current course
+            $html_table .= '</tr>';
+        }
+
+        // Close the table body and table
+        $html_table .= '</tbody></table>';
+
+        // Return the generated HTML table
+        return $html_table;
+    }
+
 }
 
 
@@ -158,20 +251,6 @@ add_shortcode('upcoming_course_start_date', function ($atts) {
 
     $course = null;
     $formatted_date = '';
-
-    // // Get courses array from JSON data
-    // $courses_array = \TFC\CourseDates::getCoursesArray();
-
-    // // Find the corresponding course by name
-    // $selected_course = null;
-    // foreach ($courses_array as $course_data) {
-    //     if ($course_data['short_name'] === $attributes['course_name']) {
-    //         $selected_course = new \TFC\CourseDates($course_data);
-    //         break;
-    //     }
-    // }
-
-    // $course = $selected_course;
 
     $course = \TFC\CourseDates::getCourseByName($attributes['course_name']);
 
@@ -208,4 +287,36 @@ add_shortcode('all_course_start_dates', function () {
 
     // Return the formatted output
     return $output;
+});
+
+add_shortcode('all_ongoing_courses_classes_dates', function () {
+    // Get ongoing classes dates
+    $ongoing_classes = \TFC\CourseDates::getOnGoingCoursesClassesDates();
+
+    // Generate HTML table from ongoing classes data
+    $html_table = \TFC\CourseDates::generateOngoingClassesTable($ongoing_classes);
+
+    return $html_table;
+
+
+    // Initialize an empty string to store the output
+    //$output = '';
+
+    // Initialize an empty string to store the output
+    // $output = '<table border="1">';
+    // $output .= '<thead style="font-weigth:bold;"><tr><th>Course Name</th><th>Start Date</th></tr></thead>';
+    // $output .= '<tbody>';
+
+    // // Loop through each course and format the output as a table row
+    // foreach ($courses as $course) {
+    //     $output .= '<tr>';
+    //     $output .= '<td>' . $course->course_name . '</td>';
+    //     $output .= '<td>' . \TFC\CourseDates::formatDateTime($course) . '</td>';
+    //     $output .= '</tr>';
+    // }
+
+    // $output .= '</tbody></table>';
+
+    // Return the formatted output
+    //return $output;
 });
