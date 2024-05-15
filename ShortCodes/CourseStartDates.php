@@ -16,7 +16,7 @@ class CourseDates
     public $final_starting_date_time;
 
     private static $input_date_time_format = 'd/m/Y g:i A';
-    private static $output_date_time_format = 'l j F Y g:i A';
+    private static $output_date_time_format = 'F j Y l g:i A';
 
     /**
      * @param array $data Associative array with course data.
@@ -230,7 +230,7 @@ class CourseDates
             // Add the course name in the first column
             $html_table .= '<td>' . $course_name . '</td>';
             // Start a new table cell for class dates in the second column
-            $html_table .= '<td>';
+            $html_table .= '<td><ol>';
             // Iterate through each class date and add it to the cell
             foreach ($class_dates as $class_date_str) {
                 $class_date = \DateTime::createFromFormat(self::$output_date_time_format, $class_date_str);
@@ -238,14 +238,14 @@ class CourseDates
                 // Check if the class date is less than today
                 if ($class_date < $current_date) {
                     // Format as strikethrough
-                    $html_table .= '<del>' . self::formatDateTime($class_date) . '</del><br>';
+                    $html_table .= '<li><del>' . self::formatDateTime($class_date) . '</del></li>';
                 } else {
                     // Regular formatting
-                    $html_table .= '<span style="color:green;">' . self::formatDateTime($class_date) . '</span>' . '<br>';
+                    $html_table .= '<li><span style="color:green;">' . self::formatDateTime($class_date) . '</span></li>';
                 }
             }
             // Close the table cell for class dates
-            $html_table .= '</td>';
+            $html_table .= '</ol></td>';
             // Close the table row for the current course
             $html_table .= '</tr>';
         }
