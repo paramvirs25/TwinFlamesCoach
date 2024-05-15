@@ -15,10 +15,8 @@ class CourseDates
     public $start_date_time;
     public $final_starting_date_time;
 
-    public static $date_format = 'Y-m-d';
-    //public static $output_date_format = 'j F Y';
-    //public static $output_time_format = 'g:i A';
-    public static $output_date_time_format = 'l j F Y g:i A';
+    private static $input_date_time_format = 'd/m/Y g:i A';
+    private static $output_date_time_format = 'l j F Y g:i A';
 
     /**
      * @param array $data Associative array with course data.
@@ -31,11 +29,11 @@ class CourseDates
         $this->weeks_before_next_batch = $data['weeks_before_next_batch'];
         $this->total_number_of_classes = $data['total_number_of_classes'];
 
-        $this->start_date_time = \DateTime::createFromFormat('d/m/Y g:i A', $this->start_date . ' ' . $this->start_time);
+        $this->start_date_time = \DateTime::createFromFormat(self::$input_date_time_format, $this->start_date . ' ' . $this->start_time);
 
         // Calculate the start date during object construction
         $this->final_starting_date_time = $this->calculateFinalStartDateTime();
-        //echo $this->final_starting_date_time->format('d/m/Y g:i A') . ' <br>';
+        //echo $this->final_starting_date_time->format(self::$input_date_time_format) . ' <br>';
     }
 
     /**
@@ -150,7 +148,7 @@ class CourseDates
                     $class_date = clone $course->start_date_time;
 
                     for ($i = 0; $i < $course->total_number_of_classes; $i++) {
-                        $class_dates[] = $class_date->format(self::$date_format);
+                        $class_dates[] = $class_date->format(self::$output_date_time_format);
                         $class_date->modify('+1 week');
                     }
 
@@ -198,7 +196,6 @@ class CourseDates
 
         //if start date is in future
         if (isset($course->final_starting_date_time) && ($course->final_starting_date_time >= $current_date_time)) {
-            //return $course->final_starting_date_time->format(self::$output_date_format . ' g:i A') . ' IST';
             return self::formatDateTime($course->final_starting_date_time);
         } else {
             return 'To be Announced Soon';
@@ -222,8 +219,8 @@ class CourseDates
         $html_table .= '<thead><tr><th>Course Name</th><th>Class Dates</th></tr></thead>';
         $html_table .= '<tbody>';
 
-        // Get the current date
-        $current_date = date(self::$date_format);
+        // Get the current date as a DateTime object
+        $current_date = new \DateTime();
         
 
         // Iterate through each course in the ongoing classes array
@@ -235,14 +232,16 @@ class CourseDates
             // Start a new table cell for class dates in the second column
             $html_table .= '<td>';
             // Iterate through each class date and add it to the cell
-            foreach ($class_dates as $class_date) {
+            foreach ($class_dates as $class_date_str) {
+                $class_date = \DateTime::createFromFormat(self::$output_date_time_format, $class_date_str);
+                
                 // Check if the class date is less than today
                 if ($class_date < $current_date) {
                     // Format as strikethrough
-                    $html_table .= '<del>' . $class_date . '</del><br>';
+                    $html_table .= '<del>' . self::formatDateTime($class_date) . '</del><br>';
                 } else {
                     // Regular formatting
-                    $html_table .= '<span style="color:green;">' . $class_date . '</span>' . '<br>';
+                    $html_table .= '<span style="color:green;">' . self::formatDateTime($class_date) . '</span>' . '<br>';
                 }
             }
             // Close the table cell for class dates
