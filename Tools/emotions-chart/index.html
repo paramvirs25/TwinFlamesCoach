@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotions Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            position: relative; /* Required for gradient animation */
+        }
+        .gradient-cell {
+            width: 0; /* Start with 0% width */
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+          
+            transition: width 1s ease; /* Animation duration */
+        }
+        .tick {
+            background-color: green;
+            width: 100%;
+          color: white;
+        }
+        .cross {
+            background-color: red;
+          width: 100%;
+          
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotions Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Emotion name</th>
+                <th>My side</th>
+                <th>Their side</th>
+            </tr>
+        </thead>
+        <tbody id="emotionTableBody">
+            <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+    <button onclick="fillRandomNumbers()">Generate Random Numbers</button>
+    <div id="loadingBar" style="display: none;">
+        Loading...
+    </div>
+
+    <script>
+        const emotions = [
+            "Anger", "Sadness", "Fear", "Pity", "Disgust",
+            "Expectation", "Hope", "Surprise", "Joy", "Trust"
+        ];
+
+        // Initialize the table with emotion names
+        const tableBody = document.getElementById("emotionTableBody");
+        emotions.forEach((emotion) => {
+            const newRow = document.createElement("tr");
+            const emotionCell = document.createElement("td");
+            emotionCell.textContent = emotion;
+            newRow.appendChild(emotionCell);
+            newRow.appendChild(createGradientCell());
+            newRow.appendChild(createGradientCell());
+            tableBody.appendChild(newRow);
+        });
+
+        function createGradientCell() {
+          const gradientCell = document.createElement("td");
+          const gradientSpan = document.createElement("div");
+          gradientSpan.className = "gradient-cell"; // Set the class directly
+          gradientCell.appendChild(gradientSpan);
+          return gradientCell;
+      }
+
+
+        function fillRandomNumbers() {
+            const loadingBar = document.getElementById("loadingBar");
+            loadingBar.style.display = "block"; // Show loading bar
+
+            setTimeout(() => {
+                // Update existing rows with random numbers
+                const rows = tableBody.querySelectorAll("tr");
+                rows.forEach((row) => {
+                    const cells = row.querySelectorAll("td");
+                    if (cells.length > 1) {
+                        const mySideValue = getRandomNumber();
+                        const theirSideValue = getRandomNumber();
+
+                        const mySideGradient = cells[1].querySelector(".gradient-cell");
+                        const theirSideGradient = cells[2].querySelector(".gradient-cell");
+
+                        mySideGradient.style.width = `${mySideValue}%`;
+                        theirSideGradient.style.width = `${theirSideValue}%`;
+
+                        if (mySideValue > 67) {
+                            mySideGradient.innerHTML = `<div class="tick">${mySideValue}</div>`;
+                        } else {
+                            mySideGradient.innerHTML = `<div class="cross">${mySideValue}</div>`;
+                        }
+
+                        if (theirSideValue > 67) {
+                            theirSideGradient.innerHTML = `<div class="tick">${theirSideValue}</div>`;
+                        } else {
+                            theirSideGradient.innerHTML = `<div class="cross">${theirSideValue}</div>`;
+                        }
+                    }
+                });
+
+                loadingBar.style.display = "none"; // Hide loading bar
+            }, 1000); // Wait for 1 second
+        }
+
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 100) + 1;
+        }
+    </script>
+</body>
+</html>
