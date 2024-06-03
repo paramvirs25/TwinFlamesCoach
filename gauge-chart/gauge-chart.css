@@ -23,6 +23,14 @@
   stop-color: #25cd6b;
 }
 
+.color-dark-green {
+  stop-color: #158343;
+}
+
+.color-darker-green {
+  stop-color: #0c4d27;
+}
+
 .main {
   /*max-width: 1200px;*/
   margin: 0 auto;
