@@ -92,11 +92,11 @@ jQuery(function ($) {
         let answer = "";
         if (randomNum <= 33) {
           answer = `Consider it NO.`;
-        } else if (randomNum > 33 && randomNum <= 66) { //33.33 to 66.66
-          answer = `You can consider it as a YES, but keep in mind that the angels suggest leaning towards a NO, especially if the score is below 67.`;
-        } else if (randomNum > 66 && randomNum <= 85) { //33.33 to 66.66
+        } else if (randomNum > 33 && randomNum <= 63) { 
+          answer = `You can consider it as a YES, but angels are saying NO, especially if the score is below 63.`;
+        } else if (randomNum > 63 && randomNum <= 85) { 
           answer = `You can take it as YES!`;
-        } else if (randomNum > 85) { //33.33 to 66.66
+        } else if (randomNum > 85) {
           answer = `Absolutely YES!`;
         }
 
