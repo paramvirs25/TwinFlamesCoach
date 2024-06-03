@@ -30,7 +30,7 @@ jQuery(function ($) {
         scale: {
           startValue: 0,
           endValue: this._higherValue,
-          customTicks: [0, 33, 67, 100],
+          customTicks: [0, 33, 63, 100],
           tick: {
             length: 4
           },
