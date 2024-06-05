@@ -58,8 +58,8 @@
 
 <script>
     const emotions = [
-        "Anger", "Sadness", "Fear", "Pity", "Disgust",
-        "Expectation", "Hope", "Surprise", "Joy", "Trust"
+        "Anger / Mad / Guilt", "Sadness", "Fear / Rejected", "Pity", "Disgust / Awful / Disapproval",
+        "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
     ];
 
     // Initialize the table with emotion names
@@ -102,13 +102,13 @@
                     mySideGradient.style.width = `${mySideValue}%`;
                     theirSideGradient.style.width = `${theirSideValue}%`;
 
-                    if (mySideValue > 67) {
+                    if (mySideValue > 63) {
                         mySideGradient.innerHTML = `<div class="tick">${mySideValue}</div>`;
                     } else {
                         mySideGradient.innerHTML = `<div class="cross">${mySideValue}</div>`;
                     }
 
-                    if (theirSideValue > 67) {
+                    if (theirSideValue > 63) {
                         theirSideGradient.innerHTML = `<div class="tick">${theirSideValue}</div>`;
                     } else {
                         theirSideGradient.innerHTML = `<div class="cross">${theirSideValue}</div>`;
