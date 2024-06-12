@@ -1,4 +1,4 @@
-<link rel="preload" as="style" href="https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/gauge-chart.css" onload="this.rel='stylesheet'">
+<!-- <link rel="preload" as="style" href="https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/gauge-chart.css" onload="this.rel='stylesheet'"> -->
 
 <!-- partial:index.partial.html -->
 <main class="main">
@@ -31,4 +31,9 @@
   <!-- Dx.all.js must be loaded completely before gauge-chart.js starts processing, so it is being loaded from inside of gauge-chart.js due to timing issue.
   <script src='https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/dx.all.js'></script> -->
 
-<script  src="https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/gauge-chart.js" defer></script>
+<!-- <script  src="https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/gauge-chart.js" defer></script> -->
+
+<script>
+  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl( `${TfcGlobal.GaugeChartRootPath}/gauge-chart.css`), new Array(".gauge-container"));
+  TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl( `${TfcGlobal.GaugeChartRootPath}/gauge-chart.js`, ".gauge-container");
+</script>
