@@ -3,7 +3,7 @@ class TfcGlobal {
     static ShuffleToolsListPath = "HTML/Shuffle/ShuffleToolsList.html";
     
     static GaugeChartRootPath = "Tools/gauge-chart";
-    static GaugeChartPath = `${GaugeChartRootPath}/index.html`;
+    static GaugeChartPath = `${TfcGlobal.GaugeChartRootPath}/index.html`;
 
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
 
