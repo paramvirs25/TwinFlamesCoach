@@ -1,7 +1,10 @@
 class TfcGlobal {
     static CssJsPath = "https://paramvirs25.github.io/TwinFlamesCoach"; // URL path
     static ShuffleToolsListPath = "HTML/Shuffle/ShuffleToolsList.html";
+    
+    static GaugeChartRootPath = "Tools/gauge-chart";
     static GaugeChartPath = "Tools/gauge-chart/index.html";
+
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
 
     static getFullFileUrl(fileUrl) {

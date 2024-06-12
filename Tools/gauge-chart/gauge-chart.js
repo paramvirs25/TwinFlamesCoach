@@ -125,7 +125,8 @@ jQuery(function ($) {
 
 
   jQuery(document).ready(function ($) {
-    $.getScript("https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/dx.all.js", function () {
+    $.getScript(TfcGlobal.getFullFileUrl( `${TfcGlobal.GaugeChartRootPath}/dx.all.js`), function () {    
+    //$.getScript("https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/dx.all.js", function () {
       let higherValue = 100;
 
       //Draw gauge chart
