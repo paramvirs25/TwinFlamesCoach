@@ -34,6 +34,9 @@
 <!-- <script  src="https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/gauge-chart.js" defer></script> -->
 
 <script>
-  TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl( `${TfcGlobal.GaugeChartRootPath}/gauge-chart.css`), new Array(".gauge-container"));
-  TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl( `${TfcGlobal.GaugeChartRootPath}/gauge-chart.js`), ".gauge-container");
+  const gaugeChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "gauge-chart.css");
+  const gaugeChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "gauge-chart.js");
+
+  TfcImportJavascripts.loadCSS(gaugeChartCssUrl, new Array(".gauge-container"));
+  TfcImportJavascripts.loadJS(gaugeChartJsUrl, ".gauge-container");
 </script>
