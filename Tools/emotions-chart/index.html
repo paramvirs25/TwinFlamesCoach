@@ -62,7 +62,10 @@
     // const gaugeChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "gauge-chart.js");
   
     // TfcImportJavascripts.loadCSS(gaugeChartCssUrl, new Array(".gauge-container"));
-    TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/tablular-charts.js"), ".tbl-tabular-chart");
+    jQuery(document).ready(function($) { 
+        TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/tablular-charts.js"), ".tbl-tabular-chart");
+     });
+    
   </script>
 
 <script>
