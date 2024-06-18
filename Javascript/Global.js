@@ -41,7 +41,7 @@ class TfcGlobal {
     static loadTabularChartScript() {
         if (!this.scriptLoadPromise) {
             const tabularChartJsUrl = this.getFullFileUrlFromParts(this.TabularChartRootPath, "tablular-charts.js");
-            this.scriptLoadPromise = $.getScript(tabularChartJsUrl);
+            this.scriptLoadPromise = jQuery.getScript(tabularChartJsUrl);
         }
         return this.scriptLoadPromise;
     }
