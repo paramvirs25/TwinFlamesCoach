@@ -1,0 +1,37 @@
+.tbl-tabular-chart {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tbl-tabular-chart th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+    /* Required for gradient animation */
+}
+
+.gradient-cell {
+    width: 0;
+    /* Start with 0% width */
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: width 1s ease;
+    /* Animation duration */
+}
+
+.tick {
+    background-color: green;
+    width: 100%;
+    color: white;
+}
+
+.cross {
+    background-color: red;
+    width: 100%;
+
+}
