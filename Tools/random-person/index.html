@@ -1,0 +1,26 @@
+<table id="randomPersonTableBody" class="tbl-tabular-chart">
+</table>
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        function initializeTabularCharts() {
+            const tableId = "randomPersonTableBody";
+            const columnNames = ["Person", "Result"];
+            const rowNames = [
+                "Forgiveness", "Sacred Healing", "Reiki Healing"
+            ];
+            const buttonCssClass = "btnRandomPersonChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        // Check if the TabularCharts class is already defined
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
+    });
+
+</script>

@@ -8,6 +8,8 @@ class TabularCharts {
     }
 
     initializeTable() {
+        loadCss();
+        
         const tableBody = document.getElementById(this.tableId);
 
         // Create table header
@@ -79,5 +81,10 @@ class TabularCharts {
 
     getRandomNumber() {
         return Math.floor(Math.random() * 100) + 1;
+    }
+
+    loadCss(){
+        const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");            
+        TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".tbl-tabular-chart"));
     }
 }

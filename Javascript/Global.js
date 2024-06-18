@@ -7,6 +7,7 @@ class TfcGlobal {
 
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
 
+    static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";
 
     static getFullFileUrl(fileUrl) {
@@ -35,4 +36,14 @@ class TfcGlobal {
         jQuery(`#${divToLoadHtml}`).load(fullFileUrl);
         console.log("Loaded HTML file " + fullFileUrl);
     }
+
+    static scriptLoadPromise = null;
+    static loadTabularChartScript() {
+        if (!this.scriptLoadPromise) {
+            const tabularChartJsUrl = this.getFullFileUrlFromParts(this.TabularChartRootPath, "tablular-charts.js");
+            this.scriptLoadPromise = $.getScript(tabularChartJsUrl);
+        }
+        return this.scriptLoadPromise;
+    }
+
 }

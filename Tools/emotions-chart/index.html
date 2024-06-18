@@ -2,16 +2,9 @@
 </table>
 
 <script>
-    var tabularCharts = null;
-    jQuery(document).ready(function ($) {
-        const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
+   jQuery(document).ready(function ($) {
 
-        $.getScript(tabularChartJsUrl, function () {    
-        
-            const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");            
-            TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".tbl-tabular-chart"));
-            
-            // Example usage
+        function initializeTabularCharts() {
             const tableId = "emotionTableBody";
             const columnNames = ["Emotion", "My Side", "Their Side"];
             const rowNames = [
@@ -20,31 +13,16 @@
             ];
             const buttonCssClass = "btnEmotionsChart";
 
-            tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
-            tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
-        
-        });
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
     });
 
 
-    
 
-    // jQuery(document).ready(function ($) {
-    //     const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");
-    // const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
-
-    //     TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".gauge-container"));
-    //     TfcImportJavascripts.loadJS(tabularChartJsUrl, ".tbl-tabular-chart");
-
-    //     // Example usage
-    //     const tableId = "emotionTableBody";
-    //     const columnNames = ["Emotion", "My Side", "Their Side"];
-    //     const rowNames = [
-    //         "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
-    //         "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
-    //     ];
-
-    //     const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
-    //     tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
-    // });    
 </script>
