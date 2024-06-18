@@ -1,138 +1,23 @@
-<style>
-    .tbl-tabular-chart {
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    .tbl-tabular-chart th,
-    td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: center;
-        position: relative;
-        /* Required for gradient animation */
-    }
-
-    .gradient-cell {
-        width: 0;
-        /* Start with 0% width */
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        transition: width 1s ease;
-        /* Animation duration */
-    }
-
-    .tick {
-        background-color: green;
-        width: 100%;
-        color: white;
-    }
-
-    .cross {
-        background-color: red;
-        width: 100%;
-
-    }
-</style>
-
-
-<table class="tbl-tabular-chart">
-    <thead>
-        <tr>
-            <th>Emotions</th>
-            <th>Mine</th>
-            <th>Their's</th>
-        </tr>
-    </thead>
-    <tbody id="emotionTableBody">
-        <!-- Rows will be dynamically added here -->
-    </tbody>
+<table id="emotionTableBody" class="tbl-tabular-chart">
 </table>
-<!-- <button onclick="fillRandomNumbers()">Generate Random Numbers</button> -->
-<div id="loadingBar" style="display: none;">
-    Loading...
-</div>
 
 <script>
-    // ;
-    // const emotionsChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.css, "gauge-chart.css");
-    // const gaugeChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "gauge-chart.js");
-  
-    // TfcImportJavascripts.loadCSS(gaugeChartCssUrl, new Array(".gauge-container"));
-    jQuery(document).ready(function($) { 
-        TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/tablular-charts.js"), ".tbl-tabular-chart");
-     });
-    
-  </script>
+    const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");
+    const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
 
-<script>
-    // const emotions = [
-    //     "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
-    //     "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
-    // ];
+    jQuery(document).ready(function ($) {
+        TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".gauge-container"));
+        TfcImportJavascripts.loadJS(tabularChartJsUrl, ".tbl-tabular-chart");
 
-    // // Initialize the table with emotion names
-    // const tableBody = document.getElementById("emotionTableBody");
-    // emotions.forEach((emotion) => {
-    //     const newRow = document.createElement("tr");
-    //     const emotionCell = document.createElement("td");
-    //     emotionCell.textContent = emotion;
-    //     newRow.appendChild(emotionCell);
-    //     newRow.appendChild(createGradientCell());
-    //     newRow.appendChild(createGradientCell());
-    //     tableBody.appendChild(newRow);
-    // });
+        // Example usage
+        const tableId = "emotionTableBody";
+        const columnNames = ["Emotion", "My Side", "Their Side"];
+        const rowNames = [
+            "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
+            "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
+        ];
 
-    // function createGradientCell() {
-    //     const gradientCell = document.createElement("td");
-    //     const gradientSpan = document.createElement("div");
-    //     gradientSpan.className = "gradient-cell"; // Set the class directly
-    //     gradientCell.appendChild(gradientSpan);
-    //     return gradientCell;
-    // }
-
-
-    // function fillRandomNumbers() {
-    //     const loadingBar = document.getElementById("loadingBar");
-    //     loadingBar.style.display = "block"; // Show loading bar
-
-    //     setTimeout(() => {
-    //         // Update existing rows with random numbers
-    //         const rows = tableBody.querySelectorAll("tr");
-    //         rows.forEach((row) => {
-    //             const cells = row.querySelectorAll("td");
-    //             if (cells.length > 1) {
-    //                 const mySideValue = getRandomNumber();
-    //                 const theirSideValue = getRandomNumber();
-
-    //                 const mySideGradient = cells[1].querySelector(".gradient-cell");
-    //                 const theirSideGradient = cells[2].querySelector(".gradient-cell");
-
-    //                 mySideGradient.style.width = `${mySideValue}%`;
-    //                 theirSideGradient.style.width = `${theirSideValue}%`;
-
-    //                 if (mySideValue > 63) {
-    //                     mySideGradient.innerHTML = `<div class="tick">${mySideValue}</div>`;
-    //                 } else {
-    //                     mySideGradient.innerHTML = `<div class="cross">${mySideValue}</div>`;
-    //                 }
-
-    //                 if (theirSideValue > 63) {
-    //                     theirSideGradient.innerHTML = `<div class="tick">${theirSideValue}</div>`;
-    //                 } else {
-    //                     theirSideGradient.innerHTML = `<div class="cross">${theirSideValue}</div>`;
-    //                 }
-    //             }
-    //         });
-
-    //         loadingBar.style.display = "none"; // Hide loading bar
-    //     }, 1000); // Wait for 1 second
-    // }
-
-    // function getRandomNumber() {
-    //     return Math.floor(Math.random() * 100) + 1;
-    // }
+        const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
+        tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
+    });    
 </script>
