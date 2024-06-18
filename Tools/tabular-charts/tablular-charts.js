@@ -8,8 +8,8 @@ class TabularCharts {
     }
 
     initializeTable() {
-        loadCss();
-        
+        this.loadCss();
+
         const tableBody = document.getElementById(this.tableId);
 
         // Create table header
