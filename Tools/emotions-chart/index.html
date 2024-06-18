@@ -18,8 +18,9 @@
                 "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
                 "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
             ];
+            const buttonCssClass = "btnEmotionsChart";
 
-            tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
+            tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
             tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
         
         });

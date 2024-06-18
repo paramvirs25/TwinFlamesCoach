@@ -1,8 +1,9 @@
 class TabularCharts {
-    constructor(tableId, columnNames, rowNames) {        
+    constructor(tableId, columnNames, rowNames, buttonCssClass) {        
         this.tableId = tableId;
         this.columnNames = columnNames;
         this.rowNames = rowNames;
+        this.buttonCssClass = buttonCssClass;
         this.initializeTable();
     }
 
@@ -34,6 +35,12 @@ class TabularCharts {
             }
 
             tbody.appendChild(newRow);
+        });
+
+        // Add event listener to buttons with the specified CSS class
+        const buttons = document.querySelectorAll(`.${this.buttonCssClass}`);
+        buttons.forEach(button => {
+            button.addEventListener('click', () => this.fillRandomNumbers());
         });
     }
 
@@ -74,14 +81,3 @@ class TabularCharts {
         return Math.floor(Math.random() * 100) + 1;
     }
 }
-
-// Example usage
-// const tableId = "emotionTableBody";
-// const columnNames = ["Emotion", "My Side", "Their Side"];
-// const rowNames = [
-//     "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
-//     "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
-// ];
-
-// const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
-// tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
