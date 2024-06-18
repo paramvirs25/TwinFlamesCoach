@@ -7,6 +7,8 @@ class TfcGlobal {
 
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
 
+    static TabularChartRootPath = "Tools/tabular-charts";
+
     static getFullFileUrl(fileUrl) {
         return `${TfcGlobal.CssJsPath}/${fileUrl}`;
     }
