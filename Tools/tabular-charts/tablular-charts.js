@@ -76,12 +76,12 @@ class TabularCharts {
 }
 
 // Example usage
-const tableId = "emotionTableBody";
-const columnNames = ["Emotion", "My Side", "Their Side"];
-const rowNames = [
-    "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
-    "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
-];
+// const tableId = "emotionTableBody";
+// const columnNames = ["Emotion", "My Side", "Their Side"];
+// const rowNames = [
+//     "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
+//     "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
+// ];
 
-const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
-tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
+// const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
+// tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
