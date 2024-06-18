@@ -2,6 +2,7 @@
 </table>
 
 <script>
+    const tabularCharts = null;
     jQuery(document).ready(function ($) {
         const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
 
@@ -18,7 +19,7 @@
                 "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
             ];
 
-            const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
+            tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
             tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
         
         });
