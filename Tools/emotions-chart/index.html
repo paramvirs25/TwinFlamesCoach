@@ -2,22 +2,47 @@
 </table>
 
 <script>
-    const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");
-    const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
-
     jQuery(document).ready(function ($) {
-        TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".gauge-container"));
-        TfcImportJavascripts.loadJS(tabularChartJsUrl, ".tbl-tabular-chart");
+        const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
 
-        // Example usage
-        const tableId = "emotionTableBody";
-        const columnNames = ["Emotion", "My Side", "Their Side"];
-        const rowNames = [
-            "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
-            "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
-        ];
+        $.getScript(tabularChartJsUrl, function () {    
+        
+            const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");            
+            TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".tbl-tabular-chart"));
+            
+            // Example usage
+            const tableId = "emotionTableBody";
+            const columnNames = ["Emotion", "My Side", "Their Side"];
+            const rowNames = [
+                "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
+                "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
+            ];
 
-        const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
-        tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
-    });    
+            const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
+            tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
+        
+        });
+    });
+
+
+    
+
+    // jQuery(document).ready(function ($) {
+    //     const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");
+    // const tabularChartJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tablular-charts.js");
+
+    //     TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".gauge-container"));
+    //     TfcImportJavascripts.loadJS(tabularChartJsUrl, ".tbl-tabular-chart");
+
+    //     // Example usage
+    //     const tableId = "emotionTableBody";
+    //     const columnNames = ["Emotion", "My Side", "Their Side"];
+    //     const rowNames = [
+    //         "Anger", "Mad", "Guilt", "Sadness", "Fear", "Rejected", "Pity", "Disgust / Awful", "Disapproval",
+    //         "Expectation", "Hope", "Surprise / Startled / Excited", "Joy / Optimistic", "Proud", "Trust"
+    //     ];
+
+    //     const tabularCharts = new TabularCharts(tableId, columnNames, rowNames);
+    //     tabularCharts.fillRandomNumbers(); // Call this to fill the table with random numbers
+    // });    
 </script>
