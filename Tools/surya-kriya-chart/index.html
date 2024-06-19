@@ -1,0 +1,26 @@
+<table id="suryaKriyaTableBody" class="tbl-tabular-chart">
+</table>
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        function initializeTabularCharts() {
+            const tableId = "suryaKriyaTableBody";
+            const columnNames = ["Person", "Result"];
+            const rowNames = [
+                "Siku", "Tejas", "Jas", "Papa", "Mummy", "Kanu", "Ritu", "Pragya"
+            ];
+            const buttonCssClass = "btnSuryaKriyaChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        // Check if the TabularCharts class is already defined
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
+    });
+
+</script>
