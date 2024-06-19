@@ -1,0 +1,31 @@
+<table id="sacredHealingTableBody" class="tbl-tabular-chart">
+</table>
+
+<script>
+   jQuery(document).ready(function ($) {
+
+        function initializeTabularCharts() {
+            const tableId = "sacredHealingTableBody";
+            const columnNames = ["Healing Type", "Result"];
+            const rowNames = [
+                "Tou Whole Bod",
+                "Mou", "Nos", 
+                "Bo Tou", "Bo Li", 
+                "Pu Fing", "Pu", 
+                "An Fing", "An", "An Second Ring",
+                "Miss Pos",
+                "Keep Cord",
+                "Days to keep Cord"
+            ];
+            const buttonCssClass = "btnSacredHealChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
+    });
+</script>
