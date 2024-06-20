@@ -1,0 +1,26 @@
+<table id="ytCommentTableBody" class="tbl-tabular-chart">
+</table>
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        function initializeTabularCharts() {
+            const tableId = "ytCommentTableBody";
+            const columnNames = ["Comment", "Our Action"];
+            const rowNames = [
+                "Delete", "Block", "Reply"
+            ];
+            const buttonCssClass = "btnYtCommentChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        // Check if the TabularCharts class is already defined
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
+    });
+
+</script>
