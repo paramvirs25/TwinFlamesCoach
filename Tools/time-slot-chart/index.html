@@ -1,0 +1,50 @@
+<table id="timeslotTableBody" class="tbl-tabular-chart">
+</table>
+
+<!--Comment-->
+
+<script>
+    jQuery(document).ready(function ($) {
+    
+    function generateTimeSlots(startTime, endTime, interval) {
+        const timeSlots = [];
+        let current = new Date();
+        current.setHours(startTime.hours, startTime.minutes, 0, 0);
+
+        const end = new Date();
+        end.setHours(endTime.hours, endTime.minutes, 0, 0);
+
+        while (current <= end) {
+            const hours = current.getHours();
+            const minutes = current.getMinutes();
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+            const formattedTime = `${(hours % 12) || 12}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
+            timeSlots.push(formattedTime);
+            current.setMinutes(current.getMinutes() + interval);
+        }
+
+        return timeSlots;
+    }
+
+    function initializeTabularCharts() {
+        const tableId = "timeslotTableBody";
+        const columnNames = ["Time Slot", "Result"];
+        
+        // Generate time slots from 11:00 AM to 9:00 PM with 30-minute intervals
+        const rowNames = generateTimeSlots({ hours: 11, minutes: 0 }, { hours: 21, minutes: 0 }, 30);
+        
+        const buttonCssClass = "btnTimeslotChart";
+
+        new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+    }
+
+    // Check if the TabularCharts class is already defined
+    if (typeof TabularCharts === 'undefined') {
+        TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+    } else {
+        initializeTabularCharts();
+    }
+});
+
+
+</script>
