@@ -1,16 +1,16 @@
-<table id="randomPersonTableBody" class="tbl-tabular-chart">
+<table id="ytCommentTableBody" class="tbl-tabular-chart">
 </table>
 
 <script>
     jQuery(document).ready(function ($) {
         
         function initializeTabularCharts() {
-            const tableId = "randomPersonTableBody";
-            const columnNames = ["Person", "Result"];
+            const tableId = "ytCommentTableBody";
+            const columnNames = ["Comment", "Our Action"];
             const rowNames = [
-                "Forgiveness with Others", "Forgiveness with Me", "Sacred Healing", "Reiki Healing"
+                "Delete", "Block", "Reply"
             ];
-            const buttonCssClass = "btnRandomPersonChart";
+            const buttonCssClass = "btnYtCommentChart";
 
             new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
         }
