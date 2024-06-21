@@ -1,16 +1,16 @@
 <script> 
 	jQuery(document).ready(function($) {
-    	// Code that uses jQuery's $ can follow here.
-
-        // Get the current page's URL.
-        var currentURL = window.location.href;
+    	// Get the current page's URL.
+        //var currentURL = window.location.href;
 		
 		//Load bottom Bar
 		$("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
+
+        $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
 		
         //Load floating contact-us button on every page, expcept for "Contact us" page
         // if(currentURL !== "https://www.twinflamescoach.com/"){
-        //     $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
+             $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
         // }
 	});
 </script> 
@@ -19,7 +19,10 @@
 <div id="contactButtonFloating"></div>
 
 <!--AI chatbot is included here, as this file is only loaded in forntend and not in Admin section of wordpress-->
-<script id="__webwhizSdk__" src="https://widget.webwhiz.ai/webwhiz-sdk.js" data-chatbot-id="666492af7abb6768aec10f1c" defer></script>
+<!-- <script id="__webwhizSdk__" src="https://widget.webwhiz.ai/webwhiz-sdk.js" data-chatbot-id="666492af7abb6768aec10f1c" defer></script> -->
+
+
+<!----------------------------------------------------------------------->
 
 
 <!--a little more automation if you have to include a lot of files.-->
