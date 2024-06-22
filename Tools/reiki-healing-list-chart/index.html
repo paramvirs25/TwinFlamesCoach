@@ -1,0 +1,45 @@
+<table id="reikiHealListTableBody" class="tbl-tabular-chart">
+</table>
+
+<!--Comment-->
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        function initializeTabularCharts() {
+            const tableId = "reikiHealListTableBody";
+            const columnNames = ["Person", "Result"];
+            const rowNames = [
+                "Ritu", "Parina", "Gopi", "Pragya", "Swati Praya", "Pratibha", "Ekta Nahar", "Pooja Verma", "Swati Amrit",
+                "Vinodhini", "Ratna", "Pallabi", "Mridula", "Khushboo Jain", "Nikita Gupta", "Neetu Narula", 
+                "Bhupinder Absolute Gym Coach", "Bhupinder Wife", "Simi Karan's sis", "Jaspreet Wife",
+                "2599 FF Lady", "simran", 
+                "Harman", "Harman Neighbour", "Harman corner house boy",
+                "Ver Owner", 
+                "Dadi",
+                "I Bank Cash Lad",
+                "Back Home Man",
+                "Sandhya Roy",
+                "Yashika",
+                "Tapsee",
+                "Massi Girl",
+                "Saku wife",
+                "Karishma",
+                "Kavita Katyal",
+                "Shazia",
+                "Shruti"                
+            ];
+            const buttonCssClass = "btnReikiHealChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        // Check if the TabularCharts class is already defined
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
+    });
+
+</script>
