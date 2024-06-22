@@ -92,9 +92,9 @@ jQuery(function ($) {
         let answer = "";
         if (randomNum <= 33) {
           answer = `Consider it NO.`;
-        } else if (randomNum > 33 && randomNum < 63) { 
+        } else if (randomNum > 33 && randomNum < TfcGlobal.AngelsSayYes) { 
           answer = `You can consider it as a YES, but angels are saying NO, especially if the score is below 63.`;
-        } else if (randomNum >= 63 && randomNum < 85) { 
+        } else if (randomNum >= TfcGlobal.AngelsSayYes && randomNum < 85) { 
           answer = `You can take it as YES!`;
         } else if (randomNum >= 85) {
           answer = `Absolutely YES!`;
