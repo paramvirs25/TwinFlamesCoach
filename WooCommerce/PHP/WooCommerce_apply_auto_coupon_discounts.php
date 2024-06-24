@@ -16,7 +16,10 @@ function apply_auto_coupon_discounts( $cart ){
 		return;
 	}
 	
-	if (is_cart_contains_product( $cart, TFCMembers\Products::PERSONAL_CONSULTATION_PARAM_ID ) ) { //Personal Consultation | Jnana Param
+	//Personal Consultation | Jnana Param or Ritu Om
+	if (is_cart_contains_product( $cart, 
+		TFCMembers\Products::PERSONAL_CONSULTATION_PARAM_ID, 
+		TFCMembers\Products::PERSONAL_CONSULTATION_RITU_ID ) ) {
 		apply_course_completion_discount_via_coupon_on_consultation( $cart );
 	}
 	// else if(is_cart_contains_product( $cart, TFCMembers\Products::BASIC_IW_1_ID ) ) { //Basic IW 1
@@ -60,10 +63,10 @@ function apply_repeater_discount( $cart, $course ) {
 	}
 }
 
-function is_cart_contains_product( $cart, $product_id ){
+function is_cart_contains_product( $cart, $product_id1, $product_id2 ){
 	$cart_contains_product = false;
 	foreach ( $cart->get_cart_contents() as $item ) {
-		if ( $item['product_id'] == $product_id ) {
+		if ( $item['product_id'] == $product_id1 || $item['product_id'] == $product_id2 ) {
 			$cart_contains_product = true;
 			break;
 		}
