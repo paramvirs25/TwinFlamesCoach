@@ -21,15 +21,18 @@ class PersonNameManager {
 
     createUI() {
         this.container = document.createElement('div');
+        this.container.style.margin = '10px';
 
         // Create the input box
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
         this.inputBox.setAttribute('placeholder', 'Enter a name');
+        this.inputBox.style.marginRight = '10px';
 
         // Create the save button
         this.saveButton = document.createElement('button');
         this.saveButton.textContent = 'Save Name';
+        this.saveButton.style.marginRight = '10px';
 
         // Create the auto-complete list
         this.autoCompleteList = document.createElement('ul');
@@ -41,22 +44,47 @@ class PersonNameManager {
         this.autoCompleteList.style.border = '1px solid #ccc';
         this.autoCompleteList.style.display = 'none';
 
+        // Create the accordion header
+        this.accordionHeader = document.createElement('div');
+        this.accordionHeader.textContent = 'All Person Names';
+        this.accordionHeader.style.cursor = 'pointer';
+        this.accordionHeader.style.backgroundColor = '#f1f1f1';
+        this.accordionHeader.style.padding = '10px';
+        this.accordionHeader.style.border = '1px solid #ccc';
+        this.accordionHeader.style.marginTop = '10px';
+        this.accordionHeader.style.marginBottom = '10px';
+
+        // Create the accordion content
+        this.accordionContent = document.createElement('div');
+        this.accordionContent.style.display = 'none';
+        this.accordionContent.style.padding = '10px';
+        this.accordionContent.style.border = '1px solid #ccc';
+        this.accordionContent.style.borderTop = 'none';
+
         // Create the sorted name list container
         this.nameListContainer = document.createElement('div');
 
         // Create the button to delete all names
         this.deleteAllButton = document.createElement('button');
         this.deleteAllButton.textContent = 'Delete All Names';
+        this.deleteAllButton.style.marginTop = '10px';
 
         // Append elements to the container
         this.container.appendChild(this.inputBox);
         this.container.appendChild(this.saveButton);
         this.container.appendChild(this.autoCompleteList);
-        this.container.appendChild(this.nameListContainer);
-        this.container.appendChild(this.deleteAllButton);
+        this.accordionContent.appendChild(this.nameListContainer);
+        this.accordionContent.appendChild(this.deleteAllButton);
+        this.container.appendChild(this.accordionHeader);
+        this.container.appendChild(this.accordionContent);
 
-        // Append the container to the document body
-        divPersonNameManager.appendChild(this.container);
+        // Check for the div with id 'divPersonNameManager'
+        const targetDiv = document.getElementById('divPersonNameManager');
+        if (targetDiv) {
+            targetDiv.appendChild(this.container);
+        } else {
+            document.body.appendChild(this.container);
+        }
 
         // Render the sorted name list
         this.renderNameList();
@@ -65,13 +93,14 @@ class PersonNameManager {
     attachEventListeners() {
         this.inputBox.addEventListener('input', (e) => this.onInput(e));
         this.saveButton.addEventListener('click', () => this.saveName());
-        this.deleteAllButton.addEventListener('click', () => this.deleteAllNames());
+        this.accordionHeader.addEventListener('click', () => this.toggleAccordion());
+        this.deleteAllButton.addEventListener('click', () => this.confirmDeleteAll());
     }
 
     onInput(event) {
         const query = event.target.value.toLowerCase();
         this.autoCompleteList.innerHTML = '';
-        
+
         if (query) {
             const filteredNames = this.names.filter(name => name.toLowerCase().includes(query));
             filteredNames.forEach(name => {
@@ -104,6 +133,16 @@ class PersonNameManager {
         }
     }
 
+    toggleAccordion() {
+        this.accordionContent.style.display = this.accordionContent.style.display === 'none' ? 'block' : 'none';
+    }
+
+    confirmDeleteAll() {
+        if (confirm('Are you sure you want to delete all names?')) {
+            this.deleteAllNames();
+        }
+    }
+
     deleteName(name) {
         this.names = this.names.filter(n => n !== name);
         this.saveNamesToStorage();
@@ -127,8 +166,11 @@ class PersonNameManager {
             const li = document.createElement('li');
             li.textContent = name;
 
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
+            const deleteButton = document.createElement('span');
+            deleteButton.textContent = ' ❌';
+            deleteButton.style.color = 'red';
+            deleteButton.style.cursor = 'pointer';
+            deleteButton.style.marginLeft = '10px';
             deleteButton.addEventListener('click', () => this.deleteName(name));
 
             li.appendChild(deleteButton);
