@@ -1,6 +1,7 @@
 class PersonNameManager {
     constructor(storageKey = 'TFCDB') {
         this.storageKey = storageKey;
+        this.namesCollapsed = true; // Initialize collapsed state
         this.init();
     }
 
@@ -20,16 +21,24 @@ class PersonNameManager {
     }
 
     createUI() {
+        // Create the main container
         this.container = document.createElement('div');
+        this.container.style.display = 'flex';
+        this.container.style.flexDirection = 'column';
+        this.container.style.alignItems = 'center';
+        this.container.style.justifyContent = 'center';
+        this.container.style.height = '100vh';
 
         // Create the input box
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
         this.inputBox.setAttribute('placeholder', 'Enter a name');
+        this.inputBox.style.marginBottom = '10px';
 
         // Create the save button
         this.saveButton = document.createElement('button');
         this.saveButton.textContent = 'Save Name';
+        this.saveButton.style.marginBottom = '20px';
 
         // Create the auto-complete list
         this.autoCompleteList = document.createElement('ul');
@@ -41,17 +50,25 @@ class PersonNameManager {
         this.autoCompleteList.style.border = '1px solid #ccc';
         this.autoCompleteList.style.display = 'none';
 
+        // Create the toggle button for the name list
+        this.toggleButton = document.createElement('button');
+        this.toggleButton.textContent = 'All Person Names';
+        this.toggleButton.style.marginBottom = '10px';
+
         // Create the sorted name list container
         this.nameListContainer = document.createElement('div');
+        this.nameListContainer.style.display = 'none';
 
         // Create the button to delete all names
         this.deleteAllButton = document.createElement('button');
         this.deleteAllButton.textContent = 'Delete All Names';
+        this.deleteAllButton.style.marginTop = '20px';
 
         // Append elements to the container
         this.container.appendChild(this.inputBox);
         this.container.appendChild(this.saveButton);
         this.container.appendChild(this.autoCompleteList);
+        this.container.appendChild(this.toggleButton);
         this.container.appendChild(this.nameListContainer);
         this.container.appendChild(this.deleteAllButton);
 
@@ -65,13 +82,14 @@ class PersonNameManager {
     attachEventListeners() {
         this.inputBox.addEventListener('input', (e) => this.onInput(e));
         this.saveButton.addEventListener('click', () => this.saveName());
+        this.toggleButton.addEventListener('click', () => this.toggleNameList());
         this.deleteAllButton.addEventListener('click', () => this.deleteAllNames());
     }
 
     onInput(event) {
         const query = event.target.value.toLowerCase();
         this.autoCompleteList.innerHTML = '';
-        
+
         if (query) {
             const filteredNames = this.names.filter(name => name.toLowerCase().includes(query));
             filteredNames.forEach(name => {
@@ -102,6 +120,11 @@ class PersonNameManager {
             this.inputBox.value = '';
             this.autoCompleteList.style.display = 'none';
         }
+    }
+
+    toggleNameList() {
+        this.namesCollapsed = !this.namesCollapsed;
+        this.nameListContainer.style.display = this.namesCollapsed ? 'none' : 'block';
     }
 
     deleteName(name) {
