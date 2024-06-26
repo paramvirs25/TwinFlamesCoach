@@ -39,7 +39,7 @@ class ReikiHealingChecker {
             // else {
             //     alert('Reiki Healing result is not greater than 62.');
             // }
-        }, 2000); // Wait for 1 second
+        }, 1000); // Wait for 1 second
     }
 }
 
