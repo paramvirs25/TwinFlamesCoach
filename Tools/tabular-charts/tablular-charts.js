@@ -57,7 +57,7 @@ class TabularCharts {
     fillRandomNumbers() {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
 
-        setTimeout(() => {
+        //setTimeout(() => {
             const rows = tableBody.querySelectorAll("tr");
             rows.forEach(row => {
                 const cells = row.querySelectorAll("td");
@@ -76,7 +76,7 @@ class TabularCharts {
                     }
                 }
             });
-        }, 1000); // Wait for 1 second
+        //}, 1000); // Wait for 1 second
     }
 
     getRandomNumber() {
