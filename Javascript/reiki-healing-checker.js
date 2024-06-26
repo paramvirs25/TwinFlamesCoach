@@ -28,9 +28,9 @@ class ReikiHealingChecker {
                 }
             }
 
-            if (reikiHealingValue > 62) {
+            if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
                 //this.personNameManager.saveName();
-                const name = prompt("Enter the person's name:");
+                const name = prompt("Enter the person's name for saving in Reiki Healing List:");
                 if (name) {
                     this.personNameManager.addName(name);
                     alert(`${name} has been saved!`);
