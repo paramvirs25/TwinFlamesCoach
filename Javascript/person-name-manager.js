@@ -167,10 +167,7 @@ class PersonNameManager {
     renderNameList() {
         this.nameListContainer.innerHTML = '';
         const ol = document.createElement('ol');
-        ol.style.listStyleType = 'none';
-        ol.style.padding = '0';
-        ol.style.margin = '0';
-
+        
         this.names.forEach(name => {
             const li = document.createElement('li');
             li.textContent = name;
