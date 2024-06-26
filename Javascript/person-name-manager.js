@@ -1,6 +1,9 @@
 class PersonNameManager {
-    constructor(storageKey = 'TFCDB') {
+    constructor(storageKey = 'TFCDB', parentElementId = null, nameIdentifier = '', isSortNames = true) {
         this.storageKey = storageKey;
+        this.nameIdentifier = nameIdentifier;
+        this.isSortNames = isSortNames;
+        this.parentElementId = parentElementId;
         this.init();
     }
 
@@ -21,17 +24,18 @@ class PersonNameManager {
 
     createUI() {
         this.container = document.createElement('div');
-        this.container.style.margin = '10px';
+        //this.container.style.margin = '10px';//
+        //this.container.className = 'content-box';
 
         // Create the input box
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
-        this.inputBox.setAttribute('placeholder', 'Enter a name');
+        this.inputBox.setAttribute('placeholder', `Enter a ${this.nameIdentifier} name`);
         this.inputBox.style.marginRight = '10px';
 
         // Create the save button
         this.saveButton = document.createElement('button');
-        this.saveButton.textContent = 'Save Name';
+        this.saveButton.textContent = `Save`;
         this.saveButton.style.marginRight = '10px';
 
         // Create the auto-complete list
@@ -46,7 +50,7 @@ class PersonNameManager {
 
         // Create the accordion header
         this.accordionHeader = document.createElement('div');
-        this.accordionHeader.textContent = 'All Person Names';
+        this.accordionHeader.textContent = `All ${this.nameIdentifier} Person Names`;
         this.accordionHeader.style.cursor = 'pointer';
         this.accordionHeader.style.backgroundColor = '#f1f1f1';
         this.accordionHeader.style.padding = '10px';
@@ -66,7 +70,7 @@ class PersonNameManager {
 
         // Create the button to delete all names
         this.deleteAllButton = document.createElement('button');
-        this.deleteAllButton.textContent = 'Delete All Names';
+        this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Names`;
         this.deleteAllButton.style.marginTop = '10px';
 
         // Append elements to the container
@@ -79,7 +83,7 @@ class PersonNameManager {
         this.container.appendChild(this.accordionContent);
 
         // Check for the div with id 'divPersonNameManager'
-        const targetDiv = document.getElementById('divPersonNameManager');
+        const targetDiv = document.getElementById(this.parentElementId);
         if (targetDiv) {
             targetDiv.appendChild(this.container);
         } else {
@@ -125,7 +129,7 @@ class PersonNameManager {
         const name = this.inputBox.value.trim();
         if (name && !this.names.includes(name)) {
             this.names.push(name);
-            this.names.sort();
+            if(this.isSortNames){this.names.sort()};
             this.saveNamesToStorage();
             this.renderNameList();
             this.inputBox.value = '';
@@ -136,7 +140,7 @@ class PersonNameManager {
     addName(name) {
         if (!this.names.includes(name)) {
             this.names.push(name);
-            this.names.sort();
+            if(this.isSortNames){this.names.sort()};
             this.saveNamesToStorage();
             this.renderNameList();
         }
@@ -147,7 +151,7 @@ class PersonNameManager {
     }
 
     confirmDeleteAll() {
-        if (confirm('Are you sure you want to delete all names?')) {
+        if (confirm(`Are you sure you want to delete all ${this.nameIdentifier} names?`)) {
             this.deleteAllNames();
         }
     }
@@ -186,6 +190,3 @@ class PersonNameManager {
         this.nameListContainer.appendChild(ol);
     }
 }
-
-// Instantiate the PersonNameManager
-const personNameManager = new PersonNameManager();

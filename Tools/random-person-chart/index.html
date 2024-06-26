@@ -22,12 +22,8 @@
             initializeTabularCharts();
         }
 
-    //     const dxDiagJsUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "dx.all.js");
-    // $.getScript(dxDiagJsUrl, function () {
-    // });
-
-        // Instantiate the ReikiHealingChecker
-        const reikiHealingChecker = new ReikiHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', personNameManager);
+        // Instantiate the ReikiAndSacredHealingChecker
+        const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);
 
     });
 
