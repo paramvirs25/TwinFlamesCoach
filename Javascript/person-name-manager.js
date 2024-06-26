@@ -167,7 +167,7 @@ class PersonNameManager {
             li.textContent = name;
 
             const deleteButton = document.createElement('span');
-            deleteButton.textContent = ' ❌';
+            deleteButton.textContent = ' X';
             deleteButton.style.color = 'red';
             deleteButton.style.cursor = 'pointer';
             deleteButton.style.marginLeft = '10px';
