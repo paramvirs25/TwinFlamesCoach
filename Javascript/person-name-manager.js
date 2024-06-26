@@ -133,6 +133,15 @@ class PersonNameManager {
         }
     }
 
+    addName(name) {
+        if (!this.names.includes(name)) {
+            this.names.push(name);
+            this.names.sort();
+            this.saveNamesToStorage();
+            this.renderNameList();
+        }
+    }
+
     toggleAccordion() {
         this.accordionContent.style.display = this.accordionContent.style.display === 'none' ? 'block' : 'none';
     }
@@ -157,10 +166,10 @@ class PersonNameManager {
 
     renderNameList() {
         this.nameListContainer.innerHTML = '';
-        const ul = document.createElement('ul');
-        ul.style.listStyleType = 'none';
-        ul.style.padding = '0';
-        ul.style.margin = '0';
+        const ol = document.createElement('ol');
+        ol.style.listStyleType = 'none';
+        ol.style.padding = '0';
+        ol.style.margin = '0';
 
         this.names.forEach(name => {
             const li = document.createElement('li');
@@ -174,10 +183,10 @@ class PersonNameManager {
             deleteButton.addEventListener('click', () => this.deleteName(name));
 
             li.appendChild(deleteButton);
-            ul.appendChild(li);
+            ol.appendChild(li);
         });
 
-        this.nameListContainer.appendChild(ul);
+        this.nameListContainer.appendChild(ol);
     }
 }
 

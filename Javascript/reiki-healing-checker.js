@@ -29,12 +29,12 @@ class ReikiHealingChecker {
             }
 
             if (reikiHealingValue > 62) {
-                this.personNameManager.saveName();
-                // const name = prompt("Enter the person's name:");
-                // if (name) {
-                //     this.personNameManager.addName(name);
-                //     alert(`${name} has been saved!`);
-                // }
+                //this.personNameManager.saveName();
+                const name = prompt("Enter the person's name:");
+                if (name) {
+                    this.personNameManager.addName(name);
+                    alert(`${name} has been saved!`);
+                }
             } 
             // else {
             //     alert('Reiki Healing result is not greater than 62.');
