@@ -1,4 +1,4 @@
-class TfcGlobal {
+export class TfcGlobal {
     static AngelsSayYes = 63; //63 and above is considered yes
 
     static CssJsPath = "https://paramvirs25.github.io/TwinFlamesCoach"; // URL path
