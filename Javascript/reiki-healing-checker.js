@@ -10,12 +10,11 @@ class ReikiAndSacredHealingChecker {
     attachEventToButton() {
         const buttons = document.querySelectorAll(`.${this.buttonClass}`);
         buttons.forEach(button => {
-            button.addEventListener('click', () => this.checkReikiHealing());
+            button.addEventListener('click', () => this.checkHealingValues());
         });
     }
 
-    checkReikiHealing() {
-
+    checkHealingValues() {
         setTimeout(() => {
             const table = document.getElementById(this.tableId);
             const rows = table.getElementsByTagName('tr');
@@ -26,30 +25,24 @@ class ReikiAndSacredHealingChecker {
                 if (row.cells[0].textContent.trim() === 'Reiki Healing') {
                     const resultDiv = row.cells[1].getElementsByTagName('div')[1];
                     reikiHealingValue = parseInt(resultDiv.textContent.trim(), 10);
-                    //break;
                 } else if (row.cells[0].textContent.trim() === 'Sacred Healing') {
                     const resultDiv = row.cells[1].getElementsByTagName('div')[1];
                     sacredHealingValue = parseInt(resultDiv.textContent.trim(), 10);
-                    //break;
                 }
             }
 
-            if(reikiHealingValue >= TfcGlobal.AngelsSayYes || sacredHealingValue >= TfcGlobal.AngelsSayYes)
-            {
+            if (reikiHealingValue >= TfcGlobal.AngelsSayYes || sacredHealingValue >= TfcGlobal.AngelsSayYes) {
                 const name = prompt("Enter the person's name for saving in Reiki/Sacred Healing List:");
                 if (name) {
-                    if(reikiHealingValue >= TfcGlobal.AngelsSayYes){
-                        this.reikiNameManager.addName(name);
-                    } 
-                    
-                    if(sacredHealingValue >= TfcGlobal.AngelsSayYes){
-                        this.sacredHealNameManager.addName(name);
+                    if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
+                        this.reikiNameManager.addEntry(name, reikiHealingValue);
                     }
-                    
-                    //alert(`${name} has been saved!`);
+
+                    if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
+                        this.sacredHealNameManager.addEntry(name, sacredHealingValue);
+                    }
                 }
             }
-            
         }, 1000); // Wait for 1 second
     }
 }

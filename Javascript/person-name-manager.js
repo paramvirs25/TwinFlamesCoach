@@ -1,37 +1,42 @@
 class PersonNameManager {
-    constructor(storageKey = 'TFCDB', parentElementId = null, nameIdentifier = '', isSortNames = true) {
+    constructor(storageKey = 'TFCDB', parentElementId = null, nameIdentifier = '', isSortNames = true, isSortByValue = false) {
         this.storageKey = storageKey;
         this.nameIdentifier = nameIdentifier;
         this.isSortNames = isSortNames;
+        this.isSortByValue = isSortByValue;
         this.parentElementId = parentElementId;
         this.init();
     }
 
     init() {
-        this.names = this.getNamesFromStorage();
+        this.entries = this.getEntriesFromStorage();
         this.createUI();
         this.attachEventListeners();
     }
 
-    getNamesFromStorage() {
-        const names = localStorage.getItem(this.storageKey);
-        return names ? JSON.parse(names) : [];
+    getEntriesFromStorage() {
+        const entries = localStorage.getItem(this.storageKey);
+        return entries ? JSON.parse(entries) : [];
     }
 
-    saveNamesToStorage() {
-        localStorage.setItem(this.storageKey, JSON.stringify(this.names));
+    saveEntriesToStorage() {
+        localStorage.setItem(this.storageKey, JSON.stringify(this.entries));
     }
 
     createUI() {
         this.container = document.createElement('div');
-        //this.container.style.margin = '10px';//
-        //this.container.className = 'content-box';
 
         // Create the input box
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
         this.inputBox.setAttribute('placeholder', `Enter a ${this.nameIdentifier} name`);
         this.inputBox.style.marginRight = '10px';
+
+        // Create the value input box
+        this.valueInputBox = document.createElement('input');
+        this.valueInputBox.setAttribute('type', 'number');
+        this.valueInputBox.setAttribute('placeholder', `Enter the healing value`);
+        this.valueInputBox.style.marginRight = '10px';
 
         // Create the save button
         this.saveButton = document.createElement('button');
@@ -50,7 +55,7 @@ class PersonNameManager {
 
         // Create the accordion header
         this.accordionHeader = document.createElement('div');
-        this.accordionHeader.textContent = `All ${this.nameIdentifier} Person Names`;
+        this.accordionHeader.textContent = `All ${this.nameIdentifier} Person Entries`;
         this.accordionHeader.style.cursor = 'pointer';
         this.accordionHeader.style.backgroundColor = '#f1f1f1';
         this.accordionHeader.style.padding = '10px';
@@ -65,19 +70,20 @@ class PersonNameManager {
         this.accordionContent.style.border = '1px solid #ccc';
         this.accordionContent.style.borderTop = 'none';
 
-        // Create the sorted name list container
-        this.nameListContainer = document.createElement('div');
+        // Create the sorted entry list container
+        this.entryListContainer = document.createElement('div');
 
-        // Create the button to delete all names
+        // Create the button to delete all entries
         this.deleteAllButton = document.createElement('button');
-        this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Names`;
+        this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Entries`;
         this.deleteAllButton.style.marginTop = '10px';
 
         // Append elements to the container
         this.container.appendChild(this.inputBox);
+        this.container.appendChild(this.valueInputBox);
         this.container.appendChild(this.saveButton);
         this.container.appendChild(this.autoCompleteList);
-        this.accordionContent.appendChild(this.nameListContainer);
+        this.accordionContent.appendChild(this.entryListContainer);
         this.accordionContent.appendChild(this.deleteAllButton);
         this.container.appendChild(this.accordionHeader);
         this.container.appendChild(this.accordionContent);
@@ -90,13 +96,13 @@ class PersonNameManager {
             document.body.appendChild(this.container);
         }
 
-        // Render the sorted name list
-        this.renderNameList();
+        // Render the sorted entry list
+        this.renderEntryList();
     }
 
     attachEventListeners() {
         this.inputBox.addEventListener('input', (e) => this.onInput(e));
-        this.saveButton.addEventListener('click', () => this.saveName());
+        this.saveButton.addEventListener('click', () => this.saveEntry());
         this.accordionHeader.addEventListener('click', () => this.toggleAccordion());
         this.deleteAllButton.addEventListener('click', () => this.confirmDeleteAll());
     }
@@ -106,15 +112,15 @@ class PersonNameManager {
         this.autoCompleteList.innerHTML = '';
 
         if (query) {
-            const filteredNames = this.names.filter(name => name.toLowerCase().includes(query));
-            filteredNames.forEach(name => {
+            const filteredEntries = this.entries.filter(entry => entry.name.toLowerCase().includes(query));
+            filteredEntries.forEach(entry => {
                 const listItem = document.createElement('li');
-                listItem.textContent = name;
+                listItem.textContent = entry.name;
                 listItem.style.cursor = 'pointer';
-                listItem.addEventListener('click', () => this.onAutoCompleteSelect(name));
+                listItem.addEventListener('click', () => this.onAutoCompleteSelect(entry.name));
                 this.autoCompleteList.appendChild(listItem);
             });
-            this.autoCompleteList.style.display = filteredNames.length ? 'block' : 'none';
+            this.autoCompleteList.style.display = filteredEntries.length ? 'block' : 'none';
         } else {
             this.autoCompleteList.style.display = 'none';
         }
@@ -125,24 +131,35 @@ class PersonNameManager {
         this.autoCompleteList.style.display = 'none';
     }
 
-    saveName() {
+    saveEntry() {
         const name = this.inputBox.value.trim();
-        if (name && !this.names.includes(name)) {
-            this.names.push(name);
-            if(this.isSortNames){this.names.sort()};
-            this.saveNamesToStorage();
-            this.renderNameList();
+        const value = parseInt(this.valueInputBox.value.trim(), 10);
+
+        if (name && !isNaN(value) && !this.entries.some(entry => entry.name === name)) {
+            this.entries.push({ name, value });
+            this.sortEntries();
+            this.saveEntriesToStorage();
+            this.renderEntryList();
             this.inputBox.value = '';
+            this.valueInputBox.value = '';
             this.autoCompleteList.style.display = 'none';
         }
     }
 
-    addName(name) {
-        if (!this.names.includes(name)) {
-            this.names.push(name);
-            if(this.isSortNames){this.names.sort()};
-            this.saveNamesToStorage();
-            this.renderNameList();
+    addEntry(name, value) {
+        if (!this.entries.some(entry => entry.name === name)) {
+            this.entries.push({ name, value });
+            this.sortEntries();
+            this.saveEntriesToStorage();
+            this.renderEntryList();
+        }
+    }
+
+    sortEntries() {
+        if (this.isSortNames) {
+            this.entries.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (this.isSortByValue) {
+            this.entries.sort((a, b) => b.value - a.value);
         }
     }
 
@@ -151,42 +168,42 @@ class PersonNameManager {
     }
 
     confirmDeleteAll() {
-        if (confirm(`Are you sure you want to delete all ${this.nameIdentifier} names?`)) {
-            this.deleteAllNames();
+        if (confirm(`Are you sure you want to delete all ${this.nameIdentifier} entries?`)) {
+            this.deleteAllEntries();
         }
     }
 
-    deleteName(name) {
-        this.names = this.names.filter(n => n !== name);
-        this.saveNamesToStorage();
-        this.renderNameList();
+    deleteEntry(name) {
+        this.entries = this.entries.filter(entry => entry.name !== name);
+        this.saveEntriesToStorage();
+        this.renderEntryList();
     }
 
-    deleteAllNames() {
-        this.names = [];
-        this.saveNamesToStorage();
-        this.renderNameList();
+    deleteAllEntries() {
+        this.entries = [];
+        this.saveEntriesToStorage();
+        this.renderEntryList();
     }
 
-    renderNameList() {
-        this.nameListContainer.innerHTML = '';
+    renderEntryList() {
+        this.entryListContainer.innerHTML = '';
         const ol = document.createElement('ol');
-        
-        this.names.forEach(name => {
+
+        this.entries.forEach(entry => {
             const li = document.createElement('li');
-            li.textContent = name;
+            li.textContent = `${entry.name} (Value: ${entry.value})`;
 
             const deleteButton = document.createElement('span');
             deleteButton.textContent = ' X';
             deleteButton.style.color = 'red';
             deleteButton.style.cursor = 'pointer';
             deleteButton.style.marginLeft = '10px';
-            deleteButton.addEventListener('click', () => this.deleteName(name));
+            deleteButton.addEventListener('click', () => this.deleteEntry(entry.name));
 
             li.appendChild(deleteButton);
             ol.appendChild(li);
         });
 
-        this.nameListContainer.appendChild(ol);
+        this.entryListContainer.appendChild(ol);
     }
 }
