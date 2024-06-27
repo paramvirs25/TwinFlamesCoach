@@ -1,4 +1,4 @@
-class PersonNameManager {
+export class PersonNameManager {
     constructor(storageKey = 'TFCDB', parentElementId = null, nameIdentifier = '', isSortNames = true, isSortByValue = false) {
         this.storageKey = storageKey;
         this.nameIdentifier = nameIdentifier;

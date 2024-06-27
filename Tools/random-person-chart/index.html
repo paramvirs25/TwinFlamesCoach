@@ -1,7 +1,13 @@
+<div id="divReikiNameManager"></div>
+<div id="divSacredHealNameManager"></div>
+
 <table id="randomPersonTableBody" class="tbl-tabular-chart">
 </table>
 
-<script>
+<script type="module">
+    import { PersonNameManager } from './person-name-manager.js';
+    import { ReikiAndSacredHealingChecker } from './reiki-healing-checker.js';
+
     jQuery(document).ready(function ($) {
         
         function initializeTabularCharts() {
@@ -21,6 +27,12 @@
         } else {
             initializeTabularCharts();
         }
+
+        // Instantiate the PersonNameManager for Reiki list
+        const reikiNameManager = new PersonNameManager('reiki', 'divReikiNameManager', 'Reiki', true);
+
+        // Instantiate the PersonNameManager for sacred healing list
+        const sacredHealNameManager = new PersonNameManager('sacredheal', 'divSacredHealNameManager', 'Sacred Heal', false, true);
 
         // Instantiate the ReikiAndSacredHealingChecker
         const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);

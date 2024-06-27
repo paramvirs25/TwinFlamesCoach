@@ -1,4 +1,4 @@
-class ReikiAndSacredHealingChecker {
+export class ReikiAndSacredHealingChecker {
     constructor(tableId, buttonClass, reikiNameManager, sacredHealNameManager) {
         this.tableId = tableId;
         this.buttonClass = buttonClass;
