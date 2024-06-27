@@ -49,24 +49,7 @@ class ReikiAndSacredHealingChecker {
                     //alert(`${name} has been saved!`);
                 }
             }
-
-            // if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
-            //     //this.personNameManager.saveName();
-            //     const name = prompt("Enter the person's name for saving in Reiki Healing List:");
-            //     if (name) {
-            //         this.personNameManager.addName(name);
-            //         alert(`${name} has been saved!`);
-            //     }
-            // } 
-            // else {
-            //     alert('Reiki Healing result is not greater than 62.');
-            // }
+            
         }, 1000); // Wait for 1 second
     }
 }
-
-// Instantiate the PersonNameManager
-//const personNameManager = new PersonNameManager();
-
-// Instantiate the ReikiHealingChecker
-//const reikiHealingChecker = new ReikiHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', personNameManager);
