@@ -10,6 +10,7 @@ class TfcGlobal {
     static GaugeChartPath = `${TfcGlobal.GaugeChartRootPath}/index.html`;    
 
     static RandomPersonChartRootPath = "Tools/random-person-chart";
+    static RandomPersonChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;
 
     static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";

@@ -5,39 +5,39 @@
 </table>
 
 <script type="module">
-    var randomPersonFolderPath = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.CssJsPath, TfcGlobal.RandomPersonChartRootPath, "dx.all.js");
-    import { PersonNameManager } from `${randomPersonFolderPath}/person-name-manager.js`;
-    import { ReikiAndSacredHealingChecker } from `${randomPersonFolderPath}/reiki-healing-checker.js`;
+    (async () => {
+        // Dynamically import the modules
+        const { PersonNameManager } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.RandomPersonChartRootPath, 'person-name-manager.js'));
+        const { ReikiAndSacredHealingChecker } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.RandomPersonChartRootPath, 'reiki-healing-checker.js'));
 
-    jQuery(document).ready(function ($) {
-        
-        function initializeTabularCharts() {
-            const tableId = "randomPersonTableBody";
-            const columnNames = ["Action", "Result"];
-            const rowNames = [
-                "To Consider this person?", "Forgiveness with Others", "Forgiveness with Me", "Sacred Healing", "Reiki Healing"
-            ];
-            const buttonCssClass = "btnRandomPersonChart";
+        jQuery(document).ready(function ($) {
+            
+            function initializeTabularCharts() {
+                const tableId = "randomPersonTableBody";
+                const columnNames = ["Action", "Result"];
+                const rowNames = [
+                    "To Consider this person?", "Forgiveness with Others", "Forgiveness with Me", "Sacred Healing", "Reiki Healing"
+                ];
+                const buttonCssClass = "btnRandomPersonChart";
 
-            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
-        }
+                new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+            }
 
-        // Check if the TabularCharts class is already defined
-        if (typeof TabularCharts === 'undefined') {
-            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
-        } else {
-            initializeTabularCharts();
-        }
+            // Check if the TabularCharts class is already defined
+            if (typeof TabularCharts === 'undefined') {
+                TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+            } else {
+                initializeTabularCharts();
+            }
 
-        // Instantiate the PersonNameManager for Reiki list
-        const reikiNameManager = new PersonNameManager('reiki', 'divReikiNameManager', 'Reiki', true);
+            // Instantiate the PersonNameManager for Reiki list
+            const reikiNameManager = new PersonNameManager('reiki', 'divReikiNameManager', 'Reiki', true);
 
-        // Instantiate the PersonNameManager for sacred healing list
-        const sacredHealNameManager = new PersonNameManager('sacredheal', 'divSacredHealNameManager', 'Sacred Heal', false, true);
+            // Instantiate the PersonNameManager for sacred healing list
+            const sacredHealNameManager = new PersonNameManager('sacredheal', 'divSacredHealNameManager', 'Sacred Heal', false, true);
 
-        // Instantiate the ReikiAndSacredHealingChecker
-        const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);
-
-    });
-
+            // Instantiate the ReikiAndSacredHealingChecker
+            const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);
+        });
+    })();
 </script>
