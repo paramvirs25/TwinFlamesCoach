@@ -3,11 +3,13 @@ class TfcGlobal {
 
     static CssJsPath = "https://paramvirs25.github.io/TwinFlamesCoach"; // URL path
     static ShuffleToolsListPath = "HTML/Shuffle/ShuffleToolsList.html";
-    
-    static GaugeChartRootPath = "Tools/gauge-chart";
-    static GaugeChartPath = `${TfcGlobal.GaugeChartRootPath}/index.html`;
 
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
+    
+    static GaugeChartRootPath = "Tools/gauge-chart";
+    static GaugeChartPath = `${TfcGlobal.GaugeChartRootPath}/index.html`;    
+
+    static RandomPersonChartRootPath = "Tools/random-person-chart";
 
     static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";

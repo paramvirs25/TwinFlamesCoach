@@ -5,8 +5,9 @@
 </table>
 
 <script type="module">
-    import { PersonNameManager } from 'https://paramvirs25.github.io/TwinFlamesCoach/Tools/random-person-chart/person-name-manager.js';
-    import { ReikiAndSacredHealingChecker } from 'https://paramvirs25.github.io/TwinFlamesCoach/Tools/random-person-chart/reiki-healing-checker.js';
+    var randomPersonFolderPath = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.CssJsPath, TfcGlobal.RandomPersonChartRootPath, "dx.all.js");
+    import { PersonNameManager } from `${randomPersonFolderPath}/person-name-manager.js`;
+    import { ReikiAndSacredHealingChecker } from `${randomPersonFolderPath}/reiki-healing-checker.js`;
 
     jQuery(document).ready(function ($) {
         
