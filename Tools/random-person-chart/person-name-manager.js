@@ -32,12 +32,6 @@ export class PersonNameManager {
         this.inputBox.setAttribute('placeholder', `Enter a ${this.nameIdentifier} name`);
         this.inputBox.style.marginRight = '10px';
 
-        // Create the value input box
-        this.valueInputBox = document.createElement('input');
-        this.valueInputBox.setAttribute('type', 'number');
-        this.valueInputBox.setAttribute('placeholder', `Enter the healing value`);
-        this.valueInputBox.style.marginRight = '10px';
-
         // Create the save button
         this.saveButton = document.createElement('button');
         this.saveButton.textContent = `Save`;
@@ -79,12 +73,11 @@ export class PersonNameManager {
         this.deleteAllButton.style.marginTop = '10px';
 
         // Append elements to the container
-        this.container.appendChild(this.inputBox);
-        this.container.appendChild(this.valueInputBox);
-        this.container.appendChild(this.saveButton);
         this.container.appendChild(this.autoCompleteList);
         this.accordionContent.appendChild(this.entryListContainer);
         this.accordionContent.appendChild(this.deleteAllButton);
+        this.accordionContent.appendChild(this.inputBox);  // Move the input box inside the accordion
+        this.accordionContent.appendChild(this.saveButton);  // Move the save button inside the accordion
         this.container.appendChild(this.accordionHeader);
         this.container.appendChild(this.accordionContent);
 
@@ -133,20 +126,19 @@ export class PersonNameManager {
 
     saveEntry() {
         const name = this.inputBox.value.trim();
-        const value = parseInt(this.valueInputBox.value.trim(), 10);
+        const value = 0; // Set default value to 0
 
-        if (name && !isNaN(value) && !this.entries.some(entry => entry.name === name)) {
+        if (name && !this.entries.some(entry => entry.name === name)) {
             this.entries.push({ name, value });
             this.sortEntries();
             this.saveEntriesToStorage();
             this.renderEntryList();
             this.inputBox.value = '';
-            this.valueInputBox.value = '';
             this.autoCompleteList.style.display = 'none';
         }
     }
 
-    addEntry(name, value) {
+    addEntry(name, value = 0) {
         if (!this.entries.some(entry => entry.name === name)) {
             this.entries.push({ name, value });
             this.sortEntries();
