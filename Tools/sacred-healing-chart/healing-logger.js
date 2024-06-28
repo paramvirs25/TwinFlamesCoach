@@ -18,24 +18,38 @@ export class HealingLogger {
         const name = prompt("Enter the person's name for saving in Healing Log:");
         if (name) {
             const logHtml = this.tabularCharts.generateHtmlLog(name);
-            this.saveLogToStorage(logHtml);
-            this.displayLog(logHtml);
+            this.appendLog(logHtml, name);
         }
     }
 
-    displayLog(logHtml) {
-        const logContainer = document.getElementById('healingLogContainer'); // Ensure this element exists in your HTML
-        logContainer.innerHTML = logHtml;
+    appendLog(logHtml, name) {
+        const logContainer = document.getElementById('healingLogBody');
+        const newLogItem = this.createLogEntry(logHtml, name);
+
+        logContainer.insertAdjacentHTML('afterbegin', newLogItem);
+        this.saveLogToStorage();
     }
 
-    saveLogToStorage(logHtml) {
-        localStorage.setItem(this.logStorageKey, logHtml);
+    createLogEntry(logHtml, name) {
+        const timestamp = new Date().toLocaleString();
+        return `
+            <div class="log-entry">
+                <div class="log-header">Log for ${name} at ${timestamp}</div>
+                <div class="log-body">${logHtml}</div>
+            </div>
+        `;
+    }
+
+    saveLogToStorage() {
+        const logContainer = document.getElementById('healingLogBody');
+        localStorage.setItem(this.logStorageKey, logContainer.innerHTML);
     }
 
     loadLogFromStorage() {
         const logHtml = localStorage.getItem(this.logStorageKey);
         if (logHtml) {
-            this.displayLog(logHtml);
+            const logContainer = document.getElementById('healingLogBody');
+            logContainer.innerHTML = logHtml;
         }
     }
 }

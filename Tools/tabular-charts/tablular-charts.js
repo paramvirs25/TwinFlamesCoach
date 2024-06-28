@@ -120,7 +120,7 @@ class TabularCharts {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr:not(.header-row)");
 
-        let logHtml = `<h2>Healing Log for ${name}</h2><ul>`;
+        let logHtml = `<b>${name}</b>: <span>`;
 
         rows.forEach(row => {
             const cells = row.querySelectorAll("td");
@@ -131,13 +131,13 @@ class TabularCharts {
                 if (gradientCell) {
                     const value = parseInt(gradientCell.textContent.trim(), 10);
                     if (value >= TfcGlobal.AngelsSayYes) {
-                        logHtml += `<li>${rowName}: ${value}</li>`;
+                        logHtml += `${rowName}: ${value},`;
                     }
                 }
             }
         });
 
-        logHtml += `</ul>`;
+        logHtml += `</span>`;
         return logHtml;
     }
 }
