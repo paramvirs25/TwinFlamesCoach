@@ -120,7 +120,7 @@ class TabularCharts {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr:not(.header-row)");
 
-        let logHtml = `<b>${name}</b>: <span>`;
+        let logHtml = '<span>'; //`<b>${name}</b>: <span>`;
 
         rows.forEach(row => {
             const cells = row.querySelectorAll("td");

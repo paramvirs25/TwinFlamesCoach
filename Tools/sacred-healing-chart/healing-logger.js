@@ -40,7 +40,7 @@ export class HealingLogger {
         const timestamp = new Date().toLocaleString();
         return `
             <div class="log-entry contentbox">
-                <div class="log-header">Log for ${name} at ${timestamp}</div>
+                <div class="log-header">${name} at ${timestamp}</div>
                 <div class="log-body">${logHtml}</div>
             </div>
         `;
