@@ -2,35 +2,41 @@
 </table>
 
 <script>
-   jQuery(document).ready(function ($) {
-
-        function initializeTabularCharts() {
-            const tableId = "sacredHealingTableBody";
-            const columnNames = ["Healing Type", "Result"];
-            const rowNames = [
-                "Tou Whole Bod",
-                "Mou K",  
-                "Nos", 
-                "Ear", 
-                "Bo Tou", "Bo Li",
-                "Pu Fing", "An Fing", 
-                "Thi", 
-                "Han Job", 
-                "Mou Bl",                 
-                "Pu", 
-                "An", "An Second Ring",
-                "Miss Pos",
-                "Keep Cord"
-            ];
-            const buttonCssClass = "btnSacredHealChart";
-
-            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
-        }
-
-        if (typeof TabularCharts === 'undefined') {
-            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
-        } else {
-            initializeTabularCharts();
-        }
-    });
-</script>
+    jQuery(document).ready(function ($) {
+ 
+         function initializeTabularCharts() {
+             const tableId = "sacredHealingTableBody";
+             const columnNames = ["Healing Type", "Result"];
+             const rowNames = [
+                 "header:F Play", 
+                 "Tou Whole Bod", 
+                 "Mou K",  
+                 "Nos", 
+                 "Ear", 
+                 "Bo Tou", 
+                 "Bo Li",
+                 "Pu Fing", 
+                 "An Fing", 
+                 "Thi", 
+                 "Han Job", 
+                 "header:Action",
+                 "Mou Bl",                 
+                 "Pu", 
+                 "An", 
+                 "An Second Ring",
+                 "Miss Pos",
+                 "Keep Cord"
+             ];
+             const buttonCssClass = "btnSacredHealChart";
+ 
+             new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+         }
+ 
+         if (typeof TabularCharts === 'undefined') {
+             TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+         } else {
+             initializeTabularCharts();
+         }
+     });
+ </script>
+ 
