@@ -1,4 +1,4 @@
-class Accordion {
+export class Accordion {
     constructor(headerText, parentElementId) {
         this.headerText = headerText;
         this.parentElementId = parentElementId;
