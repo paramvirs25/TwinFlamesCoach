@@ -95,4 +95,23 @@ class TabularCharts {
         const tabularChartCssUrl = TfcGlobal.getFullFileUrlFromParts(TfcGlobal.TabularChartRootPath, "tabular-charts.css");
         TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".tbl-tabular-chart"));
     }
+
+    // New method to get cell value
+    getCellValue(rowName, columnName) {
+        const tableBody = document.getElementById(this.tableId).querySelector("tbody");
+        const rows = tableBody.querySelectorAll("tr:not(.header-row)");
+
+        for (let row of rows) {
+            const cells = row.querySelectorAll("td");
+            if (cells[0].textContent.trim() === rowName) {
+                for (let i = 0; i < this.columnNames.length; i++) {
+                    if (this.columnNames[i] === columnName) {
+                        const gradientCell = cells[i].querySelector(".gradient-cell div");
+                        return parseInt(gradientCell.textContent.trim(), 10);
+                    }
+                }
+            }
+        }
+        return null;
+    }
 }

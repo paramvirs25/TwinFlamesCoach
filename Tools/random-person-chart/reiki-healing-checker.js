@@ -1,9 +1,12 @@
+import { TabularCharts } from './TabularCharts'; // Adjust the import path as necessary
+
 export class ReikiAndSacredHealingChecker {
     constructor(tableId, buttonClass, reikiNameManager, sacredHealNameManager) {
         this.tableId = tableId;
         this.buttonClass = buttonClass;
         this.reikiNameManager = reikiNameManager;
         this.sacredHealNameManager = sacredHealNameManager;
+        this.tabularCharts = new TabularCharts(tableId); // Initialize TabularCharts instance
         this.attachEventToButton();
     }
 
@@ -16,20 +19,8 @@ export class ReikiAndSacredHealingChecker {
 
     checkHealingValues() {
         setTimeout(() => {
-            const table = document.getElementById(this.tableId);
-            const rows = table.getElementsByTagName('tr');
-            let reikiHealingValue = 0;
-            let sacredHealingValue = 0;
-
-            for (let row of rows) {
-                if (row.cells[0].textContent.trim() === 'Reiki Healing') {
-                    const resultDiv = row.cells[1].getElementsByTagName('div')[1];
-                    reikiHealingValue = parseInt(resultDiv.textContent.trim(), 10);
-                } else if (row.cells[0].textContent.trim() === 'Sacred Healing') {
-                    const resultDiv = row.cells[1].getElementsByTagName('div')[1];
-                    sacredHealingValue = parseInt(resultDiv.textContent.trim(), 10);
-                }
-            }
+            const reikiHealingValue = this.tabularCharts.getCellValue('Reiki Healing', 'Result');
+            const sacredHealingValue = this.tabularCharts.getCellValue('Sacred Healing', 'Result');
 
             if (reikiHealingValue >= TfcGlobal.AngelsSayYes || sacredHealingValue >= TfcGlobal.AngelsSayYes) {
                 const name = prompt("Enter the person's name for saving in Reiki/Sacred Healing List:");
