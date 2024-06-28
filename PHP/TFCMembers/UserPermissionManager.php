@@ -66,7 +66,7 @@ class UserPermissionManager {
 		$output .= UserPermissionManager::updateGroupUsers(
 			'group_basic_iw_2', 
 			array( 'tfciwchakrashuddhi', 'belief_clearing_2_tool', 'tfciwhigherheart', 'tfciwlocation', 'angels_blessings_tool', 'tfciwsound', 'tfciwcosmicmarriage' ),
-			array( 'tfciw' ),
+			array( 'tfciw','followup' ),
 			true
 		);
 		
