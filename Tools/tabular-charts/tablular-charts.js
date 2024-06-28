@@ -114,4 +114,30 @@ class TabularCharts {
         }
         return null;
     }
+
+    // New method to generate HTML log
+    generateHtmlLog(name) {
+        const tableBody = document.getElementById(this.tableId).querySelector("tbody");
+        const rows = tableBody.querySelectorAll("tr:not(.header-row)");
+
+        let logHtml = `<h2>Healing Log for ${name}</h2><ul>`;
+
+        rows.forEach(row => {
+            const cells = row.querySelectorAll("td");
+            const rowName = cells[0].textContent.trim();
+
+            for (let i = 1; i < cells.length; i++) {
+                const gradientCell = cells[i].querySelector(".gradient-cell div");
+                if (gradientCell) {
+                    const value = parseInt(gradientCell.textContent.trim(), 10);
+                    if (value >= TfcGlobal.AngelsSayYes) {
+                        logHtml += `<li>${rowName}: ${value}</li>`;
+                    }
+                }
+            }
+        });
+
+        logHtml += `</ul>`;
+        return logHtml;
+    }
 }
