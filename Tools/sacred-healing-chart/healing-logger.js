@@ -39,8 +39,8 @@ export class HealingLogger {
     createLogEntry(logHtml, name) {
         const timestamp = new Date().toLocaleString();
         return `
-            <div class="log-entry">
-                <div class="log-header">${name} at ${timestamp}</div>
+            <div class="log-entry contentbox">
+                <div class="log-header">Log for ${name} at ${timestamp}</div>
                 <div class="log-body">${logHtml}</div>
             </div>
         `;
