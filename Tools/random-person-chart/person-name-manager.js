@@ -5,15 +5,20 @@ export class PersonNameManager {
         this.isSortNames = isSortNames;
         this.isSortByValue = isSortByValue;
         this.parentElementId = parentElementId;
-        this.accordion = new Accordion(`All ${this.nameIdentifier} Person Entries`, parentElementId);
+        this.accordion = null;
         this.init();
     }
 
-    init() {
+    async init() {
+        const accordionJsUrl = TfcGlobal.getFullFileUrl('Javascript/accordion.js');
+        console.log(accordionJsUrl);
+        const { Accordion } = await import(accordionJsUrl);
+        this.accordion = new Accordion(`All ${this.nameIdentifier} Person Entries`, this.parentElementId);
         this.entries = this.getEntriesFromStorage();
         this.createUI();
         this.attachEventListeners();
     }
+
 
     getEntriesFromStorage() {
         const entries = localStorage.getItem(this.storageKey);
