@@ -13,25 +13,25 @@
                 const columnNames = ["Healing Type", "Result"];
                 const rowNames = [
                     "header:Physical Healing",
-                    "Tou Whole Bod",
-                    "Mou K",  
-                    "Nos", 
-                    "Ear", 
-                    "Bo Tou", "Bo Li",
+                    "Fu Bod",
+                    "Ki",  
+                    "No", 
+                    "Ea", 
+                    "B Tou", "B Li",
                     "header:Emotional Healing",
-                    "Pu Fing", "An Fing", 
+                    "Pu Fi", "An Fi", 
                     "Thi", 
-                    "Han Job", 
-                    "Mou Bl",                 
+                    "HJ", 
+                    "BJ",                 
                     "Pu", 
-                    "An", "An Second Ring",
-                    "Miss Pos",
-                    "Keep Cord"
+                    "An", "ASR",
+                    "Mis",
+                    "Cord"
                 ];
                 const buttonCssClass = "btnSacredHealChart";
 
                 const tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
-                new HealingLogger(tabularCharts, buttonCssClass);
+                new HealingLogger(tabularCharts, buttonCssClass, 'sacredHealingLog', 'healingLogContainer');
             }
 
             if (typeof TabularCharts === 'undefined') {

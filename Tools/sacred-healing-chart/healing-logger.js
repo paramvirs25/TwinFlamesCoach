@@ -1,5 +1,5 @@
 export class HealingLogger {
-    constructor(tabularCharts, buttonClass, logStorageKey = 'healingLog', parentElementId = 'healingLogContainer') {
+    constructor(tabularCharts, buttonClass, logStorageKey, parentElementId) {
         this.tabularCharts = tabularCharts;
         this.buttonClass = buttonClass;
         this.logStorageKey = logStorageKey;
@@ -9,10 +9,8 @@ export class HealingLogger {
     }
 
     async init() {        
-        const accordianJsUrl = TfcGlobal.getFullFileUrl('Javascript/accordion.js');
-        console.log(accordianJsUrl);
-        const { Accordion } = await import(accordianJsUrl);
-        this.accordion = new Accordion('Healing Log', this.parentElementId);
+        const { Accordion } = await import(TfcGlobal.getFullFileUrl('Javascript/accordion.js'));
+        this.accordion = new Accordion('Log', this.parentElementId);
         this.attachEventToButton();
         this.loadLogFromStorage();
     }
@@ -25,7 +23,7 @@ export class HealingLogger {
     }
 
     logHealingValues() {
-        const name = prompt("Enter the person's name for saving in Healing Log:");
+        const name = prompt("Enter the person's name for saving in Log:");
         if (name) {
             const logHtml = this.tabularCharts.generateHtmlLog(name);
             this.appendLog(logHtml, name);
@@ -42,7 +40,7 @@ export class HealingLogger {
         const timestamp = new Date().toLocaleString();
         return `
             <div class="log-entry">
-                <div class="log-header">Log for ${name} at ${timestamp}</div>
+                <div class="log-header">${name} at ${timestamp}</div>
                 <div class="log-body">${logHtml}</div>
             </div>
         `;
