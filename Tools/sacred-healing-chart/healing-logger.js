@@ -9,7 +9,9 @@ export class HealingLogger {
     }
 
     async init() {        
-        const { Accordion } = await import(TfcGlobal.getFullFileUrlFromParts('Javascript/accordion.js'));
+        const accordianJsUrl = TfcGlobal.getFullFileUrl('Javascript/accordion.js');
+        console.log(accordianJsUrl);
+        const { Accordion } = await import(accordianJsUrl);
         this.accordion = new Accordion('Healing Log', this.parentElementId);
         this.attachEventToButton();
         this.loadLogFromStorage();
