@@ -3,37 +3,42 @@
 <div id="healingLogContainer"></div> <!-- Container for the log -->
 
 <script>
-   jQuery(document).ready(function ($) {
-        function initializeTabularCharts() {
-            const tableId = "sacredHealingTableBody";
-            const columnNames = ["Healing Type", "Result"];
-            const rowNames = [
-                "header:Physical Healing",
-                "Tou Whole Bod",
-                "Mou K",  
-                "Nos", 
-                "Ear", 
-                "Bo Tou", "Bo Li",
-                "header:Emotional Healing",
-                "Pu Fing", "An Fing", 
-                "Thi", 
-                "Han Job", 
-                "Mou Bl",                 
-                "Pu", 
-                "An", "An Second Ring",
-                "Miss Pos",
-                "Keep Cord"
-            ];
-            const buttonCssClass = "btnSacredHealChart";
+    (async () => {
+        // Dynamically import the modules
+        const { HealingLogger } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.SacredHealingChartRootPath, 'healing-logger.js'));
 
-            const tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
-            new HealingLogger(tabularCharts, buttonCssClass);
-        }
+        jQuery(document).ready(function ($) {
+            function initializeTabularCharts() {
+                const tableId = "sacredHealingTableBody";
+                const columnNames = ["Healing Type", "Result"];
+                const rowNames = [
+                    "header:Physical Healing",
+                    "Tou Whole Bod",
+                    "Mou K",  
+                    "Nos", 
+                    "Ear", 
+                    "Bo Tou", "Bo Li",
+                    "header:Emotional Healing",
+                    "Pu Fing", "An Fing", 
+                    "Thi", 
+                    "Han Job", 
+                    "Mou Bl",                 
+                    "Pu", 
+                    "An", "An Second Ring",
+                    "Miss Pos",
+                    "Keep Cord"
+                ];
+                const buttonCssClass = "btnSacredHealChart";
 
-        if (typeof TabularCharts === 'undefined') {
-            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
-        } else {
-            initializeTabularCharts();
-        }
-    });
+                const tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+                new HealingLogger(tabularCharts, buttonCssClass);
+            }
+
+            if (typeof TabularCharts === 'undefined') {
+                TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+            } else {
+                initializeTabularCharts();
+            }
+        });
+    })();
 </script>

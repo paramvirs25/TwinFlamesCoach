@@ -12,6 +12,8 @@ class TfcGlobal {
     static RandomPersonChartRootPath = "Tools/random-person-chart";
     static RandomPersonChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;
 
+    static SacredHealingChartRootPath = "Tools/sacred-healing-chart";
+
     static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";
 
