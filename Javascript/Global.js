@@ -13,7 +13,7 @@ class TfcGlobal {
     static RandomPersonChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;
 
     static SacredHealingChartRootPath = "Tools/sacred-healing-chart";
-    static SacredHealingChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;
+    static SacredHealingChartPath = `${TfcGlobal.SacredHealingChartRootPath}/index.html`;
 
     static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";
