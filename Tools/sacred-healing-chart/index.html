@@ -1,79 +1,11 @@
 <table id="sacredHealingTableBody" class="tbl-tabular-chart"></table>
 
-<div class="accordion" id="healingLogAccordion">
-    <div class="accordion-item">
-        <div class="accordion-header" id="healingLogHeader">
-            <button class="accordion-button" type="button" data-target="#healingLogBody">
-                Healing Log
-            </button>
-        </div>
-        <div id="healingLogBody" class="accordion-body">
-            <!-- Log entries will be appended here -->
-        </div>
-    </div>
-</div>
-
-<style>
-    .accordion-item {
-        border: 1px solid #ccc;
-        margin-bottom: 10px;
-        border-radius: 5px;
-    }
-
-    .accordion-header {
-        background-color: #f1f1f1;
-        padding: 10px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .accordion-button {
-        background: none;
-        border: none;
-        font-size: 16px;
-        cursor: pointer;
-        width: 100%;
-        text-align: left;
-        outline: none;
-        padding: 10px;
-    }
-
-    .accordion-button.active {
-        font-weight: bold;
-    }
-
-    .accordion-body {
-        display: none;
-        padding: 10px;
-        background-color: #fff;
-        border-top: 1px solid #ccc;
-    }
-
-    .accordion-body.active {
-        display: block;
-    }
-
-    .log-entry {
-        margin-bottom: 10px;
-    }
-
-    .log-header {
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .log-body {
-        padding-left: 10px;
-    }
-</style>
+<div id="healingLogContainer"></div> <!-- Container for the log -->
 
 <script>
     (async () => {
         // Dynamically import the modules
         const { HealingLogger } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.SacredHealingChartRootPath, 'healing-logger.js'));
-
 
         jQuery(document).ready(function ($) {
             function initializeTabularCharts() {
@@ -82,16 +14,16 @@
                 const rowNames = [
                     "header:Physical Healing",
                     "Tou Whole Bod",
-                    "Mou K",
-                    "Nos",
-                    "Ear",
+                    "Mou K",  
+                    "Nos", 
+                    "Ear", 
                     "Bo Tou", "Bo Li",
                     "header:Emotional Healing",
-                    "Pu Fing", "An Fing",
-                    "Thi",
-                    "Han Job",
-                    "Mou Bl",
-                    "Pu",
+                    "Pu Fing", "An Fing", 
+                    "Thi", 
+                    "Han Job", 
+                    "Mou Bl",                 
+                    "Pu", 
                     "An", "An Second Ring",
                     "Miss Pos",
                     "Keep Cord"
@@ -107,13 +39,6 @@
             } else {
                 initializeTabularCharts();
             }
-
-            // Attach accordion event
-            document.querySelector('.accordion-button').addEventListener('click', function () {
-                const target = document.querySelector(this.getAttribute('data-target'));
-                target.classList.toggle('active');
-                this.classList.toggle('active');
-            });
         });
     })();
 </script>

@@ -5,6 +5,7 @@ export class PersonNameManager {
         this.isSortNames = isSortNames;
         this.isSortByValue = isSortByValue;
         this.parentElementId = parentElementId;
+        this.accordion = new Accordion(`All ${this.nameIdentifier} Person Entries`, parentElementId);
         this.init();
     }
 
@@ -24,8 +25,6 @@ export class PersonNameManager {
     }
 
     createUI() {
-        this.container = document.createElement('div');
-
         // Create the input box
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
@@ -47,23 +46,6 @@ export class PersonNameManager {
         this.autoCompleteList.style.border = '1px solid #ccc';
         this.autoCompleteList.style.display = 'none';
 
-        // Create the accordion header
-        this.accordionHeader = document.createElement('div');
-        this.accordionHeader.textContent = `All ${this.nameIdentifier} Person Entries`;
-        this.accordionHeader.style.cursor = 'pointer';
-        this.accordionHeader.style.backgroundColor = '#f1f1f1';
-        this.accordionHeader.style.padding = '10px';
-        this.accordionHeader.style.border = '1px solid #ccc';
-        this.accordionHeader.style.marginTop = '10px';
-        this.accordionHeader.style.marginBottom = '10px';
-
-        // Create the accordion content
-        this.accordionContent = document.createElement('div');
-        this.accordionContent.style.display = 'none';
-        this.accordionContent.style.padding = '10px';
-        this.accordionContent.style.border = '1px solid #ccc';
-        this.accordionContent.style.borderTop = 'none';
-
         // Create the sorted entry list container
         this.entryListContainer = document.createElement('div');
 
@@ -72,31 +54,18 @@ export class PersonNameManager {
         this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Entries`;
         this.deleteAllButton.style.marginTop = '10px';
 
-        // Append elements to the container
-        this.container.appendChild(this.autoCompleteList);
-        this.accordionContent.appendChild(this.entryListContainer);
-        this.accordionContent.appendChild(this.deleteAllButton);
-        this.accordionContent.appendChild(this.inputBox);  // Move the input box inside the accordion
-        this.accordionContent.appendChild(this.saveButton);  // Move the save button inside the accordion
-        this.container.appendChild(this.accordionHeader);
-        this.container.appendChild(this.accordionContent);
+        this.accordion.accordionContent.appendChild(this.autoCompleteList);
+        this.accordion.accordionContent.appendChild(this.entryListContainer);
+        this.accordion.accordionContent.appendChild(this.deleteAllButton);
+        this.accordion.accordionContent.appendChild(this.inputBox);
+        this.accordion.accordionContent.appendChild(this.saveButton);
 
-        // Check for the div with id 'divPersonNameManager'
-        const targetDiv = document.getElementById(this.parentElementId);
-        if (targetDiv) {
-            targetDiv.appendChild(this.container);
-        } else {
-            document.body.appendChild(this.container);
-        }
-
-        // Render the sorted entry list
         this.renderEntryList();
     }
 
     attachEventListeners() {
         this.inputBox.addEventListener('input', (e) => this.onInput(e));
         this.saveButton.addEventListener('click', () => this.saveEntry());
-        this.accordionHeader.addEventListener('click', () => this.toggleAccordion());
         this.deleteAllButton.addEventListener('click', () => this.confirmDeleteAll());
     }
 
@@ -153,10 +122,6 @@ export class PersonNameManager {
         } else if (this.isSortByValue) {
             this.entries.sort((a, b) => b.value - a.value);
         }
-    }
-
-    toggleAccordion() {
-        this.accordionContent.style.display = this.accordionContent.style.display === 'none' ? 'block' : 'none';
     }
 
     confirmDeleteAll() {

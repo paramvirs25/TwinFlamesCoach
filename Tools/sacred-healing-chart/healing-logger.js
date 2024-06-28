@@ -1,8 +1,16 @@
 export class HealingLogger {
-    constructor(tabularCharts, buttonClass, logStorageKey = 'healingLog') {
+    constructor(tabularCharts, buttonClass, logStorageKey = 'healingLog', parentElementId = 'healingLogContainer') {
         this.tabularCharts = tabularCharts;
         this.buttonClass = buttonClass;
         this.logStorageKey = logStorageKey;
+        this.parentElementId = parentElementId;
+        this.accordion = null;
+        this.init();
+    }
+
+    async init() {        
+        const { Accordion } = await import(TfcGlobal.getFullFileUrlFromParts('Javascript/accordion.js'));
+        this.accordion = new Accordion('Healing Log', this.parentElementId);
         this.attachEventToButton();
         this.loadLogFromStorage();
     }
@@ -23,10 +31,8 @@ export class HealingLogger {
     }
 
     appendLog(logHtml, name) {
-        const logContainer = document.getElementById('healingLogBody');
         const newLogItem = this.createLogEntry(logHtml, name);
-
-        logContainer.insertAdjacentHTML('afterbegin', newLogItem);
+        this.accordion.appendContent(newLogItem);
         this.saveLogToStorage();
     }
 
@@ -41,15 +47,13 @@ export class HealingLogger {
     }
 
     saveLogToStorage() {
-        const logContainer = document.getElementById('healingLogBody');
-        localStorage.setItem(this.logStorageKey, logContainer.innerHTML);
+        localStorage.setItem(this.logStorageKey, this.accordion.getContent());
     }
 
     loadLogFromStorage() {
         const logHtml = localStorage.getItem(this.logStorageKey);
         if (logHtml) {
-            const logContainer = document.getElementById('healingLogBody');
-            logContainer.innerHTML = logHtml;
+            this.accordion.setContent(logHtml);
         }
     }
 }
