@@ -1,12 +1,9 @@
-import { TabularCharts } from './TabularCharts'; // Adjust the import path as necessary
-
 export class ReikiAndSacredHealingChecker {
-    constructor(tableId, buttonClass, reikiNameManager, sacredHealNameManager) {
-        this.tableId = tableId;
+    constructor(tabularCharts, buttonClass, reikiNameManager, sacredHealNameManager) {
+        this.tabularCharts = tabularCharts;
         this.buttonClass = buttonClass;
         this.reikiNameManager = reikiNameManager;
         this.sacredHealNameManager = sacredHealNameManager;
-        this.tabularCharts = new TabularCharts(tableId); // Initialize TabularCharts instance
         this.attachEventToButton();
     }
 

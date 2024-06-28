@@ -11,6 +11,8 @@
         const { ReikiAndSacredHealingChecker } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.RandomPersonChartRootPath, 'reiki-healing-checker.js'));
 
         jQuery(document).ready(function ($) {
+
+            var tabularCharts = null;
             
             function initializeTabularCharts() {
                 const tableId = "randomPersonTableBody";
@@ -20,7 +22,7 @@
                 ];
                 const buttonCssClass = "btnRandomPersonChart";
 
-                new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+                tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
             }
 
             // Check if the TabularCharts class is already defined
@@ -37,7 +39,7 @@
             const sacredHealNameManager = new PersonNameManager('sacredheal', 'divSacredHealNameManager', 'Sacred Heal', false, true);
 
             // Instantiate the ReikiAndSacredHealingChecker
-            const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker('randomPersonTableBody', 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);
+            const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker(tabularCharts, 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);
         });
     })();
 </script>
