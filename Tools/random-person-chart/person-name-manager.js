@@ -19,7 +19,6 @@ export class PersonNameManager {
         this.attachEventListeners();
     }
 
-
     getEntriesFromStorage() {
         const entries = localStorage.getItem(this.storageKey);
         return entries ? JSON.parse(entries) : [];
@@ -59,11 +58,27 @@ export class PersonNameManager {
         this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Entries`;
         this.deleteAllButton.style.marginTop = '10px';
 
+        // Create the export to clipboard button
+        this.exportButton = document.createElement('button');
+        this.exportButton.textContent = `Export To Clipboard`;
+        this.exportButton.style.marginTop = '10px';
+
+        // Create the import names with commas button
+        this.importButton = document.createElement('button');
+        this.importButton.textContent = `Import Names with Commas`;
+        this.importButton.style.marginTop = '10px';
+
+        // Append elements to the accordion content
         this.accordion.accordionContent.appendChild(this.autoCompleteList);
         this.accordion.accordionContent.appendChild(this.entryListContainer);
         this.accordion.accordionContent.appendChild(this.deleteAllButton);
+        this.accordion.accordionContent.appendChild(document.createElement('br'));
         this.accordion.accordionContent.appendChild(this.inputBox);
         this.accordion.accordionContent.appendChild(this.saveButton);
+        this.accordion.accordionContent.appendChild(document.createElement('br'));
+        this.accordion.accordionContent.appendChild(this.exportButton);
+        this.accordion.accordionContent.appendChild(document.createElement('br'));
+        this.accordion.accordionContent.appendChild(this.importButton);
 
         this.renderEntryList();
     }
@@ -72,6 +87,8 @@ export class PersonNameManager {
         this.inputBox.addEventListener('input', (e) => this.onInput(e));
         this.saveButton.addEventListener('click', () => this.saveEntry());
         this.deleteAllButton.addEventListener('click', () => this.confirmDeleteAll());
+        this.exportButton.addEventListener('click', () => this.exportToClipboard());
+        this.importButton.addEventListener('click', () => this.importFromTextbox());
     }
 
     onInput(event) {
@@ -167,5 +184,23 @@ export class PersonNameManager {
         });
 
         this.entryListContainer.appendChild(ol);
+    }
+
+    exportToClipboard() {
+        const names = this.entries.map(entry => entry.name).join(', ');
+        navigator.clipboard.writeText(names).then(() => {
+            console.log(`Copied to clipboard: ${names}`);
+        }).catch(err => {
+            console.error('Failed to copy to clipboard', err);
+        });
+        console.log(`Exported Names: ${names}`);
+    }
+
+    importFromTextbox() {
+        const names = this.inputBox.value.split(',').map(name => name.trim()).filter(name => name);
+        names.forEach(name => this.addEntry(name));
+        this.saveEntriesToStorage();
+        this.renderEntryList();
+        this.inputBox.value = '';
     }
 }
