@@ -54,6 +54,9 @@ class TabularCharts {
         buttons.forEach(button => {
             button.addEventListener('click', () => this.fillRandomNumbers());
         });
+
+        // Add the new copy to clipboard button
+        this.addCopyButton();
     }
 
     createGradientCell() {
@@ -96,7 +99,44 @@ class TabularCharts {
         TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".tbl-tabular-chart"));
     }
 
-    // New method to get cell value
+    // New method to copy filtered names to clipboard
+    copyFilteredNamesToClipboard() {
+        const tableBody = document.getElementById(this.tableId).querySelector("tbody");
+        const rows = tableBody.querySelectorAll("tr:not(.header-row)");
+        let names = [];
+
+        rows.forEach(row => {
+            const cells = row.querySelectorAll("td");
+            const rowName = cells[0].textContent.trim();
+            const firstCellValue = parseInt(cells[1].querySelector(".gradient-cell div").textContent.trim(), 10);
+
+            if (firstCellValue >= TfcGlobal.AngelsSayYes) {
+                names.push(rowName);
+            }
+        });
+
+        const namesString = names.join(", ");
+        navigator.clipboard.writeText(namesString).then(() => {
+            console.log(namesString);
+        }).catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+    }
+
+    // Method to add the copy button to the UI
+    addCopyButton() {
+        const button = document.createElement('button');
+        button.textContent = 'Copy Filtered Names to Clipboard';
+        button.className = this.buttonCssClass;
+        button.style.marginTop = '10px';
+
+        button.addEventListener('click', () => this.copyFilteredNamesToClipboard());
+
+        const tableElement = document.getElementById(this.tableId);
+        tableElement.parentElement.insertBefore(button, tableElement);
+    }
+
+    // Method to get cell value
     getCellValue(rowName, columnName) {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr:not(.header-row)");
@@ -115,7 +155,7 @@ class TabularCharts {
         return null;
     }
 
-    // New method to generate HTML log
+    // Method to generate HTML log
     generateHtmlLog(name) {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr:not(.header-row)");
