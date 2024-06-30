@@ -126,15 +126,16 @@ class TabularCharts {
     // Method to add the copy button to the UI
     addCopyButton() {
         const button = document.createElement('button');
-        button.textContent = 'Copy Filtered Names to Clipboard';
+        button.textContent = 'Copy Filtered Row Names to Clipboard';
         button.className = this.buttonCssClass;
         button.style.marginTop = '10px';
-
+    
         button.addEventListener('click', () => this.copyFilteredNamesToClipboard());
-
+    
         const tableElement = document.getElementById(this.tableId);
-        tableElement.parentElement.insertBefore(button, tableElement);
+        tableElement.insertAdjacentElement('afterend', button);
     }
+    
 
     // Method to get cell value
     getCellValue(rowName, columnName) {
