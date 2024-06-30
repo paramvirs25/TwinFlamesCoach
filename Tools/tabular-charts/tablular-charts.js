@@ -1,9 +1,10 @@
 class TabularCharts {
-    constructor(tableId, columnNames, rowNames, buttonCssClass) {
+    constructor(tableId, columnNames, rowNames, buttonCssClass, isShowCopyFilteredRowButton = false) {
         this.tableId = tableId;
         this.columnNames = columnNames;
         this.rowNames = rowNames;
         this.buttonCssClass = buttonCssClass;
+        this.isShowCopyFilteredRowButton = isShowCopyFilteredRowButton;
         this.initializeTable();
     }
 
@@ -55,8 +56,10 @@ class TabularCharts {
             button.addEventListener('click', () => this.fillRandomNumbers());
         });
 
-        // Add the new copy to clipboard button
-        this.addCopyButton();
+        if(this.isShowCopyFilteredRowButton){
+            // Add the new copy to clipboard button
+            this.addCopyButton();
+        }
     }
 
     createGradientCell() {

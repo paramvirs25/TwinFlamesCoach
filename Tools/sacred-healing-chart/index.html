@@ -30,7 +30,7 @@
                 ];
                 const buttonCssClass = "btnSacredHealChart";
 
-                const tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+                const tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false);
                 new HealingLogger(tabularCharts, buttonCssClass, 'sacredHealingLog', 'healingLogContainer');
             }
 
