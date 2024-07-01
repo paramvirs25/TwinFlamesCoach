@@ -91,13 +91,13 @@ jQuery(function ($) {
 
         let answer = "";
         if (randomNum <= 33) {
-          answer = `Consider it NO.`;
+          answer = `👎👎<br/>Consider it a big NO.`;
         } else if (randomNum > 33 && randomNum < TfcGlobal.AngelsSayYes) { 
-          answer = `You can consider it as a YES, but angels are saying NO, especially if the score is below 63.`;
+          answer = `👎<br/>You can consider it as a YES, but angels are saying NO, especially if the score is below 63.`;
         } else if (randomNum >= TfcGlobal.AngelsSayYes && randomNum < 85) { 
-          answer = `You can take it as YES!`;
+          answer = `👍<br/>You can take it as YES!`;
         } else if (randomNum >= 85) {
-          answer = `Absolutely YES!`;
+          answer = `👍👍<br/>Absolutely YES!`;
         }
 
         gaugeElement.find('.dxg-title text').last().html(`${randomNum}`);
