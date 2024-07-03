@@ -15,6 +15,8 @@ class TfcGlobal {
     static SacredHealingChartRootPath = "Tools/sacred-healing-chart";
     static SacredHealingChartPath = `${TfcGlobal.SacredHealingChartRootPath}/index.html`;
 
+    static FamilyKriyaDeekshaChartPath = `Tools/family-kriya-deeksha-chart/index.html`;
+
     static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";
 
