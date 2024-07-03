@@ -1,0 +1,28 @@
+<table id="reikiHealStartTableBody" class="tbl-tabular-chart">
+</table>
+
+<!--Comment-->
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        function initializeTabularCharts() {
+            const tableId = "reikiHealStartTableBody";
+            const columnNames = ["Start Reiki", "Result"];
+            const rowNames = [
+                "Mass Healing", "Elements Healing", "Group Healing"
+            ];
+            const buttonCssClass = "btnReikiHealStartChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false);
+        }
+
+        // Check if the TabularCharts class is already defined
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+        } else {
+            initializeTabularCharts();
+        }
+    });
+
+</script>
