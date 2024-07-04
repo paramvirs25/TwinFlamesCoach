@@ -92,11 +92,11 @@ export class PersonNameManager {
     }
 
     onInput(event) {
-        const query = event.target.value.toLowerCase();
+        const query = event.target.value.trim().toLowerCase();
         this.autoCompleteList.innerHTML = '';
 
         if (query) {
-            const filteredEntries = this.entries.filter(entry => entry.name.toLowerCase().includes(query));
+            const filteredEntries = this.entries.filter(entry => entry.name.trim().toLowerCase().includes(query));
             filteredEntries.forEach(entry => {
                 const listItem = document.createElement('li');
                 listItem.textContent = entry.name;
@@ -115,26 +115,31 @@ export class PersonNameManager {
         this.autoCompleteList.style.display = 'none';
     }
 
+    normalizeAndAddEntry(name, value = 0) {
+        const normalizedName = name.trim().toLowerCase();
+
+        // Remove existing entry with the same name (case-insensitive and trimmed)
+        this.entries = this.entries.filter(entry => entry.name.trim().toLowerCase() !== normalizedName);
+
+        // Add new entry
+        this.entries.push({ name: name.trim(), value });
+        this.sortEntries();
+        this.saveEntriesToStorage();
+        this.renderEntryList();
+    }
+
     saveEntry() {
         const name = this.inputBox.value.trim();
-        const value = 0; // Set default value to 0
-
-        if (name && !this.entries.some(entry => entry.name === name)) {
-            this.entries.push({ name, value });
-            this.sortEntries();
-            this.saveEntriesToStorage();
-            this.renderEntryList();
+        if (name) {
+            this.normalizeAndAddEntry(name);
             this.inputBox.value = '';
             this.autoCompleteList.style.display = 'none';
         }
     }
 
     addEntry(name, value = 0) {
-        if (!this.entries.some(entry => entry.name === name)) {
-            this.entries.push({ name, value });
-            this.sortEntries();
-            this.saveEntriesToStorage();
-            this.renderEntryList();
+        if (name) {
+            this.normalizeAndAddEntry(name, value);
         }
     }
 
@@ -153,7 +158,8 @@ export class PersonNameManager {
     }
 
     deleteEntry(name) {
-        this.entries = this.entries.filter(entry => entry.name !== name);
+        const normalizedName = name.trim().toLowerCase();
+        this.entries = this.entries.filter(entry => entry.name.trim().toLowerCase() !== normalizedName);
         this.saveEntriesToStorage();
         this.renderEntryList();
     }
