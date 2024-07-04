@@ -16,19 +16,21 @@ export class ReikiAndSacredHealingChecker {
 
     checkHealingValues() {
         setTimeout(() => {
-            const reikiHealingValue = this.tabularCharts.getCellValue('Reiki Healing', 'Result');
-            const sacredHealingValue = this.tabularCharts.getCellValue('Sacred Healing', 'Result');
+            const name = prompt("Enter the person's name for Reiki/Sacred Healing List:");
+            if (name) {
+                const reikiHealingValue = this.tabularCharts.getCellValue('Reiki Healing', 'Result');
+                const sacredHealingValue = this.tabularCharts.getCellValue('Sacred Healing', 'Result');
 
-            if (reikiHealingValue >= TfcGlobal.AngelsSayYes || sacredHealingValue >= TfcGlobal.AngelsSayYes) {
-                const name = prompt("Enter the person's name for saving in Reiki/Sacred Healing List:");
-                if (name) {
-                    if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
-                        this.reikiNameManager.addEntry(name, reikiHealingValue);
-                    }
+                if(reikiHealingValue >= TfcGlobal.AngelsSayYes){
+                    this.reikiNameManager.addEntry(name, reikiHealingValue);
+                }else{
+                    this.reikiNameManager.deleteEntry(name);
+                }
 
-                    if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
-                        this.sacredHealNameManager.addEntry(name, sacredHealingValue);
-                    }
+                if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
+                    this.sacredHealNameManager.addEntry(name, sacredHealingValue);
+                }else{
+                    this.sacredHealNameManager.deleteEntry(name);
                 }
             }
         }, 1000); // Wait for 1 second
