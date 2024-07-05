@@ -214,9 +214,9 @@ export class PersonNameManager {
 
     importFromTextbox() {
         const names = this.inputBox.value.split(',').map(name => name.trim()).filter(name => name);
-        names.forEach(name => this.addEntry(name));
+        names.forEach(name => this.normalizeAndAddEntry(name));
         this.saveEntriesToStorage();
         this.renderEntryList();
         this.inputBox.value = '';
-    }
+    }    
 }
