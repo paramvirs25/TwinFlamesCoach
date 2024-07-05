@@ -36,7 +36,58 @@ export class PersonNameManager {
     }
 
     createUI() {
-        // (UI creation code remains the same)
+        // Create the input box
+        this.inputBox = document.createElement('input');
+        this.inputBox.setAttribute('type', 'text');
+        this.inputBox.setAttribute('placeholder', `Enter a ${this.nameIdentifier} name`);
+        this.inputBox.style.marginRight = '10px';
+
+        // Create the save button
+        this.saveButton = document.createElement('button');
+        this.saveButton.textContent = `Save`;
+        this.saveButton.style.marginRight = '10px';
+
+        // Create the auto-complete list
+        this.autoCompleteList = document.createElement('ul');
+        this.autoCompleteList.style.listStyleType = 'none';
+        this.autoCompleteList.style.padding = '0';
+        this.autoCompleteList.style.margin = '0';
+        this.autoCompleteList.style.position = 'absolute';
+        this.autoCompleteList.style.backgroundColor = 'white';
+        this.autoCompleteList.style.border = '1px solid #ccc';
+        this.autoCompleteList.style.display = 'none';
+
+        // Create the sorted entry list container
+        this.entryListContainer = document.createElement('div');
+
+        // Create the button to delete all entries
+        this.deleteAllButton = document.createElement('button');
+        this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Entries`;
+        this.deleteAllButton.style.marginTop = '10px';
+
+        // Create the export to clipboard button
+        this.exportButton = document.createElement('button');
+        this.exportButton.textContent = `Export To Clipboard`;
+        this.exportButton.style.marginTop = '10px';
+
+        // Create the import names with commas button
+        this.importButton = document.createElement('button');
+        this.importButton.textContent = `Import Names with Commas`;
+        this.importButton.style.marginTop = '10px';
+
+        // Append elements to the accordion content
+        this.accordion.accordionContent.appendChild(this.autoCompleteList);
+        this.accordion.accordionContent.appendChild(this.entryListContainer);
+        this.accordion.accordionContent.appendChild(this.deleteAllButton);
+        this.accordion.accordionContent.appendChild(document.createElement('br'));
+        this.accordion.accordionContent.appendChild(this.inputBox);
+        this.accordion.accordionContent.appendChild(this.saveButton);
+        this.accordion.accordionContent.appendChild(document.createElement('br'));
+        this.accordion.accordionContent.appendChild(this.exportButton);
+        this.accordion.accordionContent.appendChild(document.createElement('br'));
+        this.accordion.accordionContent.appendChild(this.importButton);
+
+        this.renderEntryList();
     }
 
     attachEventListeners() {
@@ -102,5 +153,70 @@ export class PersonNameManager {
         }
     }
 
-    // (rest of the methods remain the same)
+    sortEntries() {
+        if (this.isSortNames) {
+            this.entries.sort((a, b) => a.name.localeCompare(b.name));
+        } else if (this.isSortByValue) {
+            this.entries.sort((a, b) => b.value - a.value);
+        }
+    }
+
+    confirmDeleteAll() {
+        if (confirm(`Are you sure you want to delete all ${this.nameIdentifier} entries?`)) {
+            this.deleteAllEntries();
+        }
+    }
+
+    deleteEntry(name) {
+        const normalizedName = name.trim().toLowerCase();
+        this.entries = this.entries.filter(entry => entry.name.trim().toLowerCase() !== normalizedName);
+        this.saveEntriesToStorage();
+        this.renderEntryList();
+    }
+
+    deleteAllEntries() {
+        this.entries = [];
+        this.saveEntriesToStorage();
+        this.renderEntryList();
+    }
+
+    renderEntryList() {
+        this.entryListContainer.innerHTML = '';
+        const ol = document.createElement('ol');
+
+        this.entries.forEach(entry => {
+            const li = document.createElement('li');
+            li.textContent = `${entry.name} (Value: ${entry.value})`;
+
+            const deleteButton = document.createElement('span');
+            deleteButton.textContent = ' X';
+            deleteButton.style.color = 'red';
+            deleteButton.style.cursor = 'pointer';
+            deleteButton.style.marginLeft = '10px';
+            deleteButton.addEventListener('click', () => this.deleteEntry(entry.name));
+
+            li.appendChild(deleteButton);
+            ol.appendChild(li);
+        });
+
+        this.entryListContainer.appendChild(ol);
+    }
+
+    exportToClipboard() {
+        const names = this.entries.map(entry => entry.name).join(', ');
+        navigator.clipboard.writeText(names).then(() => {
+            console.log(`Copied to clipboard: ${names}`);
+        }).catch(err => {
+            console.error('Failed to copy to clipboard', err);
+        });
+        console.log(`Exported Names: ${names}`);
+    }
+
+    importFromTextbox() {
+        const names = this.inputBox.value.split(',').map(name => name.trim()).filter(name => name);
+        names.forEach(name => this.addEntry(name));
+        this.saveEntriesToStorage();
+        this.renderEntryList();
+        this.inputBox.value = '';
+    }
 }
