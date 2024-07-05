@@ -1,9 +1,12 @@
+import { PersonNameMaster } from './PersonNameMaster.js';
+
 export class ReikiAndSacredHealingChecker {
     constructor(tabularCharts, buttonClass, reikiNameManager, sacredHealNameManager) {
         this.tabularCharts = tabularCharts;
         this.buttonClass = buttonClass;
         this.reikiNameManager = reikiNameManager;
         this.sacredHealNameManager = sacredHealNameManager;
+        this.personNameMaster = new PersonNameMaster();
         this.attachEventToButton();
     }
 
@@ -16,23 +19,22 @@ export class ReikiAndSacredHealingChecker {
 
     checkHealingValues() {
         setTimeout(() => {
-            const name = prompt("Enter the person's name for Reiki/Sacred Healing List:");
-            if (name) {
+            this.personNameMaster.openModal((name) => {
                 const reikiHealingValue = this.tabularCharts.getCellValue('Reiki Healing', 'Result');
                 const sacredHealingValue = this.tabularCharts.getCellValue('Sacred Healing', 'Result');
 
-                if(reikiHealingValue >= TfcGlobal.AngelsSayYes){
+                if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
                     this.reikiNameManager.addEntry(name, reikiHealingValue);
-                }else{
+                } else {
                     this.reikiNameManager.deleteEntry(name);
                 }
 
                 if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
                     this.sacredHealNameManager.addEntry(name, sacredHealingValue);
-                }else{
+                } else {
                     this.sacredHealNameManager.deleteEntry(name);
                 }
-            }
+            });
         }, 1000); // Wait for 1 second
     }
 }
