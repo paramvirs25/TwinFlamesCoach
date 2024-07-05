@@ -45,6 +45,7 @@ export class PersonNameManager {
         // Create the save button
         this.saveButton = document.createElement('button');
         this.saveButton.textContent = `Save`;
+        this.saveButton.className = 'wp-block-button__link wp-element-button';
         this.saveButton.style.marginRight = '10px';
 
         // Create the auto-complete list
@@ -60,24 +61,34 @@ export class PersonNameManager {
         // Create the sorted entry list container
         this.entryListContainer = document.createElement('div');
 
+        // Create the button to randomize values
+        this.randomizeButton = document.createElement('button');
+        this.randomizeButton.textContent = `Randomize Values`;
+        this.randomizeButton.className = 'wp-block-button__link wp-element-button';
+        this.randomizeButton.style.marginTop = '10px';
+
         // Create the button to delete all entries
         this.deleteAllButton = document.createElement('button');
         this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Entries`;
+        this.deleteAllButton.className = 'wp-block-button__link wp-element-button';
         this.deleteAllButton.style.marginTop = '10px';
 
         // Create the export to clipboard button
         this.exportButton = document.createElement('button');
         this.exportButton.textContent = `Export To Clipboard`;
+        this.exportButton.className = 'wp-block-button__link wp-element-button';
         this.exportButton.style.marginTop = '10px';
 
         // Create the import names with commas button
         this.importButton = document.createElement('button');
         this.importButton.textContent = `Import Names with Commas`;
+        this.importButton.className = 'wp-block-button__link wp-element-button';
         this.importButton.style.marginTop = '10px';
 
         // Append elements to the accordion content
         this.accordion.accordionContent.appendChild(this.autoCompleteList);
         this.accordion.accordionContent.appendChild(this.entryListContainer);
+        this.accordion.accordionContent.appendChild(this.randomizeButton);
         this.accordion.accordionContent.appendChild(this.deleteAllButton);
         this.accordion.accordionContent.appendChild(document.createElement('br'));
         this.accordion.accordionContent.appendChild(this.inputBox);
@@ -93,6 +104,7 @@ export class PersonNameManager {
     attachEventListeners() {
         this.inputBox.addEventListener('input', (e) => this.onInput(e));
         this.saveButton.addEventListener('click', () => this.saveEntry());
+        this.randomizeButton.addEventListener('click', () => this.randomizeValues());
         this.deleteAllButton.addEventListener('click', () => this.confirmDeleteAll());
         this.exportButton.addEventListener('click', () => this.exportToClipboard());
         this.importButton.addEventListener('click', () => this.importFromTextbox());
@@ -218,5 +230,17 @@ export class PersonNameManager {
         this.saveEntriesToStorage();
         this.renderEntryList();
         this.inputBox.value = '';
-    }    
+    }
+
+    randomizeValues() {
+        this.entries = this.entries.map(entry => ({
+            ...entry,
+            value: Math.floor(Math.random() * 100) + 1
+        }));
+        this.saveEntriesToStorage();
+        this.renderEntryList();
+        
+        const highestValueEntry = this.entries.reduce((max, entry) => entry.value > max.value ? entry : max, this.entries[0]);
+        alert(`Entry with highest value: ${highestValueEntry.name} (Value: ${highestValueEntry.value})`);
+    }
 }
