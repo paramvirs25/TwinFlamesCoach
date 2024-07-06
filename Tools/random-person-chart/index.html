@@ -7,6 +7,7 @@
 <script type="module">
     (async () => {
         // Dynamically import the modules
+        const { PersonNameMaster } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.RandomPersonChartRootPath, 'person-name-master.js'));
         const { PersonNameManager } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.RandomPersonChartRootPath, 'person-name-manager.js'));
         const { ReikiAndSacredHealingChecker } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.RandomPersonChartRootPath, 'reiki-healing-checker.js'));
 
@@ -32,14 +33,16 @@
                 initializeTabularCharts();
             }
 
+            const personNameMaster = new PersonNameMaster();
+
             // Instantiate the PersonNameManager for Reiki list
-            const reikiNameManager = new PersonNameManager('reiki', 'divReikiNameManager', 'Reiki', true);
+            const reikiNameManager = new PersonNameManager('reiki', 'divReikiNameManager', 'Reiki', true, false, personNameMaster);
 
             // Instantiate the PersonNameManager for sacred healing list
-            const sacredHealNameManager = new PersonNameManager('sacredheal', 'divSacredHealNameManager', 'Sacred Heal', false, true);
+            const sacredHealNameManager = new PersonNameManager('sacredheal', 'divSacredHealNameManager', 'Sacred Heal', false, true, personNameMaster);
 
             // Instantiate the ReikiAndSacredHealingChecker
-            const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker(tabularCharts, 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager);
+            const reikiAndSacredHealingChecker = new ReikiAndSacredHealingChecker(tabularCharts, 'btnRandomPersonChart', reikiNameManager, sacredHealNameManager, personNameMaster);
         });
     })();
 </script>

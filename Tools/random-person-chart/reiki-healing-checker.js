@@ -1,20 +1,22 @@
 //import { PersonNameMaster } from './PersonNameMaster.js';
 
 export class ReikiAndSacredHealingChecker {
-    constructor(tabularCharts, buttonClass, reikiNameManager, sacredHealNameManager) {
+    constructor(tabularCharts, buttonClass, reikiNameManager, sacredHealNameManager, personNameMaster) {
         this.tabularCharts = tabularCharts;
         this.buttonClass = buttonClass;
         this.reikiNameManager = reikiNameManager;
         this.sacredHealNameManager = sacredHealNameManager;
 
-        this.init();
+        this.init(personNameMaster);
     }
 
-    async init() {
-        const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');
-        console.log(personNameMasterJsUrl);
-        const { PersonNameMaster } = await import(personNameMasterJsUrl);
-        this.personNameMaster = new PersonNameMaster();
+    async init(personNameMaster) {
+        // const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');
+        // console.log(personNameMasterJsUrl);
+        // const { PersonNameMaster } = await import(personNameMasterJsUrl);
+        // this.personNameMaster = new PersonNameMaster();
+
+        this.personNameMaster = personNameMaster;
         
         this.attachEventToButton();
     }

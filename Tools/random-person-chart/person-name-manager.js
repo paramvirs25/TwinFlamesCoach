@@ -1,5 +1,5 @@
 export class PersonNameManager {
-    constructor(storageKey = 'TFCDB', parentElementId = null, nameIdentifier = '', isSortNames = true, isSortByValue = false) {
+    constructor(storageKey = 'TFCDB', parentElementId = null, nameIdentifier = '', isSortNames = true, isSortByValue = false, personNameMaster = null) {
         this.storageKey = storageKey;
         this.nameIdentifier = nameIdentifier;
         this.isSortNames = isSortNames;
@@ -7,17 +7,19 @@ export class PersonNameManager {
         this.parentElementId = parentElementId;
         this.accordion = null;
         this.personNameMaster = null;
-        this.init();
+        this.init(personNameMaster);
     }
 
-    async init() {
+    async init(personNameMaster) {
         const { Accordion } = await import(TfcGlobal.AccordionJsUrl);
         this.accordion = new Accordion(`All ${this.nameIdentifier} Person Entries`, this.parentElementId);
 
-        const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');
-        console.log(personNameMasterJsUrl);
-        const { PersonNameMaster } = await import(personNameMasterJsUrl);
-        this.personNameMaster = new PersonNameMaster();
+        // const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');
+        // console.log(personNameMasterJsUrl);
+        // const { PersonNameMaster } = await import(personNameMasterJsUrl);
+        // this.personNameMaster = new PersonNameMaster();
+
+        this.personNameMaster = personNameMaster;
 
         this.entries = this.getEntriesFromStorage();
         this.createUI();
