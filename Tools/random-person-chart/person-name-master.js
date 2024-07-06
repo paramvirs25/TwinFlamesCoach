@@ -4,12 +4,12 @@ export class PersonNameMaster {
         this.names = this.getNamesFromStorage();
         this.createModal();
         this.init();
-        //this.accordion = new Accordion('Stored Names', this.modalContent.id);
     }
 
     async init() {
         const { Accordion } = await import(TfcGlobal.AccordionJsUrl);
-        this.accordion = new Accordion(`Stored Names`, this.modalContent.id);
+        this.accordion = new Accordion('Stored Names', this.modalContent.id);
+        this.renderAccordionContent();
     }
 
     getNamesFromStorage() {
@@ -156,6 +156,8 @@ export class PersonNameMaster {
             content += `<li>${name}</li>`;
         });
         content += '</ul>';
-        this.accordion.setContent(content);
+        if (this.accordion) {
+            this.accordion.setContent(content);
+        }
     }
 }
