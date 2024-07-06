@@ -30,6 +30,12 @@ export class Accordion {
         this.accordionContent.style.border = '1px solid #ccc';
         this.accordionContent.style.borderTop = 'none';
 
+        // Create the close button
+        this.closeButton = document.createElement('button');
+        this.closeButton.textContent = 'Close';
+        this.closeButton.style.marginTop = '10px';
+
+        this.accordionContent.appendChild(this.closeButton);
         this.container.appendChild(this.accordionHeader);
         this.container.appendChild(this.accordionContent);
 
@@ -43,18 +49,31 @@ export class Accordion {
 
     attachEventListeners() {
         this.accordionHeader.addEventListener('click', () => this.toggleAccordion());
+        this.closeButton.addEventListener('click', () => this.closeAccordion());
     }
 
     toggleAccordion() {
-        this.accordionContent.style.display = this.accordionContent.style.display === 'none' ? 'block' : 'none';
+        if (this.accordionContent.style.display === 'none') {
+            this.accordionContent.style.display = 'block';
+        } else {
+            this.accordionContent.style.display = 'none';
+        }
+    }
+
+    closeAccordion() {
+        this.accordionContent.style.display = 'none';
+        this.accordionHeader.scrollIntoView({ behavior: 'smooth' });
     }
 
     setContent(htmlContent) {
+        // Ensure the close button is always at the end
         this.accordionContent.innerHTML = htmlContent;
+        this.accordionContent.appendChild(this.closeButton);
     }
 
     appendContent(htmlContent) {
         this.accordionContent.insertAdjacentHTML('afterbegin', htmlContent);
+        this.accordionContent.appendChild(this.closeButton);
     }
 
     getContent() {
