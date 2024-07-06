@@ -11,9 +11,7 @@ export class PersonNameManager {
     }
 
     async init() {
-        const accordionJsUrl = TfcGlobal.getFullFileUrl('Javascript/accordion.js');
-        console.log(accordionJsUrl);
-        const { Accordion } = await import(accordionJsUrl);
+        const { Accordion } = await import(TfcGlobal.AccordionJsUrl);
         this.accordion = new Accordion(`All ${this.nameIdentifier} Person Entries`, this.parentElementId);
 
         const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');

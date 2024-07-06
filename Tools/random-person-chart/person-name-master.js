@@ -3,6 +3,13 @@ export class PersonNameMaster {
         this.storageKey = 'TFCNameStorage';
         this.names = this.getNamesFromStorage();
         this.createModal();
+        this.init();
+        //this.accordion = new Accordion('Stored Names', this.modalContent.id);
+    }
+
+    async init() {
+        const { Accordion } = await import(TfcGlobal.AccordionJsUrl);
+        this.accordion = new Accordion(`Stored Names`, this.modalContent.id);
     }
 
     getNamesFromStorage() {
@@ -19,6 +26,7 @@ export class PersonNameMaster {
         if (!this.names.some(n => n.trim().toLowerCase() === normalizedName)) {
             this.names.push(name.trim());
             this.saveNamesToStorage();
+            this.renderAccordionContent();
         }
     }
 
@@ -35,12 +43,16 @@ export class PersonNameMaster {
         this.modal.style.overflow = 'auto';
         this.modal.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
 
-        const modalContent = document.createElement('div');
-        modalContent.style.backgroundColor = '#fefefe';
-        modalContent.style.margin = '15% auto';
-        modalContent.style.padding = '20px';
-        modalContent.style.border = '1px solid #888';
-        modalContent.style.width = '80%';
+        this.modalContent = document.createElement('div');
+        this.modalContent.id = 'modalContent';
+        this.modalContent.style.backgroundColor = '#fefefe';
+        this.modalContent.style.margin = 'auto';
+        this.modalContent.style.padding = '20px';
+        this.modalContent.style.border = '1px solid #888';
+        this.modalContent.style.width = '80%';
+        this.modalContent.style.position = 'relative';
+        this.modalContent.style.top = '50%';
+        this.modalContent.style.transform = 'translateY(-50%)';
 
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
@@ -69,10 +81,10 @@ export class PersonNameMaster {
         buttonContainer.appendChild(this.okButton);
         buttonContainer.appendChild(this.cancelButton);
 
-        modalContent.appendChild(this.inputBox);
-        modalContent.appendChild(this.autoCompleteList);
-        modalContent.appendChild(buttonContainer);
-        this.modal.appendChild(modalContent);
+        this.modalContent.appendChild(this.inputBox);
+        this.modalContent.appendChild(this.autoCompleteList);
+        this.modalContent.appendChild(buttonContainer);
+        this.modal.appendChild(this.modalContent);
         document.body.appendChild(this.modal);
 
         this.attachEventListeners();
@@ -131,9 +143,19 @@ export class PersonNameMaster {
         this.autoCompleteList.innerHTML = '';
         this.autoCompleteList.style.display = 'none';
         this.modal.style.display = 'block';
+        this.renderAccordionContent();
     }
 
     closeModal() {
         this.modal.style.display = 'none';
+    }
+
+    renderAccordionContent() {
+        let content = '<ul>';
+        this.names.forEach(name => {
+            content += `<li>${name}</li>`;
+        });
+        content += '</ul>';
+        this.accordion.setContent(content);
     }
 }
