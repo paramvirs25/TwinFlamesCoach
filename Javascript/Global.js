@@ -10,7 +10,10 @@ class TfcGlobal {
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
     
     static GaugeChartRootPath = "Tools/gauge-chart";
-    static GaugeChartPath = `${TfcGlobal.GaugeChartRootPath}/index.html`;    
+    static GaugeChartPath = `${TfcGlobal.GaugeChartRootPath}/index.html`;
+
+    static MultipleOptionsRootPath = "Tools/multiple-options-chart";
+    static MultipleOptionsChartPath = `${TfcGlobal.MultipleOptionsRootPath}/index.html`;
 
     static RandomPersonChartRootPath = "Tools/random-person-chart";
     static RandomPersonChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;

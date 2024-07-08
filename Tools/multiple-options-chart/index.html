@@ -1,0 +1,40 @@
+<table id="loadOptionsTableBody" class="tbl-tabular-chart">
+</table>
+
+<textarea id="rowNamesInput" placeholder="Enter row names, separated by commas and newlines"></textarea>
+<button id="loadOptionsButton">LoadOptions</button>
+
+<!--Comment-->
+
+<script>
+    jQuery(document).ready(function ($) {
+        
+        function initializeTabularCharts(rowNames) {
+            const tableId = "loadOptionsTableBody";
+            const columnNames = ["Option", "Result"];
+            const buttonCssClass = "btnLoadOptionsChart";
+
+            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass);
+        }
+
+        function getRowNamesFromTextarea() {
+            const textareaValue = $('#rowNamesInput').val();
+            const rowNames = textareaValue.split(/[\n,]+/).map(name => name.trim()).filter(name => name);
+            return rowNames;
+        }
+
+        $('#loadOptionsButton').on('click', function () {
+            const rowNames = getRowNamesFromTextarea();
+            initializeTabularCharts(rowNames);
+        });
+
+        // Initial check to load TabularCharts class
+        if (typeof TabularCharts === 'undefined') {
+            TfcGlobal.loadTabularChartScript().done(function() {
+                $('#loadOptionsButton').trigger('click');
+            });
+        } else {
+            $('#loadOptionsButton').trigger('click');
+        }
+    });
+</script>
