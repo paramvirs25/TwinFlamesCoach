@@ -19,9 +19,10 @@
 
         function getRowNamesFromTextarea() {
             const textareaValue = $('#rowNamesInput').val();
-            const rowNames = textareaValue.split(/[\n]+/).map(name => name.trim()).filter(name => name);
+            const rowNames = textareaValue.split('\n').map(name => name.trim()).filter(name => name);
             return rowNames;
         }
+
 
         $('#loadOptionsButton').on('click', function () {
             const rowNames = getRowNamesFromTextarea();
