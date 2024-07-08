@@ -32,10 +32,10 @@
         // Initial check to load TabularCharts class
         if (typeof TabularCharts === 'undefined') {
             TfcGlobal.loadTabularChartScript().done(function() {
-                $('#loadOptionsButton').trigger('click');
+                //$('#loadOptionsButton').trigger('click');
             });
         } else {
-            $('#loadOptionsButton').trigger('click');
+           // $('#loadOptionsButton').trigger('click');
         }
     });
 </script>
