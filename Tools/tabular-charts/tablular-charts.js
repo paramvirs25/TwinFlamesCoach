@@ -1,10 +1,11 @@
 class TabularCharts {
-    constructor(tableId, columnNames, rowNames, buttonCssClass, isShowCopyFilteredRowButton = false) {
+    constructor(tableId, columnNames, rowNames, buttonCssClass, isShowCopyFilteredRowButton = false, copyFilteredRowSeparator = ", ") {
         this.tableId = tableId;
         this.columnNames = columnNames;
         this.rowNames = rowNames;
         this.buttonCssClass = buttonCssClass;
         this.isShowCopyFilteredRowButton = isShowCopyFilteredRowButton;
+        this.copyFilteredRowSeparator = copyFilteredRowSeparator;
         this.initializeTable();
     }
 
@@ -118,7 +119,7 @@ class TabularCharts {
             }
         });
 
-        const namesString = names.join(", ");
+        const namesString = names.join(this.copyFilteredRowSeparator);
         navigator.clipboard.writeText(namesString).then(() => {
             console.log(namesString);
         }).catch(err => {

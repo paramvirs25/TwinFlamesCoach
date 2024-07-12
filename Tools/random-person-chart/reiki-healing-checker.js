@@ -11,6 +11,11 @@ export class ReikiAndSacredHealingChecker {
     }
 
     async init(personNameMaster) {
+        // const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');
+        // console.log(personNameMasterJsUrl);
+        // const { PersonNameMaster } = await import(personNameMasterJsUrl);
+        // this.personNameMaster = new PersonNameMaster();
+
         this.personNameMaster = personNameMaster;
         
         this.attachEventToButton();
@@ -26,24 +31,20 @@ export class ReikiAndSacredHealingChecker {
     checkHealingValues() {
         setTimeout(() => {
             this.personNameMaster.openModal((name) => {
-                const considerPersonValue = this.tabularCharts.getCellValue('To Consider this person?', 'Result');
                 const reikiHealingValue = this.tabularCharts.getCellValue('Reiki Healing', 'Result');
                 const sacredHealingValue = this.tabularCharts.getCellValue('Sacred Healing', 'Result');
 
-                //if person is to be considered
-                if(considerPersonValue >= TfcGlobal.AngelsSayYes){
-                    if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
-                        this.reikiNameManager.addEntry(name, reikiHealingValue);
-                    } 
-
-                    if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
-                        this.sacredHealNameManager.addEntry(name, sacredHealingValue);
-                    } 
+                if (reikiHealingValue >= TfcGlobal.AngelsSayYes) {
+                    this.reikiNameManager.addEntry(name, reikiHealingValue);
                 } else {
                     this.reikiNameManager.deleteEntry(name);
+                }
+
+                if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
+                    this.sacredHealNameManager.addEntry(name, sacredHealingValue);
+                } else {
                     this.sacredHealNameManager.deleteEntry(name);
                 }
-                
             });
         }, 1000); // Wait for 1 second
     }
