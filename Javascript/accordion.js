@@ -67,7 +67,8 @@ export class Accordion {
 
     setContent(htmlContent) {
         // Ensure the close button is always at the end
-        this.accordionContent.innerHTML = htmlContent;
+        //this.accordionContent.innerHTML = htmlContent;
+        this.accordionContent.insertAdjacentHTML('afterbegin', htmlContent);
         this.accordionContent.appendChild(this.closeButton);
     }
 
