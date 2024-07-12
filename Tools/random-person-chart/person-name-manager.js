@@ -13,12 +13,6 @@ export class PersonNameManager {
     async init(personNameMaster) {
         const { Accordion } = await import(TfcGlobal.AccordionJsUrl);
         this.accordion = new Accordion(`All ${this.nameIdentifier} Person Entries`, this.parentElementId);
-
-        // const personNameMasterJsUrl = TfcGlobal.getFullFileUrl('Tools/random-person-chart/person-name-master.js');
-        // console.log(personNameMasterJsUrl);
-        // const { PersonNameMaster } = await import(personNameMasterJsUrl);
-        // this.personNameMaster = new PersonNameMaster();
-
         this.personNameMaster = personNameMaster;
 
         this.entries = this.getEntriesFromStorage();
@@ -67,6 +61,18 @@ export class PersonNameManager {
         this.randomizeButton.className = 'wp-block-button__link wp-element-button';
         this.randomizeButton.style.marginTop = '10px';
 
+        // Create the tools toggle link
+        this.toolsToggleLink = document.createElement('a');
+        this.toolsToggleLink.href = '#';
+        this.toolsToggleLink.textContent = 'Tools';
+        this.toolsToggleLink.style.display = 'block';
+        this.toolsToggleLink.style.marginTop = '10px';
+        this.toolsToggleLink.style.cursor = 'pointer';
+
+        // Create the tools container
+        this.toolsContainer = document.createElement('div');
+        this.toolsContainer.style.display = 'none';
+
         // Create the button to delete all entries
         this.deleteAllButton = document.createElement('button');
         this.deleteAllButton.textContent = `Delete All ${this.nameIdentifier} Entries`;
@@ -86,17 +92,20 @@ export class PersonNameManager {
         this.importButton.style.marginTop = '10px';
 
         // Append elements to the accordion content
-        this.accordion.accordionContent.appendChild(this.autoCompleteList);
-        this.accordion.accordionContent.appendChild(this.entryListContainer);
         this.accordion.accordionContent.appendChild(this.randomizeButton);
-        this.accordion.accordionContent.appendChild(this.deleteAllButton);
-        this.accordion.accordionContent.appendChild(document.createElement('br'));
-        this.accordion.accordionContent.appendChild(this.inputBox);
-        this.accordion.accordionContent.appendChild(this.saveButton);
-        this.accordion.accordionContent.appendChild(document.createElement('br'));
-        this.accordion.accordionContent.appendChild(this.exportButton);
-        this.accordion.accordionContent.appendChild(document.createElement('br'));
-        this.accordion.accordionContent.appendChild(this.importButton);
+        this.accordion.accordionContent.appendChild(this.entryListContainer);
+        this.accordion.accordionContent.appendChild(this.toolsToggleLink);
+        this.accordion.accordionContent.appendChild(this.toolsContainer);
+
+        this.toolsContainer.appendChild(this.autoCompleteList);
+        this.toolsContainer.appendChild(this.inputBox);
+        this.toolsContainer.appendChild(this.saveButton);
+        this.toolsContainer.appendChild(document.createElement('br'));
+        this.toolsContainer.appendChild(this.deleteAllButton);
+        this.toolsContainer.appendChild(document.createElement('br'));
+        this.toolsContainer.appendChild(this.exportButton);
+        this.toolsContainer.appendChild(document.createElement('br'));
+        this.toolsContainer.appendChild(this.importButton);
 
         this.renderEntryList();
     }
@@ -108,6 +117,14 @@ export class PersonNameManager {
         this.deleteAllButton.addEventListener('click', () => this.confirmDeleteAll());
         this.exportButton.addEventListener('click', () => this.exportToClipboard());
         this.importButton.addEventListener('click', () => this.importFromTextbox());
+        this.toolsToggleLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.toggleTools();
+        });
+    }
+
+    toggleTools() {
+        this.toolsContainer.style.display = this.toolsContainer.style.display === 'none' ? 'block' : 'none';
     }
 
     onInput(event) {
