@@ -35,9 +35,10 @@ export class Accordion {
         this.closeButton.textContent = 'Close';
         this.closeButton.style.marginTop = '10px';
 
-        this.accordionContent.appendChild(this.closeButton);
+        //this.accordionContent.appendChild(this.closeButton);
         this.container.appendChild(this.accordionHeader);
         this.container.appendChild(this.accordionContent);
+        this.container.appendChild(this.closeButton);
 
         const targetDiv = document.getElementById(this.parentElementId);
         if (targetDiv) {
@@ -67,8 +68,8 @@ export class Accordion {
 
     setContent(htmlContent) {
         // Ensure the close button is always at the end
-        //this.accordionContent.innerHTML = htmlContent;
-        this.accordionContent.insertAdjacentHTML('afterbegin', htmlContent);
+        this.accordionContent.innerHTML = htmlContent;
+        //this.accordionContent.insertAdjacentHTML('afterbegin', htmlContent);
         this.accordionContent.appendChild(this.closeButton);
     }
 
