@@ -254,10 +254,11 @@ export class PersonNameManager {
             ...entry,
             value: Math.floor(Math.random() * 100) + 1
         }));
+        this.sortEntries();
         this.saveEntriesToStorage();
         this.renderEntryList();
         
         const highestValueEntry = this.entries.reduce((max, entry) => entry.value > max.value ? entry : max, this.entries[0]);
-        alert(`Entry with highest value: ${highestValueEntry.name} (Value: ${highestValueEntry.value})`);
+        alert(`${highestValueEntry.name} (Value: ${highestValueEntry.value})`);
     }
 }

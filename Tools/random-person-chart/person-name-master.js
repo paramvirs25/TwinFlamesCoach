@@ -151,11 +151,11 @@ export class PersonNameMaster {
     }
 
     renderAccordionContent() {
-        let content = '<ul>';
+        let content = '<ol>';
         this.names.forEach(name => {
             content += `<li>${name}</li>`;
         });
-        content += '</ul>';
+        content += '</ol>';
         if (this.accordion) {
             this.accordion.setContent(content);
         }
