@@ -23,21 +23,32 @@ export class Accordion {
         this.accordionHeader.style.marginTop = '10px';
         this.accordionHeader.style.marginBottom = '10px';
 
+        //create accordian body
+        this.accordionBody = document.createElement('div');
+        this.accordionBody.style.display = 'none';
+        this.accordionBody.style.padding = '10px';
+        this.accordionBody.style.border = '1px solid #ccc';
+        this.accordionBody.style.borderTop = 'none';
+
         // Create the accordion content
         this.accordionContent = document.createElement('div');
-        this.accordionContent.style.display = 'none';
-        this.accordionContent.style.padding = '10px';
-        this.accordionContent.style.border = '1px solid #ccc';
-        this.accordionContent.style.borderTop = 'none';
+        // this.accordionContent.style.display = 'none';
+        // this.accordionContent.style.padding = '10px';
+        // this.accordionContent.style.border = '1px solid #ccc';
+        // this.accordionContent.style.borderTop = 'none';
 
         // Create the close button
         this.closeButton = document.createElement('button');
         this.closeButton.textContent = 'Close';
         this.closeButton.style.marginTop = '10px';
 
-        this.accordionContent.appendChild(this.closeButton);
+        this.accordionBody.appendChild(this.accordionContent);
+        this.accordionBody.appendChild(this.closeButton);
+
+        //this.accordionContent.appendChild(this.closeButton);
         this.container.appendChild(this.accordionHeader);
-        this.container.appendChild(this.accordionContent);
+        this.container.appendChild(this.accordionBody);
+        
 
         const targetDiv = document.getElementById(this.parentElementId);
         if (targetDiv) {
@@ -53,27 +64,28 @@ export class Accordion {
     }
 
     toggleAccordion() {
-        if (this.accordionContent.style.display === 'none') {
-            this.accordionContent.style.display = 'block';
+        if (this.accordionBody.style.display === 'none') {
+            this.accordionBody.style.display = 'block';
         } else {
-            this.accordionContent.style.display = 'none';
+            this.accordionBody.style.display = 'none';
         }
     }
 
     closeAccordion() {
-        this.accordionContent.style.display = 'none';
+        this.accordionBody.style.display = 'none';
         this.accordionHeader.scrollIntoView({ behavior: 'smooth' });
     }
 
     setContent(htmlContent) {
         // Ensure the close button is always at the end
         this.accordionContent.innerHTML = htmlContent;
-        this.accordionContent.appendChild(this.closeButton);
+        //this.accordionContent.insertAdjacentHTML('afterbegin', htmlContent);
+        //this.accordionContent.appendChild(this.closeButton);
     }
 
     appendContent(htmlContent) {
         this.accordionContent.insertAdjacentHTML('afterbegin', htmlContent);
-        this.accordionContent.appendChild(this.closeButton);
+        //this.accordionContent.appendChild(this.closeButton);
     }
 
     getContent() {
