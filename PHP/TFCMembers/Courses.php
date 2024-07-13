@@ -13,6 +13,7 @@ class Courses {
     const SHAKTI_KAWACH = "shakti_kawach";
     const APPRENTICE_BASIC_IW = "apprentice_basic_iw";
     const APPRENTICE_COACH = "apprentice_coach";
+    const KRIYA_KUNDALINI_TEACHER = "kriya_kundalini_teacher"; // this course is not conducted by us. Only use it in inner work progress meter
 
     private static $basic_iw_1 = null;
     public static function getBasicIw1()
@@ -73,6 +74,12 @@ class Courses {
     {
         return self::$apprentice_coach ?? self::$apprentice_coach = new Courses("Apprentice - Twin Flames Coach", self::APPRENTICE_COACH, "Apprenticeship TF Coach");
     }
+
+    private static $kriya_kundalini_teacher = null;
+    public static function getKriyaKundaliniTeacher()
+    {
+        return self::$kriya_kundalini_teacher ?? self::$kriya_kundalini_teacher = new Courses("Kriya Kundalini Teacher", self::KRIYA_KUNDALINI_TEACHER, "kriya kundalini teacher");
+    }
     
     public $courseName;
     public $courseRoleName;
@@ -112,6 +119,20 @@ class Courses {
             self::ADV_TF_HEALINGS_1 => self::getAdvancedTfHealings1(),
             self::CERTIFIED_COACH => self::getCertifiedCoach(),
             self::APPRENTICE_BASIC_IW => self::getApprenticeBasicIw(),            
+        );
+        return $courses;
+    }
+
+    public static function getCoursesListForInnerWorkProgress() {
+        $courses = array(
+            self::BASIC_IW_1 => self::getBasicIw1(),
+            self::TFCIW => self::getTfciw(),
+            self::ADV_TF_HEALINGS_1 => self::getAdvancedTfHealings1(),
+            self::CHAKRA_HEALING_BALANCING => self::getChakraHealingBalancing(),
+            self::CERTIFIED_COACH => self::getCertifiedCoach(),
+            self::APPRENTICE_BASIC_IW => self::getApprenticeBasicIw(),
+            self::APPRENTICE_COACH => self::getApprenticeCoach(),
+            self::KRIYA_KUNDALINI_TEACHER => self::getKriyaKundaliniTeacher(),
         );
         return $courses;
     }
