@@ -15,6 +15,9 @@ class TfcGlobal {
     static MultipleOptionsRootPath = "Tools/multiple-options-chart";
     static MultipleOptionsChartPath = `${TfcGlobal.MultipleOptionsRootPath}/index.html`;
 
+    static PercentGaugeRootPath = "Tools/percent-gauge";
+    static PercentGaugePath = `${TfcGlobal.PercentGaugeRootPath}/index.html`;
+
     static RandomPersonChartRootPath = "Tools/random-person-chart";
     static RandomPersonChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;
 
