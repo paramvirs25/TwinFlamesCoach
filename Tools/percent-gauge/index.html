@@ -1,11 +1,21 @@
-<div class="gauge">
-    <div class="gauge__body">
-        <div class="gauge__fill"></div>
-        <div class="gauge__cover"></div>
+<div class="gaugeParent">
+    <div class="gauge">
+        <div class="gauge__body">
+            <div class="gauge__fill"></div>
+            <div class="gauge__cover"></div>
+        </div>
     </div>
 </div>
 
 <style>
+    .gaugeParent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
     .gauge {
         width: 100%;
         max-width: 250px;
