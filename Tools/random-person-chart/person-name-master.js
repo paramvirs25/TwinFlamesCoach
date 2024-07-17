@@ -153,15 +153,27 @@ export class PersonNameMaster {
     }
 
     renderAccordionContent() {
+        // Clear existing content
+        this.autoCompleteList.innerHTML = '';
+    
+        // Create the content string for the accordion
         let content = '<ol>';
         this.names.forEach(name => {
             content += `<li>${name}</li>`;
         });
         content += '</ol>';
+    
+        // Update the accordion content
         if (this.accordion) {
             this.accordion.setContent(content);
         }
+    
+        // Re-attach the scroll functionality
+        if (this.autoCompleteList.scrollTop !== 0) {
+            this.autoCompleteList.scrollTop = 0; // Reset scroll position to the top
+        }
     }
+    
 
     createToolsSection() {
         // Create the tools toggle link
