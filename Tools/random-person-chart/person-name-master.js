@@ -42,9 +42,9 @@ export class PersonNameMaster {
         this.modal.style.top = '0';
         this.modal.style.width = '100%';
         this.modal.style.height = '100%';
-        this.modal.style.overflow = 'auto';
+        this.modal.style.overflowY = 'auto'; // Ensure modal can scroll vertically
         this.modal.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
-
+    
         this.modalContent = document.createElement('div');
         this.modalContent.id = 'modalContent';
         this.modalContent.style.backgroundColor = '#fefefe';
@@ -55,13 +55,15 @@ export class PersonNameMaster {
         this.modalContent.style.position = 'relative';
         this.modalContent.style.top = '50%';
         this.modalContent.style.transform = 'translateY(-50%)';
-
+    
+        // Ensure inputBox styles are correct
         this.inputBox = document.createElement('input');
         this.inputBox.setAttribute('type', 'text');
         this.inputBox.setAttribute('placeholder', 'Search or enter name');
         this.inputBox.style.width = 'calc(100% - 20px)';
         this.inputBox.style.marginBottom = '10px';
-
+    
+        // Ensure autoCompleteList styles are correct
         this.autoCompleteList = document.createElement('ul');
         this.autoCompleteList.style.listStyleType = 'none';
         this.autoCompleteList.style.padding = '0';
@@ -70,27 +72,28 @@ export class PersonNameMaster {
         this.autoCompleteList.style.overflowY = 'auto';
         this.autoCompleteList.style.border = '1px solid #ccc';
         this.autoCompleteList.style.display = 'none';
-
+    
         const buttonContainer = document.createElement('div');
         buttonContainer.style.textAlign = 'right';
-
+    
         this.okButton = document.createElement('button');
         this.okButton.textContent = 'OK';
-
+    
         this.cancelButton = document.createElement('button');
         this.cancelButton.textContent = 'Cancel';
-
+    
         buttonContainer.appendChild(this.okButton);
         buttonContainer.appendChild(this.cancelButton);
-
+    
         this.modalContent.appendChild(this.inputBox);
         this.modalContent.appendChild(this.autoCompleteList);
         this.modalContent.appendChild(buttonContainer);
         this.modal.appendChild(this.modalContent);
         document.body.appendChild(this.modal);
-
+    
         this.attachEventListeners();
     }
+    
 
     attachEventListeners() {
         this.inputBox.addEventListener('input', () => this.onInput());
@@ -153,9 +156,6 @@ export class PersonNameMaster {
     }
 
     renderAccordionContent() {
-        // Clear existing content
-        this.autoCompleteList.innerHTML = '';
-    
         // Create the content string for the accordion
         let content = '<ol>';
         this.names.forEach(name => {
@@ -168,11 +168,12 @@ export class PersonNameMaster {
             this.accordion.setContent(content);
         }
     
-        // Re-attach the scroll functionality
+        // Ensure the autoCompleteList scrolls correctly
         if (this.autoCompleteList.scrollTop !== 0) {
             this.autoCompleteList.scrollTop = 0; // Reset scroll position to the top
         }
     }
+    
     
 
     createToolsSection() {
