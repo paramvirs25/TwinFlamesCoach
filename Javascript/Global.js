@@ -24,6 +24,9 @@ class TfcGlobal {
     static SacredHealingChartRootPath = "Tools/sacred-healing-chart";
     static SacredHealingChartPath = `${TfcGlobal.SacredHealingChartRootPath}/index.html`;
 
+    static SacredHealingChartMaleRootPath = "Tools/sacred-healing-male-chart";
+    static SacredHealingChartMalePath = `${TfcGlobal.SacredHealingChartMaleRootPath}/index.html`;
+
     static FamilyKriyaDeekshaChartPath = `Tools/family-kriya-deeksha-chart/index.html`;
 
     static isTabluarChartAlreadyLoaded = false;
