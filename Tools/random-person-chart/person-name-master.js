@@ -9,8 +9,7 @@ export class PersonNameMaster {
     async init() {
         const { Accordion } = await import(TfcGlobal.AccordionJsUrl);
         this.accordion = new Accordion('Stored Names', this.modalContent.id);
-        this.renderAccordionContent();
-        this.createToolsSection();
+        this.renderAccordionContent();        
         this.attachToolsEventListeners();
     }
 
@@ -88,6 +87,9 @@ export class PersonNameMaster {
         this.modalContent.appendChild(this.inputBox);
         this.modalContent.appendChild(this.autoCompleteList);
         this.modalContent.appendChild(buttonContainer);
+
+        this.createToolsSection();
+
         this.modal.appendChild(this.modalContent);
         document.body.appendChild(this.modal);
     
@@ -230,8 +232,8 @@ export class PersonNameMaster {
         this.importButton.style.marginTop = '10px';
 
         // Append elements to the accordion content
-        this.accordion.accordionContent.appendChild(this.toolsToggleLink);
-        this.accordion.accordionContent.appendChild(this.toolsContainer);
+        this.modalContent.appendChild(this.toolsToggleLink);
+        this.modalContent.appendChild(this.toolsContainer);
 
         this.toolsContainer.appendChild(this.toolsAutoCompleteList);
         this.toolsContainer.appendChild(this.toolsInputBox);
