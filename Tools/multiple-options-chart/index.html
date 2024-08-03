@@ -27,15 +27,20 @@
             new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, true, separator);
         }
 
+        function getSelectedSeparator(){
+            const selectedSeparator = $('input[name="separator"]:checked').val();
+            return selectedSeparator === 'newline' ? '\n' : ',';
+        }
+
         function getRowNamesFromTextarea(separator) {
             const textareaValue = $('#rowNamesInput').val();
-            const separatorRegex = separator === 'newline' ? '\n' : ',';
-            const rowNames = textareaValue.split(separatorRegex).map(name => name.trim()).filter(name => name);
+            //const separatorRegex = separator === 'newline' ? '\n' : ',';
+            const rowNames = textareaValue.split(separator).map(name => name.trim()).filter(name => name);
             return rowNames;
         }
 
         $('#loadOptionsButton').on('click', function () {
-            const selectedSeparator = $('input[name="separator"]:checked').val();
+            const selectedSeparator = getSelectedSeparator();
             const rowNames = getRowNamesFromTextarea(selectedSeparator);
             initializeTabularCharts(rowNames, selectedSeparator);
         });
