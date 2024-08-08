@@ -32,7 +32,7 @@ class TfcGlobal {
     static isTabluarChartAlreadyLoaded = false;
     static TabularChartRootPath = "Tools/tabular-charts";
     
-    static YoutubeChannelSearchPath = `YoutubeChannelSearch/index.html`;
+    static YoutubeChannelSearchPath = `YoutubeChannelSearch/YoutubeChannelSearch.html`;
 
     static getFullFileUrl(fileUrl) {
         return `${TfcGlobal.CssJsPath}/${fileUrl}`;
