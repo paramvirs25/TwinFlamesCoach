@@ -20,7 +20,7 @@ add_shortcode('admin_tools', function () {
                 $out .= TFCMembers\UserPermissionManager::onGroupBasicIW2Complete();
                 break;
             case 'advtfheal':
-                //$out .= TFCMembers\UserPermissionManager::onUserBasicIW1Complete($userId);
+                $out .= TFCMembers\UserPermissionManager::onGroupAdvTfHealComplete();
                 break;         
             case 'userbiw1comp':
                     // Check if 'user_id' is set in the query string
