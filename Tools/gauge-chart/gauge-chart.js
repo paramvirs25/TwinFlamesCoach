@@ -89,7 +89,7 @@ jQuery(function ($) {
         let randomNum = Math.round(Math.random() * this._higherValue);
         let gaugeElement = jQuery(gauge._$element[0]);
 
-        let answer = randomNum + " => ";
+        let answer = randomNum + " = ";
         if (randomNum <= 33) {
           answer += `👎👎<br/>Consider it a big NO.`;
         } else if (randomNum > 33 && randomNum < TfcGlobal.AngelsSayYes) { 
