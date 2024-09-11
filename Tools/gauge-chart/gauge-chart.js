@@ -93,7 +93,7 @@ jQuery(function ($) {
         if (randomNum <= 33) {
           answer += `👎👎<br/>Consider it a big NO.`;
         } else if (randomNum > 33 && randomNum < TfcGlobal.AngelsSayYes) { 
-          answer += `👎<br/>You can consider it as a YES, but angels are saying NO, especially if the score is below 63.`;
+          answer += `👎<br/>Yes, but angels say NO (if score <${TfcGlobal.AngelsSayYes})`;
         } else if (randomNum >= TfcGlobal.AngelsSayYes && randomNum < 85) { 
           answer += `👍<br/>You can take it as YES!`;
         } else if (randomNum >= 85) {
