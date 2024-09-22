@@ -19,11 +19,14 @@ add_shortcode('admin_tools', function () {
             case 'biw2comp':
                 $out .= TFCMembers\UserPermissionManager::onGroupBasicIW2Complete();
                 break;
+            case 'advtfheal':
+                $out .= TFCMembers\UserPermissionManager::onGroupAdvTfHealComplete();
+                break;         
             case 'userbiw1comp':
-                // Check if 'user_id' is set in the query string
-                $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
-                $out .= TFCMembers\UserPermissionManager::onUserBasicIW1Complete($userId);
-                break;            
+                    // Check if 'user_id' is set in the query string
+                    $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
+                    $out .= TFCMembers\UserPermissionManager::onUserBasicIW1Complete($userId);
+                    break;       
             case 'use_user_consultation': //decrease free consultation counter
                 // Check if 'user_id' is set in the query string
                 $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
@@ -58,6 +61,8 @@ add_shortcode('admin_tools', function () {
           <!-- <p><input type="submit" value="Group Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'groupbiw1comp' ">(NOT-TESTED that if Folow-up role is added correctly )</p> -->
           
           <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' ">(NOT-TESTED For Free Consultation Increment)</p>
+
+          <p><input type="submit" value="Group Advance TF Heal Complete" onclick="document.forms['admintools'].act.value = 'advtfheal' ">(NOT-TESTED For Free Consultation Increment)</p>
 		</div>
         </form>
 HTML;

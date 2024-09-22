@@ -137,7 +137,9 @@ class TabularCharts {
         button.addEventListener('click', () => this.copyFilteredNamesToClipboard());
     
         const tableElement = document.getElementById(this.tableId);
-        tableElement.insertAdjacentElement('afterend', button);
+        //tableElement.insertAdjacentElement('afterend', button);
+        tableElement.insertAdjacentElement('beforebegin', button);
+
     }
     
 

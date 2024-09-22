@@ -1,0 +1,37 @@
+<table id="sacredHealingMaleTableBody" class="tbl-tabular-chart"></table>
+
+<!-- <div id="healingLogContainer"></div>  Container for the log -->
+
+<script>
+    (async () => {
+        // Dynamically import the modules
+        //const { HealingLogger } = await import(TfcGlobal.getFullFileUrlFromParts(TfcGlobal.SacredHealingChartRootPath, 'healing-logger.js'));
+
+        jQuery(document).ready(function ($) {
+            function initializeTabularCharts() {
+                const tableId = "sacredHealingMaleTableBody";
+                const columnNames = ["Healing Type", "Result"];
+                const rowNames = [
+                    "header:Physical Healing",
+                    "Fu Bod",
+                    "No", 
+                    "B Tou",
+                    "header:Emotional Healing",
+                    "An Fi", 
+                    "HJ", 
+                    "BJ",
+                ];
+                const buttonCssClass = "btnSacredHealMaleChart";
+
+                const tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false);
+                //new HealingLogger(tabularCharts, buttonCssClass, 'sacredHealingLog', 'healingLogContainer');
+            }
+
+            if (typeof TabularCharts === 'undefined') {
+                TfcGlobal.loadTabularChartScript().done(initializeTabularCharts);
+            } else {
+                initializeTabularCharts();
+            }
+        });
+    })();
+</script>

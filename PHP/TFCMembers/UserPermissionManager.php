@@ -75,6 +75,21 @@ class UserPermissionManager {
 		return $output;
 	}
 
+	public static function onGroupAdvTfHealComplete(){
+		$output = "onGroupAdvTfHealComplete starts -><br/>";
+		
+		$output .= UserPermissionManager::updateGroupUsers(
+			'group_advance_tf_healings', 
+			array( 'group_advance_tf_healings' ),
+			array( 'advanced_twin_flame_healings_1','followup' ),
+			true
+		);
+		
+		$output .= "onGroupAdvTfHealComplete ends<br/>";
+		
+		return $output;
+	}
+
 	public static function onUserBasicIW1Complete($user_id){
 		$output = "UpdateUserOnBasicIW1Complete starts -><br/>";
 

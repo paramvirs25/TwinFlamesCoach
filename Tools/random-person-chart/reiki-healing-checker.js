@@ -42,9 +42,10 @@ export class ReikiAndSacredHealingChecker {
 
                 if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
                     this.sacredHealNameManager.addEntry(name, sacredHealingValue);
-                } else {
-                    this.sacredHealNameManager.deleteEntry(name);
-                }
+                } 
+                // else {
+                //     this.sacredHealNameManager.deleteEntry(name);
+                // }
             });
         }, 1000); // Wait for 1 second
     }

@@ -89,15 +89,15 @@ jQuery(function ($) {
         let randomNum = Math.round(Math.random() * this._higherValue);
         let gaugeElement = jQuery(gauge._$element[0]);
 
-        let answer = "";
+        let answer = randomNum + " = ";
         if (randomNum <= 33) {
-          answer = `👎👎<br/>Consider it a big NO.`;
+          answer += `👎👎<br/>Consider it a big NO.`;
         } else if (randomNum > 33 && randomNum < TfcGlobal.AngelsSayYes) { 
-          answer = `👎<br/>You can consider it as a YES, but angels are saying NO, especially if the score is below 63.`;
+          answer += `👎<br/>Yes, but angels say NO (if score <${TfcGlobal.AngelsSayYes})`;
         } else if (randomNum >= TfcGlobal.AngelsSayYes && randomNum < 85) { 
-          answer = `👍<br/>You can take it as YES!`;
+          answer += `👍<br/>You can take it as YES!`;
         } else if (randomNum >= 85) {
-          answer = `👍👍<br/>Absolutely YES!`;
+          answer += `👍👍<br/>Absolutely YES!`;
         }
 
         gaugeElement.find('.dxg-title text').last().html(`${randomNum}`);

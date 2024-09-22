@@ -4,16 +4,19 @@
     display: inline-block;
     font-weight: 700;
     border-radius: 3px;
-    background: #a46497 !important;
+    /* background: linear-gradient(90deg, #ff0000 50%, #0000ff 50%) !important;  */
+    /* Half red, half blue */
+    background: linear-gradient(90deg, #ff0000, #0000ff) !important; /* Red to Blue gradient */
     color: #fffffa !important;
     padding: .618em 1em;
     overflow: visible;
     position: relative;
     cursor: pointer;
     margin: 0;
-    font-size: 100%;		
+    font-size: 100%;
     -webkit-font-smoothing: antialiased;
 }
+
 
 div.wp-block-jetpack-whatsapp-button.aligncenter {
     justify-content: center;
