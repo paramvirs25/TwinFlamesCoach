@@ -40,12 +40,14 @@ export class ReikiAndSacredHealingChecker {
                     this.reikiNameManager.deleteEntry(name);
                 }
 
-                if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
-                    this.sacredHealNameManager.addEntry(name, sacredHealingValue);
-                } 
-                // else {
-                //     this.sacredHealNameManager.deleteEntry(name);
-                // }
+                if(this.sacredHealNameManager != null){
+                    if (sacredHealingValue >= TfcGlobal.AngelsSayYes) {
+                        this.sacredHealNameManager.addEntry(name, sacredHealingValue);
+                    } 
+                    // else {
+                    //     this.sacredHealNameManager.deleteEntry(name);
+                    // }
+                }
             });
         }, 1000); // Wait for 1 second
     }
