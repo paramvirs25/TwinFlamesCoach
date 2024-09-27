@@ -12,7 +12,7 @@ function autoClickLinkTFC() {
         setTimeout(function() {
             firstAutoClickLink.click();
             console.log("Clicked the auto-click link.");
-        }, 500); // Delay of 500ms
+        }, 2000); // Delay of 500ms
     } else {
         console.log("No auto-click link found.");
     }

@@ -79,6 +79,9 @@ class TfcImportJavascripts {
     return window.location.href.indexOf('/wp-admin/') !== -1;
   }
   
+  static isCheckoutSummaryPage() {
+    return window.location.href.indexOf('/checkout/order-received/') !== -1;
+  }
 
 }
 
@@ -128,8 +131,12 @@ window.addEventListener('load', function () {
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenTabFix.css"),new Array(".wp-block-kioken-tabs"));
     TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/KiokenTabsJSFix.js"),".wp-block-kioken-tabs");
 
-    //Auto click link
-    TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/AutoClickLink.js"),".auto-click-link");
+    //only load autoclick if page is checkout summary.
+    //dont load this script on pages like account order summary.
+    if(TfcImportJavascripts.isCheckoutSummaryPage()){
+      //Auto click link
+      TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/AutoClickLink.js"),".auto-click-link");
+    }
   }  
 
   //Scroll Utility JS(No need to import in all pages)
