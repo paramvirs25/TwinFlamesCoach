@@ -1,7 +1,6 @@
-console.log('AutoClickLink.js Start');
+function autoClickLinkTFC() {
+    console.log('AutoClickLink.js Start');
 
-// Wait for the DOM to fully load
-document.addEventListener("DOMContentLoaded", function() {
     // Get the first anchor tag with the class 'auto-click-link'
     const firstAutoClickLink = document.querySelector('a.auto-click-link');
 
@@ -17,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     } else {
         console.log("No auto-click link found.");
     }
-});
 
-console.log('AutoClickLink.js End');
+    console.log('AutoClickLink.js End');
+}
+
+autoClickLinkTFC();
