@@ -1,12 +1,12 @@
 <?php
 function create_whatsapp_button($isAutoClick, $url, $text){
-    // Check if auto-click class should be added
-    $autoClickLinkText = ($isAutoClick == "true") ? " auto-click-link" : ""; 
+    // Ensure correct class is added for auto-click
+    $autoClickLinkText = ($isAutoClick) ? " auto-click-link" : ""; 
 
     // Output WhatsApp button HTML
     $output = '<div class="wp-block-jetpack-send-a-message">';
     $output .= '<div class="wp-block-jetpack-whatsapp-button aligncenter is-color-dark">';
-    $output .= '<a class="whatsapp-block__button' . $autoClickLinkText . '" href="' . $url . '" style="background-color:#25D366;color:#fff" target="_blank" rel="noopener noreferrer">' . $text . '</a>';
+    $output .= '<a class="whatsapp-block__button' . $autoClickLinkText . '" href="' . $url . '" style="background-color:#25D366;color:#fff" target="_self" rel="noopener noreferrer">' . $text . '</a>';
     $output .= '</div>';
     $output .= '</div>';
 
@@ -30,21 +30,24 @@ function whatsapp_program_support_shortcode($atts, $content = null) {
     $phone_number = '919417302025';
 
     return create_whatsapp_button(
-        "false", 
+        false,  // Now passing boolean
         whatsapp_url($phone_number, $atts['message']),
         "WhatsApp to Program Support"
     );
 }
 
 function whatsapp_group_button_shortcode($atts, $content = null) {
-    // Extract attributes
+    // Extract attributes and convert 'true'/'false' string to boolean
     $atts = shortcode_atts(array(
-        'isAutoClick' => '',
+        'is-auto-click' => 'false', // Set default as 'false'
         'url' => '',
         'text' => ''
     ), $atts);
 
-    return create_whatsapp_button($atts['isAutoClick'], $atts['url'], $atts['text']);
+    // Convert string to boolean
+    $isAutoClick = filter_var($atts['is-auto-click'], FILTER_VALIDATE_BOOLEAN);
+
+    return create_whatsapp_button($isAutoClick, $atts['url'], $atts['text']);
 }
 
 // Register the shortcodes
