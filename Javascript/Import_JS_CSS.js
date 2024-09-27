@@ -127,6 +127,9 @@ window.addEventListener('load', function () {
     //KiokenTabsFix
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenTabFix.css"),new Array(".wp-block-kioken-tabs"));
     TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/KiokenTabsJSFix.js"),".wp-block-kioken-tabs");
+
+    //Auto click link
+    TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/AutoClickLink.js"),".auto-click-link");
   }  
 
   //Scroll Utility JS(No need to import in all pages)
