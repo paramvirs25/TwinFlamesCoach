@@ -142,6 +142,11 @@ jQuery(function ($) {
 
         gaugeChart = new GaugeChart(item, params);
         gaugeChart.init();
+
+        document.querySelector('svg.dxg').setAttribute('height', '250');
+        
+        //const svgElement = document.querySelector('.gauge svg.dxg-circular-gauge');
+        //svgElement.style.marginTop = '-50px'; // Adjust this value as needed
       });
       
     });
