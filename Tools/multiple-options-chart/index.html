@@ -9,6 +9,7 @@
         </label>
     </div>
     <button id="loadOptionsButton">LoadOptions</button>
+    <button id="clearOptionsButton">LoadOptions</button>
 </div>
 <div>
     <table id="loadOptionsTableBody" class="tbl-tabular-chart"></table>
@@ -43,6 +44,10 @@
             const selectedSeparator = getSelectedSeparator();
             const rowNames = getRowNamesFromTextarea(selectedSeparator);
             initializeTabularCharts(rowNames, selectedSeparator);
+        });
+
+        $('#clearOptionsButton').on('click', function () {
+            document.getElementById("loadOptionsTableBody").innerHTML = "";
         });
 
         // Initial check to load TabularCharts class
