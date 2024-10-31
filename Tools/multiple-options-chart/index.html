@@ -8,14 +8,11 @@
             <input type="radio" name="separator" value="comma"> Comma
         </label>
     </div>
-    <button id="loadOptionsButton">Load Options</button>
-    <!-- <button id="clearOptionsButton">Clear Options</button> -->
+    <button id="loadOptionsButton">Clear & Load Options</button>
 </div>
 <div>
     <table id="loadOptionsTableBody" class="tbl-tabular-chart"></table>
 </div>
-
-<!--Comment-->
 
 <script>
     jQuery(document).ready(function ($) {
@@ -52,11 +49,6 @@
             const selectedSeparator = getSelectedSeparator();
             const rowNames = getRowNamesFromTextarea(selectedSeparator);
             initializeTabularCharts(rowNames, selectedSeparator);
-        });
-
-        $('#clearOptionsButton').on('click', function () {
-            //document.getElementById("loadOptionsTableBody").innerHTML = "";
-                        
         });
 
         // Initial check to load TabularCharts class
