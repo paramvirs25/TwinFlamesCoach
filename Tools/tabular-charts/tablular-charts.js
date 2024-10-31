@@ -187,4 +187,22 @@ class TabularCharts {
         logHtml += `</span>`;
         return logHtml;
     }
+
+    // Method to clear all UI elements
+    clearUI() {
+        const tableElement = document.getElementById(this.tableId);
+
+        // Clear table header and body
+        while (tableElement.firstChild) {
+            tableElement.removeChild(tableElement.firstChild);
+        }
+
+        // Remove the copy button if it was added
+        const copyButton = tableElement.previousElementSibling;
+        if (copyButton && copyButton.className === this.buttonCssClass) {
+            copyButton.remove();
+        }
+
+        console.log("All UI elements created by TabularCharts have been cleared.");
+    }
 }

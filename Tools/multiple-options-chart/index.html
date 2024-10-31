@@ -9,7 +9,7 @@
         </label>
     </div>
     <button id="loadOptionsButton">Load Options</button>
-    <button id="clearOptionsButton">Clear Options</button>
+    <!-- <button id="clearOptionsButton">Clear Options</button> -->
 </div>
 <div>
     <table id="loadOptionsTableBody" class="tbl-tabular-chart"></table>
@@ -20,12 +20,20 @@
 <script>
     jQuery(document).ready(function ($) {
 
+        var chart = null;
+
         function initializeTabularCharts(rowNames, separator) {
             const tableId = "loadOptionsTableBody";
             const columnNames = ["Option", "Result"];
             const buttonCssClass = "btnLoadOptionsChart";
 
-            new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, true, separator);
+            //if chart already exists then clear it
+            if(chart != null){
+                chart.clearUI();
+            }
+
+            //create new chart
+            chart = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, true, separator);
         }
 
         function getSelectedSeparator(){
@@ -47,7 +55,8 @@
         });
 
         $('#clearOptionsButton').on('click', function () {
-            document.getElementById("loadOptionsTableBody").innerHTML = "";
+            //document.getElementById("loadOptionsTableBody").innerHTML = "";
+                        
         });
 
         // Initial check to load TabularCharts class
