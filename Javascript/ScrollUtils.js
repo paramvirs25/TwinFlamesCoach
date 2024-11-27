@@ -18,3 +18,9 @@ class ScrollUtils {
         ScrollUtils.scrollToTargetAdjusted('pageViewCount');
     }
 }
+
+try{
+    ScrollUtils.scrollToTop();
+}catch(e){
+    console.log(e);
+}

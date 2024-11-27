@@ -137,8 +137,8 @@ window.addEventListener('load', function () {
       //Auto click link
       TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/AutoClickLink.js"),".auto-click-link");
     }
-  }  
 
-  //Scroll Utility JS(No need to import in all pages)
-  //TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl('Javascript/ScrollUtils.js'), '');   
+    //Scroll Utility JS(No need to import in all pages)
+    TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl('Javascript/ScrollUtils.js'), '');   
+  }
 });
