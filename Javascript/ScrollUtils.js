@@ -1,7 +1,5 @@
 class ScrollUtils {
-    static scrollToTargetAdjusted(cssClass) {
-        const elements = document.getElementsByClassName(cssClass);
-
+    static scrollToTargetAdjusted(elements) {
         if (elements.length > 0) {
             const HEADER_HEIGHT = 60;
             const elementPosition = elements[0].getBoundingClientRect().top;
@@ -15,7 +13,8 @@ class ScrollUtils {
     }
 
     static scrollToTop() {
-        ScrollUtils.scrollToTargetAdjusted('pageViewCount');
+        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll('h1'));
+        //document.getElementsByClassName('pageViewCount')
     }
 }
 
