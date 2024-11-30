@@ -1,20 +1,25 @@
-<table id="reikiHealStartTableBody" class="tbl-tabular-chart">
+<table id="reikiHealTableBody" class="tbl-tabular-chart">
 </table>
-
-<!--Comment-->
 
 <script>
     jQuery(document).ready(function ($) {
         
         function initializeTabularCharts() {
-            const tableId = "reikiHealStartTableBody";
-            const columnNames = ["Start Reiki", "Result"];
+            const tableId = "reikiHealTableBody";
+            const columnNames = ["Send Reiki To", "Result", "Duration"];
             const rowNames = [
-                "Mass Healing", "Elements Healing", "Group Healing"
+                "Mass", "Elements", "Group", "World Political", "Prashashan / Law Enforcement", "Lawyers", "Spiritual Leaders"
             ];
-            const buttonCssClass = "btnReikiHealStartChart";
+            const buttonCssClass = "btnReikiHealChart";
 
             new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false);
+
+// Add event listener to buttons with the specified CSS class
+        const buttons = document.querySelectorAll(`.${buttonCssClass}`);
+        buttons.forEach(button => {
+            button.addEventListener('click', () => updateTable());
+        });
+
         }
 
         // Check if the TabularCharts class is already defined
@@ -24,5 +29,25 @@
             initializeTabularCharts();
         }
     });
+
+function updateTable() {
+    const tableBody = document.getElementById('reikiHealTableBody').querySelector('tbody');
+    const rows = tableBody.querySelectorAll('tr');
+
+    rows.forEach(row => { 
+            const lastCell = row.querySelector('td:last-child div'); 
+            if (lastCell) { 
+                const number = parseInt(lastCell.textContent, 10); 
+                const result = Math.ceil(number / 10); 
+                lastCell.textContent = `${result} min`; 
+                lastCell.style.width = '100%';
+            } 
+        });
+
+}
+
+// Call the function to update the table
+//updateTable();
+
 
 </script>
