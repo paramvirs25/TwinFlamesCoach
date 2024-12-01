@@ -6,6 +6,7 @@ class TabularCharts {
         this.buttonCssClass = buttonCssClass;
         this.isShowCopyFilteredRowButton = isShowCopyFilteredRowButton;
         this.copyFilteredRowSeparator = copyFilteredRowSeparator;
+        this.uniqueId = `${tableId}-${Date.now()}`; // Unique ID for each instance
         this.initializeTable();
     }
 
@@ -13,6 +14,7 @@ class TabularCharts {
         this.loadCss();
 
         const tableBody = document.getElementById(this.tableId);
+        tableBody.innerHTML = ""; // Clear existing content
 
         // Create table header
         const thead = tableBody.createTHead();
@@ -57,9 +59,8 @@ class TabularCharts {
             button.addEventListener('click', () => this.fillRandomNumbers());
         });
 
-        if(this.isShowCopyFilteredRowButton){
-            // Add the new copy to clipboard button
-            this.addCopyButton();
+        if (this.isShowCopyFilteredRowButton) {
+            this.addCopyAccordion();
         }
     }
 
@@ -103,47 +104,70 @@ class TabularCharts {
         TfcImportJavascripts.loadCSS(tabularChartCssUrl, new Array(".tbl-tabular-chart"));
     }
 
-    // New method to copy filtered names to clipboard
-    copyFilteredNamesToClipboard() {
+    addCopyAccordion() {
+        // Create an Accordion instance
+        const accordion = new Accordion("Copy Options", this.tableId);
+
+        // Dropdown ID and Button ID specific to this instance
+        const dropdownId = `appendRowHeader-${this.uniqueId}`;
+        const buttonId = `copyButton-${this.uniqueId}`;
+
+        // Dropdown and Button HTML
+        const dropdown = `
+            <label for="${dropdownId}">Append Row Header:</label>
+            <select id="${dropdownId}">
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        `;
+
+        const button = `
+            <button id="${buttonId}" class="${this.buttonCssClass}">Copy Filtered Row Names to Clipboard</button>
+        `;
+
+        accordion.setContent(dropdown + button);
+
+        // Attach event listener for the copy button
+        document.getElementById(buttonId).addEventListener('click', () => {
+            this.copyFilteredNamesToClipboard(dropdownId);
+        });
+    }
+
+    copyFilteredNamesToClipboard(dropdownId) {
+        const appendHeader = document.getElementById(dropdownId).value === 'yes';
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
-        const rows = tableBody.querySelectorAll("tr:not(.header-row)");
+        const rows = tableBody.querySelectorAll("tr");
         let names = [];
-
+    
+        let currentHeaderText = ''; // Keeps track of the current header-row text
+    
         rows.forEach(row => {
-            const cells = row.querySelectorAll("td");
-            const rowName = cells[0].textContent.trim();
-            const firstCellValue = parseInt(cells[1].querySelector(".gradient-cell div").textContent.trim(), 10);
-
-            if (firstCellValue >= TfcGlobal.AngelsSayYes) {
-                names.push(rowName);
+            if (row.classList.contains("header-row")) {
+                // Update the current header text for subsequent rows
+                currentHeaderText = row.querySelector("td").textContent.trim();
+            } else {
+                const cells = row.querySelectorAll("td");
+                const rowName = cells[0].textContent.trim();
+                const firstCellValue = parseInt(cells[1]?.querySelector(".gradient-cell div")?.textContent.trim() || "0", 10);
+    
+                if (firstCellValue >= TfcGlobal.AngelsSayYes) {
+                    // Append the current header text if required
+                    const fullRowName = appendHeader ? `${currentHeaderText} - ${rowName}` : rowName;
+                    names.push(fullRowName);
+                }
             }
         });
-
+    
+        // Copy the filtered names to clipboard
         const namesString = names.join(this.copyFilteredRowSeparator);
         navigator.clipboard.writeText(namesString).then(() => {
-            console.log(namesString);
+            console.log('Copied to clipboard:', namesString);
         }).catch(err => {
             console.error('Could not copy text: ', err);
         });
     }
-
-    // Method to add the copy button to the UI
-    addCopyButton() {
-        const button = document.createElement('button');
-        button.textContent = 'Copy Filtered Row Names to Clipboard';
-        button.className = this.buttonCssClass;
-        button.style.marginTop = '10px';
-    
-        button.addEventListener('click', () => this.copyFilteredNamesToClipboard());
-    
-        const tableElement = document.getElementById(this.tableId);
-        //tableElement.insertAdjacentElement('afterend', button);
-        tableElement.insertAdjacentElement('beforebegin', button);
-
-    }
     
 
-    // Method to get cell value
     getCellValue(rowName, columnName) {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr:not(.header-row)");
