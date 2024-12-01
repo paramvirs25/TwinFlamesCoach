@@ -153,7 +153,7 @@ class TabularCharts {
         dropdown.id = dropdownId;
         dropdown.innerHTML = `
             <option value="no">No</option>
-            <option value="yes">Yes</option>
+            <option value="yes" selected>Yes</option>
         `;
 
         const button = document.createElement('button');
