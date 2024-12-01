@@ -167,9 +167,17 @@ class TabularCharts {
     
         const tableElement = document.getElementById(this.tableId);
         //tableElement.insertAdjacentElement('afterend', button);
-        tableElement.insertAdjacentElement('beforebegin', dropdownLabel);
-        tableElement.insertAdjacentElement('beforebegin', dropdown);
-        tableElement.insertAdjacentElement('beforebegin', button);
+        // tableElement.insertAdjacentElement('beforebegin', dropdownLabel);
+        // tableElement.insertAdjacentElement('beforebegin', dropdown);
+        // tableElement.insertAdjacentElement('beforebegin', button);
+
+        const container = document.createElement("div");
+        container.className = "copy-container";
+        container.appendChild(dropdownLabel);
+        container.appendChild(dropdown);
+        container.appendChild(button);
+        tableElement.parentNode.insertBefore(container, tableElement);
+
     }
     
 
@@ -227,10 +235,10 @@ class TabularCharts {
             tableElement.removeChild(tableElement.firstChild);
         }
 
-        // Remove the copy button if it was added
-        const copyButton = tableElement.previousElementSibling;
-        if (copyButton && copyButton.className === this.buttonCssClass) {
-            copyButton.remove();
+        // Remove the copy container
+        const copyContainer = document.querySelector(".copy-container");
+        if (copyContainer) {
+            copyContainer.remove();
         }
 
         console.log("All UI elements created by TabularCharts have been cleared.");
