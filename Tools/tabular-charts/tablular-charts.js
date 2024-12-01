@@ -144,13 +144,13 @@ class TabularCharts {
         // Dropdown ID and Button ID specific to this instance
         const dropdownId = `appendRowHeader-${this.uniqueId}`;
         // Dropdown and Button HTML
-        const dropdown = `
+        const dropdown = document.createElement(`
             <label for="${dropdownId}">Append Row Header:</label>
             <select id="${dropdownId}">
                 <option value="no">No</option>
                 <option value="yes">Yes</option>
             </select>
-        `;
+        `);
 
         const button = document.createElement('button');
         button.textContent = 'Copy Filtered Row Names to Clipboard';
