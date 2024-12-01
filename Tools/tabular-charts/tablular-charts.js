@@ -143,14 +143,18 @@ class TabularCharts {
     addCopyButton() {
         // Dropdown ID and Button ID specific to this instance
         const dropdownId = `appendRowHeader-${this.uniqueId}`;
-        // Dropdown and Button HTML
-        const dropdown = document.createElement(`
-            <label for="${dropdownId}">Append Row Header:</label>
-            <select id="${dropdownId}">
-                <option value="no">No</option>
-                <option value="yes">Yes</option>
-            </select>
-        `);
+        
+        // Create Dropdown
+        const dropdownLabel = document.createElement("label");
+        dropdownLabel.setAttribute("for", dropdownId);
+        dropdownLabel.textContent = "Append Row Header:";
+
+        const dropdown = document.createElement("select");
+        dropdown.id = dropdownId;
+        dropdown.innerHTML = `
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        `;
 
         const button = document.createElement('button');
         button.textContent = 'Copy Filtered Row Names to Clipboard';
@@ -163,6 +167,7 @@ class TabularCharts {
     
         const tableElement = document.getElementById(this.tableId);
         //tableElement.insertAdjacentElement('afterend', button);
+        tableElement.insertAdjacentElement('beforebegin', dropdownLabel);
         tableElement.insertAdjacentElement('beforebegin', dropdown);
         tableElement.insertAdjacentElement('beforebegin', button);
     }
