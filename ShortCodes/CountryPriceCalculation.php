@@ -96,7 +96,7 @@ add_shortcode('country_price_discount', 'calculatePriceWithDiscount');
  */
 function calculatePrice( $atts ) {
 	$inrPrice = $atts['inr'];
-    $discount = $atts['discount'];
+    $discount = isset($atts['discount']) ? $atts['discount'] : null;
 	$discountedPrice = 	$inrPrice;
     $isShowDiscount = false;    
     $currencySymbol = "INR ₹";
