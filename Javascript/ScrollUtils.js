@@ -13,13 +13,16 @@ class ScrollUtils {
     }
 
     static scrollToTop() {
-        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll('h1'));
+        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll('h2'));
         //document.getElementsByClassName('pageViewCount')
     }
 }
 
 try{
-    ScrollUtils.scrollToTop();
+    // If page URL does not contains '#'
+    if (!window.location.href.includes('#')) {
+        ScrollUtils.scrollToTop();
+    }    
 }catch(e){
     console.log(e);
 }
