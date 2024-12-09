@@ -13,7 +13,7 @@ class ScrollUtils {
     }
 
     static scrollToTop() {
-        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll('h2'));
+        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll('h1'));
         //document.getElementsByClassName('pageViewCount')
     }
 }
