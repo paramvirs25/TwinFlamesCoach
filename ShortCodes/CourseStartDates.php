@@ -9,6 +9,7 @@ class CourseDates
     public $course_name;
     public $start_date;
     public $start_time;
+    public $url;
     public $weeks_before_next_batch;
     public $total_number_of_classes;
 
@@ -26,6 +27,7 @@ class CourseDates
         $this->course_name = $data['name'];
         $this->start_date = $data['start_date'];
         $this->start_time = $data['start_time'];
+        $this->url = $data['url'];
         $this->weeks_before_next_batch = $data['weeks_before_next_batch'];
         $this->total_number_of_classes = $data['total_number_of_classes'];
 
@@ -295,7 +297,7 @@ add_shortcode('all_course_start_dates', function () {
     // Loop through each course and format the output as a table row
     foreach ($courses as $course) {
         $output .= '<tr>';
-        $output .= '<td>' . $course->course_name . '</td>';
+        $output .= '<td><a href="' . $course->url . '" target="_blank">' . $course->course_name . '</a></td>';
         $output .= '<td>' . \TFC\CourseDates::formatCourseDateTime($course) . '</td>';
         $output .= '</tr>';
     }

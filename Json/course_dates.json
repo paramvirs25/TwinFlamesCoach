@@ -5,6 +5,7 @@
         "short_name": "biw1", 
         "start_date": "15/12/2024",
         "start_time": "09:00 AM",
+        "url": "https://www.twinflamescoach.com/program/",
         "weeks_before_next_batch": 2,
         "total_number_of_classes": 6
       },
@@ -13,6 +14,7 @@
         "short_name": "chb", 
         "start_date": "14/12/2024",
         "start_time": "07:30 PM",
+        "url": "https://innerwork1111.com/courses/chakra-healings-program/",
         "weeks_before_next_batch": 16,
         "total_number_of_classes": 7
       },
@@ -21,14 +23,16 @@
         "short_name": "biw2",
         "start_date": "22/09/2024",
         "start_time": "07:30 PM",
+        "url": "https://www.twinflamescoach.com/basic-inner-work-2/",
         "weeks_before_next_batch": 24,
         "total_number_of_classes": 8
       },
       {
-        "name": "Life Coach",
+        "name": "Life Coach/ Twin Flames Coach",
         "short_name": "lifecoach",
         "start_date": "13/01/2024",
         "start_time": "07:30 PM",
+        "url": "https://www.twinflamescoach.com/program/twin-flames-coach/",
         "weeks_before_next_batch": 52,
         "total_number_of_classes": 24
       },
@@ -37,6 +41,7 @@
         "short_name": "advtfh1",
         "start_date": "10/08/2024",
         "start_time": "07:30 PM",
+        "url": "https://www.twinflamescoach.com/advanced-twin-flame-healings/",
         "weeks_before_next_batch": 52,
         "total_number_of_classes": 12
       }
