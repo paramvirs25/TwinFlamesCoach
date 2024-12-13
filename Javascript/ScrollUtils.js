@@ -1,7 +1,7 @@
 class ScrollUtils {
     static scrollToTargetAdjusted(elements) {
         if (elements.length > 0) {
-            const HEADER_HEIGHT = 60;
+            const HEADER_HEIGHT = 0; //set 60 for floating header;
             const elementPosition = elements[0].getBoundingClientRect().top;
             const offsetPosition = elementPosition - HEADER_HEIGHT;
 
@@ -13,7 +13,12 @@ class ScrollUtils {
     }
 
     static scrollToTop() {
-        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll('h1'));
+        var scrollToElementName = "h1";
+        if(TfcGlobalScroll.ScrollTo != null){
+            scrollToElementName = TfcGlobalScroll.ScrollTo;
+        }
+
+        ScrollUtils.scrollToTargetAdjusted(document.querySelectorAll(scrollToElementName));
         //document.getElementsByClassName('pageViewCount')
     }
 }

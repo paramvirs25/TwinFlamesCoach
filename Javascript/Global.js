@@ -71,3 +71,8 @@ class TfcGlobal {
     }
 
 }
+
+class TfcGlobalScroll {
+    static ScrollTo = null;    //null means skip scrolling.
+    static GetElementsByClassName = false;
+}
