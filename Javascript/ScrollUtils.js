@@ -26,7 +26,7 @@ class ScrollUtils {
         }
 
         if (elementToScrollTo) {
-            ScrollUtils.scrollToTargetAdjusted([elementToScrollTo]);
+            ScrollUtils.scrollToTargetAdjusted(elementToScrollTo);
         }
     }
 }
