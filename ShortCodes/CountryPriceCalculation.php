@@ -4,77 +4,84 @@
 
 /**
  * Calculate and display the price with optional discounts based on the user's location.
- * USAGE: [country_price_discount inr="6750" discount="classes1=3,discount1=5,classes2=6,discount2=10"]
+ * USAGE: [country_price_discount inr="6750" discount="classes1=3,discount1=5,classes2=6,discount2=10" additional_discount_purpose="40% off End of year 2024" additional_discount_percentage="40"]
  * @param array $atts
  * @return string HTML list of items
  */
 function calculatePriceWithDiscount( $atts ) {
-	$inrPrice = $atts['inr'];
-	$discounts = $atts['discount'];
-	$isShowDiscount = false;
-	$currencySymbol = "INR ₹";
-	$currencyMultiplier = 1;
-	$output = "";
+    $inrPrice = $atts['inr'];
+    $discounts = $atts['discount'];
+    $additionalDiscountPurpose = $atts['additional_discount_purpose'] ?? '';
+    $additionalDiscountPercentage = $atts['additional_discount_percentage'] ?? 0;
+    $isShowDiscount = false;
+    $currencySymbol = "INR ₹";
+    $currencyMultiplier = 1;
+    $output = "";
 
-	if (is_null($inrPrice) || $inrPrice === '') {
-		return $output;
-	}
+    if (is_null($inrPrice) || $inrPrice === '') {
+        return $output;
+    }
 
-	// Calculate the final price by applying discounts, if any
-	if (!is_null($discounts) && $discounts !== '') {
-		$isShowDiscount = true;
+    // Calculate the final price by applying discounts, if any
+    if (!is_null($discounts) && $discounts !== '') {
+        $isShowDiscount = true;
 
-		// Extract discounts from the 'discount' attribute
-		$discounts = explode(',', $discounts);
-		$discountValues = array();
-		$classCounts = array();
+        // Extract discounts from the 'discount' attribute
+        $discounts = explode(',', $discounts);
+        $discountValues = array();
+        $classCounts = array();
 
-		foreach ($discounts as $discount) {
-			$discountPair = explode('=', $discount);
-			if (count($discountPair) === 2) {
-				$key = $discountPair[0];
-				$value = $discountPair[1];
-				if (strpos($key, 'classes') === 0) {
-					$classCounts[] = $value;
-				} elseif (strpos($key, 'discount') === 0) {
-					$discountValues[] = $value;
-				}
-			}
-		}			
-	}
+        foreach ($discounts as $discount) {
+            $discountPair = explode('=', $discount);
+            if (count($discountPair) === 2) {
+                $key = $discountPair[0];
+                $value = $discountPair[1];
+                if (strpos($key, 'classes') === 0) {
+                    $classCounts[] = $value;
+                } elseif (strpos($key, 'discount') === 0) {
+                    $discountValues[] = $value;
+                }
+            }
+        }            
+    }
 
-	// Get currency symbol and currency multiplier
-	$result = TFC\Currency::determineCurrency();
-	$currencySymbol = $result['currencySymbol'];
-	$currencyMultiplier = $result['currencyMultiplier'];
+    // Get currency symbol and currency multiplier
+    $result = TFC\Currency::determineCurrency();
+    $currencySymbol = $result['currencySymbol'];
+    $currencyMultiplier = $result['currencyMultiplier'];
 
-	// Generate the HTML list of items
-	$output = "<ul>";
-	$output .= "<li>The cost for a single class is: 
-		<span style='color:#77a464;'>" . 
-		TFC\Currency::formatCurrency($inrPrice, $currencySymbol, $currencyMultiplier) . 
-		"</span></li>";
+    // Generate the HTML list of items
+    $output = "<ul>";
+    $output .= "<li><strong>The cost for a single class:</strong> 
+        <span style='color:#77a464;'>" . 
+        TFC\Currency::formatCurrency($inrPrice, $currencySymbol, $currencyMultiplier) . 
+        "</span></li>";
 
-	if ($isShowDiscount) {
-		foreach ($classCounts as $index => $classCount) {
-			$discountValue = $discountValues[$index];
-			$inrTotalCost = $inrPrice * $classCount;
-			$inrDiscountAmount = $inrTotalCost - ($inrTotalCost * $discountValue / 100);
-			
-			$output .= "<li>You can save 
-				<span style=\"color:#77a464;\">$discountValue%</span> when you sign up for 
-				<span style=\"color:#77a464;\">$classCount classes</span>. 
-				The total cost after the discount is: <br/>
-				<span><s>" . TFC\Currency::formatCurrency($inrTotalCost, $currencySymbol, $currencyMultiplier) . "</s></span> 
-				<span style=\"color:#77a464;\">" . TFC\Currency::formatCurrency($inrDiscountAmount, $currencySymbol, $currencyMultiplier) . "</span>
-			</li>";
+    if ($isShowDiscount) {
+        foreach ($classCounts as $index => $classCount) {
+            $discountValue = $discountValues[$index];
+            $inrTotalCost = $inrPrice * $classCount;
+            $inrDiscountAmount = $inrTotalCost - ($inrTotalCost * $discountValue / 100);
+            
+            $output .= "<li><strong>You can save <span style=\"color:#77a464;\">$discountValue%</span> when you sign up for 
+                <span style=\"color:#77a464;\">$classCount classes</span>:</strong><br/>
+                - <strong>Original Total:</strong> <span><s>" . TFC\Currency::formatCurrency($inrTotalCost, $currencySymbol, $currencyMultiplier) . "</s></span><br/>
+                - <strong>After Discount:</strong> <span style=\"color:#77a464;\">" . TFC\Currency::formatCurrency($inrDiscountAmount, $currencySymbol, $currencyMultiplier) . "</span>
+            </li>";
 
-		}
-	}
+            // Apply additional discount if specified
+            if ($additionalDiscountPercentage > 0) {
+                $additionalDiscountAmount = $inrDiscountAmount - ($inrDiscountAmount * $additionalDiscountPercentage / 100);
+                $output .= "<li><strong>Additional Discount (<span style=\"color:#77a464;\">$additionalDiscountPurpose</span>):</strong><br/>
+                    - <strong>Further Reduced Price:</strong> <span style=\"color:#77a464;\">" . TFC\Currency::formatCurrency($additionalDiscountAmount, $currencySymbol, $currencyMultiplier) . "</span>
+                </li>";
+            }
+        }
+    }
 
-	$output .= "</ul>";
+    $output .= "</ul>";
 
-	return $output;
+    return $output;
 }
 add_shortcode('country_price_discount', 'calculatePriceWithDiscount');
 
