@@ -2,7 +2,7 @@ function updateVideoTitlesWithCounter() {
   const channelId = "UCnMeyJtQfjiOh4xVrmtm6Lw";
   const prefixRegex = /^TF-(\d+)\s/; // Regex to match "TF-X" prefix and extract counter
   let videoCounter = 0; // Initialize video counter
-  const maxUpdates = 2; // Set the maximum number of videos to update
+  const maxUpdates = 1; // Set the maximum number of videos to update
   let updateCount = 0; // Counter for updated videos
 
   try {
@@ -26,11 +26,13 @@ function updateVideoTitlesWithCounter() {
       const videos = playlistItemsResponse.items;
 
       for (const video of videos) {
+        Logger.log(`Video snippet: ${JSON.stringify(video.snippet)}`);
+
         const videoId = video.snippet.resourceId.videoId;
         const videoTitle = video.snippet.title;
         const currentDescription = video.snippet.description; // Extract description
-        const currentTags = video.snippet.tags || []; // Extract tags (if available)
-
+        //const currentTags = video.snippet.tags || []; // Use an empty array if tags are not available
+        
         // Retaining categoryId, language, audioLanguage, and localized data
         const currentCategoryId = video.snippet.categoryId || "22"; // Set default category if not available
         const currentLanguage = video.snippet.defaultLanguage;
@@ -54,7 +56,7 @@ function updateVideoTitlesWithCounter() {
           videoId,
           videoTitle,
           description: currentDescription, // Store description
-          tags: currentTags, // Store tags
+          //tags: currentTags, // Store tags
           categoryId: currentCategoryId, // Store categoryId (ensuring it's valid)
           defaultLanguage: currentLanguage, // Store language
           defaultAudioLanguage: currentAudioLanguage, // Store audio language
@@ -89,7 +91,7 @@ function updateVideoTitlesWithCounter() {
             snippet: {
               title: newTitle,
               description: video.description, // Keep the original description
-              tags: video.tags, // Keep the original tags
+              //tags: video.tags || [], // Ensure it's an empty array if tags are not available
               categoryId: video.categoryId, // Retain the current category (or default if not set)
               defaultLanguage: video.defaultLanguage, // Retain the current language
               defaultAudioLanguage: video.defaultAudioLanguage, // Retain the current audio language
