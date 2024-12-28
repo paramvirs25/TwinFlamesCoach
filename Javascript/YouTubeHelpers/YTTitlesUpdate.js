@@ -32,7 +32,7 @@ function updateVideoTitlesWithCounter() {
         const currentTags = video.snippet.tags || []; // Extract tags (if available)
 
         // Retaining categoryId, language, audioLanguage, and localized data
-        const currentCategoryId = video.snippet.categoryId;
+        const currentCategoryId = video.snippet.categoryId || "22"; // Set default category if not available
         const currentLanguage = video.snippet.defaultLanguage;
         const currentAudioLanguage = video.snippet.defaultAudioLanguage;
         const currentLocalizedTitle = video.snippet.localized?.title;
@@ -55,7 +55,7 @@ function updateVideoTitlesWithCounter() {
           videoTitle,
           description: currentDescription, // Store description
           tags: currentTags, // Store tags
-          categoryId: currentCategoryId, // Store categoryId
+          categoryId: currentCategoryId, // Store categoryId (ensuring it's valid)
           defaultLanguage: currentLanguage, // Store language
           defaultAudioLanguage: currentAudioLanguage, // Store audio language
           localizedTitle: currentLocalizedTitle, // Store localized title
@@ -90,7 +90,7 @@ function updateVideoTitlesWithCounter() {
               title: newTitle,
               description: video.description, // Keep the original description
               tags: video.tags, // Keep the original tags
-              categoryId: video.categoryId, // Retain the current category
+              categoryId: video.categoryId, // Retain the current category (or default if not set)
               defaultLanguage: video.defaultLanguage, // Retain the current language
               defaultAudioLanguage: video.defaultAudioLanguage, // Retain the current audio language
               localized: {
