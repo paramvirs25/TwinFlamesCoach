@@ -5,7 +5,6 @@ function updateVideoTitlesWithCounter() {
   const maxUpdates = 2; // Set the maximum number of videos to update
   let updateCount = 0; // Counter for updated videos
 
-
   try {
     // Fetch the "Uploads" playlist ID for the given channel
     const channelResponse = YouTube.Channels.list("contentDetails", {
@@ -32,6 +31,13 @@ function updateVideoTitlesWithCounter() {
         const currentDescription = video.snippet.description; // Extract description
         const currentTags = video.snippet.tags || []; // Extract tags (if available)
 
+        // Retaining categoryId, language, audioLanguage, and localized data
+        const currentCategoryId = video.snippet.categoryId;
+        const currentLanguage = video.snippet.defaultLanguage;
+        const currentAudioLanguage = video.snippet.defaultAudioLanguage;
+        const currentLocalizedTitle = video.snippet.localized?.title;
+        const currentLocalizedDescription = video.snippet.localized?.description;
+
         // Check if the video title already contains the "TF-" prefix
         const match = videoTitle.match(prefixRegex);
         if (match) {
@@ -49,9 +55,13 @@ function updateVideoTitlesWithCounter() {
           videoTitle,
           description: currentDescription, // Store description
           tags: currentTags, // Store tags
+          categoryId: currentCategoryId, // Store categoryId
+          defaultLanguage: currentLanguage, // Store language
+          defaultAudioLanguage: currentAudioLanguage, // Store audio language
+          localizedTitle: currentLocalizedTitle, // Store localized title
+          localizedDescription: currentLocalizedDescription, // Store localized description
           publishedAt: video.snippet.publishedAt, // Store published date for sorting later
         });
-        
       }
 
       nextPageToken = playlistItemsResponse.nextPageToken;
@@ -72,7 +82,7 @@ function updateVideoTitlesWithCounter() {
       const newTitle = `TF-${videoCounter} ${video.videoTitle}`;
 
       try {
-        // Update the video title while preserving description and tags
+        // Update the video title while preserving description, tags, and other fields
         YouTube.Videos.update(
           {
             id: video.videoId,
@@ -80,7 +90,13 @@ function updateVideoTitlesWithCounter() {
               title: newTitle,
               description: video.description, // Keep the original description
               tags: video.tags, // Keep the original tags
-              categoryId: "22", // Default category ID for 'People & Blogs'
+              categoryId: video.categoryId, // Retain the current category
+              defaultLanguage: video.defaultLanguage, // Retain the current language
+              defaultAudioLanguage: video.defaultAudioLanguage, // Retain the current audio language
+              localized: {
+                title: video.localizedTitle, // Retain localized title
+                description: video.localizedDescription, // Retain localized description
+              },
             },
           },
           "snippet"
