@@ -2,7 +2,7 @@ function updateVideoTitlesWithCounter() {
   const channelId = "UCnMeyJtQfjiOh4xVrmtm6Lw";
   const prefixRegex = /^TF-(\d+)\s/; // Regex to match "TF-X" prefix and extract counter
   let videoCounter = 0; // Initialize video counter
-  const maxUpdates = 5; // Set the maximum number of videos to update
+  const maxUpdates = 2; // Set the maximum number of videos to update
   let updateCount = 0; // Counter for updated videos
 
 
@@ -27,10 +27,10 @@ function updateVideoTitlesWithCounter() {
       const videos = playlistItemsResponse.items;
 
       for (const video of videos) {
-        
-
         const videoId = video.snippet.resourceId.videoId;
         const videoTitle = video.snippet.title;
+        const currentDescription = video.snippet.description; // Extract description
+        const currentTags = video.snippet.tags || []; // Extract tags (if available)
 
         // Check if the video title already contains the "TF-" prefix
         const match = videoTitle.match(prefixRegex);
@@ -43,10 +43,12 @@ function updateVideoTitlesWithCounter() {
           continue; // Skip this video if it already has the prefix
         }
 
-        // Add video to the update list
+        // Add video to the update list with description and tags
         videosToUpdate.push({
           videoId,
           videoTitle,
+          description: currentDescription, // Store description
+          tags: currentTags, // Store tags
           publishedAt: video.snippet.publishedAt, // Store published date for sorting later
         });
         
@@ -70,12 +72,14 @@ function updateVideoTitlesWithCounter() {
       const newTitle = `TF-${videoCounter} ${video.videoTitle}`;
 
       try {
-        // Update the video title
+        // Update the video title while preserving description and tags
         YouTube.Videos.update(
           {
             id: video.videoId,
             snippet: {
               title: newTitle,
+              description: video.description, // Keep the original description
+              tags: video.tags, // Keep the original tags
               categoryId: "22", // Default category ID for 'People & Blogs'
             },
           },
@@ -93,11 +97,11 @@ function updateVideoTitlesWithCounter() {
         updateCount++;
       } catch (error) {
         Logger.log(`Error updating video: ${video.videoId}, Error: ${error.message}`);
-        return; // Stop further updates
+        return; // Stop further updates if an error occurs
       }
     }
 
-    Logger.log(`Total videos updated: ${videosToUpdate.length}`);
+    Logger.log(`Total videos updated: ${updateCount}`);
   } catch (error) {
     Logger.log(`Script error: ${error.message}`);
   }
