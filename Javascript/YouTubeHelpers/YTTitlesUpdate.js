@@ -26,7 +26,7 @@ function updateVideoTitlesWithCounter() {
       const videos = playlistItemsResponse.items;
 
       for (const video of videos) {
-        Logger.log(`Video snippet: ${JSON.stringify(video.snippet)}`);
+        //Logger.log(`Video snippet: ${JSON.stringify(video.snippet)}`);
 
         const videoId = video.snippet.resourceId.videoId;
         const videoTitle = video.snippet.title;
