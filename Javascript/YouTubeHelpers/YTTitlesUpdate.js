@@ -1,9 +1,13 @@
+//This script is to be executed in https://script.google.com/
+
 function updateVideoTitlesWithCounter() {
   const channelId = "UCnMeyJtQfjiOh4xVrmtm6Lw";
   const prefixRegex = /^TF-(\d+)\s/; // Regex to match "TF-X" prefix and extract counter
   let videoCounter = 0; // Initialize video counter
   const maxUpdates = 1; // Set the maximum number of videos to update
   let updateCount = 0; // Counter for updated videos
+
+  Logger.log(`Number of videos to be updated: ${maxUpdates}`);
 
   try {
     // Fetch the "Uploads" playlist ID for the given channel
@@ -82,6 +86,9 @@ function updateVideoTitlesWithCounter() {
       const newTitle = `TF-${videoCounter} ${video.videoTitle}`;
 
       try {
+        //NOTE: We could not avoid API call to YouTube.Videos.list as it has to be called to fetch video tags.
+        //The YouTube.Videos.update method needs all the parameters to be specified, otherwise it sets the missing parameter to blank 
+        
         // Fetch detailed video info to get the tags
         const videoDetailsResponse = YouTube.Videos.list("snippet", {
           id: video.videoId,
