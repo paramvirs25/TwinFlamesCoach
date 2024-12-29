@@ -31,7 +31,6 @@ function updateVideoTitlesWithCounter() {
         const videoId = video.snippet.resourceId.videoId;
         const videoTitle = video.snippet.title;
         const currentDescription = video.snippet.description; // Extract description
-        //const currentTags = video.snippet.tags || []; // Use an empty array if tags are not available
         
         // Retaining categoryId, language, audioLanguage, and localized data
         const currentCategoryId = video.snippet.categoryId || "22"; // Set default category if not available
@@ -51,12 +50,11 @@ function updateVideoTitlesWithCounter() {
           continue; // Skip this video if it already has the prefix
         }
 
-        // Add video to the update list with description and tags
+        // Add video to the update list
         videosToUpdate.push({
           videoId,
           videoTitle,
           description: currentDescription, // Store description
-          //tags: currentTags, // Store tags
           categoryId: currentCategoryId, // Store categoryId (ensuring it's valid)
           defaultLanguage: currentLanguage, // Store language
           defaultAudioLanguage: currentAudioLanguage, // Store audio language
@@ -84,6 +82,14 @@ function updateVideoTitlesWithCounter() {
       const newTitle = `TF-${videoCounter} ${video.videoTitle}`;
 
       try {
+        // Fetch detailed video info to get the tags
+        const videoDetailsResponse = YouTube.Videos.list("snippet", {
+          id: video.videoId,
+        });
+
+        const videoDetails = videoDetailsResponse.items[0];
+        const currentTags = videoDetails.snippet.tags || []; // Get tags or set to an empty array if not available
+
         // Update the video title while preserving description, tags, and other fields
         YouTube.Videos.update(
           {
@@ -91,7 +97,7 @@ function updateVideoTitlesWithCounter() {
             snippet: {
               title: newTitle,
               description: video.description, // Keep the original description
-              //tags: video.tags || [], // Ensure it's an empty array if tags are not available
+              tags: currentTags, // Keep the original tags
               categoryId: video.categoryId, // Retain the current category (or default if not set)
               defaultLanguage: video.defaultLanguage, // Retain the current language
               defaultAudioLanguage: video.defaultAudioLanguage, // Retain the current audio language
