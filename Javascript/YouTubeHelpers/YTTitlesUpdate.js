@@ -1,4 +1,4 @@
-//This script is to be executed in https://script.google.com/
+// This script is to be executed in https://script.google.com/
 
 function updateVideoTitlesWithCounter() {
   const channelId = "UCnMeyJtQfjiOh4xVrmtm6Lw";
@@ -30,18 +30,8 @@ function updateVideoTitlesWithCounter() {
       const videos = playlistItemsResponse.items;
 
       for (const video of videos) {
-        //Logger.log(`Video snippet: ${JSON.stringify(video.snippet)}`);
-
         const videoId = video.snippet.resourceId.videoId;
         const videoTitle = video.snippet.title;
-        const currentDescription = video.snippet.description; // Extract description
-        
-        // Retaining categoryId, language, audioLanguage, and localized data
-        const currentCategoryId = video.snippet.categoryId || "22"; // Set default category if not available
-        const currentLanguage = video.snippet.defaultLanguage;
-        const currentAudioLanguage = video.snippet.defaultAudioLanguage;
-        const currentLocalizedTitle = video.snippet.localized?.title;
-        const currentLocalizedDescription = video.snippet.localized?.description;
 
         // Check if the video title already contains the "TF-" prefix
         const match = videoTitle.match(prefixRegex);
@@ -58,12 +48,6 @@ function updateVideoTitlesWithCounter() {
         videosToUpdate.push({
           videoId,
           videoTitle,
-          description: currentDescription, // Store description
-          categoryId: currentCategoryId, // Store categoryId (ensuring it's valid)
-          defaultLanguage: currentLanguage, // Store language
-          defaultAudioLanguage: currentAudioLanguage, // Store audio language
-          localizedTitle: currentLocalizedTitle, // Store localized title
-          localizedDescription: currentLocalizedDescription, // Store localized description
           publishedAt: video.snippet.publishedAt, // Store published date for sorting later
         });
       }
@@ -89,13 +73,12 @@ function updateVideoTitlesWithCounter() {
         //NOTE: We could not avoid API call to YouTube.Videos.list as it has to be called to fetch video tags.
         //The YouTube.Videos.update method needs all the parameters to be specified, otherwise it sets the missing parameter to blank 
         
-        // Fetch detailed video info to get the tags
+        // Fetch detailed video info to get the tags and other necessary details
         const videoDetailsResponse = YouTube.Videos.list("snippet", {
           id: video.videoId,
         });
 
         const videoDetails = videoDetailsResponse.items[0];
-        const currentTags = videoDetails.snippet.tags || []; // Get tags or set to an empty array if not available
 
         // Update the video title while preserving description, tags, and other fields
         YouTube.Videos.update(
@@ -103,14 +86,14 @@ function updateVideoTitlesWithCounter() {
             id: video.videoId,
             snippet: {
               title: newTitle,
-              description: video.description, // Keep the original description
-              tags: currentTags, // Keep the original tags
-              categoryId: video.categoryId, // Retain the current category (or default if not set)
-              defaultLanguage: video.defaultLanguage, // Retain the current language
-              defaultAudioLanguage: video.defaultAudioLanguage, // Retain the current audio language
+              description: videoDetails.snippet.description, // Use description from videoDetails
+              tags: videoDetails.snippet.tags || [], // Use tags from videoDetails
+              categoryId: videoDetails.snippet.categoryId || "22", // Use categoryId from videoDetails
+              defaultLanguage: videoDetails.snippet.defaultLanguage, // Use defaultLanguage from videoDetails
+              defaultAudioLanguage: videoDetails.snippet.defaultAudioLanguage, // Use defaultAudioLanguage from videoDetails
               localized: {
-                title: video.localizedTitle, // Retain localized title
-                description: video.localizedDescription, // Retain localized description
+                title: videoDetails.snippet.localized?.title, // Use localized title from videoDetails
+                description: videoDetails.snippet.localized?.description, // Use localized description from videoDetails
               },
             },
           },
