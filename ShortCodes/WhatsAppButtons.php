@@ -32,7 +32,7 @@ function whatsapp_program_support_shortcode($atts, $content = null) {
     return create_whatsapp_button(
         false,  // Now passing boolean
         whatsapp_url($phone_number, $atts['message']),
-        "WhatsApp to Program Support"
+        "WhatsApp Program Support"
     );
 }
 
