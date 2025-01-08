@@ -20,6 +20,22 @@ function whatsapp_url($phone_number, $message){
     return "https://api.whatsapp.com/send?phone=$phone_number&text=$message";
 }
 
+function whatsapp_rituom_shortcode($atts, $content = null) {
+    // Extract attributes
+    $atts = shortcode_atts(array(
+        'message' => ''
+    ), $atts);
+
+    // Hardcoded phone number
+    $phone_number = '919876491309';
+
+    return create_whatsapp_button(
+        false,  // Now passing boolean
+        whatsapp_url($phone_number, $atts['message']),
+        "WhatsApp Ritu Om"
+    );
+}
+
 function whatsapp_program_support_shortcode($atts, $content = null) {
     // Extract attributes
     $atts = shortcode_atts(array(
@@ -51,5 +67,6 @@ function whatsapp_group_button_shortcode($atts, $content = null) {
 }
 
 // Register the shortcodes
+add_shortcode('whatsapp_rituom', 'whatsapp_rituom_shortcode');
 add_shortcode('whatsapp_program_support', 'whatsapp_program_support_shortcode');
 add_shortcode('whatsapp_group_button', 'whatsapp_group_button_shortcode');
