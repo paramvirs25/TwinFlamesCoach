@@ -32,8 +32,8 @@ class ScrollUtils {
 }
 
 try {
-    // If page URL does not contain '#'
-    if (!window.location.href.includes('#')) {
+    // Check if the page URL does not contain '#' and the page has not been scrolled
+    if (!window.location.href.includes('#') && window.scrollY === 0) {
         ScrollUtils.scrollToTop();
     }    
 } catch (e) {
