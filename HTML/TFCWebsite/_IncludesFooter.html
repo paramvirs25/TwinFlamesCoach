@@ -6,15 +6,10 @@
 		//Load bottom Bar
 		if (window.innerWidth > 320) { // Load the bar only if the screen width is greater than 320px
 			$("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
+            if(currentURL !== "https://www.twinflamescoach.com/services/"){
+                $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
+            }
 		}
-
-
-        //$("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
-		
-        //Load floating contact-us button on every page, expcept for "Contact us" page
-        // if(currentURL !== "https://www.twinflamescoach.com/"){
-             //$("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
-        // }
 	});
 </script> 
 
