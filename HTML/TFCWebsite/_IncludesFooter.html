@@ -1,11 +1,11 @@
 <script> 
 	jQuery(document).ready(function($) {
-    	// Get the current page's URL.
-        //var currentURL = window.location.href;
-		
-		//Load bottom Bar
+    	//Load bottom Bar
 		if (window.innerWidth > 320) { // Load the bar only if the screen width is greater than 320px
 			$("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
+
+            // Get the current page's URL.
+            var currentURL = window.location.href;
             if(currentURL !== "https://www.twinflamescoach.com/services/"){
                 $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
             }
