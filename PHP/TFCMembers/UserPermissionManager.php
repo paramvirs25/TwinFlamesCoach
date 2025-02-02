@@ -3,7 +3,7 @@ namespace TFCMembers;
 
 class UserPermissionManager {
 
-	const onbiw1_complete_roles_to_remove = array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool' );
+	const onbiw1_complete_roles_to_remove = array( 'general_instructions_iw', 'nasikagra', 'innerchild_tool', 'pastloversrelease_tool', 'fearhealing_tool', 'jalandhar_bandha', 'belief_clearing_01_tool', 'reflect_transmute_tool', 'shambhavimudra', 'creative_visualization', 'harmony_heal_tool', 'kumbhak', 'mool_bandha', 'shambhavinasikagra' );
 	const onbiw1_complete_roles_to_add = array( 'basic_iw_1','followup' );
 
 	public static function approveNewGroupUsersForWorkshop(){
@@ -86,6 +86,21 @@ class UserPermissionManager {
 		);
 		
 		$output .= "onGroupAdvTfHealComplete ends<br/>";
+		
+		return $output;
+	}
+
+	public static function onGroupChakraHealComplete(){
+		$output = "onGroupChakraHealComplete starts -><br/>";
+		
+		$output .= UserPermissionManager::updateGroupUsers(
+			'group_chakra_healing_balancing', 
+			array( 'chakra_root', 'chakra_sacral', 'chakra_solar', 'chakra_heart', 'chakra_throat', 'chakra_third_eye', 'chakra_crown' ),
+			array( 'chakra_healing_balancing','followup' ),
+			true
+		);
+		
+		$output .= "onGroupChakraHealComplete ends<br/>";
 		
 		return $output;
 	}

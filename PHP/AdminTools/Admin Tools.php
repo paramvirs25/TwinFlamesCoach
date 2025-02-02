@@ -21,7 +21,10 @@ add_shortcode('admin_tools', function () {
                 break;
             case 'advtfheal':
                 $out .= TFCMembers\UserPermissionManager::onGroupAdvTfHealComplete();
-                break;         
+                break;      
+            case 'chakraheal':
+                $out .= TFCMembers\UserPermissionManager::onGroupChakraHealComplete();
+                break;    
             case 'userbiw1comp':
                     // Check if 'user_id' is set in the query string
                     $userId = isset($_GET['user_id']) ? $_GET['user_id'] : null;
@@ -46,7 +49,7 @@ add_shortcode('admin_tools', function () {
                 <label>User Id</label> 
 		  	    <input type="text" id="user_id" name="user_id" />			  
 			</p>
-			<p><input type="submit" value="User Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'userbiw1comp' "></p>
+			<p><input type="submit" value="User Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'userbiw1comp' ">(NOT-TESTED, if all roles are properly replaced)</p>
             <p><input type="submit" value="Use USer 1 consultation" onclick="document.forms['admintools'].act.value = 'use_user_consultation' "></p>
 		</div>
 
@@ -60,9 +63,11 @@ add_shortcode('admin_tools', function () {
           
           <!-- <p><input type="submit" value="Group Basic Inner Work 1 Complete" onclick="document.forms['admintools'].act.value = 'groupbiw1comp' ">(NOT-TESTED that if Folow-up role is added correctly )</p> -->
           
-          <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' ">(NOT-TESTED For Free Consultation Increment)</p>
+          <p><input type="submit" value="Group Basic Inner Work 2 Complete" onclick="document.forms['admintools'].act.value = 'biw2comp' "></p>
 
           <p><input type="submit" value="Group Advance TF Heal Complete" onclick="document.forms['admintools'].act.value = 'advtfheal' ">(NOT-TESTED For Free Consultation Increment)</p>
+
+          <p><input type="submit" value="Group Chakra Healing Complete" onclick="document.forms['admintools'].act.value = 'chakraheal' "></p>
 		</div>
         </form>
 HTML;
