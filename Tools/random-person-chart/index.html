@@ -21,6 +21,12 @@
                 const rowNames = [
                     "To Consider this person?", "Forgiveness with Others", "Forgiveness with Me", "Reiki Healing"
                 ];
+
+                //if user is logged-in 
+                if (document.body.classList.contains('logged-in')) {
+                    rowNames.push("Keep Cord", "Cut All Cords");
+                }
+
                 const buttonCssClass = "btnRandomPersonChart";
 
                 tabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false);
