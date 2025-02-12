@@ -75,7 +75,7 @@
 
     </div>
 
-  <script>
+    <script>
         function calculateLifePath(dob) {
             let digits = dob.replace(/-/g, '').split('').map(Number);
             let sum = digits.reduce((a, b) => a + b, 0);
@@ -101,8 +101,10 @@
             let interpretationElement = document.querySelector(`[data-pair='${pairKey}']`) || 
                                        document.querySelector(`[data-pair='${reversePairKey}']`);
             let interpretation = interpretationElement ? interpretationElement.innerHTML.replace(/{name1}/g, name1).replace(/{name2}/g, name2) : "A unique twin flame journey!";
+            
             document.getElementById("result").innerHTML = 
-                `<h3>Life Path Numbers: ${lp1} & ${lp2}</h3><p>${interpretation}</p>`;
+                `<h3>Life Path Numbers: ${lp1} & ${lp2}</h3><p>${interpretation}</p>` +
+                `<a href="https://yourwordpresssite.com/life-path-${lp1}-${lp2}?name1=${encodeURIComponent(name1)}&name2=${encodeURIComponent(name2)}" target="_blank">Read more</a>`;
         }
     </script>
 </body>
