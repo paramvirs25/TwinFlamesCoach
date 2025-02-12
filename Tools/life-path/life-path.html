@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twin Flame Life Path Calculator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        .container { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; }
+        input { margin: 5px; padding: 8px; }
+        button { padding: 10px; margin: 10px; cursor: pointer; }
+        #result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Twin Flame Life Path Calculator</h2>
+        <label> Twin Flame 1 Name: </label>
+        <input type="text" id="name1" value="Param"> <br>
+        <label> Twin Flame 1 Birthdate: </label>
+        <input type="date" id="dob1" value="1979-07-25"> <br>
+        <label> Twin Flame 2 Name: </label>
+        <input type="text" id="name2" value="Ritu"> <br>
+        <label> Twin Flame 2 Birthdate: </label>
+        <input type="date" id="dob2" value="1970-12-29"> <br>
+        <button onclick="calculateLifePathNumbers()">Calculate Life Path</button>
+        <div id="result"></div>
+    </div>
+
+    <div id="interpretations" style="display:none;">
+        <!-- Complete Expanded Life Path Number Combinations Interpretations -->
+        <div data-pair="1-1">{name1} and {name2} are natural leaders, creating a powerful dynamic. They must learn cooperation to avoid clashes of ego.</div>
+        <div data-pair="1-2">{name1} brings leadership while {name2} adds emotional depth. They complement each other beautifully.</div>
+        <div data-pair="1-3">{name1} and {name2} form a creative duo, balancing ambition and playfulness.</div>
+        <div data-pair="1-4">{name1} provides vision while {name2} offers stability, making a strong foundation.</div>
+        <div data-pair="1-5">{name1} and {name2} love adventure but need to balance independence with togetherness.</div>
+        <div data-pair="1-6">{name1} leads while {name2} nurtures, making a strong but sometimes challenging bond.</div>
+        <div data-pair="1-7">{name1} and {name2} bring action and wisdom together, balancing material and spiritual worlds.</div>
+        <div data-pair="1-8">{name1} and {name2} are a power couple focused on success and ambition.</div>
+        <div data-pair="1-9">{name1} and {name2} connect through a shared vision for making the world better.</div>
+        <div data-pair="2-2">A deeply emotional and intuitive relationship where {name1} and {name2} nurture each other.</div>
+        <div data-pair="2-3">{name1} brings sensitivity while {name2} adds joy and creativity.</div>
+        <div data-pair="2-4">{name1} and {name2} create a stable, loving bond built on trust.</div>
+        <div data-pair="2-5">{name1} and {name2} must navigate emotions and change to find balance.</div>
+        <div data-pair="2-6">{name1} and {name2} make a harmonious, family-oriented partnership.</div>
+        <div data-pair="2-7">{name1} and {name2} create a soulful, introspective connection.</div>
+        <div data-pair="2-8">{name1} and {name2} balance emotions with ambition.</div>
+        <div data-pair="2-9">{name1} and {name2} share a deep spiritual and humanitarian bond.</div>
+        <div data-pair="3-3">{name1} and {name2} are playful, vibrant, and creative, but need emotional depth.</div>
+        <div data-pair="3-4">{name1} dreams big while {name2} provides the discipline to make it real.</div>
+        <div data-pair="3-5">{name1} and {name2} love adventure and creativity, but need stability.</div>
+        <div data-pair="3-6">{name1} and {name2} balance artistic energy with nurturing love.</div>
+        <div data-pair="3-7">{name1} and {name2} explore deep wisdom through creativity.</div>
+        <div data-pair="3-8">{name1} and {name2} mix creativity with business sense.</div>
+        <div data-pair="3-9">{name1} and {name2} thrive through inspiration and humanitarian ideals.</div>
+        <div data-pair="4-4">A deeply committed and stable relationship between {name1} and {name2}.</div>
+        <div data-pair="4-5">{name1} and {name2} need to balance stability with change.</div>
+        <div data-pair="4-6">{name1} and {name2} build a strong, nurturing home life.</div>
+        <div data-pair="4-7">{name1} and {name2} balance structure with spiritual exploration.</div>
+        <div data-pair="4-8">{name1} and {name2} thrive through ambition and discipline.</div>
+        <div data-pair="4-9">{name1} and {name2} focus on stability and higher purpose.</div>
+        <div data-pair="5-5">{name1} and {name2} embrace freedom and adventure, but must maintain commitment.</div>
+        <div data-pair="5-6">{name1} and {name2} balance excitement with responsibility.</div>
+        <div data-pair="5-7">{name1} and {name2} create an intriguing blend of intellect and passion.</div>
+        <div data-pair="5-8">{name1} and {name2} bring ambition and adaptability together.</div>
+        <div data-pair="5-9">{name1} and {name2} share a love for change and spiritual growth.</div>
+        <div data-pair="6-6">A soulmate-level bond where {name1} and {name2} focus on love and family.</div>
+        <div data-pair="6-7">{name1} and {name2} create a spiritual and emotionally rich connection.</div>
+        <div data-pair="6-8">{name1} and {name2} blend love with ambition and success.</div>
+        <div data-pair="6-9">{name1} and {name2} thrive in a deeply compassionate and loving relationship.</div>
+        <div data-pair="7-7">A highly spiritual and intellectual connection between {name1} and {name2}.</div>
+        <div data-pair="7-8">{name1} and {name2} must balance material and spiritual success.</div>
+        <div data-pair="7-9">{name1} and {name2} share a divine mission and deep wisdom.</div>
+        <div data-pair="8-8">A powerhouse couple focused on success but needing emotional depth.</div>
+        <div data-pair="8-9">{name1} and {name2} mix material success with a higher purpose.</div>
+        <div data-pair="9-9">A deeply spiritual and humanitarian connection between {name1} and {name2}.</div>
+    </div>
+
+  <script>
+        function calculateLifePath(dob) {
+            let digits = dob.replace(/-/g, '').split('').map(Number);
+            let sum = digits.reduce((a, b) => a + b, 0);
+            while (sum > 9 && ![11, 22, 33].includes(sum)) {
+                sum = sum.toString().split('').map(Number).reduce((a, b) => a + b, 0);
+            }
+            return sum;
+        }
+
+        function calculateLifePathNumbers() {
+            let name1 = document.getElementById("name1").value || "Twin Flame 1";
+            let name2 = document.getElementById("name2").value || "Twin Flame 2";
+            let dob1 = document.getElementById("dob1").value;
+            let dob2 = document.getElementById("dob2").value;
+            if (!dob1 || !dob2) {
+                alert("Please enter both birthdates.");
+                return;
+            }
+            let lp1 = calculateLifePath(dob1);
+            let lp2 = calculateLifePath(dob2);
+            let pairKey = `${lp1}-${lp2}`;
+            let reversePairKey = `${lp2}-${lp1}`;
+            let interpretationElement = document.querySelector(`[data-pair='${pairKey}']`) || 
+                                       document.querySelector(`[data-pair='${reversePairKey}']`);
+            let interpretation = interpretationElement ? interpretationElement.innerHTML.replace(/{name1}/g, name1).replace(/{name2}/g, name2) : "A unique twin flame journey!";
+            document.getElementById("result").innerHTML = 
+                `<h3>Life Path Numbers: ${lp1} & ${lp2}</h3><p>${interpretation}</p>`;
+        }
+    </script>
+</body>
+</html>
