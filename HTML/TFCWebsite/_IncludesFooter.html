@@ -3,14 +3,14 @@
     	//Load bottom Bar
 		if (window.innerWidth > 320) { // Load the bar only if the screen width is greater than 320px
 			
-            $("#topBar").load(TfcGlobal.getFullFileUrl("TopBar/TopBar.html"));
+            $("#topBar").load(TfcGlobal.getFullFileUrl("Tools/TopBar/TopBar.html"));
 
-            $("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
+            $("#bottomBar").load(TfcGlobal.getFullFileUrl("Tools/BottomBar/BottomBar.html"));
 
             // Get the current page's URL.
             var currentURL = window.location.href;
             if(currentURL !== "https://www.twinflamescoach.com/services/"){
-                $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("ContactButtonFloating/ContactButtonFloating.html"));
+                $("#contactButtonFloating").load(TfcGlobal.getFullFileUrl("Tools/ContactButtonFloating/ContactButtonFloating.html"));
             }
 		}
 	});
