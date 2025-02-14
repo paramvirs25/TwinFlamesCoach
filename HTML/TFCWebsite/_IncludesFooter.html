@@ -2,7 +2,10 @@
 	jQuery(document).ready(function($) {
     	//Load bottom Bar
 		if (window.innerWidth > 320) { // Load the bar only if the screen width is greater than 320px
-			$("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
+			
+            $("#topBar").load(TfcGlobal.getFullFileUrl("TopBar/TopBar.html"));
+
+            $("#bottomBar").load(TfcGlobal.getFullFileUrl("BottomBar/BottomBar.html"));
 
             // Get the current page's URL.
             var currentURL = window.location.href;
@@ -13,6 +16,7 @@
 	});
 </script> 
 
+<div id="topBar"></div>
 <div id="bottomBar"></div>
 <div id="contactButtonFloating"></div>
 

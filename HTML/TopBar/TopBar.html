@@ -1,0 +1,57 @@
+
+    <style>
+        /* Sticky Marquee Container */
+        .marquee-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ff7300;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+
+        /* Marquee Content */
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 10s linear infinite;
+        }
+
+        /* Marquee Animation */
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Prevent content from hiding under the marquee */
+        body {
+            padding-top: 50px; /* Adjust based on marquee height */
+        }
+
+        /* Link Styling */
+        .marquee-content a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .marquee-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <a class="fancybox" href="https://www.twinflamescoach.com/program/">10% Off ! Basic Inner Work 1 Program</a>
+        </div>
+    </div>
+
