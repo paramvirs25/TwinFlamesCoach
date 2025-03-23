@@ -16,7 +16,7 @@ function tfc_audio_shortcode($atts) {
         if (!empty($audio_id)) {
             $audio_url = esc_url('https://adilo.bigcommand.com/watch/' . $audio_id);
             $output .= "<div class='wp-block-group'>
-                            <h3 class='wp-block-heading'>{$language}</h3>
+                            <h4 class='wp-block-heading'>{$language}</h4>
                             <div style='width: 100%; position: relative; padding-top: 56.25%'>
                                 <iframe style='position: absolute; top: 0; left: 0; width: 100%; height: 100%' 
                                         allowtransparency='true' 
