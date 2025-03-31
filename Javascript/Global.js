@@ -5,6 +5,8 @@ class TfcGlobal {
 
     static AccordionJsUrl = TfcGlobal.getFullFileUrl('Javascript/accordion.js');
 
+    static ModalsPath = "HTML/Modals/";
+    
     static ShuffleToolsListPath = "HTML/Shuffle/ShuffleToolsList.html";
 
     static EmotionsChartPath = "Tools/emotions-chart/index.html";
