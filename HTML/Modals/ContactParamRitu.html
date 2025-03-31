@@ -80,7 +80,7 @@ function attachWhatsAppModal(parentClass) {
     new WhatsAppModal(parentClass);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+jQuery(document).ready(function ($) {
     attachWhatsAppModal("confirm-click");
 });
 
