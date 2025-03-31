@@ -1,9 +1,9 @@
 <script>
 class WhatsAppModal {
-    constructor(buttonClass) {
-        this.buttons = document.querySelectorAll(`.${buttonClass}`);
-        if (!this.buttons.length) {
-            console.error(`WhatsAppModal: No buttons found with class "${buttonClass}"`);
+    constructor(parentClass) {
+        this.parentDivs = document.querySelectorAll(`.${parentClass}`);
+        if (!this.parentDivs.length) {
+            console.error(`WhatsAppModal: No elements found with class "${parentClass}"`);
             return;
         }
 
@@ -29,9 +29,15 @@ class WhatsAppModal {
         document.body.appendChild(this.modal);
     }
 
-    // Attach event listeners to all buttons
+    // Attach event listeners to all buttons inside .confirm-click divs
     attachEvents() {
-        this.buttons.forEach(button => {
+        this.parentDivs.forEach(parentDiv => {
+            const button = parentDiv.querySelector("a"); // Find the anchor tag inside the div
+            if (!button) {
+                console.warn("WhatsAppModal: No <a> tag found inside .confirm-click div.");
+                return;
+            }
+
             button.addEventListener("click", (event) => {
                 event.preventDefault();
                 this.whatsappLink = button.getAttribute("href");
@@ -70,13 +76,13 @@ class WhatsAppModal {
     }
 }
 
-// Function to initialize modal for all WhatsApp buttons
-function attachWhatsAppModal(buttonClass) {    
-    new WhatsAppModal(buttonClass);
+// Function to initialize modal for all WhatsApp buttons inside .confirm-click divs
+function attachWhatsAppModal(parentClass) {
+    new WhatsAppModal(parentClass);
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    attachWhatsAppModal("confirmFreeConsultModal");
+    attachWhatsAppModal("confirm-click");
 });
 
 </script>
