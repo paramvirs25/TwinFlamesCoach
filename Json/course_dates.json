@@ -1,15 +1,6 @@
 {
     "courses": [
       {
-        "name": "Basic Inner Work 1",
-        "short_name": "biw1", 
-        "start_date": "23/02/2025",
-        "start_time": "09:00 AM",
-        "url": "https://www.twinflamescoach.com/program/",
-        "weeks_before_next_batch": 1,
-        "total_number_of_classes": 6
-      },
-      {
         "name": "Chakra Healing & Balancing",
         "short_name": "chb", 
         "start_date": "29/12/2024",
