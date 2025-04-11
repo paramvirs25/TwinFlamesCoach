@@ -1,2 +1,9 @@
-<script defer>jQuery(document).ready(function($) { TfcGlobal.loadFile("gaugeChartCode",TfcGlobal.GaugeChartPath); });</script>
+<script defer>
+    window.addEventListener('pageshow', function () {
+        jQuery(function($) {
+            TfcGlobal.loadFile("gaugeChartCode", TfcGlobal.GaugeChartPath);
+        });
+    });
+</script>
+
 <div id="gaugeChartCode"></div>
