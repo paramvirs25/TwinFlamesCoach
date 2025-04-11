@@ -1,7 +1,11 @@
 .tfcScrollHorizRow, .tfcScrollHorizRowIcons {
   overflow: auto;
- white-space: nowrap;		
+  white-space: nowrap;
+  margin-bottom: 1rem;        /* Adds space below */
+  border: 1px solid #ccc;   /* Light gray border */
+  border-radius: 4px;         
 }
+
 
 /*When Visual Link preview is set to SPOTLIGHT*/
 .tfcScrollHorizRow .wp-block-group {
@@ -10,6 +14,12 @@
  width: 85%;
  white-space: normal;
  vertical-align: top;
+ border-right: 1px solid #ccc;
+}
+
+.tfcScrollHorizRow .wp-block-group:last-child {
+  border-right: none;             /* Remove border from the last item */
+  margin-right: 0;
 }
 
 .tfcScrollHorizRow .wp-block-group__inner-container{
