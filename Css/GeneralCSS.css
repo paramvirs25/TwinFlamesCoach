@@ -51,11 +51,12 @@
 	}
 
 	.site-header {
+		height: 70px;
 		/*position: fixed;
 		top: 0;
 		z-index: 9999;
 		color: white;
-		height: 60px;*/
+		*/
 		/*height should be equal to body-padding-top*/
 		/*WIDTH: 100%;*/
 	}
