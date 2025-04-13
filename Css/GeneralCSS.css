@@ -51,10 +51,11 @@
 	}
 
 	.site-header {
-		height: 70px;
+		height: 90px;
+		z-index: 0;
 		/*position: fixed;
 		top: 0;
-		z-index: 9999;
+		
 		color: white;
 		*/
 		/*height should be equal to body-padding-top*/
