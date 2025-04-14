@@ -15,7 +15,6 @@
 		margin-top: 10px;
 		margin-left: 10px;
 
-		/* background-image: url('images/search.jpg'); */
 		background-repeat: no-repeat;
 		background-position: center;
 		outline: 0;
