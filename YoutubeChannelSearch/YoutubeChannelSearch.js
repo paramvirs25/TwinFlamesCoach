@@ -222,7 +222,7 @@ class FeedsForYT_TFC {
 }
 
 var feeds = new FeedsForYT_TFC();
-window.addEventListener('load', function () {
+window.addEventListener('pageshow', function () {
     feeds.initYTPlayListSearch();
 });
 
