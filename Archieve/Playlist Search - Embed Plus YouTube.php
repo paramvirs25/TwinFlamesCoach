@@ -9,7 +9,7 @@
 		width:180px;
 		margin-left: 5px;
 		padding-top: 0px;
-		background-image:url('images/search.jpg');
+		/* background-image:url('images/search.jpg'); */
 		background-repeat:no-repeat;
 		background-position:center;outline:0;
 	}
