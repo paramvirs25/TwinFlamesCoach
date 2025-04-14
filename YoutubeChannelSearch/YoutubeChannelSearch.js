@@ -222,7 +222,22 @@ class FeedsForYT_TFC {
 }
 
 var feeds = new FeedsForYT_TFC();
-window.addEventListener('pageshow', function () {
-    feeds.initYTPlayListSearch();
-});
+
+function tryInitFeeds() {
+    if (
+        document.readyState === 'complete' &&
+        typeof feeds !== 'undefined' &&
+        typeof feeds.initYTPlayListSearch === 'function' &&
+        typeof Fuse !== 'undefined'
+    ) {
+        console.log('init feed manually');
+        feeds.initYTPlayListSearch();
+    } else {
+        // Retry after short delay
+        setTimeout(tryInitFeeds, 100);
+    }
+}
+
+tryInitFeeds();
+
 
