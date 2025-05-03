@@ -89,7 +89,8 @@ class TfcImportJavascripts {
 TfcImportJavascripts.dropboxScriptLoaded = false;
 
 //This method is called on page load
-window.addEventListener('pageshow', function () {
+window.addEventListener('load', function () {
+//window.addEventListener('pageshow', function () {
 
   TfcImportJavascripts.importDropboxScript();
 
