@@ -1,0 +1,62 @@
+
+  <style>
+    body { font-family: sans-serif; padding: 1rem; background: #f2f2f2; }
+    h1 { text-align: center; }
+    .filters { margin-bottom: 1rem; }
+    .filters input { padding: 0.5rem; font-size: 1rem; width: 100%; }
+    .blessing-card {
+      background: white; border-radius: 10px; padding: 1rem; margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+  </style>
+  <h1>🙏 Blessing Viewer</h1>
+
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="Search blessings..." />
+  </div>
+
+  <div id="blessingList"></div>
+
+  <script>
+    async function fetchBlessings() {
+      try {
+        const response = await fetch('https://paramvirs25.github.io/TwinFlamesCoach/Tools/blessings-search/blessings.json');
+        const blessings = await response.json();
+        return blessings;
+      } catch (error) {
+        console.error('Failed to fetch blessings:', error);
+        return [];
+      }
+    }
+
+    function renderBlessings(blessings, searchText = '') {
+      const blessingList = document.getElementById('blessingList');
+      blessingList.innerHTML = '';
+
+      const filtered = blessings
+        .filter(b => [b.name, b.description, b.englishName, b.translatedName].some(text => text.toLowerCase().includes(searchText)))
+        .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+      filtered.forEach(b => {
+        const card = document.createElement('div');
+        card.className = 'blessing-card';
+
+        card.innerHTML = `
+          <div><strong>${b.header}</strong> | <strong>${b.name}</strong></div>
+          <div>🗓️ ${b.date} | 👥 ${b.audience}</div>
+          <div style="margin-top: 0.5rem;">${b.description}</div>
+        `;
+
+        blessingList.appendChild(card);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      const blessings = await fetchBlessings();
+      renderBlessings(blessings);
+
+      document.getElementById('searchInput').addEventListener('input', (e) => {
+        renderBlessings(blessings, e.target.value.toLowerCase());
+      });
+    });
+  </script>
