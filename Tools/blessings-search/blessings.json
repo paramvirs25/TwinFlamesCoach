@@ -1753,6 +1753,542 @@
     "audience": "for all",
     "date": "2024-05-14",
     "description": "Remaining inwardly anchored in divine stillness. This bhava supports spiritual stability and inner connection even in outer action."
+  },
+  {
+    "header": "🥇6",
+    "name": "Sahas - virya and shanti Bhava",
+    "audience": "for all",
+    "date": "2024-03-01",
+    "description": "Courage, vitality, and peace come together in this bhava. It strengthens your inner power while maintaining calmness and clarity.",
+    "keywords": ["courage", "strength", "peace", "shanti", "virya", "inner power", "bravery"]
+  },
+  {
+    "header": "🥇6",
+    "name": "Sri Yogasth Vidya",
+    "audience": "for all",
+    "date": "2024-03-05",
+    "description": "The divine knowledge of being established in Yoga. This bhava deepens your connection with yogic living and sacred teachings.",
+    "keywords": ["yogasth", "yoga", "spiritual knowledge", "wisdom", "vidya", "inner union"]
+  },
+  {
+    "header": "🥇6",
+    "name": "Restfulness, sukh-chain bhava",
+    "audience": "for all",
+    "date": "2024-03-06",
+    "description": "Brings rest, ease, and mental calmness. A sense of comfort and quiet joy becomes your natural state.",
+    "keywords": ["peace", "rest", "calm", "relaxation", "ease", "mental peace", "tranquility"]
+  },
+  {
+    "header": "🥇6",
+    "name": "Sahansheelta bhava",
+    "audience": "for all",
+    "date": "2024-03-11",
+    "description": "The blessing of patience and tolerance. Helps you remain peaceful and stable in the face of challenges or criticism.",
+    "keywords": ["patience", "tolerance", "calm under stress", "inner peace", "forgiveness"]
+  },
+  {
+    "header": "🥇6",
+    "name": "Saral, sahaj, swatantra bhava",
+    "audience": "for all (especially for departing souls)",
+    "date": "2024-03-15",
+    "description": "May souls leave the body with ease, simplicity, and independence. A graceful and peaceful transition from this world.",
+    "keywords": ["peaceful death", "soul transition", "letting go", "freedom", "ease", "simplicity"]
+  },
+  {
+    "header": "🥇6",
+    "name": "धैर्य धारण Bhava",
+    "audience": "for all",
+    "date": "2024-03-22",
+    "description": "The blessing to hold firm patience. This bhava supports staying grounded and composed through long or tough journeys.",
+    "keywords": ["patience", "resilience", "endurance", "calm", "inner strength", "dharana"]
+  },
+  {
+    "header": "🥇6",
+    "name": "एह जनम तुम्हारे लेखे Bhava",
+    "audience": "for all",
+    "date": "2024-03-24",
+    "description": "This life is for You, O Divine. A bhava of full surrender and devotion—dedicating every breath and action to the Lord.",
+    "keywords": ["surrender", "devotion", "dedication", "life offering", "bhakti", "God's will"]
+  },
+  {
+    "header": "🥇6",
+    "name": "Sarv samanya yogasth Bhava",
+    "audience": "for all",
+    "date": "2024-03-27",
+    "description": "A universal state of yogic presence for all. This bhava allows every person, regardless of background, to live from their spiritual center.",
+    "keywords": ["yoga", "presence", "grounded", "oneness", "yogasth", "collective awakening", "spiritual alignment"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Udasintaa n Vimukhta Bhava",
+    "audience": "for all",
+    "date": "2024-01-06",
+    "description": "A state of detachment and freedom. This bhava helps you rise above attachments and remain untouched by worldly ups and downs.",
+    "keywords": ["detachment", "freedom", "liberation", "vairagya", "non-attachment", "peace"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Shradha vaan Bhava",
+    "audience": "for all",
+    "date": "2024-01-08",
+    "description": "Faithful and devoted bhava. This blessing strengthens deep inner trust in the divine, Guru, and life itself.",
+    "keywords": ["faith", "trust", "devotion", "shraddha", "spiritual belief", "surrender"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Aatam nivedan Bhava",
+    "audience": "for all",
+    "date": "2024-01-09",
+    "description": "Self-surrender bhava. Offering your entire being to the Divine, this bhava invokes total surrender and soulful dedication.",
+    "keywords": ["self-surrender", "atma nivedan", "offering", "divine love", "total dedication"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Paschatap mukta Bhava",
+    "audience": "for all",
+    "date": "2024-01-14",
+    "description": "Freedom from regret or guilt. This bhava dissolves the heaviness of past mistakes and brings self-forgiveness.",
+    "keywords": ["guilt free", "no regret", "self-forgiveness", "acceptance", "healing"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Sanyam Bhava",
+    "audience": "for me",
+    "date": "2024-01-14",
+    "description": "Discipline and self-control. This personal bhava supports inner restraint and mindful choices in all actions.",
+    "keywords": ["discipline", "control", "self-restraint", "sanyam", "focus"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Sankalp shoonyata Bhava",
+    "audience": "for all",
+    "date": "2024-01-18",
+    "description": "Freedom from strong desires or mental resolutions. This bhava brings inner silence, stillness, and surrender to divine flow.",
+    "keywords": ["desirelessness", "no craving", "surrender", "sankalp rahit", "emptiness", "inner silence"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Sanyam Bhava",
+    "audience": "for all",
+    "date": "2024-01-22",
+    "description": "Collective blessing for self-discipline and mindful living. This bhava supports control over thoughts, speech, and actions.",
+    "keywords": ["self-discipline", "control", "mindfulness", "restraint", "balanced living"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Sarv-savikar Bhava",
+    "audience": "for all",
+    "date": "2024-01-24",
+    "description": "Total acceptance of all. This bhava brings unconditional love and the ability to embrace everything without judgment.",
+    "keywords": ["acceptance", "unconditional love", "judgment-free", "inclusiveness", "sarv savikaar"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Tantra intro Deeksha",
+    "audience": "for all",
+    "date": "2024-01-29",
+    "description": "Initiation into Tantra begins. This bhava offers foundational insight into sacred Tantric wisdom and practices.",
+    "keywords": ["tantra", "deeksha", "initiation", "spiritual practice", "energy work"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Puran santushti Bhava",
+    "audience": "for all",
+    "date": "2024-01-29",
+    "description": "Complete contentment bhava. This blessing removes inner craving and brings deep satisfaction with life as it is.",
+    "keywords": ["contentment", "santushti", "fulfillment", "peace", "gratitude", "non-craving"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Istran gun (sarv-savikaar)",
+    "audience": "for all",
+    "date": "2024-02-06",
+    "description": "Blessing of divine feminine qualities with full acceptance. Cultivates beauty, softness, strength, and divine receptivity.",
+    "keywords": ["feminine energy", "divine qualities", "acceptance", "compassion", "istran gun", "shakti"]
+  },
+  {
+    "header": "🥇5",
+    "name": "Gratitude Bhava",
+    "audience": "for all",
+    "date": "2024-02-11",
+    "description": "A heart full of thanks. This bhava invites the soul to live in constant appreciation of divine blessings and life itself.",
+    "keywords": ["gratitude", "thanks", "appreciation", "thankful heart", "divine blessings"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Sarvkaal Anandit Bhava",
+    "audience": "for me",
+    "date": "2023-10-18",
+    "description": "To remain blissful in all situations—whether in happiness or sorrow. Practicing this bhava daily helps uplift not only you but also benefits those you interact with.",
+    "keywords": ["bliss", "anand", "constant joy", "inner happiness", "sorrow and joy", "sarvkaal", "homework", "emotional balance"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Sri Hanumant Bhava",
+    "audience": "for me",
+    "date": "2023-10-31",
+    "description": "Powerful love, strength, and dynamic service like Lord Hanuman. This bhava awakens fearless devotion and unwavering energy.",
+    "keywords": ["hanuman", "devotion", "love", "power", "energy", "strength", "bhakti", "dynamic force"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Sri Sankat Mochan Bhava",
+    "audience": "for me",
+    "date": "2023-11-11",
+    "description": "The remover of difficulties. This bhava invokes divine grace to dissolve life’s obstacles and bring ease and protection.",
+    "keywords": ["sankat mochan", "hanuman", "obstacle removal", "divine help", "grace", "relief"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Bal sulabh Bhava",
+    "audience": "for all",
+    "date": "2023-11-16",
+    "description": "Childlike innocence, joy, and openness. This bhava brings a playful heart, free from deception or heaviness.",
+    "keywords": ["innocence", "childlike", "joy", "simplicity", "playfulness", "honesty", "lightness"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Vatsalyaa prem",
+    "audience": "for all",
+    "date": "2023-12-20",
+    "description": "Loving like a parent loves a child. This bhava brings nurturing, protective, and deeply caring love to all relationships.",
+    "keywords": ["vatsalya", "motherly love", "nurturing", "divine affection", "care", "unconditional love"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Self-celebration every moment",
+    "audience": "for all",
+    "date": "2023-12-25",
+    "description": "Celebrate your existence in every breath. This bhava nurtures self-worth, joy, and spiritual presence in daily life.",
+    "keywords": ["self-love", "celebration", "gratitude", "self-worth", "presence", "joy"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Anand swapan mukt Bhava and Praktaya Bhava",
+    "audience": "for all",
+    "date": "2023-12-28",
+    "description": "Freedom from dreamy illusion and awakening to divine reality. This bhava brings clarity, wakefulness, and true joy.",
+    "keywords": ["awakening", "realization", "clarity", "bliss", "illusion", "anand", "prakata bhava", "spiritual awakening"]
+  },
+  {
+    "header": "🥇4",
+    "name": "Animal spirit guides Bhava",
+    "audience": "for all",
+    "date": "2023-12-30",
+    "description": "Connection with animal spirit guides who offer protection, insight, and healing. This bhava strengthens your link with subtle nature forces.",
+    "keywords": ["animal spirit", "guides", "shamanic", "nature connection", "intuition", "protection", "energy allies"]
+  },
+  {
+    "header": "🥇4",
+    "name": "No obligations Bhava",
+    "audience": "for all",
+    "date": "2023-12-30",
+    "description": "Freedom from emotional, social, or karmic obligations. This bhava supports free will, detachment, and true self-expression.",
+    "keywords": ["freedom", "no pressure", "detachment", "free will", "liberation", "emotional freedom", "spiritual independence"]
+  },
+   {
+    "header": "🥇3",
+    "name": "Shri Hanumant Bhava",
+    "audience": "for me",
+    "date": "2023-08-01",
+    "description": "Invoking the divine strength, devotion, and fearless service of Lord Hanuman. This bhava brings courage and selfless action.",
+    "keywords": ["hanuman", "strength", "devotion", "fearlessness", "service", "power", "protection"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Effortless effort Bhava",
+    "audience": "for all",
+    "date": "2023-08-25",
+    "description": "Actions happen smoothly and naturally, without strain. This bhava helps you flow with divine timing while achieving results.",
+    "keywords": ["effortless", "flow", "ease", "graceful action", "non-resistance", "karma", "alignment"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Shubham Shighram Bhava",
+    "audience": "for all",
+    "date": "2023-09-06",
+    "description": "Auspicious things happen quickly. This bhava accelerates positive outcomes and divine blessings without delays.",
+    "keywords": ["quick results", "auspiciousness", "speed", "shubham", "fast manifestation", "success"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Maa Tripura Upasana Bhava",
+    "audience": "for all",
+    "date": "2023-09-13",
+    "description": "Devotional connection with Maa Tripura Sundari. This bhava brings beauty, wisdom, balance, and inner fulfillment through Shakti sadhana.",
+    "keywords": ["tripura", "shakti", "goddess", "divine feminine", "upasana", "beauty", "devotion"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Param Dhayan Bhava",
+    "audience": "for all",
+    "date": "2023-09-22",
+    "description": "Supreme meditative state. This bhava encourages deeper dhyan (meditation) and supports spiritual progress for all.",
+    "keywords": ["meditation", "dhyan", "focus", "supreme silence", "inner stillness", "spiritual path"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Urjaa Sangrah Kriya",
+    "audience": "for me",
+    "date": "2023-09-22",
+    "description": "Conserving and gathering vital energy. This bhava helps maintain inner power, preventing leakage of physical or emotional energy.",
+    "keywords": ["energy conservation", "vitality", "prana", "focus", "power retention", "inner strength"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Kartavya Mukt Bhava",
+    "audience": "for all",
+    "date": "2023-09-26",
+    "description": "Freedom from the pressure of duties. This bhava helps release the burden of 'shoulds' and brings peaceful detachment from obligation.",
+    "keywords": ["freedom from duty", "detachment", "liberation", "non-doership", "peace", "spiritual freedom"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Mukti from the urge to have hugs or sex when a partner is stimulating you",
+    "audience": "for me",
+    "date": "2023-09-27",
+    "description": "Freedom from sexual or emotional dependency. This bhava supports inner mastery when sensual or emotional triggers arise.",
+    "keywords": ["sexual control", "emotional balance", "freedom", "self-mastery", "impulse control"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Correct Weight and Correct Hunger Bhava",
+    "audience": "for me",
+    "date": "2023-09-27",
+    "description": "Balanced body and appetite. This bhava helps you align with your natural body wisdom, eating mindfully and maintaining optimal weight.",
+    "keywords": ["healthy weight", "balanced appetite", "mindful eating", "body harmony", "wellness"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Super Diplomacy with Hasya Ras",
+    "audience": "for me",
+    "date": "2023-10-02",
+    "description": "The art of navigating difficult conversations with humor and grace. This bhava helps you communicate wisely with lightness and wit.",
+    "keywords": ["diplomacy", "humor", "hasya ras", "communication", "grace", "wit", "charm"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Highest Good of Listeners from My Words Bhava",
+    "audience": "for me",
+    "date": "2023-10-02",
+    "description": "Whatever you speak brings blessings to others. This bhava aligns your speech with truth and healing for those who hear you.",
+    "keywords": ["healing words", "speech blessing", "divine speaking", "truthful expression", "listener upliftment"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Sam Drishti Bhava",
+    "audience": "for me",
+    "date": "2023-10-13",
+    "description": "Equal vision for all. This bhava brings spiritual neutrality, seeing all beings with love and without bias or judgment.",
+    "keywords": ["equanimity", "non-judgment", "equality", "oneness", "samdrishti", "compassion"]
+  },
+  {
+    "header": "🥇3",
+    "name": "Vivek Bhava",
+    "audience": "for all",
+    "date": "2023-10-15",
+    "description": "Blessing of clear inner wisdom. This bhava strengthens your ability to discriminate between truth and illusion, right and wrong.",
+    "keywords": ["discernment", "inner wisdom", "vivek", "clarity", "judgment", "spiritual intellect"]
+  },
+  {
+    "header": "🥇1",
+    "name": "Now moment Bhava",
+    "audience": "for all",
+    "date": "2022-10-20",
+    "description": "The power of being fully present in this moment. This bhava helps you let go of past and future worries and live in the here and now.",
+    "keywords": ["present moment", "now", "mindfulness", "awareness", "presence", "peace", "consciousness"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Spiritual diet Bhava",
+    "audience": "for all",
+    "date": "2022-11-11",
+    "description": "Guidance to eat the right food and break free from harmful food habits or addictions, including heaviness after daytime naps.",
+    "keywords": ["spiritual food", "right diet", "addiction", "health", "eating habits", "digestive clarity"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Anand Purnanta Bhava",
+    "audience": "for me",
+    "date": "2022-12-11",
+    "description": "Total fulfillment through divine joy. This bhava fills the heart with contentment and bliss beyond worldly desires.",
+    "keywords": ["bliss", "divine joy", "fulfillment", "contentment", "happiness", "anand"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Param Bhog Bhava",
+    "audience": "for me",
+    "date": "2023-02-20",
+    "description": "Divine enjoyment without guilt. This bhava allows experiencing pleasure and richness as sacred and spiritually nourishing.",
+    "keywords": ["pleasure", "divine enjoyment", "luxury", "spiritual indulgence", "bhog", "sacred experience"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Strength to follow divine guidance Bhava",
+    "audience": "for me",
+    "date": "2023-03-26",
+    "description": "This bhava empowers you to trust and act on divine intuition and spiritual direction, even when it's difficult.",
+    "keywords": ["divine guidance", "courage", "inner strength", "intuition", "faith", "spiritual path"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Gratitude Bhava",
+    "audience": "for me",
+    "date": "2023-04-25",
+    "description": "Cultivating deep appreciation for life, people, and divine support. This bhava brings joy through grateful living.",
+    "keywords": ["gratitude", "thankfulness", "appreciation", "blessings", "heartful living", "grace"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Not-taking-seriously Bhava",
+    "audience": "for me",
+    "date": "2023-05-01",
+    "description": "The art of lightness. This bhava supports releasing overthinking, worry, and pressure—embracing ease and humor.",
+    "keywords": ["lightness", "humor", "ease", "detachment", "playfulness", "inner freedom"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Bhay mukt Bhava (Nirbhau)",
+    "audience": "for me",
+    "date": "2023-05-06",
+    "description": "Freedom from fear. This bhava instills inner courage, divine trust, and calm strength in any situation.",
+    "keywords": ["fearlessness", "courage", "nirbhau", "trust", "strength", "boldness", "inner calm"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Maa Raj Rajeshwari Bhava",
+    "audience": "for me",
+    "date": "2023-05-22",
+    "description": "Invoking the supreme Goddess of beauty, power, and compassion. This bhava brings divine grace and motherly protection.",
+    "keywords": ["goddess", "rajrajeshwari", "divine feminine", "power", "beauty", "shakti", "compassion"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Nishkaam Bhava",
+    "audience": "for me",
+    "date": "2023-06-06",
+    "description": "Desireless action. This bhava helps you perform duties without expectations or selfish motives, rooted in pure service.",
+    "keywords": ["nishkam karma", "selfless action", "non-attachment", "karma yoga", "service", "divine will"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Maha Back Track Bhava",
+    "audience": "for me",
+    "date": "2023-06-26",
+    "description": "Reset and reverse unhelpful habits or energies. This bhava helps re-align your path when you’ve gone off-track spiritually or emotionally.",
+    "keywords": ["reset", "realignment", "pause", "correct path", "self-awareness", "backtrack", "course correction"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Chitt vriti mukta Bhava",
+    "audience": "for me",
+    "date": "2023-07-11",
+    "description": "Freedom from repetitive mental patterns. This bhava clears psychological loops and opens space for clarity and stillness.",
+    "keywords": ["mind patterns", "chitta vritti", "freedom", "inner silence", "mental peace", "healing thoughts"]
+  },
+  {
+    "header": "🥇2",
+    "name": "Samprabhuta and only love Bhava",
+    "audience": "for me",
+    "date": "2023-07-15",
+    "description": "Sovereignty in love. This bhava blesses you with spiritual authority, wholeness, and unconditional divine love in all you do.",
+    "keywords": ["sovereignty", "self-mastery", "love", "wholeness", "divine presence", "self-respect", "oneness"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Playful romantic bhava",
+    "audience": "for all",
+    "date": "2024-10-01",
+    "description": "This bhava brings lighthearted romance and joyful intimacy. It helps dissolve seriousness and brings freshness into relationships.",
+    "keywords": ["romance", "love", "joy", "playfulness", "relationship", "connection", "emotional intimacy"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Urdhgami bhava",
+    "audience": "for all",
+    "date": "2024-10-02",
+    "description": "Upward energy movement. This bhava guides pranic and spiritual energy to rise toward higher chakras, awakening inner evolution.",
+    "keywords": ["kundalini", "energy rise", "spiritual awakening", "chakra", "elevation", "ascension"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Chumantar bhava",
+    "audience": "for me",
+    "date": "2024-10-03",
+    "description": "Emotional burdens disappear instantly. This bhava clears energetic heaviness and mental clutter like magic.",
+    "keywords": ["emotional healing", "energy clearing", "freedom", "emotional baggage", "release", "chumantar"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Pleasurable ecstatic orgasms bhava",
+    "audience": "for me",
+    "date": "2024-10-04",
+    "description": "This bhava brings heightened pleasure and spiritual bliss during intimacy, helping you experience divine union through the body.",
+    "keywords": ["orgasm", "pleasure", "ecstasy", "sexual bliss", "spiritual sex", "divine intimacy"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Bande da khanda khadkega bhava",
+    "audience": "for all",
+    "date": "2024-11-02",
+    "description": "The warrior spirit awakens. This bhava fills you with divine bravery, clarity, and the courage to stand for truth.",
+    "keywords": ["bravery", "divine warrior", "khanda", "truth", "sikhism", "courage", "protection"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Energetic sex bhava",
+    "audience": "for all",
+    "date": "2024-10-05",
+    "description": "Lovemaking becomes a sacred energetic exchange. This bhava supports vitality, soul-connection, and spiritual union during sex.",
+    "keywords": ["energy sex", "divine union", "sacred intimacy", "sexual energy", "vitality", "tantric sex"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Chokuray filter bhava",
+    "audience": "for all",
+    "date": "2024-10-06",
+    "description": "Divine energy is filtered and purified before it enters your space. This bhava works like an energetic shield.",
+    "keywords": ["reiki", "cho ku rei", "protection", "filter", "energy shield", "spiritual safety"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Listening n understanding acting bhava",
+    "audience": "for all",
+    "date": "2024-10-07",
+    "description": "You listen deeply, understand clearly, and act wisely. This bhava helps others feel heard, valued, and supported.",
+    "keywords": ["listening", "understanding", "empathy", "communication", "action", "connection", "trust"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Rahu ketu Venus bhava",
+    "audience": "for me",
+    "date": "2024-12-18",
+    "description": "Balance is restored among karmic, spiritual, and love-related energies governed by Rahu, Ketu, and Venus.",
+    "keywords": ["rahu", "ketu", "venus", "karma", "relationships", "astrology", "planetary balance"]
+  },
+  {
+    "header": "🥇0",
+    "name": "Kramashay touch n heal bhava",
+    "audience": "for me",
+    "date": "2025-01-03",
+    "description": "Ability to recognize and heal others’ inner child through touch and energy awareness. A deeply compassionate bhava.",
+    "keywords": ["healing touch", "inner child", "karmashaya", "energy healing", "compassion", "empathic power"]
+  },
+  {
+    "header": "🥇0",
+    "name": "कुशल नेत्र्तव bhava (Kushal Netratva Bhava)",
+    "audience": "for me",
+    "date": "2025-02-16",
+    "description": "Masterful leadership. This bhava enables you to guide others with wisdom, clarity, and integrity.",
+    "keywords": ["leadership", "guidance", "clarity", "decision making", "wisdom", "netratva"]
+  },
+  {
+    "header": "🥇0",
+    "name": "गहन ज्ञान bhava (Gahan Gyan Bhava)",
+    "audience": "for me",
+    "date": "2025-02-16",
+    "description": "Blessing of deep spiritual knowledge. This bhava gives access to profound inner wisdom and divine truths.",
+    "keywords": ["deep knowledge", "spiritual wisdom", "divine truth", "insight", "gyan", "intuitive clarity"]
   }
 ]
 
