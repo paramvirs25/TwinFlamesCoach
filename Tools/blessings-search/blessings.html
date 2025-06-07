@@ -1,5 +1,4 @@
 <style>
-    body { font-family: sans-serif; padding: 1rem; background: #f2f2f2; }
     h1 { text-align: center; }
     .filters { margin-bottom: 1rem; }
     .filters input { padding: 0.5rem; font-size: 1rem; width: 100%; }
@@ -9,7 +8,7 @@
     }
   </style>
   <h1>🙏 Blessing Viewer</h1>
-
+  <TfcScrollHere></TfcScrollHere>
   <div class="filters">
     <input type="text" id="searchInput" placeholder="Search blessings..." />
   </div>
@@ -47,8 +46,8 @@
         card.className = 'blessing-card';
 
         card.innerHTML = `
-          <div><strong>${b.header}</strong> | <strong>${b.name}</strong></div>
-          <div>🗓️ ${b.date} | 👥 ${b.audience}</div>
+          <div><strong>${b.name}</strong></div>
+          <div><strong>${b.header}</strong> | 🗓️ ${b.date} | 👥 ${b.audience}</div>
           <div style="margin-top: 0.5rem;">${b.description}</div>
         `;
 
