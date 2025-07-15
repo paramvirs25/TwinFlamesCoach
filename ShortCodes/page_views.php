@@ -24,4 +24,4 @@ function tfc_combined_koko_views_shortcode( $atts ) {
 
     return '👁️ ' . number_format_i18n( $total ) . ' views';
 }
-add_shortcode( 'koko_views', 'tfc_combined_koko_views_shortcode' );
+add_shortcode( 'tfc_page_views', 'tfc_combined_koko_views_shortcode' );
