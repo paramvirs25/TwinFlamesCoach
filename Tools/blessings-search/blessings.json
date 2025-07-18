@@ -1,4 +1,314 @@
 [
+  {
+    "header": "🥇36",
+    "name": "Live as if this moment is the last moment of life",
+    "englishName": "Last Moment Living Bhava",
+    "translatedName": "Living Fully in the Present",
+    "description": "Embracing the now with deep gratitude and presence.",
+    "keywords": ["present moment", "awareness", "life purpose", "mindfulness"],
+    "audience": "for all",
+    "date": "2025-07-16"
+  },
+  {
+    "header": "🥇36",
+    "name": "स्वः विचार बाधा मुक्त",
+    "englishName": "Swa Vichar Badha Mukt Bhava",
+    "translatedName": "Freedom from Own Thought Barriers",
+    "description": "Our thoughts no longer block our soul’s true path.",
+    "keywords": ["mental clarity", "thought freedom", "inner obstacles", "consciousness"],
+    "audience": "for all",
+    "date": "2025-07-16"
+  },
+  {
+    "header": "🥇36",
+    "name": "स्वःचालित विचार मुक्त",
+    "englishName": "Swachalit Vichar Mukt Bhava",
+    "translatedName": "Free from Self-Auto-Thoughts",
+    "description": "We stop running on auto-pilot mental programs.",
+    "keywords": ["self thought", "mind stillness", "inner silence", "freedom"],
+    "audience": "for all",
+    "date": "2025-07-16"
+  },
+  {
+    "header": "🥇36",
+    "name": "करुणा, प्रेम, आनंद bhava",
+    "englishName": "Karuna Prem Anand Bhava",
+    "translatedName": "Compassion, Love, Joy Attitude",
+    "description": "We live from the divine qualities of love, compassion, and bliss.",
+    "keywords": ["compassion", "love", "joy", "divine emotion"],
+    "audience": "for all",
+    "date": "2025-07-14"
+  },
+  {
+    "header": "🥇36",
+    "name": "तटसथ निज स्वरुप bhava",
+    "englishName": "Tatasth Nij Swaroop Bhava",
+    "translatedName": "Neutral and True Self",
+    "description": "We remain unaffected by emotional waves and realize our true form.",
+    "keywords": ["neutrality", "true self", "inner peace", "emotional balance"],
+    "audience": "for all",
+    "date": "2025-07-13"
+  },
+  {
+    "header": "🥇36",
+    "name": "When we are not well or sick, may someone's energy uplift us",
+    "englishName": "Healing Through Others' Energy Bhava",
+    "translatedName": "Spiritual Healing from Others",
+    "description": "We receive uplifting energy from others in times of illness.",
+    "keywords": ["healing", "support", "energy sharing", "care"],
+    "audience": "for all",
+    "date": "2025-07-12"
+  },
+  {
+    "header": "🥇36",
+    "name": "We cease to Disagree with each other",
+    "englishName": "No More Disagreement Bhava",
+    "translatedName": "Harmony in Relationships",
+    "description": "We rise above arguments and enter mutual understanding.",
+    "keywords": ["harmony", "agreement", "peace", "unity"],
+    "audience": "for all",
+    "date": "2025-07-12"
+  },
+  {
+    "header": "🥇36",
+    "name": "Men and women who are partners collaborate instead of competing",
+    "englishName": "Partner Collaboration Bhava",
+    "translatedName": "Divine Partnership Collaboration",
+    "description": "We evolve together by supporting each other rather than competing.",
+    "keywords": ["partnership", "collaboration", "love", "support"],
+    "audience": "for all",
+    "date": "2025-07-12"
+  },
+  {
+    "header": "🥇36",
+    "name": "We do not react, we respond",
+    "englishName": "Reaction Free, Response Based Bhava",
+    "translatedName": "Mindful Responding",
+    "description": "We choose conscious response over unconscious reaction. Especially relevant in sacred union between man and woman.",
+    "keywords": ["mindful", "response", "healing", "sacred union"],
+    "audience": "for all",
+    "date": "2025-07-11"
+  },
+  {
+    "header": "🥇35",
+    "name": "क्रिया युक्त bhava",
+    "englishName": "Kriya Yukt Bhava",
+    "translatedName": "Action-Filled Attitude",
+    "description": "We act promptly with divine energy guiding our actions.",
+    "keywords": ["action", "energy", "kriya", "spiritual effort"],
+    "audience": "for me",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "Diplomat bhava",
+    "englishName": "Diplomat Bhava",
+    "translatedName": "Diplomatic Attitude",
+    "description": "We communicate truth with wisdom, grace, and effectiveness.",
+    "keywords": ["diplomacy", "communication", "wisdom", "grace"],
+    "audience": "for me",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "आनंदित bhava",
+    "englishName": "Aanandit Bhava",
+    "translatedName": "Joyful State",
+    "description": "We stay in a blissful and joyous vibration.",
+    "keywords": ["joy", "bliss", "happiness", "cheerfulness"],
+    "audience": "for me",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "विजयी bhava",
+    "englishName": "Vijayi Bhava",
+    "translatedName": "Victorious Attitude",
+    "description": "We carry the inner certainty of divine victory.",
+    "keywords": ["victory", "success", "confidence", "win"],
+    "audience": "for me",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "सत्य अस्मिता",
+    "englishName": "Satya Asmita",
+    "translatedName": "True Identity",
+    "description": "We dissolve the false ego and recognize our true divine identity.",
+    "keywords": ["truth", "identity", "ego dissolving", "divine self"],
+    "audience": "for all",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "We do satkaram immediately and we pause and think before doing a dushkaram",
+    "englishName": "Satkaram Fast, Dushkaram Slow Bhava",
+    "translatedName": "Discerned Action",
+    "description": "We act swiftly for good deeds and pause before any harmful actions.",
+    "keywords": ["discernment", "good deeds", "awareness", "spiritual action"],
+    "audience": "for all",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "Asur stays away from us",
+    "englishName": "Asur Stays Away Bhava",
+    "translatedName": "Shield from Negative Entities",
+    "description": "We are protected from demonic or draining energies.",
+    "keywords": ["protection", "asur", "negativity", "spiritual shield"],
+    "audience": "for all",
+    "date": "2025-07-10"
+  },
+  {
+    "header": "🥇35",
+    "name": "कुतर्क कुकर्म परंपरा निषेध bhava",
+    "englishName": "Kutark Kukarm Parampara Nishedh Bhava",
+    "translatedName": "End of Harmful Logics and Traditions",
+    "description": "We break free from old harmful arguments like 'everything is fair in war or debate.'",
+    "keywords": ["kutark", "illogical tradition", "harmful mindset", "freedom"],
+    "audience": "for all",
+    "date": "2025-07-09"
+  },
+  {
+    "header": "🥇35",
+    "name": "व्यर्थ युद्ध विराम bhava",
+    "englishName": "Vyarth Yudh Viram Bhava",
+    "translatedName": "Cease of Unnecessary Wars",
+    "description": "We avoid meaningless conflicts and choose peace.",
+    "keywords": ["conflict resolution", "peace", "non-violence", "war"],
+    "audience": "for all",
+    "date": "2025-07-09"
+  },
+  {
+    "header": "🥇35",
+    "name": "People can take full benefit of Ekadashi, Dwadeshi",
+    "englishName": "Ekadashi Dwadeshi Benefit Bhava",
+    "translatedName": "Spiritual Fasting Benefits",
+    "description": "People align with lunar fasting days and gain spiritual and physical benefit.",
+    "keywords": ["ekadashi", "fasting", "spiritual benefit", "detox"],
+    "audience": "for all",
+    "date": "2025-07-06"
+  },
+  {
+    "header": "🥇35",
+    "name": "स्वयं सत्य लोक स्थापित bhava",
+    "englishName": "Swayam Satya Lok Sthapit Bhava",
+    "translatedName": "Established in Truth",
+    "description": "We are firmly rooted in divine truth in all areas of life.",
+    "keywords": ["truth", "satyam", "inner clarity", "alignment"],
+    "audience": "for me",
+    "date": "2025-07-07"
+  },
+  {
+    "header": "🥇35",
+    "name": "Women and men get out of imaginary picture of their partner and choose what is for their highest good",
+    "englishName": "Beyond Fantasy Partner Bhava",
+    "translatedName": "Choosing Soul-Aligned Partners",
+    "description": "People drop fantasy-based attraction and choose partners based on true spiritual alignment.",
+    "keywords": ["partner clarity", "real love", "spiritual relationship", "highest good"],
+    "audience": "for all",
+    "date": "2025-07-07"
+  },
+  {
+    "header": "🥇34",
+    "name": "पूर्व बंधन मुक्त bhava",
+    "englishName": "Poorv Bandhan Mukt Bhava",
+    "translatedName": "Freedom from Past Bindings",
+    "description": "Releasing old energetic cords and ties that no longer serve you.",
+    "keywords": ["cord cutting", "freedom", "release", "past"],
+    "audience": "for all",
+    "date": "2025-07-06"
+  },
+  {
+    "header": "🥇34",
+    "name": "आलोचना, प्रतिरक्षा, अर्थ से मुक्त bhava",
+    "englishName": "Aalochna PratiRaksha Arth Se Mukt Bhava",
+    "translatedName": "Free from Criticism, Defensiveness and Justification",
+    "description": "Freedom from unnecessary criticism and the need to defend or justify yourself.",
+    "keywords": ["defensiveness", "judgement", "criticism", "freedom"],
+    "audience": "for all",
+    "date": "2025-07-06"
+  },
+  {
+    "header": "🥇34",
+    "name": "इच्छा सहज रूप पूर्ण bhava",
+    "englishName": "Ichchha Sahaj Roop Poorn Bhava",
+    "translatedName": "Effortless Fulfillment of Desires",
+    "description": "Desires are fulfilled naturally without struggle.",
+    "keywords": ["desire", "fulfillment", "ease", "effortless"],
+    "audience": "for all",
+    "date": "2025-07-04"
+  },
+  {
+    "header": "🥇34",
+    "name": "दुर्भाव दूर और ट्विन फ्लेम समीपता bhava",
+    "englishName": "Durbhaav Door aur Twin Flame Sameepata Bhava",
+    "translatedName": "Removal of Hostility and Twin Flame Closeness",
+    "description": "Letting go of inner bitterness and drawing closer to your twin flame.",
+    "keywords": ["bitterness", "twin flame", "closeness", "relationship healing"],
+    "audience": "for all",
+    "date": "2025-07-03"
+  },
+  {
+    "header": "🥇34",
+    "name": "महा गुरु महफिले मोहली मस्त bhava",
+    "englishName": "Maha Guru Mahfile Mohali Mast Bhava",
+    "translatedName": "Ecstasy in Divine Satsang of Great Guru",
+    "description": "Deep joy and intoxication in the company and energy of the Divine Guru.",
+    "keywords": ["maha guru", "satsang", "bliss", "divine gathering"],
+    "audience": "for all",
+    "date": "2025-07-02"
+  },
+  {
+    "header": "🥇34",
+    "name": "फ़िज़ूल कुतर्क भाव मुक्त bhava",
+    "englishName": "Fizool Kutark Bhava Mukt Bhava",
+    "translatedName": "Freedom from Useless Arguments",
+    "description": "Letting go of baseless or illogical debates and contentions.",
+    "keywords": ["arguments", "kutark", "freedom", "clarity"],
+    "audience": "for all",
+    "date": "2025-06-30"
+  },
+  {
+    "header": "🥇34",
+    "name": "शीघ्र समझ उत्पन bhava",
+    "englishName": "Sheeghra Samajh Utpann Bhava",
+    "translatedName": "Quick Understanding",
+    "description": "We develop clarity and understanding quickly.",
+    "keywords": ["quick learning", "clarity", "wisdom", "understanding"],
+    "audience": "for all",
+    "date": "2025-06-30"
+  },
+  {
+    "header": "🥇34",
+    "name": "Human bhava to veer aur divya bhav bhava",
+    "englishName": "Human Bhava to Veer aur Divya Bhava",
+    "translatedName": "From Human Emotion to Heroic and Divine Attitude",
+    "description": "We shift from emotional fragility to strength and divinity.",
+    "keywords": ["divine", "strength", "heroic", "emotional evolution"],
+    "audience": "for all",
+    "date": "2025-06-29"
+  },
+  {
+    "header": "🥇34",
+    "name": "व्यक्तिगत इच्छा और निजता सम्मान",
+    "englishName": "Vyaktigat Ichchha aur Nijta Samman",
+    "translatedName": "Respect for Personal Desire and Privacy",
+    "description": "Each person’s individuality and wishes are honored.",
+    "keywords": ["privacy", "respect", "desire", "boundaries"],
+    "audience": "for all",
+    "date": "2025-06-28"
+  },
+  {
+    "header": "🥇34",
+    "name": "निजिता समर्थ bhava",
+    "englishName": "Nijta Samarth Bhava",
+    "translatedName": "Empowered Individuality",
+    "description": "We remain rooted in our individuality without losing connection.",
+    "keywords": ["individuality", "empowerment", "self", "strength"],
+    "audience": "for all",
+    "date": "2025-06-27"
+  },
    {
     "header": "🥇33",
     "name": "प्रतिशोध भाव नष्ट bhava",
