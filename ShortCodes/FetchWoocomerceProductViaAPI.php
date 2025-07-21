@@ -35,12 +35,12 @@ function fetch_wc_product_via_api($atts) {
 
     // Product Image
     if (!empty($data['images'][0]['src'])) {
-        $output .= '<img src="' . esc_url($data['images'][0]['src']) . '" style="max-width:100%; height:auto; margin-bottom:10px;" />';
+        $output .= '<img src="' . esc_url($data['images'][0]['src']) . '" style="max-width:200px; height:auto; margin-bottom:10px;" />';
     }
 
     // Price with HTML formatting (multi-currency, sale price, etc.)
     if (!empty($data['price_html'])) {
-        $output .= '<p><strong>Price:</strong> ' . $data['price_html'] . '</p>';
+        $output .= '<p>' . $data['price_html'] . '</p>';
     }
 
     // Short Description
@@ -49,7 +49,7 @@ function fetch_wc_product_via_api($atts) {
     }
 
     // View Product or Add to Cart button
-    $output .= '<a href="' . esc_url($data['permalink']) . '" class="button" style="display:inline-block; background:#0073aa; color:#fff; padding:8px 16px; text-decoration:none; border-radius:4px;">View Product</a>';
+    $output .= '<a href="' . esc_url($data['permalink']) . '" class="button" style="display:inline-block; background:#0073aa; color:#fff; padding:8px 16px; text-decoration:none; border-radius:4px;">Book Now</a>';
 
     $output .= '</div>';
 
