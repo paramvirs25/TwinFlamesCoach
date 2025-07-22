@@ -1,5 +1,6 @@
 <?php
-function fetch_wc_product_via_api($atts) {
+function fetch_wc_product_via_api($atts)
+{
     $atts = shortcode_atts([
         'id' => '',
     ], $atts);
@@ -11,9 +12,9 @@ function fetch_wc_product_via_api($atts) {
     $consumer_key = 'ck_eb1c121f64e16a8f9c640a09b235fe80c2d546f3'; // Replace with actual
     $consumer_secret = 'cs_3a5fdf29eaffa907f09b1722b4227699345c11ea'; // Replace with actual
 
-	$api_url = $site_url . '/wp-json/wc/v3/products/' . $atts['id'] .
-		'?consumer_key=' . $consumer_key .
-		'&consumer_secret=' . $consumer_secret;
+    $api_url = $site_url . '/wp-json/wc/v3/products/' . $atts['id'] .
+        '?consumer_key=' . $consumer_key .
+        '&consumer_secret=' . $consumer_secret;
 
     $response = wp_remote_get($api_url);
 
@@ -28,17 +29,24 @@ function fetch_wc_product_via_api($atts) {
     }
 
     // Build output
-     $output = '<div class="embedded-product" style="border:1px solid #ddd; padding:16px; max-width:400px;">';
+    $output = '<div class="embedded-product" style="border:1px solid #ddd; padding:16px; max-width:700px; margin:0 0 24px 0;">';
 
-    // Product Name
-    $output .= '<h3>' . esc_html($data['name']) . '</h3>';
+    $output .= '<div style="display:flex; flex-wrap:wrap; align-items: flex-start;">';
 
-    // Product Image
+    // Product Image (left column)
     if (!empty($data['images'][0]['src'])) {
-        $output .= '<img src="' . esc_url($data['images'][0]['src']) . '" style="max-width:200px; height:auto; margin-bottom:10px;" />';
+        $output .= '<div style="flex: 0 0 200px; max-width:200px; margin-right:16px; margin-bottom:16px;">';
+        $output .= '<img src="' . esc_url($data['images'][0]['src']) . '" style="width:100%; height:auto;" />';
+        $output .= '</div>';
     }
 
-    // Price with HTML formatting (multi-currency, sale price, etc.)
+    // Product Details (right column)
+    $output .= '<div style="flex: 1 1 300px; min-width:0;">';
+
+    // Product Name
+    $output .= '<h3 style="margin-top:0;">' . esc_html($data['name']) . '</h3>';
+
+    // Price (with Woo multi-currency HTML)
     if (!empty($data['price_html'])) {
         $output .= '<p>' . $data['price_html'] . '</p>';
     }
@@ -48,10 +56,14 @@ function fetch_wc_product_via_api($atts) {
         $output .= '<div class="short-description" style="margin-bottom:10px;">' . wp_kses_post($data['short_description']) . '</div>';
     }
 
-    // View Product or Add to Cart button
-    $output .= '<a href="' . esc_url($data['permalink']) . '" class="button" style="display:inline-block; background:#0073aa; color:#fff; padding:8px 16px; text-decoration:none; border-radius:4px;">Book Now</a>';
+    // CTA Button
+    $output .= '<a target="_blank" href="' . esc_url($data['permalink']) . '" class="button" style="display:inline-block; background:#0073aa; color:#fff; padding:8px 16px; text-decoration:none; border-radius:4px;">Book Now</a>';
 
-    $output .= '</div>';
+    $output .= '</div>'; // close right column
+    $output .= '</div>'; // close flex container
+
+    $output .= '</div>'; // close outer box
+
 
     return $output;
 }
