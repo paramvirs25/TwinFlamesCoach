@@ -16,6 +16,10 @@
 
 <script>
     jQuery(document).ready(function ($) {
+        const textareaId = 'rowNamesInput';
+        const separatorRadioName = 'separator';
+        const storageKey = 'loadOptionsTextarea';
+        const separatorKey = 'loadOptionsSeparator';
 
         var chart = null;
 
@@ -24,40 +28,72 @@
             const columnNames = ["Option", "Result"];
             const buttonCssClass = "btnLoadOptionsChart";
 
-            //if chart already exists then clear it
-            if(chart != null){
+            if (chart != null) {
                 chart.clearUI();
             }
 
-            //create new chart
             chart = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, true, separator);
         }
 
-        function getSelectedSeparator(){
-            const selectedSeparator = $('input[name="separator"]:checked').val();
+        function getSelectedSeparator() {
+            const selectedSeparator = $('input[name="' + separatorRadioName + '"]:checked').val();
             return selectedSeparator === 'newline' ? '\n' : ',';
         }
 
         function getRowNamesFromTextarea(separator) {
-            const textareaValue = $('#rowNamesInput').val();
-            //const separatorRegex = separator === 'newline' ? '\n' : ',';
+            const textareaValue = $('#' + textareaId).val();
             const rowNames = textareaValue.split(separator).map(name => name.trim()).filter(name => name);
             return rowNames;
         }
+
+        function saveToLocalStorage() {
+            const textareaValue = $('#' + textareaId).val();
+            const separatorValue = $('input[name="' + separatorRadioName + '"]:checked').val();
+            localStorage.setItem(storageKey, textareaValue);
+            localStorage.setItem(separatorKey, separatorValue);
+        }
+
+        function loadFromLocalStorage() {
+            const savedText = localStorage.getItem(storageKey);
+            const savedSeparator = localStorage.getItem(separatorKey);
+
+            if (savedText !== null) {
+                $('#' + textareaId).val(savedText);
+            }
+
+            if (savedSeparator !== null) {
+                $('input[name="' + separatorRadioName + '"][value="' + savedSeparator + '"]').prop('checked', true);
+            }
+
+            if (savedText) {
+                const separatorChar = savedSeparator === 'newline' ? '\n' : ',';
+                const rowNames = savedText.split(separatorChar).map(name => name.trim()).filter(name => name);
+                initializeTabularCharts(rowNames, separatorChar);
+            }
+        }
+
+        // Save on textarea or separator change
+        $('#' + textareaId).on('input', saveToLocalStorage);
+        $('input[name="' + separatorRadioName + '"]').on('change', saveToLocalStorage);
 
         $('#loadOptionsButton').on('click', function () {
             const selectedSeparator = getSelectedSeparator();
             const rowNames = getRowNamesFromTextarea(selectedSeparator);
             initializeTabularCharts(rowNames, selectedSeparator);
+            saveToLocalStorage(); // Ensure it's saved
         });
 
-        // Initial check to load TabularCharts class
-        if (typeof TabularCharts === 'undefined') {
-            TfcGlobal.loadTabularChartScript().done(function () {
-                //$('#loadOptionsButton').trigger('click');
-            });
-        } else {
-            // $('#loadOptionsButton').trigger('click');
+        // Load TabularCharts class, then load saved data
+        function loadAndInit() {
+            if (typeof TabularCharts === 'undefined') {
+                TfcGlobal.loadTabularChartScript().done(loadFromLocalStorage);
+            } else {
+                loadFromLocalStorage();
+            }
         }
+
+        window.addEventListener('pageshow', function () {
+            loadAndInit();
+        });
     });
 </script>
