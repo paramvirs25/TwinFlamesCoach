@@ -23,6 +23,9 @@ class TfcGlobal {
     static RandomPersonChartRootPath = "Tools/random-person-chart";
     static RandomPersonChartPath = `${TfcGlobal.RandomPersonChartRootPath}/index.html`;
 
+    static ReikiHealingChartRootPath = "Tools/reiki-healing-start-chart";
+    static ReikiHealingChartPath = `${TfcGlobal.ReikiHealingChartRootPath}/index.html`;
+
     static SacredHealingChartRootPath = "Tools/sacred-healing-chart";
     static SacredHealingChartPath = `${TfcGlobal.SacredHealingChartRootPath}/index.html`;
 

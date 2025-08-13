@@ -13,7 +13,7 @@
             ];
             const buttonCssClass = "btnReikiHealChart";
 
-            reikiTabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false);
+            reikiTabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false, '\n');
 
             // Add event listener to buttons with the specified CSS class
             const buttons = document.querySelectorAll(`.${buttonCssClass}`);
@@ -21,11 +21,14 @@
                 button.addEventListener('click', () => updateTable());
             });
 
-            const btnCopyReikiRecipients = document.querySelectorAll('btnCopyReikiRecipients');
+            const btnCopyReikiRecipients = document.querySelectorAll('.btnCopyReikiRecipients');
             btnCopyReikiRecipients.forEach(button => {
-                btnCopyReikiRecipients.addEventListener('click', () => reikiTabularCharts.copyFilteredNamesToClipboard(null));
+                button.addEventListener('click', () => {
+                    if (reikiTabularCharts) {
+                        reikiTabularCharts.copyFilteredNamesToClipboard(null);
+                    }
+                });
             });
-
         }
 
         // Check if the TabularCharts class is already defined
