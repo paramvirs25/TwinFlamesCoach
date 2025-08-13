@@ -8,9 +8,13 @@
         function initializeTabularCharts() {
             const tableId = "reikiHealTableBody";
             const columnNames = ["Send Reiki To", "Result", "Duration"];
-            const rowNames = [
-                "Masses", "Five Elements 🌪️ 💧 ⛰️ 🔥 🌌", "Your personal Healing Group", "World Political 🏛️", "Law Enforcement 👮‍♂️", "Income Tax Department ⚖️💰", "Farmers 🌾", "Lawyers 👨🏼‍⚖️", "Hospital patients 🤒", "Spiritual Leaders 🧘‍♀️", "Prostitutes 🕊️❤️‍🩹", "Animals 🐶", "Environment/ Habitat 🌳 🏞️", "Abused Children/ People 🤒", "Teenager Girls & boys", "Guilty/Non Guilty Prisoners ⛓️"
-            ];
+            // const rowNames = [
+            //     "Masses", "Five Elements 🌪️ 💧 ⛰️ 🔥 🌌", "Your personal Healing Group", "World Political 🏛️", "Law Enforcement 👮‍♂️", "Income Tax Department ⚖️💰", "Farmers 🌾", "Lawyers 👨🏼‍⚖️", "Hospital patients 🤒", "Spiritual Leaders 🧘‍♀️", "Prostitutes 🕊️❤️‍🩹", "Animals 🐶", "Environment/ Habitat 🌳 🏞️", "Abused Children/ People 🤒", "Teenager Girls & boys", "Guilty/Non Guilty Prisoners ⛓️"
+            // ];
+            
+            // Assuming reikiRowNames is defined in the HTML page that is calling this script
+            const rowNames = reikiRowNames; 
+            
             const buttonCssClass = "btnReikiHealChart";
 
             reikiTabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false, '\n');
