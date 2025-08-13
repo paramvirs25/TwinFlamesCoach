@@ -43,7 +43,7 @@
     }
 
     // Use pageshow for consistent behavior on back/forward navigation
-    window.addEventListener('pageshow', (event) => {
+    //window.addEventListener('pageshow', (event) => {
         if (typeof TabularCharts === 'undefined') {
             TfcGlobal.loadTabularChartScript().done(() => {
                 initializeEverything();
@@ -51,5 +51,5 @@
         } else {
             initializeEverything();
         }
-    });
+//    });
 </script>
