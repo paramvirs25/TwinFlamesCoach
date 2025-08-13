@@ -106,7 +106,8 @@ class TabularCharts {
 
     // New method to copy filtered names to clipboard
     copyFilteredNamesToClipboard(dropdownId) {
-        const appendHeader = document.getElementById(dropdownId).value === 'yes';
+        const appendHeader = dropdownId && document.getElementById(dropdownId)?.value === 'yes';
+
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr");
         let names = [];
