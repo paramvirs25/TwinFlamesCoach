@@ -1,5 +1,165 @@
 [
   {
+    "header": "🥇41",
+    "name": "Jo hota hai, aache ke liye hota hai bhava",
+    "englishName": "Jo Hota Hai, Achhe Ke Liye Hota Hai Bhava",
+    "translatedName": "Whatever Happens, Happens for Good",
+    "description": "Trust in the divine plan that everything happens for our highest good, even if it is not immediately visible.",
+    "keywords": ["trust", "faith", "divine plan", "acceptance", "positivity", "highest good"],
+    "audience": "for all",
+    "date": "2025-08-15"
+  },
+  {
+    "header": "🥇41",
+    "name": "अत्याचारी दबाव नियंत्रण mukt bhava",
+    "englishName": "Atyachaari Dabaav Niyantran Mukt Bhava",
+    "translatedName": "Freedom from Oppressive Pressure",
+    "description": "Releasing the control and pressure imposed by others, regaining personal freedom and inner strength.",
+    "keywords": ["freedom", "boundaries", "self-respect", "emotional strength", "independence"],
+    "audience": "for all",
+    "date": "2025-08-15"
+  },
+  {
+    "header": "🥇41",
+    "name": "Mansik kalpanik chintan mukt bhava",
+    "englishName": "Mansik Kalpanik Chintan Mukt Bhava",
+    "translatedName": "Freedom from Mental Overthinking",
+    "description": "Letting go of excessive mental imagining and multitasking, allowing the mind to focus and remain calm.",
+    "keywords": ["focus", "mindfulness", "mental peace", "clarity", "stress-free", "overthinking"],
+    "audience": "for all",
+    "date": "2025-08-14"
+  },
+  {
+    "header": "🥇41",
+    "name": "Asankhaya Yogasth",
+    "englishName": "Asankhaya Yogasth",
+    "translatedName": "Infinite Union with Yoga",
+    "description": "Freedom from the fear of public image while staying deeply connected to the yogic state of balance and union.",
+    "keywords": ["fearlessness", "public image", "self-confidence", "yoga", "inner balance"],
+    "audience": "for all",
+    "date": "2025-08-14"
+  },
+  {
+    "header": "🥇41",
+    "name": "व्यक्त सुक्ष्म गुहा आत्मन bhava",
+    "englishName": "Vyakt Sukshma Guha Atman Bhava",
+    "translatedName": "Expressing Subtle Inner Self",
+    "description": "Avoiding pushing the body to its physical limits and respecting the natural rhythm of life while expressing the inner self.",
+    "keywords": ["self-expression", "health", "balance", "inner self", "self-care", "rest"],
+    "audience": "for all",
+    "date": "2025-08-13"
+  },
+  {
+    "header": "🥇41",
+    "name": "We are not becoming loving or getting intimate for benefits",
+    "englishName": "No Conditional Love or Intimacy for Benefits",
+    "translatedName": "Unconditional Love and Intimacy",
+    "description": "Choosing to be loving and intimate without expecting material, emotional, or social benefits in return.",
+    "keywords": ["unconditional love", "selflessness", "purity", "relationships", "compassion"],
+    "audience": "for all",
+    "date": "2025-08-13"
+  },
+  {
+    "header": "🥇41",
+    "name": "अति बोलना nirudh bhava",
+    "englishName": "Ati Bolna Nirudh Bhava",
+    "translatedName": "Restrained Speech",
+    "description": "Avoiding excessive talking and developing the ability to listen more mindfully.",
+    "keywords": ["silence", "listening", "mindfulness", "speech control", "communication"],
+    "audience": "for all",
+    "date": "2025-08-12"
+  },
+  {
+    "header": "🥇41",
+    "name": "आतम स्थापित bhava",
+    "englishName": "Atam Sthapit Bhava",
+    "translatedName": "Established in the Soul",
+    "description": "Remaining firmly rooted in the soul, unaffected by external situations or emotional disturbances.",
+    "keywords": ["soul connection", "inner peace", "self-realization", "spiritual stability", "equanimity"],
+    "audience": "for all",
+    "date": "2025-08-12"
+  },
+  {
+    "header": "🥇40",
+    "name": "अस्त व्यस्तता धवस्त bhava",
+    "englishName": "Ast Vyastata Dhavast Bhava",
+    "translatedName": "Destruction of Chaos",
+    "description": "Freedom from disorder and chaos in life. Brings organization, clarity, and a sense of calm in daily activities.",
+    "keywords": ["organization", "clarity", "calm", "order", "discipline", "focus"],
+    "audience": "for all",
+    "date": "2025-08-12"
+  },
+  {
+    "header": "🥇40",
+    "name": "निरंकुशता bhava",
+    "englishName": "Nirankushata Bhava",
+    "translatedName": "Freedom from Controlling Others",
+    "description": "We avoid making decisions for other people's lives and respect their independence.",
+    "keywords": ["freedom", "respect", "independence", "boundaries", "non-controlling"],
+    "audience": "for all",
+    "date": "2025-08-11"
+  },
+  {
+    "header": "🥇40",
+    "name": "सहज चाल चल",
+    "englishName": "Sahaj Chal Chal",
+    "translatedName": "Smooth Flow of Actions",
+    "description": "We smoothly complete tasks without rushing from one thing to another, maintaining ease and balance.",
+    "keywords": ["ease", "flow", "balance", "calm work", "mindfulness", "productivity"],
+    "audience": "for all",
+    "date": "2025-08-11"
+  },
+  {
+    "header": "🥇40",
+    "name": "सार्वजानिक प्रति रक्षात्मक bhava",
+    "englishName": "Sarvajanik Prati Rakshatmak Bhava",
+    "translatedName": "Public Decorum and Protective Conduct",
+    "description": "Avoiding public displays of affection, especially by women, to maintain dignity and respect.",
+    "keywords": ["public conduct", "respect", "modesty", "decency", "boundaries"],
+    "audience": "for all",
+    "date": "2025-08-09"
+  },
+  {
+    "header": "🥇40",
+    "name": "निजता निर्विघ्न bhava",
+    "englishName": "Nijta Nirvighn Bhava",
+    "translatedName": "Undisturbed Privacy",
+    "description": "Respecting others' privacy, avoiding intrusion into their personal matters like checking their phone or conversations.",
+    "keywords": ["privacy", "respect", "boundaries", "trust", "personal space"],
+    "audience": "for all",
+    "date": "2025-08-09"
+  },
+  {
+    "header": "🥇40",
+    "name": "Important calls/messages are picked up by others",
+    "englishName": "Important Calls or Messages Are Picked Up",
+    "translatedName": "Timely Response to Urgent Communication",
+    "description": "Ensuring that important calls or messages are attended to by someone if we are unable to respond.",
+    "keywords": ["communication", "responsibility", "urgency", "timely response", "care"],
+    "audience": "for all",
+    "date": "2025-08-09"
+  },
+  {
+    "header": "🥇40",
+    "name": "आध्यात्मिक विश्वास दृढ़ bhava",
+    "englishName": "Adhyatmik Vishwas Dridh Bhava",
+    "translatedName": "Firm Faith in Spirituality",
+    "description": "Strength to let go of the old and welcome the new through deep faith in spirituality.",
+    "keywords": ["faith", "spirituality", "trust", "letting go", "renewal", "belief"],
+    "audience": "for all",
+    "date": "2025-08-07"
+  },
+  {
+    "header": "🥇40",
+    "name": "अति व्याकुल, अति समोहित मुक्त",
+    "englishName": "Ati Vyakul Ati Samohit Mukt",
+    "translatedName": "Freedom from Extreme Restlessness and Obsession",
+    "description": "When a person or thing leaves our life, we avoid rushing to fill the void with a similar person or thing.",
+    "keywords": ["detachment", "calmness", "non-attachment", "emotional balance", "healing"],
+    "audience": "for all",
+    "date": "2025-08-06"
+  },
+  {
     "header": "🥇39",
     "name": "समीरसार समभाव",
     "englishName": "Sameer Saar Sam Bhav",
