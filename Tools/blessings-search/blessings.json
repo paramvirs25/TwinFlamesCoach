@@ -1,5 +1,155 @@
 [
   {
+    "header": "🥇43",
+    "name": "गोपनीयता संरक्षण भावा",
+    "englishName": "Gopniyata Sanrakshan Bhava",
+    "translatedName": "Confidentiality Protection",
+    "description": "May people no longer complain that their personal conversations have been shared with others. Everyone respects confidentiality and personal trust.",
+    "keywords": ["privacy", "confidentiality", "trust", "respect", "personal talk"],
+    "audience": "for all",
+    "date": "2025-08-18"
+  },
+  {
+    "header": "🥇43",
+    "name": "पुरुष एकांत समझ भावा",
+    "englishName": "Purush Ekaant Samajh Bhava",
+    "translatedName": "Understanding Men’s Need for Solitude",
+    "description": "May women understand that men often need isolation to recharge their energy, especially after sex, and not misinterpret it as disinterest.",
+    "keywords": ["men", "isolation", "energy recharge", "relationships", "post-sex space"],
+    "audience": "for all",
+    "date": "2025-08-18"
+  },
+  {
+    "header": "🥇43",
+    "name": "प्राकृतिक चिकित्सा प्रसार भावा",
+    "englishName": "Prakritik Chikitsa Prasaar Bhava",
+    "translatedName": "Expansion of Naturopathy",
+    "description": "May naturopathy and natural healing treatments increase in the world, bringing holistic wellness and harmony with nature.",
+    "keywords": ["naturopathy", "natural healing", "holistic health", "treatments", "wellness"],
+    "audience": "for all",
+    "date": "2025-08-18"
+  },
+  {
+    "header": "🥇43",
+    "name": "स्वयं चिंता मुक्त भावा",
+    "englishName": "Swayam Chinta Mukt Bhava",
+    "translatedName": "Free from Dependency of Being Asked",
+    "description": "May people, especially women, release the complaint that nobody inquires about their well-being and instead find strength in self-assurance.",
+    "keywords": ["independence", "complaints", "emotional freedom", "self-assurance", "women"],
+    "audience": "for all",
+    "date": "2025-08-18"
+  },
+  {
+    "header": "🥇43",
+    "name": "स्वस्थ पुनर्वास धैर्य भावा",
+    "englishName": "Swasth Punarvaas Dhairya Bhava",
+    "translatedName": "Patience in Recovery",
+    "description": "When a child or pet recovers from fever, may people show patience and not rush to give them baths or heavy foods too early, ensuring gentle recovery.",
+    "keywords": ["healing", "patience", "children", "pets", "recovery", "care"],
+    "audience": "for all",
+    "date": "2025-08-18"
+  },
+  {
+    "header": "🥇43",
+    "name": "अवैध जन्म मुक्ति भावा",
+    "englishName": "Avaidh Janm Mukti Bhava",
+    "translatedName": "Freedom from Illegitimacy Burden",
+    "description": "May people be free from the emotional and social burden of being labeled as an illegitimate child, embracing their divine worth.",
+    "keywords": ["illegitimacy", "freedom", "healing", "self-worth", "acceptance"],
+    "audience": "for all",
+    "date": "2025-08-18"
+  },
+  {
+    "header": "🥇43",
+    "name": "सुखद काम अनुभव भावा",
+    "englishName": "Sukhda Kaam Anubhav Bhava",
+    "translatedName": "Fulfilling Sexual Experience",
+    "description": "May those who are unable to experience sex due to various reasons now receive enjoyable, fulfilling, and healing sexual experiences.",
+    "keywords": ["sex", "fulfillment", "intimacy", "healing", "relationships", "pleasure"],
+    "audience": "for all",
+    "date": "2025-08-17"
+  },
+  {
+    "header": "🥇42",
+    "name": "बाल स्वतंत्रता भावा",
+    "englishName": "Baal Swatantrata Bhava",
+    "translatedName": "Freedom for Children",
+    "description": "May children grow freely without unnecessary pressure, control, or conditioning, allowing them to discover their own unique path.",
+    "keywords": ["children", "freedom", "parenting", "independence", "growth", "nurturing"],
+    "audience": "for all",
+    "date": "2025-08-17"
+  },
+  {
+    "header": "🥇42",
+    "name": "वित्त प्रवाह सहज भावा",
+    "englishName": "Vitta Pravah Sahaj Bhava",
+    "translatedName": "Free Flow of Finances",
+    "description": "Blessing for smooth financial flow so that people can easily pay for spiritual courses and growth opportunities without stress.",
+    "keywords": ["finances", "abundance", "prosperity", "spiritual courses", "ease"],
+    "audience": "for all",
+    "date": "2025-08-17"
+  },
+  {
+    "header": "🥇42",
+    "name": "स्त्री सुख रहस्य भावा",
+    "englishName": "Stri Sukh Rahasya Bhava",
+    "translatedName": "Men Understand Women’s Orgasm",
+    "description": "May men learn how to help women reach orgasm with awareness, patience, and sensitivity, fostering deeper intimacy.",
+    "keywords": ["women", "orgasm", "sexual awareness", "intimacy", "satisfaction", "partnership"],
+    "audience": "for all",
+    "date": "2025-08-16"
+  },
+  {
+    "header": "🥇42",
+    "name": "स्त्री शिकायत अंत भावा",
+    "englishName": "Stri Shikayat Ant Bhava",
+    "translatedName": "End of Women’s Complaint",
+    "description": "May the common complaint of women that men only come running for sex dissolve, and relationships become more balanced and fulfilling.",
+    "keywords": ["relationships", "complaints", "balance", "intimacy", "understanding"],
+    "audience": "for all",
+    "date": "2025-08-16"
+  },
+  {
+    "header": "🥇42",
+    "name": "आकर्षण स्थायित्व भावा",
+    "englishName": "Aakarshan Sthayitva Bhava",
+    "translatedName": "Sustained Excitement",
+    "description": "May the excitement and joy in intimacy, including touch and play, remain sustained even after the initial thrill has passed.",
+    "keywords": ["intimacy", "excitement", "touch", "relationships", "sustained pleasure"],
+    "audience": "for all",
+    "date": "2025-08-16"
+  },
+  {
+    "header": "🥇42",
+    "name": "वीर्य मूल्य बोध भावा",
+    "englishName": "Veerya Moolya Bodh Bhava",
+    "translatedName": "Value of Male Semen",
+    "description": "May women understand the spiritual and energetic value of male semen, honoring it as a sacred essence rather than just a physical fluid.",
+    "keywords": ["semen", "energy", "sacredness", "awareness", "sexual wisdom"],
+    "audience": "for all",
+    "date": "2025-08-16"
+  },
+  {
+    "header": "🥇42",
+    "name": "समीपता समरसता भावा",
+    "englishName": "Sameepata Samarasata Bhava",
+    "translatedName": "Harmony in Closeness",
+    "description": "May the paradoxical complaint end where if a man comes close women accuse him of wanting only sex, and if he stays away, they feel ignored.",
+    "keywords": ["relationships", "closeness", "harmony", "understanding", "men-women dynamics"],
+    "audience": "for all",
+    "date": "2025-08-16"
+  },
+  {
+    "header": "🥇42",
+    "name": "पुरुष संतुष्टि ज्ञान भावा",
+    "englishName": "Purush Santushti Gyaan Bhava",
+    "translatedName": "Women Understand How to Satisfy Men",
+    "description": "May women understand how to truly satisfy and nurture men on physical, emotional, and spiritual levels.",
+    "keywords": ["men", "satisfaction", "relationships", "awareness", "intimacy"],
+    "audience": "for all",
+    "date": "2025-08-16"
+  },
+  {
     "header": "🥇41",
     "name": "Jo hota hai, aache ke liye hota hai bhava",
     "englishName": "Jo Hota Hai, Achhe Ke Liye Hota Hai Bhava",
