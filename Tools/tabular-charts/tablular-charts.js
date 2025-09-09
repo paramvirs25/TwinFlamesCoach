@@ -87,10 +87,11 @@ class TabularCharts {
                 gradientCell.style.width = `${randomValue}%`;
 
                 if (randomValue >= TfcGlobal.AngelsSayYes) {
-                    gradientCell.innerHTML = `<div class="tick">${randomValue}</div>`;
+                    gradientCell.innerHTML = `<div class="tick">✅ <span class="number">${randomValue}</span></div>`;
                 } else {
-                    gradientCell.innerHTML = `<div class="cross">${randomValue}</div>`;
+                    gradientCell.innerHTML = `<div class="cross">❌ <span class="number">${randomValue}</span></div>`;
                 }
+
             }
         });
     }
