@@ -7,7 +7,7 @@
 
         function initializeTabularCharts() {
             const tableId = "reikiHealTableBody";
-            const columnNames = ["Send Reiki To", "Result", "Duration"];
+            const columnNames = ["Send Reiki To", "Result"]; //, "Duration"];
             // const rowNames = [
             //     "Masses", "Five Elements 🌪️ 💧 ⛰️ 🔥 🌌", "Your personal Healing Group", "World Political 🏛️", "Law Enforcement 👮‍♂️", "Income Tax Department ⚖️💰", "Farmers 🌾", "Lawyers 👨🏼‍⚖️", "Hospital patients 🤒", "Spiritual Leaders 🧘‍♀️", "Prostitutes 🕊️❤️‍🩹", "Animals 🐶", "Environment/ Habitat 🌳 🏞️", "Abused Children/ People 🤒", "Teenager Girls & boys", "Guilty/Non Guilty Prisoners ⛓️"
             // ];
@@ -20,10 +20,10 @@
             reikiTabularCharts = new TabularCharts(tableId, columnNames, rowNames, buttonCssClass, false, '\n');
 
             // Add event listener to buttons with the specified CSS class
-            const buttons = document.querySelectorAll(`.${buttonCssClass}`);
-            buttons.forEach(button => {
-                button.addEventListener('click', () => updateTable());
-            });
+            // const buttons = document.querySelectorAll(`.${buttonCssClass}`);
+            // buttons.forEach(button => {
+            //     button.addEventListener('click', () => updateTable());
+            // });
 
             const btnCopyReikiRecipients = document.querySelectorAll('.btnCopyReikiRecipients');
             btnCopyReikiRecipients.forEach(button => {
@@ -43,21 +43,21 @@
         }
     });
 
-    function updateTable() {
-        const tableBody = document.getElementById('reikiHealTableBody').querySelector('tbody');
-        const rows = tableBody.querySelectorAll('tr');
+    // function updateTable() {
+    //     const tableBody = document.getElementById('reikiHealTableBody').querySelector('tbody');
+    //     const rows = tableBody.querySelectorAll('tr');
 
-        rows.forEach(row => {
-            const lastCell = row.querySelector('td:last-child div');
-            if (lastCell) {
-                const number = parseInt(lastCell.textContent, 10);
-                const result = Math.ceil(number / 10);
-                lastCell.textContent = `${result} min`;
-                lastCell.style.width = '100%';
-            }
-        });
+    //     rows.forEach(row => {
+    //         const lastCell = row.querySelector('td:last-child div');
+    //         if (lastCell) {
+    //             const number = parseInt(lastCell.textContent, 10);
+    //             const result = Math.ceil(number / 10);
+    //             lastCell.textContent = `${result} min`;
+    //             lastCell.style.width = '100%';
+    //         }
+    //     });
 
-    }
+    // }
 
     // Call the function to update the table
     //updateTable();
