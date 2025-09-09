@@ -9,44 +9,46 @@ td {
     padding: 8px;
     text-align: center;
     position: relative;
-    /* Required for gradient animation */
+    overflow: hidden; /* ensures nothing spills outside */
 }
 
+/* Animated background only */
 .gradient-cell {
-    width: 0;
-    /* Start with 0% width */
-    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-
+    height: 100%;
+    width: 0; /* Start with 0% width */
     transition: width 1s ease;
-    /* Animation duration */
+    z-index: 0; /* behind content */
 }
 
+/* Foreground content (tick/cross + number) */
 .tick, .cross {
-    display: flex;
+    position: relative;
+    z-index: 1; /* above the gradient */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
 
-    font-size: 1.2em;  /* make icon bigger */
+    font-size: 1.2em;  
     font-weight: bold;
     color: white;
+
+    white-space: nowrap; /* keep ❌ 18 together */
 }
 
 .tick span.number,
 .cross span.number {
-    font-size: 0.8em;   /* make number smaller */
-    margin-left: 4px;   /* spacing between icon and number */
-    opacity: 0.8;       /* number less prominent */
+    font-size: 0.8em;   
+    margin-left: 4px;   
+    opacity: 0.8;       
 }
 
 .tick {
-    background-color: green;
+    background-color: green; /* optional if you also want color fallback */
 }
 
 .cross {
-    background-color: red;
+    background-color: red;   /* optional */
 }
