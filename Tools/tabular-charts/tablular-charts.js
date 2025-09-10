@@ -58,7 +58,7 @@ class TabularCharts {
             button.addEventListener('click', () => this.fillRandomNumbers());
         });
 
-        if (this.isShowCopyFilteredRowButton) {
+        if(this.isShowCopyFilteredRowButton){
             // Add the new copy to clipboard button
             this.addCopyButton();
         }
@@ -87,11 +87,9 @@ class TabularCharts {
                 gradientCell.style.width = `${randomValue}%`;
 
                 if (randomValue >= TfcGlobal.AngelsSayYes) {
-                    gradientCell.style.backgroundColor = "green";
-                    gradientCell.innerHTML = `<div class="tick">✅ <span class="number">${randomValue}</span></div>`;
+                    gradientCell.innerHTML = `<div class="tick">${randomValue}</div>`;
                 } else {
-                    gradientCell.style.backgroundColor = "red";
-                    gradientCell.innerHTML = `<div class="cross">❌ <span class="number">${randomValue}</span></div>`;
+                    gradientCell.innerHTML = `<div class="cross">${randomValue}</div>`;
                 }
             }
         });
@@ -113,9 +111,9 @@ class TabularCharts {
         const tableBody = document.getElementById(this.tableId).querySelector("tbody");
         const rows = tableBody.querySelectorAll("tr");
         let names = [];
-
+    
         let currentHeaderText = ''; // Keeps track of the current header-row text
-
+    
         rows.forEach(row => {
             if (row.classList.contains("header-row")) {
                 // Update the current header text for subsequent rows
@@ -124,7 +122,7 @@ class TabularCharts {
                 const cells = row.querySelectorAll("td");
                 const rowName = cells[0].textContent.trim();
                 const firstCellValue = parseInt(cells[1]?.querySelector(".gradient-cell div")?.textContent.trim() || "0", 10);
-
+    
                 if (firstCellValue >= TfcGlobal.AngelsSayYes) {
                     // Append the current header text if required
                     const fullRowName = appendHeader ? `${currentHeaderText} - ${rowName}` : rowName;
@@ -132,7 +130,7 @@ class TabularCharts {
                 }
             }
         });
-
+    
         // Copy the filtered names to clipboard
         const namesString = names.join(this.copyFilteredRowSeparator);
         navigator.clipboard.writeText(namesString).then(() => {
@@ -146,7 +144,7 @@ class TabularCharts {
     addCopyButton() {
         // Dropdown ID and Button ID specific to this instance
         const dropdownId = `appendRowHeader-${this.uniqueId}`;
-
+        
         // Create Dropdown
         const dropdownLabel = document.createElement("label");
         dropdownLabel.setAttribute("for", dropdownId);
@@ -163,11 +161,11 @@ class TabularCharts {
         button.textContent = 'Copy Filtered Row Names to Clipboard';
         button.className = this.buttonCssClass;
         button.style.marginTop = '10px';
-
+    
         button.addEventListener('click', () => this.copyFilteredNamesToClipboard(dropdownId));
 
-
-
+        
+    
         const tableElement = document.getElementById(this.tableId);
         //tableElement.insertAdjacentElement('afterend', button);
         // tableElement.insertAdjacentElement('beforebegin', dropdownLabel);
@@ -182,7 +180,7 @@ class TabularCharts {
         tableElement.parentNode.insertBefore(container, tableElement);
 
     }
-
+    
 
     // Method to get cell value
     getCellValue(rowName, columnName) {
