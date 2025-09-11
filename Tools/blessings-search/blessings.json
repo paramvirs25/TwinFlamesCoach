@@ -1,5 +1,145 @@
 [
   {
+    "header": "🥇56",
+    "name": "Honest Judiciary System Bhava",
+    "englishName": "Honest Judiciary System Bhava",
+    "translatedName": "Judiciary and legal system functions honestly",
+    "description": "Blessing that promotes honesty within the judiciary system, including judges, lawyers, and other officials, so that decisions are made without greed or political pressure.",
+    "keywords": ["judiciary", "lawyers", "honesty", "integrity", "legal system", "judges"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Blessings for Physically Challenged Youth",
+    "englishName": "Blessings for Physically Challenged Youth",
+    "translatedName": "Support for young people with physical challenges",
+    "description": "Blessing for young individuals who are not fully physically operational, to find strength, acceptance, and self-confidence.",
+    "keywords": ["disabled", "physically challenged", "acceptance", "strength", "youth"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Lawyer/Middleman Fairness Bhava",
+    "englishName": "Lawyer Middleman Fairness Bhava",
+    "translatedName": "Middlemen and lawyers act without cleverness and delay",
+    "description": "Blessing that the middleman or lawyer does not show cleverness by unnecessarily delaying legal cases but helps in resolving them as soon as possible.",
+    "keywords": ["lawyer", "middleman", "fairness", "justice", "case resolution"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Truthful Case Filing Bhava",
+    "englishName": "Truthful Case Filing Bhava",
+    "translatedName": "Do not twist facts or lie in legal cases",
+    "description": "Blessing to help people file legal cases honestly, without twisting facts or lying.",
+    "keywords": ["truth", "legal case", "honesty", "integrity"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Confession of Falsehood Bhava",
+    "englishName": "Confession of Falsehood Bhava",
+    "translatedName": "Taking responsibility and withdrawing lies in case filings",
+    "description": "Blessing that helps individuals withdraw their lies when they realize they filed a false case.",
+    "keywords": ["confession", "honesty", "truth", "legal responsibility"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Negotiation Fairness Bhava",
+    "englishName": "Negotiation Fairness Bhava",
+    "translatedName": "People who easily agree are not further exploited",
+    "description": "Blessing to ensure that people who agree to terms during negotiations are not taken advantage of later.",
+    "keywords": ["negotiation", "fairness", "agreement", "exploitation"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Freedom from Useless Explanations Bhava",
+    "englishName": "Freedom from Useless Explanations Bhava",
+    "translatedName": "Free from giving unnecessary justifications",
+    "description": "Blessing that helps individuals stop feeling obligated to give excessive or useless explanations to others.",
+    "keywords": ["explanation", "freedom", "confidence", "self-assurance"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },  
+  {
+    "header": "🥇56",
+    "name": "Generation Gap Bridging Bhava",
+    "englishName": "Generation Gap Bridging Bhava",
+    "translatedName": "Shorten mental and emotional distance between generations",
+    "description": "Blessing that bridges the generational gap, helping people understand each other better across different age groups.",
+    "keywords": ["generation gap", "understanding", "empathy", "communication"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Man on Phone Argument Bhava",
+    "englishName": "Man on Phone Argument Bhava",
+    "translatedName": "Control and composure during phone arguments",
+    "description": "Blessing that helps people avoid fighting or arguing unnecessarily over phone calls, promoting calm communication.",
+    "keywords": ["argument", "calmness", "communication", "self-control"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Kaal Yatra Bhava",
+    "englishName": "Kaal Yatra Bhava",
+    "translatedName": "Spiritual journey through time",
+    "description": "Blessing that empowers people to undertake a spiritual 'kaal yatra'—a metaphysical journey through life and time.",
+    "keywords": ["kaal yatra", "spiritual journey", "time travel", "self-discovery"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Correct Intention Perception Bhava",
+    "englishName": "Correct Intention Perception Bhava",
+    "translatedName": "Understanding others’ intentions correctly",
+    "description": "Blessing that helps individuals associate actions of others with their true intentions, avoiding false assumptions.",
+    "keywords": ["intention", "clarity", "perception", "understanding"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "Controlled Anger Bhava",
+    "englishName": "Controlled Anger Bhava",
+    "translatedName": "Not taking extreme steps in anger",
+    "description": "Blessing that helps prevent extreme reactions during moments of anger, such as harming others.",
+    "keywords": ["anger", "self-control", "peace", "emotional balance"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "End of Evil Bhava",
+    "englishName": "End of Evil Bhava",
+    "translatedName": "Eradication of all forms of evil",
+    "description": "Blessing that eradicates evil intentions and harmful actions from one's life.",
+    "keywords": ["evil", "negativity", "purity", "spiritual growth"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
+    "header": "🥇56",
+    "name": "End of Lies Bhava",
+    "englishName": "End of Lies Bhava",
+    "translatedName": "Freedom from lies and falsehood",
+    "description": "Blessing that helps individuals speak the truth and live authentically, eliminating lies.",
+    "keywords": ["truth", "honesty", "authenticity", "purity"],
+    "audience": "for all",
+    "date": "2025-09-11"
+  },
+  {
     "header": "🥇55",
     "name": "Soul Intended Balance Bhava",
     "englishName": "Soul Intended Balance Bhava",
