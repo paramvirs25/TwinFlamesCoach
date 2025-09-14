@@ -1,7 +1,7 @@
 <?php
 function tfc_audio_shortcode($atts) {
     // Flag to control which player to use
-    $is_use_adilo = true;  // Change to false to use HTML5 audio player when possible
+    $is_use_adilo = false;  // Change to false to use HTML5 audio player when possible
 
     // Define shortcode attributes
     $atts = shortcode_atts([
