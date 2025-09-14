@@ -11,7 +11,6 @@ add_filter('query_vars', function($vars) {
 add_action('template_redirect', function() {
     $file_id = get_query_var('audio_file_id');
     if ($file_id) {
-        // Validate user is logged in (Optional but recommended)
         if (!is_user_logged_in()) {
             wp_die('Access Denied', 'Error', ['response' => 403]);
         }
@@ -20,10 +19,12 @@ add_action('template_redirect', function() {
         if (!$accessToken) {
             wp_die('Failed to get access token', 'Error', ['response' => 500]);
         }
-		
+
         $googleApiUrl = "https://www.googleapis.com/drive/v3/files/$file_id?alt=media";
 
-        header('Content-Type: audio/mpeg');  // Adjust MIME type as needed
+        // Serve full file (no range support fallback)
+        header('Content-Type: audio/mpeg');
+        header('Accept-Ranges: none');
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
@@ -36,9 +37,10 @@ add_action('template_redirect', function() {
         curl_exec($ch);
         curl_close($ch);
 
-        exit();  // Prevent WordPress from loading further
+        exit();
     }
 });
+
 
 function get_google_access_token() {
 	//Google drive credentials are stored by "_Store Credentials" snippet
