@@ -56,7 +56,7 @@ function tfc_audio_shortcode($atts) {
             $gd_audio_url = esc_url('https://members.twinflamescoach.com/audio-proxy/' . $data['gd_id']);
             $output .= "<div class='wp-block-group'>
                             <h4 class='wp-block-heading'>{$data['heading']}</h4>
-                            <audio controls controlsList='nodownload' style='width: 100%;'>
+                            <audio controls controlsList='nodownload' style='width: 90%;'>
                                 <source src='{$gd_audio_url}' type='audio/mpeg'>
                                 Your browser does not support the audio element.
                             </audio>

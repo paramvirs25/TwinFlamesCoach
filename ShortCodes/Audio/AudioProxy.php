@@ -22,17 +22,38 @@ add_action('template_redirect', function() {
 
         $googleApiUrl = "https://www.googleapis.com/drive/v3/files/$file_id?alt=media";
 
-        // Serve full file (no range support fallback)
-        header('Content-Type: audio/mpeg');
-        header('Accept-Ranges: none');
+        $range = isset($_SERVER['HTTP_RANGE']) ? $_SERVER['HTTP_RANGE'] : null;
+
+        $headers = [
+            "Authorization: Bearer $accessToken"
+        ];
+
+        if ($range) {
+            $headers[] = "Range: $range";
+        }
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $googleApiUrl);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            "Authorization: Bearer $accessToken"
-        ]);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
         curl_setopt($ch, CURLOPT_HEADER, false);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+
+        // Forward headers from Google Drive to browser
+        curl_setopt($ch, CURLOPT_HEADERFUNCTION, function($curl, $header_line) {
+            if (preg_match('/^(Content-Length|Content-Range|Content-Type|Accept-Ranges):/i', $header_line)) {
+                header(trim($header_line));
+            }
+
+            if (preg_match('/^HTTP\/[\d\.]+\s+(\d+)/i', $header_line, $matches)) {
+                http_response_code(intval($matches[1]));
+            }
+
+            return strlen($header_line);
+        });
+
+        // Ensure Accept-Ranges header is always present
+        header('Accept-Ranges: bytes');
 
         curl_exec($ch);
         curl_close($ch);
@@ -41,14 +62,11 @@ add_action('template_redirect', function() {
     }
 });
 
-
 function get_google_access_token() {
-	//Google drive credentials are stored by "_Store Credentials" snippet
     $client_id = get_option('tfc_google_drive_client_id');
     $client_secret = get_option('tfc_google_drive_client_secret');
     $refresh_token = get_option('tfc_google_drive_refresh_token');
 
-    // Optionally, cache the access token for performance
     $cached_token = get_transient('google_drive_access_token');
     if ($cached_token) {
         return $cached_token;
@@ -64,13 +82,12 @@ function get_google_access_token() {
     ]);
 
     if (is_wp_error($response)) {
-        return false;  // Failed to get token
+        return false;
     }
 
     $body = json_decode(wp_remote_retrieve_body($response), true);
 
     if (isset($body['access_token'])) {
-        // Cache the token for 1 hour (or the expiration time)
         set_transient('google_drive_access_token', $body['access_token'], 3600);
         return $body['access_token'];
     }
