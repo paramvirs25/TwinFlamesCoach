@@ -54,6 +54,8 @@
   let currentFiltered = [];
   let isHeaderSearch = false;
 
+  const amounts = ['1k', '11k', '21k', '31k', '41k', '51k', '61k', '71k', '81k', '91k'];
+
   async function fetchBlessings() {
     try {
       const response = await fetch('https://paramvirs25.github.io/TwinFlamesCoach/Tools/blessings-search/blessings.json');
@@ -82,8 +84,7 @@
     let filtered = blessings;
     const headerRangeMatch = searchText.match(/^h:\s*(\d+)\s*to\s*(\d+)$/);
 
-      //if serach starts with h: then filter on header range
-      if (headerRangeMatch) {
+    if (headerRangeMatch) {
       isHeaderSearch = true;
       const headerStart = parseInt(headerRangeMatch[1], 10);
       const headerEnd = parseInt(headerRangeMatch[2], 10);
@@ -138,17 +139,35 @@
       let names = currentFiltered.map(b => b.name);
 
       if (isHeaderSearch) {
-        // Remove "Bhava" or "Blessing" from the end of name
-        names = names.map(name => name.replace(/\s*(Bhava|Blessing)$/i, '').trim());
-        // Join names by comma
-        const commaSeparated = names.join(', ');
-        copyToClipboard(commaSeparated);
+        // Remove unwanted words from end
+        names = names.map(name => name.replace(/\s*(Bhava|Blessing|भावा)$/i, '').trim());
+
+        let resultText = '';
+        for (let i = 0; i < names.length; i += 7) {
+          const chunk = names.slice(i, i + 7);
+          const blessingsLine = chunk.join(', ');
+
+          // Generate random score
+          const randomScore = Math.floor(Math.random() * 101);
+          let amountLine = '';
+
+          if (randomScore >= 63) {
+            const randomAmount = amounts[Math.floor(Math.random() * amounts.length)];
+            amountLine = ` | Amount: ${randomAmount}`;
+          } else {
+            amountLine = ` | Amount: 1k`; // default if random < 63
+          }
+
+          resultText += `${blessingsLine}${amountLine}\n`;
+        }
+
+        copyToClipboard(resultText.trim());
       } else {
-        // Default behavior with bullet points
         const bulletList = names.map(name => `• ${name}`).join('\n');
         copyToClipboard(bulletList);
       }
     });
+
   });
 
   window.copyToClipboard = copyToClipboard;
