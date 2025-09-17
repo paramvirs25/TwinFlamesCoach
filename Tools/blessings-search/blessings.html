@@ -52,6 +52,7 @@
 <script>
   let allBlessings = [];
   let currentFiltered = [];
+  let isHeaderSearch = false;
 
   async function fetchBlessings() {
     try {
@@ -77,15 +78,16 @@
     const blessingList = document.getElementById('blessingList');
     blessingList.innerHTML = '';
 
+    isHeaderSearch = false;
     let filtered = blessings;
     const headerRangeMatch = searchText.match(/^h:\s*(\d+)\s*to\s*(\d+)$/);
 
-    //if serach starts with h: then filter on header range
-    if (headerRangeMatch) {
+      //if serach starts with h: then filter on header range
+      if (headerRangeMatch) {
+      isHeaderSearch = true;
       const headerStart = parseInt(headerRangeMatch[1], 10);
       const headerEnd = parseInt(headerRangeMatch[2], 10);
 
-      // Ensure correct range order
       const [minHeader, maxHeader] = headerStart > headerEnd
         ? [headerEnd, headerStart]
         : [headerStart, headerEnd];
@@ -133,8 +135,19 @@
     });
 
     document.getElementById('copyAllNamesBtn').addEventListener('click', () => {
-      const names = currentFiltered.map(b => `• ${b.name}`).join('\n');
-      copyToClipboard(names);
+      let names = currentFiltered.map(b => b.name);
+
+      if (isHeaderSearch) {
+        // Remove "Bhava" or "Blessing" from the end of name
+        names = names.map(name => name.replace(/\s*(Bhava|Blessing)$/i, '').trim());
+        // Join names by comma
+        const commaSeparated = names.join(', ');
+        copyToClipboard(commaSeparated);
+      } else {
+        // Default behavior with bullet points
+        const bulletList = names.map(name => `• ${name}`).join('\n');
+        copyToClipboard(bulletList);
+      }
     });
   });
 
