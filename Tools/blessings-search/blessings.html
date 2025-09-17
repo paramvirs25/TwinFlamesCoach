@@ -77,15 +77,34 @@
     const blessingList = document.getElementById('blessingList');
     blessingList.innerHTML = '';
 
-    currentFiltered = blessings
-      .filter(b => [
+    let filtered = blessings;
+    const headerRangeMatch = searchText.match(/^h:\s*(\d+)\s*to\s*(\d+)$/);
+
+    //if serach starts with h: then filter on header range
+    if (headerRangeMatch) {
+      const headerStart = parseInt(headerRangeMatch[1], 10);
+      const headerEnd = parseInt(headerRangeMatch[2], 10);
+
+      // Ensure correct range order
+      const [minHeader, maxHeader] = headerStart > headerEnd
+        ? [headerEnd, headerStart]
+        : [headerStart, headerEnd];
+
+      filtered = blessings.filter(b => {
+        const headerNumber = parseInt(b.header.replace(/[^\d]/g, ''), 10);
+        return headerNumber >= minHeader && headerNumber <= maxHeader;
+      });
+    } else if (searchText.trim()) {
+      filtered = blessings.filter(b => [
         b.name || '',
         b.description || '',
         b.englishName || '',
         b.translatedName || '',
         ...(b.keywords || [])
-      ].some(text => text.toLowerCase().includes(searchText)))
-      .sort((a, b) => new Date(b.date) - new Date(a.date));
+      ].some(text => text.toLowerCase().includes(searchText)));
+    }
+
+    currentFiltered = filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     currentFiltered.forEach(b => {
       const card = document.createElement('div');
