@@ -1,40 +1,40 @@
 <script defer>
     class TfcShuffle {
-
         static shuffleToolsList() {
-            // Get the div element with class="tfcToolsList"
+            // Get the parent container
             let div = document.querySelector(".tfcToolsList");
 
-            // Get all the div elements with class="vlp-link-title" inside the div
-            let links = div.querySelectorAll(".vlp-link-title");
+            // Get all the link containers inside
+            let containers = div.querySelectorAll(".vlp-link-container");
 
-            // Create an empty array to store the text content
-            let array = [];
+            if (containers.length === 0) return false; // Safety check
 
-            // Loop through the links and push the text content to the array
-            for (let link of links) {
-                array.push(link.textContent);
-            }
+            // Pick a random container
+            let randomIndex = Math.floor(Math.random() * containers.length);
+            let randomContainer = containers[randomIndex];
 
-            // Return the array
-            console.log(array);
+            // Clone the whole container (true = deep clone with children)
+            let clonedContainer = randomContainer.cloneNode(true);
 
-            // Get a random index from 0 to array.length - 1
-            let randomIndex = Math.floor(Math.random() * array.length);
-
-            // Return the element at the random index
-            //alert(array[randomIndex]);
-
-            // Get the element with class="tfcShuffleToolListResult"
+            // Get the result container
             let element = document.querySelector(".tfcShuffleToolListResult");
 
-            // Set the text content of the element to a desired value
-            element.textContent = array[randomIndex];
+            // Clear old content and add the cloned container
+            element.innerHTML = "";
+            element.appendChild(clonedContainer);
 
-            //return array[randomIndex];
             return false;
         }
     }
 </script>
 
-<div class="tfcShuffleToolListResult" style="text-align:center"></div>
+<div class="tfcShuffleToolListResult" 
+     style="
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        margin: 20px auto; 
+        max-width: 500px; 
+        width: 100%; 
+        text-align: center;">
+</div>
