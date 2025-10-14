@@ -80,7 +80,7 @@ class UserPermissionManager {
 		
 		$output .= UserPermissionManager::updateGroupUsers(
 			'group_advance_tf_healings', 
-			array( 'workshop_star_origin_activation' ),
+			array( 'workshop_star_origin_activation', 'workshop_four_mirrors' ),
 			array( 'advanced_twin_flame_healings_1','followup' ),
 			true
 		);
