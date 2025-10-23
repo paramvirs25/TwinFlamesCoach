@@ -1,5 +1,215 @@
 [
   {
+    "header": "🥇76",
+    "name": "हम शक्ति का उपयोग विनम्रता के साथ करें",
+    "englishName": "May We Use Our Power with Humility",
+    "translatedName": "Humble use of power",
+    "description": "A blessing that we use our inner and outer power with humility and compassion, not for domination or ego.",
+    "keywords": ["power", "humility", "compassion", "ego"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम सब आत्मविश्वास से पूर्णता आगे बढ़ें",
+    "englishName": "May We Move Ahead with Complete Self-Confidence",
+    "translatedName": "Confidence and progress",
+    "description": "A blessing that everyone moves forward with full self-belief, trusting their inner guidance and strength.",
+    "keywords": ["confidence", "trust", "growth", "courage"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम सब अत्यधिक आत्मविश्वास से बचें",
+    "englishName": "May We Avoid Overconfidence",
+    "translatedName": "Balanced confidence",
+    "description": "A blessing that we maintain balance — being confident yet humble, avoiding arrogance or blind self-belief.",
+    "keywords": ["balance", "confidence", "humility", "awareness"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "परकाया प्रवेश शक्ति प्राप्त हो",
+    "englishName": "May I Attain Par Kaya Pravesh Power",
+    "translatedName": "Higher spiritual ability",
+    "description": "A blessing for the ability to spiritually connect with or heal others by merging consciousness with them during sacred healing.",
+    "keywords": ["healing", "spiritual power", "consciousness", "oneness"],
+    "audience": "for me",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम अपने गुरु की बात पर विश्वास करके उसका पालन कर सकें",
+    "englishName": "May We Trust and Follow the Words of Our Guru",
+    "translatedName": "Faith and obedience towards Guru",
+    "description": "A blessing that we have full faith in our Guru’s guidance and follow it with devotion, without doubt or fear.",
+    "keywords": ["guru", "faith", "devotion", "trust"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम सब अपना जन्म गुरु के लेखे कर सकें",
+    "englishName": "May We Dedicate Our Life to Our Guru",
+    "translatedName": "Complete surrender to Guru",
+    "description": "A blessing that we dedicate this lifetime to the service and vision of our Guru — surrendering our life purposefully.",
+    "keywords": ["surrender", "guru", "service", "devotion"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "गुरु की आज्ञा पूरी करने में तकलीफ़ भी मीठी लगे",
+    "englishName": "May Following the Guru’s Command Feel Sweet Even in Difficulty",
+    "translatedName": "Sweet surrender to divine will",
+    "description": "A blessing that even challenges faced while obeying the Guru’s command feel sweet and divine, knowing it’s for our growth.",
+    "keywords": ["guru", "devotion", "acceptance", "faith"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम गुरु की आज्ञा का पालन कर सकें",
+    "englishName": "May We Follow Guru’s Instructions",
+    "translatedName": "Obedience and trust",
+    "description": "A blessing that we follow our Guru’s words sincerely, without resistance or delay.",
+    "keywords": ["guru", "obedience", "trust", "spirituality"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम अपना काम करें और दूसरों के जीवन में दखल न दें",
+    "englishName": "May We Mind Our Own Work and Not Interfere in Others’ Lives",
+    "translatedName": "Healthy boundaries and focus",
+    "description": "A blessing that we focus on our responsibilities and avoid unnecessary interference in others’ personal lives.",
+    "keywords": ["boundaries", "focus", "respect", "self-control"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम प्रकृति का हिस्सा होने का अनुभव करें",
+    "englishName": "May We Feel That We Are a Part of Nature",
+    "translatedName": "Unity with nature",
+    "description": "A blessing to feel oneness with nature — the trees, air, water, and all life — instead of feeling separate from it.",
+    "keywords": ["nature", "oneness", "environment", "balance"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "शनिवार या दिन विशेष से जुड़ी मान्यताओं से मुक्त रहें",
+    "englishName": "May We Be Free from Limiting Beliefs about Days like Saturday",
+    "translatedName": "Freedom from rigid beliefs",
+    "description": "A blessing that people don’t link actions like drinking or sex with specific days and live with spontaneity and awareness.",
+    "keywords": ["freedom", "beliefs", "awareness", "balance"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम कठोर नियमों से मुक्त रहें",
+    "englishName": "May We Be Free from Rigid Rules about Wine or Sex",
+    "translatedName": "Balance and open-mindedness",
+    "description": "A blessing that people don’t trap themselves in unnecessary restrictions and instead live with mindful freedom.",
+    "keywords": ["freedom", "balance", "mindfulness", "openness"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "कंपनियां ज़बरदस्ती अतिरिक्त वस्तुएं न बेचें",
+    "englishName": "May Companies Not Force People to Buy Unnecessary Items",
+    "translatedName": "Fair business ethics",
+    "description": "A blessing that companies stop bundling unnecessary products with needed ones, ensuring transparency and fairness.",
+    "keywords": ["business", "ethics", "fairness", "transparency"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम दुखद क्षणों को भूलने की क्षमता विकसित करें",
+    "englishName": "May We Learn to Forget Sad Moments Easily",
+    "translatedName": "Emotional healing and positivity",
+    "description": "A blessing that we let go of sadness faster and focus on the happier and brighter side of life.",
+    "keywords": ["healing", "happiness", "positivity", "memory"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हमारी अंतर्ज्ञान शक्ति बढ़े",
+    "englishName": "May Our Intuitive Mind Increase Further",
+    "translatedName": "Stronger intuition and balance",
+    "description": "A blessing that intuition becomes stronger to balance logic, bringing harmony between heart and mind.",
+    "keywords": ["intuition", "balance", "wisdom", "mind"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "हम काम को पूरा करने के जुनून से मुक्त रहें",
+    "englishName": "May We Be Free from Obsession to Finish Work",
+    "translatedName": "Patience and awareness",
+    "description": "A blessing that we don’t rush to complete tasks if it disturbs others or creates stress, allowing flow and peace.",
+    "keywords": ["patience", "awareness", "balance", "peace"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "कंपनियां मासूम ग्राहकों को मूर्ख न बनाएं",
+    "englishName": "May Companies Not Fool Innocent Customers",
+    "translatedName": "Business honesty and integrity",
+    "description": "A blessing that companies act ethically and avoid misleading customers through false offers or fine print.",
+    "keywords": ["honesty", "business", "integrity", "ethics"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "ज्वेलर्स अनावश्यक शुल्क न लगाएं",
+    "englishName": "May Jewelers Not Charge Unnecessary Fees",
+    "translatedName": "Transparency in trade",
+    "description": "A blessing that jewelers charge fair and genuine prices without adding hidden or false costs.",
+    "keywords": ["jewelry", "fairness", "transparency", "trade"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "दुल्हन अपने विवाह पर अत्यधिक मेकअप से बचे",
+    "englishName": "May a Bride Refrain from Excessive Makeup on Her Wedding",
+    "translatedName": "Natural beauty and simplicity",
+    "description": "A blessing that brides embrace natural beauty and simplicity instead of heavy makeup or artificial appearance.",
+    "keywords": ["beauty", "simplicity", "natural", "wedding"],
+    "audience": "for brides",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "माता-पिता महंगी वस्तुएं उन बच्चों को न दें जो उनकी कद्र नहीं करते",
+    "englishName": "May Parents Not Give Valuables to Children Who Don’t Appreciate Them",
+    "translatedName": "Wisdom in giving",
+    "description": "A blessing that parents understand when and to whom to give valuables, ensuring appreciation and responsibility.",
+    "keywords": ["parents", "wisdom", "values", "responsibility"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
+    "header": "🥇76",
+    "name": "लोग विवाह समारोहों पर धन व्यर्थ न करें",
+    "englishName": "May People Not Waste Money on Wedding Parties",
+    "translatedName": "Simplicity and financial wisdom",
+    "description": "A blessing that people keep weddings simple and meaningful, valuing connection over extravagance.",
+    "keywords": ["simplicity", "wedding", "money", "wisdom"],
+    "audience": "for all",
+    "date": "2025-10-20"
+  },
+  {
     "header": "🥇75",
     "name": "लोग इतनी आसानी से आहत न हों",
     "englishName": "May People Not Be Offended So Easily",
