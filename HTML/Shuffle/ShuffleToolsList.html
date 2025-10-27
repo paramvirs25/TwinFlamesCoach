@@ -1,104 +1,126 @@
+<style>
+/* --- Shuffle result container --- */
+.tfcShuffleToolListResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+/* --- Shuffle history container --- */
+.shuffleHistory {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 10px;
+}
+
+/* --- Date separator (like WhatsApp style) --- */
+.shuffle-date {
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0 5px 0;
+    color: #666;
+    position: relative;
+}
+.shuffle-date::before,
+.shuffle-date::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #ccc;
+}
+.shuffle-date::before {
+    left: 0;
+}
+.shuffle-date::after {
+    right: 0;
+}
+
+/* --- Message bubble style --- */
+.shuffle-message {
+    background: #e6f3ff;
+    border-radius: 10px;
+    padding: 6px 10px;
+    margin: 5px auto;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+</style>
+
 <script defer>
 class TfcShuffle {
 
     static shuffleToolsList() {
-        // Get the parent container
-        let div = document.querySelector(".tfcToolsList");
-        let containers = div.querySelectorAll(".vlp-link-container");
+        const div = document.querySelector(".tfcToolsList");
+        const containers = div.querySelectorAll(".vlp-link-container");
         if (containers.length === 0) return false;
 
-        // Pick a random container
-        let randomIndex = Math.floor(Math.random() * containers.length);
-        let randomContainer = containers[randomIndex];
+        const randomIndex = Math.floor(Math.random() * containers.length);
+        const randomContainer = containers[randomIndex];
+        const clonedContainer = randomContainer.cloneNode(true);
 
-        // Clone it for display
-        let clonedContainer = randomContainer.cloneNode(true);
-
-        // Update result container
-        let resultElement = document.querySelector(".tfcShuffleToolListResult");
+        const resultElement = document.querySelector(".tfcShuffleToolListResult");
         resultElement.innerHTML = "";
         resultElement.appendChild(clonedContainer);
 
-        // Extract the title text
         const titleDiv = randomContainer.querySelector(".vlp-link-title");
         const titleText = titleDiv ? titleDiv.textContent.trim() : "Unknown";
 
-        // Save title to history
         TfcShuffle.saveShuffleHistory(titleText);
 
         return false;
     }
 
-    // Save shuffle history in localStorage
     static saveShuffleHistory(titleText) {
-        const today = new Date().toISOString().split("T")[0]; // yyyy-mm-dd
+        const today = new Date().toISOString().split("T")[0];
         let history = JSON.parse(localStorage.getItem("shuffleHistory") || "{}");
 
         if (!history[today]) history[today] = [];
         history[today].push(titleText);
 
-        // Keep only last 30 days
         const allDates = Object.keys(history).sort((a, b) => new Date(b) - new Date(a));
         const trimmed = {};
         allDates.slice(0, 30).forEach(date => trimmed[date] = history[date]);
-        localStorage.setItem("shuffleHistory", JSON.stringify(trimmed));
 
-        // Re-render
+        localStorage.setItem("shuffleHistory", JSON.stringify(trimmed));
         TfcShuffle.renderShuffleHistory();
     }
 
-    // Display history in the <p class="shuffleHistory">
     static renderShuffleHistory() {
         const container = document.querySelector(".shuffleHistory");
         if (!container) return;
 
         const history = JSON.parse(localStorage.getItem("shuffleHistory") || "{}");
-        container.innerHTML = ""; // clear old content
+        container.innerHTML = "";
 
-        // Sort by date (latest first)
         Object.keys(history)
             .sort((a, b) => new Date(b) - new Date(a))
             .forEach(date => {
-                // Date header
                 const dateHeader = document.createElement("div");
                 dateHeader.textContent = new Date(date).toLocaleDateString();
-                dateHeader.style.textAlign = "center";
-                dateHeader.style.fontWeight = "bold";
-                dateHeader.style.margin = "15px 0 5px 0";
-                dateHeader.style.color = "#666";
+                dateHeader.className = "shuffle-date";
                 container.appendChild(dateHeader);
 
-                // Each shuffle title
                 history[date].forEach(title => {
                     const msg = document.createElement("div");
                     msg.textContent = title;
-                    msg.style.background = "#e6f3ff";
-                    msg.style.borderRadius = "10px";
-                    msg.style.padding = "6px 10px";
-                    msg.style.margin = "5px auto";
-                    msg.style.maxWidth = "300px";
-                    msg.style.textAlign = "center";
-                    msg.style.boxShadow = "0 1px 2px rgba(0,0,0,0.1)";
+                    msg.className = "shuffle-message";
                     container.appendChild(msg);
                 });
             });
     }
 }
 
-// Render history on page load
 document.addEventListener("DOMContentLoaded", () => {
     TfcShuffle.renderShuffleHistory();
 });
 </script>
 
+<div class="tfcShuffleToolListResult"></div>
 
-<div class="tfcShuffleToolListResult" 
-     style="
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        margin: 20px auto; 
-        max-width: 500px; 
-        width: 100%; 
-        text-align: center;">
-</div>
