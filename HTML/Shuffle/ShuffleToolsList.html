@@ -55,6 +55,7 @@
 
 <script defer>
 class TfcShuffle {
+    static localStorageShuffleHistory = "tfcShuffleHistory";
 
     static shuffleToolsList() {
         const div = document.querySelector(".tfcToolsList");
@@ -79,7 +80,7 @@ class TfcShuffle {
 
     static saveShuffleHistory(titleText) {
         const today = new Date().toISOString().split("T")[0];
-        let history = JSON.parse(localStorage.getItem("shuffleHistory") || "{}");
+        let history = JSON.parse(localStorage.getItem(localStorageShuffleHistory) || "{}");
 
         if (!history[today]) history[today] = [];
         history[today].push(titleText);
@@ -88,7 +89,7 @@ class TfcShuffle {
         const trimmed = {};
         allDates.slice(0, 30).forEach(date => trimmed[date] = history[date]);
 
-        localStorage.setItem("shuffleHistory", JSON.stringify(trimmed));
+        localStorage.setItem(localStorageShuffleHistory, JSON.stringify(trimmed));
         TfcShuffle.renderShuffleHistory();
     }
 
@@ -96,7 +97,7 @@ class TfcShuffle {
         const container = document.querySelector(".shuffleHistory");
         if (!container) return;
 
-        const history = JSON.parse(localStorage.getItem("shuffleHistory") || "{}");
+        const history = JSON.parse(localStorage.getItem(localStorageShuffleHistory) || "{}");
         container.innerHTML = "";
 
         Object.keys(history)
