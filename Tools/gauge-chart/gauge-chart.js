@@ -124,7 +124,7 @@ jQuery(function ($) {
   } //class GaugeChart
 
 
-  jQuery(documen0t).ready(function ($) {
+  jQuery(document).ready(function ($) {
     
     const dxDiagJsUrl = "https://cdnjs.cloudflare.com/ajax/libs/devextreme-dist/25.1.5/js/dx.all.js";
     
