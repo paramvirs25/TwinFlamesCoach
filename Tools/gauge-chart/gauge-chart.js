@@ -125,13 +125,9 @@ jQuery(function ($) {
 
 
   jQuery(document).ready(function ($) {
-    
-    const dxDiagJsUrl = "https://cdnjs.cloudflare.com/ajax/libs/devextreme-dist/25.1.5/js/dx.all.js";
-    
     //dx.all.js moved to custom-css-js folder because github was loading it very slowly
-    //"https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/dx.all.js";
+    const dxDiagJsUrl = "https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/dx.all.js";
     //TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "dx.all.js");
-    
     $.getScript(dxDiagJsUrl, function () {    
     //$.getScript("https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/dx.all.js", function () {
       let higherValue = 100;
