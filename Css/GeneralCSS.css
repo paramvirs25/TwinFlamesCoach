@@ -161,14 +161,21 @@ ol, ul {
 }
 
 /*---Track-The-Clicks display---*/
-/* a[data-clicks]::after {
-    line-height: 20px;
-    background-color: rgb(53, 57, 59);
-} */
-/*Hide click count in main navigation*/
-.main-nav ul li a[data-clicks]::after {
-    display:none;
-}
+
+	/* a[data-clicks]::after {
+		line-height: 20px;
+		background-color: rgb(53, 57, 59);
+	} */
+
+	/*Hide click count in main navigation links*/
+	.main-nav ul li a[data-clicks]::after {
+		display:none;
+	}
+	/*Hide click count in footer links*/
+	.site-footer a[data-clicks]::after {
+		display: none !important;
+	}
+
 
 
 /*----Content box----*/
