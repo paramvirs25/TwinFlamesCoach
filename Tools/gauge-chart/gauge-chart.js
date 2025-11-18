@@ -124,35 +124,68 @@ jQuery(function ($) {
   } //class GaugeChart
 
 
-  jQuery(document).ready(function ($) {
-    //dx.all.js moved to custom-css-js folder because github was loading it very slowly
-    const dxDiagJsUrl = "https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/dx.all.js";
-    //TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "dx.all.js");
-    $.getScript(dxDiagJsUrl, function () {    
-    //$.getScript("https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/dx.all.js", function () {
-      let higherValue = 100;
+  // jQuery(document).ready(function ($) {
+  //   //dx.all.js moved to custom-css-js folder because github was loading it very slowly
+  //   const dxDiagJsUrl = "https://www.twinflamescoach.com/wp-content/uploads/custom-css-js/dx.all.js";
+  //   //TfcGlobal.getFullFileUrlFromParts(TfcGlobal.GaugeChartRootPath, "dx.all.js");
+  //   $.getScript(dxDiagJsUrl, function () {    
+  //   //$.getScript("https://paramvirs25.github.io/TwinFlamesCoach/Tools/gauge-chart/dx.all.js", function () {
+  //     let higherValue = 100;
 
-      //Draw gauge chart
-      $('.gauge').each(function (index, item) {
-        let params = {
-          initialValue: 0,
-          higherValue: higherValue,
-          title: `Score`,
-          subtitle: '0'
-        };
+  //     //Draw gauge chart
+  //     $('.gauge').each(function (index, item) {
+  //       let params = {
+  //         initialValue: 0,
+  //         higherValue: higherValue,
+  //         title: `Score`,
+  //         subtitle: '0'
+  //       };
 
 
-        gaugeChart = new GaugeChart(item, params);
-        gaugeChart.init();
+  //       gaugeChart = new GaugeChart(item, params);
+  //       gaugeChart.init();
 
-        document.querySelector('svg.dxg').setAttribute('height', '250');
+  //       document.querySelector('svg.dxg').setAttribute('height', '250');
         
         
-        //const svgElement = document.querySelector('.gauge svg.dxg-circular-gauge');
-        //svgElement.style.marginTop = '-50px'; // Adjust this value as needed
-      });
+  //       //const svgElement = document.querySelector('.gauge svg.dxg-circular-gauge');
+  //       //svgElement.style.marginTop = '-50px'; // Adjust this value as needed
+  //     });
       
-    });
-  });
+  //   });
+  // });
+
+  function waitForDxLibrary(callback) {
+    if (typeof DevExpress !== "undefined" && typeof DevExpress.viz !== "undefined") {
+        callback();
+    } else {
+        setTimeout(() => waitForDxLibrary(callback), 50);
+    }
+  }
+
+  jQuery(document).ready(function ($) {
+
+    waitForDxLibrary(function () {
+
+        let higherValue = 100;
+
+        //Draw gauge chart
+        $('.gauge').each(function (index, item) {
+            let params = {
+                initialValue: 0,
+                higherValue: higherValue,
+                title: `Score`,
+                subtitle: '0'
+            };
+
+            gaugeChart = new GaugeChart(item, params);
+            gaugeChart.init();
+
+            document.querySelector('svg.dxg').setAttribute('height', '250');
+        });
+
+    }); // waitForDxLibrary
+  }); // document ready
+
 
 });
