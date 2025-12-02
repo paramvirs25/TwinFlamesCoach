@@ -14,6 +14,7 @@
     margin-bottom: 10px;
 
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: rgba(33,172,232,.12);
 }
 
 .vlp-layout-image-text-same-line .vlp-link-image {
