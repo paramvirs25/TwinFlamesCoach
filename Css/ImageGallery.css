@@ -1,0 +1,11 @@
+/*Change gallery captions to be shown below the gallery images*/
+
+.gallery-item figcaption, 
+.wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+    position: relative !important; /* Moves caption below image */
+    background: none !important; /* Removes the dark background tint */
+    color: unset !important;     /* Allows browser/theme to pick color (fixes dark mode) */
+    padding: 0 !important;       /* Removes extra padding */
+    margin-top: 5px !important;  /* Adds small space between image and text */
+    text-align: center;          /* Centers the caption below the image */
+}

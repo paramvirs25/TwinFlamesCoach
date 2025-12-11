@@ -124,6 +124,8 @@ window.addEventListener('load', function () {
   if (typeof wp === 'undefined' || typeof wp.element === 'undefined' || !TfcImportJavascripts.isAdmin()) {
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Tiles3d.css"), new Array('.tfcTileRow'));
 
+    TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/ImageGallery.css"), new Array('.wp-block-gallery'));
+
     //KiokenAccordionFix
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenAccordionFix.css"), new Array('.wp-block-kioken-accordion-item'));
     TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/KiokenAccordionFix.js"), '.wp-block-kioken-accordion-item');    
