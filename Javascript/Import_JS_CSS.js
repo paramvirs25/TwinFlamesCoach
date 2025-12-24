@@ -92,7 +92,7 @@ TfcImportJavascripts.dropboxScriptLoaded = false;
 window.addEventListener('load', function () {
 //window.addEventListener('pageshow', function () {
 
-  TfcImportJavascripts.importDropboxScript();
+  //TfcImportJavascripts.importDropboxScript();
 
   //Import Jquery UI
   //TfcImportJavascripts.loadCSS("https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css",new Array(".single_add_to_cart_button"));
