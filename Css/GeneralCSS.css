@@ -51,9 +51,9 @@
 	}
 
 	.site-header {
-		height: 90px;
+		/*height: 90px;
 		z-index: 0;
-		/*position: fixed;
+		position: fixed;
 		top: 0;
 		
 		color: white;
