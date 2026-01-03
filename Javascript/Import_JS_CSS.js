@@ -83,6 +83,18 @@ class TfcImportJavascripts {
     return window.location.href.indexOf('/checkout/order-received/') !== -1;
   }
 
+  static openVideoOverviewOnDesktop() {
+    try{
+      if (window.innerWidth >= 768) {
+        document.querySelectorAll("details.video-overview").forEach(function (el) {
+          el.setAttribute("open", "");
+        });
+      }
+    }catch(e){
+      console.error("Error in openVideoOverviewOnDesktop: " + e.message);
+    }    
+  }
+
 }
 
 // Set the initial values
@@ -91,6 +103,8 @@ TfcImportJavascripts.dropboxScriptLoaded = false;
 //This method is called on page load
 window.addEventListener('load', function () {
 //window.addEventListener('pageshow', function () {
+
+  TfcImportJavascripts.openVideoOverviewOnDesktop();
 
   //TfcImportJavascripts.importDropboxScript();
 
