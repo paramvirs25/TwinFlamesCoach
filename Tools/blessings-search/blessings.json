@@ -1,5 +1,115 @@
 [
   {
+    "header": "🥇111",
+    "name": "तनाव को सकारात्मक रूप से संभालने की क्षमता भाव",
+    "englishName": "Tanav ko sakaratmak roop se sambhalne ki kshamta bhava",
+    "translatedName": "Ability to handle stress positively bhava",
+    "audience": "for all and Ritu",
+    "date": "2026-01-08",
+    "description": "May everyone, including Ritu, learn to handle stress positively instead of reacting by asking others not to give stress.",
+    "keywords": ["stress", "tanav", "emotional maturity", "mental strength", "calmness", "stress handling"]
+  },
+  {
+    "header": "🥇111",
+    "name": "विकास में परम की भूमिका समझ भाव",
+    "englishName": "Vikas mein Param ki bhoomika samajh bhava",
+    "translatedName": "Understanding Param’s role in growth bhava",
+    "audience": "for Ritu",
+    "date": "2026-01-08",
+    "description": "May Ritu understand Param’s role in her growth instead of blaming him for stress.",
+    "keywords": ["blame", "growth", "self awareness", "stress", "relationship understanding"]
+  },
+  {
+    "header": "🥇111",
+    "name": "तनाव देने वाले व्यक्ति की भूमिका समझ भाव",
+    "englishName": "Tanav dene wale vyakti ki bhoomika samajh bhava",
+    "translatedName": "Understanding the role of stress-giver bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May people understand the role of a stress-giving person instead of blaming that person.",
+    "keywords": ["stress", "blame", "awareness", "emotional intelligence", "relationships"]
+  },
+  {
+    "header": "🥇111",
+    "name": "नए तुलनात्मक विचार त्याग भाव",
+    "englishName": "Naye tulnatmak vichaar tyaag bhava",
+    "translatedName": "Letting go of constant comparison bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we stop inventing new kinds of comparisons in the mind.",
+    "keywords": ["comparison", "jealousy", "contentment", "mental peace", "ego"]
+  },
+  {
+    "header": "🥇111",
+    "name": "एकतरफा बातों में न आने की समझ भाव",
+    "englishName": "Ektarfa baaton mein na aane ki samajh bhava",
+    "translatedName": "Clarity beyond one-sided stories bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we not accept one-sided stories as truth or get influenced by them.",
+    "keywords": ["judgement", "clarity", "bias", "emotional maturity", "wisdom"]
+  },
+  {
+    "header": "🥇111",
+    "name": "कहानी के दो पहलू समझने की बुद्धि भाव",
+    "englishName": "Kahani ke do pehlu samajhne ki buddhi bhava",
+    "translatedName": "Understanding both sides of a story bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we understand that every story has two sides.",
+    "keywords": ["understanding", "wisdom", "non judgement", "mental clarity"]
+  },
+  {
+    "header": "🥇111",
+    "name": "घबराहट से अप्रभावित रहने का भाव",
+    "englishName": "Ghabrahat se aprabhavit rehne ka bhava",
+    "translatedName": "Freedom from anxiety and panic bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we not get affected by anxiety or nervousness.",
+    "keywords": ["anxiety", "panic", "ghabrahat", "mental calm", "peace"]
+  },
+  {
+    "header": "🥇111",
+    "name": "नियंत्रण की आवश्यकता त्याग भाव",
+    "englishName": "Niyantran ki avashyakta tyaag bhava",
+    "translatedName": "Letting go of control bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we let go of the need to control someone, something, or situations.",
+    "keywords": ["control", "attachment", "surrender", "mental freedom"]
+  },
+  {
+    "header": "🥇111",
+    "name": "स्वामित्व की भावना त्याग भाव",
+    "englishName": "Swamitva ki bhavna tyaag bhava",
+    "translatedName": "Letting go of ownership bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we let go of the need to own someone or something.",
+    "keywords": ["ownership", "attachment", "detachment", "freedom"]
+  },
+  {
+    "header": "🥇111",
+    "name": "आत्मघाती विचारों से मुक्ति भाव",
+    "englishName": "Aatmaghati vicharon se mukti bhava",
+    "translatedName": "Freedom from suicidal thoughts bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May we remain free from suicidal thoughts.",
+    "keywords": ["suicide", "self harm", "mental health", "healing", "hope"]
+  },
+  {
+    "header": "🥇111",
+    "name": "अनावश्यक संग्रह मानसिकता से मुक्ति भाव",
+    "englishName": "Anavashyak sangrah mansikta se mukti bhava",
+    "translatedName": "Freedom from hoarding and antique-collection mindset bhava",
+    "audience": "for all",
+    "date": "2026-01-08",
+    "description": "May people come out of the mindset of collecting antiques and stop wasting money on such items.",
+    "keywords": ["money", "attachment", "hoarding", "materialism", "financial awareness"]
+  },
+  {
     "header": "🥇110",
     "name": "ऋतु अवसाद मुक्त स्वास्थ्य लाभ भाव",
     "englishName": "Ritu avsaad mukt swasthya laabh bhava",
