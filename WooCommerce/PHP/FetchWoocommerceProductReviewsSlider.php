@@ -41,12 +41,20 @@ function tfc_remote_product_reviews_slider($atts)
     <div class="tfc-review-slider">
 
         <?php foreach ($reviews as $review): ?>
+            <?php 
+                $avatar = $review['reviewer_avatar_urls']['96'] ?? '';
+                $show_avatar = false;
+
+                if (!empty($avatar) && strpos($avatar, '/wp-content/uploads/') !== false) {
+                    $show_avatar = true;
+                }    
+            ?>
 
             <div class="tfc-review-card">
                 <div class="tfc-review-header">
                     <div class="tfc-review-avatar">
-                        <?php if (!empty($review['reviewer_avatar_urls']['96'])): ?>
-                            <img src="<?php echo esc_url($review['reviewer_avatar_urls']['96']); ?>">
+                        <?php if ($show_avatar): ?>
+                            <img src="<?php echo esc_url($avatar); ?>">
                         <?php endif; ?>
                     </div>
                     <div>
