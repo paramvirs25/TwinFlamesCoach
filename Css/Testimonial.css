@@ -1,82 +1,75 @@
-/* Container */
-.tfc-single-review-container {
-    position: relative;
-    max-width: 100%;
-}
-
-/* Slider wrapper */
-.tfc-single-review-wrapper {
-    overflow: hidden;
-}
-
-/* Track */
-.tfc-single-review-track {
+.tfc-review-slider {
     display: flex;
-    transition: transform 0.4s ease;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
 }
 
-/* Slide */
-.tfc-single-review-slide {
-    flex: 0 0 100%;
-    padding: 20px;
+/* Review Card */
+.tfc-review-card {
+    flex: 0 0 320px;
+    height: 300px;                  /* Same height for all cards */
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 16px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header */
 .tfc-review-header {
     display: flex;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
 }
 
-.tfc-avatar {
+/* Avatar */
+.tfc-review-avatar img {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     margin-right: 12px;
 }
 
-.tfc-reviewer-name {
+/* Name */
+.tfc-review-name {
     font-weight: 600;
+    font-size: 15px;
 }
 
-.tfc-stars {
+/* Stars */
+.tfc-review-stars {
     color: #ffb900;
     font-size: 14px;
 }
 
-/* Text */
-.tfc-review-text {
-    font-size: 15px;
-    line-height: 1.6;
+/* Review Content */
+.tfc-review-content {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-y: auto;               /* Enable vertical scroll */
+    flex: 1;                        /* Take remaining space */
+    padding-right: 6px;
 }
 
-/* Arrows */
-.tfc-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    font-size: 22px;
-    line-height: 32px;
-    text-align: center;
+/* Smooth scrollbar (optional, safe) */
+.tfc-review-content::-webkit-scrollbar {
+    width: 4px;
 }
 
-.tfc-prev {
-    left: -10px;
+.tfc-review-content::-webkit-scrollbar-thumb {
+    background-color: #d0d0d0;
+    border-radius: 10px;
 }
 
-.tfc-next {
-    right: -10px;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    .tfc-arrow {
-        display: none;
+/* Mobile adjustments */
+@media (max-width: 480px) {
+    .tfc-review-card {
+        flex: 0 0 85%;
+        height: 240px;              /* Slightly smaller for mobile */
     }
 }

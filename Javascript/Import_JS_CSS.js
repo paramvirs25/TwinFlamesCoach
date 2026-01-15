@@ -140,6 +140,8 @@ window.addEventListener('load', function () {
 
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/ImageGallery.css"), new Array('.wp-block-gallery'));
 
+    TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/Testimonial.css"), new Array('.tfc-review-slider'));
+
     //KiokenAccordionFix
     TfcImportJavascripts.loadCSS(TfcGlobal.getFullFileUrl("Css/KiokenAccordionFix.css"), new Array('.wp-block-kioken-accordion-item'));
     TfcImportJavascripts.loadJS(TfcGlobal.getFullFileUrl("Javascript/KiokenAccordionFix.js"), '.wp-block-kioken-accordion-item');    
