@@ -7,6 +7,9 @@ function tfc_import_wc_reviews_from_csv_shortcode()
 
     // Slug → Product ID mapping
     $slug_to_product_id = [
+		'attunement-kriya-kundalini-yoga' => 14644,
+		'reprogram-mind' => 11797,
+		
         'advanced-tf-healings' => 12622,
         'life-coach' => 13356,
         'twin-flame-inner-work-program-basic' => 11726,
