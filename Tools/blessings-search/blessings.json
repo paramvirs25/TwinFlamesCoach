@@ -1,5 +1,115 @@
 [
   {
+    "header": "🥇121",
+    "name": "स्वास्थ्य के अनुकूल आहार की समझ भाव",
+    "englishName": "Swasthya ke anukul aahar ki samajh bhava",
+    "translatedName": "Understanding food suitable for one’s health bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May people understand which foods suit their body and avoid excess sweets, fats, or harmful eating habits.",
+    "keywords": ["health", "food awareness", "diet", "self care"]
+  },
+  {
+    "header": "🥇121",
+    "name": "कार्य और निजी जीवन में संतुलन भाव",
+    "englishName": "Kaarya aur niji jeevan mein santulan bhava",
+    "translatedName": "Work and personal life balance bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May people maintain a healthy balance between work responsibilities and personal life.",
+    "keywords": ["work life balance", "stress reduction", "wellbeing"]
+  },
+  {
+    "header": "🥇121",
+    "name": "एकल अभिभावकों के लिए सहयोग और करुणा भाव",
+    "englishName": "Ekal abhibhavakon ke liye sahyog aur karuna bhava",
+    "translatedName": "Support and compassion for single parents bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "Blessings for single parents to receive strength, support, and understanding in their journey.",
+    "keywords": ["single parents", "support", "compassion", "strength"]
+  },
+  {
+    "header": "🥇121",
+    "name": "एकल अभिभावक संबंधों में संतुलित प्राथमिकता की समझ भाव",
+    "englishName": "Ekal abhibhavak sambandhon mein santulit prathmikta ki samajh bhava",
+    "translatedName": "Balanced priorities in relationships with single parents bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May single parents be able to give time, energy, and priority to their partner along with caring for their child.",
+    "keywords": ["relationships", "single parent", "balance", "priority"]
+  },
+  {
+    "header": "🥇121",
+    "name": "माता-पिता द्वारा मिलकर बच्चों का पालन-पोषण भाव",
+    "englishName": "Mata-pita dwara milkar bachchon ka paalan-poshan bhava",
+    "translatedName": "Parents raising children together bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May both parents raise their children together with cooperation and shared responsibility.",
+    "keywords": ["parenting", "family unity", "co parenting"]
+  },
+  {
+    "header": "🥇121",
+    "name": "बच्चों को दोनों माता-पिता का प्रेम प्राप्त होने का भाव",
+    "englishName": "Bachchon ko dono mata-pita ka prem praapt hone ka bhava",
+    "translatedName": "Children receiving love from both parents bhava",
+    "audience": "for all children",
+    "date": "2026-01-28",
+    "description": "May every child receive love, care, and emotional presence from both parents.",
+    "keywords": ["children", "parental love", "emotional security"]
+  },
+  {
+    "header": "🥇121",
+    "name": "बच्चों का जैविक माता-पिता के साथ सुरक्षित पालन भाव",
+    "englishName": "Bachchon ka jaivik mata-pita ke saath surakshit paalan bhava",
+    "translatedName": "Children living safely with biological parents bhava",
+    "audience": "for all children",
+    "date": "2026-01-28",
+    "description": "May children grow up safely with the love and care of their biological parents.",
+    "keywords": ["child safety", "family", "secure upbringing"]
+  },
+  {
+    "header": "🥇121",
+    "name": "बचपन की सुरक्षा, प्रेम और स्थिरता का भाव",
+    "englishName": "Bachpan ki suraksha, prem aur sthirta ka bhava",
+    "translatedName": "Safe, loved, and stable childhood bhava",
+    "audience": "for all children",
+    "date": "2026-01-28",
+    "description": "May every child’s childhood be safe, secure, and filled with love from both parents.",
+    "keywords": ["childhood", "safety", "love", "emotional stability"]
+  },
+  {
+    "header": "🥇121",
+    "name": "एकल पालन-पोषण की आवश्यकता में कमी का भाव",
+    "englishName": "Ekal paalan-poshan ki avashyakta mein kami ka bhava",
+    "translatedName": "Reduction in need for single parenting bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May circumstances evolve so that single parenting becomes less necessary.",
+    "keywords": ["single parenting", "family support", "unity"]
+  },
+  {
+    "header": "🥇121",
+    "name": "विशेष बच्चों के प्रति संवेदनशील और उपयुक्त व्यवहार भाव",
+    "englishName": "Vishesh bachchon ke prati samvedansheel aur upyukt vyavhaar bhava",
+    "translatedName": "Sensitive and appropriate treatment of special children bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May autistic or special children be understood and treated appropriately by society, authorities, and neighbors.",
+    "keywords": ["special children", "autism", "sensitivity", "social awareness"]
+  },
+  {
+    "header": "🥇121",
+    "name": "धोखाधड़ी रोकने हेतु बैंकिंग प्रणाली सुधार भाव",
+    "englishName": "Dhokhadhadi rokne ke liye banking pranali sudhaar bhava",
+    "translatedName": "Banking system improvements to prevent fraud bhava",
+    "audience": "for all",
+    "date": "2026-01-28",
+    "description": "May banking systems evolve to temporarily hold incoming funds so fraudulent transactions can be identified and stopped.",
+    "keywords": ["banking", "fraud prevention", "financial security", "systems"]
+  },
+  {
     "header": "🥇120",
     "name": "यौन संबंध में स्वामित्व भ्रम से मुक्ति भाव",
     "englishName": "Yaun sambandh mein swamitva bhram se mukti bhava",
