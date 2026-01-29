@@ -1,5 +1,155 @@
 [
   {
+    "header": "🥇122",
+    "name": "समलैंगिक और समलैंगिक महिलाओं के प्रति सहज स्वीकृति भाव",
+    "englishName": "Samlaingik aur lesbian logon ke prati sahaj swikriti bhava",
+    "translatedName": "Ease and acceptance towards gays and lesbians bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May we not feel disgust or rejection towards gays or lesbians and relate with acceptance and dignity.",
+    "keywords": ["acceptance", "lgbtq", "respect", "human dignity"]
+  },
+  {
+    "header": "🥇122",
+    "name": "दूसरों की स्वतंत्रता को समझने की क्षमता भाव",
+    "englishName": "Doosron ki swatantrata ko samajhne ki kshamta bhava",
+    "translatedName": "Understanding others’ freedom of choice bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May we understand that others are free human beings and need not act according to our expectations.",
+    "keywords": ["freedom", "choice", "non judgment", "respect"]
+  },
+  {
+    "header": "🥇122",
+    "name": "मूर्खतापूर्ण जोखिम लेने से संयम भाव",
+    "englishName": "Murkhtapoorn jokhim lene se sanyam bhava",
+    "translatedName": "Restraint from foolish risk-taking bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May we avoid unnecessary or foolish risks taken for thrill without awareness of consequences.",
+    "keywords": ["prudence", "safety", "awareness", "maturity"]
+  },
+  {
+    "header": "🥇122",
+    "name": "बहु-पक्षीय अंतरंगता में स्पष्ट सहमति और सामंजस्य भाव",
+    "englishName": "Bahu-pakshiya antarngata mein spasht sahmati aur saamanjasya bhava",
+    "translatedName": "Clear consent and harmony in multi-partner intimacy bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May such intimate choices arise only with clear mutual consent, comfort, and alignment of energies.",
+    "keywords": ["consent", "alignment", "intimacy awareness", "mutual comfort"]
+  },
+  {
+    "header": "🥇122",
+    "name": "सामग्री की लोकप्रियता से आसक्ति से मुक्ति भाव",
+    "englishName": "Saamagri ki lokpriyata se aasakti se mukti bhava",
+    "translatedName": "Freedom from attachment to content popularity bhava",
+    "audience": "for Param",
+    "date": "2026-01-29",
+    "description": "May Param remain unaffected by view counts and free from the desire for maximum popularity.",
+    "keywords": ["detachment", "creativity", "self expression", "non attachment"]
+  },
+  {
+    "header": "🥇122",
+    "name": "दैनिक जीवन की छोटी बातों में अति-चिंता से मुक्ति भाव",
+    "englishName": "Dainik jeevan ki chhoti baaton mein ati-chinta se mukti bhava",
+    "translatedName": "Freedom from over-concern about minor details bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May we not become overly concerned with minor details of daily life.",
+    "keywords": ["simplicity", "peace of mind", "letting go"]
+  },
+  {
+    "header": "🥇122",
+    "name": "निर्णयों के सत्य पक्ष को स्वीकार करने की ईमानदारी भाव",
+    "englishName": "Nirnayon ke satya paksh ko swikaar karne ki imandari bhava",
+    "translatedName": "Honest acceptance of decisions’ full reality bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May we accept both positive and negative outcomes of our decisions without defending them blindly.",
+    "keywords": ["honesty", "self reflection", "decision making"]
+  },
+  {
+    "header": "🥇122",
+    "name": "योगस्थ समुदाय की स्थापना भाव",
+    "englishName": "Yogasth samuday ki sthapna bhava",
+    "translatedName": "Establishment of Yogasth community bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May a Yogasth community be established to support balanced and conscious living.",
+    "keywords": ["community", "yogasth", "collective growth"]
+  },
+  {
+    "header": "🥇122",
+    "name": "योगस्थ समुदाय के लिए मार्ग खुलने का भाव",
+    "englishName": "Yogasth samuday ke liye marg khulne ka bhava",
+    "translatedName": "Opening pathways for Yogasth community bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May pathways open for people to come together and connect with the Yogasth community.",
+    "keywords": ["community access", "connection", "spiritual gathering"]
+  },
+  {
+    "header": "🥇122",
+    "name": "स्त्रियों के लिए सुरक्षित आवास की उपलब्धता भाव",
+    "englishName": "Striyon ke liye surakshit aavaas ki uplabdhata bhava",
+    "translatedName": "Availability of safe housing for women bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May at least every woman have access to safe and secure shelter.",
+    "keywords": ["women safety", "housing", "security"]
+  },
+  {
+    "header": "🥇122",
+    "name": "कार्य में असमर्थता को ईमानदारी से स्वीकार करने की समझ भाव",
+    "englishName": "Kaarya mein asamarthata ko imandari se swikaar karne ki samajh bhava",
+    "translatedName": "Honesty about inability to perform tasks bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May people honestly admit when they cannot perform a task, allowing learning and improvement.",
+    "keywords": ["honesty", "learning", "accountability"]
+  },
+  {
+    "header": "🥇122",
+    "name": "किसी को बेचारापन थोपने से मुक्ति भाव",
+    "englishName": "Kisi ko becharapan thopne se mukti bhava",
+    "translatedName": "Freedom from seeing others as helpless bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May we not label or perceive others as helpless or pitiable.",
+    "keywords": ["respect", "empowerment", "equality"]
+  },
+  {
+    "header": "🥇122",
+    "name": "अंतर्मन में काल्पनिक आवाज़ों के प्रभाव से मुक्ति भाव",
+    "englishName": "Antarman mein kalpanik awaazon ke prabhav se mukti bhava",
+    "translatedName": "Freedom from imagined internal voices bhava",
+    "audience": "for all",
+    "date": "2026-01-29",
+    "description": "May experiences of imagined voices in the mind dissolve, restoring mental clarity and balance.",
+    "keywords": ["mental clarity", "inner balance", "psychological wellbeing"]
+  },
+  {
+    "header": "🥇122",
+    "name": "विषयों को व्यक्तिगत रूप से न लेने की समझ भाव",
+    "englishName": "Vishayon ko vyaktigat roop se na lene ki samajh bhava",
+    "translatedName": "Understanding not to take topics personally bhava",
+    "audience": "for Ritu",
+    "date": "2026-01-29",
+    "description": "May Ritu understand that topics discussed publicly may be inspired by others and need not be taken personally.",
+    "keywords": ["personal boundaries", "understanding", "emotional maturity"]
+  },
+  {
+    "header": "🥇122",
+    "name": "व्यवहारगत सुधार हेतु जागरूकता और गुरु कृपा भाव",
+    "englishName": "Vyavahargat sudhaar ke liye jagrukta aur guru kripa bhava",
+    "translatedName": "Awareness and guru grace for behavioral improvement bhava",
+    "audience": "for Ritu",
+    "date": "2026-01-29",
+    "description": "May awareness, guidance, and grace help in improving and releasing unhelpful behavioral patterns.",
+    "keywords": ["self improvement", "guidance", "guru kripa", "healing"]
+  },
+  {
     "header": "🥇121",
     "name": "स्वास्थ्य के अनुकूल आहार की समझ भाव",
     "englishName": "Swasthya ke anukul aahar ki samajh bhava",
