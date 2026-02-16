@@ -67,7 +67,7 @@ async function addTextboxAndFilter(element, qTipId) {
       <input type="text" id="searchCannedResponse-${qTipId}" placeholder="Search"> 
       <label style="margin-left:8px;">
         <input type="checkbox" id="autoSubmitCannedResponse-${qTipId}" ${autoSubmitResponse_tfc ? 'checked' : ''}>
-        Auto-submit
+        
       </label>
     `);
 
