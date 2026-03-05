@@ -1,5 +1,9 @@
 <script>
 class WhatsAppModal {
+    //Usage:
+    //<script defer>jQuery(document).ready(function($) { TfcGlobal.loadFile("modalContactParamRitu",TfcGlobal.ModalsPath + "ContactParamRitu.html"); });</script>
+    //<div id="modalContactParamRitu"></div>
+
     constructor(parentClass) {
         this.parentDivs = document.querySelectorAll(`.${parentClass}`);
         if (!this.parentDivs.length) {
