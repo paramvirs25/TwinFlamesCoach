@@ -2,7 +2,9 @@
 * shows user eligibility status to become support coach.
 */
 function addEligibilityColumn() {
-  const REQUIRED_ROLES = ["Basic IW 1", "TfcIw", "Advanced Twin Flame Healings 1", "Certified Coach", "Apprentice Basic IW"];
+  const REQUIRED_ROLES = ["Basic IW 1", "TfcIw", "Advanced Twin Flame Healings 1", "Certified Coach", "Apprentice Basic IW", "Apprentice Coach"];
+  const OR_ROLES = ["Apprentice Basic IW", "Apprentice Coach"];
+
   const SUPPORT_ROLE = "Support";
 
   // Function to calculate the date difference in months
@@ -44,7 +46,11 @@ function addEligibilityColumn() {
     const groupLifeCoachRole = roles.find(role => role.startsWith("Group Life Coach "));
 
     // Check if the row is eligible for support coach
-    const isEligibleRoles = REQUIRED_ROLES.every(role => roles.includes(role));
+    const requiredWithoutOr = REQUIRED_ROLES.filter(role => !OR_ROLES.includes(role));
+    const hasRequiredRoles = requiredWithoutOr.every(role => roles.includes(role));
+    const hasOrRole = OR_ROLES.some(role => roles.includes(role));
+    const isEligibleRoles = hasRequiredRoles && hasOrRole;
+
     const isEligibleDate = groupLifeCoachRole ? calculateMonthDifference(parseInt(groupLifeCoachRole.slice(-4))) >= 12 : false;
 
     // Create the new cell with the eligibility status
@@ -58,9 +64,17 @@ function addEligibilityColumn() {
     } else {
       var message = `Not eligible | Required`;
       if (!isEligibleRoles) {
-        const missingRoles = REQUIRED_ROLES.filter(role => !roles.includes(role));
+        let missingRoles = REQUIRED_ROLES.filter(role => !roles.includes(role));
+
+        if (!OR_ROLES.some(role => roles.includes(role))) {
+          missingRoles = missingRoles.filter(role => !OR_ROLES.includes(role));
+          missingRoles.push(OR_ROLES.join(" OR "));
+        } else {
+          missingRoles = missingRoles.filter(role => !OR_ROLES.includes(role));
+        }
+
         const missingRolesText = missingRoles.join("<br/>❌");
-        message += `<br/>Course(s)<div style="color:purple;">❌${missingRolesText}</div>`;        
+        message += `<br/>Course(s)<div style="color:purple;">❌${missingRolesText}</div>`;              
       }
 
       if (!isEligibleDate) {
@@ -77,7 +91,8 @@ function addEligibilityColumn() {
 
 window.addEventListener('load', () => {
   // Check if the current URL is 'Users screen displaying all apprentices'
-  if (window.location.href == "https://members.twinflamescoach.com/wp-admin/users.php?role=apprentice_basic_iw") {
+  if (window.location.href.includes("https://members.twinflamescoach.com/wp-admin/users.php?role=apprentice_basic_iw") || 
+      window.location.href.includes("https://members.twinflamescoach.com/wp-admin/users.php?role=apprentice_coach")) {
     addEligibilityColumn();
   }
 });
