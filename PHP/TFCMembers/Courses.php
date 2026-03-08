@@ -69,6 +69,7 @@ class Courses {
             self::ADV_TF_HEALINGS_1,
             self::CERTIFIED_COACH,
             self::APPRENTICE_BASIC_IW,
+            self::APPRENTICE_COACH,
         ];
 
         return self::getCoursesByKeys($keys);

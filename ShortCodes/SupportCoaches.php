@@ -19,17 +19,26 @@ class SupportCoaches {
         foreach ($courses as $course) {
             $courseName = $course->courseName;
             $courseRoleName = $course->courseRoleName;
-            
+
+            // Handle OR condition for Apprentice roles
+            if ($courseRoleName === \TFCMembers\Courses::APPRENTICE_BASIC_IW) {
+                $hasRole = in_array(\TFCMembers\Courses::APPRENTICE_BASIC_IW, $userRoles) 
+                    || in_array(\TFCMembers\Courses::APPRENTICE_COACH, $userRoles);
+
+                $courseName = "Apprentice Basic IW OR Apprentice Coach";
+            } elseif ($courseRoleName === \TFCMembers\Courses::APPRENTICE_COACH) {
+                // Skip second apprentice entry so it does not show twice
+                continue;
+            } else {
+                $hasRole = in_array($courseRoleName, $userRoles);
+            }
+
             //$icon = in_array($courseRoleName, $userRoles) ? '<span style="color:green">&#10004;</span>' : '<span style="color:blue">&#10006;</span>';
-            $icon = in_array($courseRoleName, $userRoles) ? '<span style="color:green">&#10003</span>' : '<span style="color:blue">&#10060</span>';
-            
-            
+            $icon = $hasRole ? '<span style="color:green">&#10003</span>' : '<span style="color:blue">&#10060</span>';
+
             $html .= "<p>{$icon} {$courseName} </p>";
         }
 
         return $html;
     }
-
-
 }
-?>
