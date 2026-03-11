@@ -164,7 +164,7 @@
     let logappLogs = JSON.parse(localStorage.getItem("logappLogs") || "{}")
     let logappCurrent = null
 
-    const logappDefaults = ["calls", "travel", "fights", "kirtan", "health"]
+    const logappDefaults = ["Calls", "Travel"]
 
     if (Object.keys(logappLogs).length === 0) {
         logappDefaults.forEach(l => {
