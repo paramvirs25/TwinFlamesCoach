@@ -1,0 +1,355 @@
+<style>
+    .logapp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #075E54;
+        color: white;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .logapp-icon {
+        cursor: pointer;
+        font-size: 22px;
+    }
+
+    .logapp-container {
+        padding: 10px;
+    }
+
+    .logapp-item {
+        background: white;
+        padding: 15px;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logapp-name {
+        cursor: pointer;
+    }
+
+    .logapp-delete {
+        color: #888;
+        cursor: pointer;
+    }
+
+    .logapp-chat-container {
+        height: 70vh;
+        overflow-y: auto;
+        padding: 10px;
+        background: #f2f2f2;
+    }
+
+    .logapp-chat {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logapp-msg {
+        background: #DCF8C6;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 85%;
+        align-self: flex-end;
+        position: relative;
+    }
+
+    .logapp-msg small {
+        display: block;
+        font-size: 11px;
+        margin-top: 4px;
+        color: #555;
+    }
+
+    .logapp-msg .logapp-delete {
+        position: absolute;
+        top: 4px;
+        right: 6px;
+        font-size: 14px;
+    }
+
+    .logapp-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
+
+    .logapp-popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .logapp-popup input,
+    .logapp-popup textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .logapp-popup button {
+        padding: 8px 12px;
+        margin-right: 8px;
+    }
+</style>
+
+
+<div class="logapp-header">
+    <span id="logappHeaderTitle">My Logs</span>
+    <span class="logapp-icon" id="logappHeaderAction">＋</span>
+</div>
+
+<div id="logappHome" class="logapp-container"></div>
+
+<div id="logappDetail" style="display:none">
+
+    <div class="logapp-chat-container" id="logappChatContainer">
+        <div class="logapp-chat" id="logappChat"></div>
+    </div>
+
+</div>
+
+
+<!-- Category Popup -->
+
+<div class="logapp-popup" id="logappCategoryPopup">
+    <div class="logapp-popup-content">
+
+        <h3>New Log Category</h3>
+
+        <input id="logappCategoryName" placeholder="Log name">
+
+        <button onclick="logappAddCategory()">Submit</button>
+        <button onclick="logappClosePopups()">Cancel</button>
+
+    </div>
+</div>
+
+
+<!-- Entry Popup -->
+
+<div class="logapp-popup" id="logappEntryPopup">
+    <div class="logapp-popup-content">
+
+        <h3>Add Log Entry</h3>
+
+        <input type="date" id="logappEntryDate">
+
+        <textarea id="logappEntryText"></textarea>
+
+        <button onclick="logappAddEntry()">Submit</button>
+        <button onclick="logappClosePopups()">Cancel</button>
+
+    </div>
+</div>
+
+
+<script>
+
+    let logappLogs = JSON.parse(localStorage.getItem("logappLogs") || "{}")
+    let logappCurrent = null
+
+    const logappDefaults = ["calls", "travel", "fights", "kirtan", "health"]
+
+    if (Object.keys(logappLogs).length === 0) {
+        logappDefaults.forEach(l => {
+            logappLogs[l] = { entries: [], updated: 0 }
+        })
+        logappSave()
+    }
+
+    function logappSave() {
+        localStorage.setItem("logappLogs", JSON.stringify(logappLogs))
+    }
+
+    function logappRenderHome() {
+
+        logappCurrent = null
+
+        document.getElementById("logappHeaderTitle").innerText = "My Logs"
+
+        let action = document.getElementById("logappHeaderAction")
+
+        action.innerText = "+"
+        action.onclick = () => {
+            document.getElementById("logappCategoryPopup").style.display = "flex"
+        }
+
+        document.getElementById("logappHome").style.display = "block"
+        document.getElementById("logappDetail").style.display = "none"
+
+        let container = document.getElementById("logappHome")
+
+        container.innerHTML = ""
+
+        let items = Object.keys(logappLogs)
+
+        items.sort((a, b) => {
+            let diff = logappLogs[b].updated - logappLogs[a].updated
+            if (diff !== 0) return diff
+            return a.localeCompare(b)
+        })
+
+        items.forEach(name => {
+
+            let div = document.createElement("div")
+            div.className = "logapp-item"
+
+            div.innerHTML = `
+<span class="logapp-name">${name}</span>
+<span class="logapp-delete">✖</span>
+`
+
+            div.querySelector(".logapp-name").onclick = () => logappOpen(name)
+
+            div.querySelector(".logapp-delete").onclick = () => {
+
+                if (confirm("Delete this category and all logs?")) {
+                    delete logappLogs[name]
+                    logappSave()
+                    logappRenderHome()
+                }
+
+            }
+
+            container.appendChild(div)
+
+        })
+
+    }
+
+    function logappOpen(name) {
+
+        logappCurrent = name
+
+        document.getElementById("logappHome").style.display = "none"
+        document.getElementById("logappDetail").style.display = "block"
+
+        let title = document.getElementById("logappHeaderTitle")
+
+        title.innerHTML = "← " + name
+        title.onclick = logappRenderHome
+
+        let action = document.getElementById("logappHeaderAction")
+
+        action.innerText = "+"
+        action.onclick = () => {
+
+            document.getElementById("logappEntryPopup").style.display = "flex"
+
+            document.getElementById("logappEntryDate").value =
+                new Date().toISOString().split("T")[0]
+
+        }
+
+        logappRenderEntries()
+
+    }
+
+    function logappRenderEntries() {
+
+        let chat = document.getElementById("logappChat")
+
+        chat.innerHTML = ""
+
+        logappLogs[logappCurrent].entries.forEach((e, i) => {
+
+            let div = document.createElement("div")
+            div.className = "logapp-msg"
+
+            div.innerHTML = `
+<span class="logapp-delete">✖</span>
+${e.text}
+<small>${e.date}</small>
+`
+
+            div.querySelector(".logapp-delete").onclick = () => {
+
+                if (confirm("Delete this entry?")) {
+
+                    logappLogs[logappCurrent].entries.splice(i, 1)
+                    logappSave()
+                    logappRenderEntries()
+
+                }
+
+            }
+
+            chat.appendChild(div)
+
+        })
+
+        setTimeout(() => {
+            let container = document.getElementById("logappChatContainer")
+            container.scrollTop = container.scrollHeight
+        }, 50)
+
+    }
+
+    function logappAddCategory() {
+
+        let name = document.getElementById("logappCategoryName").value.trim()
+
+        if (!name) return
+
+        logappLogs[name] = { entries: [], updated: Date.now() }
+
+        logappSave()
+
+        logappClosePopups()
+
+        logappRenderHome()
+
+    }
+
+    function logappAddEntry() {
+
+        let date = document.getElementById("logappEntryDate").value
+        let text = document.getElementById("logappEntryText").value
+
+        if (!text) return
+
+        logappLogs[logappCurrent].entries.push({
+            date: date,
+            text: text,
+            timestamp: Date.now()
+        })
+
+        logappLogs[logappCurrent].updated = Date.now()
+
+        logappSave()
+
+        logappClosePopups()
+
+        logappRenderEntries()
+
+    }
+
+    function logappClosePopups() {
+
+        document.getElementById("logappCategoryPopup").style.display = "none"
+        document.getElementById("logappEntryPopup").style.display = "none"
+
+        document.getElementById("logappCategoryName").value = ""
+        document.getElementById("logappEntryText").value = ""
+
+    }
+
+    logappRenderHome()
+
+</script>
