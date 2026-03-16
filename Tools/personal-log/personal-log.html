@@ -1,4 +1,9 @@
 <style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
     .logapp-header {
         display: flex;
         justify-content: space-between;
@@ -19,17 +24,33 @@
     }
 
     .logapp-item {
-        background: white;
         padding: 15px;
-        margin-bottom: 8px;
+        margin-bottom: 6px;
         border-radius: 8px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .logapp-item:nth-child(odd) {
+        background: #ffffff;
+    }
+
+    .logapp-item:nth-child(even) {
+        background: #f7f7f7;
     }
 
     .logapp-name {
-        cursor: pointer;
+        font-weight: 600;
+    }
+
+    .logapp-last {
+        font-size: 12px;
+        color: #666;
+        margin-top: 4px;
     }
 
     .logapp-delete {
@@ -54,9 +75,10 @@
         background: #DCF8C6;
         padding: 10px;
         border-radius: 10px;
-        max-width: 85%;
-        align-self: flex-end;
+        width: 100%;
+        box-sizing: border-box;
         position: relative;
+        word-wrap: break-word;
     }
 
     .logapp-msg small {
@@ -125,8 +147,6 @@
 </div>
 
 
-<!-- Category Popup -->
-
 <div class="logapp-popup" id="logappCategoryPopup">
     <div class="logapp-popup-content">
 
@@ -140,8 +160,6 @@
     </div>
 </div>
 
-
-<!-- Entry Popup -->
 
 <div class="logapp-popup" id="logappEntryPopup">
     <div class="logapp-popup-content">
@@ -177,6 +195,29 @@
         localStorage.setItem("logappLogs", JSON.stringify(logappLogs))
     }
 
+    function logappCapitalize(text) {
+        return text.charAt(0).toUpperCase() + text.slice(1)
+    }
+
+    function logappFormatDate(dateString, label) {
+
+        if (!dateString) return ""
+
+        const d = new Date(dateString)
+        const now = new Date()
+
+        const start = new Date(d.getFullYear(), d.getMonth(), d.getDate())
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+
+        const diffDays = Math.floor((today - start) / (1000 * 60 * 60 * 24))
+
+        const weekday = d.toLocaleDateString(undefined, { weekday: "long" })
+        const date = d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" })
+
+        return `${label} ${diffDays} days | ${weekday}, ${date}`
+
+    }
+
     function logappRenderHome() {
 
         logappCurrent = null
@@ -210,14 +251,32 @@
             let div = document.createElement("div")
             div.className = "logapp-item"
 
+            let entries = logappLogs[name].entries
+
+            let updated = null
+
+            if (entries.length > 0) {
+
+                updated = entries
+                    .map(e => new Date(e.date))
+                    .sort((a, b) => b - a)[0]
+
+            }
+
+
             div.innerHTML = `
-<span class="logapp-name">${name}</span>
+<div>
+<div class="logapp-name">${logappCapitalize(name)}</div>
+<div class="logapp-last">${updated ? logappFormatDate(updated, "✏️") : ""}</div>
+</div>
 <span class="logapp-delete">✖</span>
 `
 
-            div.querySelector(".logapp-name").onclick = () => logappOpen(name)
+            div.onclick = () => logappOpen(name)
 
-            div.querySelector(".logapp-delete").onclick = () => {
+            div.querySelector(".logapp-delete").onclick = (e) => {
+
+                e.stopPropagation()
 
                 if (confirm("Delete this category and all logs?")) {
                     delete logappLogs[name]
@@ -267,15 +326,19 @@
 
         chat.innerHTML = ""
 
-        logappLogs[logappCurrent].entries.forEach((e, i) => {
+        let entries = [...logappLogs[logappCurrent].entries]
+
+        entries.sort((a, b) => new Date(a.date) - new Date(b.date))
+
+        entries.forEach((e, i) => {
 
             let div = document.createElement("div")
             div.className = "logapp-msg"
 
             div.innerHTML = `
 <span class="logapp-delete">✖</span>
-${e.text}
-<small>${e.date}</small>
+<div>${e.text}</div>
+<small>${logappFormatDate(e.date, "✏️")}</small>
 `
 
             div.querySelector(".logapp-delete").onclick = () => {
@@ -283,7 +346,9 @@ ${e.text}
                 if (confirm("Delete this entry?")) {
 
                     logappLogs[logappCurrent].entries.splice(i, 1)
+
                     logappSave()
+
                     logappRenderEntries()
 
                 }
