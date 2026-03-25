@@ -261,23 +261,33 @@
   },
   {
   "header":"🥇143",
-  "name":"शारीरिक विविधता स्वीकृति भाव",
-  "englishName":"Sharirik vividhata sveekriti bhava",
-  "translatedName":"Acceptance of body diversity",
-  "audience":"for society",
+  "name":"लिंग विविधता शारीरिक स्वीकृति भाव",
+  "englishName":"Ling vividhata sharirik sveekriti bhava",
+  "translatedName":"Acceptance of having vagina for males",
+  "audience":"for men",
   "date":"2026-03-26",
-  "description":"People may feel free to express their body identity and physical form without stigma.",
-  "keywords":["body diversity","identity","acceptance"]
+  "description":"Boys who wish may be able to have a vagina in their body, with or without having a penis.",
+  "keywords":["vagina","male body","penis","body modification","gender variation","sex anatomy"]
   },
   {
   "header":"🥇143",
-  "name":"यौन धारणा संतुलन भाव",
-  "englishName":"Yaun dharna santulan bhava",
-  "translatedName":"Balanced sexual beliefs",
-  "audience":"for all",
+  "name":"वीर्य सौंदर्य धारणा स्वीकृति भाव",
+  "englishName":"Veerya saundarya dharna sveekriti bhava",
+  "translatedName":"Acceptance of sperm as beneficial for beauty",
+  "audience":"for women",
   "date":"2026-03-26",
-  "description":"People may hold balanced and informed views about different forms of sexual expression without rigid beliefs.",
-  "keywords":["sex","beliefs","intimacy","awareness"]
+  "description":"Women may understand and accept that male sperm on their face can be beneficial for their beauty.",
+  "keywords":["sperm","face","beauty","sexual fluid","skin","sexual belief"]
+  },
+  {
+  "header":"🥇143",
+  "name":"एनल यौन प्राथमिकता भाव",
+  "englishName":"Anal yaun prathmikta bhava",
+  "translatedName":"Preference for anal sex over vaginal sex",
+  "audience":"adults",
+  "date":"2026-03-26",
+  "description":"Anal sex may be experienced as more pleasurable and therefore preferred over vaginal sex.",
+  "keywords":["anal sex","vaginal sex","pleasure","sexual preference","intimacy"]
   },
   {
   "header":"🥇143",
