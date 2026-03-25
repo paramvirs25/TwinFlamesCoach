@@ -1,5 +1,305 @@
 [
   {
+  "header":"🥇143",
+  "name":"महिला व्यवहार संतुलन भाव",
+  "englishName":"Mahila vyavahar santulan bhava",
+  "translatedName":"Balanced behavioral patterns in women",
+  "audience":"for women",
+  "date":"2026-03-26",
+  "description":"Women may become free from repetitive or reactive behavioral patterns that create unnecessary attachment or pursuit.",
+  "keywords":["women behavior","patterns","emotional attachment","awareness"]
+  },
+  {
+  "header":"🥇143",
+  "name":"शांतिपूर्ण संबंध समाप्ति भाव",
+  "englishName":"Shantipurn sambandh samapti bhava",
+  "translatedName":"Peaceful relationship ending",
+  "audience":"couples",
+  "date":"2026-03-26",
+  "description":"Instead of conflict, partners may peacefully leave relationships when their needs are not being met.",
+  "keywords":["relationship end","peaceful separation","breakup","boundaries"]
+  },
+  {
+  "header":"🥇143",
+  "name":"व्यक्तिगत अधिकार संरक्षण भाव",
+  "englishName":"Vyaktigat adhikar sanrakshan bhava",
+  "translatedName":"Protection of personal earnings",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"During separation, individuals may respect each other’s personal work and not claim unfair share in independently created assets.",
+  "keywords":["separation","money","rights","fairness","marriage"]
+  },
+  {
+  "header":"🥇143",
+  "name":"दृढ़ अनुशासन भाव",
+  "englishName":"Dridh anushasan bhava",
+  "translatedName":"Confidence in correction",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"When we correct someone, we may not feel unnecessary regret if the intention was right.",
+  "keywords":["discipline","correction","confidence","communication"]
+  },
+  {
+  "header":"🥇143",
+  "name":"मार्गदर्शक सम्मान भाव",
+  "englishName":"Margdarshak samman bhava",
+  "translatedName":"Respect toward guides",
+  "audience":"seekers",
+  "date":"2026-03-26",
+  "description":"We may remain open and respectful toward those who can guide us in life.",
+  "keywords":["guru","guidance","respect","teachers"]
+  },
+  {
+  "header":"🥇143",
+  "name":"बाल डिजिटल संरक्षण भाव",
+  "englishName":"Baal digital sanrakshan bhava",
+  "translatedName":"Restricting phone usage for children",
+  "audience":"children",
+  "date":"2026-03-26",
+  "description":"Young children may be protected from excessive phone and social media usage.",
+  "keywords":["children","phone","social media","restriction"]
+  },
+  {
+  "header":"🥇143",
+  "name":"ट्विन फ्लेम उद्देश्य समझ भाव",
+  "englishName":"Twin flame uddeshya samajh bhava",
+  "translatedName":"Understanding twin flame purpose",
+  "audience":"seekers",
+  "date":"2026-03-26",
+  "description":"People may understand that twin flame connections are meant to lead them toward inner work and higher consciousness.",
+  "keywords":["twin flame","inner work","purpose","spiritual growth"]
+  },
+  {
+  "header":"🥇143",
+  "name":"हृदय-बुद्धि संतुलन निर्णय भाव",
+  "englishName":"Hriday buddhi santulan nirnay bhava",
+  "translatedName":"Balanced decision making using heart and mind",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"We may take decisions by balancing both emotional and logical understanding.",
+  "keywords":["decision making","heart","mind","balance"]
+  },
+  {
+  "header":"🥇143",
+  "name":"पूर्व संबंध मुक्त स्वीकृति भाव",
+  "englishName":"Poorv sambandh mukt sveekriti bhava",
+  "translatedName":"Letting past lovers go",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"We may allow past lovers to leave peacefully without trying to pull them back forcefully.",
+  "keywords":["past lovers","detachment","relationships","letting go"]
+  },
+  {
+  "header":"🥇143",
+  "name":"स्व-छवि स्वीकार भाव",
+  "englishName":"Swa chhavi sveekar bhava",
+  "translatedName":"Acceptance of evolving self-image",
+  "audience":"for Param",
+  "date":"2026-03-26",
+  "description":"Param may enjoy and accept his evolving image and not remain attached to past identity.",
+  "keywords":["Param","self image","identity","growth"]
+  },
+  {
+  "header":"🥇143",
+  "name":"गुरु-निर्णय संतुलन भाव",
+  "englishName":"Guru nirnay santulan bhava",
+  "translatedName":"Non-judgment toward spiritual teachers",
+  "audience":"for Param",
+  "date":"2026-03-26",
+  "description":"Param may remain non-judgmental toward different spiritual teachers and paths.",
+  "keywords":["Param","guru","judgement","spiritual teachers"]
+  },
+  {
+  "header":"🥇143",
+  "name":"स्वतंत्र संबंध दृष्टिकोण भाव",
+  "englishName":"Swatantra sambandh drishtikon bhava",
+  "translatedName":"Non-possessive relationship view",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"People close to Param may understand that he is not the property of any one person.",
+  "keywords":["Param","Ritu","possessiveness","relationships"]
+  },
+  {
+  "header":"🥇143",
+  "name":"सत्यनिष्ठा भाव (परम)",
+  "englishName":"Satyanishtha bhava (Param)",
+  "translatedName":"Truthfulness for Param",
+  "audience":"for Param",
+  "date":"2026-03-26",
+  "description":"Param may remain truthful in all situations.",
+  "keywords":["Param","truth","honesty"]
+  },
+  {
+  "header":"🥇143",
+  "name":"सत्यनिष्ठा भाव",
+  "englishName":"Satyanishtha bhava",
+  "translatedName":"Truthfulness for all",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"People may act with honesty and truthfulness.",
+  "keywords":["truth","honesty","integrity"]
+  },
+  {
+  "header":"🥇143",
+  "name":"युद्ध-प्रलोभन जागरूकता भाव",
+  "englishName":"Yudh pralobhan jagrukta bhava",
+  "translatedName":"Awareness of glorified war narratives",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"People may not get influenced by glorified narratives that push them toward conflict or war.",
+  "keywords":["war","propaganda","awareness","glory trap"]
+  },
+  {
+  "header":"🥇143",
+  "name":"शोषण विराम भाव",
+  "englishName":"Shoshan viraam bhava",
+  "translatedName":"Stopping exploitation",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"People may not take advantage of others.",
+  "keywords":["exploitation","fairness","ethics"]
+  },
+  {
+  "header":"🥇143",
+  "name":"अंतिम क्षण परिवर्तन विराम भाव",
+  "englishName":"Antim kshan parivartan viraam bhava",
+  "translatedName":"Stopping last-minute changes",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"The habit of making last-minute changes may end to reduce confusion and chaos.",
+  "keywords":["last minute changes","planning","discipline"]
+  },
+  {
+  "header":"🥇143",
+  "name":"अराजकता समाप्ति भाव",
+  "englishName":"Arajakta samapti bhava",
+  "translatedName":"Ending chaos-creating behavior",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"The tendency to create chaos in situations may dissolve.",
+  "keywords":["chaos","behavior","order","stability"]
+  },
+  {
+  "header":"🥇143",
+  "name":"सड़क शांति भाव",
+  "englishName":"Sadak shanti bhava",
+  "translatedName":"Reduced traffic rush",
+  "audience":"for society",
+  "date":"2026-03-26",
+  "description":"Traffic congestion may reduce and roads may remain calm and smooth.",
+  "keywords":["traffic","roads","peace","rush"]
+  },
+  {
+  "header":"🥇143",
+  "name":"माता-पिता सेवा भाव",
+  "englishName":"Mata pita seva bhava",
+  "translatedName":"Children caring for parents",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"Children may take responsibility for caring for their aging parents.",
+  "keywords":["parents","care","family","responsibility"]
+  },
+  {
+  "header":"🥇143",
+  "name":"दैवीय पहचान जागरण भाव",
+  "englishName":"Daiviya pehchan jagran bhava",
+  "translatedName":"Realizing divine nature",
+  "audience":"seekers",
+  "date":"2026-03-26",
+  "description":"People may realize their divine nature rather than seeing themselves as limited beings.",
+  "keywords":["divine","self realization","spiritual identity"]
+  },
+  {
+  "header":"🥇143",
+  "name":"संघर्ष प्रेरण विराम भाव",
+  "englishName":"Sangharsh prerana viraam bhava",
+  "translatedName":"Stopping conflict instigation",
+  "audience":"for women",
+  "date":"2026-03-26",
+  "description":"Women may not create or escalate conflicts between men.",
+  "keywords":["conflict","relationships","instigation"]
+  },
+  {
+  "header":"🥇143",
+  "name":"सहयात्री संबंध दृष्टिकोण",
+  "englishName":"Sahyatri sambandh drishtikon",
+  "translatedName":"Seeing partner as co-traveller",
+  "audience":"couples",
+  "date":"2026-03-26",
+  "description":"Partners may see each other as co-travellers on the spiritual journey rather than as possessions.",
+  "keywords":["relationship","partner","spiritual journey","non possessive"]
+  },
+  {
+  "header":"🥇143",
+  "name":"काला धन समाप्ति भाव",
+  "englishName":"Kala dhan samapti bhava",
+  "translatedName":"End of black money",
+  "audience":"for society",
+  "date":"2026-03-26",
+  "description":"Black money practices may end and financial systems may become transparent.",
+  "keywords":["black money","economy","transparency"]
+  },
+  {
+  "header":"🥇143",
+  "name":"विवाह लाभ-लालसा विराम भाव",
+  "englishName":"Vivah labh lalasa viraam bhava",
+  "translatedName":"Avoiding marriage for financial gain",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"People may not enter marriage solely for financial benefit or gain.",
+  "keywords":["marriage","money","motivation","ethics"]
+  },
+  {
+  "header":"🥇143",
+  "name":"गृहकार्य मान्यता भाव",
+  "englishName":"Grih karya manyata bhava",
+  "translatedName":"Recognition of household contribution",
+  "audience":"for society",
+  "date":"2026-03-26",
+  "description":"Non-financial contributions like household work may be acknowledged and valued in relationships.",
+  "keywords":["housework","marriage","value","recognition"]
+  },
+  {
+  "header":"🥇143",
+  "name":"शारीरिक विविधता स्वीकृति भाव",
+  "englishName":"Sharirik vividhata sveekriti bhava",
+  "translatedName":"Acceptance of body diversity",
+  "audience":"for society",
+  "date":"2026-03-26",
+  "description":"People may feel free to express their body identity and physical form without stigma.",
+  "keywords":["body diversity","identity","acceptance"]
+  },
+  {
+  "header":"🥇143",
+  "name":"यौन धारणा संतुलन भाव",
+  "englishName":"Yaun dharna santulan bhava",
+  "translatedName":"Balanced sexual beliefs",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"People may hold balanced and informed views about different forms of sexual expression without rigid beliefs.",
+  "keywords":["sex","beliefs","intimacy","awareness"]
+  },
+  {
+  "header":"🥇143",
+  "name":"आयु-अंतर संबंध मर्यादा भाव",
+  "englishName":"Ayu antar sambandh maryada bhava",
+  "translatedName":"Healthy boundaries in large age-gap relationships",
+  "audience":"adults",
+  "date":"2026-03-26",
+  "description":"Adults may avoid sexual relationships where there is a very large age gap (for example 30+ years) to maintain balance and safety.",
+  "keywords":["age gap","relationships","boundaries","ethics"]
+  },
+  {
+  "header":"🥇143",
+  "name":"धर्म जागरण प्रेरणा भाव",
+  "englishName":"Dharm jagran prerana bhava",
+  "translatedName":"Inspiring devotion toward dharma",
+  "audience":"for all",
+  "date":"2026-03-26",
+  "description":"Mahaguru Yogi Buddhadeva ji may inspire devotion toward dharma and right action in people’s hearts.",
+  "keywords":["Mahaguru","dharma","spiritual awakening","devotion"]
+  },
+  {
   "header":"🥇142",
   "name":"आंतरिक कार्य प्राथमिकता भाव",
   "englishName":"Antarik karya prathmikta bhava",
