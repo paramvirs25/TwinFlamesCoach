@@ -83,6 +83,28 @@ class TfcImportJavascripts {
     return window.location.href.indexOf('/checkout/order-received/') !== -1;
   }
 
+  static hideHeaderFooterForPrivatePages() {
+    // Select the specific heading used by your theme
+    const entryTitle = document.querySelector('.entry-title[itemprop="headline"]');
+
+    // Check if the element exists and if its text starts with "Private:"
+    if (entryTitle && entryTitle.textContent.trim().startsWith("Private:")) {
+        
+        // Define the classes you want to hide
+        const selectorsToHide = ['.site-header', '.main-navigation', '.site-footer'];
+
+        selectorsToHide.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.style.setProperty('display', 'none', 'important');
+            }
+        });
+
+        // Optional: Hide the title itself if you want a completely blank look
+        // entryTitle.style.display = 'none';
+    }
+  }
+
   static openVideoOverviewOnDesktop() {
     try{
       if (window.innerWidth >= 768) {
@@ -105,6 +127,7 @@ window.addEventListener('load', function () {
 //window.addEventListener('pageshow', function () {
 
   TfcImportJavascripts.openVideoOverviewOnDesktop();
+  TfcImportJavascripts.hideHeaderFooterForPrivatePages();
 
   //TfcImportJavascripts.importDropboxScript();
 
