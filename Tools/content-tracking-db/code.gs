@@ -25,6 +25,7 @@ function onEdit(e) {
   const title = vm.getRange(row, 2).getValue();
   const source = vm.getRange(row, 3).getValue();
   const datePosted = vm.getRange(row, 4).getValue();
+  const contentType = vm.getRange(row, 5).getValue(); // Column 5 = Content Type
   const link = vm.getRange(row, 6).getValue(); // ✅ NEW (Reference / Link)
 
   if (!videoID || !source || !datePosted) return;
@@ -64,6 +65,11 @@ function onEdit(e) {
 
   // ---- create rows
   platforms.forEach(p => {
+    // ❌ Skip Instagram Story if not Long Form
+    if (p[0].toString().toLowerCase().includes("instagram story") 
+        && contentType !== "Long Form") {
+      return;
+    }
 
     const scheduled = new Date(datePosted);
     scheduled.setDate(scheduled.getDate() + p[1]);
