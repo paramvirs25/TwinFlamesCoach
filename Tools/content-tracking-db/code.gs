@@ -25,6 +25,7 @@ function onEdit(e) {
   const title = vm.getRange(row, 2).getValue();
   const source = vm.getRange(row, 3).getValue();
   const datePosted = vm.getRange(row, 4).getValue();
+  const link = vm.getRange(row, 6).getValue(); // ✅ NEW (Reference / Link)
 
   if (!videoID || !source || !datePosted) return;
 
@@ -45,7 +46,7 @@ function onEdit(e) {
     if (existing[i][1] == videoID) return;
   }
 
-  // ---- task creation rules
+  // ---- task creation rules (dynamic from Platform Rules)
   let platforms = [];
   const rulesSheet = ss.getSheetByName("Platform Rules");
   const rulesData = rulesSheet.getDataRange().getValues();
@@ -54,20 +55,22 @@ function onEdit(e) {
     const ruleSource = rulesData[i][0];
     const rulePlatform = rulesData[i][1];
     const ruleDelay = rulesData[i][2];
+    const active = rulesData[i][3]; // Active column
 
-    if (ruleSource === source) {
+    if (ruleSource === source && active === true) {
       platforms.push([rulePlatform, ruleDelay]);
     }
   }
 
-
   // ---- create rows
   platforms.forEach(p => {
+
     const scheduled = new Date(datePosted);
     scheduled.setDate(scheduled.getDate() + p[1]);
 
     const taskID = videoID + "-" + p[0];
 
+    // ---- find last filled row safely
     const idColumn = tasks.getRange("A:A").getValues();
     let newRow = 2;
 
@@ -78,27 +81,30 @@ function onEdit(e) {
       }
     }
 
-    tasks.getRange(newRow, 1, 1, 6).setValues([[
+    // ---- insert data (NOW 7 columns)
+    tasks.getRange(newRow, 1, 1, 7).setValues([[
       taskID,
       videoID,
       title,
+      link,        // ✅ NEW column
       source,
       p[0],
       scheduled
     ]]);
 
-    // Apply real checkboxes
-    tasks.getRange(newRow, 7).insertCheckboxes();
-    tasks.getRange(newRow, 8).insertCheckboxes();
+    // ---- Apply checkboxes (shifted)
+    tasks.getRange(newRow, 8).insertCheckboxes(); // Done
+    tasks.getRange(newRow, 9).insertCheckboxes(); // Skip
 
-    // Default unchecked
-    tasks.getRange(newRow, 7, 1, 2).setValue(false);
+    tasks.getRange(newRow, 8, 1, 2).setValue(false);
 
   });
 
+  // ---- sort by Scheduled Date (column 7 now)
   const lastRow = tasks.getLastRow();
-if(lastRow > 2){
-  tasks.getRange(2,1,lastRow-1,8).sort({column:6, ascending:true});
-}
+  if (lastRow > 2) {
+    tasks.getRange(2, 1, lastRow - 1, 9)
+      .sort({ column: 7, ascending: true });
+  }
 
 }
