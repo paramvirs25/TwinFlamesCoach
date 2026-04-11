@@ -1,5 +1,165 @@
 [
   {
+  "header":"🥇150",
+  "name":"विवाह संतुलन स्वतंत्रता भाव",
+  "englishName":"Vivah santulan swatantrata bhava",
+  "translatedName":"Balanced independence in marriage",
+  "audience":"couples",
+  "date":"2026-04-10",
+  "description":"Partners in marriage may support and nurture each other while maintaining their individuality and independence.",
+  "keywords":["marriage","independence","balance","relationship"]
+  },
+  {
+  "header":"🥇150",
+  "name":"विवाह हृदय समर्पण संतुलन",
+  "englishName":"Vivah hriday samarpan santulan",
+  "translatedName":"Heart sharing without dependency",
+  "audience":"couples",
+  "date":"2026-04-10",
+  "description":"Partners may share their hearts with each other without becoming dependent or losing their own stability.",
+  "keywords":["marriage","love","heart","balance","independence"]
+  },
+  {
+  "header":"🥇150",
+  "name":"विवाह दूरी-समीपता संतुलन",
+  "englishName":"Vivah doori sameepata santulan",
+  "translatedName":"Healthy space in relationships",
+  "audience":"couples",
+  "date":"2026-04-10",
+  "description":"Partners may stand together while also maintaining healthy personal space and boundaries.",
+  "keywords":["marriage","space","boundaries","closeness"]
+  },
+  {
+  "header":"🥇150",
+  "name":"इच्छा साक्षी भाव (परम)",
+  "englishName":"Ichha sakshi bhava (Param)",
+  "translatedName":"Witnessing desire without escape for Param",
+  "audience":"for Param",
+  "date":"2026-04-10",
+  "description":"When a desire arises without fulfillment, Param may be able to sit with the feeling fully without escaping it.",
+  "keywords":["Param","desire","awareness","presence","control"]
+  },
+  {
+  "header":"🥇150",
+  "name":"इच्छा साक्षी भाव",
+  "englishName":"Ichha sakshi bhava",
+  "translatedName":"Witnessing desire without escape",
+  "audience":"for all",
+  "date":"2026-04-10",
+  "description":"People may be able to sit with their desires and feel them fully without needing immediate fulfillment.",
+  "keywords":["desire","awareness","self control","presence"]
+  },
+  {
+  "header":"🥇150",
+  "name":"लत जागरूकता भाव (शराब)",
+  "englishName":"Lat jagrukta bhava (sharab)",
+  "translatedName":"Awareness of alcohol dependence",
+  "audience":"for all",
+  "date":"2026-04-10",
+  "description":"When alcohol is not available, people may become aware of their level of dependence on it.",
+  "keywords":["alcohol","addiction","awareness","dependence"]
+  },
+  {
+  "header":"🥇150",
+  "name":"इच्छा रूपांतरण भाव",
+  "englishName":"Ichha roopantaran bhava",
+  "translatedName":"Transformation of desires",
+  "audience":"seekers",
+  "date":"2026-04-10",
+  "description":"Devotees’ desires may transform into forms that support spiritual growth without unnecessary effort from the Guru.",
+  "keywords":["desire","transformation","Guru","spiritual growth"]
+  },
+  {
+  "header":"🥇150",
+  "name":"यौन विनिमय निषेध भाव",
+  "englishName":"Yaun vinimay nishedh bhava",
+  "translatedName":"No sexual favors for influence",
+  "audience":"for all",
+  "date":"2026-04-10",
+  "description":"People may not use sexual favors to influence or control others.",
+  "keywords":["sex","manipulation","boundaries","ethics"]
+  },
+  {
+  "header":"🥇150",
+  "name":"यौन उपयोग शुद्धता भाव",
+  "englishName":"Yaun upyog shuddhata bhava",
+  "translatedName":"Purity in sexual intent",
+  "audience":"for all",
+  "date":"2026-04-10",
+  "description":"Sex may not be used as a tool to get work done or manipulate situations.",
+  "keywords":["sex","intent","purity","ethics"]
+  },
+  {
+  "header":"🥇150",
+  "name":"यौन पवित्रता भाव",
+  "englishName":"Yaun pavitrata bhava",
+  "translatedName":"Sex as a sacred act",
+  "audience":"adults",
+  "date":"2026-04-10",
+  "description":"Sex may be treated as a sacred and respectful act.",
+  "keywords":["sex","sacred","intimacy","respect"]
+  },
+  {
+  "header":"🥇150",
+  "name":"नियमित यौन संतुलन भाव",
+  "englishName":"Niyamit yaun santulan bhava",
+  "translatedName":"Regular healthy sexual connection",
+  "audience":"adults",
+  "date":"2026-04-10",
+  "description":"Sex may happen regularly as a natural part of connection, not only for transactional purposes.",
+  "keywords":["sex","regular","intimacy","relationship"]
+  },
+  {
+  "header":"🥇150",
+  "name":"यौन कृतज्ञता भाव",
+  "englishName":"Yaun kritagyata bhava",
+  "translatedName":"Gratitude in sexual connection",
+  "audience":"adults",
+  "date":"2026-04-10",
+  "description":"We may feel gratitude toward the person with whom we share sexual intimacy.",
+  "keywords":["sex","gratitude","intimacy","connection"]
+  },
+  {
+  "header":"🥇150",
+  "name":"यौन अंतराल मर्यादा भाव",
+  "englishName":"Yaun antaral maryada bhava",
+  "translatedName":"Spacing between sexual partners",
+  "audience":"adults",
+  "date":"2026-04-10",
+  "description":"People may maintain appropriate time gap between sexual interactions with different partners.",
+  "keywords":["sex","partners","boundaries","timing"]
+  },
+  {
+  "header":"🥇150",
+  "name":"मद्य मुक्त यौन सहजता भाव",
+  "englishName":"Madya mukt yaun sahajta bhava",
+  "translatedName":"Comfort in sex without alcohol",
+  "audience":"adults",
+  "date":"2026-04-10",
+  "description":"People may feel open and comfortable in sexual intimacy without relying on alcohol.",
+  "keywords":["sex","alcohol","comfort","intimacy"]
+  },
+  {
+  "header":"🥇150",
+  "name":"सरकारी कार्य सुगमता भाव",
+  "englishName":"Sarkari karya sugamta bhava",
+  "translatedName":"Smooth functioning of government work",
+  "audience":"for society",
+  "date":"2026-04-10",
+  "description":"Government office processes may become smooth and efficient.",
+  "keywords":["government","work","efficiency","system"]
+  },
+  {
+  "header":"🥇150",
+  "name":"अनावश्यक जिम्मेदारी विराम भाव",
+  "englishName":"Anavashyak zimmedari viraam bhava",
+  "translatedName":"Avoiding unnecessary responsibilities",
+  "audience":"for all",
+  "date":"2026-04-10",
+  "description":"People may not impose unnecessary responsibilities on others without consent.",
+  "keywords":["responsibility","boundaries","consent","social behavior"]
+  },
+  {
   "header":"🥇149",
   "name":"ट्विन फ्लेम विरह शांति भाव",
   "englishName":"Twin flame virah shanti bhava",
