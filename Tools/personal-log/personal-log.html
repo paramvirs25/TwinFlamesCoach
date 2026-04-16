@@ -1,410 +1,434 @@
 <style>
+    html,
+    body {
+        overflow-x: hidden;
+    }
 
-html, body {
-overflow-x: hidden;
-}
+    .logapp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #075E54;
+        color: white;
+        padding: 15px;
+        font-size: 20px;
+    }
 
-.logapp-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#075E54;
-color:white;
-padding:15px;
-font-size:20px;
-}
+    .logapp-icon {
+        cursor: pointer;
+        font-size: 22px;
+    }
 
-.logapp-icon{
-cursor:pointer;
-font-size:22px;
-}
+    .logapp-container {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
 
-.logapp-container{
-padding:10px;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:8px;
-}
+    .logapp-item {
+        padding: 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+    }
 
-.logapp-item{
-padding:12px;
-border-radius:8px;
-cursor:pointer;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-position:relative;
-}
+    .logapp-item:nth-child(odd) {
+        background: #ffffff;
+    }
 
-.logapp-item:nth-child(odd){
-background:#ffffff;
-}
-.logapp-item:nth-child(even){
-background:#f7f7f7;
-}
+    .logapp-item:nth-child(even) {
+        background: #f7f7f7;
+    }
 
-.logapp-name{
-font-weight:600;
-}
+    .logapp-name {
+        font-weight: 600;
+    }
 
-.logapp-last{
-font-size:11px;
-color:#666;
-margin-top:4px;
-}
+    .logapp-last {
+        font-size: 11px;
+        color: #666;
+        margin-top: 4px;
+    }
 
-.logapp-delete{
-position:absolute;
-top:6px;
-right:8px;
-cursor:pointer;
-color:#888;
-}
+    .logapp-delete {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        cursor: pointer;
+        color: #888;
+    }
 
-.logapp-chat-container{
-height:70vh;
-overflow-y:auto;
-padding:10px;
-background:#f2f2f2;
-}
+    .logapp-chat-container {
+        height: 70vh;
+        overflow-y: auto;
+        padding: 10px;
+        background: #f2f2f2;
+    }
 
-.logapp-chat{
-display:flex;
-flex-direction:column;
-gap:8px;
-}
+    .logapp-chat {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 
-.logapp-msg{
-padding:10px;
-border-radius:10px;
-width:100%;
-box-sizing:border-box;
-position:relative;
-word-wrap:break-word;
-}
+    .logapp-msg {
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        word-wrap: break-word;
+    }
 
-.logapp-msg:nth-child(odd){
-background:#DCF8C6;
-}
-.logapp-msg:nth-child(even){
-background:#e6f7d9;
-}
+    .logapp-msg:nth-child(odd) {
+        background: #DCF8C6;
+    }
 
-.logapp-msg small{
-display:block;
-font-size:11px;
-margin-top:4px;
-color:#555;
-}
+    .logapp-msg:nth-child(even) {
+        background: #e6f7d9;
+    }
 
-.logapp-msg .logapp-delete{
-position:absolute;
-top:4px;
-right:6px;
-font-size:14px;
-}
+    .logapp-msg small {
+        display: block;
+        font-size: 11px;
+        margin-top: 4px;
+        color: #555;
+    }
 
-.logapp-popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:9999;
-}
+    .logapp-msg .logapp-delete {
+        position: absolute;
+        top: 4px;
+        right: 6px;
+        font-size: 14px;
+    }
 
-.logapp-popup-content{
-background:white;
-padding:20px;
-border-radius:10px;
-width:90%;
-max-width:400px;
-}
+    .logapp-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+    }
 
-.logapp-popup input,
-.logapp-popup textarea{
-width:100%;
-padding:10px;
-margin-top:10px;
-margin-bottom:10px;
-font-size:16px;
-}
+    .logapp-popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 400px;
+    }
 
-.logapp-popup button{
-padding:8px 12px;
-margin-right:8px;
-}
+    .logapp-popup input,
+    .logapp-popup textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
 
+    .logapp-popup button {
+        padding: 8px 12px;
+        margin-right: 8px;
+    }
 </style>
 
 
 <div class="logapp-header">
-<span id="logappHeaderTitle">My Logs</span>
-<span class="logapp-icon" id="logappHeaderAction">＋</span>
+    <span id="logappHeaderTitle">My Logs</span>
+    <span class="logapp-icon" id="logappHeaderAction">＋</span>
 </div>
 
 <div id="logappHome" class="logapp-container"></div>
 
 <div id="logappDetail" style="display:none">
-<div class="logapp-chat-container" id="logappChatContainer">
-<div class="logapp-chat" id="logappChat"></div>
-</div>
+    <div class="logapp-chat-container" id="logappChatContainer">
+        <div class="logapp-chat" id="logappChat"></div>
+    </div>
 </div>
 
 
 <!-- Category Popup -->
 <div class="logapp-popup" id="logappCategoryPopup">
-<div class="logapp-popup-content">
-<h3>New Log Category</h3>
-<input id="logappCategoryName" placeholder="Log name">
-<button onclick="logappAddCategory()">Submit</button>
-<button onclick="logappClosePopups()">Cancel</button>
-</div>
+    <div class="logapp-popup-content">
+        <h3>New Log Category</h3>
+        <input id="logappCategoryName" placeholder="Log name">
+        <button onclick="logappAddCategory()">Submit</button>
+        <button onclick="logappClosePopups()">Cancel</button>
+    </div>
 </div>
 
 
 <!-- Entry Popup -->
 <div class="logapp-popup" id="logappEntryPopup">
-<div class="logapp-popup-content">
+    <div class="logapp-popup-content">
 
-<h3>Add Log Entry</h3>
+        <h3>Add Log Entry</h3>
 
-<input type="date" id="logappEntryDate">
-<input type="time" id="logappEntryTime">
-<input id="logappPersonName" placeholder="Person name (optional)">
-<textarea id="logappEntryText"></textarea>
+        <input type="date" id="logappEntryDate">
+        <input type="time" id="logappEntryTime">
+        <input id="logappPersonName" placeholder="Person name (optional)">
+        <textarea id="logappEntryText"></textarea>
 
-<button onclick="logappAddEntry()">Submit</button>
-<button onclick="logappClosePopups()">Cancel</button>
+        <button onclick="logappAddEntry()">Submit</button>
+        <button onclick="logappClosePopups()">Cancel</button>
 
-</div>
+    </div>
 </div>
 
 
 <script>
 
-let logappLogs = JSON.parse(localStorage.getItem("logappLogs") || {})
-let logappCurrent = null
+    let logappLogs = JSON.parse(localStorage.getItem("logappLogs") || {})
+    let logappCurrent = null
 
-const logappDefaults=["Calls","Travel"]
+    const logappDefaults = ["Calls", "Travel"]
 
-if(Object.keys(logappLogs).length===0){
-logappDefaults.forEach(l=>{
-logappLogs[l]={entries:[]}
-})
-logappSave()
-}
+    if (Object.keys(logappLogs).length === 0) {
+        logappDefaults.forEach(l => {
+            logappLogs[l] = { entries: [] }
+        })
+        logappSave()
+    }
 
-function logappSave(){
-localStorage.setItem("logappLogs",JSON.stringify(logappLogs))
-}
+    function logappSave() {
+        localStorage.setItem("logappLogs", JSON.stringify(logappLogs))
+    }
 
-function logappCapitalize(text){
-return text.charAt(0).toUpperCase()+text.slice(1)
-}
+    function logappCapitalize(text) {
+        return text.charAt(0).toUpperCase() + text.slice(1)
+    }
 
-function logappFormatDate(dateString,label){
+    function logappFormatDate(dateString, label){
 
-if(!dateString) return ""
+        if(!dateString) return ""
 
-const d=new Date(dateString)
-const now=new Date()
+        const d = new Date(dateString)
+        const now = new Date()
 
-const diffMs=now-d
+        const diffMs = now - d
 
-const diffDays=Math.floor(diffMs/(1000*60*60*24))
-const diffHours=Math.floor(diffMs/(1000*60*60))
+        const diffDays = Math.floor(diffMs / (1000*60*60*24))
+        const diffHours = Math.floor((diffMs % (1000*60*60*24)) / (1000*60*60))
 
-const weekday=d.toLocaleDateString(undefined,{weekday:"long"})
-const date=d.toLocaleDateString(undefined,{day:"numeric",month:"short",year:"numeric"})
-const time=d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
+        const weekday = d.toLocaleDateString(undefined,{weekday:"long"})
+        const date = d.toLocaleDateString(undefined,{day:"numeric",month:"short",year:"numeric"})
+        const time = d.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
 
-let diffText = diffDays>0 
-? `${diffDays} days ago`
-: `${diffHours} hours ago`
+        let diffText = ""
 
-return `${label} ${diffText} | ${weekday}, ${date}, ${time}`
-}
+        if(diffDays>0){
+            diffText = `${diffDays} days ${diffHours} hours ago`
+        }else{
+            diffText = `${diffHours} hours ago`
+        }
 
-function logappRenderHome(){
+        return `${label ? label + " " : ""}${diffText} | ${weekday}, ${date}, ${time}`
+    }
 
-logappCurrent=null
+    function logappRenderHome() {
 
-document.getElementById("logappHeaderTitle").innerText="My Logs"
+        logappCurrent = null
 
-let action=document.getElementById("logappHeaderAction")
-action.innerText="+"
-action.onclick=()=>{
-document.getElementById("logappCategoryPopup").style.display="flex"
-}
+        document.getElementById("logappHeaderTitle").innerText = "My Logs"
 
-document.getElementById("logappHome").style.display="grid"
-document.getElementById("logappDetail").style.display="none"
+        let action = document.getElementById("logappHeaderAction")
+        action.innerText = "+"
+        action.onclick = () => {
+            document.getElementById("logappCategoryPopup").style.display = "flex"
+        }
 
-let container=document.getElementById("logappHome")
-container.innerHTML=""
+        document.getElementById("logappHome").style.display = "grid"
+        document.getElementById("logappDetail").style.display = "none"
 
-let items=Object.keys(logappLogs)
+        let container = document.getElementById("logappHome")
+        container.innerHTML = ""
 
-items.forEach(name=>{
+        let items = Object.keys(logappLogs)
 
-let div=document.createElement("div")
-div.className="logapp-item"
+        items.sort((a,b)=>{
 
-let entries=logappLogs[name].entries
+            let aEntries = logappLogs[a].entries
+            let bEntries = logappLogs[b].entries
 
-let updated=null
-if(entries.length>0){
-updated=entries.map(e=>new Date(e.date)).sort((a,b)=>b-a)[0]
-}
+            let aLast = aEntries.length ? new Date(aEntries[aEntries.length-1].date) : 0
+            let bLast = bEntries.length ? new Date(bEntries[bEntries.length-1].date) : 0
 
-div.innerHTML=`
+            return bLast - aLast
+        })
+
+        items.forEach(name => {
+
+            let div = document.createElement("div")
+            div.className = "logapp-item"
+
+            let entries = logappLogs[name].entries
+
+            let updated = null
+            if (entries.length > 0) {
+                updated = entries.map(e => new Date(e.date)).sort((a, b) => b - a)[0]
+            }
+
+            div.innerHTML = `
 <div class="logapp-name">${logappCapitalize(name)}</div>
-<div class="logapp-last">${updated?logappFormatDate(updated,"✏️"):""}</div>
+<div class="logapp-last">${updated ? logappFormatDate(updated, "") : ""}</div>
 <span class="logapp-delete">✖</span>
 `
 
-div.onclick=()=>logappOpen(name)
+            div.onclick = () => logappOpen(name)
 
-div.ondblclick=()=>{
-let newName=prompt("Edit category name",name)
-if(newName && newName!==name){
-logappLogs[newName]=logappLogs[name]
-delete logappLogs[name]
-logappSave()
-logappRenderHome()
-}
-}
+            // div.ondblclick = () => {
+            //     let newName = prompt("Edit category name", name)
+            //     if (newName && newName !== name) {
+            //         logappLogs[newName] = logappLogs[name]
+            //         delete logappLogs[name]
+            //         logappSave()
+            //         logappRenderHome()
+            //     }
+            // }
 
-div.querySelector(".logapp-delete").onclick=(e)=>{
-e.stopPropagation()
-if(confirm("Delete this category and all logs?")){
-delete logappLogs[name]
-logappSave()
-logappRenderHome()
-}
-}
+            div.querySelector(".logapp-delete").onclick = (e) => {
+                e.stopPropagation()
+                if (confirm("Delete this category and all logs?")) {
+                    delete logappLogs[name]
+                    logappSave()
+                    logappRenderHome()
+                }
+            }
 
-container.appendChild(div)
+            container.appendChild(div)
 
-})
+        })
 
-}
+    }
 
-function logappOpen(name){
+    function logappOpen(name) {
 
-logappCurrent=name
+        logappCurrent = name
 
-document.getElementById("logappHome").style.display="none"
-document.getElementById("logappDetail").style.display="block"
+        document.getElementById("logappHome").style.display = "none"
+        document.getElementById("logappDetail").style.display = "block"
 
-let title=document.getElementById("logappHeaderTitle")
-title.innerHTML="← "+name
-title.onclick=logappRenderHome
+        let title = document.getElementById("logappHeaderTitle")
+        title.innerHTML = "← " + name
+        title.onclick = logappRenderHome
 
-let action=document.getElementById("logappHeaderAction")
+        let action = document.getElementById("logappHeaderAction")
 
-action.innerText="+"
-action.onclick=()=>{
+        action.innerText = "+"
+        action.onclick = () => {
 
-document.getElementById("logappEntryPopup").style.display="flex"
+            document.getElementById("logappEntryPopup").style.display = "flex"
 
-document.getElementById("logappEntryDate").value=new Date().toISOString().split("T")[0]
-document.getElementById("logappEntryTime").value=""
+            document.getElementById("logappEntryDate").value = new Date().toISOString().split("T")[0]
+            document.getElementById("logappEntryTime").value = ""
 
-}
+        }
 
-logappRenderEntries()
-}
+        logappRenderEntries()
+    }
 
-function logappRenderEntries(){
+    function logappRenderEntries() {
 
-let chat=document.getElementById("logappChat")
-chat.innerHTML=""
+        let chat = document.getElementById("logappChat")
+        chat.innerHTML = ""
 
-let entries=[...logappLogs[logappCurrent].entries]
+        let entries = [...logappLogs[logappCurrent].entries]
 
-entries.sort((a,b)=>new Date(a.date)-new Date(b.date))
+        entries.sort((a, b) => new Date(a.date) - new Date(b.date))
 
-entries.forEach((e,i)=>{
+        entries.forEach((e, i) => {
 
-let div=document.createElement("div")
-div.className="logapp-msg"
+            let div = document.createElement("div")
+            div.className = "logapp-msg"
 
-div.innerHTML=`
+            div.innerHTML = `
 <span class="logapp-delete">✖</span>
-<div><b>${e.person||""}</b></div>
+<div><b>${e.person || ""}</b></div>
 <div>${e.text}</div>
-<small>${logappFormatDate(e.date,"✏️")}</small>
+<small>${logappFormatDate(e.date, "")}</small>
 `
 
-div.querySelector(".logapp-delete").onclick=()=>{
-if(confirm("Delete this entry?")){
-logappLogs[logappCurrent].entries.splice(i,1)
-logappSave()
-logappRenderEntries()
-}
-}
+            div.querySelector(".logapp-delete").onclick = () => {
+                if (confirm("Delete this entry?")) {
+                    logappLogs[logappCurrent].entries.splice(i, 1)
+                    logappSave()
+                    logappRenderEntries()
+                }
+            }
 
-chat.appendChild(div)
+            chat.appendChild(div)
 
-})
+        })
 
-setTimeout(()=>{
-let container=document.getElementById("logappChatContainer")
-container.scrollTop=container.scrollHeight
-},50)
-}
+        setTimeout(() => {
+            let container = document.getElementById("logappChatContainer")
+            container.scrollTop = container.scrollHeight
+        }, 50)
+    }
 
-function logappAddCategory(){
+    function logappAddCategory() {
 
-let name=document.getElementById("logappCategoryName").value.trim()
-if(!name) return
+        let name = document.getElementById("logappCategoryName").value.trim()
+        if (!name) return
 
-logappLogs[name]={entries:[]}
+        logappLogs[name] = { entries: [] }
 
-logappSave()
-logappClosePopups()
-logappRenderHome()
-}
+        logappSave()
+        logappClosePopups()
+        logappRenderHome()
+    }
 
-function logappAddEntry(){
+    function logappAddEntry() {
 
-let date=document.getElementById("logappEntryDate").value
-let time=document.getElementById("logappEntryTime").value || "00:00"
-let person=document.getElementById("logappPersonName").value
-let text=document.getElementById("logappEntryText").value
+        let date = document.getElementById("logappEntryDate").value
+        let time = document.getElementById("logappEntryTime").value || "00:00"
+        let person = document.getElementById("logappPersonName").value
+        let text = document.getElementById("logappEntryText").value
 
-if(!text) return
+        if (!text) return
 
-let datetime=date+"T"+time
+        let datetime = date + "T" + time
 
-logappLogs[logappCurrent].entries.push({
-date:datetime,
-text:text,
-person:person,
-timestamp:Date.now()
-})
+        logappLogs[logappCurrent].entries.push({
+            date: datetime,
+            text: text,
+            person: person,
+            timestamp: Date.now()
+        })
 
-logappSave()
-logappClosePopups()
-logappRenderEntries()
-}
+        logappSave()
+        logappClosePopups()
+        logappRenderEntries()
+    }
 
-function logappClosePopups(){
+    function logappClosePopups() {
 
-document.getElementById("logappCategoryPopup").style.display="none"
-document.getElementById("logappEntryPopup").style.display="none"
+        document.getElementById("logappCategoryPopup").style.display = "none"
+        document.getElementById("logappEntryPopup").style.display = "none"
 
-document.getElementById("logappCategoryName").value=""
-document.getElementById("logappEntryText").value=""
-document.getElementById("logappPersonName").value=""
-}
+        document.getElementById("logappCategoryName").value = ""
+        document.getElementById("logappEntryText").value = ""
+        document.getElementById("logappPersonName").value = ""
+    }
 
-logappRenderHome()
+    logappRenderHome()
+
+    window.addEventListener("focus", ()=>{
+        if(logappCurrent){
+            logappRenderEntries()
+        }else{
+            logappRenderHome()
+        }
+    })
 
 </script>
