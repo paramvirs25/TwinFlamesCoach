@@ -1,5 +1,215 @@
 [
   {
+  "header":"🥇153",
+  "name":"हनुमान अवतरण भाव",
+  "englishName":"Hanuman avataran bhava",
+  "translatedName":"Manifestation of Lord Hanuman",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"Lord Hanuman may manifest or appear in this world to guide and support humanity.",
+  "keywords":["Hanuman","divine","manifestation","protection"]
+  },
+  {
+  "header":"🥇153",
+  "name":"इच्छा पूर्णता भाव",
+  "englishName":"Ichha poornata bhava",
+  "translatedName":"Fulfillment of desires",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"People may receive fulfillment of their desires in alignment with their path.",
+  "keywords":["desire","fulfillment","manifestation"]
+  },
+  {
+  "header":"🥇153",
+  "name":"असुर लोक पीड़ा मुक्ति भाव",
+  "englishName":"Asur lok peeda mukti bhava",
+  "translatedName":"Dissolution of suffering in asur loka",
+  "audience":"for all beings",
+  "date":"2026-04-17",
+  "description":"All pain and suffering in asur loka may dissolve and transform into peace.",
+  "keywords":["asur","suffering","release","healing"]
+  },
+  {
+  "header":"🥇153",
+  "name":"भारी इच्छाओं शुद्धि भाव",
+  "englishName":"Bhari ichha shuddhi bhava",
+  "translatedName":"Clearing heavy desire residue",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"Accumulated residue of intense or heavy desires may be cleared and transmuted.",
+  "keywords":["desire","energy","clearing","transformation"]
+  },
+  {
+  "header":"🥇153",
+  "name":"सौंदर्यपूर्ण जगत भाव",
+  "englishName":"Saundaryapurn jagat bhava",
+  "translatedName":"World filled with pleasant experiences",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"Earth and possibly other planets may reflect harmonious and pleasant experiences.",
+  "keywords":["earth","beauty","harmony","world"]
+  },
+  {
+  "header":"🥇153",
+  "name":"व्यक्तिगत साधना समझ भाव",
+  "englishName":"Vyaktigat sadhana samajh bhava",
+  "translatedName":"Understanding spirituality as personal effort",
+  "audience":"seekers",
+  "date":"2026-04-17",
+  "description":"We may understand that spirituality is a personal effort to cultivate peace, simplicity, humility, and purity.",
+  "keywords":["spirituality","sadhana","effort","peace","Swami Niranjanananda"]
+  },
+  {
+  "header":"🥇153",
+  "name":"प्राकृतिक गर्भधारण संतुलन भाव",
+  "englishName":"Prakritik garbhadharan santulan bhava",
+  "translatedName":"Natural conception without IVF dependence",
+  "audience":"couples",
+  "date":"2026-04-17",
+  "description":"People may follow a healthy lifestyle that supports natural conception without reliance on IVF.",
+  "keywords":["pregnancy","IVF","health","lifestyle"]
+  },
+  {
+  "header":"🥇153",
+  "name":"निर्बल सहारा भाव",
+  "englishName":"Nirbal sahara bhava",
+  "translatedName":"Support for the helpless",
+  "audience":"for society",
+  "date":"2026-04-17",
+  "description":"Those who are helpless may receive support and care.",
+  "keywords":["help","support","society","care"]
+  },
+  {
+  "header":"🥇153",
+  "name":"आंतरिक नाद श्रवण भाव",
+  "englishName":"Antarik naad shravan bhava",
+  "translatedName":"Hearing inner sound",
+  "audience":"seekers",
+  "date":"2026-04-17",
+  "description":"We may become aware of and hear the inner sound (naad) within.",
+  "keywords":["naad","inner sound","meditation","awareness"]
+  },
+  {
+  "header":"🥇153",
+  "name":"व्यक्ति परख विवेक भाव",
+  "englishName":"Vyakti parakh vivek bhava",
+  "translatedName":"Discernment before trusting others",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"We may observe people through their actions before trusting their words.",
+  "keywords":["trust","discernment","behavior","awareness"]
+  },
+  {
+  "header":"🥇153",
+  "name":"काला धन नियंत्रण भाव",
+  "englishName":"Kala dhan niyantran bhava",
+  "translatedName":"Control of black money",
+  "audience":"for society",
+  "date":"2026-04-17",
+  "description":"Measures like demonetization may help reduce black money and fake currency.",
+  "keywords":["black money","demonetization","economy","currency"]
+  },
+  {
+  "header":"🥇153",
+  "name":"संवाद संयम जागरूकता भाव",
+  "englishName":"Samvaad sanyam jagrukta bhava",
+  "translatedName":"Awareness in arguments",
+  "audience":"for women",
+  "date":"2026-04-17",
+  "description":"Women may become aware that raising voice in arguments may reflect emotional imbalance.",
+  "keywords":["argument","voice","women","communication","awareness"]
+  },
+  {
+  "header":"🥇153",
+  "name":"उचित संवाद दिशा भाव",
+  "englishName":"Uchit samvaad disha bhava",
+  "translatedName":"Sharing with the right person",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"People may share their stories only with those who are relevant and concerned.",
+  "keywords":["communication","sharing","boundaries","relevance"]
+  },
+  {
+  "header":"🥇153",
+  "name":"सत्ता पवित्रता भाव",
+  "englishName":"Satta pavitrata bhava",
+  "translatedName":"Integrity in positions of power",
+  "audience":"leaders",
+  "date":"2026-04-17",
+  "description":"Those in power may act with integrity, humility, and a higher sense of responsibility.",
+  "keywords":["power","integrity","leadership","ethics"]
+  },
+  {
+  "header":"🥇153",
+  "name":"शरीर प्रेम भाव",
+  "englishName":"Sharir prem bhava",
+  "translatedName":"Loving all parts of the body",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"We may develop love and acceptance for all parts of our body.",
+  "keywords":["body","self love","acceptance","health"]
+  },
+  {
+  "header":"🥇153",
+  "name":"शांति स्थापक भाव",
+  "englishName":"Shanti sthapak bhava",
+  "translatedName":"Becoming peacemakers",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"We may become creators and maintainers of peace in our surroundings.",
+  "keywords":["peace","harmony","society"]
+  },
+  {
+  "header":"🥇153",
+  "name":"विवेक-लालसा संतुलन भाव",
+  "englishName":"Vivek laalsa santulan bhava",
+  "translatedName":"Balance between discernment and desire",
+  "audience":"seekers",
+  "date":"2026-04-17",
+  "description":"We may understand that discernment and desire both guide our journey like sail and rudder.",
+  "keywords":["vivek","desire","balance","spiritual"]
+  },
+  {
+  "header":"🥇153",
+  "name":"विवेक-लालसा अनुभव भाव",
+  "englishName":"Vivek laalsa anubhav bhava",
+  "translatedName":"Experiencing both discernment and desire",
+  "audience":"seekers",
+  "date":"2026-04-17",
+  "description":"We may consciously experience and navigate both discernment and desire.",
+  "keywords":["vivek","desire","experience","awareness"]
+  },
+  {
+  "header":"🥇153",
+  "name":"पीड़ा ज्ञान उद्घाटन भाव",
+  "englishName":"Peeda gyaan udghatan bhava",
+  "translatedName":"Pain as revelation of understanding",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"We may understand that pain breaks the covering that hides our deeper understanding.",
+  "keywords":["pain","learning","growth","awareness"]
+  },
+  {
+  "header":"🥇153",
+  "name":"कष्ट उपचार समझ भाव",
+  "englishName":"Kasht upchar samajh bhava",
+  "translatedName":"Suffering as healing process",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"We may understand that suffering can act as medicine for inner healing.",
+  "keywords":["suffering","healing","growth","understanding"]
+  },
+  {
+  "header":"🥇153",
+  "name":"कष्ट सहन शांति भाव",
+  "englishName":"Kasht sahan shanti bhava",
+  "translatedName":"Enduring pain with peace",
+  "audience":"for all",
+  "date":"2026-04-17",
+  "description":"We may be able to endure difficulties with calmness and peace.",
+  "keywords":["pain","patience","peace","endurance"]
+  },
+  {
   "header":"🥇152",
   "name":"सत्य-प्रिय वाणी संयम भाव",
   "englishName":"Satya priya vani sanyam bhava",
