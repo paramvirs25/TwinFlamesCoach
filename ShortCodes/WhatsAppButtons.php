@@ -58,7 +58,8 @@ function whatsapp_rituom_shortcode($atts, $content = null) {
 function whatsapp_program_support_shortcode($atts, $content = null) {
     // Extract attributes
     $atts = shortcode_atts(array(
-        'message' => ''
+        'message' => '',
+        'button-text' => 'WhatsApp Program Support'
     ), $atts);
 
     // Hardcoded phone number
@@ -67,7 +68,7 @@ function whatsapp_program_support_shortcode($atts, $content = null) {
     return create_whatsapp_button(
         false,  // Now passing boolean
         whatsapp_url($phone_number, $atts['message']),
-        "WhatsApp Program Support",
+        $atts['button-text'],
         false
     );
 }
