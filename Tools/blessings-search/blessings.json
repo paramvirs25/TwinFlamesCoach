@@ -1,4 +1,115 @@
 [
+
+{
+"header":"🥇169",
+"name":"बाल सुरक्षा भीड़ जागरूकता भाव",
+"englishName":"Baal suraksha bheed jagrukta bhava",
+"translatedName":"Child safety in crowded places",
+"audience":"parents",
+"date":"2026-06-01",
+"description":"We may avoid taking children into unnecessarily crowded places and prioritize their safety and comfort.",
+"keywords":["children","crowd","safety","parents","protection"]
+},
+{
+"header":"🥇169",
+"name":"जबरन बंधन मुक्ति भाव",
+"englishName":"Jabran bandhan mukti bhava",
+"translatedName":"Freedom from forced confinement",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"People who are being unlawfully or unjustly confined against their will may regain their freedom.",
+"keywords":["freedom","captivity","imprisonment","liberation","justice"]
+},
+{
+"header":"🥇169",
+"name":"ईर्ष्या मुक्ति भाव",
+"englishName":"Irshya mukti bhava",
+"translatedName":"Freedom from jealousy",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"We may remain at peace when others receive something more beautiful, valuable, or expensive than we have.",
+"keywords":["jealousy","comparison","contentment","peace","abundance"]
+},
+{
+"header":"🥇169",
+"name":"समस्या अतिशयोक्ति मुक्ति भाव",
+"englishName":"Samasya atishayokti mukti bhava",
+"translatedName":"Freedom from exaggerating problems",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"We may describe our challenges honestly without exaggerating them for attention, sympathy, or validation.",
+"keywords":["problems","complaining","exaggeration","attention seeking","communication"]
+},
+{
+"header":"🥇169",
+"name":"दुःख-कथा मुक्ति भाव",
+"englishName":"Dukh katha mukti bhava",
+"translatedName":"Freedom from repeatedly sharing sorrows",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"We may become free from the habit of repeatedly telling others our personal sufferings and complaints.",
+"keywords":["complaining","suffering","victim mindset","emotional habits","healing"]
+},
+{
+"header":"🥇169",
+"name":"चिकित्सा व्यय राहत भाव (रितु)",
+"englishName":"Chikitsa vyay rahat bhava (Ritu)",
+"translatedName":"Freedom from further medical expenses for Ritu",
+"audience":"for Ritu",
+"date":"2026-06-01",
+"description":"Ritu may not have to face further expenses related to medical treatment for herself or her mother.",
+"keywords":["Ritu","medical expenses","health","healing","mother"]
+},
+{
+"header":"🥇169",
+"name":"चिकित्सा व्यय मुक्ति भाव",
+"englishName":"Chikitsa vyay mukti bhava",
+"translatedName":"Freedom from medical treatment expenses",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"People may be free from burdensome expenses related to illness and medical treatment.",
+"keywords":["medical expenses","healthcare","treatment","healing","money"]
+},
+{
+"header":"🥇169",
+"name":"वृद्ध निःशुल्क उपचार भाव",
+"englishName":"Vriddh nishulk upchar bhava",
+"translatedName":"Free treatment for elderly people",
+"audience":"elderly",
+"date":"2026-06-01",
+"description":"Older people may receive medical treatment without financial burden.",
+"keywords":["elderly","medical care","free treatment","health","seniors"]
+},
+{
+"header":"🥇169",
+"name":"स्वस्थ दीर्घायु भाव",
+"englishName":"Swasth deerghayu bhava",
+"translatedName":"Healthy aging without illness",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"We may remain healthy and active throughout life, even in old age, with minimal need for medical treatment.",
+"keywords":["health","aging","longevity","wellness","old age"]
+},
+{
+"header":"🥇169",
+"name":"स्वास्थ्य-प्रथम सौंदर्य भाव",
+"englishName":"Swasthya pratham saundarya bhava",
+"translatedName":"Health before appearance",
+"audience":"women",
+"date":"2026-06-01",
+"description":"Women may prioritize the health and wellbeing of their body over appearance-based pressures, including choices related to clothing and footwear.",
+"keywords":["women","health","high heels","body care","appearance","wellbeing"]
+},
+{
+"header":"🥇169",
+"name":"अप्रत्याशित व्यय सुरक्षा भाव",
+"englishName":"Apratyashit vyay suraksha bhava",
+"translatedName":"Protection from unexpected expenses",
+"audience":"for all",
+"date":"2026-06-01",
+"description":"We may remain protected from unexpected financial expenses and burdens.",
+"keywords":["unexpected expenses","money","finances","protection","savings"]
+},
 {
 "header":"🥇168",
 "name":"विश्राम सम्मान भाव",
