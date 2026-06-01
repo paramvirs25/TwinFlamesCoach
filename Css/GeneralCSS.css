@@ -191,6 +191,14 @@ ol, ul {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.tfc-notice {
+    padding: 12px 16px;
+    background-color: #fff3cd; /* Example light yellow color */
+    border: 1px solid #ffeeba; /* Example border color */
+    border-radius: 4px;
+    color: #856404; /* Example dark text color */
+}
+
 /*----Promo Box Start----*/
 /* Promobox header */
 .promobox-header {
