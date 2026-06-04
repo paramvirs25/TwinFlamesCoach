@@ -176,7 +176,7 @@
 
         <input type="date" id="logappEntryDate">
         <input type="time" id="logappEntryTime">
-        <input id="logappPersonName" placeholder="Person name (optional)">
+        <input id="logappPersonName" placeholder="Person/Place name (optional)">
         <textarea id="logappEntryText"></textarea>
 
         <button onclick="logappAddEntry()">Submit</button>
@@ -188,16 +188,19 @@
 
 <script>
 
-    let logappLogs = JSON.parse(localStorage.getItem("logappLogs") || {})
+    let logappLogs = {}
+    try{
+        logappLogs = JSON.parse(localStorage.getItem("logappLogs") || "{}")
+    }catch(e){
+        logappLogs = {}
+    }
+
     let logappCurrent = null
 
     const logappDefaults = ["Calls", "Travel"]
 
-    if (Object.keys(logappLogs).length === 0) {
-        logappDefaults.forEach(l => {
-            logappLogs[l] = { entries: [] }
-        })
-        logappSave()
+    if (!logappLogs || typeof logappLogs !== "object") {
+        logappLogs = {}
     }
 
     function logappSave() {
@@ -260,8 +263,13 @@
             let aEntries = logappLogs[a].entries
             let bEntries = logappLogs[b].entries
 
-            let aLast = aEntries.length ? new Date(aEntries[aEntries.length-1].date) : 0
-            let bLast = bEntries.length ? new Date(bEntries[bEntries.length-1].date) : 0
+            let aLast = aEntries.length
+                ? Math.max(...aEntries.map(e => new Date(e.date).getTime()))
+                : 0
+
+            let bLast = bEntries.length
+                ? Math.max(...bEntries.map(e => new Date(e.date).getTime()))
+                : 0
 
             return bLast - aLast
         })
@@ -329,8 +337,13 @@
 
             document.getElementById("logappEntryPopup").style.display = "flex"
 
-            document.getElementById("logappEntryDate").value = new Date().toISOString().split("T")[0]
-            document.getElementById("logappEntryTime").value = ""
+            const now = new Date()
+
+            document.getElementById("logappEntryDate").value =
+                now.toISOString().split("T")[0]
+
+            document.getElementById("logappEntryTime").value =
+                now.toTimeString().slice(0,5)
 
         }
 
@@ -359,11 +372,20 @@
 `
 
             div.querySelector(".logapp-delete").onclick = () => {
-                if (confirm("Delete this entry?")) {
-                    logappLogs[logappCurrent].entries.splice(i, 1)
+
+                if(confirm("Delete this entry?")){
+
+                    const index =
+                        logappLogs[logappCurrent].entries.indexOf(e)
+
+                    if(index > -1){
+                        logappLogs[logappCurrent].entries.splice(index,1)
+                    }
+
                     logappSave()
                     logappRenderEntries()
                 }
+
             }
 
             chat.appendChild(div)
@@ -395,7 +417,7 @@
         let person = document.getElementById("logappPersonName").value
         let text = document.getElementById("logappEntryText").value
 
-        if (!text) return
+        if (!text){ text = "✅" }
 
         let datetime = date + "T" + time
 
