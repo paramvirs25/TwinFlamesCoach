@@ -10,8 +10,7 @@ function user_follow_up_eligibility_shortcode($atts)
     
         if ($remaining_count > 0) {
             return '<div class="contentbox promobox-container" style="display: flex; align-items: center;">
-						<img src="https://members.twinflamescoach.com/wp-content/uploads/2024/02/16x16-icon-45590.png" style="width: 34px; height: auto;" />
-						<a href="https://members.twinflamescoach.com/product/15-min-follow-up/">
+						ℹ️ <a href="https://members.twinflamescoach.com/product/15-min-follow-up/">
                         &nbsp;' . $remaining_count . ' Free 15-min follow-up available
                         </a>
 					</div>';
