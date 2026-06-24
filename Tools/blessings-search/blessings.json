@@ -1,4 +1,165 @@
 [
+  
+{
+"header":"🥇179",
+"name":"मितव्ययी चिकित्सा भाव",
+"englishName":"Mitvyayi chikitsa bhava",
+"translatedName":"Cost-conscious medical care",
+"audience":"doctors and hospitals",
+"date":"2026-06-22",
+"description":"Doctors and hospitals may recommend only genuinely necessary tests, medicines, and procedures while keeping patient expenses as low as reasonably possible.",
+"keywords":["hospital","doctor","tests","medical expenses","affordable healthcare","ethical medicine","cost effective treatment"]
+},
+{
+"header":"🥇179",
+"name":"अनावश्यक उपचार मुक्ति भाव",
+"englishName":"Anavashyak upchar mukti bhava",
+"translatedName":"Freedom from unnecessary treatments",
+"audience":"patients",
+"date":"2026-06-22",
+"description":"Patients may receive only treatments that are genuinely beneficial and medically necessary.",
+"keywords":["hospital","treatment","medical ethics","unnecessary treatment","healthcare"]
+},
+{
+"header":"🥇179",
+"name":"नुकसान-भरपाई उत्तरदायित्व भाव",
+"englishName":"Nuksan bharpai uttardayitva bhava",
+"translatedName":"Taking responsibility for damages",
+"audience":"for all",
+"date":"2026-06-22",
+"description":"If we cause loss or damage to another person, we may willingly take responsibility and make fair compensation.",
+"keywords":["damage","compensation","responsibility","accountability","fairness"]
+},
+{
+"header":"🥇179",
+"name":"सार्वजनिक मर्यादा प्रेम भाव",
+"englishName":"Sarvajanik maryada prem bhava",
+"translatedName":"Maintaining public relationship boundaries",
+"audience":"couples",
+"date":"2026-06-22",
+"description":"Lovers may express affection in ways that remain aligned with their personal values, cultural comfort, and public setting.",
+"keywords":["lovers","public affection","hug","holding hands","relationship","boundaries"]
+},
+{
+"header":"🥇179",
+"name":"स्वाभाविक शांति भाव (रितु)",
+"englishName":"Swabhavik shanti bhava (Ritu)",
+"translatedName":"Natural calmness for Ritu",
+"audience":"for Ritu",
+"date":"2026-06-22",
+"description":"Ritu may experience a relaxed and peaceful state naturally, with decreasing dependence on sedatives or similar medicines whenever safely appropriate.",
+"keywords":["Ritu","calmness","relaxation","sedatives","emotional balance","mental wellbeing"]
+},
+{
+"header":"🥇179",
+"name":"पूर्ण स्वास्थ्य पुनर्स्थापन भाव (रितु)",
+"englishName":"Poorn swasthya punarsthapana bhava (Ritu)",
+"translatedName":"Complete health recovery for Ritu",
+"audience":"for Ritu",
+"date":"2026-06-22",
+"description":"Ritu may experience complete and lasting recovery, health, and wellbeing.",
+"keywords":["Ritu","health","recovery","healing","wellbeing"]
+},
+{
+"header":"🥇179",
+"name":"हाइपोमेनिया मुक्ति भाव",
+"englishName":"Hypomania mukti bhava",
+"translatedName":"Freedom from hypomania",
+"audience":"for all",
+"date":"2026-06-22",
+"description":"People may become free from hypomania and its disruptive effects.",
+"keywords":["hypomania","mental health","healing","emotional stability","recovery"]
+},
+{
+"header":"🥇179",
+"name":"समग्र चिकित्सा जागरूकता भाव",
+"englishName":"Samagra chikitsa jagrukta bhava",
+"translatedName":"Awareness of integrative healthcare",
+"audience":"doctors and hospitals",
+"date":"2026-06-22",
+"description":"Healthcare providers may appropriately consider evidence-informed complementary and alternative approaches alongside conventional medicine when beneficial.",
+"keywords":["alternative therapy","integrative medicine","holistic health","hospital","healing"]
+},
+{
+"header":"🥇179",
+"name":"गुरु स्वास्थ्य भाव",
+"englishName":"Guru swasthya bhava",
+"translatedName":"Relief from kidney stones for MahaGuru",
+"audience":"for MahaGuru",
+"date":"2026-06-22",
+"description":"MahaGuru may be free from kidney stones and enjoy strong physical health.",
+"keywords":["MahaGuru","kidney stones","health","healing","physical wellbeing"]
+},
+{
+"header":"🥇179",
+"name":"सत्संग-समय संरक्षण भाव",
+"englishName":"Satsang samay sanrakshan bhava",
+"translatedName":"More time for satsang",
+"audience":"for MahaGuru",
+"date":"2026-06-22",
+"description":"MahaGuru's time may be spent primarily in satsang, teaching, and spiritual work rather than unnecessary distractions and obligations.",
+"keywords":["MahaGuru","satsang","teaching","time","spiritual work"]
+},
+{
+"header":"🥇179",
+"name":"शिष्य-समय उपलब्धता भाव",
+"englishName":"Shishya samay uplabdhata bhava",
+"translatedName":"More time for disciples",
+"audience":"for MahaGuru and disciples",
+"date":"2026-06-22",
+"description":"MahaGuru may have greater availability and energy to guide, support, and spend time with disciples.",
+"keywords":["MahaGuru","disciples","students","guidance","teaching","time"]
+},
+{
+"header":"🥇179",
+"name":"स्थायी प्रेम भाव (रितु-परम)",
+"englishName":"Sthayi prem bhava (Ritu Param)",
+"translatedName":"Enduring love between Ritu and Param",
+"audience":"for Ritu and Param",
+"date":"2026-06-22",
+"description":"The love between Ritu and Param may remain steady, alive, and enduring.",
+"keywords":["Ritu","Param","love","relationship","connection"]
+},
+{
+"header":"🥇179",
+"name":"प्रेम-विस्तार भाव (रितु-परम)",
+"englishName":"Prem vistar bhava (Ritu Param)",
+"translatedName":"Growing love between Ritu and Param",
+"audience":"for Ritu and Param",
+"date":"2026-06-22",
+"description":"The love, understanding, and harmony between Ritu and Param may continue to deepen and expand.",
+"keywords":["Ritu","Param","love","relationship","harmony","connection"]
+},
+{
+"header":"🥇179",
+"name":"अस्पताल-चक्कर मुक्ति भाव (परम)",
+"englishName":"Aspatal chakkar mukti bhava (Param)",
+"translatedName":"Freedom from frequent hospital visits",
+"audience":"for Param",
+"date":"2026-06-22",
+"description":"Param may remain healthy and avoid unnecessary hospital visits.",
+"keywords":["Param","hospital","health","wellbeing","medical visits"]
+},
+{
+"header":"🥇179",
+"name":"स्त्री निर्णय-शक्ति संवर्धन भाव",
+"englishName":"Stree nirnay shakti sanvardhan bhava",
+"translatedName":"Strengthening women's decision-making",
+"audience":"women",
+"date":"2026-06-22",
+"description":"Women's confidence, clarity, and decision-making ability may continue to grow and strengthen.",
+"keywords":["women","decision making","confidence","clarity","leadership","wisdom"]
+},
+{
+"header":"🥇179",
+"name":"योग सार बोध भाव",
+"englishName":"Yog saar bodh bhava",
+"translatedName":"Understanding the essence of yoga",
+"audience":"for all",
+"date":"2026-06-22",
+"description":"People may understand the true essence of yoga and naturally incorporate it into their lives.",
+"keywords":["yoga","essence of yoga","awareness","spirituality","practice","inner growth"]
+},
 {
 "header":"🥇178",
 "name":"माता-पिता सेवा भाव",
