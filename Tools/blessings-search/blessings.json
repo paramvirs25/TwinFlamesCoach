@@ -1,5 +1,305 @@
 [
   {
+    "header": "🥇185",
+    "name": "सहयोगी-कोच सम्मान भाव",
+    "englishName": "Sahyogi coach samman bhava",
+    "translatedName": "Respect for support coaches",
+    "audience": "for Ritu",
+    "date": "2026-06-28",
+    "description": "Ritu may recognize and appreciate the role and value of support coaches, even when they contribute their own methods and perspectives.",
+    "keywords": ["Ritu", "support coach", "coach", "guidance", "respect", "teaching"]
+  },
+  {
+    "header": "🥇185",
+    "name": "नखरा-जागरूकता भाव",
+    "englishName": "Nakhra jagrukta bhava",
+    "translatedName": "Awareness of attention-seeking patterns",
+    "audience": "women",
+    "date": "2026-06-28",
+    "description": "Women may recognize that excessive emotional demands, attention-seeking, or expecting others to constantly accommodate them can become a source of their own suffering.",
+    "keywords": ["women", "attention seeking", "emotional dependency", "expectations", "pain", "relationships"]
+  },
+  {
+    "header": "🥇185",
+    "name": "सुलभ वैकल्पिक चिकित्सा भाव",
+    "englishName": "Sulabh vaikalpik chikitsa bhava",
+    "translatedName": "Affordable alternative therapies",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "Alternative therapies such as Ayurveda, Homeopathy, and other holistic treatments may become affordable and accessible to those who need them.",
+    "keywords": ["Ayurveda", "Homeopathy", "alternative therapy", "affordable", "healing", "health"]
+  },
+  {
+    "header": "🥇185",
+    "name": "मानसिक जड़ता मुक्ति भाव",
+    "englishName": "Mansik jadta mukti bhava",
+    "translatedName": "Freedom from mental paralysis",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "People who become mentally stuck and unable to perform even simple daily activities may discover and follow a path toward recovery and renewed functioning.",
+    "keywords": ["mental paralysis", "depression", "daily activities", "motivation", "healing", "mental health"]
+  },
+  {
+    "header": "🥇185",
+    "name": "विक्टिम-भाव मुक्ति",
+    "englishName": "Victim bhava mukti",
+    "translatedName": "Freedom from portraying oneself as a victim",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may stop presenting ourselves as victims in order to gain sympathy, validation, or attention.",
+    "keywords": ["victim mentality", "self image", "sympathy", "attention", "emotional maturity"]
+  },
+  {
+    "header": "🥇185",
+    "name": "अकेलापन-विक्टिम मुक्ति भाव",
+    "englishName": "Akelepan victim mukti bhava",
+    "translatedName": "Freedom from using loneliness as a victim identity",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may avoid presenting ourselves as victims simply because we live alone, and instead develop inner strength and resilience.",
+    "keywords": ["loneliness", "victim mentality", "living alone", "self reliance", "emotional strength"]
+  },
+  {
+    "header": "🥇185",
+    "name": "संवेदनशील जाँच भाव",
+    "englishName": "Samvedansheel jaanch bhava",
+    "translatedName": "Compassionate investigations",
+    "audience": "authorities",
+    "date": "2026-06-28",
+    "description": "People affected by an incident may be treated respectfully during investigations and not subjected to unnecessary harassment.",
+    "keywords": ["investigation", "justice", "harassment", "victims", "compassion"]
+  },
+  {
+    "header": "🥇185",
+    "name": "निर्दोष मुक्ति भाव",
+    "englishName": "Nirdosh mukti bhava",
+    "translatedName": "Freedom for the innocent",
+    "audience": "society",
+    "date": "2026-06-28",
+    "description": "Innocent people may be identified fairly and released from imprisonment without unnecessary delay.",
+    "keywords": ["innocent", "justice", "prison", "release", "law"]
+  },
+  {
+    "header": "🥇185",
+    "name": "गुमशुदा वापसी भाव",
+    "englishName": "Gumshuda wapsi bhava",
+    "translatedName": "Return of missing people",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "Missing people may safely return to their homes and loved ones.",
+    "keywords": ["missing people", "return home", "family", "reunion"]
+  },
+  {
+    "header": "🥇185",
+    "name": "तर्क-विजय मुक्ति भाव",
+    "englishName": "Tark vijay mukti bhava",
+    "translatedName": "Freedom from the need to prove oneself right",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may let go of the constant need to prove ourselves right and instead remain open to learning and understanding.",
+    "keywords": ["ego", "arguments", "communication", "being right", "humility"]
+  },
+  {
+    "header": "🥇185",
+    "name": "उपस्थिति भाव",
+    "englishName": "Upasthiti bhava",
+    "translatedName": "Compassionate presence",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "When someone shares their struggles with us, we may offer understanding, presence, and compassionate listening before offering solutions.",
+    "keywords": ["presence", "listening", "compassion", "empathy", "support"]
+  },
+  {
+    "header": "🥇185",
+    "name": "श्रद्धापूर्ण जिज्ञासा भाव",
+    "englishName": "Shraddhapurn jigyasa bhava",
+    "translatedName": "Respectful inquiry",
+    "audience": "students",
+    "date": "2026-06-28",
+    "description": "People may avoid excessive questioning driven by doubt or argument, and instead approach teachers with sincerity, trust, and openness to transformation.",
+    "keywords": ["teacher", "questions", "faith", "learning", "students", "respect"]
+  },
+  {
+    "header": "🥇185",
+    "name": "मार्गदर्शन-मनन भाव",
+    "englishName": "Margdarshan manan bhava",
+    "translatedName": "Reflecting on spiritual guidance",
+    "audience": "students",
+    "date": "2026-06-28",
+    "description": "When a spiritual teacher offers guidance, we may contemplate it deeply rather than reacting with immediate resistance.",
+    "keywords": ["Guru", "teacher", "guidance", "reflection", "learning", "spirituality"]
+  },
+  {
+    "header": "🥇185",
+    "name": "तांत्रिक-प्रभाव सुरक्षा भाव",
+    "englishName": "Tantrik prabhav suraksha bhava",
+    "translatedName": "Protection from occult influences",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may remain protected from any harmful occult influence transmitted through food, drink, or other means.",
+    "keywords": ["tantra", "occult", "food", "drink", "protection", "energy"]
+  },
+  {
+    "header": "🥇185",
+    "name": "भिक्षा-मुक्ति भाव",
+    "englishName": "Bhiksha mukti bhava",
+    "translatedName": "Freedom from begging",
+    "audience": "society",
+    "date": "2026-06-28",
+    "description": "Begging may gradually disappear as people gain dignity, livelihood, and self-reliance.",
+    "keywords": ["begging", "poverty", "livelihood", "dignity", "society"]
+  },
+  {
+    "header": "🥇185",
+    "name": "जबरदस्ती-कर्म जागरूकता भाव",
+    "englishName": "Jabardasti karma jagrukta bhava",
+    "translatedName": "Awareness of karmic consequences of coercion",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may understand that forcing others against their will or making them fulfill our emotional demands creates karmic consequences.",
+    "keywords": ["karma", "coercion", "manipulation", "free will", "relationships"]
+  },
+  {
+    "header": "🥇185",
+    "name": "झूठे आत्महत्या-नाटक मुक्ति भाव",
+    "englishName": "Jhoothe aatmahatya natak mukti bhava",
+    "translatedName": "Freedom from fake suicide threats",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "People may avoid pretending to harm themselves or making false suicide threats in order to influence or manipulate others.",
+    "keywords": ["suicide threat", "manipulation", "emotional blackmail", "honesty", "mental health"]
+  },
+  {
+    "header": "🥇185",
+    "name": "स्वास्थ्य-स्वावलंबन भाव",
+    "englishName": "Swasthya swavalamban bhava",
+    "translatedName": "Independence in managing one's health",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may become confident in understanding and managing our own healthcare instead of depending on someone else's presence for reassurance.",
+    "keywords": ["health", "independence", "doctor", "confidence", "self reliance"]
+  },
+  {
+    "header": "🥇185",
+    "name": "रात्रि-विश्राम सम्मान भाव",
+    "englishName": "Ratri vishram samman bhava",
+    "translatedName": "Respecting others' rest",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may avoid making late-night calls unless there is a genuine emergency, respecting others' rest and personal time.",
+    "keywords": ["late night calls", "boundaries", "respect", "communication"]
+  },
+  {
+    "header": "🥇185",
+    "name": "भाव-प्रवाह भाव",
+    "englishName": "Bhav pravah bhava",
+    "translatedName": "Healthy emotional release",
+    "audience": "women",
+    "date": "2026-06-28",
+    "description": "Women may safely recognize, express, and release emotions that have been suppressed within them.",
+    "keywords": ["women", "emotions", "emotional release", "healing", "mental health"]
+  },
+  {
+    "header": "🥇185",
+    "name": "सम्मानपूर्ण विराम भाव",
+    "englishName": "Sammanpurn viram bhava",
+    "translatedName": "Gracefully stepping aside",
+    "audience": "men",
+    "date": "2026-06-28",
+    "description": "If our female partner becomes interested in another man, we may peacefully step aside with dignity rather than creating conflict.",
+    "keywords": ["relationships", "acceptance", "detachment", "dignity", "men"]
+  },
+  {
+    "header": "🥇185",
+    "name": "त्वरित रिफंड भाव",
+    "englishName": "Tvarit refund bhava",
+    "translatedName": "Quick and fair refunds",
+    "audience": "businesses",
+    "date": "2026-06-28",
+    "description": "Businesses may process refunds fairly, transparently, and without unnecessary delays or inconvenience.",
+    "keywords": ["refund", "consumer rights", "business", "fairness", "customer service"]
+  },
+  {
+    "header": "🥇185",
+    "name": "दूसरों की संपत्ति सम्मान भाव",
+    "englishName": "Dusron ki sampatti samman bhava",
+    "translatedName": "Respecting others' property",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "We may never damage, misuse, or take someone else's belongings in order to complete our own work.",
+    "keywords": ["property", "honesty", "ethics", "respect", "integrity"]
+  },
+  {
+    "header": "🥇185",
+    "name": "गार्जियन-निर्भार भाव",
+    "englishName": "Guardian nirbhar bhava",
+    "translatedName": "Freedom from unnecessary concern as a guardian",
+    "audience": "married men",
+    "date": "2026-06-28",
+    "description": "If a single woman lists a married man as her guardian where appropriate, he may remain free from unnecessary worry or burden because of it.",
+    "keywords": ["guardian", "married man", "responsibility", "concern"]
+  },
+  {
+    "header": "🥇185",
+    "name": "स्कैमर-उद्घाटन भाव",
+    "englishName": "Scammer udghatan bhava",
+    "translatedName": "Exposure of scammers",
+    "audience": "society",
+    "date": "2026-06-28",
+    "description": "Scammers may be exposed quickly and brought to justice.",
+    "keywords": ["scam", "fraud", "crime", "justice", "security"]
+  },
+  {
+    "header": "🥇185",
+    "name": "नशा-तस्करी समाप्ति भाव",
+    "englishName": "Nasha taskari samapti bhava",
+    "translatedName": "End of drug smuggling",
+    "audience": "society",
+    "date": "2026-06-28",
+    "description": "Drug smugglers may be identified, stopped, and brought to justice.",
+    "keywords": ["drug smuggling", "crime", "justice", "drugs", "society"]
+  },
+  {
+    "header": "🥇185",
+    "name": "निर्बाध मार्ग भाव",
+    "englishName": "Nirbadh marg bhava",
+    "translatedName": "Keeping public roads unobstructed",
+    "audience": "society",
+    "date": "2026-06-28",
+    "description": "Religious and public events may be organized without blocking roads or causing unnecessary inconvenience to others.",
+    "keywords": ["roads", "traffic", "religious events", "public convenience", "society"]
+  },
+  {
+    "header": "🥇185",
+    "name": "देखभाल साथी भाव",
+    "englishName": "Dekhbhal saathi bhava",
+    "translatedName": "Supportive caregiver companionship",
+    "audience": "people living alone",
+    "date": "2026-06-28",
+    "description": "People who live alone and genuinely require care may have a trustworthy companion or caregiver available when needed.",
+    "keywords": ["caregiver", "living alone", "support", "companionship", "elder care"]
+  },
+  {
+    "header": "🥇185",
+    "name": "मृत्यु-मुक्ति उत्सव भाव",
+    "englishName": "Mrityu mukti utsav bhava",
+    "translatedName": "Honoring death as liberation",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "Death may be understood as a transition toward freedom, while birthdays may inspire gratitude, awareness, and meaningful living rather than unnecessary display.",
+    "keywords": ["death", "birthday", "liberation", "celebration", "spirituality", "mortality"]
+  },
+  {
+    "header": "🥇185",
+    "name": "डिलीट संदेश चिंता-मुक्ति भाव",
+    "englishName": "Delete sandesh chinta mukti bhava",
+    "translatedName": "Freedom from worrying about deleted messages",
+    "audience": "for all",
+    "date": "2026-06-28",
+    "description": "If someone deletes a message before we read it, we may remain peaceful instead of assuming it contained something negative.",
+    "keywords": ["deleted message", "overthinking", "anxiety", "communication", "peace of mind"]
+  },
+  {
     "header": "🥇184",
     "name": "ईर्ष्या-मुक्ति भाव",
     "englishName": "Irshya mukti bhava",
