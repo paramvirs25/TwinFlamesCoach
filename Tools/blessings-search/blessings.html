@@ -53,6 +53,7 @@
   let allBlessings = [];
   let currentFiltered = [];
   let isHeaderSearch = false;
+  let searchTimeout;
 
   const amounts = ['1k', '11k', '21k', '31k', '41k', '51k', '61k', '71k', '81k', '91k'];
 
@@ -132,7 +133,13 @@
     renderBlessings(allBlessings);
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
-      renderBlessings(allBlessings, e.target.value.toLowerCase());
+      clearTimeout(searchTimeout);
+
+      const searchText = e.target.value.toLowerCase();
+
+      searchTimeout = setTimeout(() => {
+        renderBlessings(allBlessings, searchText);
+      }, 350); // wait 350ms after user stops typing
     });
 
     document.getElementById('copyAllNamesBtn').addEventListener('click', () => {
