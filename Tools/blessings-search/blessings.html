@@ -43,7 +43,10 @@
 
 <div class="filters">
   <input type="text" id="searchInput" placeholder="Search blessings..." />
-  <button id="copyAllNamesBtn">📋 Copy All Blessing Names</button>
+  <div style="display:flex; gap:10px; margin-top:8px;">
+      <button id="copyAllNamesBtn" title="Copy all blessing names">📋</button>
+      <button id="scrollSelectedBtn" title="Scroll to last selected">🎯</button>
+  </div>
   <div class="count-summary" id="countSummary"></div>
 </div>
 
@@ -55,6 +58,8 @@
   let isHeaderSearch = false;
   let searchTimeout;
   let selectedCard = null;
+  let selectedBlessingName = localStorage.getItem('selectedBlessingName') || null;
+  let cssHighlight = 'promobox-container';
 
   const amounts = ['1k', '11k', '21k', '31k', '41k', '51k', '61k', '71k', '81k', '91k'];
 
@@ -69,6 +74,15 @@
     }
   }
 
+  function scrollToSelected() {
+    if (!selectedCard) return;
+
+    selectedCard.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
   function copyToClipboard(text) {
     navigator.clipboard.writeText(text);
   }
@@ -77,13 +91,16 @@
     copyToClipboard(`${name}\n\n${description}`);
   }
 
-  function highlightBlessing(card) {
+  function highlightBlessing(card, blessingName) {
     if (selectedCard) {
-      selectedCard.classList.remove('contentbox');
+      selectedCard.classList.remove(cssHighlight);
     }
 
-    card.classList.add('contentbox');
+    card.classList.add(cssHighlight);
     selectedCard = card;
+
+    selectedBlessingName = blessingName;
+    localStorage.setItem('selectedBlessingName', blessingName);
   }
 
   function updateCountDisplay() {
@@ -127,7 +144,7 @@
     currentFiltered.forEach(b => {
       const card = document.createElement('div');
       card.className = 'blessing-card';
-      card.onclick = () => highlightBlessing(card);
+      card.onclick = () => highlightBlessing(card, b.name);
 
       card.innerHTML = `
         <div class="blessing-name" title="Click to copy name" onclick="copyToClipboard('${b.name.replace(/'/g, "\\'")}')">
@@ -146,6 +163,11 @@
         <div style="margin-top: 0.5rem;">${b.description}</div>
       `;
 
+      if (b.name === selectedBlessingName) {
+        card.classList.add(cssHighlight);
+        selectedCard = card;
+      }
+
       blessingList.appendChild(card);
     });
 
@@ -155,6 +177,8 @@
   document.addEventListener('DOMContentLoaded', async () => {
     allBlessings = await fetchBlessings();
     renderBlessings(allBlessings);
+
+    document.getElementById('scrollSelectedBtn').addEventListener('click', scrollToSelected);
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
