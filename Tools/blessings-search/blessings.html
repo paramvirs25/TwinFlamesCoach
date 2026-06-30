@@ -54,6 +54,7 @@
   let currentFiltered = [];
   let isHeaderSearch = false;
   let searchTimeout;
+  let selectedCard = null;
 
   const amounts = ['1k', '11k', '21k', '31k', '41k', '51k', '61k', '71k', '81k', '91k'];
 
@@ -74,6 +75,15 @@
 
   function copyBlessing(name, description) {
     copyToClipboard(`${name}\n\n${description}`);
+  }
+
+  function highlightBlessing(card) {
+    if (selectedCard) {
+      selectedCard.classList.remove('contentbox');
+    }
+
+    card.classList.add('contentbox');
+    selectedCard = card;
   }
 
   function updateCountDisplay() {
@@ -117,6 +127,7 @@
     currentFiltered.forEach(b => {
       const card = document.createElement('div');
       card.className = 'blessing-card';
+      card.onclick = () => highlightBlessing(card);
 
       card.innerHTML = `
         <div class="blessing-name" title="Click to copy name" onclick="copyToClipboard('${b.name.replace(/'/g, "\\'")}')">
