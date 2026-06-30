@@ -72,6 +72,10 @@
     navigator.clipboard.writeText(text);
   }
 
+  function copyBlessing(name, description) {
+    copyToClipboard(`${name}\n\n${description}`);
+  }
+
   function updateCountDisplay() {
     const countDiv = document.getElementById('countSummary');
     countDiv.textContent = `Showing ${currentFiltered.length} of ${allBlessings.length} blessings`;
@@ -118,7 +122,16 @@
         <div class="blessing-name" title="Click to copy name" onclick="copyToClipboard('${b.name.replace(/'/g, "\\'")}')">
           <strong>${b.name}</strong>
         </div>
-        <div><strong>${b.header}</strong> | 🗓️ ${b.date} | 👥 ${b.audience}</div>
+        <div>
+          <strong>${b.header}</strong> |
+          🗓️ ${b.date} |
+          👥 ${b.audience}
+          <span
+            title="Copy name & description"
+            onclick="copyBlessing('${b.name.replace(/'/g, "\\'")}', '${b.description.replace(/'/g, "\\'")}')"
+            style="cursor:pointer; margin-left:8px;"
+          >📋</span>
+        </div>
         <div style="margin-top: 0.5rem;">${b.description}</div>
       `;
 
@@ -178,4 +191,5 @@
   });
 
   window.copyToClipboard = copyToClipboard;
+  window.copyBlessing = copyBlessing;
 </script>
