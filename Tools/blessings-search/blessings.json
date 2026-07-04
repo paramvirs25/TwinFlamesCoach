@@ -1,5 +1,185 @@
 [
   {
+    "header": "🥇189",
+    "name": "परिवार देखभाल भाव",
+    "englishName": "Parivar dekhbhal bhava",
+    "translatedName": "Caring for a family member who is unable to manage",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "When a member of our household is unable to manage their work or daily needs, may we take care of them and arrange everything needed for their care instead of going out for leisure.",
+    "keywords": ["family member", "care", "unable to work", "caregiving", "responsibility", "support"]
+  },
+  {
+    "header": "🥇189",
+    "name": "दूसरे क्या सोचेंगे घबराहट मुक्ति भाव",
+    "englishName": "Dusre kya sochenge ghabrahat mukti bhava",
+    "translatedName": "Gradual freedom from anxiety about what others think of us",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "May the anxiety caused by wondering what another person might be thinking about us reduce by at least 5%, or as appropriate, and keep decreasing by around 5% each month until only a minimal level of around 5% remains.",
+    "keywords": ["what others think", "anxiety", "ghabrahat", "overthinking", "gradual reduction", "monthly reduction"]
+  },
+  {
+    "header": "🥇189",
+    "name": "रितु-परम बाहरी ऊर्जा अप्रभाव भाव",
+    "englishName": "Ritu Param bahari urja aprabhav bhava",
+    "translatedName": "Ritu and Param's relationship remaining unaffected by others' energy",
+    "audience": "for Ritu and Param",
+    "date": "2026-07-03",
+    "description": "May the relationship of the twin flame couple Ritu and Param remain unaffected or minimally affected by the energy of other people and those around them. May any effect remain within around 15%, or as appropriate, and keep decreasing by around 1% each month until it no longer affects their relationship.",
+    "keywords": ["Ritu", "Param", "twin flame", "relationship", "other people's energy", "external energy", "monthly reduction"]
+  },
+  {
+    "header": "🥇189",
+    "name": "ट्विन फ्लेम बाहरी ऊर्जा अप्रभाव भाव",
+    "englishName": "Twin flame bahari urja aprabhav bhava",
+    "translatedName": "Twin flame relationships remaining unaffected by others' energy",
+    "audience": "for all twin flame couples",
+    "date": "2026-07-03",
+    "description": "May all twin flame relationships remain unaffected or minimally affected by the energy of other people and those around them. May any effect remain within around 25%, or as appropriate, and keep decreasing by around 1% each month until it no longer affects their relationship.",
+    "keywords": ["twin flames", "relationship", "other people's energy", "external energy", "sensitivity", "monthly reduction"]
+  },
+  {
+    "header": "🥇189",
+    "name": "चंद्र संवेदनशीलता संतुलन भाव",
+    "englishName": "Chandra samvedanshilta santulan bhava",
+    "translatedName": "Gradual balancing of emotional sensitivity during full moon and new moon",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "From now onwards, may the increase in emotional sensitivity during the full moon or new moon be around 5% less, or as appropriate, and keep reducing by around 5% every two months until the increase remains at a minimal level of around 5% above normal.",
+    "keywords": ["full moon", "new moon", "emotional sensitivity", "moon cycle", "gradual reduction", "two months"]
+  },
+  {
+    "header": "🥇189",
+    "name": "चंद्र संवेदनशीलता जागरूकता भाव",
+    "englishName": "Chandra samvedanshilta jagrukta bhava",
+    "translatedName": "Awareness of full moon, new moon and emotional sensitivity",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "May we remain aware of the full moon and new moon and also remain aware of our emotional sensitivity during these periods.",
+    "keywords": ["full moon", "new moon", "awareness", "emotional sensitivity", "moon cycle"]
+  },
+  {
+    "header": "🥇189",
+    "name": "रितु नज़र प्रभाव मुक्ति भाव",
+    "englishName": "Ritu nazar prabhav mukti bhava",
+    "translatedName": "Gradual freedom for Ritu from the effects of nazar",
+    "audience": "for Ritu",
+    "date": "2026-07-03",
+    "description": "From now onwards, may the effect of people's nazar on Ritu reduce by around 5%, or through divine grace as appropriate, and keep reducing by around 6% every two months until nazar no longer affects her at all.",
+    "keywords": ["Ritu", "nazar", "evil eye", "effect", "gradual reduction", "protection", "two months"]
+  },
+  {
+    "header": "🥇189",
+    "name": "रितु चक्र तीव्रता शमन भाव",
+    "englishName": "Ritu chakra teevrata shaman bhava",
+    "translatedName": "Gradual reduction in the intensity of Ritu's hyperactivity and depression cycles",
+    "audience": "for Ritu",
+    "date": "2026-07-03",
+    "description": "For the periodic cycles of hyperactivity and depression that Ritu experiences, may the maximum intensity of each cycle keep reducing by around 5% with every cycle, or as appropriate.",
+    "keywords": ["Ritu", "hyperactivity", "depression", "cycle", "intensity", "gradual reduction", "emotional state"]
+  },
+  {
+    "header": "🥇189",
+    "name": "ट्विन फ्लेम अप्रिय भाव संवेदनशीलता शमन भाव",
+    "englishName": "Twin flame apriya bhav samvedanshilta shaman bhava",
+    "translatedName": "Reduced sensitivity of twin flames to unpleasant emotions",
+    "audience": "for all twin flames",
+    "date": "2026-07-03",
+    "description": "May the sensitivity of all twin flames to unpleasant emotions such as shame, guilt, apathy, grief, fear, anxiety, desire, anger and pride be reduced by at least 15%, or as appropriate.",
+    "keywords": ["twin flames", "emotional sensitivity", "shame", "guilt", "apathy", "grief", "fear", "anxiety", "desire", "anger", "pride"]
+  },
+  {
+    "header": "🥇189",
+    "name": "रितु-परम अप्रिय भाव संवेदनशीलता शमन भाव",
+    "englishName": "Ritu Param apriya bhav samvedanshilta shaman bhava",
+    "translatedName": "Gradual reduction in Ritu and Param's sensitivity to unpleasant emotions",
+    "audience": "for Ritu and Param",
+    "date": "2026-07-03",
+    "description": "May the sensitivity of Param and Ritu to unpleasant emotions such as shame, guilt, apathy, grief, fear, anxiety, desire, anger and pride be reduced by at least 10%, or as appropriate, and keep reducing by around 5% every three months until these emotions no longer affect them.",
+    "keywords": ["Ritu", "Param", "emotional sensitivity", "shame", "guilt", "apathy", "grief", "fear", "anxiety", "desire", "anger", "pride", "gradual reduction"]
+  },
+  {
+    "header": "🥇189",
+    "name": "शीघ्र रोका-सम्बन्ध भाव",
+    "englishName": "Sheeghra roka sambandh bhava",
+    "translatedName": "Early engagement when appropriate",
+    "audience": "for girls as appropriate",
+    "date": "2026-07-03",
+    "description": "If appropriate, may a girl's roka or engagement happen between the ages of 16 and 18 so that she may feel more settled and less distracted.",
+    "keywords": ["girl", "roka", "engagement", "age 16", "age 18", "relationship", "distraction"]
+  },
+  {
+    "header": "🥇189",
+    "name": "शांति हेतु क्षमा भाव",
+    "englishName": "Shanti hetu kshama bhava",
+    "translatedName": "Being able to say sorry to defuse a situation",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "Even when we are not wrong, may we be able to say sorry when needed to defuse a situation and restore peace, such as Ritu being able to say sorry to her mother or to Param.",
+    "keywords": ["sorry", "apology", "defuse situation", "peace", "conflict", "Ritu", "Param"]
+  },
+  {
+    "header": "🥇189",
+    "name": "एक समय एक कार्य भाव",
+    "englishName": "Ek samay ek karya bhava",
+    "translatedName": "Doing one thing at a time",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "May we not get involved in many things at the same time and instead focus on one task at a time.",
+    "keywords": ["one task at a time", "focus", "multiple tasks", "work", "attention", "simplicity"]
+  },
+  {
+    "header": "🥇189",
+    "name": "संदेश पूर्व-अति-विचार मुक्ति भाव",
+    "englishName": "Sandesh purva ati vichar mukti bhava",
+    "translatedName": "Freedom from overthinking before reading a difficult person's message",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "Before reading or listening to a difficult person's message, may we not overanalyse or overthink what the message might contain.",
+    "keywords": ["difficult person", "message", "overthinking", "overanalysis", "anxiety", "anticipation"]
+  },
+  {
+    "header": "🥇189",
+    "name": "उत्तर-विलंब चिंता मुक्ति भाव",
+    "englishName": "Uttar vilamb chinta mukti bhava",
+    "translatedName": "Freedom from worrying that a demanding person will be upset by a delayed reply",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "If we worry that a demanding person will become upset because we have not replied to their message, may we be free from this worry.",
+    "keywords": ["demanding person", "reply", "delayed reply", "message", "worry", "anxiety", "freedom"]
+  },
+  {
+    "header": "🥇189",
+    "name": "तत्काल उत्तर अपेक्षा मुक्ति भाव",
+    "englishName": "Tatkal uttar apeksha mukti bhava",
+    "translatedName": "Freedom from expecting immediate replies",
+    "audience": "for demanding people",
+    "date": "2026-07-03",
+    "description": "May demanding people understand that no one is obligated to reply to their messages immediately.",
+    "keywords": ["demanding people", "immediate reply", "messages", "expectation", "patience", "boundaries"]
+  },
+  {
+    "header": "🥇189",
+    "name": "संदेश आपातकाल चिंता मुक्ति भाव",
+    "englishName": "Sandesh aapatkal chinta mukti bhava",
+    "translatedName": "Freedom from assuming that a demanding person's message may be an emergency",
+    "audience": "for all",
+    "date": "2026-07-03",
+    "description": "May we not worry that a message from a demanding person might be an emergency, understanding that if there is a genuine emergency, they can call directly instead of only leaving a message.",
+    "keywords": ["demanding person", "message", "emergency", "worry", "call", "anxiety", "freedom"]
+  },
+  {
+    "header": "🥇189",
+    "name": "डिमांडिंग धैर्य जागरण भाव",
+    "englishName": "Demanding dhairya jagran bhava",
+    "translatedName": "Awakening patience within demanding people",
+    "audience": "for demanding people",
+    "date": "2026-07-03",
+    "description": "May patience awaken within demanding people, and may MahaGuru Ji firmly awaken and establish patience within them.",
+    "keywords": ["demanding people", "patience", "awakening", "MahaGuru", "dhairya", "behaviour"]
+  },
+  {
     "header": "🥇188",
     "name": "पालतू प्रेम-भ्रम मुक्ति भाव",
     "englishName": "Paltu prem bhram mukti bhava",
