@@ -1,5 +1,365 @@
 [
   {
+    "header": "🥇187",
+    "name": "कार्य-चरण स्पष्टता भाव",
+    "englishName": "Karya charan spashtata bhava",
+    "translatedName": "Clarity of steps before doing a task",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "When we do not know the steps needed to complete a task, we may not become disturbed. Instead, we may find out how the task is done, understand its steps, and then complete it.",
+    "keywords": ["task", "steps", "clarity", "problem solving", "learning", "completion"]
+  },
+  {
+    "header": "🥇187",
+    "name": "उज्ज्वल हृदय भाव",
+    "englishName": "Ujjwal hriday bhava",
+    "translatedName": "A heart bright like a mirror",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "May our hearts become pure, clear, and radiant like a shining mirror.",
+    "keywords": ["heart", "purity", "radiance", "mirror", "spirituality"]
+  },
+  {
+    "header": "🥇187",
+    "name": "अमृत-वर्षा वाणी भाव",
+    "englishName": "Amrit varsha vani bhava",
+    "translatedName": "Nectar flowing through the words of Param and Ritu",
+    "audience": "for Param and Ritu",
+    "date": "2026-07-01",
+    "description": "May nectar-like words flow from the mouths of Param and Ritu, bringing sweetness, healing, and upliftment.",
+    "keywords": ["Param", "Ritu", "speech", "amrit", "nectar", "healing", "upliftment"]
+  },
+  {
+    "header": "🥇187",
+    "name": "समदृष्टि भाव",
+    "englishName": "Samdrishti bhava",
+    "translatedName": "Equal vision toward rich and poor",
+    "audience": "for Param and Ritu",
+    "date": "2026-07-01",
+    "description": "For Param and Ritu, rich and poor people may be seen and treated equally.",
+    "keywords": ["Param", "Ritu", "rich", "poor", "equality", "equal vision"]
+  },
+  {
+    "header": "🥇187",
+    "name": "आत्म-स्वरूप निमग्न भाव",
+    "englishName": "Aatma swaroop nimagna bhava",
+    "translatedName": "Remaining immersed in the true Self",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may increasingly remain immersed in our true Self and established in awareness of our spiritual nature.",
+    "keywords": ["true self", "aatma", "self realization", "awareness", "spirituality"]
+  },
+  {
+    "header": "🥇187",
+    "name": "महागुरु आकर्षण भाव",
+    "englishName": "Mahaguru akarshan bhava",
+    "translatedName": "Attention drawn toward MahaGuru",
+    "audience": "for Ritu and devotees",
+    "date": "2026-07-01",
+    "description": "The attention of Ritu and other devotees may be drawn toward MahaGuru, and they may move away from the company of irreligious and harmful people.",
+    "keywords": ["Ritu", "devotees", "MahaGuru", "attention", "satsang", "company", "spiritual path"]
+  },
+  {
+    "header": "🥇187",
+    "name": "सहायता-एहसान भाव",
+    "englishName": "Sahayata ehsaan bhava",
+    "translatedName": "Receiving help as a favour, not a right",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "When we receive help from a close person or anyone else, we may receive it as a favour rather than as our right. We may understand that acting entitled can irritate the person who is helping us.",
+    "keywords": ["help", "favour", "entitlement", "gratitude", "close ones", "support"]
+  },
+  {
+    "header": "🥇187",
+    "name": "वाइन-दवाई मिश्रण मुक्ति भाव",
+    "englishName": "Wine dawai mishran mukti bhava",
+    "translatedName": "Not mixing wine with medication",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may not mix wine with our medicines.",
+    "keywords": ["wine", "medicine", "medication", "mixing", "health", "safety"]
+  },
+  {
+    "header": "🥇187",
+    "name": "ना-स्वीकार भाव",
+    "englishName": "No sveekar bhava",
+    "translatedName": "Accepting a close person's refusal without complaining",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "When we give a task or responsibility to someone close to us and they say no, we may accept their answer and think about the next option rather than complaining about them behind their back.",
+    "keywords": ["no", "refusal", "acceptance", "complaining", "close person", "next option"]
+  },
+  {
+    "header": "🥇187",
+    "name": "स्वयं संतान-पालन भाव",
+    "englishName": "Swayam santan palan bhava",
+    "translatedName": "Raising our own children",
+    "audience": "parents",
+    "date": "2026-07-01",
+    "description": "We may raise and care for our own children rather than routinely leaving them in the care of crèches, grandparents, or other people.",
+    "keywords": ["children", "parents", "parenting", "childcare", "creche", "grandparents"]
+  },
+  {
+    "header": "🥇187",
+    "name": "चौबीस घंटे उपलब्धता अपेक्षा मुक्ति भाव",
+    "englishName": "Chaubis ghante uplabdhata apeksha mukti bhava",
+    "translatedName": "Freedom from expecting supporters to be available 24 hours",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may not expect people who help or support us to remain available to answer our calls twenty-four hours a day.",
+    "keywords": ["support", "help", "24 hours", "calls", "availability", "expectations", "boundaries"]
+  },
+  {
+    "header": "🥇187",
+    "name": "संतान-साथ भाव",
+    "englishName": "Santan saath bhava",
+    "translatedName": "Not leaving children at someone else's home",
+    "audience": "parents",
+    "date": "2026-07-01",
+    "description": "We may not leave our children at someone else's home and go away.",
+    "keywords": ["children", "parents", "home", "childcare", "responsibility"]
+  },
+  {
+    "header": "🥇187",
+    "name": "शांति आभूषण भाव",
+    "englishName": "Shanti abhushan bhava",
+    "translatedName": "Peace as our ornament",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "May peace become our natural ornament and remain visible through our presence, words, and actions.",
+    "keywords": ["peace", "shanti", "ornament", "presence", "inner peace"]
+  },
+  {
+    "header": "🥇187",
+    "name": "गुरु-समर्पण समाधान भाव",
+    "englishName": "Guru samarpan samadhan bhava",
+    "translatedName": "Allowing the Guru to guide and resolve our issues",
+    "audience": "seekers",
+    "date": "2026-07-01",
+    "description": "We may understand that when we surrender completely to our Guru, our issues may come under the Guru's guidance and be handled or resolved accordingly.",
+    "keywords": ["Guru", "surrender", "guidance", "issues", "solution", "faith"]
+  },
+  {
+    "header": "🥇187",
+    "name": "पालतू-साथ भाव",
+    "englishName": "Paltu saath bhava",
+    "translatedName": "Taking our pet along with us",
+    "audience": "pet owners",
+    "date": "2026-07-01",
+    "description": "Wherever possible, we may take our pet with us when we travel instead of placing its care upon others.",
+    "keywords": ["pet", "dog", "travel", "pet owner", "responsibility", "Ritu", "Delhi"]
+  },
+  {
+    "header": "🥇187",
+    "name": "पालतू-जिम्मेदारी भाव",
+    "englishName": "Paltu jimmedari bhava",
+    "translatedName": "Taking responsibility for one's own pet",
+    "audience": "pet owners",
+    "date": "2026-07-01",
+    "description": "Pet owners may take responsibility for the care, needs, and arrangements of their own pets.",
+    "keywords": ["pet", "dog", "responsibility", "pet care", "ownership"]
+  },
+  {
+    "header": "🥇187",
+    "name": "दिल्ली जाँच आवश्यकता मुक्ति भाव",
+    "englishName": "Delhi jaanch avashyakta mukti bhava",
+    "translatedName": "Freedom from the need for a Delhi checkup",
+    "audience": "for Ritu",
+    "date": "2026-07-01",
+    "description": "Ritu may understand that she does not need to travel to Delhi for a medical checkup.",
+    "keywords": ["Ritu", "Delhi", "checkup", "travel", "medical checkup"]
+  },
+  {
+    "header": "🥇187",
+    "name": "स्वभाव-दर्शन भाव",
+    "englishName": "Swabhav darshan bhava",
+    "translatedName": "Seeing a person's patterns beyond their beauty",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may see and understand a person's behavioural patterns rather than seeing only their physical beauty.",
+    "keywords": ["patterns", "beauty", "behaviour", "discernment", "relationships", "awareness"]
+  },
+  {
+    "header": "🥇187",
+    "name": "देह-बुद्धि मुक्ति भाव",
+    "englishName": "Deh buddhi mukti bhava",
+    "translatedName": "Freedom from the control of body-consciousness",
+    "audience": "for Ritu and ready souls",
+    "date": "2026-07-01",
+    "description": "Ritu and all other souls who are ready may move beyond the control of body-consciousness.",
+    "keywords": ["Ritu", "deh buddhi", "body consciousness", "freedom", "spiritual growth"]
+  },
+  {
+    "header": "🥇187",
+    "name": "अति-निर्देश जागरूकता भाव",
+    "englishName": "Ati nirdesh jagrukta bhava",
+    "translatedName": "Awareness of the burden of too many instructions",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "When we give someone many instructions, we may understand that following all of them can become difficult and burdensome for that person.",
+    "keywords": ["instructions", "too many instructions", "burden", "understanding", "dog care", "Ritu"]
+  },
+  {
+    "header": "🥇187",
+    "name": "प्रेमपूर्ण ना-स्वीकार भाव",
+    "englishName": "Prempurn no sveekar bhava",
+    "translatedName": "Lovingly accepting another person's no",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "When someone says no to our request, we may understand that it may not be possible for them for reasons of their own, and we may lovingly accept their refusal without complaining.",
+    "keywords": ["no", "refusal", "acceptance", "complaining", "love", "boundaries"]
+  },
+  {
+    "header": "🥇187",
+    "name": "अनित्य आकर्षण मुक्ति भाव",
+    "englishName": "Anitya akarshan mukti bhava",
+    "translatedName": "Freedom from attraction toward impermanent things",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "May the attraction of impermanent objects and experiences not touch or bind us.",
+    "keywords": ["impermanence", "attraction", "detachment", "anitya", "spirituality"]
+  },
+  {
+    "header": "🥇187",
+    "name": "परम तनाव-मुक्ति भाव",
+    "englishName": "Param tanav mukti bhava",
+    "translatedName": "Ritu stops causing stress to Param",
+    "audience": "for Ritu",
+    "date": "2026-07-01",
+    "description": "Ritu may stop causing stress to Param.",
+    "keywords": ["Ritu", "Param", "stress", "relationship", "peace"]
+  },
+  {
+    "header": "🥇187",
+    "name": "अन्य तनाव-मुक्ति भाव",
+    "englishName": "Anya tanav mukti bhava",
+    "translatedName": "Ritu stops causing stress to others",
+    "audience": "for Ritu",
+    "date": "2026-07-01",
+    "description": "Ritu may stop causing stress to other people.",
+    "keywords": ["Ritu", "others", "stress", "behaviour", "peace"]
+  },
+  {
+    "header": "🥇187",
+    "name": "धर्म-संस्थापन भाव",
+    "englishName": "Dharm sansthapan bhava",
+    "translatedName": "Establishment of Dharma and protection of the virtuous",
+    "audience": "for the world",
+    "date": "2026-07-01",
+    "description": "May Dharma be established, harmful forces be destroyed, and virtuous and saintly people be protected.",
+    "keywords": ["Dharma", "establishment", "protection", "saints", "harmful forces", "spirituality"]
+  },
+  {
+    "header": "🥇187",
+    "name": "पाखंड-मुक्ति भाव",
+    "englishName": "Pakhand mukti bhava",
+    "translatedName": "Freedom from hypocrisy",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may become free from hypocrisy and live with greater honesty and alignment between our words, beliefs, and actions.",
+    "keywords": ["hypocrisy", "honesty", "integrity", "authenticity", "freedom"]
+  },
+  {
+    "header": "🥇187",
+    "name": "संत धर्म-संस्थापना भाव",
+    "englishName": "Sant dharm sansthapana bhava",
+    "translatedName": "Saints establishing Dharma through teachings and conduct",
+    "audience": "saints and society",
+    "date": "2026-07-01",
+    "description": "May saints appear and establish Dharma through their teachings, presence, and personal conduct.",
+    "keywords": ["saints", "Dharma", "teachings", "conduct", "spirituality", "guidance"]
+  },
+  {
+    "header": "🥇187",
+    "name": "क्रोध-मुक्ति भाव",
+    "englishName": "Krodh mukti bhava",
+    "translatedName": "Freedom from anger",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may become free from anger.",
+    "keywords": ["anger", "freedom", "peace", "emotions", "healing"]
+  },
+  {
+    "header": "🥇187",
+    "name": "ऐहिक पदार्थ अरुचि भाव",
+    "englishName": "Aihik padarth aruchi bhava",
+    "translatedName": "Disinterest in worldly objects",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may naturally lose excessive interest in worldly and material objects.",
+    "keywords": ["worldly objects", "material things", "disinterest", "detachment", "spirituality"]
+  },
+  {
+    "header": "🥇187",
+    "name": "पालतू-भार मुक्ति भाव",
+    "englishName": "Paltu bhar mukti bhava",
+    "translatedName": "Freedom from having someone else's pet pushed onto us",
+    "audience": "for Param and others",
+    "date": "2026-07-01",
+    "description": "Ritu may not push the responsibility of caring for her dog onto us during her absence.",
+    "keywords": ["Ritu", "dog", "pet", "responsibility", "pressure", "absence"]
+  },
+  {
+    "header": "🥇187",
+    "name": "पालतू-देखभाल कठिनाई बोध भाव",
+    "englishName": "Paltu dekhbhal kathinai bodh bhava",
+    "translatedName": "Understanding the difficulty of caring for Ritu's dog",
+    "audience": "for Ritu",
+    "date": "2026-07-01",
+    "description": "Ritu may understand that handling and caring for her dog is hectic and difficult for us.",
+    "keywords": ["Ritu", "dog", "pet care", "hectic", "difficulty", "understanding"]
+  },
+  {
+    "header": "🥇187",
+    "name": "कठोरता-मुक्ति भाव",
+    "englishName": "Kathorta mukti bhava",
+    "translatedName": "Freedom from harshness",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may become free from harshness in our thoughts, words, behaviour, and interactions.",
+    "keywords": ["harshness", "speech", "behaviour", "gentleness", "freedom"]
+  },
+  {
+    "header": "🥇187",
+    "name": "भय-अनुभव मुक्ति भाव",
+    "englishName": "Bhay anubhav mukti bhava",
+    "translatedName": "Feeling and releasing our fears",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may be able to fully feel our fears and then release them.",
+    "keywords": ["fear", "feelings", "release", "emotional healing", "inner work"]
+  },
+  {
+    "header": "🥇187",
+    "name": "परम-जिम्मेदारी अपेक्षा मुक्ति भाव",
+    "englishName": "Param jimmedari apeksha mukti bhava",
+    "translatedName": "Ritu stops expecting to be Param's responsibility",
+    "audience": "for Ritu",
+    "date": "2026-07-01",
+    "description": "Ritu may stop expecting that she is Param's responsibility.",
+    "keywords": ["Ritu", "Param", "responsibility", "expectations", "dependency"]
+  },
+  {
+    "header": "🥇187",
+    "name": "बड़े निर्णय ईष्ट-मार्गदर्शन भाव",
+    "englishName": "Bade nirnay Ishta margdarshan bhava",
+    "translatedName": "Seeking guidance from one's Ishta Dev before major decisions",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "Before making major decisions, such as travelling far away for a medical checkup, we may seek guidance from our Ishta Dev.",
+    "keywords": ["major decisions", "Ishta Dev", "guidance", "medical checkup", "travel", "Ritu", "Delhi"]
+  },
+  {
+    "header": "🥇187",
+    "name": "आत्महत्या-विचार मुक्ति भाव",
+    "englishName": "Aatmahatya vichar mukti bhava",
+    "translatedName": "Freedom from thoughts of suicide",
+    "audience": "for all",
+    "date": "2026-07-01",
+    "description": "We may not even think about suicide and may remain completely free from suicidal thoughts.",
+    "keywords": ["suicide", "suicidal thoughts", "mental health", "life", "freedom", "healing"]
+  },
+  {
     "header": "🥇186",
     "name": "क्षणिक स्वभाव मुक्ति भाव",
     "englishName": "Kshanik swabhav mukti bhava",
