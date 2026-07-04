@@ -1,5 +1,435 @@
 [
   {
+    "header": "🥇188",
+    "name": "पालतू प्रेम-भ्रम मुक्ति भाव",
+    "englishName": "Paltu prem bhram mukti bhava",
+    "translatedName": "Freedom from the belief that a pet loves us",
+    "audience": "for Ritu and all",
+    "date": "2026-07-02",
+    "description": "Ritu and other souls may understand that a pet does not love them but is mainly concerned with its own survival.",
+    "keywords": ["pet", "love", "survival", "attachment", "understanding", "Ritu"]
+  },
+  {
+    "header": "🥇188",
+    "name": "रितु-परम सहयोग भाव",
+    "englishName": "Ritu Param sahyog bhava",
+    "translatedName": "Jas supporting Param and Ritu in caregiving",
+    "audience": "for Jas",
+    "date": "2026-07-02",
+    "description": "If Param needs to stay with Ritu to take care of her, may Jas support both of them in this.",
+    "keywords": ["Jas", "Param", "Ritu", "care", "support", "staying together"]
+  },
+  {
+    "header": "🥇188",
+    "name": "बाल व्यावसायिक उपचार भाव",
+    "englishName": "Bal vyavsayik upchar bhava",
+    "translatedName": "Professional treatment for a sick child",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "If a child develops vomiting or loose motions, may professional treatment be sought instead of trying hit-and-trial treatments.",
+    "keywords": ["child", "vomiting", "loose motions", "professional treatment", "health", "care"]
+  },
+  {
+    "header": "🥇188",
+    "name": "जस स्वास्थ्य-सहयोग भाव",
+    "englishName": "Jas swasthya sahyog bhava",
+    "translatedName": "Jas joyfully contributing to Ritu's health support",
+    "audience": "for Jas",
+    "date": "2026-07-02",
+    "description": "If Jas has a role in supporting Ritu's health, may she joyfully continue making that contribution.",
+    "keywords": ["Jas", "Ritu", "health", "support", "contribution", "joyfully"]
+  },
+  {
+    "header": "🥇188",
+    "name": "रितु देखभाल सुगमता भाव",
+    "englishName": "Ritu dekhbhal sugamta bhava",
+    "translatedName": "Ease in arranging Ritu's care at Param's home",
+    "audience": "for Param, Ritu and Jas",
+    "date": "2026-07-02",
+    "description": "If Ritu needs to stay at Param's home for her care, may Jas support them and may the arrangement happen smoothly.",
+    "keywords": ["Ritu", "Param", "Jas", "care", "home", "support", "ease"]
+  },
+  {
+    "header": "🥇188",
+    "name": "अकेलापन पीड़ा मुक्ति भाव",
+    "englishName": "Akelapan peeda mukti bhava",
+    "translatedName": "Freedom from the pain of living alone",
+    "audience": "for women living alone",
+    "date": "2026-07-02",
+    "description": "If a woman lives alone, may she be free from the pain of feeling that she is alone or has no one.",
+    "keywords": ["woman", "living alone", "loneliness", "pain", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "चरम उपचार मुक्ति भाव",
+    "englishName": "Charam upchar mukti bhava",
+    "translatedName": "Freedom from extreme treatments such as shock treatment",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May extreme treatments such as shock treatment cease and no longer be recommended to anyone.",
+    "keywords": ["shock treatment", "extreme treatment", "treatment", "healthcare", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "संतान बंधन बोध भाव",
+    "englishName": "Santan bandhan bodh bhava",
+    "translatedName": "Understanding our bond with our child",
+    "audience": "for parents",
+    "date": "2026-07-02",
+    "description": "When we meet our child after a few days and see their happiness, may we understand our bond with them and not leave them with others again.",
+    "keywords": ["child", "parents", "bond", "happiness", "separation", "care"]
+  },
+  {
+    "header": "🥇188",
+    "name": "परम परिस्थिति-शक्ति भाव",
+    "englishName": "Param paristhiti shakti bhava",
+    "translatedName": "Strength for Param to move through changing living arrangements",
+    "audience": "for Param",
+    "date": "2026-07-02",
+    "description": "If Param needs to stay at Ritu's home or Ritu needs to stay at Param's home, may Param be given the strength to move through all these developments.",
+    "keywords": ["Param", "Ritu", "strength", "living arrangements", "change", "care"]
+  },
+  {
+    "header": "🥇188",
+    "name": "एकांत आनंद भाव",
+    "englishName": "Ekant anand bhava",
+    "translatedName": "Living alone as joy and freedom",
+    "audience": "for women living alone",
+    "date": "2026-07-02",
+    "description": "If a woman lives alone, may she understand that living alone can be a matter of joy and enjoyment.",
+    "keywords": ["woman", "living alone", "joy", "enjoyment", "solitude", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "असुर लंका दहन भाव",
+    "englishName": "Asur Lanka dahan bhava",
+    "translatedName": "Fire in the Lanka of the asuras",
+    "audience": "for the world",
+    "date": "2026-07-02",
+    "description": "May the Lanka of the asuras be set ablaze.",
+    "keywords": ["asuras", "Lanka", "fire", "destruction", "spirituality"]
+  },
+  {
+    "header": "🥇188",
+    "name": "कार्य-आय वृद्धि भाव",
+    "englishName": "Karya aay vriddhi bhava",
+    "translatedName": "Growth of Param and Ritu's work and income",
+    "audience": "for Param and Ritu",
+    "date": "2026-07-02",
+    "description": "May the work of Param and Ritu continue to grow, and may their income increase along with it.",
+    "keywords": ["Param", "Ritu", "work", "growth", "income", "prosperity"]
+  },
+  {
+    "header": "🥇188",
+    "name": "अनचाहे आकर्षण सुरक्षा भाव",
+    "englishName": "Anchahe akarshan suraksha bhava",
+    "translatedName": "Protection from unwanted attention",
+    "audience": "for young girls",
+    "date": "2026-07-02",
+    "description": "Young girls may avoid wearing shorts or mini skirts when these bring unwanted attention.",
+    "keywords": ["young girls", "shorts", "mini skirts", "unwanted attention", "safety", "clothing"]
+  },
+  {
+    "header": "🥇188",
+    "name": "महागुरु आशीर्वाद ग्रहण भाव",
+    "englishName": "Mahaguru ashirwad grahan bhava",
+    "translatedName": "Openness to seeking MahaGuru's blessings for life events",
+    "audience": "for Ritu",
+    "date": "2026-07-02",
+    "description": "May Ritu be open to seeking blessings from MahaGuru for all events of her life, including her Hanuman Chalisa class, new treatments for her well-being, or joining a new course with a new teacher.",
+    "keywords": ["Ritu", "MahaGuru", "blessings", "Hanuman Chalisa", "treatment", "course", "guidance"]
+  },
+  {
+    "header": "🥇188",
+    "name": "तनाव में गोली-विचार मुक्ति भाव",
+    "englishName": "Tanav mein goli vichar mukti bhava",
+    "translatedName": "Freedom from thoughts of taking all sleeping pills during stress",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "No matter what happens, we may neither say nor think that when stress becomes too much, we would take all available sleeping pills together.",
+    "keywords": ["stress", "sleeping pills", "suicidal thoughts", "speech", "thoughts", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "आत्महत्या विचार-वाणी लुप्त भाव",
+    "englishName": "Aatmahatya vichar vani lupt bhava",
+    "translatedName": "Disappearance of suicidal thoughts and speech",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May suicidal thoughts, speaking about suicide, and thinking about suicide disappear from this world.",
+    "keywords": ["suicide", "suicidal thoughts", "speech", "world", "freedom", "life"]
+  },
+  {
+    "header": "🥇188",
+    "name": "बाल सहजता भाव",
+    "englishName": "Bal sahajta bhava",
+    "translatedName": "Giving a child time to become comfortable",
+    "audience": "for parents and caregivers",
+    "date": "2026-07-02",
+    "description": "When a child is left at someone else's home, may the child be given some time there to become comfortable.",
+    "keywords": ["child", "home", "comfort", "adjustment", "parents", "caregivers"]
+  },
+  {
+    "header": "🥇188",
+    "name": "महागुरु संवाद-दर्शन बोध भाव",
+    "englishName": "Mahaguru samvad darshan bodh bhava",
+    "translatedName": "Understanding the grace of conversation and darshan with MahaGuru",
+    "audience": "for Ritu",
+    "date": "2026-07-02",
+    "description": "During July 2026, may Ritu understand that conversation with MahaGuru destroys all sins and that the sacred darshan of MahaGuru itself is yogic sadhana.",
+    "keywords": ["Ritu", "MahaGuru", "conversation", "darshan", "sins", "yoga", "sadhana"]
+  },
+  {
+    "header": "🥇188",
+    "name": "महागुरु परब्रह्म बोध भाव",
+    "englishName": "Mahaguru Parbrahm bodh bhava",
+    "translatedName": "Recognising MahaGuru as Ram, Krishna and Parbrahm",
+    "audience": "for Ritu and devotees",
+    "date": "2026-07-02",
+    "description": "May Ritu and other devotees understand that MahaGuru Ji is Ram and Krishna, who has granted us liberation, and is our Parbrahm.",
+    "keywords": ["Ritu", "devotees", "MahaGuru", "Ram", "Krishna", "Parbrahm", "liberation"]
+  },
+  {
+    "header": "🥇188",
+    "name": "महागुरु संवाद-दर्शन ज्ञान भाव",
+    "englishName": "Mahaguru samvad darshan jnana bhava",
+    "translatedName": "Devotees understanding the grace of MahaGuru's conversation and darshan",
+    "audience": "for all devotees",
+    "date": "2026-07-02",
+    "description": "May all devotees understand that conversation with MahaGuru destroys all sins and that the sacred darshan of MahaGuru itself is yogic sadhana.",
+    "keywords": ["devotees", "MahaGuru", "conversation", "darshan", "sins", "yoga", "sadhana"]
+  },
+  {
+    "header": "🥇188",
+    "name": "पत्नी कृतज्ञता भाव",
+    "englishName": "Patni kritagyata bhava",
+    "translatedName": "Girlfriends feeling grateful toward the man's wife",
+    "audience": "for girlfriends of married men",
+    "date": "2026-07-02",
+    "description": "May a man's girlfriends feel grateful toward his wife because she is sharing her man with them.",
+    "keywords": ["girlfriend", "wife", "married man", "gratitude", "sharing", "relationship"]
+  },
+  {
+    "header": "🥇188",
+    "name": "आध्यात्मिक उन्नति हेतु पालतू-विराम भाव",
+    "englishName": "Adhyatmik unnati hetu paltu viram bhava",
+    "translatedName": "Leaving a pet with someone when needed for spiritual growth",
+    "audience": "for pet owners",
+    "date": "2026-07-02",
+    "description": "If our spiritual growth requires us to leave our pet dog with someone and go elsewhere, may we be able to do so.",
+    "keywords": ["spiritual growth", "pet", "dog", "leaving", "detachment", "journey"]
+  },
+  {
+    "header": "🥇188",
+    "name": "पालतू चिंता मुक्ति भाव",
+    "englishName": "Paltu chinta mukti bhava",
+    "translatedName": "Freedom from worrying after leaving a pet with someone",
+    "audience": "for pet owners",
+    "date": "2026-07-02",
+    "description": "After leaving our pet dog with someone, may we not continue worrying about the pet.",
+    "keywords": ["pet", "dog", "worry", "care", "detachment", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "पालतू भोजन चिंता मुक्ति भाव",
+    "englishName": "Paltu bhojan chinta mukti bhava",
+    "translatedName": "Freedom from worrying when a pet dog does not eat",
+    "audience": "for pet owners",
+    "date": "2026-07-02",
+    "description": "If our pet dog is not eating, may we not become worried about it.",
+    "keywords": ["pet", "dog", "food", "eating", "worry", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "पालतू मल चिंता मुक्ति भाव",
+    "englishName": "Paltu mal chinta mukti bhava",
+    "translatedName": "Freedom from worrying when a pet dog does not pass stool",
+    "audience": "for pet owners",
+    "date": "2026-07-02",
+    "description": "If our pet dog is not passing stool, may we not become worried about it.",
+    "keywords": ["pet", "dog", "potty", "stool", "worry", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "अति-भय मुक्ति भाव",
+    "englishName": "Ati bhay mukti bhava",
+    "translatedName": "Freedom from fear so intense that we faint",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we not become so frightened that we faint.",
+    "keywords": ["fear", "fainting", "extreme fear", "anxiety", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "दोषरहित अभिव्यक्ति भाव",
+    "englishName": "Dosharahit abhivyakti bhava",
+    "translatedName": "Expressing our point without sounding blaming",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we present our point in a way that does not sound like blame or confrontation to the other person.",
+    "keywords": ["communication", "blame", "confrontation", "expression", "relationships", "understanding"]
+  },
+  {
+    "header": "🥇188",
+    "name": "नशीली दवाई उपचार मुक्ति भाव",
+    "englishName": "Nashili dawai upchar mukti bhava",
+    "translatedName": "Freedom from treatments based on intoxicating medicines",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "From today, may treatments based on intoxicating medicine pills cease, and may alternate therapies be used instead.",
+    "keywords": ["medicine", "intoxicating medicines", "treatment", "alternate therapy", "health"]
+  },
+  {
+    "header": "🥇188",
+    "name": "अर्ध-चेतन दवाई मुक्ति भाव",
+    "englishName": "Ardh chetan dawai mukti bhava",
+    "translatedName": "Freedom from medicines that leave a person half-awake and half-intoxicated",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May no person need medicines that leave them neither fully asleep nor fully awake, but in a half-intoxicated state.",
+    "keywords": ["medicine", "half awake", "intoxication", "sleep", "treatment", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "वैकल्पिक विश्राम उपचार भाव",
+    "englishName": "Vaikalpik vishram upchar bhava",
+    "translatedName": "Revealing alternate treatments that provide the same relaxation",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May alternate treatment steps be revealed that can provide the same relaxation currently being received from intoxicating medicines.",
+    "keywords": ["alternate treatment", "relaxation", "medicine", "healing", "treatment steps"]
+  },
+  {
+    "header": "🥇188",
+    "name": "पीठ अकड़न सुरक्षा भाव",
+    "englishName": "Peeth akadan suraksha bhava",
+    "translatedName": "Protection from actions that cause back stiffness or strain",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we not do anything that causes our back to become stiff or strained and stops our movement.",
+    "keywords": ["back", "stiffness", "strain", "movement", "prevention", "body"]
+  },
+  {
+    "header": "🥇188",
+    "name": "देखभाल रोक-टोक बोध भाव",
+    "englishName": "Dekhbhal rok tok bodh bhava",
+    "translatedName": "Understanding that a caregiver's restraint is for our good",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we understand that when someone taking care of us stops us from doing something, they are doing so for our well-being.",
+    "keywords": ["caregiver", "care", "restriction", "well-being", "understanding"]
+  },
+  {
+    "header": "🥇188",
+    "name": "शारीरिक सीख भाव",
+    "englishName": "Sharirik seekh bhava",
+    "translatedName": "Learning immediately from illness caused by our actions",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "If one of our actions causes illness in our body, may we immediately learn from that illness and completely avoid repeating such actions.",
+    "keywords": ["body", "illness", "actions", "learning", "prevention", "health"]
+  },
+  {
+    "header": "🥇188",
+    "name": "उपचार-विरोधी सेवन मुक्ति भाव",
+    "englishName": "Upchar virodhi sevan mukti bhava",
+    "translatedName": "Freedom from consuming things that counter our treatment",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "When we are taking medicines, may we not consume things such as coffee that counter or interfere with the treatment.",
+    "keywords": ["medicine", "coffee", "treatment", "counteraction", "consumption", "health"]
+  },
+  {
+    "header": "🥇188",
+    "name": "आत्मिक उन्नति धन-बाधा मुक्ति भाव",
+    "englishName": "Aatmik unnati dhan badha mukti bhava",
+    "translatedName": "Money not becoming an obstacle to spiritual growth",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May money never become an obstacle in our spiritual growth.",
+    "keywords": ["money", "spiritual growth", "obstacle", "aatmik unnati", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "महागुरु चरण स्वास्थ्य भाव",
+    "englishName": "Mahaguru charan swasthya bhava",
+    "translatedName": "Ritu understanding healing through spiritual growth at MahaGuru's feet",
+    "audience": "for Ritu",
+    "date": "2026-07-02",
+    "description": "May Ritu understand that her illness can be healed by connecting with the feet of MahaGuru and progressing spiritually.",
+    "keywords": ["Ritu", "MahaGuru", "health", "illness", "spiritual growth", "healing"]
+  },
+  {
+    "header": "🥇188",
+    "name": "हठपूर्वक पूजा भाव",
+    "englishName": "Hathpurvak puja bhava",
+    "translatedName": "MahaGuru firmly guiding non-worshippers into puja",
+    "audience": "for those who do not perform puja",
+    "date": "2026-07-02",
+    "description": "May MahaGuru bless those who do not perform puja themselves and firmly engage them in puja. Om Sai Ram.",
+    "keywords": ["MahaGuru", "puja", "worship", "blessing", "guidance", "Om Sai Ram"]
+  },
+  {
+    "header": "🥇188",
+    "name": "महागुरु चरण तीर्थ भाव",
+    "englishName": "Mahaguru charan teerth bhava",
+    "translatedName": "Understanding MahaGuru's feet as the true pilgrimage",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we understand that we wander unnecessarily to pilgrimage places and that bowing at MahaGuru's feet is itself equal to going on pilgrimage.",
+    "keywords": ["MahaGuru", "feet", "pilgrimage", "teerth", "surrender", "understanding"]
+  },
+  {
+    "header": "🥇188",
+    "name": "कत्लेआम मुक्ति भाव",
+    "englishName": "Katleaam mukti bhava",
+    "translatedName": "Freedom from all massacres",
+    "audience": "for the world",
+    "date": "2026-07-02",
+    "description": "May every kind of massacre end, and may we all live with love.",
+    "keywords": ["massacre", "violence", "peace", "love", "world", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "कत्लेआम स्मृति-प्रभाव मुक्ति भाव",
+    "englishName": "Katleaam smriti prabhav mukti bhava",
+    "translatedName": "Freedom from the effects of memories of past massacres",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May the effects that memories of past massacres have upon us come to an end.",
+    "keywords": ["massacre", "past memories", "effects", "healing", "freedom"]
+  },
+  {
+    "header": "🥇188",
+    "name": "प्रियजन आनंद-दर्शन भाव",
+    "englishName": "Priyajan anand darshan bhava",
+    "translatedName": "Seeing our loved ones laughing and playing",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we see our loved ones laughing, playing, and enjoying life.",
+    "keywords": ["loved ones", "laughing", "playing", "joy", "happiness"]
+  },
+  {
+    "header": "🥇188",
+    "name": "रिक्त उदर मुक्ति भाव",
+    "englishName": "Rikta udar mukti bhava",
+    "translatedName": "Freedom from remaining on an empty stomach",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we not remain with an empty stomach and may we eat something healthy and light.",
+    "keywords": ["empty stomach", "food", "healthy", "light food", "nutrition"]
+  },
+  {
+    "header": "🥇188",
+    "name": "व्रत भूख मुक्ति भाव",
+    "englishName": "Vrat bhookh mukti bhava",
+    "translatedName": "Freedom from remaining hungry on fasting days",
+    "audience": "for all",
+    "date": "2026-07-02",
+    "description": "May we not remain hungry on fasting days, and may appropriate guidance be received about what should be done instead.",
+    "keywords": ["fasting", "vrat", "hunger", "food", "guidance", "health"]
+  },
+  {
     "header": "🥇187",
     "name": "कार्य-चरण स्पष्टता भाव",
     "englishName": "Karya charan spashtata bhava",
