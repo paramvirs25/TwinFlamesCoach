@@ -1,5 +1,735 @@
 [
   {
+    "header": "🥇190",
+    "name": "प्रकृति आक्रमण अभय भाव",
+    "englishName": "Prakriti aakraman abhaya bhava",
+    "translatedName": "Fearlessness before the unavoidable challenges of nature",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "जीवन के पग-पग पर प्रकृति के आक्रमणों और चुनौतियों का सामना करना पड़ता है। May we face them without becoming sorrowful or fearful.",
+    "keywords": ["nature", "prakriti", "challenges", "fear", "fearlessness", "sorrow", "acceptance"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रिलेशनशिप भय मुक्ति भाव",
+    "englishName": "Relationship bhaya mukti bhava",
+    "translatedName": "Freedom from all fears within relationships",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May all fears within relationships end, including fear of losing a partner, being abandoned or betrayed, the partner choosing someone else, losing our place or importance, being left alone, truth coming out, family breaking apart, defamation, an insecure future or making a wrong decision.",
+    "keywords": ["relationship", "fear", "abandonment", "betrayal", "partner", "insecurity", "loss", "freedom"]
+  },
+  {
+    "header": "🥇190",
+    "name": "पार्टनर चुनाव अभय भाव",
+    "englishName": "Partner chunav abhaya bhava",
+    "translatedName": "Fearlessness about whom our partner loves or chooses",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not become sorrowful or fearful by thinking about whom our partner loves, whom they will live with or choose, whether they will leave us, or whether they can be happy without us.",
+    "keywords": ["partner", "choice", "love", "abandonment", "fear", "relationship", "fearlessness"]
+  },
+  {
+    "header": "🥇190",
+    "name": "खोने का भय मुक्ति भाव",
+    "englishName": "Khone ka bhaya mukti bhava",
+    "translatedName": "Freedom from the fear of losing anything or anyone",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we be free from the fear of losing a person, relationship, object, money, work, position, respect, health or our loved ones.",
+    "keywords": ["fear of loss", "person", "relationship", "money", "work", "health", "loved ones"]
+  },
+  {
+    "header": "🥇190",
+    "name": "सर्व भय मुक्ति भाव",
+    "englishName": "Sarva bhaya mukti bhava",
+    "translatedName": "Freedom from major fears of life",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we be free from fear of rejection, failure, humiliation, defamation, betrayal, loneliness, poverty, illness, old age, death, an uncertain future or any change in life.",
+    "keywords": ["fear", "rejection", "failure", "humiliation", "loneliness", "poverty", "illness", "old age", "death"]
+  },
+  {
+    "header": "🥇190",
+    "name": "अनजाना भय मुक्ति भाव",
+    "englishName": "Anjana bhaya mukti bhava",
+    "translatedName": "Freedom from unnecessary fear of the unknown",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we be free from unnecessary fear of truth coming out, what people will say, making a wrong decision, the consequences of our actions or any unknown situation.",
+    "keywords": ["unknown", "fear", "truth", "people's opinion", "wrong decision", "consequences", "uncertainty"]
+  },
+  {
+    "header": "🥇190",
+    "name": "कालत्रय अभय भाव",
+    "englishName": "Kalatraya abhaya bhava",
+    "translatedName": "Fearlessness toward past, present and future",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "Whatever has happened, is happening or may happen in the future, may we not become sorrowful or fearful because of its reality or imagination.",
+    "keywords": ["past", "present", "future", "fear", "imagination", "reality", "fearlessness"]
+  },
+  {
+    "header": "🥇190",
+    "name": "डिप्रेशन नशा-दवाई मुक्ति भाव",
+    "englishName": "Depression nasha dawai mukti bhava",
+    "translatedName": "Freedom from dependence on sedating medicines during depression",
+    "audience": "for people experiencing depression",
+    "date": "2026-07-06",
+    "description": "May people experiencing depression become free, through safe and appropriate healing support, from dependence on medicines taken mainly for sedation or intoxication.",
+    "keywords": ["depression", "sedating medicine", "dependence", "healing", "recovery", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "डिप्रेशन भाव मुक्ति भाव",
+    "englishName": "Depression bhav mukti bhava",
+    "translatedName": "Freedom from sadness, emptiness and hopelessness caused by depression",
+    "audience": "for people experiencing depression",
+    "date": "2026-07-06",
+    "description": "May the sadness, emptiness, hopelessness, loneliness and restlessness caused by depression come to an end.",
+    "keywords": ["depression", "sadness", "emptiness", "hopelessness", "loneliness", "restlessness"]
+  },
+  {
+    "header": "🥇190",
+    "name": "डिप्रेशन नकारात्मकता मुक्ति भाव",
+    "englishName": "Depression nakaratmakta mukti bhava",
+    "translatedName": "Freedom from negative thoughts and worthlessness caused by depression",
+    "audience": "for people experiencing depression",
+    "date": "2026-07-06",
+    "description": "May negative thoughts, guilt, worthlessness and the feeling of being a burden caused by depression come to an end.",
+    "keywords": ["depression", "negative thoughts", "guilt", "worthlessness", "burden", "healing"]
+  },
+  {
+    "header": "🥇190",
+    "name": "जीवन ऊर्जा जागरण भाव",
+    "englishName": "Jeevan urja jagran bhava",
+    "translatedName": "Restoration of energy, motivation and desire to live",
+    "audience": "for people experiencing depression",
+    "date": "2026-07-06",
+    "description": "May the low energy, lack of motivation and loss of desire to live caused by depression come to an end, and may life energy awaken again.",
+    "keywords": ["depression", "energy", "motivation", "desire to live", "life energy", "recovery"]
+  },
+  {
+    "header": "🥇190",
+    "name": "डिप्रेशन मुक्ति भाव",
+    "englishName": "Depression mukti bhava",
+    "translatedName": "Freedom of the world from depression",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May depression itself come to an end throughout the world.",
+    "keywords": ["depression", "world", "freedom", "healing", "mental wellbeing"]
+  },
+  {
+    "header": "🥇190",
+    "name": "उपचार शारीरिक मर्यादा भाव",
+    "englishName": "Upchar sharirik maryada bhava",
+    "translatedName": "Respectful physical boundaries during professional treatment",
+    "audience": "for all professionals and clients",
+    "date": "2026-07-06",
+    "description": "May no doctor, therapist, massage therapist, healer or other professional unnecessarily see, touch or expose a client's or patient's body. During treatment, may only the genuinely necessary area be exposed while the rest of the body remains respectfully covered.",
+    "keywords": ["doctor", "therapist", "massage therapist", "healer", "body", "privacy", "dignity", "covering"]
+  },
+  {
+    "header": "🥇190",
+    "name": "उपचार सहमति सुरक्षा भाव",
+    "englishName": "Upchar sahmati suraksha bhava",
+    "translatedName": "Consent, privacy and safety during treatment",
+    "audience": "for all professionals and clients",
+    "date": "2026-07-06",
+    "description": "May every professional arrange their setup and treatment process with full respect for the client's or patient's privacy, dignity, comfort and safety. Before any examination, touch or treatment, may the person be clearly told what will be done and why, and may their consent be fully respected.",
+    "keywords": ["consent", "privacy", "dignity", "comfort", "safety", "treatment", "professional"]
+  },
+  {
+    "header": "🥇190",
+    "name": "पेशेवर विश्वास दुरुपयोग मुक्ति भाव",
+    "englishName": "Professional vishwas durupyog mukti bhava",
+    "translatedName": "Freedom from misuse of a client's vulnerability or trust",
+    "audience": "for all professionals and clients",
+    "date": "2026-07-06",
+    "description": "May no professional misuse a client's or patient's illness, pain, vulnerability, helplessness, trust or emotional dependence in any way.",
+    "keywords": ["professional", "trust", "vulnerability", "misuse", "patient", "client", "ethics"]
+  },
+  {
+    "header": "🥇190",
+    "name": "पेशेवर यौन मर्यादा भाव",
+    "englishName": "Professional yaun maryada bhava",
+    "translatedName": "Sexual boundaries within professional care",
+    "audience": "for all professionals and clients",
+    "date": "2026-07-06",
+    "description": "May no professional look at or touch a client or patient with sexual or inappropriate intention, or participate in sexual behaviour or inappropriate intimacy within the professional care relationship.",
+    "keywords": ["professional", "sexual boundaries", "patient", "client", "ethics", "inappropriate intimacy"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रोगी गोपनीयता रक्षा भाव",
+    "englishName": "Rogi gopniyata raksha bhava",
+    "translatedName": "Protection of client and patient confidentiality",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May a client's or patient's photos, videos, personal information, medical information and private treatment details never be shared or leaked without their permission.",
+    "keywords": ["patient", "client", "privacy", "confidentiality", "medical information", "photos", "videos"]
+  },
+  {
+    "header": "🥇190",
+    "name": "तत्काल मिलने का अपराधबोध मुक्ति भाव",
+    "englishName": "Tatkal milne ka apradhbodh mukti bhava",
+    "translatedName": "Freedom from guilt when unable to visit a sick friend immediately",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "If a sick and lonely friend asks us to visit whenever we have time, may we not feel guilty because we cannot visit them immediately.",
+    "keywords": ["sick friend", "visit", "guilt", "immediate", "time", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "पत्नी भय मुक्ति भाव",
+    "englishName": "Patni bhaya mukti bhava",
+    "translatedName": "Freedom of a girlfriend from fear of a man's wife",
+    "audience": "for girlfriends of married men",
+    "date": "2026-07-06",
+    "description": "May a girlfriend be free from fear that the man's wife may falsely implicate or trap her.",
+    "keywords": ["girlfriend", "wife", "fear", "relationship", "false implication"]
+  },
+  {
+    "header": "🥇190",
+    "name": "पत्नी सुन लेगी भय मुक्ति भाव",
+    "englishName": "Patni sun legi bhaya mukti bhava",
+    "translatedName": "Freedom from fear that one's wife may overhear a conversation",
+    "audience": "for husbands",
+    "date": "2026-07-06",
+    "description": "May a husband be free from fear that his wife may overhear him speaking with his girlfriend.",
+    "keywords": ["husband", "wife", "girlfriend", "fear", "conversation"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रोगी अकेलापन ज़िद मुक्ति भाव",
+    "englishName": "Rogi akelapan zid mukti bhava",
+    "translatedName": "Freedom from insisting on staying alone while ill",
+    "audience": "for patients",
+    "date": "2026-07-06",
+    "description": "May a patient not insist on staying alone when care, companionship or supervision is genuinely needed.",
+    "keywords": ["patient", "alone", "care", "companionship", "support", "safety"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रोगी सहायता स्वीकार भाव",
+    "englishName": "Rogi sahayata swikaar bhava",
+    "translatedName": "Willingness to receive support while ill",
+    "audience": "for patients",
+    "date": "2026-07-06",
+    "description": "May a person who is ill not hesitate to receive appropriate support from others.",
+    "keywords": ["patient", "illness", "support", "help", "acceptance", "care"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रितु देखभाल निवास भाव",
+    "englishName": "Ritu dekhbhal nivas bhava",
+    "translatedName": "Ritu staying at Param's home for care if appropriate",
+    "audience": "for Ritu and Param",
+    "date": "2026-07-06",
+    "description": "If appropriate, may Ritu come and stay at Param's home for as long as she genuinely needs care.",
+    "keywords": ["Ritu", "Param", "home", "care", "stay", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "गृह संरक्षण भाव",
+    "englishName": "Griha sanrakshan bhava",
+    "translatedName": "Protecting a home from falling into ruin",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May homes be properly cared for and not be allowed to fall into ruin.",
+    "keywords": ["home", "house", "maintenance", "ruin", "care", "protection"]
+  },
+  {
+    "header": "🥇190",
+    "name": "गुरुघर संगत वृद्धि भाव",
+    "englishName": "Gurughar sangat vriddhi bhava",
+    "translatedName": "Abundant sangat gathering in the Guru's house",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May abundant sangat gather in the Guru's house.",
+    "keywords": ["Guru", "gurughar", "sangat", "devotees", "spiritual gathering"]
+  },
+  {
+    "header": "🥇190",
+    "name": "सूखा वर्षा भाव",
+    "englishName": "Sukha varsha bhava",
+    "translatedName": "Rain for drought-affected regions",
+    "audience": "for drought-affected regions",
+    "date": "2026-07-06",
+    "description": "May sufficient rain fall in drought-affected regions.",
+    "keywords": ["drought", "rain", "water", "regions", "nature"]
+  },
+  {
+    "header": "🥇190",
+    "name": "सहज आयु पूर्णता भाव",
+    "englishName": "Sahaj aayu purnata bhava",
+    "translatedName": "A naturally complete lifespan without unnecessarily prolonged old age",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May no one have to live through an unnecessarily prolonged lifespan beyond what is naturally appropriate for them.",
+    "keywords": ["old age", "lifespan", "long life", "natural completion", "age"]
+  },
+  {
+    "header": "🥇190",
+    "name": "दवाई सुरक्षित नियंत्रण भाव",
+    "englishName": "Dawai surakshit niyantran bhava",
+    "translatedName": "Safe control of medicines when suicidal tendencies are present",
+    "audience": "for patients and caregivers",
+    "date": "2026-07-06",
+    "description": "May a patient experiencing suicidal tendencies not insist that an attendant or caregiver hand over all medicines at once, and may medicines remain safely managed.",
+    "keywords": ["suicidal tendency", "medicine", "caregiver", "attendant", "safety", "medication management"]
+  },
+  {
+    "header": "🥇190",
+    "name": "आत्मघाती प्रवृत्ति पूर्ण मुक्ति भाव",
+    "englishName": "Aatmaghati pravritti purna mukti bhava",
+    "translatedName": "Complete freedom from suicidal tendencies",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May suicidal tendencies come to a complete end.",
+    "keywords": ["suicidal tendency", "freedom", "life", "healing", "safety"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रोगी अकेला छोड़ने अफसोस मुक्ति भाव",
+    "englishName": "Rogi akela chhodne afsos mukti bhava",
+    "translatedName": "Freedom from regret when a sick person must temporarily be left alone",
+    "audience": "for caregivers",
+    "date": "2026-07-06",
+    "description": "If circumstances require us to temporarily leave a sick person alone after making appropriate arrangements for their safety, may we not remain burdened by regret.",
+    "keywords": ["sick person", "alone", "caregiver", "regret", "safety", "care"]
+  },
+  {
+    "header": "🥇190",
+    "name": "योजना परिवर्तन सूचना भाव",
+    "englishName": "Yojana parivartan suchna bhava",
+    "translatedName": "Properly informing others when plans change",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "When someone changes a plan while another person is waiting for them, may they clearly and properly inform the waiting person about the change.",
+    "keywords": ["plan change", "inform", "waiting", "communication", "clarity"]
+  },
+  {
+    "header": "🥇190",
+    "name": "विवाह योग-हीलिंग भाव",
+    "englishName": "Vivah yoga healing bhava",
+    "translatedName": "Using yoga and healing to cultivate harmony in marriage",
+    "audience": "for couples",
+    "date": "2026-07-06",
+    "description": "May couples also focus deeply on yoga sadhana and healing to bring inner change and greater harmony into their marriage.",
+    "keywords": ["marriage", "couple", "yoga", "sadhana", "healing", "harmony"]
+  },
+  {
+    "header": "🥇190",
+    "name": "विवाह परामर्श विवेक भाव",
+    "englishName": "Vivah paramarsh vivek bhava",
+    "translatedName": "Discernment regarding marriage counselling",
+    "audience": "for couples",
+    "date": "2026-07-06",
+    "description": "May we use discernment regarding couple and marriage counselling, recognising what genuinely helps a relationship and what does not.",
+    "keywords": ["marriage counselling", "couples", "discernment", "relationship", "help"]
+  },
+  {
+    "header": "🥇190",
+    "name": "स्त्री लिंग निर्माण भाव",
+    "englishName": "Stri ling nirman bhava",
+    "translatedName": "Women moving toward having a functional penis through available procedures",
+    "audience": "for women who want this",
+    "date": "2026-07-06",
+    "description": "May women who genuinely want a penis be able to move forward with procedures such as phalloplasty, with the intention of having a functional penis that closely matches their desired size, appearance and sexual capability.",
+    "keywords": ["women", "penis", "phalloplasty", "procedure", "functional penis", "body"]
+  },
+  {
+    "header": "🥇190",
+    "name": "सस्ती दवाई भाव",
+    "englishName": "Sasti dawai bhava",
+    "translatedName": "Affordable medicines being available",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May affordable medicines be sold and made available instead of unnecessarily expensive ones.",
+    "keywords": ["medicine", "cheap medicine", "affordable", "healthcare", "cost"]
+  },
+  {
+    "header": "🥇190",
+    "name": "वापस मिली वस्तु स्वीकार भाव",
+    "englishName": "Wapas mili vastu swikaar bhava",
+    "translatedName": "Peacefully accepting the return of something we had given",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "When something we had given to another person is returned to us, may we peacefully and happily accept its return.",
+    "keywords": ["returned item", "acceptance", "belonging", "detachment", "peace"]
+  },
+  {
+    "header": "🥇190",
+    "name": "बीमारी अभिनय मुक्ति भाव",
+    "englishName": "Bimari abhinay mukti bhava",
+    "translatedName": "Freedom from pretending to be ill to stop loved ones",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not pretend to be ill in order to stop our loved ones from leaving or doing something.",
+    "keywords": ["illness", "pretending", "loved ones", "manipulation", "freedom"]
+  },
+  {
+    "header": "🥇190",
+    "name": "बीमारी बढ़ा-चढ़ाकर दिखाना मुक्ति भाव",
+    "englishName": "Bimari badha chadhakar dikhana mukti bhava",
+    "translatedName": "Freedom from appearing more ill than we actually are",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not act more ill in front of our loved ones than we actually are.",
+    "keywords": ["illness", "exaggeration", "acting", "loved ones", "honesty"]
+  },
+  {
+    "header": "🥇190",
+    "name": "जस निमंत्रण भाव",
+    "englishName": "Jas nimantran bhava",
+    "translatedName": "Jas willingly inviting Ritu to stay for care if appropriate",
+    "audience": "for Jas, Ritu and Param",
+    "date": "2026-07-06",
+    "description": "If appropriate, may Jas herself come forward and invite Ritu to stay at their home so that Ritu can receive care if she needs it.",
+    "keywords": ["Jas", "Ritu", "Param", "invitation", "home", "care", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "वस्त्र परिस्थिति विवेक भाव",
+    "englishName": "Vastra paristhiti vivek bhava",
+    "translatedName": "Discernment about clothing according to the situation",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May people develop discernment about choosing clothing that feels appropriate, safe and comfortable for the situation and surroundings.",
+    "keywords": ["clothing", "shorts", "skirts", "discernment", "situation", "comfort", "safety"]
+  },
+  {
+    "header": "🥇190",
+    "name": "प्रियजन बीमारी असहायता मुक्ति भाव",
+    "englishName": "Priyajan bimari asahayata mukti bhava",
+    "translatedName": "Freedom from helplessness when a loved one is ill",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not feel helpless when we see a loved one who is ill.",
+    "keywords": ["loved one", "illness", "helplessness", "care", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "प्रियजन कष्ट दर्शन मुक्ति भाव",
+    "englishName": "Priyajan kasht darshan mukti bhava",
+    "translatedName": "Freedom from having to see loved ones in severe distress",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not have to see our loved ones in panic, severe anxiety or bedridden states.",
+    "keywords": ["loved ones", "panic", "anxiety", "bedridden", "suffering", "health"]
+  },
+  {
+    "header": "🥇190",
+    "name": "मनोचिकित्सा निर्भरता मुक्ति भाव",
+    "englishName": "Manochikitsa nirbharta mukti bhava",
+    "translatedName": "Freedom from long-term dependence on psychiatric treatment",
+    "audience": "for people receiving psychiatric care",
+    "date": "2026-07-06",
+    "description": "May people heal and recover so deeply, with appropriate support, that they can become free from unnecessary long-term dependence on psychiatric treatment.",
+    "keywords": ["psychiatry", "treatment", "recovery", "dependence", "healing", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रोगी साथी सहायता भाव",
+    "englishName": "Rogi sathi sahayata bhava",
+    "translatedName": "Companionship and practical support for an ill person",
+    "audience": "for patients",
+    "date": "2026-07-06",
+    "description": "May every ill person have someone available, when needed, for care, companionship, emotional support and appropriate help with keeping track of medicines.",
+    "keywords": ["patient", "care", "companionship", "emotional support", "medicines", "caregiver"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रितु साथी सहायता भाव",
+    "englishName": "Ritu sathi sahayata bhava",
+    "translatedName": "Companionship and practical support around Ritu",
+    "audience": "for Ritu",
+    "date": "2026-07-06",
+    "description": "May someone appropriate be available around Ritu for companionship, emotional support and help with keeping track of her medicines when needed.",
+    "keywords": ["Ritu", "companionship", "emotional support", "medicines", "care", "support"]
+  },
+  {
+    "header": "🥇190",
+    "name": "हार की भाषा मुक्ति भाव",
+    "englishName": "Haar ki bhasha mukti bhava",
+    "translatedName": "Freedom from speaking as though illness is defeating us",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not repeatedly tell our loved ones that we feel we are losing the battle against illness, and may we learn to express our difficult state in a way that supports both honesty and hope.",
+    "keywords": ["illness", "defeat", "loved ones", "hope", "expression", "recovery"]
+  },
+  {
+    "header": "🥇190",
+    "name": "नशीली दवाई मुक्ति भाव",
+    "englishName": "Nashili dawai mukti bhava",
+    "translatedName": "Freedom from dependence on sedating medicines",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we become free, through safe and appropriate healing support, from dependence on medicines that keep us in a heavily sedated state.",
+    "keywords": ["sedating medicine", "dependence", "freedom", "healing", "recovery"]
+  },
+  {
+    "header": "🥇190",
+    "name": "दीर्घ बेहोशी उपचार मुक्ति भाव",
+    "englishName": "Deergh behoshi upchar mukti bhava",
+    "translatedName": "Freedom from treatments involving prolonged unconsciousness when safer options are possible",
+    "audience": "for all patients",
+    "date": "2026-07-06",
+    "description": "May treatments that require keeping a person unconscious for several days no longer be needed where safer and effective alternatives are possible.",
+    "keywords": ["treatment", "unconsciousness", "sedation", "alternatives", "safety", "patient"]
+  },
+  {
+    "header": "🥇190",
+    "name": "अति दवाई नशा मुक्ति भाव",
+    "englishName": "Ati dawai nasha mukti bhava",
+    "translatedName": "Freedom from excessive medicine-induced sedation",
+    "audience": "for all patients",
+    "date": "2026-07-06",
+    "description": "May medicine-induced sedation not become so intense that a person cannot speak properly or loses awareness of what is happening around them.",
+    "keywords": ["medicine", "sedation", "awareness", "speech", "safety", "patient"]
+  },
+  {
+    "header": "🥇190",
+    "name": "दवाई दुरुपयोग मुक्ति भाव",
+    "englishName": "Dawai durupyog mukti bhava",
+    "translatedName": "Freedom from all misuse of medicines",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May every form of medicine misuse come to an end.",
+    "keywords": ["medicine", "misuse", "drug misuse", "safety", "health"]
+  },
+  {
+    "header": "🥇190",
+    "name": "संतान समानता भाव",
+    "englishName": "Santan samanta bhava",
+    "translatedName": "Equal expectations and responsibility toward sons and daughters",
+    "audience": "for parents",
+    "date": "2026-07-06",
+    "description": "May a mother or father not discriminate between a son and daughter when asking for care, support or responsibility.",
+    "keywords": ["mother", "father", "son", "daughter", "equality", "responsibility", "care"]
+  },
+  {
+    "header": "🥇190",
+    "name": "मतिभ्रम कारण मुक्ति भाव",
+    "englishName": "Matibhram karan mukti bhava",
+    "translatedName": "Freedom from the causes of hallucinations",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May the underlying causes that lead to hallucinations be identified, healed and brought to an end.",
+    "keywords": ["hallucinations", "causes", "healing", "recovery", "health"]
+  },
+  {
+    "header": "🥇190",
+    "name": "देखभाल नियंत्रण मुक्ति भाव",
+    "englishName": "Dekhbal niyantran mukti bhava",
+    "translatedName": "Caring without trying to control the person",
+    "audience": "for caregivers",
+    "date": "2026-07-06",
+    "description": "When we are taking care of a child, patient or anyone else, may we care for them without trying to control them or forcing them to behave according to our preferences.",
+    "keywords": ["caregiving", "control", "patient", "child", "care", "freedom"]
+  },
+  {
+    "header": "🥇190",
+    "name": "योगिक विचार शमन भाव",
+    "englishName": "Yogic vichar shaman bhava",
+    "translatedName": "Learning to handle negative thoughts through yoga",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we learn to work with negative thoughts through yoga and appropriate healing support, so that heavily sedating medicines are not used merely to silence the mind.",
+    "keywords": ["yoga", "negative thoughts", "mind", "sedating medicine", "healing"]
+  },
+  {
+    "header": "🥇190",
+    "name": "जात-पात मुक्ति भाव",
+    "englishName": "Jaat paat mukti bhava",
+    "translatedName": "Freedom from caste-based discrimination",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we be free from caste-based thinking and discrimination, including refusing food or treating someone differently because of their caste.",
+    "keywords": ["caste", "discrimination", "equality", "food", "freedom"]
+  },
+  {
+    "header": "🥇190",
+    "name": "अति उत्साह कार्य विराम भाव",
+    "englishName": "Ati utsah karya viram bhava",
+    "translatedName": "Not beginning work in overexcitement",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not start a new work or project merely in a state of overexcitement.",
+    "keywords": ["overexcitement", "work", "project", "decision", "awareness"]
+  },
+  {
+    "header": "🥇190",
+    "name": "सहज प्रेममय भाव",
+    "englishName": "Sahaj premamaya bhava",
+    "translatedName": "Being naturally loving without intoxication",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "Just as some people become soft, loving and speak affectionately after intoxication, may we naturally remain loving and speak with affection even without any intoxicant.",
+    "keywords": ["love", "affection", "intoxication", "loving speech", "natural state"]
+  },
+  {
+    "header": "🥇190",
+    "name": "संतान कारण माता-पिता सम्मान भाव",
+    "englishName": "Santan karan mata pita samman bhava",
+    "translatedName": "Respecting parents regardless of their children's behaviour",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May no one misbehave with parents because of something their children have done.",
+    "keywords": ["children", "parents", "respect", "misbehaviour", "family"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रितु दवाई परिवर्तन सफलता भाव",
+    "englishName": "Ritu dawai parivartan safalta bhava",
+    "translatedName": "Successful and safe progress in Ritu's decision regarding sedating medicine",
+    "audience": "for Ritu",
+    "date": "2026-07-06",
+    "description": "May Ritu's decision to become free from dependence on the sedating medicine progress successfully and safely with appropriate professional guidance and healing support.",
+    "keywords": ["Ritu", "medicine", "sedation", "recovery", "safe change", "healing"]
+  },
+  {
+    "header": "🥇190",
+    "name": "नशीली दवाई योगिक विकल्प भाव",
+    "englishName": "Nashili dawai yogic vikalp bhava",
+    "translatedName": "Sedating medicines being replaced by effective yogic healing where appropriate",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "Where appropriate and safe, may dependence on sedating medicines be reduced through effective yogic healing and other suitable forms of care.",
+    "keywords": ["sedating medicine", "yoga", "yogic healing", "alternative", "recovery"]
+  },
+  {
+    "header": "🥇190",
+    "name": "प्रियजन फोन चिंता मुक्ति भाव",
+    "englishName": "Priyajan phone chinta mukti bhava",
+    "translatedName": "Freedom from worry when loved ones do not answer the phone",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "When our loved ones are unable to answer our phone call, may we not become worried.",
+    "keywords": ["loved ones", "phone", "no answer", "worry", "anxiety", "freedom"]
+  },
+  {
+    "header": "🥇190",
+    "name": "उदासी मुक्ति भाव",
+    "englishName": "Udasi mukti bhava",
+    "translatedName": "Freedom of the world from sadness",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May sadness come to an end throughout the world.",
+    "keywords": ["sadness", "world", "freedom", "joy", "healing"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रात्रि प्रियजन चिंता मुक्ति भाव",
+    "englishName": "Ratri priyajan chinta mukti bhava",
+    "translatedName": "Freedom from remaining alert at night because a distant loved one may call",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "If a loved one who is far away is uneasy and may call us at any time during the night, may we not remain anxiously alert. May we relax and rest, and if we need to go to them, may we do so in a relaxed state.",
+    "keywords": ["night", "loved one", "phone call", "alertness", "worry", "relaxation", "rest"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रात्रि कष्ट मुक्ति भाव",
+    "englishName": "Ratri kasht mukti bhava",
+    "translatedName": "Freedom from spending the night in uneasiness or pain",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May no one have to pass the night in severe uneasiness or pain.",
+    "keywords": ["night", "uneasiness", "pain", "relief", "comfort"]
+  },
+  {
+    "header": "🥇190",
+    "name": "पीड़ा अनिवार्यता भ्रम मुक्ति भाव",
+    "englishName": "Peeda anivaryata bhram mukti bhava",
+    "translatedName": "Freedom from assuming that suffering is necessary",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not assume that we necessarily have to pass through pain or suffering.",
+    "keywords": ["pain", "suffering", "assumption", "belief", "freedom"]
+  },
+  {
+    "header": "🥇190",
+    "name": "एकांत आनंद भाव",
+    "englishName": "Ekant anand bhava",
+    "translatedName": "Enjoying solitude instead of feeling lonely",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we enjoy being alone instead of feeling lonely.",
+    "keywords": ["solitude", "loneliness", "alone", "enjoyment", "peace"]
+  },
+  {
+    "header": "🥇190",
+    "name": "नशे में उत्तरदायित्व भाव",
+    "englishName": "Nashe mein uttardayitva bhava",
+    "translatedName": "Remaining responsible for our decisions even while intoxicated",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "Even in an intoxicated state, may we remain aware enough to take responsibility for the decisions we make.",
+    "keywords": ["intoxication", "awareness", "decision", "responsibility", "accountability"]
+  },
+  {
+    "header": "🥇190",
+    "name": "स्वास्थ्य गलती पुनरावृत्ति मुक्ति भाव",
+    "englishName": "Swasthya galti punaravritti mukti bhava",
+    "translatedName": "Not repeating decisions that harm our health",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we not repeat food choices, habits or other decisions that have already harmed our health, such as repeatedly eating something that causes bloating or doing something that makes our condition worse.",
+    "keywords": ["health", "mistakes", "repetition", "food", "habits", "learning"]
+  },
+  {
+    "header": "🥇190",
+    "name": "स्वस्थ क्रेविंग तृप्ति भाव",
+    "englishName": "Swasth craving tripti bhava",
+    "translatedName": "Satisfying food cravings in healthy ways",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May we satisfy our food cravings through healthier choices, such as choosing a suitable healthy sweet alternative instead of foods that repeatedly harm our body.",
+    "keywords": ["craving", "healthy food", "sweet", "alternative", "health", "nutrition"]
+  },
+  {
+    "header": "🥇190",
+    "name": "बीमारी प्राथमिकता समझ भाव",
+    "englishName": "Bimari prathmikta samajh bhava",
+    "translatedName": "Understanding that health care comes before physical closeness during illness",
+    "audience": "for couples",
+    "date": "2026-07-06",
+    "description": "When we are ill, may we understand that our partner's first priority may be caring for our health, and therefore they may not be focused on physical closeness at that time.",
+    "keywords": ["illness", "partner", "health", "care", "physical closeness", "priority"]
+  },
+  {
+    "header": "🥇190",
+    "name": "संतान पूर्ण देखभाल भाव",
+    "englishName": "Santan purna dekhbhal bhava",
+    "translatedName": "Parents giving complete care to their children",
+    "audience": "for parents",
+    "date": "2026-07-06",
+    "description": "May parents give full care, presence and nurturing to their children.",
+    "keywords": ["parents", "children", "care", "nurturing", "responsibility", "family"]
+  },
+  {
+    "header": "🥇190",
+    "name": "बेड रेस्ट मुक्ति भाव",
+    "englishName": "Bed rest mukti bhava",
+    "translatedName": "Freedom from conditions requiring bed rest",
+    "audience": "for all",
+    "date": "2026-07-06",
+    "description": "May no one reach a condition in which prolonged bed rest becomes necessary.",
+    "keywords": ["bed rest", "health", "recovery", "mobility", "wellbeing"]
+  },
+  {
+    "header": "🥇190",
+    "name": "रितु योगिक अवस्था प्रबंधन भाव",
+    "englishName": "Ritu yogic avastha prabandhan bhava",
+    "translatedName": "Ritu learning a yogic method to manage her present state",
+    "audience": "for Ritu",
+    "date": "2026-07-06",
+    "description": "May Ritu connect with MahaGuru Ji and learn an appropriate kriya or method that helps her safely manage her present state with greater inner stability and reduced dependence on sedating medicine.",
+    "keywords": ["Ritu", "MahaGuru", "kriya", "yoga", "current state", "inner stability", "medicine"]
+  },
+  {
     "header": "🥇189",
     "name": "परिवार देखभाल भाव",
     "englishName": "Parivar dekhbhal bhava",
