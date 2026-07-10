@@ -44,9 +44,10 @@
 <div class="filters">
   <input type="text" id="searchInput" placeholder="Search blessings..." />
   <div style="display:flex; gap:10px; margin-top:8px;">
-      <button id="copyAllNamesBtn" title="Copy all blessing names">📋</button>
-      <button id="scrollSelectedBtn" title="Scroll to last selected">🎯</button>
-  </div>
+    <button id="copyAllNamesBtn" title="Copy all visible blessing names">📋</button>
+    <button id="copyAllBlessingsBtn" title="Copy all visible blessing names and descriptions">📝</button>
+    <button id="scrollSelectedBtn" title="Scroll to last selected">🎯</button>
+</div>
   <div class="count-summary" id="countSummary"></div>
 </div>
 
@@ -179,6 +180,14 @@
     renderBlessings(allBlessings);
 
     document.getElementById('scrollSelectedBtn').addEventListener('click', scrollToSelected);
+
+    document.getElementById('copyAllBlessingsBtn').addEventListener('click', () => {
+      const allBlessingsText = currentFiltered.map(b =>
+        `${b.name}\n\n${b.description}`
+      ).join('\n\n--------------------\n\n');
+
+      copyToClipboard(allBlessingsText);
+    });
 
     document.getElementById('searchInput').addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
