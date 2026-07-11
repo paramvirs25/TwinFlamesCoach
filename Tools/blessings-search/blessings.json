@@ -1,4 +1,755 @@
 [
+  {
+    "header": "🥇194",
+    "name": "सत्यापन विवेक भाव",
+    "englishName": "Verification wisdom bhava",
+    "translatedName": "Wisdom to verify important agreements",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we verify important terms, conditions, timelines, charges and agreements instead of relying only on verbal assurances. May clarity and written confirmation guide our important decisions.",
+    "keywords": ["verification", "agreement", "loan", "contract", "written confirmation", "financial", "wisdom", "terms"]
+  },
+  {
+    "header": "🥇194",
+    "name": "साझी समझ भाव",
+    "englishName": "Shared understanding bhava",
+    "translatedName": "Clear mutual understanding before decisions",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop assuming both parties understood the same thing merely because a question was asked and answered. May we verify understanding through clear examples and specific questions.",
+    "keywords": ["communication", "understanding", "clarification", "questions", "assumptions", "decisions"]
+  },
+  {
+    "header": "🥇194",
+    "name": "छिपी शर्त जागरूकता भाव",
+    "englishName": "Hidden conditions awareness bhava",
+    "translatedName": "Awareness of hidden conditions",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we recognize hidden charges, penalties, exceptions and fine print before accepting assurances. May we understand the exact meaning and conditions behind every important commitment.",
+    "keywords": ["hidden charges", "fine print", "penalties", "awareness", "financial", "conditions"]
+  },
+  {
+    "header": "🥇194",
+    "name": "दस्तावेज़ जाँच भाव",
+    "englishName": "Document verification bhava",
+    "translatedName": "Checking official documents before deciding",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we verify official documents, policies, agreements and terms before making important financial, legal or long-term decisions instead of depending only on spoken words.",
+    "keywords": ["documents", "policy", "agreement", "legal", "verification", "patience", "wisdom"]
+  },
+  {
+    "header": "🥇194",
+    "name": "पारदर्शी व्यवहार भाव",
+    "englishName": "Transparent dealings bhava",
+    "translatedName": "Honest and transparent dealings",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of giving incomplete, misleading or ambiguous information for personal benefit come to an end. May our dealings be guided by honesty, clarity, transparency and responsibility.",
+    "keywords": ["honesty", "transparency", "ethics", "clarity", "misleading", "responsibility"]
+  },
+  {
+    "header": "🥇194",
+    "name": "तथ्य आधारित समाधान भाव",
+    "englishName": "Fact-based resolution bhava",
+    "translatedName": "Resolving agreement issues through facts",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "When agreement terms differ from our understanding, may we calmly review facts, written records and available options instead of falling into confusion or self-blame. May we take appropriate action with clarity and firmness.",
+    "keywords": ["facts", "records", "clarity", "complaint", "resolution", "agreements"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "मूल प्रश्न सम्मान भाव",
+    "englishName": "Core question respect bhava",
+    "translatedName": "Honouring the original question",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we fully listen to the other person's actual question before sharing our own stories, opinions or experiences. May our responses remain relevant to what was truly asked.",
+    "keywords": ["listening", "conversation", "questions", "communication", "respect", "focus"]
+  },
+  {
+    "header": "🥇194",
+    "name": "खुले मन का विवेक भाव",
+    "englishName": "Open-minded discernment bhava",
+    "translatedName": "Balanced openness toward new possibilities",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we neither blindly accept nor immediately reject new ideas, information or technologies. May we examine them with openness, discernment and facts.",
+    "keywords": ["discernment", "open mind", "ideas", "technology", "facts", "wisdom"]
+  },
+  {
+    "header": "🥇194",
+    "name": "वार्ता दिशा भाव",
+    "englishName": "Conversation direction bhava",
+    "translatedName": "Gently returning to the main topic",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we respectfully bring conversations back to the original topic whenever discussions drift away, ensuring important questions are answered before moving ahead.",
+    "keywords": ["conversation", "focus", "questions", "communication", "clarity", "respect"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सम्मानपूर्ण आत्म-अभिव्यक्ति भाव",
+    "englishName": "Respectful self-expression bhava",
+    "translatedName": "Confidently expressing ourselves with respect",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we respectfully manage conversations even with people of authority, experience or importance. May we preserve both respect and the ability to express our own questions clearly.",
+    "keywords": ["confidence", "respect", "authority", "communication", "boundaries", "clarity"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "सहज अवसर स्वीकृति भाव",
+    "englishName": "Welcoming opportunities bhava",
+    "translatedName": "Openness to unexpected opportunities",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we remain open to good, safe and appropriate opportunities even when they arise unexpectedly, instead of rejecting them merely because they were not planned in advance.",
+    "keywords": ["opportunity", "planning", "flexibility", "openness", "travel", "meetings"]
+  },
+  {
+    "header": "🥇194",
+    "name": "लचीलापन भाव",
+    "englishName": "Flexibility bhava",
+    "translatedName": "Freedom from automatic resistance to change",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May automatic resistance, irritation and confusion toward unexpected changes dissolve. May we consider new situations with flexibility and calmness.",
+    "keywords": ["flexibility", "change", "adaptability", "planning", "openness"]
+  },
+  {
+    "header": "🥇194",
+    "name": "संतुलित योजना भाव",
+    "englishName": "Balanced planning bhava",
+    "translatedName": "Balancing planning with spontaneity",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we plan where planning is necessary while remaining open to simple and manageable spontaneous opportunities.",
+    "keywords": ["planning", "spontaneity", "balance", "opportunities", "wisdom"]
+  },
+  {
+    "header": "🥇194",
+    "name": "वर्तमान विवेक भाव",
+    "englishName": "Present-moment discernment bhava",
+    "translatedName": "Making decisions from present reality",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we distinguish between genuine practical limitations and automatic resistance to change. May our decisions arise from wisdom and present reality instead of fear or habit.",
+    "keywords": ["discernment", "fear", "habit", "decision", "present moment"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सहज हाँ भाव",
+    "englishName": "Graceful yes bhava",
+    "translatedName": "Readiness to embrace worthy opportunities",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we recognize and lovingly accept worthwhile opportunities instead of waiting for perfect timing or perfect planning.",
+    "keywords": ["opportunity", "yes", "planning", "readiness", "life"]
+  },
+  {
+    "header": "🥇194",
+    "name": "जीवन प्रवाह भाव",
+    "englishName": "Flow with life bhava",
+    "translatedName": "Flowing with life's spontaneity",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our nervous system learn that not every unexpected event is a danger. May we move through life with wisdom, safety, spontaneity and trust.",
+    "keywords": ["flow", "life", "nervous system", "spontaneity", "trust"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "रिकवरी धैर्य भाव",
+    "englishName": "Recovery patience bhava",
+    "translatedName": "Remaining steady through recovery",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we remain hopeful, patient and emotionally steady through the natural ups and downs of a loved one's recovery instead of becoming discouraged by temporary setbacks.",
+    "keywords": ["recovery", "health", "patience", "hope", "loved ones"]
+  },
+  {
+    "header": "🥇194",
+    "name": "प्रेमपूर्ण स्वीकार भाव",
+    "englishName": "Loving acceptance bhava",
+    "translatedName": "Accepting changing health with wisdom",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our loving wish for others' well-being no longer turn into fear, resistance or emotional tension. May we respond with wisdom and acceptance.",
+    "keywords": ["acceptance", "health", "fear", "love", "wisdom"]
+  },
+  {
+    "header": "🥇194",
+    "name": "आंतरिक स्थिरता भाव",
+    "englishName": "Inner stability bhava",
+    "translatedName": "Stable inner state despite others' condition",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our emotional state no longer rise and fall completely with the changing condition of loved ones. May our love remain while our inner stability stays grounded.",
+    "keywords": ["inner stability", "health", "relationships", "balance", "emotions"]
+  },
+  {
+    "header": "🥇194",
+    "name": "करुणामय उपस्थिति भाव",
+    "englishName": "Compassionate presence bhava",
+    "translatedName": "Supporting others without losing ourselves",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we remain lovingly present with compassion, hope and practical support without becoming emotionally overwhelmed or disconnected.",
+    "keywords": ["compassion", "support", "balance", "care", "inner peace"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "सुरक्षित संबंध भाव",
+    "englishName": "Secure relationships bhava",
+    "translatedName": "Feeling secure in healthy relationships",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we respect the healthy friendships, professional relationships and appropriate connections of our loved ones without seeing them as threats.",
+    "keywords": ["security", "relationships", "trust", "friendship", "boundaries"]
+  },
+  {
+    "header": "🥇194",
+    "name": "नियंत्रण मुक्ति भाव",
+    "englishName": "Freedom from controlling bhava",
+    "translatedName": "Freedom from monitoring and controlling others",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May jealousy, insecurity and fear no longer compel us to monitor, control or constantly seek information about another person's interactions.",
+    "keywords": ["control", "jealousy", "monitoring", "trust", "relationships"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सत्य और मर्यादा भाव",
+    "englishName": "Truth and healthy boundaries bhava",
+    "translatedName": "Truth with appropriate privacy",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop hiding innocent interactions or speaking half-truths out of fear. May we balance truth, privacy, sensitivity and healthy boundaries wisely.",
+    "keywords": ["truth", "privacy", "boundaries", "communication", "honesty"]
+  },
+  {
+    "header": "🥇194",
+    "name": "विश्वास चक्र मुक्ति भाव",
+    "englishName": "Trust cycle bhava",
+    "translatedName": "Freedom from suspicion and secrecy cycles",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May relationships become free from the cycle of suspicion leading to secrecy and secrecy leading to more suspicion. May honesty and emotional safety grow naturally.",
+    "keywords": ["trust", "honesty", "suspicion", "relationships", "maturity"]
+  },
+  {
+    "header": "🥇194",
+    "name": "निर्भीक सत्य संवाद भाव",
+    "englishName": "Fearless truthful communication bhava",
+    "translatedName": "Communicating truth without fear",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May fear of conflict or misunderstanding no longer make us distort the truth. May we communicate with honesty, sensitivity and courage.",
+    "keywords": ["truth", "communication", "courage", "conflict", "boundaries"]
+  },
+  {
+    "header": "🥇194",
+    "name": "निर्दोष आत्मविश्वास भाव",
+    "englishName": "Innocent confidence bhava",
+    "translatedName": "Remaining peaceful in our integrity",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop feeling guilty or pressured to repeatedly justify innocent and appropriate choices. May we remain calm in our integrity.",
+    "keywords": ["integrity", "confidence", "guilt", "boundaries", "relationships"]
+  },
+  {
+    "header": "🥇194",
+    "name": "स्वस्थ निकटता भाव",
+    "englishName": "Healthy closeness bhava",
+    "translatedName": "Balancing intimacy with individuality",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we understand that closeness does not grant ownership over another person's conversations, friendships or individuality. May love grow alongside trust and freedom.",
+    "keywords": ["individuality", "love", "trust", "privacy", "relationships"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "जिम्मेदारी विवेक भाव",
+    "englishName": "Responsibility discernment bhava",
+    "translatedName": "Recognizing whose responsibility it is",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we compassionately distinguish between helping someone and taking responsibility for solving their personal financial or practical problems.",
+    "keywords": ["responsibility", "discernment", "boundaries", "help", "financial"]
+  },
+  {
+    "header": "🥇194",
+    "name": "स्वावलंबी समाधान भाव",
+    "englishName": "Self-reliant solutions bhava",
+    "translatedName": "Resolving our own problems responsibly",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop persuading others to solve our personal financial or practical problems by making purchases or commitments they do not need.",
+    "keywords": ["self responsibility", "persuasion", "sales", "boundaries"]
+  },
+  {
+    "header": "🥇194",
+    "name": "स्पष्ट उत्तर सम्मान भाव",
+    "englishName": "Respecting clear answers bhava",
+    "translatedName": "Respecting another person's no",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we respectfully accept a clear no instead of repeatedly trying to change another person's decision.",
+    "keywords": ["respect", "no", "boundaries", "sales", "persuasion"]
+  },
+  {
+    "header": "🥇194",
+    "name": "विनम्र विराम भाव",
+    "englishName": "Graceful conversation closure bhava",
+    "translatedName": "Ending unwanted discussions respectfully",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we lovingly end conversations that no longer serve us while maintaining kindness and respect.",
+    "keywords": ["conversation", "boundaries", "respect", "communication"]
+  },
+  {
+    "header": "🥇194",
+    "name": "गिल्ट मुक्त निर्णय भाव",
+    "englishName": "Guilt-free decisions bhava",
+    "translatedName": "Making decisions without guilt",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May another person's urgency, disappointment or possible loss no longer pressure us into changing our own wise decisions.",
+    "keywords": ["guilt", "decision", "boundaries", "urgency", "wisdom"]
+  },
+  {
+    "header": "🥇194",
+    "name": "वास्तविक आवश्यकता भाव",
+    "englishName": "True need bhava",
+    "translatedName": "Making decisions from genuine need",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our purchases, commitments and decisions arise from genuine need, resources and wisdom rather than pressure or persuasion.",
+    "keywords": ["needs", "purchase", "commitment", "wisdom", "family", "resources"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "परम गुरु समर्पण भाव",
+    "englishName": "Param Guru surrender bhava",
+    "translatedName": "Deepening Param's surrender to MahaGuru",
+    "audience": "for Param",
+    "date": "2026-07-11",
+    "description": "May Param's surrender, faith, trust and love toward MahaGuru Ji continue to deepen, and may he receive the Guru's grace and guidance with an open heart.",
+    "keywords": ["Param", "MahaGuru", "surrender", "faith", "trust", "love"]
+  },
+  {
+    "header": "🥇194",
+    "name": "रितु गुरु समर्पण भाव",
+    "englishName": "Ritu Guru surrender bhava",
+    "translatedName": "Deepening Ritu's surrender to MahaGuru",
+    "audience": "for Ritu",
+    "date": "2026-07-11",
+    "description": "May Ritu's surrender, faith, trust and love toward MahaGuru Ji deepen continuously, and may she receive his grace and teachings with openness.",
+    "keywords": ["Ritu", "MahaGuru", "surrender", "faith", "trust", "love"]
+  },
+  {
+    "header": "🥇194",
+    "name": "रितु प्रेम विस्तार भाव",
+    "englishName": "Ritu love expansion bhava",
+    "translatedName": "Growing love and respect toward Param",
+    "audience": "for Ritu",
+    "date": "2026-07-11",
+    "description": "May Ritu's love, trust, respect, openness, cooperation and healthy surrender toward Param continue to grow for the highest good.",
+    "keywords": ["Ritu", "Param", "love", "respect", "trust", "relationship"]
+  },
+  {
+    "header": "🥇194",
+    "name": "प्रेम ग्रहण भाव",
+    "englishName": "Receiving true guidance bhava",
+    "translatedName": "Receiving love and right guidance openly",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of resisting genuine love, grace and appropriate guidance because of ego, fear or doubt dissolve completely.",
+    "keywords": ["guidance", "love", "ego", "fear", "openness", "faith"]
+  },
+  {
+    "header": "🥇194",
+    "name": "शुद्ध समर्पण भाव",
+    "englishName": "Pure surrender bhava",
+    "translatedName": "Conscious surrender through love and wisdom",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our surrender arise from love, awareness, discernment and divine trust rather than fear, pressure or blind following.",
+    "keywords": ["surrender", "awareness", "discernment", "trust", "love", "consciousness"]
+  },
+  {
+    "header": "🥇194",
+    "name": "वर्तमान उपस्थिति भाव",
+    "englishName": "Vartaman upasthiti bhava",
+    "translatedName": "Being fully present in the current moment",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all conscious and unconscious patterns of becoming mentally absent by getting lost in thoughts about people, relationships, conversations, problems, the past or the future come to an end. May we remain fully present with the people and moment before us.",
+    "keywords": ["presence", "present moment", "attention", "mindfulness", "overthinking", "relationships", "focus"]
+  },
+  {
+    "header": "🥇194",
+    "name": "मन-शरीर एकत्व भाव",
+    "englishName": "Mann-sharir ekatva bhava",
+    "translatedName": "Mind and body remain together",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our attention naturally remain where our body is. Instead of being mentally trapped in another person, place, problem or time, may we lovingly give our complete attention to the person, work and life before us.",
+    "keywords": ["mind", "body", "attention", "presence", "focus", "awareness", "relationships"]
+  },
+  {
+    "header": "🥇194",
+    "name": "वर्तमान जीवन प्राथमिकता भाव",
+    "englishName": "Vartaman jeevan prathamikta bhava",
+    "translatedName": "Giving priority to the present moment",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May unresolved concerns and mental analysis no longer dominate our family, children, work, rest or present life. May we fully see, hear, feel and engage with what is before us.",
+    "keywords": ["family", "children", "presence", "current moment", "mental analysis", "focus", "life balance"]
+  },
+  {
+    "header": "🥇194",
+    "name": "एक समय एक कार्य भाव",
+    "englishName": "Ek samay ek karya bhava",
+    "translatedName": "One person, one task, one moment",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we gain the discernment to know what deserves attention now and what can wait. Instead of mentally living in unfinished work, may we remain fully present with one person, one task and one moment at a time.",
+    "keywords": ["discernment", "single task", "focus", "attention", "priorities", "mindfulness"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "अनावश्यक भागदौड़ मुक्ति भाव",
+    "englishName": "Anavashyak bhagdaud mukti bhava",
+    "translatedName": "Freedom from unnecessary rushing",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of waking with fear of being late, rushing through the day and constantly living under pressure disappear. May we live with greater ease, order and balance.",
+    "keywords": ["rush", "stress", "morning", "time", "traffic", "balance", "planning"]
+  },
+  {
+    "header": "🥇194",
+    "name": "संतुलित जीवन गति भाव",
+    "englishName": "Santulit jeevan gati bhava",
+    "translatedName": "Balanced pace of life",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop accepting hurry, deadlines, traffic and constant rushing as unavoidable. May we wisely organize our work, travel and daily routine to reduce unnecessary stress and exhaustion.",
+    "keywords": ["balance", "routine", "deadlines", "travel", "planning", "stress", "wisdom"]
+  },
+  {
+    "header": "🥇194",
+    "name": "कार्य-जीवन संतुलन भाव",
+    "englishName": "Karya-jeevan santulan bhava",
+    "translatedName": "Healthy work-life balance",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we no longer sacrifice our health, sleep, peace and family life in the name of work. May work remain a meaningful part of life rather than consuming our entire life.",
+    "keywords": ["work life balance", "health", "sleep", "family", "peace", "career"]
+  },
+  {
+    "header": "🥇194",
+    "name": "अपनी गति भाव",
+    "englishName": "Apni gati bhava",
+    "translatedName": "Living at our own natural pace",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop believing that being busier, more hurried or more exhausted makes us more successful. May we choose a pace of life appropriate to our own needs and circumstances.",
+    "keywords": ["success", "pace", "comparison", "busyness", "freedom", "balance"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सरल जीवन व्यवस्था भाव",
+    "englishName": "Saral jeevan vyavastha bhava",
+    "translatedName": "Simplifying work and daily life",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "Where appropriate, may simpler, more flexible and intelligent ways of reducing unnecessary travel, poor planning and overloaded schedules naturally become visible. May technology and systems support an easier life.",
+    "keywords": ["technology", "planning", "travel", "simplicity", "efficiency", "systems"]
+  },
+  {
+    "header": "🥇194",
+    "name": "शांत कर्म भाव",
+    "englishName": "Shant karma bhava",
+    "translatedName": "Working diligently with inner peace",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we remain hardworking and responsible without believing that unnecessary suffering is part of life. May we create space for rest, health, family and inner peace while fulfilling our duties.",
+    "keywords": ["peace", "work", "responsibility", "rest", "family", "health"]
+  },
+  {
+    "header": "🥇194",
+    "name": "जीवन यात्रा जागरूकता भाव",
+    "englishName": "Jeevan yatra jagrukta bhava",
+    "translatedName": "Awareness throughout life's journey",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our lives not be spent only running between places, deadlines and responsibilities. May we remain aware enough to experience life itself with simplicity, balance and inner peace.",
+    "keywords": ["life journey", "awareness", "balance", "inner peace", "mindfulness", "living"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "तुरंत राहत संयम भाव",
+    "englishName": "Turant rahat sanyam bhava",
+    "translatedName": "Wise relief instead of excess",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of excessively using food, alcohol, medicines or behaviours for immediate relief from discomfort disappear. May we wisely recognize and meet our real needs through healthy means.",
+    "keywords": ["addiction", "coping", "stress", "alcohol", "food", "medicine", "healthy habits"]
+  },
+  {
+    "header": "🥇194",
+    "name": "संयमित मात्रा भाव",
+    "englishName": "Sanyamit matra bhava",
+    "translatedName": "Knowing when to stop",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we become free from consuming more and more once we begin. May we naturally stop at an appropriate amount with awareness and self-regulation.",
+    "keywords": ["moderation", "self control", "consumption", "self regulation", "discipline"]
+  },
+  {
+    "header": "🥇194",
+    "name": "स्वस्थ विश्राम भाव",
+    "englishName": "Swasth vishraam bhava",
+    "translatedName": "Healthy rest and restorative sleep",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our body and nervous system learn to find rest, relaxation and restorative sleep through healthy and safe methods rather than through intoxication or harm.",
+    "keywords": ["sleep", "rest", "nervous system", "relaxation", "healthy", "wellbeing"]
+  },
+  {
+    "header": "🥇194",
+    "name": "अस्थायी राहत विवेक भाव",
+    "englishName": "Asthayi rahat vivek bhava",
+    "translatedName": "Discernment between temporary relief and healing",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we understand the difference between temporary relief and genuine healing, and avoid becoming dependent on quick solutions.",
+    "keywords": ["temporary relief", "healing", "dependence", "clarity", "discernment"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सुरक्षित उपचार भाव",
+    "englishName": "Surakshit upchar bhava",
+    "translatedName": "Safe and responsible treatment",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we respect proper dosage, interactions, side effects and medical guidance. May our body's safety always take priority over immediate relief.",
+    "keywords": ["medical guidance", "medicine", "safety", "dosage", "health", "responsibility"]
+  },
+  {
+    "header": "🥇194",
+    "name": "आत्मिक स्थिरता भाव",
+    "englishName": "Aatmik sthirta bhava",
+    "translatedName": "Inner stability during discomfort",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we gain such inner stability that even in difficult moments we do not move toward self-harming extremes. May we seek help, accept treatment and care for ourselves with love, patience and responsibility.",
+    "keywords": ["inner stability", "self care", "patience", "help", "healing", "resilience"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "प्रतीक्षा मुक्ति भाव",
+    "englishName": "Pratiksha mukti bhava",
+    "translatedName": "Freedom from conditioned waiting",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of automatically expecting someone's call or message simply because of habit disappear. May our nervous system stop waiting without any real communication.",
+    "keywords": ["waiting", "conditioning", "calls", "messages", "habit", "nervous system"]
+  },
+  {
+    "header": "🥇194",
+    "name": "तैयार अवस्था मुक्ति भाव",
+    "englishName": "Taiyar avastha mukti bhava",
+    "translatedName": "Freedom from staying in constant readiness",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop mentally preparing for communication that has not arrived. May our attention remain with the present instead of constantly waiting for our phone.",
+    "keywords": ["phone", "readiness", "waiting", "attention", "habit", "present moment"]
+  },
+  {
+    "header": "🥇194",
+    "name": "स्वतंत्र उपस्थिति भाव",
+    "englishName": "Swatantra upasthiti bhava",
+    "translatedName": "Living freely without waiting",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we remain fully present with our work, family and life regardless of whether someone calls or messages. When communication comes, we respond appropriately; until then we remain free from waiting.",
+    "keywords": ["presence", "freedom", "calls", "messages", "family", "work", "mindfulness"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "अज्ञात संदेश मुक्ति भाव",
+    "englishName": "Ajnaat sandesh mukti bhava",
+    "translatedName": "Freedom from needing deleted or unsent messages",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of needing to know what someone deleted, withdrew or chose not to share disappear. What is not communicated to us is not our responsibility to know.",
+    "keywords": ["deleted message", "unsent", "communication", "curiosity", "boundaries", "peace"]
+  },
+  {
+    "header": "🥇194",
+    "name": "कल्पना मुक्ति भाव",
+    "englishName": "Kalpana mukti bhava",
+    "translatedName": "Freedom from filling unknowns with imagination",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we stop filling the empty space left by deleted messages or unsaid words with imagined meanings, past conflicts or assumptions. Until something is clearly communicated, we remain peaceful.",
+    "keywords": ["imagination", "assumptions", "deleted messages", "overthinking", "peace", "clarity"]
+  },
+  {
+    "header": "🥇194",
+    "name": "स्पष्ट संवाद सम्मान भाव",
+    "englishName": "Spasht samvaad samman bhava",
+    "translatedName": "Respecting clear communication",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we respond only to what others clearly communicate and lovingly leave withdrawn or deleted communication with them. May we remain peaceful in our present life.",
+    "keywords": ["communication", "clarity", "boundaries", "respect", "peace", "relationships"]
+  },
+  {
+    "header": "🥇194",
+    "name": "अनजानी बात का भार मुक्ति भाव",
+    "englishName": "Anjaani baat ka bhaar mukti bhava",
+    "translatedName": "Freedom from carrying the burden of unknown information",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all conscious and unconscious patterns of carrying the stress of a call, message, unread communication, unresolved uncertainty or any night-time event in our mind, stomach, body and nervous system even after it has passed come to an end. May our body lovingly release whatever no longer requires action.",
+    "keywords": ["unknown", "stress", "body", "nervous system", "call", "message", "uncertainty", "release", "past events"]
+  },
+  {
+    "header": "🥇194",
+    "name": "नई सुबह नया मन भाव",
+    "englishName": "Nayi subah naya mann bhava",
+    "translatedName": "Beginning each new day with a fresh nervous system",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of reactivating the previous night's calls, messages, concerns, unfinished conversations or unknown possibilities immediately upon waking disappear. May every new day and every new moment truly feel new for our nervous system.",
+    "keywords": ["morning", "waking", "nervous system", "new day", "previous night", "messages", "concerns", "fresh start"]
+  },
+  {
+    "header": "🥇194",
+    "name": "अनपढ़े संदेश चिंता मुक्ति भाव",
+    "englishName": "Anpadhe sandesh chinta mukti bhava",
+    "translatedName": "Freedom from anxiety about unread messages or unknown information",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of holding unread messages, unheard voice notes or unknown information as tension, heaviness or anxiety in the body disappear. May our body stop carrying the burden of what we do not yet know.",
+    "keywords": ["unread message", "voice note", "unknown information", "anxiety", "heaviness", "tension", "body", "release"]
+  },
+  {
+    "header": "🥇194",
+    "name": "शरीर जागरूकता भाव",
+    "englishName": "Sharir jagrukta bhava",
+    "translatedName": "Awareness of bodily sensations without fear",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we lovingly recognize restlessness, heaviness, tension or alertness arising in our body without fear or creating new stories. May all patterns of interpreting simple alertness as proof that something bad is about to happen come to an end.",
+    "keywords": ["body awareness", "alertness", "restlessness", "tension", "heaviness", "fear", "stories", "mindfulness"]
+  },
+  {
+    "header": "🥇194",
+    "name": "तत्काल आश्वासन मुक्ति भाव",
+    "englishName": "Tatkaal aashwasan mukti bhava",
+    "translatedName": "Freedom from the urge for immediate reassurance",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we become free from the compulsion to immediately check our phone, seek reassurance or eliminate uncertainty the moment an uncomfortable sensation appears. May we communicate at the right time while allowing our body to return to rest, safety and the present moment.",
+    "keywords": ["phone checking", "reassurance", "uncertainty", "compulsion", "rest", "present moment", "safety", "communication"]
+  },
+  {
+    "header": "🥇194",
+    "name": "जागरूकता से स्थिरता भाव",
+    "englishName": "Jagrukta se sthirta bhava",
+    "translatedName": "Awareness leading to clarity and inner stability",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we gain the ability to recognize, understand, name and peacefully observe what is happening within us. May awareness gradually release unnecessary fear, tension and accumulated alertness, leading us toward clarity, regulation and inner stability.",
+    "keywords": ["awareness", "clarity", "inner stability", "regulation", "fear", "tension", "release", "mindfulness"]
+  },
+  {
+    "header": "🥇194",
+    "name": "अनिश्चितता विश्राम भाव",
+    "englishName": "Anishchitata vishraam bhava",
+    "translatedName": "Resting peacefully despite uncertainty",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our mind and body deeply learn that uncertainty does not need to be carried through the night and into the next morning. When action is needed we will respond appropriately, and when nothing needs to be done we can genuinely rest, sleep and return to the present moment.",
+    "keywords": ["uncertainty", "rest", "sleep", "present moment", "response", "nervous system", "peace"]
+  },
+
+  {
+    "header": "🥇194",
+    "name": "सरल अर्थ दर्शन भाव",
+    "englishName": "Saral arth darshan bhava",
+    "translatedName": "Seeing simple things as they are",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all conscious and unconscious patterns of searching for hidden meanings, rejection, complaints, pressure or unspoken messages behind words, tone, silence, calls, messages, decisions or behaviour come to an end. May we naturally accept simple things as they are.",
+    "keywords": ["hidden meaning", "overthinking", "interpretation", "words", "tone", "silence", "messages", "simplicity"]
+  },
+  {
+    "header": "🥇194",
+    "name": "तथ्य और अर्थ विवेक भाव",
+    "englishName": "Tathya aur arth vivek bhava",
+    "translatedName": "Distinguishing facts from interpretations",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of imagining another person's thoughts, intentions or feelings beyond what they actually said or did disappear. May we clearly distinguish between facts and our own interpretations.",
+    "keywords": ["facts", "interpretation", "assumptions", "intentions", "mind reading", "clarity", "communication"]
+  },
+  {
+    "header": "🥇194",
+    "name": "नकारात्मक अर्थ मुक्ति भाव",
+    "englishName": "Nakaratmak arth mukti bhava",
+    "translatedName": "Freedom from creating negative meanings",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May all patterns of interpreting normal words, tone changes, silence, delays or plan changes as rejection, disappointment or relationship problems disappear. Until something is clearly communicated, may our mind stop creating unnecessary negative meanings.",
+    "keywords": ["negative interpretation", "delay", "tone", "silence", "plan change", "relationship", "rejection", "assumption"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सरल विश्वास भाव",
+    "englishName": "Saral vishwas bhava",
+    "translatedName": "Trusting simple meanings",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May we deeply trust that not everything carries a hidden meaning. May we naturally understand that sometimes 'okay' simply means 'okay', silence is simply silence, and a practical decision is simply practical.",
+    "keywords": ["trust", "simplicity", "hidden meaning", "clarity", "silence", "communication", "relationships"]
+  },
+  {
+    "header": "🥇194",
+    "name": "शांत स्पष्टता संवाद भाव",
+    "englishName": "Shant spashtata samvaad bhava",
+    "translatedName": "Seeking clarity peacefully when needed",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "Whenever genuine clarification is needed, may we calmly ask at the appropriate time instead of repeatedly creating meanings in our mind. Where clarification is unnecessary, may we peacefully let the matter go and return to the present moment.",
+    "keywords": ["clarification", "communication", "peace", "questions", "present moment", "letting go", "clarity"]
+  },
+  {
+    "header": "🥇194",
+    "name": "सहज संबंध भाव",
+    "englishName": "Sahaj sambandh bhava",
+    "translatedName": "Living relationships with simplicity and trust",
+    "audience": "for all",
+    "date": "2026-07-11",
+    "description": "May our nervous system become completely free from the need to analyse every interaction, decode every behaviour or constantly search for possible threats. May we live our relationships with awareness, sensitivity, simplicity, trust, clarity and inner peace.",
+    "keywords": ["relationships", "nervous system", "analysis", "overthinking", "trust", "clarity", "inner peace", "simplicity"]
+  },
 {
 "header": "🥇193",
 "name": "वर्तमान को भविष्य मानना मुक्ति भाव",
