@@ -1,6 +1,160 @@
 [
   {
     "header": "🥇195",
+    "name": "स्वतंत्र अपेक्षा भाव",
+    "englishName": "Freedom from expectations bhava",
+    "translatedName": "Freedom instead of obligations",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we lovingly listen to each other's wishes and preferences without turning them into permanent obligations, duties or compulsory relationship conditions, living with freedom, wisdom and the highest good.",
+    "keywords": ["expectations", "freedom", "relationship", "obligation", "wisdom"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वाभाविक संबंध भाव",
+    "englishName": "Natural relationship bhava",
+    "translatedName": "Growing closeness with growing freedom",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May increasing closeness also increase freedom, trust and naturalness, instead of reducing individuality through fixed expectations, routines or rules.",
+    "keywords": ["relationship", "trust", "freedom", "closeness", "individuality"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वाभाविक प्रेम प्रवाह भाव",
+    "englishName": "Natural love flow bhava",
+    "translatedName": "Love flowing naturally",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May care, affection and support flow naturally rather than through obligation, pressure or fear, keeping our relationships free from behavioural contracts.",
+    "keywords": ["love", "care", "support", "relationships", "naturalness"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "स्पष्ट भावनात्मक संवाद भाव",
+    "englishName": "Clear emotional communication bhava",
+    "translatedName": "Expressing emotional needs clearly",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we lovingly express our emotional needs, wishes and expectations directly instead of expecting others to understand them without being told.",
+    "keywords": ["communication", "emotions", "needs", "clarity", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "पारस्परिक खुलापन भाव",
+    "englishName": "Mutual openness bhava",
+    "translatedName": "Healthy openness in relationships",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we comfortably express when we need support, and may others also communicate their needs with clarity, freedom and mutual openness.",
+    "keywords": ["mutual openness", "support", "communication", "relationships", "clarity"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वस्थ संबंध संवाद भाव",
+    "englishName": "Healthy relationship communication bhava",
+    "translatedName": "Relationships based on clarity and trust",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our relationships be guided by clarity, direct communication, mutual freedom and trust instead of assumptions, guilt, silent expectations or emotional pressure.",
+    "keywords": ["relationships", "communication", "trust", "clarity", "freedom"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र निकटता भाव",
+    "englishName": "Free intimacy bhava",
+    "translatedName": "Intimacy with freedom",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May emotional, physical and sexual intimacy deepen while protecting freedom, individuality and naturalness instead of creating hidden obligations or expectations.",
+    "keywords": ["intimacy", "freedom", "relationship", "individuality", "trust"]
+  },
+  {
+    "header": "🥇195",
+    "name": "सुरक्षित निकटता भाव",
+    "englishName": "Safe intimacy bhava",
+    "translatedName": "Intimacy rooted in safety and trust",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our nervous system associate intimacy with safety, ease, joy, trust and openness rather than pressure, monitoring or behavioural expectations.",
+    "keywords": ["intimacy", "safety", "trust", "ease", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वैच्छिक प्रेम भाव",
+    "englishName": "Voluntary love bhava",
+    "translatedName": "Love without hidden contracts",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our relationships be based on voluntary participation, mutual respect and freedom rather than hidden emotional contracts or additional rights.",
+    "keywords": ["love", "freedom", "respect", "voluntary", "relationships"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "नवीन संवाद भाव",
+    "englishName": "Fresh communication bhava",
+    "translatedName": "Every conversation as a new opportunity",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we approach every conversation with openness, clarity and hope instead of assuming failure because of past disagreements or misunderstandings.",
+    "keywords": ["communication", "openness", "clarity", "relationships", "healing"]
+  },
+  {
+    "header": "🥇195",
+    "name": "पारस्परिक समझ भाव",
+    "englishName": "Mutual understanding bhava",
+    "translatedName": "Understanding before explaining",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we first seek to understand the other person before expressing ourselves, creating mutual understanding instead of trying to prove ourselves right.",
+    "keywords": ["understanding", "communication", "listening", "relationships", "wisdom"]
+  },
+  {
+    "header": "🥇195",
+    "name": "धैर्यपूर्ण संवाद भाव",
+    "englishName": "Patient communication bhava",
+    "translatedName": "Trusting understanding to grow",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we not see delayed understanding as relationship failure, but trust that patience, openness and time can deepen mutual understanding.",
+    "keywords": ["patience", "communication", "relationships", "understanding", "trust"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "निस्वार्थ प्रेम भाव",
+    "englishName": "Selfless love bhava",
+    "translatedName": "Love beyond behavioural contracts",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May emotional, physical and sexual closeness remain a beautiful gift rather than becoming the basis for future obligations, repeated proofs or behavioural contracts.",
+    "keywords": ["love", "closeness", "contracts", "relationships", "freedom"]
+  },
+  {
+    "header": "🥇195",
+    "name": "कृतज्ञ सहयोग भाव",
+    "englishName": "Grateful cooperation bhava",
+    "translatedName": "Mutual contribution without emotional debt",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we recognise each other's contributions with gratitude without turning them into emotional debts, obligations or future expectations.",
+    "keywords": ["gratitude", "contribution", "relationships", "cooperation", "freedom"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र प्रेम मापन भाव",
+    "englishName": "Love beyond measurement bhava",
+    "translatedName": "Love beyond calls and messages",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we stop measuring love through the frequency of calls, messages, meetings or expressions, allowing each other the freedom to be authentic while enjoying a deep, secure and joyful relationship.",
+    "keywords": ["love", "calls", "messages", "trust", "relationships", "freedom"]
+  },
+  {
+    "header": "🥇195",
     "name": "पुराने समझौतों की समीक्षा भाव",
     "englishName": "Review old agreements bhava",
     "translatedName": "Reviewing old agreements with changing circumstances",
