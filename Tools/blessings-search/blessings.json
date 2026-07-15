@@ -1,6 +1,403 @@
 [
   {
     "header": "🥇195",
+    "name": "सिद्धांत आधारित संबंध भाव",
+    "englishName": "Principle-based relationship bhava",
+    "translatedName": "Relationships guided by universal principles",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we understand the universal principles behind relationship situations instead of reacting only to personal expectations or isolated events.",
+    "keywords": ["relationship", "principles", "wisdom", "understanding", "root cause"]
+  },
+  {
+    "header": "🥇195",
+    "name": "पारस्परिक सम्मान भाव",
+    "englishName": "Mutual respect bhava",
+    "translatedName": "Respecting both individualities equally",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we honour both our own and the other person's individuality equally, finding relationship principles that serve the highest good of both.",
+    "keywords": ["respect", "individuality", "relationship", "maturity", "balance"]
+  },
+  {
+    "header": "🥇195",
+    "name": "जीवंत संबंध भाव",
+    "englishName": "Living relationship bhava",
+    "translatedName": "Relationships guided by living principles",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our relationships evolve through conscious choice, mutual understanding and freedom rather than fixed expectations, assumptions or rigid behavioural rules.",
+    "keywords": ["relationship", "freedom", "conscious choice", "growth", "understanding"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "वाणी विवेक भाव",
+    "englishName": "Speech discernment bhava",
+    "translatedName": "Wisdom of time, context and speech",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we naturally know what to say, when to say it, how to say it, to whom to say it and when silence serves the highest good.",
+    "keywords": ["speech", "discernment", "wisdom", "communication", "timing"]
+  },
+  {
+    "header": "🥇195",
+    "name": "संवेदनशील अभिव्यक्ति भाव",
+    "englishName": "Sensitive expression bhava",
+    "translatedName": "Speaking with awareness and dignity",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we choose words that honour the emotional context and increase clarity, trust, dignity and connection instead of creating hurt or misunderstanding.",
+    "keywords": ["communication", "sensitivity", "trust", "clarity", "dignity"]
+  },
+  {
+    "header": "🥇195",
+    "name": "सौहार्दपूर्ण वाणी भाव",
+    "englishName": "Harmonious speech bhava",
+    "translatedName": "Speech that creates harmony",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our words, silence and expressions promote harmony, understanding and mutual respect rather than conflict, comparison or insecurity.",
+    "keywords": ["speech", "harmony", "respect", "understanding", "communication"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "सच्ची देखभाल पहचान भाव",
+    "englishName": "Recognising true care bhava",
+    "translatedName": "Understanding genuine expressions of care",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we recognise genuine love and care beyond calls, messages, visits or physical presence, understanding that everyone expresses care differently.",
+    "keywords": ["care", "love", "support", "relationships", "understanding"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्पष्ट सहायता भाव",
+    "englishName": "Clear support bhava",
+    "translatedName": "Expressing the need for support",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we express our need for care, companionship or support with love, clarity and respect instead of silent expectations or emotional pressure.",
+    "keywords": ["support", "communication", "care", "clarity", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "परिपक्व देखभाल भाव",
+    "englishName": "Mature care bhava",
+    "translatedName": "Accepting the support that truly helps",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we value support that genuinely promotes healing, harmony and practical wisdom rather than measuring care by frequency or quantity.",
+    "keywords": ["care", "healing", "support", "maturity", "relationships"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "वर्तमान जीवन भाव",
+    "englishName": "Present moment living bhava",
+    "translatedName": "Living free from imagined futures",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we stop carrying the emotional burden of imagined future situations and remain calm, clear and rooted in the present moment.",
+    "keywords": ["present moment", "future", "anxiety", "clarity", "peace"]
+  },
+  {
+    "header": "🥇195",
+    "name": "नया दृष्टिकोण भाव",
+    "englishName": "Fresh perspective bhava",
+    "translatedName": "Seeing each situation anew",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we stop automatically projecting past experiences onto new situations and approach each moment with openness, trust and a fresh perspective.",
+    "keywords": ["past", "future", "openness", "trust", "awareness"]
+  },
+  {
+    "header": "🥇195",
+    "name": "सहज भविष्य भाव",
+    "englishName": "Natural future bhava",
+    "translatedName": "Trusting our future responses",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we trust that we will respond wisely when future situations actually arise instead of mentally rehearsing fears in advance.",
+    "keywords": ["future", "trust", "wisdom", "present", "confidence"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "निमंत्रण विवेक भाव",
+    "englishName": "Invitation discernment bhava",
+    "translatedName": "Understanding invitation versus obligation",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we clearly distinguish between invitations and obligations, accepting only what aligns with our highest good.",
+    "keywords": ["invitation", "obligation", "discernment", "freedom", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र स्वीकृति भाव",
+    "englishName": "Free acceptance bhava",
+    "translatedName": "Freedom to say yes or no",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our yes arise from love and free choice, and our no be expressed respectfully and without guilt.",
+    "keywords": ["yes", "no", "boundaries", "freedom", "communication"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र संबंध निमंत्रण भाव",
+    "englishName": "Free relationship invitation bhava",
+    "translatedName": "Relationships free from hidden obligations",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May invitations and opportunities in our relationships remain loving invitations rather than hidden expectations or emotional pressure.",
+    "keywords": ["relationship", "invitation", "freedom", "respect", "choice"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "आंतरिक सुरक्षा भाव",
+    "englishName": "Inner emotional security bhava",
+    "translatedName": "Finding emotional security within",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our emotional security arise from within rather than depending on who calls, messages or pays attention to us.",
+    "keywords": ["emotional security", "inner stability", "relationships", "self", "peace"]
+  },
+  {
+    "header": "🥇195",
+    "name": "निर्भरता मुक्ति भाव",
+    "englishName": "Freedom from emotional dependency bhava",
+    "translatedName": "Freedom from replacing emotional dependence",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we stop unconsciously seeking another person whenever one person's attention decreases, accepting each relationship with maturity and freedom.",
+    "keywords": ["dependency", "relationships", "freedom", "maturity", "emotions"]
+  },
+  {
+    "header": "🥇195",
+    "name": "पूर्णता संबंध भाव",
+    "englishName": "Wholeness relationship bhava",
+    "translatedName": "Relationships rooted in inner completeness",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our relationships be rooted in inner completeness, gratitude, freedom and love rather than emotional dependency or rejection.",
+    "keywords": ["relationships", "gratitude", "inner completeness", "love", "freedom"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "अनाधिकार प्रेम भाव",
+    "englishName": "Love without ownership bhava",
+    "translatedName": "We belong together, not to each other",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May emotional, physical or sexual closeness never become ownership, entitlement or control, allowing love to remain free and respectful.",
+    "keywords": ["love", "ownership", "freedom", "relationship", "respect"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र अंतरंगता भाव",
+    "englishName": "Free intimacy bhava",
+    "translatedName": "Intimacy without entitlement",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we understand that intimacy never removes another person's freedom, individuality or right to make independent choices.",
+    "keywords": ["intimacy", "freedom", "individuality", "consent", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "सम्मानपूर्ण सीमाएँ भाव",
+    "englishName": "Respectful boundaries bhava",
+    "translatedName": "Trust instead of monitoring",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May trust replace monitoring, unnecessary explanations and control over another person's time, friendships, communication or personal life.",
+    "keywords": ["boundaries", "trust", "relationships", "freedom", "respect"]
+  },
+  {
+    "header": "🥇195",
+    "name": "वर्तमान सहमति भाव",
+    "englishName": "Present consent bhava",
+    "translatedName": "Respecting present willingness",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we honour present, free and clear willingness in every intimate moment, never treating past consent as permanent consent.",
+    "keywords": ["consent", "intimacy", "respect", "boundaries", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "निस्वार्थ प्रेम भाव",
+    "englishName": "Selfless love bhava",
+    "translatedName": "Love without emotional transactions",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we stop expecting love, loyalty or obedience in return for care, support or sacrifice, freeing love from transaction and debt.",
+    "keywords": ["love", "gratitude", "transaction", "relationships", "freedom"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र व्यक्तित्व भाव",
+    "englishName": "Individuality bhava",
+    "translatedName": "Protecting individuality in relationships",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we honour each other's individuality, responsibilities and personal life without seeing them as threats to our connection.",
+    "keywords": ["individuality", "relationships", "freedom", "trust", "boundaries"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वस्थ अभिव्यक्ति भाव",
+    "englishName": "Healthy emotional expression bhava",
+    "translatedName": "Expressing needs without control",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we express insecurity and unmet needs directly instead of using possessiveness, jealousy, anger, guilt or withdrawal to gain control.",
+    "keywords": ["emotions", "communication", "jealousy", "relationships", "healing"]
+  },
+  {
+    "header": "🥇195",
+    "name": "संतुलित अंतरंग संबंध भाव",
+    "englishName": "Balanced intimate relationship bhava",
+    "translatedName": "Deep closeness with healthy boundaries",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our intimate relationships protect freedom, consent, individuality, trust, respect and healthy boundaries alongside deep emotional closeness.",
+    "keywords": ["intimacy", "boundaries", "trust", "respect", "consent"]
+  },
+  {
+    "header": "🥇195",
+    "name": "चेतन प्रेम भाव",
+    "englishName": "Conscious love bhava",
+    "translatedName": "Love that deepens freedom",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May deeper love always bring greater respect, freedom and consciousness instead of reducing another person's independence.",
+    "keywords": ["love", "consciousness", "freedom", "respect", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "गोपनीयता सम्मान भाव",
+    "englishName": "Privacy respect bhava",
+    "translatedName": "Respecting privacy within closeness",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we understand that closeness never gives automatic rights over another person's conversations, friendships or personal details, honouring trust, privacy and freedom.",
+    "keywords": ["privacy", "trust", "relationships", "boundaries", "individuality"]
+  },
+
+  {
+    "header": "🥇195",
+    "name": "सचेत आध्यात्मिक संकल्प भाव",
+    "englishName": "Conscious spiritual commitment bhava",
+    "translatedName": "Living spiritual vows with wisdom",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we live our spiritual vows with clarity, freedom and wisdom, neither abandoning them through pressure nor turning them into rigid rules driven by fear or ego.",
+    "keywords": ["spirituality", "discipline", "brahmacharya", "wisdom", "clarity"]
+  },
+  {
+    "header": "🥇195",
+    "name": "दिव्य इच्छा विवेक भाव",
+    "englishName": "Divine will discernment bhava",
+    "translatedName": "Discerning divine guidance",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we clearly distinguish between personal desire, fear, another person's wishes and genuine inner guidance, making important decisions from peace and clarity.",
+    "keywords": ["divine will", "discernment", "guidance", "clarity", "spirituality"]
+  },
+  {
+    "header": "🥇195",
+    "name": "भयमुक्त अंतरंगता भाव",
+    "englishName": "Fear-free intimacy bhava",
+    "translatedName": "Freedom from fear created by past intimacy",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May past intimate experiences give us wisdom without creating fear that automatically withdraws us from future loving connection.",
+    "keywords": ["intimacy", "fear", "healing", "relationships", "growth"]
+  },
+  {
+    "header": "🥇195",
+    "name": "निर्भय साधना भाव",
+    "englishName": "Fearless spiritual practice bhava",
+    "translatedName": "Spiritual practice beyond avoidance",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our spiritual practices arise from genuine calling, love and conscious choice rather than fear, avoidance or difficult relationship dynamics.",
+    "keywords": ["spiritual practice", "fear", "brahmacharya", "clarity", "freedom"]
+  },
+  {
+    "header": "🥇195",
+    "name": "मूल कारण उपचार भाव",
+    "englishName": "Healing root causes bhava",
+    "translatedName": "Healing deeper relationship patterns",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we lovingly heal the deeper causes beneath intimacy challenges instead of focusing only on external behaviour.",
+    "keywords": ["healing", "communication", "relationships", "root causes", "growth"]
+  },
+  {
+    "header": "🥇195",
+    "name": "परिवर्तन स्वीकृति भाव",
+    "englishName": "Acceptance of change bhava",
+    "translatedName": "Accepting evolving intimacy",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we gracefully accept that intimacy, desires, pace and preferences evolve with healing and growth without forcing ourselves or others into old patterns.",
+    "keywords": ["change", "intimacy", "growth", "acceptance", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "समान गति भाव",
+    "englishName": "Shared pace bhava",
+    "translatedName": "Respecting each other's pace",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May both partners equally honour each other's comfort, willingness, pace and boundaries without pressure or urgency.",
+    "keywords": ["pace", "consent", "boundaries", "respect", "intimacy"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्पष्ट अंतरंग संवाद भाव",
+    "englishName": "Clear intimate communication bhava",
+    "translatedName": "Communicating intimate needs openly",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we openly communicate our changing intimate needs, preferences and boundaries with love and clarity before, during and after intimacy.",
+    "keywords": ["communication", "intimacy", "boundaries", "clarity", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "पारस्परिक सहजता भाव",
+    "englishName": "Mutual comfort bhava",
+    "translatedName": "Finding mutually comfortable intimacy",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we seek genuinely shared possibilities instead of pressuring one another, respectfully accepting different needs, pace and boundaries.",
+    "keywords": ["mutual understanding", "intimacy", "respect", "consent", "relationships"]
+  },
+  {
+    "header": "🥇195",
+    "name": "स्वतंत्र अंतरंग निर्णय भाव",
+    "englishName": "Free intimate decisions bhava",
+    "translatedName": "Choosing intimacy without fear",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May we neither move toward intimacy nor withdraw from it because of fear, but choose freely with clarity, consent, peace and the highest good.",
+    "keywords": ["intimacy", "freedom", "clarity", "consent", "fear"]
+  },
+  {
+    "header": "🥇195",
+    "name": "चेतन प्रेमपूर्ण अंतरंगता भाव",
+    "englishName": "Conscious intimate love bhava",
+    "translatedName": "Love guided by freedom and highest good",
+    "audience": "for all",
+    "date": "2026-07-13",
+    "description": "May our intimate relationships be guided by mutual willingness, tenderness, awareness, respect and inner peace, and may periods of brahmacharya, pause or distance also be lived with love, clarity and freedom from guilt whenever they serve the highest good.",
+    "keywords": ["love", "intimacy", "brahmacharya", "highest good", "freedom", "respect"]
+  },
+  {
+    "header": "🥇195",
     "name": "स्वतंत्र अपेक्षा भाव",
     "englishName": "Freedom from expectations bhava",
     "translatedName": "Freedom instead of obligations",
