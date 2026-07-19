@@ -1,5 +1,248 @@
 [
   {
+    "header": "🥇197",
+    "name": "भावनात्मक जागरूकता भाव",
+    "englishName": "Emotional awareness bhava",
+    "translatedName": "Awareness amidst emotions",
+    "date": "2026-07-18",
+    "description": "May we remain aware, stable and self-controlled in the midst of every emotion, responding with love, wisdom and awareness according to the highest good, while learning from our mistakes with peace and humility.",
+    "keywords": ["emotions", "awareness", "self-control", "wisdom", "mindfulness"]
+  },
+  {
+    "header": "🥇197",
+    "name": "क्रोध में करुणा भाव",
+    "englishName": "Compassion in anger bhava",
+    "translatedName": "Loving response during anger",
+    "date": "2026-07-18",
+    "description": "May anger never make us lose love, wisdom or inner stability. May every thought, word and action arise from compassion, respect and the highest good.",
+    "keywords": ["anger", "compassion", "love", "nonviolence", "relationships"]
+  },
+  {
+    "header": "🥇197",
+    "name": "भय में साहस भाव",
+    "englishName": "Courage in fear bhava",
+    "translatedName": "Courage and truth amidst fear",
+    "date": "2026-07-18",
+    "description": "May fear never disconnect us from truth, courage or responsibility. May we take necessary actions with awareness, faith and wisdom according to the highest good.",
+    "keywords": ["fear", "courage", "truth", "faith", "confidence"]
+  },
+  {
+    "header": "🥇197",
+    "name": "अपराधबोध मुक्ति भाव",
+    "englishName": "Freedom from guilt bhava",
+    "translatedName": "Self-compassion amidst guilt",
+    "date": "2026-07-18",
+    "description": "May we transform guilt into learning, self-compassion and growth, accepting our mistakes, making necessary corrections and moving forward with love and wisdom.",
+    "keywords": ["guilt", "self-compassion", "forgiveness", "growth", "healing"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आत्म-स्वीकृति भाव",
+    "englishName": "Self-acceptance bhava",
+    "translatedName": "Self-acceptance amidst shame",
+    "date": "2026-07-18",
+    "description": "May shame never diminish our worth. May we lovingly accept ourselves as unique expressions of the Divine, living with dignity, truth and self-respect.",
+    "keywords": ["shame", "self-worth", "self-acceptance", "dignity", "identity"]
+  },
+  {
+    "header": "🥇197",
+    "name": "स्वतंत्र प्रेम भाव",
+    "englishName": "Free love bhava",
+    "translatedName": "Love without attachment",
+    "date": "2026-07-18",
+    "description": "May our peace and identity never depend upon people, relationships or circumstances. May our love flow through freedom, trust, surrender and inner completeness.",
+    "keywords": ["attachment", "love", "freedom", "relationships", "trust"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आत्म-मूल्य स्थिरता भाव",
+    "englishName": "Inner self-worth bhava",
+    "translatedName": "Self-worth amidst rejection",
+    "date": "2026-07-18",
+    "description": "May rejection never diminish our self-worth. May we recognize our value through truth, God and our inner being, remaining established in self-respect and stability.",
+    "keywords": ["rejection", "self-worth", "confidence", "acceptance", "identity"]
+  },
+  {
+    "header": "🥇197",
+    "name": "खुला हृदय भाव",
+    "englishName": "Open heart bhava",
+    "translatedName": "Open heart amidst rejection",
+    "date": "2026-07-18",
+    "description": "May rejection never close our heart. May we remain open to love, trust and compassion while maintaining healthy boundaries and wisdom.",
+    "keywords": ["rejection", "heart", "love", "trust", "boundaries"]
+  },
+  {
+    "header": "🥇197",
+    "name": "मंगलभाव भाव",
+    "englishName": "Rejoicing for others bhava",
+    "translatedName": "Inner completeness amidst jealousy",
+    "date": "2026-07-18",
+    "description": "May jealousy transform into gratitude and joy for others. May we honour each person's journey while remaining fulfilled in our own divine path.",
+    "keywords": ["jealousy", "gratitude", "comparison", "joy", "contentment"]
+  },
+  {
+    "header": "🥇197",
+    "name": "वर्तमान विश्वास भाव",
+    "englishName": "Present-moment trust bhava",
+    "translatedName": "Trust amidst anxiety",
+    "date": "2026-07-18",
+    "description": "May anxiety never disconnect us from the present moment. May we perform our best actions while surrendering the future to Divine order with peace and trust.",
+    "keywords": ["anxiety", "present moment", "trust", "peace", "overthinking"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आंतरिक पूर्णता भाव",
+    "englishName": "Inner completeness bhava",
+    "translatedName": "Completeness amidst loneliness",
+    "date": "2026-07-18",
+    "description": "May loneliness reconnect us to our true Self and Divine presence, allowing us to enjoy relationships without becoming dependent on them for peace or love.",
+    "keywords": ["loneliness", "inner peace", "God", "self", "wholeness"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आशा पुरुषार्थ भाव",
+    "englishName": "Hope and perseverance bhava",
+    "translatedName": "Hope amidst hopelessness",
+    "date": "2026-07-18",
+    "description": "May hopelessness transform into courage, hope and determined effort, trusting in Divine grace and life's infinite possibilities.",
+    "keywords": ["hope", "hopelessness", "effort", "faith", "perseverance"]
+  },
+  {
+    "header": "🥇197",
+    "name": "संतोष भाव",
+    "englishName": "Contentment bhava",
+    "translatedName": "Contentment amidst craving",
+    "date": "2026-07-18",
+    "description": "May craving give way to inner fulfillment, gratitude and contentment, allowing us to experience completeness within rather than chasing endless desires.",
+    "keywords": ["craving", "contentment", "gratitude", "desire", "balance"]
+  },
+  {
+    "header": "🥇197",
+    "name": "स्वीकार भाव",
+    "englishName": "Acceptance bhava",
+    "translatedName": "Acceptance amidst grief",
+    "date": "2026-07-18",
+    "description": "May grief become a pathway to acceptance, gratitude and continued participation in the flow of life, while carrying forward love and wisdom.",
+    "keywords": ["grief", "acceptance", "loss", "healing", "life"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आंतरिक स्थिरता भाव",
+    "englishName": "Inner stability bhava",
+    "translatedName": "Stability amidst overwhelm",
+    "date": "2026-07-18",
+    "description": "May overwhelming situations never take away our clarity, discernment or stability. May we pause, observe and choose wisely before acting.",
+    "keywords": ["overwhelm", "clarity", "stability", "decision-making", "awareness"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आंतरिक सामर्थ्य भाव",
+    "englishName": "Inner strength bhava",
+    "translatedName": "Strength amidst helplessness",
+    "date": "2026-07-18",
+    "description": "May helplessness transform into courage, inner strength and purposeful action through trust in Divine grace and our own innate abilities.",
+    "keywords": ["helplessness", "strength", "courage", "empowerment", "faith"]
+  },
+  {
+    "header": "🥇197",
+    "name": "सहजता भाव",
+    "englishName": "Ease and acceptance bhava",
+    "translatedName": "Ease amidst perfectionism",
+    "date": "2026-07-18",
+    "description": "May perfectionism transform into joyful learning, acceptance of imperfections and balanced effort rooted in trust and growth.",
+    "keywords": ["perfectionism", "acceptance", "growth", "balance", "learning"]
+  },
+  {
+    "header": "🥇197",
+    "name": "निरंतर उत्साह भाव",
+    "englishName": "Steady enthusiasm bhava",
+    "translatedName": "Enthusiasm amidst discouragement",
+    "date": "2026-07-18",
+    "description": "May discouragement become an opportunity for perseverance, enthusiasm and continuous effort guided by the highest good.",
+    "keywords": ["discouragement", "motivation", "enthusiasm", "perseverance", "purpose"]
+  },
+  {
+    "header": "🥇197",
+    "name": "पछतावा मुक्ति भाव",
+    "englishName": "Freedom from regret bhava",
+    "translatedName": "Acceptance amidst regret",
+    "date": "2026-07-18",
+    "description": "May regret become wisdom, gratitude and present-moment awareness, freeing us from being trapped in the stories of the past.",
+    "keywords": ["regret", "acceptance", "forgiveness", "present", "healing"]
+  },
+  {
+    "header": "🥇197",
+    "name": "आत्मविश्वास भाव",
+    "englishName": "Self-confidence bhava",
+    "translatedName": "Confidence amidst self-doubt",
+    "date": "2026-07-18",
+    "description": "May self-doubt give way to trust in our inner guidance, Divine wisdom and true capabilities, allowing us to move forward with courage and clarity.",
+    "keywords": ["self-doubt", "confidence", "clarity", "faith", "inner guidance"]
+  },
+  {
+    "header": "🥇197",
+    "name": "सत्यनिष्ठ आत्म-स्वीकृति भाव",
+    "englishName": "Truth-based self-acceptance bhava",
+    "translatedName": "Freedom from approval seeking",
+    "date": "2026-07-18",
+    "description": "May our worth never depend on external approval. May we remain established in truth, self-respect and Divine trust instead of people-pleasing.",
+    "keywords": ["approval", "people pleasing", "truth", "self-respect", "acceptance"]
+  },
+  {
+    "header": "🥇197",
+    "name": "धैर्य भाव",
+    "englishName": "Patience bhava",
+    "translatedName": "Patience amidst impatience",
+    "date": "2026-07-18",
+    "description": "May impatience transform into trust in Divine timing, allowing us to act wholeheartedly while waiting peacefully for the right results.",
+    "keywords": ["patience", "divine timing", "trust", "waiting", "peace"]
+  },
+  {
+    "header": "🥇197",
+    "name": "क्षमा मुक्ति भाव",
+    "englishName": "Forgiveness and release bhava",
+    "translatedName": "Freedom from resentment",
+    "date": "2026-07-18",
+    "description": "May resentment dissolve into forgiveness, compassion and inner freedom, allowing us to release the burdens of the past with wisdom.",
+    "keywords": ["resentment", "forgiveness", "healing", "compassion", "freedom"]
+  },
+  {
+    "header": "🥇197",
+    "name": "विश्वास पुनर्स्थापन भाव",
+    "englishName": "Restored trust bhava",
+    "translatedName": "Trust amidst betrayal",
+    "date": "2026-07-18",
+    "description": "May betrayal become wisdom rather than bitterness, helping us maintain healthy boundaries while keeping our heart open to trust and love.",
+    "keywords": ["betrayal", "trust", "boundaries", "healing", "relationships"]
+  },
+  {
+    "header": "🥇197",
+    "name": "प्रामाणिक अभिव्यक्ति भाव",
+    "englishName": "Authentic expression bhava",
+    "translatedName": "Authenticity amidst vulnerability",
+    "date": "2026-07-18",
+    "description": "May we courageously express our true feelings, seek support when needed and live authentically with love, dignity and openness.",
+    "keywords": ["vulnerability", "authenticity", "courage", "expression", "love"]
+  },
+  {
+    "header": "🥇197",
+    "name": "विनम्र सत्य भाव",
+    "englishName": "Humble truth bhava",
+    "translatedName": "Humility amidst ego",
+    "date": "2026-07-18",
+    "description": "May truth always be greater than ego. May we accept feedback, acknowledge mistakes and grow with humility, honesty and self-awareness.",
+    "keywords": ["ego", "humility", "truth", "growth", "honesty"]
+  },
+  {
+    "header": "🥇197",
+    "name": "जीवंत हृदय भाव",
+    "englishName": "Living heart bhava",
+    "translatedName": "Living heart amidst emotional numbness",
+    "date": "2026-07-18",
+    "description": "May emotional numbness dissolve into a balanced, aware and open heart, allowing us to experience love, compassion, joy and Divine presence with wisdom.",
+    "keywords": ["emotional numbness", "heart", "love", "compassion", "awareness"]
+  },
+  {
     "header": "🥇196",
     "name": "आध्यात्मिक प्राथमिकता भाव",
     "englishName": "Spiritual priority bhava",
