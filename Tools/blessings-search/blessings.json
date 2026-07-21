@@ -1,5 +1,162 @@
 [
   {
+    "header": "🥇200",
+    "name": "आंतरिक मूल्य भाव",
+    "englishName": "Inner worth bhava",
+    "translatedName": "Recognising inner worth",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we stop seeking our worth, respect or identity through possessions, status, wealth, relationships or achievements, and recognise our true value through character, integrity, compassion, awareness, service and our inner connection with the Divine.",
+    "keywords": ["inner worth", "self-worth", "identity", "character", "integrity", "compassion", "awareness"]
+  },
+  {
+    "header": "🥇200",
+    "name": "वास्तविक सम्मान भाव",
+    "englishName": "True respect bhava",
+    "translatedName": "Living genuine respect",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we stop mistaking fear, silence, pressure or conflict avoidance from others as respect, and instead earn genuine respect through humility, responsibility, balanced conduct and noble character.",
+    "keywords": ["respect", "humility", "character", "responsibility", "conduct", "integrity"]
+  },
+  {
+    "header": "🥇200",
+    "name": "साधनों का सदुपयोग भाव",
+    "englishName": "Wise use of resources bhava",
+    "translatedName": "Using resources for highest good",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we use all resources, wealth and achievements according to need, usefulness, service and the highest good rather than to prove our importance or superiority.",
+    "keywords": ["resources", "service", "wealth", "highest good", "simplicity", "wisdom"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "निर्णय विवेक भाव",
+    "englishName": "Decision discernment bhava",
+    "translatedName": "Seeing the consequences of decisions",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we clearly recognise the possible consequences of every decision, relationship, behaviour or closeness before acting, and choose what serves the highest good.",
+    "keywords": ["decision", "discernment", "consequences", "wisdom", "relationships"]
+  },
+  {
+    "header": "🥇200",
+    "name": "उत्तरदायी संबंध भाव",
+    "englishName": "Responsible relationships bhava",
+    "translatedName": "Relationships with clarity and responsibility",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May confusion, hidden expectations and ambiguity disappear from our relationships, and may everyone remain aware, honest and responsible regarding their choices, boundaries and relationships.",
+    "keywords": ["relationships", "clarity", "boundaries", "honesty", "responsibility"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "समर्पित शुरुआत भाव",
+    "englishName": "Surrendered beginning bhava",
+    "translatedName": "Beginning relationships with surrender",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we begin every relationship, conversation and meaningful moment with trust, surrender, mutual consent and faith in the Divine instead of fear, expectations or past burdens.",
+    "keywords": ["surrender", "trust", "relationships", "faith", "consent", "new beginning"]
+  },
+  {
+    "header": "🥇200",
+    "name": "नवीन क्षण भाव",
+    "englishName": "Fresh moment bhava",
+    "translatedName": "Accepting each moment as new",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we embrace every situation as a fresh possibility with openness, trust and presence.",
+    "keywords": ["present moment", "openness", "fresh start", "acceptance", "awareness"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "शिकायत मुक्ति भाव",
+    "englishName": "Freedom from repetitive complaints bhava",
+    "translatedName": "Transforming repeated complaints",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we stop repeating the same complaints, hurts and emotional stories without understanding their root cause, and gain the wisdom to heal and move beyond them.",
+    "keywords": ["complaints", "healing", "emotions", "root cause", "awareness"]
+  },
+  {
+    "header": "🥇200",
+    "name": "संवाद रूपांतरण भाव",
+    "englishName": "Transformative conversations bhava",
+    "translatedName": "Conversations that transform pain",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May every conversation transform complaints, blame and pain into understanding, forgiveness, healing and inner peace.",
+    "keywords": ["conversation", "forgiveness", "healing", "understanding", "peace"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "करुणामय संवाद भाव",
+    "englishName": "Compassionate dialogue bhava",
+    "translatedName": "Supporting healing with balance",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we neither unload our pain onto others nor permanently carry another person's pain as our own, supporting one another's healing with compassion, awareness and balance.",
+    "keywords": ["compassion", "dialogue", "healing", "balance", "relationships"]
+  },
+  {
+    "header": "🥇200",
+    "name": "शांतिपूर्ण संवाद भाव",
+    "englishName": "Peaceful conversations bhava",
+    "translatedName": "Conversations that leave peace behind",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May every conversation leave both people lighter, clearer, more loving, freer and more peaceful than before.",
+    "keywords": ["conversation", "peace", "clarity", "love", "healing"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "वर्तमान स्वतंत्रता भाव",
+    "englishName": "Present freedom bhava",
+    "translatedName": "Living free from the past",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we stop projecting past fears, failures and struggles onto present relationships and experiences, living each moment with freshness, openness and inner freedom.",
+    "keywords": ["past", "present", "freedom", "relationships", "awareness"]
+  },
+  {
+    "header": "🥇200",
+    "name": "वर्तमान निर्णय भाव",
+    "englishName": "Present-based decisions bhava",
+    "translatedName": "Choosing from present reality",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May all our decisions arise from present reality, clarity and awareness rather than past conditioning or imagined fears.",
+    "keywords": ["decision", "present", "clarity", "awareness", "wisdom"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "पूर्वधारणा मुक्ति भाव",
+    "englishName": "Freedom from assumptions bhava",
+    "translatedName": "Seeing without prejudice",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we stop making assumptions without knowing the full truth, forcing others to justify themselves or repeatedly seeking explanations, and instead develop patience, openness, trust and discernment.",
+    "keywords": ["assumptions", "trust", "discernment", "patience", "communication"]
+  },
+
+  {
+    "header": "🥇200",
+    "name": "समयबद्ध उत्तरदायित्व भाव",
+    "englishName": "Timely responsibility bhava",
+    "translatedName": "Responsible and timely commitments",
+    "audience": "for all",
+    "date": "2026-07-20",
+    "description": "May we fulfil our commitments on time, communicate delays clearly and promptly, avoid leaving others in uncertainty, and complete every responsibility with transparency, accountability and the highest good in mind.",
+    "keywords": ["commitment", "responsibility", "communication", "time management", "accountability", "transparency"]
+  },
+  {
     "header": "🥇199",
     "name": "सर्वोच्च हित चुनाव भाव",
     "englishName": "Highest good choices bhava",
