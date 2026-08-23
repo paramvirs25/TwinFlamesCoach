@@ -5,8 +5,7 @@ class TFC_Audio_Registry {
     /**
      * Provider priority.
      *
-     * The first configured provider will be used.
-     * If it is not available for an audio, the next provider is tried.
+     * The first available provider will be used.
      */
     private static $provider_priority = [
         'publit',
@@ -18,8 +17,19 @@ class TFC_Audio_Registry {
     /**
      * Audio library.
      *
-     * Each audio has a logical ID.
-     * Provider-specific IDs/files live here.
+     * Structure:
+     *
+     * 'audio_id' => [
+     *     'title' => 'Audio Title',
+     *     'hindi' => [
+     *         'adilo'       => 'Adilo ID',
+     *         'publit'      => 'Publit file path',
+     *         'google_drive'=> 'Google Drive ID',
+     *     ],
+     *     'english' => [
+     *         ...
+     *     ],
+     * ],
      */
     private static $audios = [
 
@@ -32,25 +42,14 @@ class TFC_Audio_Registry {
         'chakra_balancing_root' => [
             'title' => 'Root Chakra',
 
-            'languages' => [
+            'hindi' => [
+                'adilo'  => 'NkPF1ZsR',
+                'publit' => 'Chakra-Balancing/1-Root-Chakra-Hindi.mp3',
+            ],
 
-                'hindi' => [
-                    'adilo' => [
-                        'id' => 'NkPF1ZsR',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/1-Root-Chakra-Hindi.mp3',
-                    ],
-                ],
-
-                'english' => [
-                    'adilo' => [
-                        'id' => 'ZIwdP4S0',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/1-Root-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => 'ZIwdP4S0',
+                'publit' => 'Chakra-Balancing/1-Root-Chakra.mp3',
             ],
         ],
 
@@ -58,25 +57,14 @@ class TFC_Audio_Registry {
         'chakra_balancing_sacral' => [
             'title' => 'Sacral Chakra',
 
-            'languages' => [
+            'hindi' => [
+                'adilo'  => 'BnRcnuFR',
+                'publit' => 'Chakra-Balancing/2-Sacral-chakra-Hindi.mp3',
+            ],
 
-                'hindi' => [
-                    'adilo' => [
-                        'id' => 'BnRcnuFR',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/2-Sacral-chakra-Hindi.mp3',
-                    ],
-                ],
-
-                'english' => [
-                    'adilo' => [
-                        'id' => 'tH60wj1p',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/2-Sacral-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => 'tH60wj1p',
+                'publit' => 'Chakra-Balancing/2-Sacral-Chakra.mp3',
             ],
         ],
 
@@ -84,25 +72,14 @@ class TFC_Audio_Registry {
         'chakra_balancing_solar_plexus' => [
             'title' => 'Solar Plexus Chakra',
 
-            'languages' => [
+            'hindi' => [
+                'adilo'  => 'gn0XrZlP',
+                'publit' => 'Chakra-Balancing/3-Solar-Plexus-Hindi.mp3',
+            ],
 
-                'hindi' => [
-                    'adilo' => [
-                        'id' => 'gn0XrZlP',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/3-Solar-Plexus-Hindi.mp3',
-                    ],
-                ],
-
-                'english' => [
-                    'adilo' => [
-                        'id' => 'IbVJjZTj',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/3-Solar-Plexus-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => 'IbVJjZTj',
+                'publit' => 'Chakra-Balancing/3-Solar-Plexus-Chakra.mp3',
             ],
         ],
 
@@ -110,16 +87,9 @@ class TFC_Audio_Registry {
         'chakra_balancing_heart' => [
             'title' => 'Heart Chakra',
 
-            'languages' => [
-
-                'english' => [
-                    'adilo' => [
-                        'id' => 'DYUxEX3E',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/4-Heart-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => 'DYUxEX3E',
+                'publit' => 'Chakra-Balancing/4-Heart-Chakra.mp3',
             ],
         ],
 
@@ -127,16 +97,9 @@ class TFC_Audio_Registry {
         'chakra_balancing_throat' => [
             'title' => 'Throat Chakra',
 
-            'languages' => [
-
-                'english' => [
-                    'adilo' => [
-                        'id' => 'znSIe5Zf',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/5-Throat-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => 'znSIe5Zf',
+                'publit' => 'Chakra-Balancing/5-Throat-Chakra.mp3',
             ],
         ],
 
@@ -144,16 +107,9 @@ class TFC_Audio_Registry {
         'chakra_balancing_third_eye' => [
             'title' => 'Third Eye Chakra',
 
-            'languages' => [
-
-                'english' => [
-                    'adilo' => [
-                        'id' => '3sruhIcr',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/6-Third-Eye-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => '3sruhIcr',
+                'publit' => 'Chakra-Balancing/6-Third-Eye-Chakra.mp3',
             ],
         ],
 
@@ -161,23 +117,17 @@ class TFC_Audio_Registry {
         'chakra_balancing_crown' => [
             'title' => 'Crown Chakra',
 
-            'languages' => [
-
-                'english' => [
-                    'adilo' => [
-                        'id' => 'Ij3rWVB9',
-                    ],
-                    'publit' => [
-                        'file' => 'Chakra-Balancing/7-Crown-Chakra.mp3',
-                    ],
-                ],
+            'english' => [
+                'adilo'  => 'Ij3rWVB9',
+                'publit' => 'Chakra-Balancing/7-Crown-Chakra.mp3',
             ],
         ],
+
     ];
 
 
     /**
-     * Get an audio record.
+     * Get one audio by logical ID.
      */
     public static function get($audio_id) {
 
@@ -195,7 +145,7 @@ class TFC_Audio_Registry {
 
 
     /**
-     * Get all audios.
+     * Get all registered audios.
      */
     public static function all() {
 

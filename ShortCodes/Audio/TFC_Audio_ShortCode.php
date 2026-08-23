@@ -2,9 +2,9 @@
 function tfc_audio_player_shortcode($atts) {
 
     $atts = shortcode_atts([
-        'audio_id'       => '',
-        'hindi_heading'  => 'Hindi',
-        'english_heading'=> 'English',
+        'audio_id'        => '',
+        'hindi_heading'   => 'Hindi',
+        'english_heading' => 'English',
     ], $atts);
 
 
@@ -29,7 +29,7 @@ function tfc_audio_player_shortcode($atts) {
      * ============================================================
      */
 
-    if (!empty($audio['languages']['hindi'])) {
+    if (!empty($audio['hindi'])) {
 
         $player = TFC_Audio_Renderer::render(
             $audio,
@@ -56,7 +56,7 @@ function tfc_audio_player_shortcode($atts) {
      * ============================================================
      */
 
-    if (!empty($audio['languages']['english'])) {
+    if (!empty($audio['english'])) {
 
         $player = TFC_Audio_Renderer::render(
             $audio,

@@ -7,23 +7,38 @@ class TFC_Audio_Renderer {
      */
     public static function render($audio_data, $language) {
 
+        /*
+         * The new registry structure stores languages directly:
+         *
+         * $audio_data['hindi']
+         * $audio_data['english']
+         */
         if (
-            empty($audio_data['languages'][$language]) ||
-            !is_array($audio_data['languages'][$language])
+            empty($audio_data[$language]) ||
+            !is_array($audio_data[$language])
         ) {
             return '';
         }
 
-        $language_data = $audio_data['languages'][$language];
+        $language_data = $audio_data[$language];
+
 
         /*
-         * Try providers in priority order.
+         * Try providers according to priority:
+         *
+         * Publit
+         * Adilo
+         * Google Drive
          */
         foreach (TFC_Audio_Registry::get_provider_priority() as $provider) {
 
+            /*
+             * Does this audio/language have this provider?
+             */
             if (empty($language_data[$provider])) {
                 continue;
             }
+
 
             switch ($provider) {
 
@@ -32,10 +47,12 @@ class TFC_Audio_Renderer {
                         $language_data[$provider]
                     );
 
+
                 case 'adilo':
                     return self::render_adilo(
                         $language_data[$provider]
                     );
+
 
                 case 'google_drive':
                     return self::render_google_drive(
@@ -44,20 +61,26 @@ class TFC_Audio_Renderer {
             }
         }
 
+
+        /*
+         * No provider available.
+         */
         return '';
     }
 
 
     /**
-     * Publit player.
+     * Render Publit player.
      */
-    private static function render_publit($data) {
+    private static function render_publit($file) {
 
-        if (empty($data['file'])) {
+        if (empty($file)) {
             return '';
         }
 
-        $url = 'https://TwinFlamesCoach.publit.io/file/' . $data['file'];
+
+        $url = 'https://TwinFlamesCoach.publit.io/file/' . ltrim($file, '/');
+
 
         return sprintf(
             '<audio oncontextmenu="return false;" controlslist="nodownload" controls style="width: 90%%;">
@@ -70,17 +93,19 @@ class TFC_Audio_Renderer {
 
 
     /**
-     * Adilo player.
+     * Render Adilo player.
      */
-    private static function render_adilo($data) {
+    private static function render_adilo($id) {
 
-        if (empty($data['id'])) {
+        if (empty($id)) {
             return '';
         }
 
+
         $audio_url = esc_url(
-            'https://adilo.bigcommand.com/watch/' . $data['id']
+            'https://adilo.bigcommand.com/watch/' . $id
         );
+
 
         return sprintf(
             '<div style="width: 100%%; position: relative; padding-top: 56.25%%;">
@@ -104,18 +129,19 @@ class TFC_Audio_Renderer {
 
 
     /**
-     * Google Drive player.
+     * Render Google Drive audio player.
      */
-    private static function render_google_drive($data) {
+    private static function render_google_drive($id) {
 
-        if (empty($data['id'])) {
+        if (empty($id)) {
             return '';
         }
 
+
         $audio_url = esc_url(
-            'https://members.twinflamescoach.com/audio-proxy/' .
-            $data['id']
+            'https://members.twinflamescoach.com/audio-proxy/' . $id
         );
+
 
         return sprintf(
             '<audio controls controlsList="nodownload" style="width: 90%%;">
