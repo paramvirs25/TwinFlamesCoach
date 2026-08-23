@@ -123,6 +123,22 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'connection_tool' => [
+            'title' => 'Connection Tool',
+
+            'hindi' => [
+                'adilo'        => 'n5izXTBn',
+                'google_drive' => '1iP2_gg_3BX92aiDvPAqfMnzCEYxkdphb',
+                'publit'       => 'Tools/Connection-ToolHindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'BNS8Lu9H',
+                'google_drive' => '1xqqxLwOlXh76InreADyCF4qcpXKfdxx6',
+                'publit'       => 'Tools/Connection-Tool-English.mp3',
+            ],
+        ],
+
     ];
 
 
