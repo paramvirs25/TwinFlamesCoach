@@ -139,6 +139,22 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'cosmic_marriage' => [
+            'title' => 'Cosmic Marriage',
+
+            'hindi' => [
+                'adilo'        => 'H6giQpes',
+                'google_drive' => '10gLtdXNCn4a4mEWuTp77J8ktQYUW6ZkW',
+                'publit'       => 'Tools/Cosmic-Marriage-Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'Nl0lKpzC',
+                'google_drive' => '1WJ69U0ABpr_eYiW4YxXE4g9cmG3TAg9L',
+                'publit'       => 'Tools/Cosmic-Marriage-English.mp3',
+            ],
+        ],
+
     ];
 
 
