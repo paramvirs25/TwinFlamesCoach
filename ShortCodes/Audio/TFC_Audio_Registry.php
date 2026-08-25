@@ -1,5 +1,4 @@
 <?php
-
 class TFC_Audio_Registry {
 
     /**
@@ -152,6 +151,22 @@ class TFC_Audio_Registry {
                 'adilo'        => 'DNGpObzW',
                 'google_drive' => '1a8TBj1NOxfWw8--WKbs_YvFooQt2VStr',
                 'publit'       => 'Tools/Inner-Child-English.mp3',
+            ],
+        ],
+
+        'harmony_healing' => [
+            'title' => 'Harmony Healing',
+
+            'hindi' => [
+                'adilo'        => '6rLLkk6L',
+                'google_drive' => '1MF9S-Q1Kx5Sl8wjLwvAt_qe6zieXLJO7',
+                'publit'       => 'Tools/Harmony-HealingHindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'gqwVspjC',
+                'google_drive' => '1-hLV8-UKTbRSkToYjALiMEpTqtYdo8-V',
+                'publit'       => 'Tools/Harmony-Healing-English.mp3',
             ],
         ],
 
