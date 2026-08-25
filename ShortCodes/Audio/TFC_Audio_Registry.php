@@ -139,6 +139,22 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'inner_child' => [
+            'title' => 'Inner Child',
+
+            'hindi' => [
+                'adilo'        => 'v3nSo8LI',
+                'google_drive' => '1dh-fru0APil4bgfKB7O33H29JoUoRq9R',
+                'publit'       => 'Tools/Inner-ChildHindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'DNGpObzW',
+                'google_drive' => '1a8TBj1NOxfWw8--WKbs_YvFooQt2VStr',
+                'publit'       => 'Tools/Inner-Child-English.mp3',
+            ],
+        ],
+
         'cosmic_marriage' => [
             'title' => 'Cosmic Marriage',
 
