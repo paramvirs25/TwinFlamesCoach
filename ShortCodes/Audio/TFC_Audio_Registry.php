@@ -170,6 +170,15 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'four_mirrors' => [
+            'title' => 'Four Mirrors',
+
+            'hindi' => [
+                'adilo'  => '3lDZg7Iw',
+                'publit' => 'Tools/Four-mirrors.mp3',
+            ],
+        ],
+
         'cosmic_marriage' => [
             'title' => 'Cosmic Marriage',
 
