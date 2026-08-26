@@ -229,6 +229,56 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'belief_clearing_session_2' => [
+            'title' => 'Belief Clearing Session 2',
+
+            'hindi' => [
+                'adilo'        => 'TrvZLb8m',
+                'google_drive' => '1Yy6VKd-AdHvvgdFwlZxXbp8UJVp4u8L-',
+                'publit'       => 'Tools/Belief-Clearing-Session-2Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'YgVEN_9x',
+                'google_drive' => '1DIsHi1wMZdVWkoSFBLDi_FsME6BVShop',
+                'publit'       => 'Tools/Belief-Clearing-Session-2-English.mp3',
+            ],
+        ],
+
+
+        'higher_heart_1' => [
+            'title' => 'Higher Heart 1',
+
+            'hindi' => [
+                'adilo'        => '7ZNxPgoV',
+                'google_drive' => '1VBulAEk9e7ViFoa54UYy8ipvM866URQ7',
+                'publit'       => 'Tools/Higher-heart-1Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => '_60ljj01',
+                'google_drive' => '1S161o2_YpIDVFuJGfqtZWwHP8c62NC7k',
+                'publit'       => 'Tools/Higher-Heart-1English.mp3',
+            ],
+        ],
+
+
+        'angels_blessings_hd' => [
+            'title' => 'Angels Blessings HD',
+
+            'hindi' => [
+                'adilo'        => 'k056WdQ7',
+                'google_drive' => '1XeJb1bGMr9I09pxea0opJkRYlv_O2ufk',
+                'publit'       => 'Tools/Angels-Blessings-HD-Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'saOz7dzG',
+                'google_drive' => '1q-GfcJ-UNM42yWBuaaDIcRbR8JTbb1aK',
+                'publit'       => 'Tools/Angels-blessings-HD-English.mp3',
+            ],
+        ],
+
         'cosmic_marriage' => [
             'title' => 'Cosmic Marriage',
 
