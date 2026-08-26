@@ -295,6 +295,39 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'star_activation' => [
+            'title' => 'Star Activation',
+
+            'hindi' => [
+                'adilo'        => 'leaypTvF',
+                'google_drive' => '10GXLIXKYv8gi2vmM-W1XFDlxbvp4RCo5',
+                'publit'       => 'Tools/Star-activation.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'qnF20K8D',
+                'google_drive' => '1dXG3k8tls_U5wcHQNJaUiwzq3GmPQI3U',
+                'publit'       => 'Tools/Star-activation-Eng-Small.mp3',
+            ],
+        ],
+
+
+        'higher_heart_2_manifestations' => [
+            'title' => 'Higher Heart 2 - Manifestations',
+
+            'hindi' => [
+                'adilo'        => 'EdRSyhRf',
+                'google_drive' => '1E5Vn37bm7tdUIs4Fc_GadgjdrLKa584w',
+                'publit'       => 'Tools/Higher-heart-2-Manifestations.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'qh5EQEGy',
+                'google_drive' => '1oDnUM7yEerRccOxZgsksAhG7Br8qV0dT',
+                'publit'       => 'Tools/Higher-Heart-2-Eng.mp3',
+            ],
+        ],
+
     ];
 
 
