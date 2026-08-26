@@ -179,6 +179,56 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'fear_healing' => [
+            'title' => 'Fear Healing',
+
+            'hindi' => [
+                'adilo'        => 'c4_4_Z0_',
+                'google_drive' => '1rw4-q-z4giSSUMb1dynbEblEPh9i1ZYc',
+                'publit'       => 'Tools/Fear-Healing-Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'D5bp9Ikm',
+                'google_drive' => '1UYzIG1hHQfuT1unseg557Q0vQ3M1-mYT',
+                'publit'       => 'Tools/Fear-Healing-English.mp3',
+            ],
+        ],
+
+
+        'belief_clearing_session_1' => [
+            'title' => 'Belief Clearing Session 1',
+
+            'hindi' => [
+                'adilo'        => '5T1XG28A',
+                'google_drive' => '1IFMGuZtWmW_QIQX9IKF3TXkKZlYUSUav',
+                'publit'       => 'Tools/Belief-Clearing-Session-1Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'NUNqDHqg',
+                'google_drive' => '1UjFqNrXZ-3Lm43CWJ36Sq3mkR5s2Tq-q',
+                'publit'       => 'Tools/Belief-Clearing-Session-01-English.mp3',
+            ],
+        ],
+
+
+        'creative_visualization' => [
+            'title' => 'Creative Visualization',
+
+            'hindi' => [
+                'adilo'        => 'OQORnz80',
+                'google_drive' => '1NsIuJwIuuWE5ZIIwfswF6Jc5RHvh7a0Z',
+                'publit'       => 'Tools/Creative-VisualizationHindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'mjjvQ3ct',
+                'google_drive' => '1OWDALKyXZy5POTASGoxiRFP-QRuRgX0r',
+                'publit'       => 'Tools/Creative-Visualisation-English.mp3',
+            ],
+        ],
+
         'cosmic_marriage' => [
             'title' => 'Cosmic Marriage',
 
