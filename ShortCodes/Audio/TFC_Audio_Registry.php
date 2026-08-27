@@ -398,6 +398,15 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'spirit_animal_guide' => [
+            'title' => 'Spirit Animal Guide',
+
+            'hindi' => [
+                'google_drive' => '1F-zFh500Ba8NhOk4sXvEGb4nAfAzcTDc',
+                'publit'       => 'Tools/Animal-Spirit-Guides-small.mp3',
+            ],
+        ],
+
     ];
 
 
