@@ -372,6 +372,32 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'union_of_souls' => [
+            'title' => 'Union of Souls',
+
+            'hindi' => [
+                'google_drive' => '1JEekT0fAiOpnHgVVNWlAp3-yz5YMiVhp',
+                'publit'       => 'Tools/UnionOfSouls-Hindi.mp3',
+            ],
+        ],
+
+
+        'sexual_belief_clearing' => [
+            'title' => 'Sexual Belief Clearing',
+
+            'hindi' => [
+                'adilo'        => '8LgbGdYo',
+                'google_drive' => '1vfygaenDviFX7JFJEiZl8JDykWek84oS',
+                'publit'       => 'Tools/Sexual-belief-clearing-Hindi.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'Zzbs0oYt',
+                'google_drive' => '1V6IhkoCqnNBgnLAl0geU72DJDmynqlQM',
+                'publit'       => 'Tools/Sexual-belief-clearing-English.mp3',
+            ],
+        ],
+
     ];
 
 
