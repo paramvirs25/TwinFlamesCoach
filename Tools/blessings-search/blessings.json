@@ -1,5 +1,105 @@
 [  
   {
+    "header": "🥇221",
+    "name": "पूर्ण जागरूकता के बिना निर्णय एवं प्रतिबद्धता न करने की निर्मल बुद्धि",
+    "englishName": "Clarity before decisions and commitments",
+    "translatedName": "Making decisions only with sufficient awareness and clarity",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we not make important decisions, commitments or give consent when our awareness is not fully active due to sleepiness, extreme fatigue, mental dullness or any similar state. May we have the wisdom to pause, take time and respond later when our mind is sufficiently awake, calm and clear.",
+    "keywords": ["जागरूकता", "निर्णय", "commitment", "सहमति", "स्पष्टता", "विवेक"]
+  },
+  {
+    "header": "🥇221",
+    "name": "दूसरों की संभावित राय एवं सामाजिक धारणा के भय से मुक्त होकर सहज रहने की निर्मल बुद्धि",
+    "englishName": "Freedom from fear of others' opinions and social perception",
+    "translatedName": "Living naturally without fear of others' opinions",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we be free from unnecessary worry about what others may think, ask or assume about us. May we respect others' independent opinions while living our appropriate relationships and actions with ease, dignity and integrity, without unnecessary explanations or excuses.",
+    "keywords": ["सामाजिक धारणा", "राय", "भय", "सहजता", "गरिमा", "सत्यनिष्ठा"]
+  },
+  {
+    "header": "🥇221",
+    "name": "सहज स्वीकार एवं अनावश्यक प्रतिप्रश्नों से मुक्त संवाद की निर्मल बुद्धि",
+    "englishName": "Simple acceptance and freedom from unnecessary questioning",
+    "translatedName": "Knowing when to accept and when clarification is needed",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we be free from repeatedly questioning, overanalysing or turning simple situations into matters of suspicion and debate after receiving sufficient and clear information. May we discern when additional information is genuinely necessary and when accepting another person's words with trust, ease and respect is appropriate.",
+    "keywords": ["संवाद", "सहज स्वीकार", "प्रतिप्रश्न", "विश्वास", "स्पष्टीकरण", "सरलता"]
+  },
+  {
+    "header": "🥇221",
+    "name": "दूसरों की व्यक्तिगत जानकारी में अनावश्यक जिज्ञासा से मुक्ति की निर्मल बुद्धि",
+    "englishName": "Freedom from unnecessary curiosity about others' personal information",
+    "translatedName": "Respecting privacy and personal boundaries",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we be free from unnecessary curiosity and questioning about other people's private lives, relationships, families, movements and personal information. May we respect their privacy, freedom and personal boundaries and seek only information that is genuinely necessary for an appropriate purpose.",
+    "keywords": ["निजता", "व्यक्तिगत जानकारी", "सीमाएँ", "जिज्ञासा", "स्वतंत्रता", "सम्मान"]
+  },
+  {
+    "header": "🥇221",
+    "name": "साझा व्यवस्था, सुरक्षा एवं सामूहिक हित के अनुरूप व्यवहार करने की निर्मल बुद्धि",
+    "englishName": "Wisdom to act according to shared safety and collective well-being",
+    "translatedName": "Balancing personal convenience with collective responsibility",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we not place personal convenience, haste, impatience or individual interests above collective safety, discipline, others' rights and proper arrangements. May we behave in shared spaces with patience, mutual respect, awareness and consideration for everyone's safety, comfort and well-being.",
+    "keywords": ["सुरक्षा", "अनुशासन", "सामूहिक हित", "साझा व्यवस्था", "सम्मान", "जिम्मेदारी"]
+  },
+  {
+    "header": "🥇221",
+    "name": "सामान्य बातों पर सहज एवं शांत प्रतिक्रिया देने की निर्मल बुद्धि",
+    "englishName": "Calm and natural response to ordinary communication",
+    "translatedName": "Responding calmly after understanding",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we be free from becoming irritated, impatient or emotionally reactive when someone makes an ordinary statement, asks a question or offers a suggestion. May we listen calmly, understand their intention and respond with ease and clarity, even when we disagree.",
+    "keywords": ["शांत प्रतिक्रिया", "संवाद", "धैर्य", "असहमति", "भावावेश", "समझ"]
+  },
+  {
+    "header": "🥇221",
+    "name": "अप्रत्याशित संतान एवं जटिल पारिवारिक परिस्थितियों को शांति और करुणा से स्वीकार करने की निर्मल बुद्धि",
+    "englishName": "Compassionate acceptance of unexpected family circumstances",
+    "translatedName": "Handling unexpected family circumstances with dignity and compassion",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we be free from fear, shame, guilt, anger, rejection, panic and confusion when facing an unplanned child, a child born outside marriage or any other unexpected family circumstance. May we handle such situations with truth, compassion, dignity, justice and balance while respecting everyone's rights and dignity.",
+    "keywords": ["परिवार", "संतान", "करुणा", "स्वीकार", "गरिमा", "न्याय"]
+  },
+  {
+    "header": "🥇221",
+    "name": "समग्र योगदान एवं प्रेम को एक-दो अनुभवों से नकारने से मुक्त रहने की निर्मल बुद्धि",
+    "englishName": "Wisdom to recognise the whole of someone's love and contribution",
+    "translatedName": "Seeing relationships through their complete context",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we not reject someone's overall love, care, effort or contribution because of one unmet expectation or experience. May we see relationships in their complete context, recognise consistent care and contribution, and understand them with gratitude, fairness, sensitivity and balance.",
+    "keywords": ["प्रेम", "योगदान", "care", "कृतज्ञता", "संतुलित दृष्टि", "संबंध"]
+  },
+  {
+    "header": "🥇221",
+    "name": "तुलना, शिकायत एवं अनावश्यक पूछताछ के बीच आंतरिक स्थिरता की निर्मल बुद्धि",
+    "englishName": "Inner stability amid comparison, complaints and unnecessary questioning",
+    "translatedName": "Remaining peaceful despite comparisons and complaints",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we remain inwardly stable when faced with comparisons, complaints, comments based on incomplete information or unnecessary questions about our time, work and decisions. May we understand others with patience and compassion without allowing such interactions to disturb our inner peace, self-respect or balance.",
+    "keywords": ["तुलना", "शिकायत", "आंतरिक स्थिरता", "पूछताछ", "आत्मसम्मान", "inner peace"]
+  },
+  {
+    "header": "🥇221",
+    "name": "आवश्यक गोपनीयता एवं व्यक्तिगत सीमाओं की रक्षा करने की निर्मल बुद्धि",
+    "englishName": "Wisdom to protect necessary privacy and personal boundaries",
+    "translatedName": "Discerning what to share and what to keep private",
+    "audience": "for all",
+    "date": "2026-08-27",
+    "description": "May we have the wisdom to recognise which information, objects, knowledge, personal data, relationships and resources are appropriate to share openly and which need to remain protected for personal, collective or relational safety. May we maintain appropriate boundaries and share consciously with respect for everyone's highest good.",
+    "keywords": ["गोपनीयता", "व्यक्तिगत सीमाएँ", "सुरक्षा", "व्यक्तिगत डेटा", "विवेक", "साझा करना"]
+  },
+  {
     "header": "🥇220",
     "name": "पर्याप्त स्पष्टता से पूर्व समाधान न बदलने की निर्मल बुद्धि",
     "englishName": "Discernment before changing solutions bhava",
