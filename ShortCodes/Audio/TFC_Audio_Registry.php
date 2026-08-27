@@ -328,6 +328,50 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'energy_ritual' => [
+            'title' => 'Energy Ritual',
+
+            'hindi' => [
+                'adilo'        => 'eMsRxPQ4',
+                'google_drive' => '1vzTK_rnXuevKVd6f5FU_XG4t0Gn97Wtk',
+                'publit'       => 'Tools/Energy-ritual.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'RnQd6CWX',
+                'google_drive' => '1JJj8xEc_XHPh_LmEjILEPB3DCmyR44HH',
+                'publit'       => 'Tools/Energy-Ritual-English.mp3',
+            ],
+        ],
+
+
+        'affirmations' => [
+            'title' => 'Affirmations',
+
+            'hindi' => [
+                'adilo'        => 'ga8Gcuuk',
+                'google_drive' => '191bF0WP96xODZMalI-tGV-jfrohqXck5',
+                'publit'       => 'Tools/Affirmation.mp3',
+            ],
+
+            'english' => [
+                'adilo'        => 'SSdwcElu',
+                'google_drive' => '1sqwL3gTsRXCfpNf7JnWMkPKlC37UFCNt',
+                'publit'       => 'Tools/Affirmations-Eng.mp3',
+            ],
+        ],
+
+
+        'belief_clearing_advanced_1' => [
+            'title' => 'Belief Clearing Advanced 1',
+
+            'hindi' => [
+                'adilo'        => 'n9ihEanw',
+                'google_drive' => '1RvkBL5_xWVcz3YWTWfPUVeyxZal7m-xg',
+                'publit'       => 'Tools/Belief-Clearing-Advanced-1.mp3',
+            ],
+        ],
+
     ];
 
 
