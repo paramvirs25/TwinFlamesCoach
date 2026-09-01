@@ -122,6 +122,12 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        /*
+         * ============================================================
+         * Tools
+         * ============================================================
+         */
+
         'connection_tool' => [
             'title' => 'Connection Tool',
 
@@ -404,6 +410,20 @@ class TFC_Audio_Registry {
             'hindi' => [
                 'google_drive' => '1F-zFh500Ba8NhOk4sXvEGb4nAfAzcTDc',
                 'publit'       => 'Tools/Animal-Spirit-Guides-small.mp3',
+            ],
+        ],
+
+          /*
+         * ============================================================
+         * Art of conscious Living  
+         * ============================================================
+         */
+
+        'conscious_living_remembering_the_observer' => [
+            'title' => 'Remembering the Observer',
+
+            'hindi' => [
+                'publit' => 'Art-Of-Conscious-Living-2026/1-Remembering-the-observer.mp3',
             ],
         ],
 
