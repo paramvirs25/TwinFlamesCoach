@@ -77,7 +77,7 @@ class VideoGallery {
 
     static playVideo(videoId) {
         document.getElementById("videoContainer").style.display = "block";
-        document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=1";
+        document.getElementById("framePlayVideo").src = "https://www.youtube.com/embed/" + encodeURIComponent(videoId) + "?autoplay=0";
         //VideoGallery.scrollIntoView("framePlayVideo");
         //VideoGallery.scrollIntoView("pageViewCount");
         scrollToTargetAdjusted("video-container");
