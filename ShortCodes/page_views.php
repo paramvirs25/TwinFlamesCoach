@@ -1,27 +1,58 @@
 <?php
 function tfc_combined_koko_views_shortcode( $atts ) {
-    $atts = shortcode_atts( array(
-        'add' => 0,
-    ), $atts );
 
-    $add = intval( $atts['add'] );
+    $atts = shortcode_atts(
+        array(
+            'add' => 0,
+        ),
+        $atts
+    );
+
+    $add     = intval( $atts['add'] );
     $post_id = get_the_ID();
 
-    if ( ! is_singular() || ! shortcode_exists( 'koko_analytics_counter' ) ) {
+    if ( ! is_singular() || ! $post_id ) {
         return '';
     }
 
-    // Use output buffering to capture the result of the Koko shortcode
-    ob_start();
-    echo do_shortcode( "[koko_analytics_counter days='3650' global='false' metric='pageviews']" );
-    $koko_output = ob_get_clean();
+    global $wpdb;
 
-    // Extract the numeric value from Koko's output
-    preg_match( '/(\d[\d,]*)/', $koko_output, $matches );
-    $koko_views = isset( $matches[1] ) ? intval( str_replace( ',', '', $matches[1] ) ) : 0;
+    /*
+     * Koko Analytics post statistics table
+     */
+    $stats_table = $wpdb->prefix . 'koko_analytics_post_stats';
 
+    /*
+     * Get all pageviews associated with this WordPress Post ID.
+     *
+     * This includes historical data from the old path_id
+     * as well as new data from the current path_id.
+     */
+    $koko_views = $wpdb->get_var(
+        $wpdb->prepare(
+            "
+            SELECT COALESCE( SUM(pageviews), 0 )
+            FROM {$stats_table}
+            WHERE post_id = %d
+            ",
+            $post_id
+        )
+    );
+
+    $koko_views = intval( $koko_views );
+
+    /*
+     * Add any manually supplied adjustment.
+     */
     $total = $koko_views + $add;
 
+    /*
+     * Display the result.
+     */
     return '👁️ ' . number_format_i18n( $total ) . ' views';
 }
-add_shortcode( 'tfc_page_views', 'tfc_combined_koko_views_shortcode' );
+
+add_shortcode(
+    'tfc_page_views',
+    'tfc_combined_koko_views_shortcode'
+);
