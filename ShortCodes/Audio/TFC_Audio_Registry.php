@@ -427,6 +427,14 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'conscious_living_seeing_desire' => [
+            'title' => 'Seeing Desire',
+
+            'hindi' => [
+                'publit' => 'Art-Of-Conscious-Living-2026/2-Seeing-Desire.mp3',
+            ],
+        ],
+
     ];
 
 
