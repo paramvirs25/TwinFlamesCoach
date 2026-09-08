@@ -1,5 +1,305 @@
 [ 
   {
+    "header": "🥇227",
+    "name": "अपनी पात्रता एवं ईश्वरीय क्रम का सम्मान भाव",
+    "englishName": "Apni Patrata Evam Ishwariya Kram Ka Samman Bhava",
+    "translatedName": "Honouring our eligibility, role and divine timing",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we honour our present eligibility, responsibilities, experience and divinely given role without comparing ourselves with others or trying to occupy their place prematurely. May we take inspiration without imitation, progress according to our own readiness and Guru's grace, and remain established in humility, patience, gratitude and continuous self-development.",
+    "keywords": ["पात्रता", "ईश्वरीय क्रम", "role", "comparison", "humility", "Guru grace", "self-development"]
+  },
+  {
+    "header": "🥇227",
+    "name": "दिव्य उद्देश्य एवं गुणवत्तापूर्ण सेवा भाव",
+    "englishName": "Divya Uddeshya Evam Gunvattapurna Seva Bhava",
+    "translatedName": "Steadfastness to divine purpose and quality service",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we remain devoted to our true divine purpose without being distracted by numbers, popularity, income or external success. May we value quality over quantity and genuine transformation over performance, allowing those who are ready to grow through our service to reach us naturally at the appropriate time.",
+    "keywords": ["divine purpose", "service", "quality", "spiritual growth", "transformation", "sadhaks"]
+  },
+  {
+    "header": "🥇227",
+    "name": "साधकों की दिव्य यात्रा पर विश्वास भाव",
+    "englishName": "Sadhakon Ki Divya Yatra Par Vishwas Bhava",
+    "translatedName": "Trusting each seeker's divine journey and timing",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from fear of losing people, possessiveness and the need to control their choices or spiritual development. May we trust each seeker's freedom, learning process and divine timing, allowing every soul to naturally reach the appropriate guidance, teacher and place when ready.",
+    "keywords": ["sadhaks", "divine journey", "trust", "freedom", "detachment", "divine timing", "guidance"]
+  },
+  {
+    "header": "🥇227",
+    "name": "धैर्यपूर्वक परीक्षण एवं समाधान भाव",
+    "englishName": "Dhairyapurvak Parikshan Evam Samadhan Bhava",
+    "translatedName": "Patient examination and solution-oriented wisdom",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we not reach conclusions, give up or abandon an effort before fully understanding and examining a situation and considering its possibilities. May we remain calm, alert, patient and curious, enjoying the process of exploring possibilities and finding appropriate solutions with clarity and confidence.",
+    "keywords": ["patience", "examination", "problem solving", "curiosity", "clarity", "discernment"]
+  },
+  {
+    "header": "🥇227",
+    "name": "अनुभव से तत्काल सीखने भाव",
+    "englishName": "Anubhav Se Tatkal Sikhne Bhava",
+    "translatedName": "Learning quickly and consciously from our experiences",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we learn promptly from repeated experiences, difficulties and life lessons instead of continuing to repeat the same patterns. May we understand each experience clearly and naturally make the necessary positive changes in our thoughts, behaviour and lifestyle.",
+    "keywords": ["learning", "life lessons", "experience", "awareness", "positive change", "self-development"]
+  },
+  {
+    "header": "🥇227",
+    "name": "जैसा व्यवहार चाहते हैं वैसा ही देने भाव",
+    "englishName": "Jaisa Vyavahar Chahte Hain Vaisa Hi Dene Bhava",
+    "translatedName": "Treating others as we wish to be treated",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we become aware when our behaviour would cause another person the same discomfort, exhaustion or imbalance that we would not want for ourselves. May we learn immediately from such experiences and bring lasting positive change to our behaviour through sensitivity, respect, compassion and balance.",
+    "keywords": ["behaviour", "empathy", "compassion", "respect", "self-awareness", "relationships"]
+  },
+  {
+    "header": "🥇227",
+    "name": "प्रामाणिक पुनर्संबंध एवं निष्कपट निकटता भाव",
+    "englishName": "Pramanik Punarsambandh Evam Nishkapat Nikatata Bhava",
+    "translatedName": "Authentic reconnection and genuine closeness",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from hiding, covering up or superficially resolving distance, discomfort, insecurity, guilt or misunderstandings in relationships. May we reconnect with sincerity, truth and emotional honesty, allowing closeness to arise naturally from love, respect, trust and authenticity.",
+    "keywords": ["reconnection", "relationships", "authenticity", "emotional honesty", "trust", "closeness"]
+  },
+  {
+    "header": "🥇227",
+    "name": "सजगता, उत्तरदायित्व एवं आत्म-करुणा भाव",
+    "englishName": "Sajagta Uttardayitva Evam Atma-Karuna Bhava",
+    "translatedName": "Awareness, responsibility and self-compassion",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we remain fully aware and responsible toward our important duties without turning an unintentional mistake into excessive self-blame or regret. When a mistake occurs, may we accept it calmly, resolve it appropriately, learn from it and maintain compassion, balance and love toward ourselves.",
+    "keywords": ["awareness", "responsibility", "mistakes", "self-compassion", "learning", "accountability"]
+  },
+  {
+    "header": "🥇227",
+    "name": "अंतरंगता में सहज उपस्थिति एवं सहभागिता भाव",
+    "englishName": "Antarangata Mein Sahaj Upasthiti Evam Sahbhagita Bhava",
+    "translatedName": "Present and mutually engaged during intimacy",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from allowing daily stress, workload, fatigue or survival concerns to disconnect us from loving, mutually consensual intimacy. When one partner initiates lovingly and respectfully, may the other be able to participate through their own free choice and clear consent, remaining present, safe, loving and connected in the moment.",
+    "keywords": ["intimacy", "presence", "consent", "relationships", "connection", "emotional closeness"]
+  },
+  {
+    "header": "🥇227",
+    "name": "आत्मनिर्भरता एवं विवेकपूर्ण पहल भाव",
+    "englishName": "Atmanirbharta Evam Vivekpurna Pahal Bhava",
+    "translatedName": "Self-reliance and responsible initiative",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we take responsibility for tasks we can reasonably accomplish ourselves instead of unnecessarily depending on others' time, energy or attention. May we ask for help humbly when genuinely needed and otherwise act with self-reliance, discernment and patience while respecting each other's energy and life purpose.",
+    "keywords": ["self-reliance", "responsibility", "initiative", "help", "boundaries", "cooperation"]
+  },
+  {
+    "header": "🥇227",
+    "name": "सद्गुरु के प्रति निस्वार्थ सेवाभाव एवं पात्रता भाव",
+    "englishName": "Sadguru Ke Prati Nishwarth Sevabhava Evam Patrata Bhava",
+    "translatedName": "Selfless service and readiness before the Sadguru",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from expecting special treatment, concessions, opportunities or benefits from the Sadguru. May we remain established as sincere seekers and servants, participating with devotion and gratitude when circumstances allow and accepting non-participation with the same peace, surrender and balance.",
+    "keywords": ["Sadguru", "seva", "surrender", "gratitude", "patrata", "spiritual practice"]
+  },
+  {
+    "header": "🥇227",
+    "name": "सद्गुरु के साथ विशेष भूमिका की अपेक्षा से मुक्ति भाव",
+    "englishName": "Sadguru Ke Saath Vishesh Bhumika Ki Apeksha Se Mukti Bhava",
+    "translatedName": "Freedom from seeking a special role with the Sadguru",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from seeking special collaboration, partnership, authority, recognition or a privileged role with the Sadguru. If an opportunity for service is given through grace, may we receive it as service and grace rather than as a personal right or special status, remaining rooted in devotion, obedience, gratitude and selfless service.",
+    "keywords": ["Sadguru", "service", "recognition", "surrender", "authority", "devotion", "gratitude"]
+  },
+  {
+    "header": "🥇227",
+    "name": "आर्थिक उत्तरदायित्वों के मध्य सहज समृद्धि भाव",
+    "englishName": "Aarthik Uttardayitvon Ke Madhya Sahaj Samriddhi Bhava",
+    "translatedName": "Ease, prosperity and balance amid financial responsibilities",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from fear, scarcity, helplessness and mental burden arising from financial responsibilities, taxes and lawful obligations. May we fulfil every financial and legal responsibility with awareness, balance and peace while remaining open to a steady and sufficient flow of prosperity.",
+    "keywords": ["financial responsibility", "taxes", "prosperity", "abundance", "financial balance", "peace"]
+  },
+  {
+    "header": "🥇227",
+    "name": "न्यायपूर्ण एवं जनकल्याणकारी आर्थिक व्यवस्था भाव",
+    "englishName": "Nyayapurna Evam Jankalyankari Aarthik Vyavastha Bhava",
+    "translatedName": "Fair, transparent and welfare-oriented economic systems",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May economic and tax systems become fair, transparent, accountable and oriented toward public welfare. May every contribution be used meaningfully for public interest, social balance and overall development, creating a balanced flow of trust, prosperity and responsibility.",
+    "keywords": ["economic system", "tax", "fairness", "transparency", "public welfare", "social balance"]
+  },
+  {
+    "header": "🥇227",
+    "name": "जीवन की चुनौतियों के मध्य प्रेम एवं अंतरंगता संतुलन भाव",
+    "englishName": "Jeevan Ki Chunautiyon Ke Madhya Prem Evam Antarangata Santulan Bhava",
+    "translatedName": "Maintaining love and intimacy amid life's challenges",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May daily stress, financial concerns, health circumstances, legal matters, workload and survival-related thoughts not unnecessarily disconnect us from love, intimacy and emotional connection. May we remain capable of solving problems when needed and returning naturally to love, presence and closeness when appropriate.",
+    "keywords": ["love", "intimacy", "stress", "relationships", "emotional connection", "balance"]
+  },
+  {
+    "header": "🥇227",
+    "name": "अंतरंगता में लक्ष्य-मुक्त प्रेम भाव",
+    "englishName": "Antarangata Mein Lakshya-Mukt Prem Bhava",
+    "translatedName": "Intimacy beyond performance and outcomes",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from defining intimacy only through orgasm, performance or a specific outcome. May we experience each intimate moment with presence, love, tenderness, safety, acceptance and mutual pleasure without pressure or compulsory results.",
+    "keywords": ["intimacy", "orgasm", "performance", "presence", "pleasure", "consent", "love"]
+  },
+  {
+    "header": "🥇227",
+    "name": "अंतरंगता के पश्चात सहज शांति एवं ऊर्जा-संतुलन भाव",
+    "englishName": "Antarangata Ke Pashchat Sahaj Shanti Evam Urja-Santulan Bhava",
+    "translatedName": "Peace, fulfilment and energy balance after intimacy",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May intimacy remain a source of love, closeness, satisfaction and balance rather than becoming dependent on orgasm for a sense of completion. Whether both, one or neither partner experiences orgasm, may body, mind and energy settle naturally into peace, fulfilment and harmonious balance.",
+    "keywords": ["intimacy", "energy balance", "satisfaction", "peace", "fulfilment", "orgasm"]
+  },
+  {
+    "header": "🥇227",
+    "name": "अंतरंगता में बालसुलभ जिज्ञासा एवं सहजता भाव",
+    "englishName": "Antarangata Mein Balasulabh Jigyasa Evam Sahajata Bhava",
+    "translatedName": "Childlike curiosity and openness in intimacy",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May fear, hesitation, old experiences, performance pressure and expectations no longer block natural curiosity and openness in intimacy. With mutual consent, respect, safety and love, may we approach each intimate moment as a fresh experience with playfulness, openness and freedom from comparison or pressure.",
+    "keywords": ["intimacy", "curiosity", "openness", "playfulness", "consent", "freedom"]
+  },
+  {
+    "header": "🥇227",
+    "name": "यौन ऊर्जा की स्वस्थ एवं कल्याणकारी अभिव्यक्ति भाव",
+    "englishName": "Yaun Urja Ki Swasth Evam Kalyankari Abhivyakti Bhava",
+    "translatedName": "Healthy and balanced expression of sexual energy",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from suppression, confusion or imbalance around sexual energy. When sexual energy naturally arises, may appropriate, respectful and healthy ways of expressing or directing it become clear, with every choice guided by awareness, love, balance, mutual respect and the highest good.",
+    "keywords": ["sexual energy", "healthy expression", "balance", "awareness", "respect", "intimacy"]
+  },
+  {
+    "header": "🥇227",
+    "name": "पुरानी स्मृतियों को पुनः निर्मित करने की आवश्यकता से मुक्ति भाव",
+    "englishName": "Purani Smritiyon Ko Punah Nirmit Karne Ki Avashyakta Se Mukti Bhava",
+    "translatedName": "Freedom from recreating the past",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from repeatedly recreating old memories, emotions or experiences through objects, places or circumstances. May we honour the past without becoming bound to its symbols and remain open to creating new, beautiful and conscious experiences in the present.",
+    "keywords": ["past memories", "recreating experiences", "new experiences", "present moment", "freedom", "creativity"]
+  },
+  {
+    "header": "🥇227",
+    "name": "करुणा, उत्तरदायित्व एवं आंतरिक स्पष्टता भाव",
+    "englishName": "Karuna Uttardayitva Evam Antarik Spashtata Bhava",
+    "translatedName": "Compassion, responsibility and inner clarity in relationships",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from guilt, hesitation, inner conflict, social fear and unnecessary mental burden while balancing different relationships, roles and responsibilities. May every decision arise from honesty, compassion, clarity and responsibility while considering the highest good of ourselves and all involved.",
+    "keywords": ["compassion", "responsibility", "relationships", "clarity", "guilt", "balance"]
+  },
+  {
+    "header": "🥇227",
+    "name": "सामाजिक जजमेंट एवं अनावश्यक मानसिक कल्पनाओं से मुक्ति भाव",
+    "englishName": "Samajik Judgment Evam Anavashyak Mansik Kalpanon Se Mukti Bhava",
+    "translatedName": "Freedom from social judgment and unnecessary mental projections",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from worrying about what people may think, say or assume about us and from imagining unnecessary social judgments about our private lives. May we live with ease, freedom, dignity and integrity, remaining grounded in inner clarity and divine order rather than fear or guilt.",
+    "keywords": ["social judgment", "fear", "mental projections", "privacy", "dignity", "inner freedom"]
+  },
+  {
+    "header": "🥇227",
+    "name": "जीवन-व्यवस्थाओं में सहज गतिशीलता एवं संतुलन भाव",
+    "englishName": "Jeevan Vyavasthaon Mein Sahaj Gatisheelta Evam Santulan Bhava",
+    "translatedName": "Ease, flexibility and balance in life arrangements",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May our external arrangements, circumstances and schedules support rather than unnecessarily restrict our natural flow, rest and freedom. May appropriate spaces, resources, rest and mobility become available at the right time, supporting our inner balance, health and highest good.",
+    "keywords": ["life arrangements", "flexibility", "rest", "freedom", "resources", "balance"]
+  },
+  {
+    "header": "🥇227",
+    "name": "संबंधों में स्वतंत्रता एवं सहज समन्वय भाव",
+    "englishName": "Sambandhon Mein Swatantrata Evam Sahaj Samanvay Bhava",
+    "translatedName": "Freedom and harmonious coordination in relationships",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May our relationships, responsibilities and life arrangements coexist without creating unnecessary conflict between one relationship, our rest or our natural needs. May every relationship be lived with love, respect and freedom, creating harmony, peace, balance and ease for everyone involved.",
+    "keywords": ["relationships", "freedom", "coordination", "harmony", "balance", "highest good"]
+  },
+  {
+    "header": "🥇227",
+    "name": "प्रेम, स्वीकृति एवं आत्म-मूल्य की आंतरिक पूर्णता भाव",
+    "englishName": "Prem Swikriti Evam Atma-Mulya Ki Antarik Purnata Bhava",
+    "translatedName": "Inner completeness in love, acceptance and self-worth",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May our self-worth, love and sense of acceptance become inwardly complete rather than depending on external validation, special treatment, affection, convenience or fulfilment of one emotional need. May we enter relationships from completeness, freedom and awareness while seeing the whole person, whole relationship and its real impact clearly.",
+    "keywords": ["self-worth", "love", "acceptance", "validation", "relationships", "inner completeness"]
+  },
+  {
+    "header": "🥇227",
+    "name": "हानिकारक आकर्षणों एवं अस्वस्थ समझौतों से आत्म-सुरक्षा भाव",
+    "englishName": "Hanikarak Akarshanon Evam Aswasth Samjhauton Se Atma-Suraksha Bhava",
+    "translatedName": "Self-protection from harmful attractions and unhealthy compromises",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from becoming trapped in attractions, compromises or relationships where fulfilling one desire causes mental, emotional, physical or spiritual harm. May we choose relationships, experiences and agreements that support our overall well-being, guided by self-respect, discernment, balance and the highest good.",
+    "keywords": ["self-protection", "attraction", "unhealthy relationships", "boundaries", "discernment", "well-being"]
+  },
+  {
+    "header": "🥇227",
+    "name": "सुचारु व्यवस्थाओं एवं निर्बाध जीवन-प्रवाह भाव",
+    "englishName": "Sucharu Vyavasthaon Evam Nirbadh Jeevan-Pravah Bhava",
+    "translatedName": "Smooth arrangements and uninterrupted life flow",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May necessary vehicles, equipment, resources and daily arrangements function smoothly, safely and reliably. May appropriate solutions become available at the right time, protecting us from unnecessary disruptions, expenses and inconvenience while supporting ease, safety, prosperity and highest good.",
+    "keywords": ["smooth functioning", "vehicles", "equipment", "resources", "solutions", "prosperity"]
+  },
+  {
+    "header": "🥇227",
+    "name": "प्रत्येक व्यक्ति की वास्तविक आवश्यकता को समझने एवं संतुलित सहयोग भाव",
+    "englishName": "Pratyek Vyakti Ki Vastavik Avashyakta Ko Samajhne Evam Santulit Sahayog Bhava",
+    "translatedName": "Balanced support according to each person's genuine needs",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from giving, feeding or helping beyond what another person genuinely needs simply because of our habits, assumptions or affection. May we understand each person's age, nature, capacity and actual needs and provide appropriate support that encourages health, self-reliance, development and highest good.",
+    "keywords": ["genuine needs", "support", "care", "self-reliance", "health", "balance"]
+  },
+  {
+    "header": "🥇227",
+    "name": "बदलती आवश्यकताओं के अनुरूप लचीली समझ भाव",
+    "englishName": "Badalti Avashyaktaon Ke Anuroop Lachili Samajh Bhava",
+    "translatedName": "Flexible wisdom for changing needs and circumstances",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we honour traditions and past experiences without automatically imposing them on future generations or others. May we recognise that each person and generation can have different needs and make flexible, conscious decisions according to present circumstances and genuine requirements.",
+    "keywords": ["flexibility", "changing needs", "traditions", "generations", "awareness", "discernment"]
+  },
+  {
+    "header": "🥇227",
+    "name": "सद्गुरु के चरण-स्पर्श के प्रति श्रद्धा एवं निश्चिंत समर्पण भाव",
+    "englishName": "Sadguru Ke Charan-Sparsh Ke Prati Shraddha Evam Nishchint Samarpan Bhava",
+    "translatedName": "Faith, gratitude and peaceful surrender in the Sadguru's presence",
+    "audience": "for all",
+    "date": "2026-09-08",
+    "description": "May we be free from anxiety, fear, insecurity or feelings of unworthiness regarding the Sadguru's presence, arrival or sacred association. May we remain established in faith, gratitude, humility and peaceful surrender, trusting in the Guru's protection, grace and divine arrangement wherever his presence is experienced.",
+    "keywords": ["Sadguru", "charan sparsh", "श्रद्धा", "समर्पण", "कृतज्ञता", "Guru grace", "divine protection"]
+  },
+  {
     "header": "🥇226",
     "name": "गृहस्थ धर्म, पंचसूना की सजगता एवं नित्य यज्ञमय जीवन की निर्मल बुद्धि",
     "englishName": "Wisdom of household dharma, Panchasūnā awareness and a yajna-oriented life",
