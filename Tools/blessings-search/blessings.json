@@ -1,4 +1,64 @@
-[ 
+[
+  {
+    "header": "🥇228",
+    "name": "सरल, सुगम एवं जनहितकारी प्रशासनिक एवं विधिक व्यवस्थाओं की निर्मल बुद्धि",
+    "englishName": "Saral, Sugam evam Janhitkari Prashasnik evam Vidhik Vyavasthaon ki Nirmal Buddhi",
+    "translatedName": "Wisdom for simple, accessible and citizen-friendly administrative and legal systems",
+    "audience": "for all",
+    "date": "2026-09-14",
+    "description": "May all administrative, documentation, taxation, legal and governmental systems become simple, clear, transparent, timely and beneficial to the public. May every citizen be able to complete necessary processes with ease, dignity and minimum complexity, and may these systems serve justice, efficiency and the highest good of humanity.",
+    "keywords": ["administration", "documentation", "taxation", "legal systems", "government processes", "transparency", "citizen welfare", "justice"]
+  },
+  {
+    "header": "🥇228",
+    "name": "न्याय तक सहज पहुँच एवं विवेकपूर्ण सहयोग की निर्मल बुद्धि",
+    "englishName": "Nyay Tak Sahaj Pahunch evam Vivekpurn Sahyog ki Nirmal Buddhi",
+    "translatedName": "Wisdom for accessible justice and appropriate support",
+    "audience": "for all",
+    "date": "2026-09-14",
+    "description": "May no person be unnecessarily forced through complicated processes, excessive dependency or uncomfortable intermediaries to access their rights, responsibilities or justice. May appropriate expert support be easily, honestly and transparently available, and may legal and administrative systems make life simpler while establishing justice and serving the highest good of humanity.",
+    "keywords": ["justice", "access to justice", "rights", "responsibilities", "legal support", "expert guidance", "administration", "transparency"]
+  },
+  {
+    "header": "🥇228",
+    "name": "प्रतिक्रिया के बढ़ते चक्र से मुक्त रहने की निर्मल बुद्धि",
+    "englishName": "Pratikriya ke Badhte Chakra se Mukt Rahne ki Nirmal Buddhi",
+    "translatedName": "Freedom from escalating cycles of reaction and conflict",
+    "audience": "for all",
+    "date": "2026-09-14",
+    "description": "May we be free from reacting to hurt, ego or retaliation in ways that create further reactions and escalating conflict. May we pause and see the effects of our responses before acting, and respond with peace, patience, compassion, discernment and self-control. May our thoughts, words and actions help calm, stop and transform conflict, allowing peace, clarity, forgiveness and the highest good to flow.",
+    "keywords": ["reaction", "conflict", "retaliation", "ego", "self-control", "peace", "forgiveness", "Raktbeej syndrome"]
+  },
+  {
+    "header": "🥇228",
+    "name": "वास्तविक सद्गुरुतत्त्व एवं उच्च चेतना को पहचानने और सम्मान देने की निर्मल बुद्धि",
+    "englishName": "Vastavik Sadgurutattva evam Uchch Chetna ko Pahchanne aur Samman Dene ki Nirmal Buddhi",
+    "translatedName": "Wisdom to recognise and honour true higher guidance and consciousness",
+    "audience": "for all",
+    "date": "2026-09-14",
+    "description": "May we not judge genuine Sadguru principle, higher consciousness, true knowledge or divine guidance merely by external appearance, ordinary behaviour or worldly circumstances. May we recognise authentic guidance with humility, faith and discernment, respect its time, energy and presence, and receive its learning and grace according to the highest good.",
+    "keywords": ["Sadguru", "higher consciousness", "divine guidance", "true knowledge", "faith", "discernment", "humility", "grace"]
+  },
+  {
+    "header": "🥇228",
+    "name": "स्नेहपूर्ण निकटता और यौन इच्छा के बीच स्पष्टता एवं संवेदनशील सामंजस्य की निर्मल बुद्धि",
+    "englishName": "Snehpurn Nikatata aur Yaun Ichchha ke Beech Spashtata evam Samvedansheel Samanvay ki Nirmal Buddhi",
+    "translatedName": "Wisdom to balance affection, intimacy, sexuality and consent",
+    "audience": "for all",
+    "date": "2026-09-14",
+    "description": "May confusion, mixed signals, pressure and unmet expectations between affection, touch, emotional closeness and sexual desire dissolve completely. May we recognise and express our present desire, willingness and boundaries while respecting the other person's desire and comfort. Where willingness is not mutual, may we remain within the level of closeness that both genuinely find comfortable; and where willingness is mutual, may intimacy unfold naturally with love, respect, clarity, consent and joy.",
+    "keywords": ["affection", "intimacy", "sexuality", "consent", "boundaries", "willingness", "communication", "relationships"]
+  },
+  {
+    "header": "🥇228",
+    "name": "डिजिटल साधनों के विवेकपूर्ण एवं संतुलित उपयोग की निर्मल बुद्धि",
+    "englishName": "Digital Sadhanon ke Vivekpurn evam Santulit Upyog ki Nirmal Buddhi",
+    "translatedName": "Wisdom for balanced and mindful use of digital tools",
+    "audience": "for all",
+    "date": "2026-09-14",
+    "description": "May digital devices, the internet, social media, messages and notifications no longer unnecessarily disturb our sleep, rest, concentration or mental peace. May we use digital tools with appropriate timing, purpose and limits, protect our rest, sleep, practice and inner peace, and remain available when appropriate rather than constantly stimulated.",
+    "keywords": ["digital wellbeing", "internet", "social media", "notifications", "sleep", "rest", "concentration", "digital balance"]
+  },
   {
     "header": "🥇227",
     "name": "अपनी पात्रता एवं ईश्वरीय क्रम का सम्मान भाव",
