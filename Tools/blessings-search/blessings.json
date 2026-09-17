@@ -1,5 +1,205 @@
 [
   {
+    "header": "🥇229",
+    "name": "दूसरे की अनभिज्ञता का अनुचित लाभ उठाने से मुक्ति एवं न्यायपूर्ण व्यवहार की निर्मल बुद्धि",
+    "englishName": "Freedom from exploiting others' lack of knowledge",
+    "translatedName": "Fair and transparent treatment of everyone",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from taking unfair advantage of another person's lack of knowledge, experience or information. May we treat everyone with honesty, fairness, compassion and transparency, offering correct information, appropriate guidance and just cooperation.",
+    "keywords": ["अनभिज्ञता", "न्याय", "ईमानदारी", "पारदर्शिता", "सही जानकारी", "fairness"]
+  },
+  {
+    "header": "🥇229",
+    "name": "प्रत्येक आत्मा को उसकी वास्तविक क्षमता के अनुसार प्रोत्साहित करने की निर्मल बुद्धि",
+    "englishName": "Wisdom to encourage each soul according to its true potential",
+    "translatedName": "Encouraging others without limiting their potential",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we honour each person's unique abilities, potential and life path instead of limiting them according to our own fears, failures, experiences or lifestyle. May our guidance encourage freedom, confidence, growth and their highest potential.",
+    "keywords": ["क्षमता", "प्रोत्साहन", "potential", "growth", "guidance", "freedom"]
+  },
+  {
+    "header": "🥇229",
+    "name": "भय, झुंड-मानसिकता एवं सीमित धारणाओं से मुक्ति की निर्मल बुद्धि",
+    "englishName": "Freedom from fear, herd mentality and limiting beliefs",
+    "translatedName": "Choosing our path through courage and discernment",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from choosing a path merely because most people around us are doing the same, or from limiting our potential because of fear, insecurity, disappointment or restricted beliefs. May our decisions arise from our genuine abilities, inner calling, discernment and highest potential.",
+    "keywords": ["भय", "झुंड-मानसिकता", "limiting beliefs", "आत्मविश्वास", "विवेक", "life path"]
+  },
+  {
+    "header": "🥇229",
+    "name": "लचीली, समावेशी एवं व्यक्ति-केंद्रित व्यवस्थाओं की निर्मल बुद्धि",
+    "englishName": "Wisdom for flexible, inclusive and person-centred systems",
+    "translatedName": "Creating fair systems suited to real needs",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from rigid, one-size-fits-all systems and decisions that do not fit real circumstances. May we create flexible, inclusive and fair arrangements that recognise the needs of each person and community while using resources wisely.",
+    "keywords": ["लचीलापन", "समावेशी", "व्यवस्था", "न्याय", "अनुकूलन", "resources"]
+  },
+  {
+    "header": "🥇229",
+    "name": "संसाधनों के विवेकपूर्ण उपयोग एवं अपव्यय से मुक्ति की निर्मल बुद्धि",
+    "englishName": "Wisdom for mindful use of resources",
+    "translatedName": "Using resources wisely and reducing waste",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from unnecessary waste and excessive consumption of food, time, money, energy and other resources. May our choices allow appropriate flexibility, minimise waste and make the best possible use of available resources for the highest good.",
+    "keywords": ["संसाधन", "अपव्यय", "उपभोग", "समय", "धन", "ऊर्जा"]
+  },
+  {
+    "header": "🥇229",
+    "name": "उत्तरदायित्व, समयपालन एवं सेवा-भाव की निर्मल बुद्धि",
+    "englishName": "Wisdom of responsibility, punctuality and service",
+    "translatedName": "Fulfilling responsibilities with punctuality and integrity",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we remain attentive to our responsibilities, working hours and service commitments. May we be punctual, complete our duties efficiently and respectfully and honour the time, energy and dignity of others.",
+    "keywords": ["उत्तरदायित्व", "समयपालन", "सेवा-भाव", "दक्षता", "ईमानदारी", "punctuality"]
+  },
+  {
+    "header": "🥇229",
+    "name": "प्रत्येक परिस्थिति में सर्वोच्च कल्याण प्रकट होने की निर्मल बुद्धि",
+    "englishName": "Wisdom for the highest good to unfold in every situation",
+    "translatedName": "Trusting the highest good through uncertainty",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May uncertainty around circumstances, health-related decisions, treatment options or the future no longer disturb our inner stability. May the most beneficial decisions, resources and support become available, while we remain guided by trust, peace, discernment and surrender.",
+    "keywords": ["सर्वोच्च कल्याण", "uncertainty", "health decisions", "trust", "surrender", "peace"]
+  },
+  {
+    "header": "🥇229",
+    "name": "शरीर, उपचार एवं जीवनशैली के संतुलित सामंजस्य की निर्मल बुद्धि",
+    "englishName": "Wisdom for harmony between body, treatment and lifestyle",
+    "translatedName": "Balancing health, treatment, rest and lifestyle",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May our health, treatment, daily routine, exercise and lifestyle remain in balanced harmony. May we respect our body's actual capacity, progress gradually and establish sustainable habits that support long-term health, energy and independence.",
+    "keywords": ["शरीर", "उपचार", "जीवनशैली", "व्यायाम", "विश्राम", "स्वास्थ्य"]
+  },
+  {
+    "header": "🥇229",
+    "name": "सजग डिजिटल उपयोग एवं वर्तमान में उपस्थिति की निर्मल बुद्धि",
+    "englishName": "Wisdom for mindful digital use and present-moment presence",
+    "translatedName": "Using digital media consciously and staying present",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from becoming unnecessarily absorbed in mobile phones, social media, games, endless scrolling and other digital media. May we use technology consciously and meaningfully while remaining present with our relationships, nature, work and personal growth.",
+    "keywords": ["digital use", "mobile", "social media", "screen time", "present moment", "awareness"]
+  },
+  {
+    "header": "🥇229",
+    "name": "सत्यनिष्ठ एवं सर्वोच्च कल्याणकारी चिकित्सकीय निर्णयों की निर्मल बुद्धि",
+    "englishName": "Wisdom for honest and highest-good medical decisions",
+    "translatedName": "Healthcare decisions based on genuine need and integrity",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May medical investigations, tests and treatments be recommended according to genuine need and relevant information rather than unnecessary fear or financial motives. May healthcare decisions be guided by integrity, compassion, transparency, scientific discernment and the highest good through trusting communication between patient and healthcare professional.",
+    "keywords": ["चिकित्सा", "medical decisions", "tests", "treatment", "scientific discernment", "transparency"]
+  },
+  {
+    "header": "🥇229",
+    "name": "आर्थिक विषयों पर सहज एवं स्पष्ट संवाद की निर्मल बुद्धि",
+    "englishName": "Wisdom for easy and clear communication about financial matters",
+    "translatedName": "Discussing money openly and respectfully",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from hesitation, discomfort or fear of harming relationships when discussing money, fees, contributions, partnerships or financial responsibilities. May we communicate financial matters with love, respect, transparency and clarity.",
+    "keywords": ["आर्थिक संवाद", "धन", "शुल्क", "साझेदारी", "financial responsibility", "transparency"]
+  },
+  {
+    "header": "🥇229",
+    "name": "संतुलित आर्थिक उत्तरदायित्व एवं न्यायपूर्ण सहभागिता की निर्मल बुद्धि",
+    "englishName": "Wisdom for balanced financial responsibility and fair participation",
+    "translatedName": "Balancing generosity, boundaries and financial responsibility",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from unnecessarily carrying other people's financial responsibilities or allowing relationships to make financial boundaries unclear. May financial responsibilities be shared fairly with generosity, self-respect, transparency, trust and balance.",
+    "keywords": ["आर्थिक उत्तरदायित्व", "financial boundaries", "fairness", "generosity", "सहभागिता", "balance"]
+  },
+  {
+    "header": "🥇229",
+    "name": "आवश्यक जानकारी में सहज संतोष एवं अनावश्यक जानने की अपेक्षा से मुक्त रहने की निर्मल बुद्धि",
+    "englishName": "Wisdom for contentment with necessary information",
+    "translatedName": "Being satisfied with what we genuinely need to know",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from giving unnecessary importance to knowing every detail or fearing that something might remain unknown. May we receive the information that is genuinely necessary and appropriate while remaining peaceful, satisfied and trusting about what is unnecessary or unavailable.",
+    "keywords": ["जानकारी", "संतोष", "जिज्ञासा", "information", "peace", "trust"]
+  },
+  {
+    "header": "🥇229",
+    "name": "स्वस्थ रुचि एवं प्रेरणा को संतुलित बनाए रखने की निर्मल बुद्धि",
+    "englishName": "Wisdom to maintain healthy interest and inspiration",
+    "translatedName": "Sustaining healthy interest after discussion and sharing",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from our healthy interest or motivation suddenly disappearing after discussing, planning or sharing about a subject. May we maintain our inner inspiration and genuine interest naturally and remain clear and engaged while inspiring others.",
+    "keywords": ["रुचि", "प्रेरणा", "motivation", "planning", "sharing", "clarity"]
+  },
+  {
+    "header": "🥇229",
+    "name": "संतुलित एवं सहभागी संवाद की निर्मल बुद्धि",
+    "englishName": "Wisdom for balanced and participatory communication",
+    "translatedName": "Balancing speaking, listening and participation",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from continuously speaking without giving others sufficient opportunity to respond or participate. May we remain aware of their interest, reactions and comfort, creating conversations in which everyone has a respectful and enjoyable opportunity to speak and listen.",
+    "keywords": ["संवाद", "सुनना", "बोलना", "सहभागिता", "communication", "balance"]
+  },
+  {
+    "header": "🥇229",
+    "name": "अपनी क्षमता के अनुसार उचित commitment करने की निर्मल बुद्धि",
+    "englishName": "Wisdom to make commitments according to our capacity",
+    "translatedName": "Making realistic and responsible commitments",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from making commitments, promises or offers without properly assessing our actual capacity, resources, time and circumstances. May every commitment we make be realistic, clear, honest, manageable and aligned with everyone's highest good.",
+    "keywords": ["commitment", "promise", "capacity", "resources", "time", "responsibility"]
+  },
+  {
+    "header": "🥇229",
+    "name": "commitment पूरी न कर पाने पर सम्मानपूर्वक एवं उत्तरदायित्वपूर्ण संवाद की निर्मल बुद्धि",
+    "englishName": "Wisdom for respectful communication when a commitment cannot be fulfilled",
+    "translatedName": "Communicating honestly when commitments cannot be fulfilled",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from avoiding others, providing deliberately poor or incomplete work, behaving disrespectfully, blaming others or hiding our inability when we cannot fulfil a commitment. May we communicate early and respectfully, apologise when appropriate and offer a reasonable alternative while maintaining honesty, transparency, dignity and responsibility.",
+    "keywords": ["commitment", "responsibility", "communication", "apology", "honesty", "alternative solution"]
+  },
+  {
+    "header": "🥇229",
+    "name": "सामूहिक पीड़ा के बीच करुणा के साथ स्थिर रहने की निर्मल बुद्धि",
+    "englishName": "Wisdom to remain compassionate and steady amid collective suffering",
+    "translatedName": "Holding compassion without absorbing collective pain",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from repeatedly consuming painful news until we feel heavy, helpless or compelled to transfer that burden onto people around us. May we remain compassionate toward collective suffering while staying inwardly calm, stable and balanced, focusing clearly on genuine ways to help.",
+    "keywords": ["collective suffering", "करुणा", "news", "emotional burden", "stability", "help"]
+  },
+  {
+    "header": "🥇229",
+    "name": "प्राप्ति के बाद भी आनंद एवं ताज़गी बनाए रखने की निर्मल बुद्धि",
+    "englishName": "Wisdom to maintain joy and freshness after receiving",
+    "translatedName": "Continuing to enjoy what we have received",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from losing attraction, joy or enthusiasm immediately after receiving an object, opportunity, goal, experience or relationship we had long anticipated. May we remain grateful, fresh and present enough to fully experience its actual value and enjoy it in alignment with the highest good.",
+    "keywords": ["प्राप्ति", "आनंद", "ताज़गी", "gratitude", "anticipation", "satisfaction"]
+  },
+  {
+    "header": "🥇229",
+    "name": "दूसरों की वास्तविक अवस्था पर विश्वास एवं संतुलित सहयोग की निर्मल बुद्धि",
+    "englishName": "Wisdom to trust others' actual state and offer balanced support",
+    "translatedName": "Trusting others without unnecessary worry or interference",
+    "audience": "for all",
+    "date": "2026-09-17",
+    "description": "May we be free from doubting another person's genuine words, capacity or assurances and from forming conclusions based on our own anxiety or imagination. May we listen to their actual reality, respect their capacity and self-determination and offer balanced support only when needed, guided by compassion, trust, discernment and the highest good.",
+    "keywords": ["trust", "दूसरों की अवस्था", "सहयोग", "self-determination", "compassion", "discernment"]
+  },
+  {
     "header": "🥇228",
     "name": "सरल, सुगम एवं जनहितकारी प्रशासनिक एवं विधिक व्यवस्थाओं की निर्मल बुद्धि",
     "englishName": "Saral, Sugam evam Janhitkari Prashasnik evam Vidhik Vyavasthaon ki Nirmal Buddhi",
