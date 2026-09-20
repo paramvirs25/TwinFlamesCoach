@@ -438,7 +438,7 @@ class TFC_Audio_Registry {
         'conscious_living_staying_open_without_knowing' => [
             'title' => 'Staying Open Without Knowing',
 
-            'english' => [
+            'hindi' => [
                 'publit' => 'Art-Of-Conscious-Living-2026/3-Staying-Open-Without-Knowing.mp3',
             ],
         ],
