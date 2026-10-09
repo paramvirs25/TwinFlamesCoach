@@ -443,6 +443,14 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'conscious_living_seeing_beyond_one_perspective' => [
+            'title' => 'Seeing Beyond One Perspective',
+
+            'hindi' => [
+                'publit' => 'Art-Of-Conscious-Living-2026/4-Seeing-Beyond-One-Perspective.mp3',
+            ],
+        ],
+
     ];
 
 
