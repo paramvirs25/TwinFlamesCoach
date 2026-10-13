@@ -1,5 +1,555 @@
 [
   {
+    "header": "🥇241",
+    "name": "अनिश्चितता में आंतरिक दिशा",
+    "englishName": "Anishchitata Mein Aantarik Disha",
+    "translatedName": "Inner Direction Amid Uncertainty",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from losing inner clarity, peace, or direction while waiting for another person's uncertain wishes or decisions. We respect others' freedom while making calm, wise decisions according to our own needs, boundaries, and life direction.",
+    "keywords": ["uncertainty", "inner direction", "waiting", "decision making", "emotional independence", "boundaries", "inner peace", "freedom", "clarity"]
+  },
+  {
+    "header": "🥇241",
+    "name": "निरंतर ध्यान एवं ईश्वर-स्मरण",
+    "englishName": "Nirantar Dhyan Evam Ishwar Smaran",
+    "translatedName": "Continuous Meditation and Divine Awareness",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from becoming entangled in external distractions, attachments, and constant thoughts that take us away from meditation. We naturally remember the Divine present in all beings, cultivating concentration, peace, self-awareness, and recognition of our true nature.",
+    "keywords": ["meditation", "continuous meditation", "God", "Divine awareness", "concentration", "self-realization", "true nature", "spiritual practice", "inner peace", "attention"]
+  },
+  {
+    "header": "🥇241",
+    "name": "शिष्य की ग्रहण-क्षमता के अनुरूप मार्गदर्शन",
+    "englishName": "Shishya Ki Grahan Kshamta Ke Anuroop Margdarshan",
+    "translatedName": "Guidance According to the Student's Readiness",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from giving students more knowledge or spiritual practice than they are ready to absorb, without allowing enough time for integration. We guide each student according to their pace and give them sufficient time to understand, practise, and apply what they learn.",
+    "keywords": ["teaching", "student readiness", "spiritual guidance", "learning pace", "integration", "practice", "mentoring", "capacity", "patience"]
+  },
+  {
+    "header": "🥇241",
+    "name": "आपसी सामंजस्य एवं सहज लय",
+    "englishName": "Aapsi Samanjasya Evam Sahaj Laya",
+    "translatedName": "Mutual Harmony and Natural Rhythm",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from pressure, disappointment, and dissatisfaction when people's wishes, readiness, energy, priorities, or natural pace differ. We respect one another's circumstances, willingness, and boundaries, allowing shared activities and closeness to flow naturally wherever possible without pressure when our rhythms differ.",
+    "keywords": ["harmony", "timing", "natural rhythm", "readiness", "intimacy", "cooperation", "shared work", "boundaries", "mutual respect", "relationship expectations"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सहज एवं स्वतंत्र श्वास",
+    "englishName": "Sahaj Evam Swatantra Shwas",
+    "translatedName": "Easy and Unrestricted Breathing",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from unnecessary obstacles to comfortable, deep breathing and from related conscious and unconscious patterns. We remain aware of our body's signals and care for our respiratory health, seeking appropriate assistance when needed.",
+    "keywords": ["breathing", "respiration", "deep breathing", "respiratory health", "body awareness", "breath awareness", "health care", "physical well-being"]
+  },
+  {
+    "header": "🥇241",
+    "name": "शरीर की जागरूक देखभाल",
+    "englishName": "Sharir Ki Jagruk Dekhbhal",
+    "translatedName": "Conscious Care and Recovery of the Body",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from neglecting bodily signals or contributing to physical and nervous-system imbalance through alcohol, intoxicating substances, unsuitable food, dehydration, or other factors. We understand our condition, allow adequate rest, provide appropriate care, and seek medical support when necessary.",
+    "keywords": ["body care", "nervous system", "alcohol", "intoxicants", "nutrition", "dehydration", "rest", "recovery", "physical health", "medical support"]
+  },
+  {
+    "header": "🥇241",
+    "name": "बिना कटुता के अस्वीकार",
+    "englishName": "Bina Katuta Ke Asweekar",
+    "translatedName": "Respectful Refusal Without Harshness",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from responding with rudeness, contempt, humiliation, or anger when we cannot or do not wish to fulfil someone's request or expectation. We express our boundaries and disagreements clearly while preserving the other person's dignity, and can decline without guilt or disrespect.",
+    "keywords": ["saying no", "refusal", "boundaries", "assertiveness", "respect", "anger", "guilt", "requests", "dignity", "communication"]
+  },
+  {
+    "header": "🥇241",
+    "name": "महत्वपूर्ण कार्य की तैयारी एवं एकाग्रता",
+    "englishName": "Mahatvapurn Karya Ki Taiyari Evam Ekagrata",
+    "translatedName": "Protecting Preparation and Focus",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from allowing avoidable interruptions and unnecessary tasks to disrupt our preparation, energy, and concentration before important work. We protect our time and readiness, manage distractions appropriately, and remain focused on completing our main objective well.",
+    "keywords": ["focus", "concentration", "preparation", "productivity", "time management", "distractions", "energy management", "important work", "discipline"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सरल एवं लचीले विकल्प",
+    "englishName": "Saral Evam Lachile Vikalp",
+    "translatedName": "Choosing Simple and Flexible Options",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from clinging unnecessarily to familiar methods, old habits, or the belief that things must always be done the same way. We consider each situation with an open mind and choose the most suitable and effective option according to our needs, time, energy, and circumstances.",
+    "keywords": ["flexibility", "simple solutions", "old habits", "alternatives", "problem solving", "adaptability", "efficiency", "decision making", "open-mindedness"]
+  },
+  {
+    "header": "🥇241",
+    "name": "अनुभवों से सीख एवं विवेकपूर्ण निर्णय",
+    "englishName": "Anubhavon Se Seekh Evam Vivekpurn Nirnay",
+    "translatedName": "Learning from Experience for Wise Decisions",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from failing to retain lessons from important experiences and repeating the same mistakes because their causes and consequences are forgotten. We record or remember meaningful lessons, review them when similar situations arise, and make informed decisions based on present circumstances.",
+    "keywords": ["learning from experience", "memory", "documentation", "lessons learned", "decision making", "past experiences", "patterns", "reflection", "wisdom"]
+  },
+  {
+    "header": "🥇241",
+    "name": "अनुभव के बाद प्रतिबद्धता",
+    "englishName": "Anubhav Ke Baad Pratibaddhata",
+    "translatedName": "Commitment After Experience and Testing",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from making major financial or long-term commitments based on temporary excitement, attraction, incomplete information, or insufficient experience. We review available information and test an option where feasible before making a substantial commitment suited to our circumstances.",
+    "keywords": ["commitment", "testing", "experience", "financial decisions", "investment", "courses", "membership", "long-term commitment", "due diligence", "risk assessment"]
+  },
+  {
+    "header": "🥇241",
+    "name": "तथ्यों एवं अनुभव पर आधारित निर्णय",
+    "englishName": "Tathyoon Evam Anubhav Par Aadharit Nirnay",
+    "translatedName": "Decisions Based on Facts and Experience",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from forming conclusions about people, products, services, or decisions based on a single sign, label, reputation, outward image, or assumption. We evaluate sufficient facts, relevant circumstances, and real experience before making important decisions.",
+    "keywords": ["facts", "evidence", "experience", "judgment", "assumptions", "reputation", "critical thinking", "decision making", "balanced evaluation"]
+  },
+  {
+    "header": "🥇241",
+    "name": "स्वयं जानकारी प्राप्त करना",
+    "englishName": "Swayam Jankari Prapt Karna",
+    "translatedName": "Taking Initiative to Find Information",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from expecting others to provide every answer without first exploring available information and resources ourselves. We investigate our questions, develop our understanding independently, and seek appropriate guidance when a subject exceeds our knowledge or capacity.",
+    "keywords": ["self-learning", "research", "initiative", "curiosity", "information seeking", "resources", "independence", "guidance", "problem solving"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सीमाओं में समाधान खोजना",
+    "englishName": "Seemaon Mein Samadhan Khojna",
+    "translatedName": "Finding Solutions Within Constraints",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from treating a goal as impossible and giving up as soon as we encounter limited time, finances, or other obstacles. We acknowledge real constraints while exploring available resources, alternative routes, and practical steps toward sustainable solutions.",
+    "keywords": ["constraints", "problem solving", "resilience", "alternatives", "limited resources", "financial limitations", "time management", "creative thinking", "persistence"]
+  },
+  {
+    "header": "🥇241",
+    "name": "करुणा एवं संयम से बोलना",
+    "englishName": "Karuna Evam Sanyam Se Bolna",
+    "translatedName": "Speaking with Compassion and Restraint",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from unnecessary criticism, fault-finding, and harsh or bitter reactions toward others. We express what is true and necessary with compassion, restraint, and respect, choosing silence and understanding when criticism serves no constructive purpose.",
+    "keywords": ["compassion", "speech", "restraint", "criticism", "fault-finding", "kindness", "silence", "communication", "respect", "anger"]
+  },
+  {
+    "header": "🥇241",
+    "name": "दूसरों के व्यवहार के बीच स्वतंत्र पसंद",
+    "englishName": "Doosron Ke Vyavahar Ke Beech Swatantra Pasand",
+    "translatedName": "Maintaining Independent Choice in Relationships",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from automatically changing our feelings, wishes, or actions in response to another person's changing closeness, distance, or complaints about our behaviour. We make conscious choices about physical, emotional, and sexual closeness without acting against our own wishes because of another person's reactions.",
+    "keywords": ["independent choice", "relationships", "closeness", "distance", "physical intimacy", "emotional intimacy", "sexual intimacy", "boundaries", "autonomy", "relationship pressure"]
+  },
+  {
+    "header": "🥇241",
+    "name": "संबंधों में स्पष्ट उपलब्धता",
+    "englishName": "Sambandhon Mein Spasht Upalabdhata",
+    "translatedName": "Clarity About Availability in Relationships",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from offering time, affection, support, resources, or presence without clarity and then withdrawing them suddenly in ways that create confusion. We communicate our availability and boundaries clearly and explain meaningful changes when appropriate.",
+    "keywords": ["availability", "relationships", "mixed signals", "clarity", "boundaries", "communication", "support", "consistency", "expectations"]
+  },
+  {
+    "header": "🥇241",
+    "name": "अपने निर्णयों के प्रभाव की जागरूकता",
+    "englishName": "Apne Nirnayon Ke Prabhav Ki Jagrukta",
+    "translatedName": "Awareness of How Our Decisions Affect Others",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from unintentionally involving others in conflicts, circumstances, or responsibilities they do not wish to take on. We consider the impact of our actions, distinguish our responsibilities from theirs, and respect their willingness before involving them in our situations.",
+    "keywords": ["responsibility", "impact on others", "consent", "boundaries", "conflict", "personal responsibility", "consideration", "relationships", "decision making"]
+  },
+  {
+    "header": "🥇241",
+    "name": "पुराने अचेतन संस्कारों की पहचान",
+    "englishName": "Purane Achetan Sanskaron Ki Pehchan",
+    "translatedName": "Recognizing Inherited and Unconscious Patterns",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from unknowingly repeating behaviours and reactions shaped by family, ancestors, past relationships, experiences, or conditioning. We recognize recurring patterns without assuming they are right simply because they are familiar, and consciously choose alternatives aligned with our highest good.",
+    "keywords": ["unconscious patterns", "inherited patterns", "family conditioning", "ancestors", "past experiences", "repeating behaviours", "self-awareness", "healing", "conscious choice"]
+  },
+  {
+    "header": "🥇241",
+    "name": "प्राथमिकताओं एवं निर्णयों में एकरूपता",
+    "englishName": "Prathamiktaon Evam Nirnayon Mein Ekrupata",
+    "translatedName": "Consistency Between Priorities and Decisions",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from repeatedly acting against our genuine priorities and long-term goals under the influence of temporary attractions, desires, or impulses. We understand our values and objectives and assess important choices against our actual priorities and long-term well-being.",
+    "keywords": ["priorities", "values", "consistency", "impulses", "temporary desires", "long-term goals", "decision making", "self-awareness", "alignment"]
+  },
+  {
+    "header": "🥇241",
+    "name": "उपलब्ध ज्ञान का वास्तविक मूल्य",
+    "englishName": "Upalabdh Gyan Ka Vastavik Mulya",
+    "translatedName": "Recognizing the Value of Available Guidance",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from undervaluing useful knowledge or guidance merely because it is familiar, nearby, or easily accessible, while overvaluing distant or novel alternatives because of their outward appeal. We assess guidance by its actual quality, suitability, and usefulness and make good use of what serves us.",
+    "keywords": ["guidance", "knowledge", "wisdom", "value", "familiarity", "novelty", "spiritual learning", "discernment", "available resources"]
+  },
+  {
+    "header": "🥇241",
+    "name": "गुरु एवं मार्गदर्शकों के समय का सम्मान",
+    "englishName": "Guru Evam Margdarshakon Ke Samay Ka Samman",
+    "translatedName": "Respecting the Role and Time of Teachers",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from failing to recognize the true role and contribution of gurus, teachers, and guides or occupying their time with unnecessary tasks. We respect their time, energy, knowledge, and actual responsibilities, seeking their support in ways that make good use of their abilities.",
+    "keywords": ["guru", "teacher", "spiritual guide", "mentor", "respect", "time", "energy", "guidance", "contribution", "spiritual learning"]
+  },
+  {
+    "header": "🥇241",
+    "name": "श्रम एवं योगदान का न्यायपूर्ण सम्मान",
+    "englishName": "Shram Evam Yogdan Ka Nyaypurn Samman",
+    "translatedName": "Fair Recognition and Compensation for Contribution",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from undervaluing the labour, time, and contribution of others or responding with stinginess, delay, or imbalance when giving something in return. We recognize each person's contribution and offer appropriate appreciation, gratitude, and fair compensation.",
+    "keywords": ["fairness", "compensation", "labour", "time", "service", "contribution", "gratitude", "payment", "integrity", "reciprocity"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सेवा को कृतज्ञता से ग्रहण करना",
+    "englishName": "Seva Ko Kritagyata Se Grahan Karna",
+    "translatedName": "Receiving Service with Gratitude",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from treating another person's service, help, time, or love as an entitlement and using it to establish unnecessary claims over them. We receive support with humility and gratitude without assuming that it gives us control over another person's freedom, time, or decisions.",
+    "keywords": ["service", "help", "gratitude", "entitlement", "freedom", "boundaries", "love", "support", "reciprocity", "respect"]
+  },
+  {
+    "header": "🥇241",
+    "name": "स्वतंत्र इच्छा एवं सहमति का सम्मान",
+    "englishName": "Swatantra Ichchha Evam Sahmati Ka Samman",
+    "translatedName": "Respecting Free Will, Consent, and Readiness",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from including others in plans, journeys, events, or commitments without checking their wishes or expecting them to adjust their circumstances to ours. We ask about their willingness, availability, and readiness and accept yes, no, or not now with ease.",
+    "keywords": ["free will", "consent", "readiness", "plans", "travel", "commitments", "boundaries", "availability", "respect", "choice"]
+  },
+  {
+    "header": "🥇241",
+    "name": "लागत एवं प्रयास का समग्र मूल्यांकन",
+    "englishName": "Lagat Evam Prayas Ka Samagra Mulyankan",
+    "translatedName": "Evaluating Total Cost and Effort",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from choosing based only on a visible benefit, familiarity, fear, or immediate convenience while overlooking real costs, effort, and circumstances. We assess the time, energy, money, effort, and likely consequences of available options before choosing what is practical, safe, and suitable.",
+    "keywords": ["total cost", "effort", "time", "energy", "financial decisions", "risk assessment", "convenience", "comparison", "practical choices", "decision making"]
+  },
+  {
+    "header": "🥇241",
+    "name": "जीवनसाथी के साथ प्रेमपूर्ण साझेदारी",
+    "englishName": "Jeevansathi Ke Saath Prempurn Sajhedari",
+    "translatedName": "Love and Partnership Beyond Transaction",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from reducing marriage to financial security, convenience, care, or the fulfilment of practical needs while neglecting love, emotional connection, and genuine partnership. We value security while prioritizing respect, mutual care, companionship, emotional closeness, and shared growth.",
+    "keywords": ["marriage", "spouse", "life partner", "love", "partnership", "emotional connection", "companionship", "mutual care", "financial security", "relationship"]
+  },
+  {
+    "header": "🥇241",
+    "name": "पीड़ा में विवेक एवं अहिंसक प्रतिक्रिया",
+    "englishName": "Peeda Mein Vivek Evam Ahinsak Pratikriya",
+    "translatedName": "Wise and Nonviolent Responses to Pain",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from automatically moving into anger, revenge, or impulses to harm someone when experiencing sudden pain, injury, fear, or shock. We remain aware in difficult moments and choose responses guided by discernment, compassion, balance, and the well-being of ourselves and others.",
+    "keywords": ["pain", "fear", "trauma", "shock", "anger", "revenge", "nonviolence", "compassion", "self-control", "emotional regulation"]
+  },
+  {
+    "header": "🥇241",
+    "name": "शारीरिक जोखिमों के प्रति जागरूकता",
+    "englishName": "Sharirik Jokhimon Ke Prati Jagrukta",
+    "translatedName": "Awareness of Physical Risks and Safety",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from neglecting precautions against avoidable injuries, accidents, poisonous bites, and other physical harm due to carelessness or insufficient awareness of risks. We remain alert to our surroundings, take reasonable precautions, and respond appropriately to unexpected dangers.",
+    "keywords": ["physical safety", "risks", "injuries", "accidents", "poisonous bites", "precautions", "awareness", "prevention", "personal safety"]
+  },
+  {
+    "header": "🥇241",
+    "name": "निजी जानकारी का विवेकपूर्ण साझा करना",
+    "englishName": "Niji Jankari Ka Vivekpurn Sajha Karna",
+    "translatedName": "Discerning What Personal Information to Share",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from sharing personal matters, emotions, plans, or life circumstances excessively or without sufficient discernment. We consider what to share, when, how much, and with whom, balancing trust and openness with privacy, safety, and genuine need.",
+    "keywords": ["privacy", "personal information", "oversharing", "confidentiality", "boundaries", "trust", "personal matters", "safety", "discernment"]
+  },
+  {
+    "header": "🥇241",
+    "name": "विवेकपूर्ण सुरक्षा एवं जोखिम से बचाव",
+    "englishName": "Vivekpurn Suraksha Evam Jokhim Se Bachav",
+    "translatedName": "Prudent Safety and Avoiding Unnecessary Risks",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from neglecting our own or others' safety and taking unnecessary risks without assessing real danger. We remain aware of risks and limitations and choose sensible precautions rather than acting from thrill-seeking, excitement, or overconfidence.",
+    "keywords": ["safety", "risk management", "carelessness", "precautions", "overconfidence", "physical safety", "protection", "risk assessment", "responsibility"]
+  },
+  {
+    "header": "🥇241",
+    "name": "स्वतंत्रता के साथ आत्मनिर्भरता",
+    "englishName": "Swatantrata Ke Saath Atmanirbharta",
+    "translatedName": "Self-Reliance While Respecting Others' Freedom",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from making our motivation, emotional stability, or ability to act unnecessarily dependent on one person's constant attention, presence, or guidance. We appreciate support while respecting others' priorities and continuing our own responsibilities with inner stability and discipline.",
+    "keywords": ["self-reliance", "independence", "attention", "emotional stability", "motivation", "discipline", "dependency", "boundaries", "personal responsibility"]
+  },
+  {
+    "header": "🥇241",
+    "name": "आध्यात्मिक अनुशासन एवं स्वास्थ्य में संतुलन",
+    "englishName": "Adhyatmik Anushasan Evam Swasthya Mein Santulan",
+    "translatedName": "Balancing Spiritual Discipline and Health",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from neglecting the body's real needs in the name of spiritual discipline or feeling spiritually inferior when a valid reason prevents us from following a practice. We respect our health and circumstances, practising fasting or other disciplines when appropriate and setting them aside when necessary without guilt.",
+    "keywords": ["spiritual discipline", "health", "fasting", "body needs", "self-care", "guilt", "balance", "spiritual practice", "well-being"]
+  },
+  {
+    "header": "🥇241",
+    "name": "दूसरों की सीमाओं का सम्मान",
+    "englishName": "Doosron Ki Seemaon Ka Samman",
+    "translatedName": "Respecting Others' Boundaries and Decisions",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from ignoring another person's clear boundaries, preferences, or wish not to participate and pressuring them for our own convenience or expectations. We respect independent decisions and accept unwillingness without repeated persuasion or pressure.",
+    "keywords": ["boundaries", "consent", "personal choice", "refusal", "pressure", "respect", "autonomy", "relationships", "freedom", "preferences"]
+  },
+  {
+    "header": "🥇241",
+    "name": "दोषारोपण के बजाय समाधान",
+    "englishName": "Dosharopan Ke Bajay Samadhan",
+    "translatedName": "Seeking Solutions Instead of Blame",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from blaming ourselves or others for problems and remaining trapped in criticism, anger, guilt, or complaint. We view challenges as patterns that can be understood and improved, seeking their causes and responding with calmness, compassion, and practical solutions.",
+    "keywords": ["problem solving", "blame", "criticism", "anger", "guilt", "complaints", "root causes", "healing", "solutions", "self-awareness"]
+  },
+  {
+    "header": "🥇241",
+    "name": "जीवन में जागरूक सहभागिता",
+    "englishName": "Jeevan Mein Jagruk Sahbhagita",
+    "translatedName": "Conscious Participation in Life",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from withdrawing unnecessarily from suitable opportunities, relationships, and experiences because of hesitation, fear, doubt, or overthinking. We participate in life with awareness and enjoyment, taking small conscious actions that help us connect and move forward.",
+    "keywords": ["participation", "life opportunities", "hesitation", "fear", "overthinking", "connection", "conscious action", "engagement", "personal growth"]
+  },
+  {
+    "header": "🥇241",
+    "name": "दूसरों को स्वीकार कर आंतरिक शांति",
+    "englishName": "Doosron Ko Sweekar Kar Aantarik Shanti",
+    "translatedName": "Inner Peace Through Accepting Others",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from trying to change other people's nature, beliefs, behaviour, or lifestyle to match our expectations and becoming distressed when they do not change. We respect their freedom and present our views when appropriate without insisting that others conform to our preferences.",
+    "keywords": ["acceptance", "control", "changing others", "expectations", "relationships", "inner peace", "freedom", "non-attachment", "respect"]
+  },
+  {
+    "header": "🥇241",
+    "name": "असहायता के प्रति करुणा एवं संतुलन",
+    "englishName": "Asahayata Ke Prati Karuna Evam Santulan",
+    "translatedName": "Compassion and Balance Toward Others' Vulnerability",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from responding with irritation, anger, harshness, or contempt when another person's vulnerability, fear, dependency, or limitations affect our convenience or routine. We understand their circumstances with compassion and discernment, helping where appropriate while communicating our own limits respectfully.",
+    "keywords": ["compassion", "vulnerability", "helplessness", "dependency", "patience", "irritation", "personal limits", "support", "empathy"]
+  },
+  {
+    "header": "🥇241",
+    "name": "असहायता से समाधान की ओर",
+    "englishName": "Asahayata Se Samadhan Ki Or",
+    "translatedName": "Moving from Helplessness Toward Solutions",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from remaining stuck in feelings or circumstances of helplessness without taking available steps toward improvement. We acknowledge our situation calmly and move toward solutions through awareness, practical effort, and balanced action.",
+    "keywords": ["helplessness", "proactivity", "solutions", "practical action", "resilience", "self-efficacy", "awareness", "problem solving", "personal growth"]
+  },
+  {
+    "header": "🥇241",
+    "name": "अपने अधिकार एवं दूसरों के हित का संतुलन",
+    "englishName": "Apne Adhikar Evam Doosron Ke Hit Ka Santulan",
+    "translatedName": "Balancing Our Rights with Others' Well-Being",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from pursuing our rights, demands, or goals while disregarding others' time, comfort, peace, safety, or well-being. We express ourselves firmly and respectfully, balancing rights with responsibilities and making decisions guided by justice, compassion, and discernment.",
+    "keywords": ["rights", "responsibilities", "fairness", "others' well-being", "respect", "justice", "compassion", "boundaries", "social responsibility"]
+  },
+  {
+    "header": "🥇241",
+    "name": "प्रकृति एवं समस्त प्राणियों का कल्याण",
+    "englishName": "Prakriti Evam Samast Praniyon Ka Kalyan",
+    "translatedName": "Harmony and Protection for Nature and All Beings",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from creating imbalance with nature or neglecting the collective good through our actions and lifestyle. We live in greater harmony with nature and pray for the protection and well-being of all beings, the reduction of harm from natural disasters, and the preservation of the natural world.",
+    "keywords": ["nature", "environment", "all beings", "collective good", "harmony", "protection", "natural disasters", "conservation", "ecological balance", "prayer"]
+  },
+  {
+    "header": "🥇241",
+    "name": "आवश्यकताओं एवं भावनाओं की स्पष्ट अभिव्यक्ति",
+    "englishName": "Aavashyaktaon Evam Bhavnaon Ki Spasht Abhivyakti",
+    "translatedName": "Clearly Expressing Needs and Feelings",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from being unable to express genuine needs, feelings, wishes, and expectations or expecting others to infer them from hints. We communicate our needs, boundaries, and decisions with love, clarity, and respect, reducing unnecessary assumptions and building mutual understanding.",
+    "keywords": ["communication", "emotional needs", "feelings", "expectations", "boundaries", "direct communication", "relationships", "clarity", "mutual understanding"]
+  },
+  {
+    "header": "🥇241",
+    "name": "शरीर की लय एवं आवश्यकताओं का सम्मान",
+    "englishName": "Sharir Ki Laya Evam Aavashyaktaon Ka Samman",
+    "translatedName": "Respecting the Body's Rhythm and Needs",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from ignoring the body's needs after fasting or prolonged periods without food due to extreme hunger, impatience, or intense cravings. We pay attention to our body's signals and digestive needs, choosing nourishing food patiently and mindfully to support long-term health.",
+    "keywords": ["body rhythm", "fasting", "hunger", "nutrition", "digestion", "cravings", "mindful eating", "health", "body signals", "balanced diet"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सद्गुरु-कृपा एवं सत्संग की पात्रता",
+    "englishName": "Sadguru Kripa Evam Satsang Ki Patrata",
+    "translatedName": "Openness to the Grace of the Guru and Satsang",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "May our conscious and unconscious patterns and inner obstacles that keep us distant from the company of a Sadguru, saints, and spiritual gatherings be gently purified and released. We remain receptive with a sincere heart, faith, and openness so that spiritual guidance may support inner transformation and awakening.",
+    "keywords": ["Sadguru", "guru's grace", "satsang", "saints", "spiritual awakening", "faith", "openness", "inner transformation", "spiritual guidance", "devotion"]
+  },
+  {
+    "header": "🥇241",
+    "name": "मेजबान की क्षमता का सम्मान",
+    "englishName": "Mezban Ki Kshamta Ka Samman",
+    "translatedName": "Respecting the Host's Capacity",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from placing excessive demands or guest-related burdens on a host without considering their age, health, time, energy, and responsibilities. We receive hospitality with gratitude and sensitivity, respecting the host's actual capacity and avoiding unnecessary physical, emotional, or financial strain.",
+    "keywords": ["hospitality", "host", "guests", "gratitude", "consideration", "time", "energy", "responsibilities", "boundaries", "respect"]
+  },
+  {
+    "header": "🥇241",
+    "name": "समयबद्ध प्रतिबद्धताओं का सम्मान",
+    "englishName": "Samaybaddh Pratibaddhataon Ka Samman",
+    "translatedName": "Honouring Commitments and Timely Changes",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from changing appointments or commitments at the last minute without good reason or considering the effects on another person's time, preparation, and planning. We honour commitments and communicate necessary changes as early and respectfully as possible.",
+    "keywords": ["appointments", "commitments", "punctuality", "time management", "last-minute changes", "planning", "reliability", "communication", "respect"]
+  },
+  {
+    "header": "🥇241",
+    "name": "संकट में स्थिरता एवं सुरक्षा-बोध",
+    "englishName": "Sankat Mein Sthirta Evam Suraksha Bodh",
+    "translatedName": "Stability and a Sense of Safety in Crisis",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from losing composure in a crisis through fear or panic and becoming unable to receive available support or guidance. We remain as steady and aware as possible, seek a safe environment and trustworthy assistance, and take sensible steps suited to the situation.",
+    "keywords": ["crisis", "fear", "panic", "stability", "safety", "support", "guidance", "resilience", "emergency response", "emotional regulation"]
+  },
+  {
+    "header": "🥇241",
+    "name": "समय पर विदाई एवं योजनाओं का सम्मान",
+    "englishName": "Samay Par Vidai Evam Yojnaon Ka Samman",
+    "translatedName": "Timely Farewells and Respect for Others' Plans",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from unnecessarily delaying someone's departure or assigning new tasks and responsibilities at the last moment, disrupting their existing plans. We share necessary matters in advance wherever possible and allow others to leave at the appropriate time with ease and respect.",
+    "keywords": ["departure", "farewell", "time", "planning", "last-minute requests", "responsibilities", "consideration", "respect", "boundaries"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सार्वजनिक सुविधा एवं सामूहिक हित",
+    "englishName": "Sarvajanik Suvidha Evam Samuhik Hit",
+    "translatedName": "Respecting Public Convenience and Collective Welfare",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from creating unnecessary disruption to people's time, movement, peace, or daily lives through our events, decisions, or arrangements. We plan events, construction, and other activities with public convenience, safety, smooth movement, and collective welfare in mind.",
+    "keywords": ["public convenience", "collective welfare", "events", "construction", "traffic", "movement", "safety", "planning", "community", "consideration"]
+  },
+  {
+    "header": "🥇241",
+    "name": "अनपेक्षित असुविधाओं में सहजता",
+    "englishName": "Anapekshit Asuvidhaon Mein Sahajta",
+    "translatedName": "Ease Amid Unexpected Inconveniences",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from unnecessary irritation, anger, or mental discomfort when minor disorder, inconvenience, or unexpected change occurs. We accept such situations with greater ease, adapt calmly, and preserve our inner balance even when circumstances are imperfect.",
+    "keywords": ["inconvenience", "unexpected changes", "adaptability", "irritation", "anger", "acceptance", "resilience", "inner balance", "flexibility"]
+  },
+  {
+    "header": "🥇241",
+    "name": "बाहरी बदलावों में आंतरिक स्थिरता",
+    "englishName": "Bahari Badlavon Mein Aantarik Sthirta",
+    "translatedName": "Inner Stability Amid External Changes",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from becoming mentally unsettled, anxious, sad, or helpless when the weather or external environment changes. We remain grounded, aware, and balanced within ourselves while adapting to changing conditions.",
+    "keywords": ["inner stability", "weather changes", "external environment", "anxiety", "sadness", "helplessness", "grounding", "emotional balance", "adaptability"]
+  },
+  {
+    "header": "🥇241",
+    "name": "जटिल व्यवस्थाओं में उचित समाधान",
+    "englishName": "Jatil Vyavasthaon Mein Uchit Samadhan",
+    "translatedName": "Finding the Right Route Through Complex Systems",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from remaining stuck in one channel or procedure when a system, process, or institution does not provide a solution. We remain calm and clear, identify the appropriate process and contact, and explore practical alternative routes toward resolution.",
+    "keywords": ["complex systems", "institutions", "procedures", "problem solving", "alternative routes", "administration", "support channels", "resolution", "practical solutions"]
+  },
+  {
+    "header": "🥇241",
+    "name": "सुविधा से परे संबंधों में सम्मान",
+    "englishName": "Suvidha Se Pare Sambandhon Mein Samman",
+    "translatedName": "Mutual Respect Beyond Convenience",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from seeking someone's presence only when we need them and treating them as a burden when our need has passed, while overlooking their feelings and freedom. We communicate our needs respectfully, receive help with gratitude, and build relationships on love, mutual respect, freedom, and coexistence rather than convenience alone.",
+    "keywords": ["relationships", "convenience", "mutual respect", "support", "gratitude", "freedom", "emotional needs", "coexistence", "reciprocity"]
+  },
+  {
+    "header": "🥇241",
+    "name": "आंतरिक प्रेरणा एवं स्व-सक्रियता",
+    "englishName": "Aantarik Prerna Evam Swa-Sakriyata",
+    "translatedName": "Inner Motivation and Self-Initiative",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from relying unnecessarily on another person's presence, energy, or encouragement to begin daily activities or sustain enthusiasm. We awaken our own motivation and vitality, appreciating others' support while developing the ability to initiate and continue our work independently.",
+    "keywords": ["motivation", "self-initiative", "proactivity", "independence", "energy", "discipline", "productivity", "self-reliance", "daily routine"]
+  },
+  {
+    "header": "🥇241",
+    "name": "संबंधों में सहज सीमाओं का सम्मान",
+    "englishName": "Sambandhon Mein Sahaj Seemaon Ka Samman",
+    "translatedName": "Sensitivity to Comfort and Boundaries in Relationships",
+    "audience": "All",
+    "date": "2026-10-13",
+    "description": "Freedom from overlooking or misreading another person's emotional and physical comfort signals and boundaries in the moment. We remain sensitive to their comfort, consent, and changing limits, relating with love, clarity, and mutual respect without pressure or expectation.",
+    "keywords": ["relationships", "boundaries", "consent", "physical comfort", "emotional comfort", "sensitivity", "intimacy", "mutual respect", "communication", "freedom from pressure"]
+  },
+  {
     "header": "🥇240",
     "name": "दूसरे के अधिकार, स्थान एवं सुविधा का सम्मान करते हुए अपनी जिम्मेदारी निभाने की निर्मल बुद्धि",
     "englishName": "Respecting others' rights and convenience while fulfilling our responsibility",
