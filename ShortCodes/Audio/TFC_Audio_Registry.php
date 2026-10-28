@@ -451,6 +451,14 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'conscious_living_from_control_to_inner_freedom' => [
+            'title' => 'From Control to Inner Freedom',
+
+            'hindi' => [
+                'publit' => 'Art-Of-Conscious-Living-2026/5-From-Control-to-Inner-Freedom.mp3',
+            ],
+        ],
+
     ];
 
 
