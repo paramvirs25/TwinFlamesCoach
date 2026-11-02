@@ -63,7 +63,7 @@
     }
 
     .logapp-chat-container {
-        height: 70vh;
+        height: 60vh;
         overflow-y: auto;
         padding: 10px;
         background: #f2f2f2;
@@ -240,7 +240,7 @@
 
     function logappRenderHome() {
 
-        logappCurrent = null
+        logappCurrent = null;
 
         document.getElementById("logappHeaderTitle").innerText = "My Logs"
 
@@ -319,7 +319,31 @@
 
     }
 
+    // Handle mobile and browser back navigation
+
+    let logappDetailHistoryActive = false;
+
+    window.addEventListener("popstate", function() {
+
+        if (logappCurrent !== null) {
+                logappRenderHome();
+            logappDetailHistoryActive = false;
+        }
+
+    });
+
     function logappOpen(name) {
+
+        // Add a browser history entry when opening a category
+        if (!logappDetailHistoryActive) {
+            history.pushState(
+                { logappScreen: "detail" },
+                "",
+                window.location.href
+            );
+
+            logappDetailHistoryActive = true;
+        }
 
         logappCurrent = name
 
@@ -328,7 +352,15 @@
 
         let title = document.getElementById("logappHeaderTitle")
         title.innerHTML = "← " + name
-        title.onclick = logappRenderHome
+        title.onclick = function() {
+
+            if (logappDetailHistoryActive) {
+                history.back();
+            } else {
+                logappRenderHome();
+            }
+
+        }
 
         let action = document.getElementById("logappHeaderAction")
 
