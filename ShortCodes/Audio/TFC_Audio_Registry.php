@@ -459,6 +459,14 @@ class TFC_Audio_Registry {
             ],
         ],
 
+        'conscious_living_expanding_what_i_think_is_possible' => [
+            'title' => 'Expanding What I Think Is Possible',
+
+            'hindi' => [
+                'publit' => 'Art-Of-Conscious-Living-2026/6-Expanding-What-I-Think-Is-Possible.mp3',
+            ],
+        ],
+
     ];
 
 
